@@ -1,0 +1,270 @@
+{
+  "powerful_stone": {
+    "sounds": [
+      {
+        "name": "power:7ef0c7b9f11f69a",
+        "stream": true
+      }
+    ]
+  },
+  "tyrannosaurus_rex.hurt": {
+    "sounds": [
+      {
+        "name": "power:tyrannosaurus_rex.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "tyrannosaurus_rex.dead": {
+    "sounds": [
+      {
+        "name": "power:tyrannosaurus_rex.dead",
+        "stream": false
+      }
+    ]
+  },
+  "raptor.dead": {
+    "sounds": [
+      {
+        "name": "power:raptor.dead",
+        "stream": false
+      }
+    ]
+  },
+  "raptor.hurt": {
+    "sounds": [
+      {
+        "name": "power:raptor.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "time_power": {
+    "subtitle": "subtitles.time_power",
+    "sounds": [
+      {
+        "name": "power:time_travel",
+        "stream": false
+      }
+    ]
+  },
+  "music1": {
+    "sounds": [
+      {
+        "name": "power:music1",
+        "stream": true
+      }
+    ]
+  },
+  "music2": {
+    "sounds": [
+      {
+        "name": "power:music2",
+        "stream": true
+      }
+    ]
+  },
+  "music3": {
+    "sounds": [
+      {
+        "name": "power:music3",
+        "stream": true
+      }
+    ]
+  },
+  "music4": {
+    "sounds": [
+      {
+        "name": "power:music4",
+        "stream": true
+      }
+    ]
+  },
+  "music5": {
+    "sounds": [
+      {
+        "name": "power:music5",
+        "stream": true
+      }
+    ]
+  },
+  "music6": {
+    "sounds": [
+      {
+        "name": "power:music6",
+        "stream": true
+      }
+    ]
+  },
+  "music7": {
+    "sounds": [
+      {
+        "name": "power:music7",
+        "stream": true
+      }
+    ]
+  },
+  "music8": {
+    "sounds": [
+      {
+        "name": "power:music8",
+        "stream": true
+      }
+    ]
+  },
+  "music9": {
+    "sounds": [
+      {
+        "name": "power:music9",
+        "stream": true
+      }
+    ]
+  },
+  "music10": {
+    "sounds": [
+      {
+        "name": "power:music10",
+        "stream": true
+      }
+    ]
+  },
+  "stone_activation": {
+    "subtitle": "subtitles.stone_activation",
+    "sounds": [
+      {
+        "name": "power:stone_activation",
+        "stream": false
+      }
+    ]
+  },
+  "rocket.fly": {
+    "subtitle": "subtitles.rocket.fly",
+    "sounds": [
+      {
+        "name": "power:rocket.fly",
+        "stream": false
+      }
+    ]
+  },
+  "stone_deactivation": {
+    "subtitle": "subtitles.stone_deactivation",
+    "sounds": [
+      {
+        "name": "power:stone_deactivation",
+        "stream": false
+      }
+    ]
+  },
+  "staff_stab": {
+    "sounds": [
+      {
+        "name": "power:staff_stab",
+        "stream": false
+      }
+    ]
+  },
+  "sword_slash": {
+    "sounds": [
+      {
+        "name": "power:sword_slash",
+        "stream": false
+      }
+    ]
+  },
+  "dagger_slash": {
+    "sounds": [
+      {
+        "name": "power:dagger_slash",
+        "stream": false
+      }
+    ]
+  },
+  "blade_slash": {
+    "sounds": [
+      {
+        "name": "power:blade_slash",
+        "stream": false
+      }
+    ]
+  },
+  "heavy_sword_slam": {
+    "sounds": [
+      {
+        "name": "power:heavy_sword_slam",
+        "stream": false
+      }
+    ]
+  },
+  "axe_slash": {
+    "sounds": [
+      {
+        "name": "power:axe_slash",
+        "stream": false
+      }
+    ]
+  },
+  "double_axe_swing": {
+    "sounds": [
+      {
+        "name": "power:double_axe_swing",
+        "stream": false
+      }
+    ]
+  },
+  "hammer_slam": {
+    "sounds": [
+      {
+        "name": "power:hammer_slam",
+        "stream": false
+      }
+    ]
+  },
+  "katana_slash": {
+    "sounds": [
+      {
+        "name": "power:katana_slash",
+        "stream": false
+      }
+    ]
+  },
+  "mace_slash": {
+    "sounds": [
+      {
+        "name": "power:mace_slash",
+        "stream": false
+      }
+    ]
+  },
+  "spear_stab": {
+    "sounds": [
+      {
+        "name": "power:spear_stab",
+        "stream": false
+      }
+    ]
+  },
+  "other_weapon_swing": {
+    "sounds": [
+      {
+        "name": "power:other_weapon_swing",
+        "stream": false
+      }
+    ]
+  },
+  "schythe_slash": {
+    "sounds": [
+      {
+        "name": "power:scythe_slash",
+        "stream": false
+      }
+    ]
+  },
+  "fist_punch": {
+    "sounds": [
+      {
+        "name": "power:fist_punch",
+        "stream": false
+      }
+    ]
+  }
+}

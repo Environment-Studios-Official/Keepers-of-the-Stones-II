@@ -1,0 +1,87 @@
+# Automatically builds and publishes the mod when a new release is created on GitHub.
+# It uploads the mod to GitHub, CurseForge and Modrinth.
+
+name: Beta
+
+on:
+  push:
+    branches:
+      - "beta"
+env:                                              
+  MINECRAFT_VERSION: 1.19.4                       
+  JAVA_VERSION: 17      
+  VERSION: 3.2.0.1
+  RELEASE_NAME: Keepers of the Stones 3.2.0.1 Beta
+
+jobs:
+  build:
+    runs-on: ubuntu-latest                        
+    steps:                                        
+      - name: Check Environment Variables
+        run: env
+
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+        with:
+          submodules: true
+
+      - name: Setup Java
+        uses: actions/setup-java@v2
+        with:
+          distribution: "temurin"
+          java-version: 17
+
+      - name: Make Gradle Wrapper Executable
+        if: ${{ runner.os != 'Windows' }}
+        run: chmod +x ./gradlew
+
+      - name: Build
+        run: ./gradlew build
+
+      - name: Publish mod to CurseForge and Modrinth
+        id: publish
+        uses: Kir-Antipov/mc-publish@v3.3
+        with:
+          curseforge-id: 538466
+          curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
+          modrinth-id: bRbocpAM 
+          modrinth-token: ${{ secrets.MODRINTH_TOKEN }}
+          
+          name: "${{env.RELEASE_NAME}}"                             
+          version: "${{env.VERSION}}"
+          version-type: beta
+          changelog-file: CHANGELOG.md                                      
+
+          loaders: forge
+          game-versions: "${{env.MINECRAFT_VERSION}}"
+          java: "${{env.JAVA_VERSION}}"
+
+          modrinth-featured: false
+          fail-mode: warn	
+          
+      - name: Send Discord webhook
+        uses: Ilshidur/action-discord@0.3.2
+        with:
+          args: "Message"
+        env:
+          DISCORD_WEBHOOK: "${{secrets.DISCORD_WEBHOOK}}"
+          DISCORD_EMBEDS: |
+            [{
+              "title": "${{env.RELEASE_NAME}} for Minecraft ${{env.MINECRAFT_VERSION}} Released",
+              "color": 14177041,
+              "thumbnail": {
+                "url": "https://sun9-62.userapi.com/impg/WFozp5xGorXNpzGxd5WqX_n6tL6gHuQxYNDW-A/t2APdlJjoDg.jpg?size=1920x1080&quality=96&sign=bf584015476d232695a29d494f17b1f5&type=album"
+              },
+              "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+              "fields": [
+                  {
+                    "name": "Download now:",
+                    "value": "[<:curseforge:805066577871110196> CurseForge](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones)\n[<:modrinth:805066578215043092> Modrinth](https://modrinth.com/mod/keepers-of-the-stones)\n[<:github:805066578164580392> GitHub](https://github.com/Environment-Studios-Official/Keepers-of-the-Stones)",
+                    "inline": true
+                  }
+              ],
+              "footer": {
+                "text": "Created by the Environment Studios team!",
+                "icon_url": "https://sun9-8.userapi.com/impg/z07zX22x1cDSTI8mxViZSNmSq1ZgWQUH2V4S6Q/iS1pjti92qo.jpg?size=1280x1280&quality=95&sign=b28d93cf356dd02eb658598caec418ca&type=album"
+              }
+            }]

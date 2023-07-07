@@ -1,0 +1,60 @@
+modLoader="javafml"
+loaderVersion="[45,)"
+license="All Rights Reserved"
+
+[[mods]]
+modId="power"
+version="3.2.0"
+displayName="Keepers of the Stones"
+credits="Created by MagicalAlexey, with the support of SamuelMorsch, 7ZLBeka, as well as many other contributors."
+displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
+logoFile="logo.png"
+authors="UMC"
+description="This mod will add new sources of energy to the world with which you can transform into masters of the elements."
+
+[[dependencies.power]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.19.4]"
+    ordering="NONE"
+    side="BOTH"
+
+
+[[dependencies.power]]
+    modId="pehkui"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="playeranimator"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.power]]
+    modId="geckolib"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="playeranimator"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="allmods"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.power]]
+    modId="power_dimensions"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"

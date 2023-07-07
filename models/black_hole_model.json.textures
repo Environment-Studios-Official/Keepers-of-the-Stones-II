@@ -1,0 +1,16 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "blackholeblock"
+      },
+      "name": "default"
+    },
+    "vacuumblock": {
+      "map": {
+        "0": "vacuum_web_block"
+      },
+      "name": "vacuumblock"
+    }
+  }
+}

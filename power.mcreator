@@ -1,0 +1,1383 @@
+{
+  "mod_elements": [],
+  "variable_elements": [
+    {
+      "name": "fire",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "air",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "water",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "earth",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "energy",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ice",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "lightning",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "sound",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "crystal",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "lava",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "rain",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "tornado",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ocean",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "active",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "greenery",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "animals",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "metal",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "light",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "shadow",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "vacuum",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "moon",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "sun",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "creation",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "destruction",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "space",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "fire_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "selected",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "air_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "water_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "earth_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "energy_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ice_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "lightning_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sound_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "crystal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "lava_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "rain_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "tornado_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ocean_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "greenery_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "animals_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "metal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "light_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "shadow_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "vacuum_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sun_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "moon_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "creation_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "destruction_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "space_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "blood",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "blood_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "technology",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "technology_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "time",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "time_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "spawnx",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "spawny",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "80.0"
+    },
+    {
+      "name": "spawnz",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "battery",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_sun",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_moon",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_blood",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_energy",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "teleportation",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "teleportation_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "blue_portal",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "orange_portal",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "bposx",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bposy",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bposz",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "oposx",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "oposy",
+      "type": "number",
+      "scope": "map",
+      "value": "0.0"
+    },
+    {
+      "name": "oposz",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "explosion",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "explosion_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "amber",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "amber_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "cosmos_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "fog",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "magnet_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "magnet",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "mist_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mist",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "power_level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "1.0"
+    },
+    {
+      "name": "recharge_spell_blue_flame",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "sand_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sand",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "speed_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "speed",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "turbospeed",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "c1x",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "c1y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "80.0"
+    },
+    {
+      "name": "c1z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "c2x",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "c2y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "80.0"
+    },
+    {
+      "name": "c2z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0.0"
+    },
+    {
+      "name": "c3x",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "c3y",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "80.0"
+    },
+    {
+      "name": "c3z",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "poison",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "poison_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mushrooms",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "mushrooms_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mercury",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "mercury_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "music",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "music_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "keeper",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "plague",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "plague_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_plague",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "gravity_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "gravity",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "without_stone",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "blue_flame_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "blue_flame",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_gravity_boost",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_gravity_red",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "spirit_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "spirit",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "aether_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "aether",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_time",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "smoke_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "smoke",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "form_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "form",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "mind_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "mind",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "golden_dust_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "golden_dust",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "ally",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "little",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "big",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "cursed_amethyst",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "reactive_flying",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "recharge_spell_ice",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "darkness_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "darkness",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "rotate",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "battle",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    }
+  ],
+  "sound_elements": [
+    {
+      "name": "powerful_stone",
+      "files": [
+        "7ef0c7b9f11f69a"
+      ],
+      "category": "music",
+      "subtitle": ""
+    },
+    {
+      "name": "tyrannosaurus_rex.hurt",
+      "files": [
+        "tyrannosaurus_rex.hurt"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "tyrannosaurus_rex.dead",
+      "files": [
+        "tyrannosaurus_rex.dead"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "raptor.dead",
+      "files": [
+        "raptor.dead"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "raptor.hurt",
+      "files": [
+        "raptor.hurt"
+      ],
+      "category": "neutral",
+      "subtitle": ""
+    },
+    {
+      "name": "time_power",
+      "files": [
+        "time_travel"
+      ],
+      "category": "player",
+      "subtitle": "Time Power"
+    },
+    {
+      "name": "music1",
+      "files": [
+        "music1"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music2",
+      "files": [
+        "music2"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music3",
+      "files": [
+        "music3"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music4",
+      "files": [
+        "music4"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music5",
+      "files": [
+        "music5"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music6",
+      "files": [
+        "music6"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music7",
+      "files": [
+        "music7"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music8",
+      "files": [
+        "music8"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music9",
+      "files": [
+        "music9"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "music10",
+      "files": [
+        "music10"
+      ],
+      "category": "record",
+      "subtitle": ""
+    },
+    {
+      "name": "stone_activation",
+      "files": [
+        "stone_activation"
+      ],
+      "category": "player",
+      "subtitle": "Stone been activation"
+    },
+    {
+      "name": "rocket.fly",
+      "files": [
+        "rocket.fly"
+      ],
+      "category": "neutral",
+      "subtitle": "The rocket was launched into space"
+    },
+    {
+      "name": "stone_deactivation",
+      "files": [
+        "stone_deactivation"
+      ],
+      "category": "player",
+      "subtitle": "Stone been deactivation"
+    },
+    {
+      "name": "staff_stab",
+      "files": [
+        "staff_stab"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "sword_slash",
+      "files": [
+        "sword_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "dagger_slash",
+      "files": [
+        "dagger_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "blade_slash",
+      "files": [
+        "blade_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "heavy_sword_slam",
+      "files": [
+        "heavy_sword_slam"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "axe_slash",
+      "files": [
+        "axe_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "double_axe_swing",
+      "files": [
+        "double_axe_swing"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "hammer_slam",
+      "files": [
+        "hammer_slam"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "katana_slash",
+      "files": [
+        "katana_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "mace_slash",
+      "files": [
+        "mace_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "spear_stab",
+      "files": [
+        "spear_stab"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "other_weapon_swing",
+      "files": [
+        "other_weapon_swing"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "schythe_slash",
+      "files": [
+        "scythe_slash"
+      ],
+      "category": "player",
+      "subtitle": ""
+    },
+    {
+      "name": "fist_punch",
+      "files": [
+        "fist_punch"
+      ],
+      "category": "player",
+      "subtitle": ""
+    }
+  ],
+  "language_map": {
+    "ru_ru": {
+      "subtitles.blade_slash": "",
+      "subtitles.rocket.fly": "The rocket was launched into space",
+      "itemGroup.tabstones": "Камни",
+      "key.categories.stones": "Хранители Камней",
+      "gamerule.turnOffTheGoldDustStone": "Выключить камень золотой пыли",
+      "subtitles.raptor.hurt": "",
+      "gui.power.point_gui.label_z": "Z",
+      "gui.power.point_gui.label_y": "Y",
+      "gui.power.building_gui.button_medieval_town": "Medieval Town",
+      "gui.power.point_gui.tpZ": "0",
+      "subtitles.katana_slash": "",
+      "gui.power.point_gui.label_x": "X",
+      "itemGroup.tabenergium": "Энерджиум",
+      "subtitles.schythe_slash": "",
+      "power.space_atlas.label.text": "Космический Атлас",
+      "subtitles.fist_punch": "",
+      "subtitles.time_travel": "Time Travel",
+      "subtitles.music4": "",
+      "subtitles.music5": "",
+      "subtitles.music2": "",
+      "subtitles.music3": "",
+      "subtitles.music8": "",
+      "effect.recharge_tornado_stone": "Перезарядка",
+      "subtitles.music9": "",
+      "subtitles.spear_stab": "",
+      "subtitles.music6": "",
+      "subtitles.music7": "",
+      "block.power.energy_block": "Энергетический блок",
+      "gamerule.gettingStonesWhenEnteringTheGame": "Получение камней при входе в игру",
+      "subtitles.tyrannosaurus_rex.dead": "",
+      "effect.acceleration_time_effect": "Acceleration Time",
+      "subtitles.music1": "",
+      "gamerule.gettingStonesWhenEnteringTheGame.description": "Дает игрокам камни, когда они вступают в игру, если у них их нет",
+      "subtitles.hammer_slam": "",
+      "gamerule.getRandomStone.description": "Включает в себя случайное распределение камней среди игроков",
+      "subtitles.raptor.hut": "",
+      "subtitles.other_weapon_swing": "",
+      "subtitles.axe_slash": "",
+      "subtitles.sword_slash": "",
+      "power.sound_emitate.skeleton.text": "Скелет",
+      "effect.time_stop_effect": "Time Stop",
+      "gui.power.point_gui.tpX": "0",
+      "gui.power.point_gui.tpY": "0",
+      "power.sound_emitate.label.text": "Выберите моба для имитации звука",
+      "itemGroup.tabtechnologies": "Технологии",
+      "power.sound_emitate.creeper.text": "Крипер",
+      "power.spawn_animals.label.text": "Выберите животное для вызова",
+      "gui.power.choise_magic_stones_page_3.button_choice3": "Primitive",
+      "gui.power.choise_magic_stones_page_3.button_choice2": "Star",
+      "itemGroup.tabwild_batteries": "Дикие батареи",
+      "gui.power.choise_magic_stones_page_3.button_choice1": "Radiation",
+      "block.power.sound_barrier_block": "Блок звукового барьера",
+      "little": "",
+      "block.power.crystal_shield_block": "Блок кристаллического щита",
+      "power.building.blacksmith.text": "Кузница",
+      "gamerule.turnOffTheGoldDustStone.description": "Выключает самый могущественный камень",
+      "subtitles.stone_deactivation": "Камень был деактивирован",
+      "subtitles.tyrannosaurus_rex.ambient": "",
+      "subtitles.time_power": "Time Travel",
+      "itemGroup.tabamplifer_crystal_tab": "Амплифер кристалл",
+      "power.battery_charger.label.text": "Зарядка батареи",
+      "power.cultivation.label.text": "Выберите растение, чтобы получить",
+      "subtitles.double_axe_swing": "",
+      "subtitles.tyrannosaurus_rex.attack": "",
+      "power.sound_emitate.zombie.text": "Зомби",
+      "subtitles.dagger_slash": "",
+      "itemGroup.tabreinforced_batteries": "Усиленные батареи",
+      "subtitles.music10": "",
+      "block.power.amber_block": "Amber Block",
+      "subtitles.stone_activation": "Камень был активирован",
+      "gui.power.choise_magic_stones_page_3.button_choice": "Rainbow",
+      "gamerule.getRandomStone": "Случайное получение камней",
+      "itemGroup.tabartifacts": "Артефакты",
+      "itemGroup.tabbatteries": "Батареи",
+      "subtitles.mace_slash": "",
+      "subtitles.heavy_sword_slam": "",
+      "subtitles.staff_stab": "",
+      "block.power.technobarrier_block": "Блок технобарьера",
+      "gui.power.building_gui.button_overgrown_church": "Overgrown Church",
+      "subtitles.tyrannosaurus_rex.hurt": "",
+      "subtitles.music.dino_thunder": "",
+      "itemGroup.tabshards": "Осколки",
+      "subtitles.raptor.dead": ""
+    },
+    "en_us": {
+      "subtitles.blade_slash": "",
+      "subtitles.rocket.fly": "The rocket was launched into space",
+      "itemGroup.tabstones": "Stones",
+      "key.categories.stones": "Keepers of the Stones",
+      "gamerule.turnOffTheGoldDustStone": "Turn off the Gold Dust Stone",
+      "subtitles.raptor.hurt": "",
+      "gui.power.point_gui.label_z": "Z",
+      "gui.power.point_gui.label_y": "Y",
+      "gui.power.building_gui.button_medieval_town": "Medieval Town",
+      "gui.power.point_gui.tpZ": "0",
+      "subtitles.katana_slash": "",
+      "gui.power.point_gui.label_x": "X",
+      "itemGroup.tabenergium": "Energium",
+      "subtitles.schythe_slash": "",
+      "power.space_atlas.label.text": "Atlas of Space Travel",
+      "subtitles.fist_punch": "",
+      "battery.empty": "",
+      "subtitles.time_travel": "Time Travel",
+      "subtitles.music4": "",
+      "subtitles.music5": "",
+      "subtitles.music2": "",
+      "subtitles.music3": "",
+      "subtitles.music8": "",
+      "effect.recharge_tornado_stone": "Recharge",
+      "subtitles.music9": "",
+      "subtitles.spear_stab": "",
+      "subtitles.music6": "",
+      "subtitles.music7": "",
+      "block.power.energy_block": "Energy Block",
+      "gamerule.gettingStonesWhenEnteringTheGame": "Getting stones when entering the game",
+      "subtitles.tyrannosaurus_rex.dead": "",
+      "effect.acceleration_time_effect": "Acceleration Time",
+      "subtitles.music1": "",
+      "gamerule.gettingStonesWhenEnteringTheGame.description": "Gives players stones when they enter the game, if they do not have them",
+      "subtitles.hammer_slam": "",
+      "gamerule.getRandomStone.description": "Includes random distribution of stones to players",
+      "subtitles.raptor.hut": "",
+      "subtitles.other_weapon_swing": "",
+      "subtitles.axe_slash": "",
+      "subtitles.sword_slash": "",
+      "power.sound_emitate.skeleton.text": "Skeleton",
+      "effect.time_stop_effect": "Time Stop",
+      "gui.power.point_gui.tpX": "0",
+      "gui.power.point_gui.tpY": "0",
+      "power.sound_emitate.label.text": "Select the mob for emitate sound",
+      "itemGroup.tabtechnologies": "Technologies",
+      "power.sound_emitate.creeper.text": "Creeper",
+      "power.spawn_animals.label.text": "Choose an animal to summon ",
+      "gui.power.choise_magic_stones_page_3.button_choice3": "Primitive",
+      "gui.power.choise_magic_stones_page_3.button_choice2": "Star",
+      "itemGroup.tabwild_batteries": "Wild Batteries",
+      "gui.power.choise_magic_stones_page_3.button_choice1": "Radiation",
+      "block.power.sound_barrier_block": "Sound Barrier Block",
+      "little": "",
+      "block.power.crystal_shield_block": "Crystal Shield Block",
+      "power.building.blacksmith.text": "Blacksmith",
+      "gamerule.turnOffTheGoldDustStone.description": "Turns off the most powerful stone",
+      "subtitles.stone_deactivation": "Stone been deactivation",
+      "subtitles.tyrannosaurus_rex.ambient": "",
+      "subtitles.time_power": "Time Power",
+      "itemGroup.tabamplifer_crystal_tab": "Amplifer Crystal",
+      "power.battery_charger.label.text": "Charging the battery",
+      "power.cultivation.label.text": "Select a plant to get",
+      "subtitles.double_axe_swing": "",
+      "subtitles.tyrannosaurus_rex.attack": "",
+      "power.sound_emitate.zombie.text": "Zombie",
+      "subtitles.dagger_slash": "",
+      "itemGroup.tabreinforced_batteries": "Reinforced Batteries",
+      "subtitles.music10": "",
+      "block.power.amber_block": "Amber Block",
+      "subtitles.stone_activation": "Stone been activation",
+      "gui.power.choise_magic_stones_page_3.button_choice": "Rainbow",
+      "gamerule.getRandomStone": "Random receipt of stones",
+      "itemGroup.tabartifacts": "Artifacts",
+      "itemGroup.tabbatteries": "Batteries",
+      "subtitles.mace_slash": "",
+      "subtitles.heavy_sword_slam": "",
+      "subtitles.staff_stab": "",
+      "block.power.technobarrier_block": "Technobarrier Block",
+      "gui.power.building_gui.button_overgrown_church": "Overgrown Church",
+      "subtitles.powerful_stone": "",
+      "subtitles.tyrannosaurus_rex.hurt": "",
+      "subtitles.music.dino_thunder": "",
+      "itemGroup.tabshards": "Shards",
+      "subtitles.raptor.dead": ""
+    },
+    "zh_cn": {
+      "subtitles.rocket.fly": "火箭：发射",
+      "itemGroup.tabstones": "魔法石",
+      "key.categories.stones": "魔石卫者",
+      "gamerule.turnOffTheGoldDustStone": "Turn off the Gold Dust Stone",
+      "gui.power.point_gui.label_z": "Z",
+      "gui.power.point_gui.label_y": "Y",
+      "gui.power.building_gui.button_medieval_town": "中世纪小镇",
+      "gui.power.point_gui.tpZ": "0",
+      "gui.power.point_gui.label_x": "X",
+      "itemGroup.tabenergium": "能量",
+      "power.space_atlas.label.text": "太空地图",
+      "subtitles.time_travel": "时光穿梭",
+      "effect.recharge_tornado_stone": "充能",
+      "block.power.energy_block": "能源块",
+      "gamerule.gettingStonesWhenEnteringTheGame": "进入世界获得魔法石",
+      "effect.acceleration_time_effect": "时间加速",
+      "gamerule.gettingStonesWhenEnteringTheGame.description": "进入世界时，如果玩家没有魔法石，则触发魔法石选择界面",
+      "gamerule.getRandomStone.description": "包括随机分配给玩家的魔法石",
+      "power.sound_emitate.skeleton.text": "骷髅",
+      "effect.time_stop_effect": "暂停时间",
+      "gui.power.point_gui.tpX": "0",
+      "gui.power.point_gui.tpY": "0",
+      "power.sound_emitate.label.text": "选择模仿生物的声音",
+      "itemGroup.tabtechnologies": "科技",
+      "power.sound_emitate.creeper.text": "苦力怕",
+      "power.spawn_animals.label.text": "选择要召唤的动物",
+      "gui.power.choise_magic_stones_page_3.button_choice3": "远古",
+      "gui.power.choise_magic_stones_page_3.button_choice2": "星星",
+      "itemGroup.tabwild_batteries": "自然电池",
+      "gui.power.choise_magic_stones_page_3.button_choice1": "辐射",
+      "block.power.sound_barrier_block": "声音屏障",
+      "block.power.crystal_shield_block": "水晶盾块",
+      "power.building.blacksmith.text": "铁匠铺",
+      "gamerule.turnOffTheGoldDustStone.description": "Turns off the most powerful stone",
+      "subtitles.stone_deactivation": "魔法石：停用",
+      "subtitles.time_power": "时间之力",
+      "itemGroup.tabamplifer_crystal_tab": "增扩水晶",
+      "power.battery_charger.label.text": "给电池充电",
+      "power.cultivation.label.text": "选择一种植物",
+      "power.sound_emitate.zombie.text": "僵尸",
+      "itemGroup.tabreinforced_batteries": "强化电池",
+      "subtitles.stone_activation": "魔法石：激活",
+      "block.power.amber_block": "琥珀块",
+      "gui.power.choise_magic_stones_page_3.button_choice": "水潦弓",
+      "gamerule.getRandomStone": "随机魔法石",
+      "itemGroup.tabartifacts": "古器",
+      "itemGroup.tabbatteries": "电池",
+      "block.power.technobarrier_block": "科技屏障块",
+      "gui.power.building_gui.button_overgrown_church": "废弃的教堂",
+      "itemGroup.tabshards": "碎片"
+    }
+  },
+  "foldersRoot": {
+    "name": "~",
+    "children": []
+  },
+  "workspaceSettings": {
+    "modid": "power",
+    "modName": "Keepers of the Stones 2",
+    "version": "1.0.0",
+    "description": "This mod will add new sources of energy to the world with which you can transform into masters of the elements.",
+    "author": "Environment Studios",
+    "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
+    "license": "All Rights Reserved",
+    "disableForgeVersionCheck": true,
+    "serverSideOnly": false,
+    "modPicture": "logo",
+    "requiredMods": [
+      "pehkui",
+      "playeranimator"
+    ],
+    "dependencies": [],
+    "dependants": [
+      "power_dimensions"
+    ],
+    "mcreatorDependencies": [
+      "geckolib",
+      "playeranimator",
+      "allmods"
+    ],
+    "currentGenerator": "forge-1.19.4",
+    "credits": "Created by Environment Studios",
+    "modElementsPackage": "power.keepeersofthestones",
+    "lockBaseModFiles": false
+  },
+  "mcreatorVersion": 202300327422
+}

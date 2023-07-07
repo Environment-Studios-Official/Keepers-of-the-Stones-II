@@ -1,0 +1,94 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "layer0": "earth_shield"
+      },
+      "name": "default"
+    },
+    "energy": {
+      "map": {
+        "layer0": "energy_shield"
+      },
+      "name": "energy"
+    },
+    "ice": {
+      "map": {
+        "layer0": "ice_shield"
+      },
+      "name": "ice"
+    },
+    "sound": {
+      "map": {
+        "layer0": "sound_barrier"
+      },
+      "name": "sound"
+    },
+    "crystal": {
+      "map": {
+        "layer0": "crystal_shield"
+      },
+      "name": "crystal"
+    },
+    "magma": {
+      "map": {
+        "layer0": "magma_shield"
+      },
+      "name": "magma"
+    },
+    "coral": {
+      "map": {
+        "layer0": "coral_shield"
+      },
+      "name": "coral"
+    },
+    "wooden": {
+      "map": {
+        "layer0": "wooden_shield"
+      },
+      "name": "wooden"
+    },
+    "iron": {
+      "map": {
+        "layer0": "iron_shield"
+      },
+      "name": "iron"
+    },
+    "techno": {
+      "map": {
+        "layer0": "technobarrier"
+      },
+      "name": "techno"
+    },
+    "amber": {
+      "map": {
+        "layer0": "amber_shield"
+      },
+      "name": "amber"
+    },
+    "sand": {
+      "map": {
+        "layer0": "sand_shield"
+      },
+      "name": "sand"
+    },
+    "golden": {
+      "map": {
+        "layer0": "golden_shield"
+      },
+      "name": "golden"
+    },
+    "dark": {
+      "map": {
+        "layer0": "dark_shield"
+      },
+      "name": "dark"
+    },
+    "sculk": {
+      "map": {
+        "layer0": "sculk_shield"
+      },
+      "name": "sculk"
+    }
+  }
+}
