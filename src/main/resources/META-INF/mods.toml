@@ -4,12 +4,12 @@ license="All Rights Reserved"
 
 [[mods]]
 modId="power"
-version="3.2.0"
-displayName="Keepers of the Stones"
+version="1.0.0"
+displayName="Keepers of the Stones 2"
 credits="Created by MagicalAlexey, with the support of SamuelMorsch, 7ZLBeka, as well as many other contributors."
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
 logoFile="logo.png"
-authors="UMC"
+authors="Environment Studios"
 description="This mod will add new sources of energy to the world with which you can transform into masters of the elements."
 
 [[dependencies.power]]
