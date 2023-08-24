@@ -4722,7 +4722,7 @@
       "playeranimator",
       "allmods"
     ],
-    "currentGenerator": "forge-1.19.4",
+    "currentGenerator": "forge-1.20.1",
     "credits": "Created by MagicalAlexey, with the support of SamuelMorsch, 7ZLBeka, as well as many other contributors.",
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
