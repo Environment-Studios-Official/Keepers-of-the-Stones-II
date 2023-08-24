@@ -4689,13 +4689,20 @@
     "name": "~",
     "children": [
       {
-        "name": "Stones",
-        "children": [
-          {
-            "name": "Fire",
-            "children": []
-          }
-        ]
+        "name": "Elements",
+        "children": []
+      },
+      {
+        "name": "Tabs",
+        "children": []
+      },
+      {
+        "name": "Modules",
+        "children": []
+      },
+      {
+        "name": "Items",
+        "children": []
       }
     ]
   },
@@ -4711,6 +4718,7 @@
     "serverSideOnly": false,
     "requiredMods": [
       "pehkui",
+      "geckolib",
       "playeranimator"
     ],
     "dependencies": [],
