@@ -5,12 +5,11 @@ license="All Rights Reserved"
 [[mods]]
 modId="power"
 version="1.0.0"
-displayName="Keepers of the Stones 2"
+displayName="Keepers of the Stones II"
 credits="Created by MagicalAlexey, with the support of SamuelMorsch, 7ZLBeka, as well as many other contributors."
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
-logoFile="logo.png"
 authors="Environment Studios"
-description="This mod will add new sources of energy to the world with which you can transform into masters of the elements."
+description="Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character's characteristics and abilities."
 
 [[dependencies.power]]
     modId="minecraft"
