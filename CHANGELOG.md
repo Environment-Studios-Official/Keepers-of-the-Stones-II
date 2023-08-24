@@ -1,3 +1,3 @@
-What's new in Keepers of the Stones version 3.1.10?<br />
-- Added sculk shield for vacuum master
+What's new in Keepers of the Stones version II 1.0.0?<br />
+- 
 - [Bugfix] 
