@@ -2,7 +2,7 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "The Element of Air",
+    "effectName": "Air",
     "icon": "air_master.png",
     "color": {
       "value": -6684673,

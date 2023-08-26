@@ -2,7 +2,7 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "The Element of Ether",
+    "effectName": "Ether",
     "icon": "aether_master.png",
     "color": {
       "value": -3355393,

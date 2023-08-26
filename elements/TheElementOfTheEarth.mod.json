@@ -2,7 +2,7 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "The Element of the Earth",
+    "effectName": "Earth",
     "icon": "earth_master.png",
     "color": {
       "value": -10079488,

@@ -2,7 +2,7 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "The Element of Water",
+    "effectName": "Water",
     "icon": "water_master.png",
     "color": {
       "value": -16750900,

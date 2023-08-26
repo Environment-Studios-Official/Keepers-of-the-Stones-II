@@ -2,7 +2,7 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "The Element of Fire",
+    "effectName": "Fire",
     "icon": "fire_master.png",
     "color": {
       "value": -3407821,
