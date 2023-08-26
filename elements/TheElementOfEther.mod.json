@@ -1,0 +1,17 @@
+{
+  "_fv": 48,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "The Element of Ether",
+    "icon": "aether_master.png",
+    "color": {
+      "value": -3355393,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "_fv": 48,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "The Element of Water",
+    "icon": "water_master.png",
+    "color": {
+      "value": -16750900,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}

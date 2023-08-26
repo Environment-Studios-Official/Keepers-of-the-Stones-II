@@ -16,6 +16,7 @@ package ru.power_umc.keepersofthestones.two;
 import software.bernie.geckolib.GeckoLib;
 
 import ru.power_umc.keepersofthestones.two.init.PowerModSounds;
+import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -51,6 +52,8 @@ public class PowerMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PowerModSounds.REGISTRY.register(bus);
+
+		PowerModMobEffects.REGISTRY.register(bus);
 
 		GeckoLib.initialize();
 	}

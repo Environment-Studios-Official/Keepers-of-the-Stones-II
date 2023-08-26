@@ -12,6 +12,76 @@
         ],
         "dependencies": []
       }
+    },
+    {
+      "name": "TheElementOfFire",
+      "type": "potioneffect",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_element_of_fire",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfFireMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "TheElementOfAir",
+      "type": "potioneffect",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_element_of_air",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfAirMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "TheElementOfTheEarth",
+      "type": "potioneffect",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_element_of_the_earth",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfTheEarthMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "TheElementOfWater",
+      "type": "potioneffect",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_element_of_water",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfWaterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "TheElementOfEther",
+      "type": "potioneffect",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "the_element_of_ether",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfEtherMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Energy"
     }
   ],
   "variable_elements": [
@@ -1353,6 +1423,7 @@
       "gui.power.checkpoint_gui.button_set_checkpoint": "Установить контрольную точку",
       "item.power.plague_chestplate": "Plague Chestplate",
       "item.power.amplifer_ring": "Amplifer Ring",
+      "effect.power.the_element_of_ether": "The Element of Ether",
       "item.power.teleportation_chestplate": "Телепортационный нагрудник",
       "item.power.time_battery": "Батарея",
       "item.power.wild_spirit_battery": "Дикая батарея",
@@ -1767,6 +1838,7 @@
       "item.power.shadow_leggings": "Поножи тьмы",
       "gui.power.redstone_bundle_gui.button_lever": "Рычаг",
       "gui.power.eb_creation.label_element_creation": "Стихия: Творение",
+      "effect.power.the_element_of_the_earth": "The Element of the Earth",
       "gui.power.eb_magnet.label_element_magnet": "Стихия: Магнит",
       "item.power.shadow_boots": "Ботинки тьмы",
       "item.power.lava_chestplate": "Лавовый Пояс",
@@ -1890,6 +1962,7 @@
       "effect.power.recharge_sand_stone": "Перезарядка",
       "item.power.gravity_leggings": "Gravity Leggings",
       "gui.power.eb_spirit.label_element_spirit": "Стихия: Дух",
+      "effect.power.the_element_of_fire": "The Element of Fire",
       "gui.power.choise_magic_power_1.button_next_page": "Далее",
       "effect.power.crystal_master": "Мастер кристалла",
       "entity.power.plesiosaurus": "Плезиозавр",
@@ -1996,6 +2069,7 @@
       "effect.power.earth_master": "Мастер Земли",
       "item.power.water_chestplate": "Водный Костюм",
       "gui.power.choise_magic_stones_page_2.button_blood": "Кровь",
+      "effect.power.the_element_of_water": "The Element of Water",
       "subtitles.music10": "",
       "item.power.time_stone": "Камень Времени",
       "item.power.speed_reinforced_battery": "Усиленная батарея",
@@ -2079,6 +2153,7 @@
       "gui.power.choise_magic_power_1.button_fire": "Огонь",
       "item.power.ice_ball": "Ледяной шар",
       "item.power.tornado_helmet": "Шлем Торнадо",
+      "effect.power.the_element_of_air": "The Element of Air",
       "gui.power.eb_moon.label_element_moon": "Стихия: Луна",
       "item.power.sand_reinforced_battery": "Усиленная батарея",
       "item.power.gravity_helmet": "Gravity Helmet",
@@ -2629,6 +2704,7 @@
       "gui.power.checkpoint_gui.button_set_checkpoint": "Set checkpoint",
       "item.power.plague_chestplate": "Plague Chestplate",
       "item.power.amplifer_ring": "Amplifer Ring",
+      "effect.power.the_element_of_ether": "The Element of Ether",
       "item.power.teleportation_chestplate": "Teleportation Chestplate",
       "item.power.time_battery": "Battery",
       "item.power.wild_spirit_battery": "Wild Battery",
@@ -3043,6 +3119,7 @@
       "item.power.shadow_leggings": "Shadow Leggings",
       "gui.power.redstone_bundle_gui.button_lever": "Lever",
       "gui.power.eb_creation.label_element_creation": "Element: Creation",
+      "effect.power.the_element_of_the_earth": "The Element of the Earth",
       "gui.power.eb_magnet.label_element_magnet": "Element: Magnet",
       "item.power.shadow_boots": "Shadow Boots",
       "item.power.lava_chestplate": "Lava Chestplate",
@@ -3167,6 +3244,7 @@
       "effect.power.recharge_sand_stone": "Recharge",
       "item.power.gravity_leggings": "Gravity Leggings",
       "gui.power.eb_spirit.label_element_spirit": "Element: Spirit",
+      "effect.power.the_element_of_fire": "The Element of Fire",
       "gui.power.choise_magic_power_1.button_next_page": "Next page",
       "effect.power.crystal_master": "Master of the Crystal",
       "entity.power.plesiosaurus": "Plesiosaurus",
@@ -3273,6 +3351,7 @@
       "effect.power.earth_master": "Master of the Earth",
       "item.power.water_chestplate": "Water Chestplate",
       "gui.power.choise_magic_stones_page_2.button_blood": "Blood",
+      "effect.power.the_element_of_water": "The Element of Water",
       "subtitles.music10": "",
       "item.power.time_stone": "Time Stone",
       "item.power.speed_reinforced_battery": "Reinforced Battery",
@@ -3357,6 +3436,7 @@
       "gui.power.choise_magic_power_1.button_fire": "Fire",
       "item.power.ice_ball": "Ice Ball",
       "item.power.tornado_helmet": "Tornado Helmet",
+      "effect.power.the_element_of_air": "The Element of Air",
       "gui.power.eb_moon.label_element_moon": "Element: Moon",
       "item.power.sand_reinforced_battery": "Reinforced Battery",
       "item.power.gravity_helmet": "Gravity Helmet",
@@ -3891,6 +3971,7 @@
       "gui.power.checkpoint_gui.button_set_checkpoint": "设置记录点",
       "item.power.plague_chestplate": "瘟疫胸甲",
       "item.power.amplifer_ring": "增扩戒指",
+      "effect.power.the_element_of_ether": "The Element of Ether",
       "item.power.teleportation_chestplate": "传送胸甲",
       "item.power.time_battery": "电池",
       "item.power.wild_spirit_battery": "自然电池",
@@ -4297,6 +4378,7 @@
       "item.power.shadow_leggings": "阴影护腿",
       "gui.power.redstone_bundle_gui.button_lever": "拉杆",
       "gui.power.eb_creation.label_element_creation": "元素：创造",
+      "effect.power.the_element_of_the_earth": "The Element of the Earth",
       "gui.power.eb_magnet.label_element_magnet": "元素：磁铁",
       "item.power.shadow_boots": "阴影靴子",
       "item.power.lava_chestplate": "熔岩胸甲",
@@ -4419,6 +4501,7 @@
       "effect.power.recharge_sand_stone": "充能",
       "item.power.gravity_leggings": "重力护腿",
       "gui.power.eb_spirit.label_element_spirit": "元素：魂灵",
+      "effect.power.the_element_of_fire": "The Element of Fire",
       "gui.power.choise_magic_power_1.button_next_page": "下一页",
       "effect.power.crystal_master": "晶体大师",
       "entity.power.plesiosaurus": "蛇颈龙",
@@ -4523,6 +4606,7 @@
       "effect.power.earth_master": "土地大师",
       "item.power.water_chestplate": "水流胸甲",
       "gui.power.choise_magic_stones_page_2.button_blood": "血液",
+      "effect.power.the_element_of_water": "The Element of Water",
       "item.power.time_stone": "时间之石",
       "item.power.speed_reinforced_battery": "强化电池",
       "effect.power.recharge_darkness_stone": "充能",
@@ -4602,6 +4686,7 @@
       "gui.power.choise_magic_power_1.button_fire": "火焰",
       "item.power.ice_ball": "冰球",
       "item.power.tornado_helmet": "风暴头盔",
+      "effect.power.the_element_of_air": "The Element of Air",
       "gui.power.eb_moon.label_element_moon": "元素：月亮",
       "item.power.sand_reinforced_battery": "强化电池",
       "item.power.gravity_helmet": "重力头盔",
@@ -4690,7 +4775,28 @@
     "children": [
       {
         "name": "Elements",
-        "children": []
+        "children": [
+          {
+            "name": "Fire",
+            "children": []
+          },
+          {
+            "name": "Air",
+            "children": []
+          },
+          {
+            "name": "Earth",
+            "children": []
+          },
+          {
+            "name": "Water",
+            "children": []
+          },
+          {
+            "name": "Energy",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Tabs",
