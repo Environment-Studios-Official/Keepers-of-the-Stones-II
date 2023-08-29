@@ -185,13 +185,71 @@
         ]
       },
       "path": "~/Elements/Ether"
+    },
+    {
+      "name": "FireStoneUse",
+      "type": "procedure",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "DetransformationKey",
+      "type": "keybind",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransformation_key",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/DetransformationKeyMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "DetransformationKeyUse",
+      "type": "procedure",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransformation_key_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/DetransformationKeyUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
     }
   ],
   "variable_elements": [
     {
       "name": "active",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "false"
     },
     {
@@ -203,7 +261,13 @@
     {
       "name": "fire",
       "type": "logic",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
+      "value": "false"
+    },
+    {
+      "name": "recharge",
+      "type": "logic",
+      "scope": "player_persistent",
       "value": "false"
     }
   ],
@@ -228,27 +292,29 @@
   "language_map": {
     "ru_ru": {
       "item.power.ether_stone": "Ether Stone",
-      "item.power.earth_stone": "Earth Stone",
       "effect.power.ether_master": "Master of the Ether",
-      "item.power.fire_stone": "Fire Stone",
+      "key.power.detransformation_key": "Detransformation Key",
       "effect.power.fire_master": "Master of Fire",
       "item_group.power.stones": "Stones",
+      "effect.power.water_master": "Master of Water",
+      "item.power.earth_stone": "Earth Stone",
+      "item.power.fire_stone": "Fire Stone",
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
-      "effect.power.water_master": "Master of Water",
       "item.power.water_stone": "Water Stone",
       "effect.power.earth_master": "Master of the Earth"
     },
     "en_us": {
       "item.power.ether_stone": "Ether Stone",
-      "item.power.earth_stone": "Earth Stone",
       "effect.power.ether_master": "Master of the Ether",
-      "item.power.fire_stone": "Fire Stone",
+      "key.power.detransformation_key": "Detransformation Key",
       "effect.power.fire_master": "Master of Fire",
       "item_group.power.stones": "Stones",
+      "effect.power.water_master": "Master of Water",
+      "item.power.earth_stone": "Earth Stone",
+      "item.power.fire_stone": "Fire Stone",
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
-      "effect.power.water_master": "Master of Water",
       "item.power.water_stone": "Water Stone",
       "effect.power.earth_master": "Master of the Earth"
     }
@@ -298,6 +364,10 @@
           },
           {
             "name": "StoneUsesModule",
+            "children": []
+          },
+          {
+            "name": "KeyBindsModule",
             "children": []
           }
         ]

@@ -33,6 +33,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "FireStoneUse"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

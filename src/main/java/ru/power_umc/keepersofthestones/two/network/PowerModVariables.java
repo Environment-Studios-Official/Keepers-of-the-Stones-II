@@ -66,10 +66,11 @@ public class PowerModVariables {
 			event.getOriginal().revive();
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			clone.active = original.active;
 			clone.fire_stone = original.fire_stone;
+			clone.fire = original.fire;
+			clone.recharge = original.recharge;
 			if (!event.isWasDeath()) {
-				clone.fire = original.fire;
+				clone.active = original.active;
 			}
 		}
 	}
@@ -108,6 +109,7 @@ public class PowerModVariables {
 		public boolean active = false;
 		public boolean fire_stone = false;
 		public boolean fire = false;
+		public boolean recharge = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -119,6 +121,7 @@ public class PowerModVariables {
 			nbt.putBoolean("active", active);
 			nbt.putBoolean("fire_stone", fire_stone);
 			nbt.putBoolean("fire", fire);
+			nbt.putBoolean("recharge", recharge);
 			return nbt;
 		}
 
@@ -127,6 +130,7 @@ public class PowerModVariables {
 			active = nbt.getBoolean("active");
 			fire_stone = nbt.getBoolean("fire_stone");
 			fire = nbt.getBoolean("fire");
+			recharge = nbt.getBoolean("recharge");
 		}
 	}
 
@@ -154,6 +158,7 @@ public class PowerModVariables {
 					variables.active = message.data.active;
 					variables.fire_stone = message.data.fire_stone;
 					variables.fire = message.data.fire;
+					variables.recharge = message.data.recharge;
 				}
 			});
 			context.setPacketHandled(true);
