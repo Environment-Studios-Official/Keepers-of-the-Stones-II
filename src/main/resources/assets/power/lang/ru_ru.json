@@ -1,7 +1,13 @@
 {
-  "effect.power.the_element_of_fire": "Огонь",
-  "effect.power.the_element_of_water": "Вода",
-  "effect.power.the_element_of_ether": "Эфир",
-  "effect.power.the_element_of_air": "Воздух",
-  "effect.power.the_element_of_the_earth": "Земля"
+  "item.power.ether_stone": "Ether Stone",
+  "item.power.earth_stone": "Earth Stone",
+  "effect.power.ether_master": "Master of the Ether",
+  "item.power.fire_stone": "Fire Stone",
+  "effect.power.fire_master": "Master of Fire",
+  "item_group.power.stones": "Stones",
+  "item.power.air_stone": "Air Stone",
+  "effect.power.air_master": "Master of the Air",
+  "effect.power.water_master": "Master of Water",
+  "item.power.water_stone": "Water Stone",
+  "effect.power.earth_master": "Master of the Earth"
 }

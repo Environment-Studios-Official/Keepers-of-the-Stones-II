@@ -2,10 +2,10 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Fire",
-    "icon": "fire_master.png",
+    "effectName": "Master of the Ether",
+    "icon": "ether_master.png",
     "color": {
-      "value": -3407821,
+      "value": -6710785,
       "falpha": 0.0
     },
     "isInstant": false,

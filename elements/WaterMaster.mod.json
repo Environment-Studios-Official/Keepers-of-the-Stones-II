@@ -2,10 +2,10 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Ether",
-    "icon": "aether_master.png",
+    "effectName": "Master of Water",
+    "icon": "water_master.png",
     "color": {
-      "value": -3355393,
+      "value": -16750900,
       "falpha": 0.0
     },
     "isInstant": false,

@@ -3,7 +3,7 @@
     {
       "name": "SetupAnimations",
       "type": "procedure",
-      "sortid": 7,
+      "sortid": 6,
       "compiles": true,
       "locked_code": false,
       "registry_name": "setup_animations",
@@ -15,79 +15,9 @@
       }
     },
     {
-      "name": "TheElementOfFire",
-      "type": "potioneffect",
-      "sortid": 2,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "the_element_of_fire",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfFireMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
-      "name": "TheElementOfAir",
-      "type": "potioneffect",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "the_element_of_air",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfAirMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Air"
-    },
-    {
-      "name": "TheElementOfTheEarth",
-      "type": "potioneffect",
-      "sortid": 3,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "the_element_of_the_earth",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfTheEarthMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "TheElementOfWater",
-      "type": "potioneffect",
-      "sortid": 4,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "the_element_of_water",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfWaterMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Water"
-    },
-    {
-      "name": "TheElementOfEther",
-      "type": "potioneffect",
-      "sortid": 5,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "the_element_of_ether",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/TheElementOfEtherMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Energy"
-    },
-    {
       "name": "ReturnStoneAfterDead",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 7,
       "compiles": true,
       "locked_code": false,
       "registry_name": "return_stone_after_dead",
@@ -98,6 +28,163 @@
         "dependencies": []
       },
       "path": "~/Modules/StoneUsesModule"
+    },
+    {
+      "name": "FireStone",
+      "type": "item",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/fire_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/FireStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "AirStone",
+      "type": "item",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/AirStoneItem.java",
+          "src/main/resources/assets/power/models/item/air_stone.json"
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "EarthStone",
+      "type": "item",
+      "sortid": 3,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/earth_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EarthStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterStone",
+      "type": "item",
+      "sortid": 4,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterStoneItem.java",
+          "src/main/resources/assets/power/models/item/water_stone.json"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "Stones",
+      "type": "tab",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stones",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Elements"
+    },
+    {
+      "name": "EtherStone",
+      "type": "item",
+      "sortid": 5,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EtherStoneItem.java",
+          "src/main/resources/assets/power/models/item/ether_stone.json"
+        ]
+      },
+      "path": "~/Elements/Ether"
+    },
+    {
+      "name": "FireMaster",
+      "type": "potioneffect",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/FireMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "AirMaster",
+      "type": "potioneffect",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/AirMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "EarthMaster",
+      "type": "potioneffect",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/EarthMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterMaster",
+      "type": "potioneffect",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/WaterMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "EtherMaster",
+      "type": "potioneffect",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/EtherMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Ether"
     }
   ],
   "variable_elements": [
@@ -140,18 +227,30 @@
   ],
   "language_map": {
     "ru_ru": {
-      "effect.power.the_element_of_fire": "Огонь",
-      "effect.power.the_element_of_water": "Вода",
-      "effect.power.the_element_of_ether": "Эфир",
-      "effect.power.the_element_of_air": "Воздух",
-      "effect.power.the_element_of_the_earth": "Земля"
+      "item.power.ether_stone": "Ether Stone",
+      "item.power.earth_stone": "Earth Stone",
+      "effect.power.ether_master": "Master of the Ether",
+      "item.power.fire_stone": "Fire Stone",
+      "effect.power.fire_master": "Master of Fire",
+      "item_group.power.stones": "Stones",
+      "item.power.air_stone": "Air Stone",
+      "effect.power.air_master": "Master of the Air",
+      "effect.power.water_master": "Master of Water",
+      "item.power.water_stone": "Water Stone",
+      "effect.power.earth_master": "Master of the Earth"
     },
     "en_us": {
-      "effect.power.the_element_of_fire": "Fire",
-      "effect.power.the_element_of_water": "Water",
-      "effect.power.the_element_of_ether": "Ether",
-      "effect.power.the_element_of_air": "Air",
-      "effect.power.the_element_of_the_earth": "Earth"
+      "item.power.ether_stone": "Ether Stone",
+      "item.power.earth_stone": "Earth Stone",
+      "effect.power.ether_master": "Master of the Ether",
+      "item.power.fire_stone": "Fire Stone",
+      "effect.power.fire_master": "Master of Fire",
+      "item_group.power.stones": "Stones",
+      "item.power.air_stone": "Air Stone",
+      "effect.power.air_master": "Master of the Air",
+      "effect.power.water_master": "Master of Water",
+      "item.power.water_stone": "Water Stone",
+      "effect.power.earth_master": "Master of the Earth"
     }
   },
   "foldersRoot": {
@@ -177,7 +276,7 @@
             "children": []
           },
           {
-            "name": "Energy",
+            "name": "Ether",
             "children": []
           }
         ]

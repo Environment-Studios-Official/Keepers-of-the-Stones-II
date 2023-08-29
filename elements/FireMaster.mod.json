@@ -2,10 +2,10 @@
   "_fv": 48,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Water",
-    "icon": "water_master.png",
+    "effectName": "Master of Fire",
+    "icon": "the_element_of_fire.png",
     "color": {
-      "value": -16750900,
+      "value": -65536,
       "falpha": 0.0
     },
     "isInstant": false,
