@@ -38,7 +38,7 @@ public class FireStoneItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		FireStoneUseProcedure.execute(entity, itemstack);
+		FireStoneUseProcedure.execute(world, entity);
 		return ar;
 	}
 }

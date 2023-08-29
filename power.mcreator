@@ -38,6 +38,7 @@
       "registry_name": "fire_stone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/fire_stone_0.json",
           "src/main/resources/assets/power/models/item/fire_stone.json",
           "src/main/java/ru/power_umc/keepersofthestones/two/item/FireStoneItem.java"
         ]
@@ -203,8 +204,8 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -243,6 +244,46 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "FireMasterStart",
+      "type": "procedure",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireMasterEnd",
+      "type": "procedure",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
     }
   ],
   "variable_elements": [
