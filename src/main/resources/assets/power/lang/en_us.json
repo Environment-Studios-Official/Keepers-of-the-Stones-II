@@ -1,7 +1,7 @@
 {
-  "effect.power.the_element_of_ether": "Ether",
-  "effect.power.the_element_of_the_earth": "Earth",
   "effect.power.the_element_of_fire": "Fire",
   "effect.power.the_element_of_water": "Water",
-  "effect.power.the_element_of_air": "Air"
+  "effect.power.the_element_of_ether": "Ether",
+  "effect.power.the_element_of_air": "Air",
+  "effect.power.the_element_of_the_earth": "Earth"
 }
