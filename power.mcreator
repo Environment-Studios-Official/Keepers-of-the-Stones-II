@@ -25,9 +25,14 @@
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/procedures/ReturnStoneAfterDeadProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
       },
-      "path": "~/Modules/StoneUsesModule"
+      "path": "~/Modules/BasicModule"
     },
     {
       "name": "FireStone",
@@ -260,6 +265,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -280,6 +301,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -404,7 +441,7 @@
             "children": []
           },
           {
-            "name": "StoneUsesModule",
+            "name": "BasicModule",
             "children": []
           },
           {
