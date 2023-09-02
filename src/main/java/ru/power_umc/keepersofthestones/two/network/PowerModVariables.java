@@ -69,6 +69,14 @@ public class PowerModVariables {
 			clone.fire_stone = original.fire_stone;
 			clone.fire = original.fire;
 			clone.recharge = original.recharge;
+			clone.air_stone = original.air_stone;
+			clone.air = original.air;
+			clone.earth_stone = original.earth_stone;
+			clone.earth = original.earth;
+			clone.water_stone = original.water_stone;
+			clone.water = original.water;
+			clone.ether_stone = original.ether_stone;
+			clone.ether = original.ether;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 			}
@@ -110,6 +118,14 @@ public class PowerModVariables {
 		public boolean fire_stone = false;
 		public boolean fire = false;
 		public boolean recharge = false;
+		public boolean air_stone = false;
+		public boolean air = false;
+		public boolean earth_stone = false;
+		public boolean earth = false;
+		public boolean water_stone = false;
+		public boolean water = false;
+		public boolean ether_stone = false;
+		public boolean ether = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -122,6 +138,14 @@ public class PowerModVariables {
 			nbt.putBoolean("fire_stone", fire_stone);
 			nbt.putBoolean("fire", fire);
 			nbt.putBoolean("recharge", recharge);
+			nbt.putBoolean("air_stone", air_stone);
+			nbt.putBoolean("air", air);
+			nbt.putBoolean("earth_stone", earth_stone);
+			nbt.putBoolean("earth", earth);
+			nbt.putBoolean("water_stone", water_stone);
+			nbt.putBoolean("water", water);
+			nbt.putBoolean("ether_stone", ether_stone);
+			nbt.putBoolean("ether", ether);
 			return nbt;
 		}
 
@@ -131,6 +155,14 @@ public class PowerModVariables {
 			fire_stone = nbt.getBoolean("fire_stone");
 			fire = nbt.getBoolean("fire");
 			recharge = nbt.getBoolean("recharge");
+			air_stone = nbt.getBoolean("air_stone");
+			air = nbt.getBoolean("air");
+			earth_stone = nbt.getBoolean("earth_stone");
+			earth = nbt.getBoolean("earth");
+			water_stone = nbt.getBoolean("water_stone");
+			water = nbt.getBoolean("water");
+			ether_stone = nbt.getBoolean("ether_stone");
+			ether = nbt.getBoolean("ether");
 		}
 	}
 
@@ -159,6 +191,14 @@ public class PowerModVariables {
 					variables.fire_stone = message.data.fire_stone;
 					variables.fire = message.data.fire;
 					variables.recharge = message.data.recharge;
+					variables.air_stone = message.data.air_stone;
+					variables.air = message.data.air;
+					variables.earth_stone = message.data.earth_stone;
+					variables.earth = message.data.earth;
+					variables.water_stone = message.data.water_stone;
+					variables.water = message.data.water;
+					variables.ether_stone = message.data.ether_stone;
+					variables.ether = message.data.ether;
 				}
 			});
 			context.setPacketHandled(true);
