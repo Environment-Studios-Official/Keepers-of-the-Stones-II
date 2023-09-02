@@ -68,7 +68,7 @@ jobs:
               "title": "${{env.RELEASE_NAME}} for Minecraft ${{env.MINECRAFT_VERSION}} Released",
               "color": 14177041,
               "thumbnail": {
-                "url": "https://sun9-62.userapi.com/impg/WFozp5xGorXNpzGxd5WqX_n6tL6gHuQxYNDW-A/t2APdlJjoDg.jpg?size=1920x1080&quality=96&sign=bf584015476d232695a29d494f17b1f5&type=album"
+                "url": "https://sun9-26.userapi.com/impg/tONr8xsZxwJhkVbeV9nLh6WJTT9JL5yeGTzw0A/khlieuPeAJk.jpg?size=1920x1080&quality=96&sign=1c071ed8ac91a735a11fb8079707b499&type=album"
               },
               "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
               "fields": [

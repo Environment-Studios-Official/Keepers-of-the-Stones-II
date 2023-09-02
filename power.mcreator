@@ -100,7 +100,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Elements"
+      "path": "~/Tabs"
     },
     {
       "name": "EtherStone",
@@ -429,6 +429,7 @@
     "license": "All Rights Reserved",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
+    "modPicture": "logo",
     "requiredMods": [
       "pehkui",
       "geckolib",
@@ -448,5 +449,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300334621
+  "mcreatorVersion": 202300435612
 }

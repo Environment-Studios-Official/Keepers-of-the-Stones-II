@@ -23,7 +23,7 @@ public class FireStoneItem extends Item {
 
 	@Override
 	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
-		return 0F;
+		return 0f;
 	}
 
 	@Override
