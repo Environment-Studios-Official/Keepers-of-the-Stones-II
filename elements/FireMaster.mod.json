@@ -16,6 +16,9 @@
     "onStarted": {
       "name": "FireMasterStart"
     },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
     "onExpired": {
       "name": "FireMasterEnd"
     }

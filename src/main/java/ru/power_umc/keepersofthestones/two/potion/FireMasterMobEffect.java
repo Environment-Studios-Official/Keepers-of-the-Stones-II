@@ -3,6 +3,7 @@ package ru.power_umc.keepersofthestones.two.potion;
 
 import ru.power_umc.keepersofthestones.two.procedures.FireMasterStartProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.FireMasterEndProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EnhancedAbilitiesProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,6 +23,11 @@ public class FireMasterMobEffect extends MobEffect {
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		FireMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		EnhancedAbilitiesProcedure.execute(entity);
 	}
 
 	@Override
