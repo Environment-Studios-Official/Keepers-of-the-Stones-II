@@ -19,6 +19,8 @@ import ru.power_umc.keepersofthestones.two.init.PowerModTabs;
 import ru.power_umc.keepersofthestones.two.init.PowerModSounds;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
+import ru.power_umc.keepersofthestones.two.init.PowerModBlocks;
+import ru.power_umc.keepersofthestones.two.init.PowerModBlockEntities;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -54,7 +56,8 @@ public class PowerMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PowerModSounds.REGISTRY.register(bus);
-
+		PowerModBlocks.REGISTRY.register(bus);
+		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModItems.REGISTRY.register(bus);
 
 		PowerModTabs.REGISTRY.register(bus);

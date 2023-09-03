@@ -2,6 +2,7 @@ package ru.power_umc.keepersofthestones.two.procedures;
 
 import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
+import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -29,6 +30,30 @@ public class FireMasterEndProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
+		PowerMod.queueServerWork(10, () -> {
+			if (entity instanceof Player _player) {
+				ItemStack _stktoremove = new ItemStack(PowerModItems.FIRE_ARMOR_HELMET.get());
+				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+			}
+			PowerMod.queueServerWork(10, () -> {
+				if (entity instanceof Player _player) {
+					ItemStack _stktoremove = new ItemStack(PowerModItems.FIRE_ARMOR_CHESTPLATE.get());
+					_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+				}
+				PowerMod.queueServerWork(10, () -> {
+					if (entity instanceof Player _player) {
+						ItemStack _stktoremove = new ItemStack(PowerModItems.FIRE_ARMOR_LEGGINGS.get());
+						_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+					}
+					PowerMod.queueServerWork(10, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _stktoremove = new ItemStack(PowerModItems.FIRE_ARMOR_BOOTS.get());
+							_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
+						}
+					});
+				});
+			});
+		});
 		{
 			Entity _ent = entity;
 			if (!_ent.level().isClientSide() && _ent.getServer() != null) {

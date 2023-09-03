@@ -1,0 +1,11 @@
+{
+  "_fv": 48,
+  "_type": "tab",
+  "definition": {
+    "name": "Boxes",
+    "icon": {
+      "value": "CUSTOM:BasicBox"
+    },
+    "showSearch": false
+  }
+}

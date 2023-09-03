@@ -366,6 +366,89 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "BasicBox",
+      "type": "block",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_box",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/block/BasicBoxBlock.java",
+          "src/main/resources/assets/power/models/item/basic_box.json",
+          "src/main/resources/assets/power/models/block/basic_box.json",
+          "src/main/resources/assets/power/blockstates/basic_box.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/block/entity/BasicBoxBlockEntity.java"
+        ]
+      },
+      "path": "~/Modules/KeeperModule"
+    },
+    {
+      "name": "Boxes",
+      "type": "tab",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "boxes",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Tabs"
+    },
+    {
+      "name": "FireArmor",
+      "type": "armor",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/fire_armor_boots.json",
+          "src/main/resources/assets/power/models/item/fire_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/fire_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/fire_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/FireArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireSword",
+      "type": "tool",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/FireSwordItem.java",
+          "src/main/resources/assets/power/models/item/fire_sword.json"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireSwordCheckingMaster",
+      "type": "procedure",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_sword_checking_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireSwordCheckingMasterProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
     }
   ],
   "variable_elements": [
@@ -383,12 +466,6 @@
     },
     {
       "name": "fire",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
-    },
-    {
-      "name": "recharge",
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
@@ -440,6 +517,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "selected",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -462,31 +545,45 @@
   ],
   "language_map": {
     "ru_ru": {
+      "item.power.fire_sword": "Fire Sword",
       "item.power.ether_stone": "Камень эфира",
       "effect.power.ether_master": "Мастер эфира",
       "key.power.detransformation_key": "Клавиша детрансформации",
+      "item.power.fire_armor_chestplate": "Fire Chestplate",
       "effect.power.fire_master": "Мастер огня",
+      "item.power.fire_armor_boots": "Fire Boots",
       "item_group.power.stones": "Камни",
       "effect.power.water_master": "Мастер воды",
+      "item_group.power.boxes": "Шкатулки",
+      "block.power.basic_box": "Базовая шкатулка",
       "item.power.earth_stone": "Камень земли",
+      "item.power.fire_armor_helmet": "Fire Helmet",
       "item.power.fire_stone": "Камень огня",
       "item.power.air_stone": "Камень воздуха",
       "effect.power.air_master": "Мастер воздуха",
       "item.power.water_stone": "Камень воды",
+      "item.power.fire_armor_leggings": "Fire Leggings",
       "effect.power.earth_master": "Мастер земли"
     },
     "en_us": {
+      "item.power.fire_sword": "Fire Sword",
       "item.power.ether_stone": "Ether Stone",
       "effect.power.ether_master": "Master of the Ether",
       "key.power.detransformation_key": "Detransformation Key",
+      "item.power.fire_armor_chestplate": "Fire Chestplate",
       "effect.power.fire_master": "Master of Fire",
+      "item.power.fire_armor_boots": "Fire Boots",
       "item_group.power.stones": "Stones",
       "effect.power.water_master": "Master of Water",
+      "item_group.power.boxes": "Boxes",
+      "block.power.basic_box": "Basic Box",
       "item.power.earth_stone": "Earth Stone",
+      "item.power.fire_armor_helmet": "Fire Helmet",
       "item.power.fire_stone": "Fire Stone",
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
       "item.power.water_stone": "Water Stone",
+      "item.power.fire_armor_leggings": "Fire Leggings",
       "effect.power.earth_master": "Master of the Earth"
     }
   },

@@ -1,14 +1,21 @@
 {
+  "item.power.fire_sword": "Fire Sword",
   "item.power.ether_stone": "Камень эфира",
   "effect.power.ether_master": "Мастер эфира",
   "key.power.detransformation_key": "Клавиша детрансформации",
+  "item.power.fire_armor_chestplate": "Fire Chestplate",
   "effect.power.fire_master": "Мастер огня",
+  "item.power.fire_armor_boots": "Fire Boots",
   "item_group.power.stones": "Камни",
   "effect.power.water_master": "Мастер воды",
+  "item_group.power.boxes": "Шкатулки",
+  "block.power.basic_box": "Базовая шкатулка",
   "item.power.earth_stone": "Камень земли",
+  "item.power.fire_armor_helmet": "Fire Helmet",
   "item.power.fire_stone": "Камень огня",
   "item.power.air_stone": "Камень воздуха",
   "effect.power.air_master": "Мастер воздуха",
   "item.power.water_stone": "Камень воды",
+  "item.power.fire_armor_leggings": "Fire Leggings",
   "effect.power.earth_master": "Мастер земли"
 }
