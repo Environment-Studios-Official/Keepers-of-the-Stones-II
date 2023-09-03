@@ -489,6 +489,58 @@
         ]
       },
       "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FirePlacement",
+      "type": "procedure",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_placement",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FirePlacementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "MagicFireball",
+      "type": "rangeditem",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_fireball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/magic_fireball.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/MagicFireballEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagicFireballItem.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
     }
   ],
   "variable_elements": [
@@ -594,6 +646,7 @@
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item_group.power.stones": "Камни",
       "effect.power.water_master": "Мастер воды",
+      "item.power.magic_fireball": "Magic Fireball",
       "item_group.power.boxes": "Шкатулки",
       "block.power.basic_box": "Базовая шкатулка",
       "item.power.earth_stone": "Камень земли",
@@ -615,6 +668,7 @@
       "item.power.fire_armor_boots": "Fire Boots",
       "item_group.power.stones": "Stones",
       "effect.power.water_master": "Master of Water",
+      "item.power.magic_fireball": "Magic Fireball",
       "item_group.power.boxes": "Boxes",
       "block.power.basic_box": "Basic Box",
       "item.power.earth_stone": "Earth Stone",

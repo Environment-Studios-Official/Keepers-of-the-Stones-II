@@ -19,6 +19,7 @@ import ru.power_umc.keepersofthestones.two.init.PowerModTabs;
 import ru.power_umc.keepersofthestones.two.init.PowerModSounds;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
+import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 import ru.power_umc.keepersofthestones.two.init.PowerModBlocks;
 import ru.power_umc.keepersofthestones.two.init.PowerModBlockEntities;
 
@@ -59,6 +60,7 @@ public class PowerMod {
 		PowerModBlocks.REGISTRY.register(bus);
 		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModItems.REGISTRY.register(bus);
+		PowerModEntities.REGISTRY.register(bus);
 
 		PowerModTabs.REGISTRY.register(bus);
 

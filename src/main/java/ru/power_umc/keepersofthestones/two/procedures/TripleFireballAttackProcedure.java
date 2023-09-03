@@ -1,16 +1,17 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
+import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
+import ru.power_umc.keepersofthestones.two.entity.MagicFireballEntity;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.projectile.SmallFireball;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -32,9 +33,18 @@ public class TripleFireballAttackProcedure {
 				Entity _shootFrom = entity;
 				Level projectileLevel = _shootFrom.level();
 				if (!projectileLevel.isClientSide()) {
-					Projectile _entityToSpawn = new SmallFireball(EntityType.SMALL_FIREBALL, projectileLevel);
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							entityToSpawn.setSecondsOnFire(100);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, 3, 3);
 					_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+					_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 			}
@@ -50,9 +60,18 @@ public class TripleFireballAttackProcedure {
 					Entity _shootFrom = entity;
 					Level projectileLevel = _shootFrom.level();
 					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new SmallFireball(EntityType.SMALL_FIREBALL, projectileLevel);
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								entityToSpawn.setSecondsOnFire(100);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, 3, 1);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
 					}
 				}
@@ -68,9 +87,18 @@ public class TripleFireballAttackProcedure {
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
 						if (!projectileLevel.isClientSide()) {
-							Projectile _entityToSpawn = new SmallFireball(EntityType.SMALL_FIREBALL, projectileLevel);
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									entityToSpawn.setSecondsOnFire(100);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, 3, 3);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 					}
