@@ -505,6 +505,44 @@
         ]
       },
       "path": "~/Elements/Fire"
+    },
+    {
+      "name": "SpecialAttackKey",
+      "type": "keybind",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_attack_key",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/SpecialAttackKeyMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "SpecialAttack",
+      "type": "procedure",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
     }
   ],
   "variable_elements": [
@@ -610,6 +648,7 @@
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item_group.power.stones": "Камни",
       "effect.power.water_master": "Мастер воды",
+      "key.power.special_attack_key": "Special Attack Key",
       "item.power.magic_fireball": "Magic Fireball",
       "item_group.power.boxes": "Шкатулки",
       "block.power.basic_box": "Базовая шкатулка",
@@ -632,6 +671,7 @@
       "item.power.fire_armor_boots": "Fire Boots",
       "item_group.power.stones": "Stones",
       "effect.power.water_master": "Master of Water",
+      "key.power.special_attack_key": "Special Attack Key",
       "item.power.magic_fireball": "Magic Fireball",
       "item_group.power.boxes": "Boxes",
       "block.power.basic_box": "Basic Box",

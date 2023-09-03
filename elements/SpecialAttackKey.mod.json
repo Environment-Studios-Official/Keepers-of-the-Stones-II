@@ -1,0 +1,12 @@
+{
+  "_fv": 48,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "R",
+    "keyBindingName": "Special Attack Key",
+    "keyBindingCategoryKey": "power",
+    "onKeyPressed": {
+      "name": "SpecialAttack"
+    }
+  }
+}
