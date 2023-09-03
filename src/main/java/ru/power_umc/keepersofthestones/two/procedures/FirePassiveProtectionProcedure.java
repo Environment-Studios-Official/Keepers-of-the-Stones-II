@@ -37,7 +37,7 @@ public class FirePassiveProtectionProcedure {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
-			if (entity.isInLava() == true) {
+			if (entity.isInLava() || entity.isOnFire()) {
 				particleAmount = 8;
 				particleRadius = 2;
 				for (int index0 = 0; index0 < (int) particleAmount; index0++) {
