@@ -13,6 +13,10 @@ import org.spongepowered.asm.mixin.Mixin;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
+import ru.power_umc.keepersofthestones.two.PowerMod;
+import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
+import net.minecraft.world.entity.Entity;
+
 
 @Mixin(MilkBucketItem.class)
 public class MilkBucketItemMixin {
@@ -20,7 +24,11 @@ public class MilkBucketItemMixin {
    @Inject(method = "finishUsingItem", at = @At("HEAD"), cancellable = true)
     public void mix$finishUsingItem(ItemStack p_42923_, Level p_42924_, LivingEntity p_42925_, CallbackInfoReturnable<ItemStack> cir){
         cir.cancel();
-        //if (!p_42924_.isClientSide) p_42925_.curePotionEffects(p_42923_);
+     if ((p_42925_.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false) {
+        
+        if (!p_42924_.isClientSide) p_42925_.curePotionEffects(p_42923_); {
+        }
+     }
         if (p_42925_ instanceof ServerPlayer serverplayer) {
             CriteriaTriggers.CONSUME_ITEM.trigger(serverplayer, p_42923_);
             serverplayer.awardStat(Stats.ITEM_USED.get((MilkBucketItem)(Object)this));
