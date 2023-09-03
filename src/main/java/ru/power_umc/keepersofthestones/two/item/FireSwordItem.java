@@ -1,6 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.item;
 
+import ru.power_umc.keepersofthestones.two.procedures.TripleFireballAttackProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.FireSwordCheckingMasterProcedure;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
@@ -13,7 +14,10 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionResultHolder;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
@@ -45,6 +49,13 @@ public class FireSwordItem extends SwordItem {
 				return Ingredient.of();
 			}
 		}, 3, -2.4f, new Item.Properties().fireResistant());
+	}
+
+	@Override
+	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
+		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
+		TripleFireballAttackProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		return ar;
 	}
 
 	@Override

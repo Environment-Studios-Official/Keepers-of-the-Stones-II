@@ -27,6 +27,9 @@
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
+    "onRightClickedInAir": {
+      "name": "TripleFireballAttack"
+    },
     "onItemInInventoryTick": {
       "name": "FireSwordCheckingMaster"
     }
