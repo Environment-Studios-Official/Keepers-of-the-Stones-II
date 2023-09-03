@@ -491,42 +491,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "FirePlacement",
-      "type": "procedure",
-      "sortid": 31,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_placement",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FirePlacementProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "MagicFireball",
       "type": "rangeditem",
       "sortid": 32,
