@@ -581,21 +581,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "FlameAttack",
-      "type": "particle",
-      "sortid": 37,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "flame_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/particles/flame_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/particle/FlameAttackParticle.java"
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "PowerScaleRegen",
       "type": "procedure",
       "sortid": 38,
