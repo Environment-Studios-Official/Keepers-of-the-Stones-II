@@ -2,5 +2,13 @@
   "parent": "item/generated",
   "textures": {
     "layer0": "power:item/air_stone"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cooldown": 0.01
+      },
+      "model": "power:item/air_stone_0"
+    }
+  ]
 }

@@ -6,7 +6,24 @@
     "texture": "air_stone",
     "customModelName": "Normal",
     "customProperties": {},
-    "states": [],
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "recharging_stone",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": 0.0,
+              "max": 1.0,
+              "name": "cooldown",
+              "type": "number"
+            },
+            "value": 0.01
+          }
+        ]
+      }
+    ],
     "name": "Air Stone",
     "rarity": "COMMON",
     "creativeTab": {
@@ -33,6 +50,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "AirStoneUse"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

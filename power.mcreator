@@ -61,6 +61,7 @@
       "metadata": {
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/item/AirStoneItem.java",
+          "src/main/resources/assets/power/models/item/air_stone_0.json",
           "src/main/resources/assets/power/models/item/air_stone.json"
         ]
       },
@@ -641,6 +642,120 @@
         ]
       },
       "path": "~/Modules/PowerScaleModule "
+    },
+    {
+      "name": "AirArmor",
+      "type": "armor",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/air_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/air_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/air_armor_boots.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/AirArmorItem.java",
+          "src/main/resources/assets/power/models/item/air_armor_helmet.json"
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirStoneUse",
+      "type": "procedure",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirMasterStart",
+      "type": "procedure",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirMasterEnd",
+      "type": "procedure",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
     }
   ],
   "variable_elements": [
@@ -754,22 +869,26 @@
       "effect.power.ether_master": "Мастер эфира",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
-      "effect.power.fire_master": "Мастер огня",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "item.power.air_armor_helmet": "Шлем мастера воздуха",
+      "key.power.special_attack_key": "Клавиша специальной атаки",
+      "item_group.power.boxes": "Шкатулки",
+      "item.power.fire_stone": "Камень огня",
+      "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
+      "effect.power.earth_master": "Мастер земли",
+      "item.power.air_armor_leggings": "Поножи мастера воздуха",
+      "effect.power.fire_master": "Мастер огня",
       "item_group.power.stones": "Камни",
       "effect.power.water_master": "Мастер воды",
-      "key.power.special_attack_key": "Special Attack Key",
-      "item.power.magic_fireball": "Magic Fireball",
-      "item_group.power.boxes": "Шкатулки",
+      "item.power.magic_fireball": "Волшебный файрболл",
+      "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.basic_box": "Базовая шкатулка",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
-      "item.power.fire_stone": "Камень огня",
       "item.power.air_stone": "Камень воздуха",
       "effect.power.air_master": "Мастер воздуха",
       "item.power.water_stone": "Камень воды",
-      "item.power.fire_armor_leggings": "Поножи мастера огня",
-      "effect.power.earth_master": "Мастер земли"
+      "item.power.fire_armor_leggings": "Поножи мастера огня"
     },
     "en_us": {
       "item.power.fire_sword": "Fire Sword",
@@ -777,22 +896,26 @@
       "effect.power.ether_master": "Master of the Ether",
       "key.power.detransformation_key": "Detransformation Key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
-      "effect.power.fire_master": "Master of Fire",
       "item.power.fire_armor_boots": "Fire Boots",
+      "item.power.air_armor_helmet": "Air Helmet",
+      "key.power.special_attack_key": "Special Attack Key",
+      "item_group.power.boxes": "Boxes",
+      "item.power.fire_stone": "Fire Stone",
+      "item.power.air_armor_chestplate": "Air Chestplate",
+      "effect.power.earth_master": "Master of the Earth",
+      "item.power.air_armor_leggings": "Air Leggings",
+      "effect.power.fire_master": "Master of Fire",
       "item_group.power.stones": "Stones",
       "effect.power.water_master": "Master of Water",
-      "key.power.special_attack_key": "Special Attack Key",
       "item.power.magic_fireball": "Magic Fireball",
-      "item_group.power.boxes": "Boxes",
+      "item.power.air_armor_boots": "Air Boots",
       "block.power.basic_box": "Basic Box",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
-      "item.power.fire_stone": "Fire Stone",
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
       "item.power.water_stone": "Water Stone",
-      "item.power.fire_armor_leggings": "Fire Leggings",
-      "effect.power.earth_master": "Master of the Earth"
+      "item.power.fire_armor_leggings": "Fire Leggings"
     }
   },
   "foldersRoot": {
@@ -872,6 +995,7 @@
     "requiredMods": [
       "pehkui",
       "bettercombat",
+      "cloth_config",
       "geckolib",
       "playeranimator"
     ],
