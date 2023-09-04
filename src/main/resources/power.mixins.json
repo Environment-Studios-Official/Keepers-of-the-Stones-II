@@ -3,7 +3,7 @@
   "minVersion": "0.8",
   "package": "ru.power_umc.keepersofthestones.two.mixin",
   "compatibilityLevel": "JAVA_8",
-  "refmap": "UtilsNevermine.refmap.json",
+  "refmap": "power.refmap.json",
   "mixins": [
   	"MilkBucketItemMixin"
   ],
