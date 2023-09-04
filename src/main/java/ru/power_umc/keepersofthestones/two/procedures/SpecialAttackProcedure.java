@@ -1,5 +1,6 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
+import ru.power_umc.keepersofthestones.two.init.PowerModParticleTypes;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
 
 import net.minecraft.world.phys.Vec3;
@@ -8,7 +9,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -31,11 +32,11 @@ public class SpecialAttackProcedure {
 				} else {
 					break;
 				}
-				world.addParticle(ParticleTypes.FLAME,
+				world.addParticle((SimpleParticleType) (PowerModParticleTypes.FLAME_ATTACK.get()),
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
-						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()), 1, 1,
-						1);
+						(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()), 0.1,
+						0.25, 0.1);
 				{
 					final Vec3 _center = new Vec3(
 							(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
