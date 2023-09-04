@@ -594,6 +594,68 @@
         ]
       },
       "path": "~/Elements/Fire"
+    },
+    {
+      "name": "PowerScaleRegen",
+      "type": "procedure",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_scale_regen",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/PowerScaleRegenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/PowerScaleModule "
+    },
+    {
+      "name": "GetPowerScale",
+      "type": "procedure",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_power_scale",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/GetPowerScaleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/PowerScaleModule "
+    },
+    {
+      "name": "GetActive",
+      "type": "procedure",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_active",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/GetActiveProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/PowerScaleModule "
     }
   ],
   "variable_elements": [
@@ -668,6 +730,18 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "power",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "100.0"
+    },
+    {
+      "name": "powerTimer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "50.0"
     }
   ],
   "sound_elements": [
@@ -785,6 +859,10 @@
           },
           {
             "name": "KeyBindsModule",
+            "children": []
+          },
+          {
+            "name": "PowerScaleModule ",
             "children": []
           }
         ]

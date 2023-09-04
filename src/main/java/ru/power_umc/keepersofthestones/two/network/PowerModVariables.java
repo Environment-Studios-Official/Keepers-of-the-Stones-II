@@ -79,6 +79,8 @@ public class PowerModVariables {
 			clone.selected = original.selected;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
+				clone.power = original.power;
+				clone.powerTimer = original.powerTimer;
 			}
 		}
 	}
@@ -126,6 +128,8 @@ public class PowerModVariables {
 		public boolean ether_stone = false;
 		public boolean ether = false;
 		public boolean selected = false;
+		public double power = 100.0;
+		public double powerTimer = 50.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -146,6 +150,8 @@ public class PowerModVariables {
 			nbt.putBoolean("ether_stone", ether_stone);
 			nbt.putBoolean("ether", ether);
 			nbt.putBoolean("selected", selected);
+			nbt.putDouble("power", power);
+			nbt.putDouble("powerTimer", powerTimer);
 			return nbt;
 		}
 
@@ -163,6 +169,8 @@ public class PowerModVariables {
 			ether_stone = nbt.getBoolean("ether_stone");
 			ether = nbt.getBoolean("ether");
 			selected = nbt.getBoolean("selected");
+			power = nbt.getDouble("power");
+			powerTimer = nbt.getDouble("powerTimer");
 		}
 	}
 
@@ -199,6 +207,8 @@ public class PowerModVariables {
 					variables.ether_stone = message.data.ether_stone;
 					variables.ether = message.data.ether;
 					variables.selected = message.data.selected;
+					variables.power = message.data.power;
+					variables.powerTimer = message.data.powerTimer;
 				}
 			});
 			context.setPacketHandled(true);
