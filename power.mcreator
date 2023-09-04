@@ -758,26 +758,6 @@
       "path": "~/Elements/Air"
     },
     {
-      "name": "RemoveElementalArmor",
-      "type": "procedure",
-      "sortid": 46,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "remove_elemental_armor",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/RemoveElementalArmorProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "ElementalArmor",
       "type": "tag",
       "sortid": 47,

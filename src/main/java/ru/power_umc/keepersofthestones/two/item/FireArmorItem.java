@@ -1,8 +1,6 @@
 
 package ru.power_umc.keepersofthestones.two.item;
 
-import ru.power_umc.keepersofthestones.two.procedures.RemoveElementalArmorProcedure;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
@@ -10,7 +8,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.ArmorItem;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundEvents;
@@ -78,11 +75,6 @@ public abstract class FireArmorItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "power:textures/models/armor/fire_armor__layer_1.png";
 		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			RemoveElementalArmorProcedure.execute(entity);
-		}
 	}
 
 	public static class Chestplate extends FireArmorItem {
@@ -98,11 +90,6 @@ public abstract class FireArmorItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "power:textures/models/armor/fire_armor__layer_1.png";
-		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			RemoveElementalArmorProcedure.execute(entity);
 		}
 	}
 
@@ -120,11 +107,6 @@ public abstract class FireArmorItem extends ArmorItem {
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "power:textures/models/armor/fire_armor__layer_2.png";
 		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			RemoveElementalArmorProcedure.execute(entity);
-		}
 	}
 
 	public static class Boots extends FireArmorItem {
@@ -140,11 +122,6 @@ public abstract class FireArmorItem extends ArmorItem {
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
 			return "power:textures/models/armor/fire_armor__layer_1.png";
-		}
-
-		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			RemoveElementalArmorProcedure.execute(entity);
 		}
 	}
 }

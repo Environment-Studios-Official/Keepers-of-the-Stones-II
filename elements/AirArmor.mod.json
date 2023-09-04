@@ -10,18 +10,6 @@
     "textureLeggings": "air_armor_leggings",
     "enableBoots": true,
     "textureBoots": "air_armor_boots",
-    "onHelmetTick": {
-      "name": "RemoveElementalArmor"
-    },
-    "onBodyTick": {
-      "name": "RemoveElementalArmor"
-    },
-    "onLeggingsTick": {
-      "name": "RemoveElementalArmor"
-    },
-    "onBootsTick": {
-      "name": "RemoveElementalArmor"
-    },
     "creativeTab": {
       "value": "No creative tab entry"
     },
