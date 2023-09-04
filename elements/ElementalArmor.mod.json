@@ -1,0 +1,39 @@
+{
+  "_fv": 48,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:FireArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:FireArmor.body"
+      },
+      {
+        "value": "CUSTOM:FireArmor.legs"
+      },
+      {
+        "value": "CUSTOM:FireArmor.boots"
+      },
+      {
+        "value": "CUSTOM:AirArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:AirArmor.body"
+      },
+      {
+        "value": "CUSTOM:AirArmor.legs"
+      },
+      {
+        "value": "CUSTOM:AirArmor.boots"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "elemental_armor",
+    "namespace": "mod"
+  }
+}

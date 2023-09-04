@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    "power:fire_armor_boots",
+    "power:air_armor_chestplate",
+    "power:fire_armor_leggings",
+    "power:air_armor_boots",
+    "power:fire_armor_helmet",
+    "power:air_armor_helmet",
+    "power:fire_armor_chestplate",
+    "power:air_armor_leggings"
+  ]
+}

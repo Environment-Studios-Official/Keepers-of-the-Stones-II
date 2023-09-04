@@ -776,6 +776,48 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "ElementalArmor",
+      "type": "tag",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/tags/items/elemental_armor.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "StonesTag",
+      "type": "tag",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stones_tag",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/tags/items/stones.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "ElementalWeapon",
+      "type": "tag",
+      "sortid": 49,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_weapon",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/tags/items/elemental_weapon.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [
@@ -997,6 +1039,10 @@
       },
       {
         "name": "Items",
+        "children": []
+      },
+      {
+        "name": "Tags",
         "children": []
       }
     ]

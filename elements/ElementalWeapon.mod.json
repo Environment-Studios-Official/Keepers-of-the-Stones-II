@@ -1,0 +1,18 @@
+{
+  "_fv": 48,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:FireSword"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "elemental_weapon",
+    "namespace": "mod"
+  }
+}

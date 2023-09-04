@@ -1,0 +1,30 @@
+{
+  "_fv": 48,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:FireStone"
+      },
+      {
+        "value": "CUSTOM:AirStone"
+      },
+      {
+        "value": "CUSTOM:EarthStone"
+      },
+      {
+        "value": "CUSTOM:WaterStone"
+      },
+      {
+        "value": "CUSTOM:EtherStone"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "name": "stones",
+    "namespace": "mod"
+  }
+}
