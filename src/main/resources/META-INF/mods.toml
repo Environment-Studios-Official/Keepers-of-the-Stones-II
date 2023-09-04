@@ -6,7 +6,7 @@ license="All Rights Reserved"
 modId="power"
 version="1.0.0.1"
 displayName="Keepers of the Stones II"
-credits="Created by Environment Studios, Animations and sounds of combat were taken from the Better Combat by Daedelus mod."
+credits="Created by Environment Studios"
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
 logoFile="logo.png"
 authors="Environment Studios"
@@ -22,6 +22,12 @@ description="Keepers of the Stones II is a mod that was created as a continuatio
 
 [[dependencies.power]]
     modId="pehkui"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="bettercombat"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"
