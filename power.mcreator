@@ -1040,15 +1040,14 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "bettercombat",
-      "cloth_config",
       "geckolib",
       "playeranimator"
     ],
-    "dependencies": [],
-    "dependants": [
-      "power_dimensions"
+    "dependencies": [
+      "cloth_config",
+      "bettercombat"
     ],
+    "dependants": [],
     "mcreatorDependencies": [
       "geckolib",
       "playeranimator",
