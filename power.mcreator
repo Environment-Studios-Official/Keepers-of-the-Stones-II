@@ -436,26 +436,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "FireSwordCheckingMaster",
-      "type": "procedure",
-      "sortid": 29,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "fire_sword_checking_master",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireSwordCheckingMasterProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "TripleFireballAttack",
       "type": "procedure",
       "sortid": 30,
@@ -817,7 +797,27 @@
           }
         ]
       },
-      "path": "~/Elements/Air"
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "CheckingElementalWeapon",
+      "type": "procedure",
+      "sortid": 52,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checking_elemental_weapon",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CheckingElementalWeaponProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [

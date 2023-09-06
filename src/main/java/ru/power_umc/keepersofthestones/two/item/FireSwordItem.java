@@ -2,7 +2,7 @@
 package ru.power_umc.keepersofthestones.two.item;
 
 import ru.power_umc.keepersofthestones.two.procedures.TripleFireballAttackProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.FireSwordCheckingMasterProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.CheckingElementalWeaponProcedure;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -66,7 +66,7 @@ public class FireSwordItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		FireSwordCheckingMasterProcedure.execute(entity);
+		CheckingElementalWeaponProcedure.execute(entity);
 	}
 
 	@Override
