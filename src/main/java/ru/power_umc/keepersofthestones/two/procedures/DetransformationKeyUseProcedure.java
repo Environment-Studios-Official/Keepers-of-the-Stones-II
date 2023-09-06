@@ -30,13 +30,6 @@ public class DetransformationKeyUseProcedure {
 				_entity.removeEffect(PowerModMobEffects.WATER_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.ETHER_MASTER.get());
-			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.active = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));

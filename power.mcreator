@@ -798,6 +798,26 @@
         ]
       },
       "path": "~/Tags"
+    },
+    {
+      "name": "CheckingElementalArmor",
+      "type": "procedure",
+      "sortid": 51,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "checking_elemental_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CheckingElementalArmorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
     }
   ],
   "variable_elements": [
@@ -1030,7 +1050,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.2",
+    "version": "1.0.0.0.3\\",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",

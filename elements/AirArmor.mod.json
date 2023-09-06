@@ -10,6 +10,18 @@
     "textureLeggings": "air_armor_leggings",
     "enableBoots": true,
     "textureBoots": "air_armor_boots",
+    "onHelmetTick": {
+      "name": "CheckingElementalArmor"
+    },
+    "onBodyTick": {
+      "name": "CheckingElementalArmor"
+    },
+    "onLeggingsTick": {
+      "name": "CheckingElementalArmor"
+    },
+    "onBootsTick": {
+      "name": "CheckingElementalArmor"
+    },
     "creativeTab": {
       "value": "No creative tab entry"
     },
