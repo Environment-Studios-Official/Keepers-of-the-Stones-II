@@ -1229,12 +1229,12 @@
   ],
   "language_map": {
     "ru_ru": {
-      "gui.power.wheel_abilities_fire.button_1": "1",
       "item.power.fire_sword": "Меч огня",
+      "gui.power.wheel_abilities_fire.button_1": "1",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_of_your_s": "Flamethrower, uses 10% of your strength",
       "gui.power.wheel_abilities_fire.button_3": "3",
-      "gui.power.wheel_abilities_fire.button_2": "2",
       "item.power.ether_stone": "Камень эфира",
+      "gui.power.wheel_abilities_fire.button_2": "2",
       "effect.power.ether_master": "Мастер эфира",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
@@ -1269,12 +1269,12 @@
       "item.power.fire_armor_leggings": "Поножи мастера огня"
     },
     "en_us": {
-      "gui.power.wheel_abilities_fire.button_1": "1",
       "item.power.fire_sword": "Fire Sword",
+      "gui.power.wheel_abilities_fire.button_1": "1",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_of_your_s": "Flamethrower, uses 10% of your strength",
       "gui.power.wheel_abilities_fire.button_3": "3",
-      "gui.power.wheel_abilities_fire.button_2": "2",
       "item.power.ether_stone": "Ether Stone",
+      "gui.power.wheel_abilities_fire.button_2": "2",
       "effect.power.ether_master": "Master of the Ether",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
@@ -1383,7 +1383,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.5",
+    "version": "1.0.0.0.6",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
