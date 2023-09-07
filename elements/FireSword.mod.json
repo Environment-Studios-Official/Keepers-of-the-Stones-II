@@ -31,7 +31,7 @@
       "name": "TripleFireballAttack"
     },
     "onItemInInventoryTick": {
-      "name": "CheckingElementalWeapon"
+      "name": "FireSwordKazhdyiTikVInvientarie"
     }
   }
 }

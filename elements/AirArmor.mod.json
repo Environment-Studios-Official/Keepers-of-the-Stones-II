@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "air_armor_boots",
     "onHelmetTick": {
-      "name": "CheckingElementalArmor"
+      "name": "AirArmorKazhdyiTikDliaShliema"
     },
     "onBodyTick": {
-      "name": "CheckingElementalArmor"
+      "name": "AirArmorKazhdyiTikDliaNaghrudnika"
     },
     "onLeggingsTick": {
-      "name": "CheckingElementalArmor"
+      "name": "AirArmorKazhdyiTikDliaPonozhiei"
     },
     "onBootsTick": {
-      "name": "CheckingElementalArmor"
+      "name": "AirArmorKazhdyiTikDliaBotinok"
     },
     "creativeTab": {
       "value": "No creative tab entry"

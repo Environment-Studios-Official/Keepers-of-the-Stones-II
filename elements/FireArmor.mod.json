@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "fire_armor_boots",
     "onHelmetTick": {
-      "name": "CheckingElementalArmor"
+      "name": "FireArmorKazhdyiTikDliaShliema"
     },
     "onBodyTick": {
-      "name": "CheckingElementalArmor"
+      "name": "FireArmorKazhdyiTikDliaNaghrudnika"
     },
     "onLeggingsTick": {
-      "name": "CheckingElementalArmor"
+      "name": "FireArmorKazhdyiTikDliaPonozhiei"
     },
     "onBootsTick": {
-      "name": "CheckingElementalArmor"
+      "name": "FireArmorKazhdyiTikDliaBotinok"
     },
     "creativeTab": {
       "value": "No creative tab entry"

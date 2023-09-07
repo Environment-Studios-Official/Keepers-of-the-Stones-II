@@ -45,7 +45,7 @@ public class TripleFireballAttackProcedure {
 								entityToSpawn.setSecondsOnFire(100);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, 3, 3);
+						}.getArrow(projectileLevel, 3, 1);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -99,7 +99,7 @@ public class TripleFireballAttackProcedure {
 										entityToSpawn.setSecondsOnFire(100);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, 3, 3);
+								}.getArrow(projectileLevel, 3, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);

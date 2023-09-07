@@ -780,15 +780,35 @@
       "path": "~/Tags"
     },
     {
-      "name": "CheckingElementalArmor",
+      "name": "FireSwordKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 50,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_sword_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireSwordKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireArmorKazhdyiTikDliaShliema",
       "type": "procedure",
       "sortid": 51,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "checking_elemental_armor",
+      "registry_name": "fire_armor_kazhdyi_tik_dlia_shliema",
       "metadata": {
         "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CheckingElementalArmorProcedure.java"
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireArmorKazhdyiTikDliaShliemaProcedure.java"
         ],
         "dependencies": [
           {
@@ -797,18 +817,18 @@
           }
         ]
       },
-      "path": "~/Modules/BasicModule"
+      "path": "~/Elements/Fire"
     },
     {
-      "name": "CheckingElementalWeapon",
+      "name": "FireArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
       "sortid": 52,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "checking_elemental_weapon",
+      "registry_name": "fire_armor_kazhdyi_tik_dlia_naghrudnika",
       "metadata": {
         "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CheckingElementalWeaponProcedure.java"
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
         ],
         "dependencies": [
           {
@@ -817,7 +837,127 @@
           }
         ]
       },
-      "path": "~/Modules/BasicModule"
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 53,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "FireArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 54,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/FireArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "AirArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 55,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 56,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 57,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
+    },
+    {
+      "name": "AirArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 58,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/AirArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Air"
     }
   ],
   "variable_elements": [

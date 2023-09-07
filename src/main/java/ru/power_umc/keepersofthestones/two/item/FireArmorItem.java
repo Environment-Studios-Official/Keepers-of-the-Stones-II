@@ -1,7 +1,10 @@
 
 package ru.power_umc.keepersofthestones.two.item;
 
-import ru.power_umc.keepersofthestones.two.procedures.CheckingElementalArmorProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.FireArmorKazhdyiTikDliaShliemaProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.FireArmorKazhdyiTikDliaPonozhieiProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.FireArmorKazhdyiTikDliaNaghrudnikaProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.FireArmorKazhdyiTikDliaBotinokProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -81,7 +84,7 @@ public abstract class FireArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			CheckingElementalArmorProcedure.execute(entity);
+			FireArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
 		}
 	}
 
@@ -102,7 +105,7 @@ public abstract class FireArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			CheckingElementalArmorProcedure.execute(entity);
+			FireArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
 		}
 	}
 
@@ -123,7 +126,7 @@ public abstract class FireArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			CheckingElementalArmorProcedure.execute(entity);
+			FireArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
 		}
 	}
 
@@ -144,7 +147,7 @@ public abstract class FireArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			CheckingElementalArmorProcedure.execute(entity);
+			FireArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
 		}
 	}
 }
