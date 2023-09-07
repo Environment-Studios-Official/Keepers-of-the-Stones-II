@@ -18,6 +18,7 @@ import software.bernie.geckolib.GeckoLib;
 import ru.power_umc.keepersofthestones.two.init.PowerModTabs;
 import ru.power_umc.keepersofthestones.two.init.PowerModSounds;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
+import ru.power_umc.keepersofthestones.two.init.PowerModMenus;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 import ru.power_umc.keepersofthestones.two.init.PowerModBlocks;
@@ -66,6 +67,7 @@ public class PowerMod {
 
 		PowerModMobEffects.REGISTRY.register(bus);
 
+		PowerModMenus.REGISTRY.register(bus);
 		GeckoLib.initialize();
 	}
 

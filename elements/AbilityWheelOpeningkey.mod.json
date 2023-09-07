@@ -2,11 +2,11 @@
   "_fv": 48,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "U",
-    "keyBindingName": "Detransformation key",
+    "triggerKey": "T",
+    "keyBindingName": "Ability wheel opening key",
     "keyBindingCategoryKey": "power",
     "onKeyPressed": {
-      "name": "DetransformationKeyUse"
+      "name": "OpenWheel"
     }
   }
 }

@@ -8,17 +8,12 @@ import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerMod.MODID);
 	public static final RegistryObject<CreativeModeTab> STONES = REGISTRY.register("stones",
@@ -37,12 +32,4 @@ public class PowerModTabs {
 			})
 
 					.build());
-
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-
-		if (tabData.getTabKey() == CreativeModeTabs.TOOLS_AND_UTILITIES) {
-			tabData.accept(PowerModItems.FIRE_SWORD.get());
-		}
-	}
 }

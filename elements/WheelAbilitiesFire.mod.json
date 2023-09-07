@@ -1,0 +1,47 @@
+{
+  "_fv": 48,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 192,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_power_scale",
+          "text": {
+            "fixedValue": "",
+            "name": "GetPowerScale"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "x": 198,
+          "y": 118
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheel_of_abilities.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 24
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}

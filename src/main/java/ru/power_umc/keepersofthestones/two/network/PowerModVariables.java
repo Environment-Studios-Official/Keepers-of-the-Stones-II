@@ -77,6 +77,7 @@ public class PowerModVariables {
 			clone.ether_stone = original.ether_stone;
 			clone.ether = original.ether;
 			clone.selected = original.selected;
+			clone.attack = original.attack;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -130,6 +131,7 @@ public class PowerModVariables {
 		public boolean selected = false;
 		public double power = 100.0;
 		public double powerTimer = 50.0;
+		public double attack = 1.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -152,6 +154,7 @@ public class PowerModVariables {
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
+			nbt.putDouble("attack", attack);
 			return nbt;
 		}
 
@@ -171,6 +174,7 @@ public class PowerModVariables {
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
+			attack = nbt.getDouble("attack");
 		}
 	}
 
@@ -209,6 +213,7 @@ public class PowerModVariables {
 					variables.selected = message.data.selected;
 					variables.power = message.data.power;
 					variables.powerTimer = message.data.powerTimer;
+					variables.attack = message.data.attack;
 				}
 			});
 			context.setPacketHandled(true);

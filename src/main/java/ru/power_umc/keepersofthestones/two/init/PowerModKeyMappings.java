@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.network.SpecialAttackKeyMessage;
 import ru.power_umc.keepersofthestones.two.network.DetransformationKeyMessage;
+import ru.power_umc.keepersofthestones.two.network.AbilityWheelOpeningkeyMessage;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import org.lwjgl.glfw.GLFW;
@@ -47,11 +48,25 @@ public class PowerModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
+	public static final KeyMapping ABILITY_WHEEL_OPENINGKEY = new KeyMapping("key.power.ability_wheel_openingkey", GLFW.GLFW_KEY_T, "key.categories.power") {
+		private boolean isDownOld = false;
+
+		@Override
+		public void setDown(boolean isDown) {
+			super.setDown(isDown);
+			if (isDownOld != isDown && isDown) {
+				PowerMod.PACKET_HANDLER.sendToServer(new AbilityWheelOpeningkeyMessage(0, 0));
+				AbilityWheelOpeningkeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
+			}
+			isDownOld = isDown;
+		}
+	};
 
 	@SubscribeEvent
 	public static void registerKeyMappings(RegisterKeyMappingsEvent event) {
 		event.register(DETRANSFORMATION_KEY);
 		event.register(SPECIAL_ATTACK_KEY);
+		event.register(ABILITY_WHEEL_OPENINGKEY);
 	}
 
 	@Mod.EventBusSubscriber({Dist.CLIENT})
@@ -61,6 +76,7 @@ public class PowerModKeyMappings {
 			if (Minecraft.getInstance().screen == null) {
 				DETRANSFORMATION_KEY.consumeClick();
 				SPECIAL_ATTACK_KEY.consumeClick();
+				ABILITY_WHEEL_OPENINGKEY.consumeClick();
 			}
 		}
 	}

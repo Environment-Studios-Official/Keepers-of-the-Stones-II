@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.network;
 
-import ru.power_umc.keepersofthestones.two.procedures.SpecialAttackProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelProcedure;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -16,25 +16,25 @@ import net.minecraft.network.FriendlyByteBuf;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SpecialAttackKeyMessage {
+public class AbilityWheelOpeningkeyMessage {
 	int type, pressedms;
 
-	public SpecialAttackKeyMessage(int type, int pressedms) {
+	public AbilityWheelOpeningkeyMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public SpecialAttackKeyMessage(FriendlyByteBuf buffer) {
+	public AbilityWheelOpeningkeyMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(SpecialAttackKeyMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(AbilityWheelOpeningkeyMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(SpecialAttackKeyMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(AbilityWheelOpeningkeyMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -52,12 +52,12 @@ public class SpecialAttackKeyMessage {
 			return;
 		if (type == 0) {
 
-			SpecialAttackProcedure.execute(world, x, y, z, entity);
+			OpenWheelProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SpecialAttackKeyMessage.class, SpecialAttackKeyMessage::buffer, SpecialAttackKeyMessage::new, SpecialAttackKeyMessage::handler);
+		PowerMod.addNetworkMessage(AbilityWheelOpeningkeyMessage.class, AbilityWheelOpeningkeyMessage::buffer, AbilityWheelOpeningkeyMessage::new, AbilityWheelOpeningkeyMessage::handler);
 	}
 }

@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.item;
 
-import ru.power_umc.keepersofthestones.two.procedures.FireSwordKazhdyiTikVInvientarieProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.AirRapierKazhdyiTikVInvientarieProcedure;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -18,8 +18,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-public class FireSwordItem extends SwordItem {
-	public FireSwordItem() {
+public class AirRapierItem extends SwordItem {
+	public AirRapierItem() {
 		super(new Tier() {
 			public int getUses() {
 				return 0;
@@ -30,7 +30,7 @@ public class FireSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 7f;
+				return 4.5f;
 			}
 
 			public int getLevel() {
@@ -44,7 +44,7 @@ public class FireSwordItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -2.4f, new Item.Properties().fireResistant());
+		}, 3, -2f, new Item.Properties().fireResistant());
 	}
 
 	@Override
@@ -55,7 +55,7 @@ public class FireSwordItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		FireSwordKazhdyiTikVInvientarieProcedure.execute(entity);
+		AirRapierKazhdyiTikVInvientarieProcedure.execute(entity);
 	}
 
 	@Override
