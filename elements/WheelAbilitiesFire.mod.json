@@ -15,15 +15,15 @@
         "data": {
           "name": "label_proc_get_power_scale",
           "text": {
-            "fixedValue": "",
+            "fixedValue": "000",
             "name": "GetPowerScale"
           },
           "color": {
             "value": -3355444,
             "falpha": 0.0
           },
-          "x": 198,
-          "y": 118
+          "x": 204,
+          "y": 116
         }
       },
       {
@@ -37,8 +37,8 @@
       }
     ],
     "gridSettings": {
-      "sx": 16,
-      "sy": 16,
+      "sx": 4,
+      "sy": 4,
       "ox": 11,
       "oy": 15,
       "snapOnGrid": true

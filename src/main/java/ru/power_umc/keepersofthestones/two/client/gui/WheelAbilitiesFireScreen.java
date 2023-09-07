@@ -68,7 +68,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 		guiGraphics.drawString(this.font,
 
-				GetPowerScaleProcedure.execute(entity), 80, 94, -3355444, false);
+				GetPowerScaleProcedure.execute(entity), 86, 92, -3355444, false);
 	}
 
 	@Override
