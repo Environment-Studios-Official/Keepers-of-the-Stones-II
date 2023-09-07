@@ -34,6 +34,62 @@
           "x": 117,
           "y": 24
         }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "onClick": {
+            "name": "Attack1"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 198,
+          "y": 48
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "onClick": {
+            "name": "Attack2"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 260,
+          "y": 110
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "onClick": {
+            "name": "Attack3"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 198,
+          "y": 172
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_4",
+          "text": "4",
+          "onClick": {
+            "name": "Attack4"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 136,
+          "y": 108
+        }
       }
     ],
     "gridSettings": {

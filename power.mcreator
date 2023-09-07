@@ -980,7 +980,8 @@
       "metadata": {
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesFireMenu.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesFireScreen.java"
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesFireScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesFireButtonMessage.java"
         ]
       },
       "path": "~/Modules/AbilityWheelModule"
