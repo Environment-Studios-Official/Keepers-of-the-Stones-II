@@ -1,10 +1,10 @@
 {
-  "item.power.fire_sword": "Меч огня",
   "gui.power.wheel_abilities_fire.button_1": "1",
+  "item.power.fire_sword": "Меч огня",
   "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_of_your_s": "Flamethrower, uses 10% of your strength",
   "gui.power.wheel_abilities_fire.button_3": "3",
-  "item.power.ether_stone": "Камень эфира",
   "gui.power.wheel_abilities_fire.button_2": "2",
+  "item.power.ether_stone": "Камень эфира",
   "effect.power.ether_master": "Мастер эфира",
   "key.power.detransformation_key": "Клавиша детрансформации",
   "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
