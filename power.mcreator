@@ -1200,13 +1200,12 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
+      "cloth_config",
+      "bettercombat",
       "geckolib",
       "playeranimator"
     ],
-    "dependencies": [
-      "cloth_config",
-      "bettercombat"
-    ],
+    "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
       "geckolib",
