@@ -12,9 +12,14 @@
   "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
   "item.power.air_armor_chestplate": "Air Chestplate",
   "key.power.ability_wheel_openingkey": "Ability wheel opening key",
+  "gui.power.wheel_abilities_air.button_3": "3",
   "effect.power.earth_master": "Master of the Earth",
+  "gui.power.wheel_abilities_air.button_2": "2",
+  "gui.power.wheel_abilities_air.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
   "item.power.air_rapier": "Air Rapier",
+  "gui.power.wheel_abilities_air.button_1": "1",
   "item.power.air_armor_leggings": "Air Leggings",
+  "gui.power.wheel_abilities_air.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
   "effect.power.fire_master": "Master of Fire",
   "item_group.power.stones": "Stones",
   "effect.power.water_master": "Master of Water",
@@ -27,6 +32,7 @@
   "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
   "item.power.air_stone": "Air Stone",
   "effect.power.air_master": "Master of the Air",
+  "gui.power.wheel_abilities_air.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
   "item.power.water_stone": "Water Stone",
   "item.power.fire_armor_leggings": "Fire Leggings"
 }
