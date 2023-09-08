@@ -36,58 +36,80 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
+          "name": "imagebutton_flamethrower",
+          "image": "flamethrower.png",
+          "hoveredImage": "flamethrower_highlighted.png",
           "onClick": {
             "name": "Attack1"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
+          "name": "imagebutton_triple_fireball",
+          "image": "triple_fireball.png",
+          "hoveredImage": "triple_fireball_highlighted.png",
           "onClick": {
             "name": "Attack2"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
+          "name": "imagebutton_jet_fire",
+          "image": "jet_fire.png",
+          "hoveredImage": "jet_fire_highlighted.png",
           "onClick": {
             "name": "Attack3"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 129,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_4",
-          "text": "4",
-          "onClick": {
-            "name": "Attack4"
+          "name": "tooltip_flamethrower_uses_10_power_poin",
+          "text": {
+            "fixedValue": "Flamethrower, uses 10 power points"
           },
-          "width": 30,
-          "height": 20,
-          "x": 136,
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_jet_flight_uses_5_power_points",
+          "text": {
+            "fixedValue": "Jet flight, uses 5 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_triple_fireball_uses_25_power_p",
+          "text": {
+            "fixedValue": "Triple fireball, uses 25 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
           "y": 108
         }
       }
@@ -97,7 +119,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

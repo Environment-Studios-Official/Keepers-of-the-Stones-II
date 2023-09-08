@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -23,10 +23,9 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_1;
-	Button button_2;
-	Button button_3;
-	Button button_4;
+	ImageButton imagebutton_flamethrower;
+	ImageButton imagebutton_triple_fireball;
+	ImageButton imagebutton_jet_fire;
 
 	public WheelAbilitiesFireScreen(WheelAbilitiesFireMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -44,6 +43,12 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin"), mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 84 && mouseY < topPos + 108)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p"), mouseX, mouseY);
 	}
 
 	@Override
@@ -86,37 +91,29 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_fire.button_1"), e -> {
+		imagebutton_flamethrower = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_flamethrower.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(0, x, y, z));
 				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 80, this.topPos + 24, 30, 20).build();
-		guistate.put("button:button_1", button_1);
-		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_fire.button_2"), e -> {
+		});
+		guistate.put("button:imagebutton_flamethrower", imagebutton_flamethrower);
+		this.addRenderableWidget(imagebutton_flamethrower);
+		imagebutton_triple_fireball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_triple_fireball.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(1, x, y, z));
 				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 86, 30, 20).build();
-		guistate.put("button:button_2", button_2);
-		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_fire.button_3"), e -> {
+		});
+		guistate.put("button:imagebutton_triple_fireball", imagebutton_triple_fireball);
+		this.addRenderableWidget(imagebutton_triple_fireball);
+		imagebutton_jet_fire = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_jet_fire.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(2, x, y, z));
 				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 80, this.topPos + 148, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
-		button_4 = Button.builder(Component.translatable("gui.power.wheel_abilities_fire.button_4"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(3, x, y, z));
-				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}).bounds(this.leftPos + 18, this.topPos + 84, 30, 20).build();
-		guistate.put("button:button_4", button_4);
-		this.addRenderableWidget(button_4);
+		});
+		guistate.put("button:imagebutton_jet_fire", imagebutton_jet_fire);
+		this.addRenderableWidget(imagebutton_jet_fire);
 	}
 }
