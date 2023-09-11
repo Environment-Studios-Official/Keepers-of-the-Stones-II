@@ -77,7 +77,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/earth_stone.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/EarthStoneItem.java"
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EarthStoneItem.java",
+          "src/main/resources/assets/power/models/item/earth_stone_0.json"
         ]
       },
       "path": "~/Elements/Earth"
@@ -1131,6 +1132,118 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule"
+    },
+    {
+      "name": "EarthStoneUse",
+      "type": "procedure",
+      "sortid": 69,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthMasterEffectStart",
+      "type": "procedure",
+      "sortid": 70,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_master_effect_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterEffectStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthMasterEffectEnd",
+      "type": "procedure",
+      "sortid": 71,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_master_effect_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterEffectEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WheelAbilitiesEarth",
+      "type": "gui",
+      "sortid": 72,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_earth",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesEarthScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesEarthButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesEarthMenu.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule"
     }
   ],
   "variable_elements": [
@@ -1254,6 +1367,8 @@
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
       "item_group.power.boxes": "Шкатулки",
+      "gui.power.wheel_abilities_earth.button_3": "3",
+      "gui.power.wheel_abilities_earth.button_2": "2",
       "item.power.fire_stone": "Камень огня",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
@@ -1269,6 +1384,7 @@
       "effect.power.fire_master": "Мастер огня",
       "item_group.power.stones": "Камни",
       "effect.power.water_master": "Мастер воды",
+      "gui.power.wheel_abilities_earth.button_1": "1",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
@@ -1292,6 +1408,8 @@
       "item.power.air_armor_helmet": "Air Helmet",
       "key.power.special_attack_key": "Special attack key",
       "item_group.power.boxes": "Boxes",
+      "gui.power.wheel_abilities_earth.button_3": "3",
+      "gui.power.wheel_abilities_earth.button_2": "2",
       "item.power.fire_stone": "Fire Stone",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
@@ -1307,6 +1425,7 @@
       "effect.power.fire_master": "Master of Fire",
       "item_group.power.stones": "Stones",
       "effect.power.water_master": "Master of Water",
+      "gui.power.wheel_abilities_earth.button_1": "1",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.air_armor_boots": "Air Boots",
@@ -1361,10 +1480,6 @@
             "children": []
           },
           {
-            "name": "BattleModule",
-            "children": []
-          },
-          {
             "name": "BasicModule",
             "children": []
           },
@@ -1395,7 +1510,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.7",
+    "version": "1.0.0.0.8",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",

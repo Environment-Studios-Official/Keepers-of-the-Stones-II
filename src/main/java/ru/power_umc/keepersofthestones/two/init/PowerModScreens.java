@@ -5,6 +5,7 @@
 package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesFireScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEarthScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesAirScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -21,6 +22,7 @@ public class PowerModScreens {
 		event.enqueueWork(() -> {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_FIRE.get(), WheelAbilitiesFireScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_AIR.get(), WheelAbilitiesAirScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_EARTH.get(), WheelAbilitiesEarthScreen::new);
 		});
 	}
 }
