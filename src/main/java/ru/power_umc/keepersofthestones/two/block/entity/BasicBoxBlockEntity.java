@@ -91,7 +91,7 @@ public class BasicBoxBlockEntity extends RandomizableContainerBlockEntity implem
 
 	@Override
 	public Component getDisplayName() {
-		return Component.literal("Basic Box");
+		return Component.literal("Box");
 	}
 
 	@Override
