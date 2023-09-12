@@ -1,0 +1,9 @@
+{
+  "_fv": 48,
+  "_type": "command",
+  "definition": {
+    "commandName": "pw",
+    "permissionLevel": "4",
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">power_scale</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">count</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">PowerScaleSet</field></block></statement></block></statement></block></next></block></xml>"
+  }
+}

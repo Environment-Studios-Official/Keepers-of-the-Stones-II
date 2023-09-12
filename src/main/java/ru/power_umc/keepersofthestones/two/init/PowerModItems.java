@@ -5,13 +5,18 @@
 package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.item.WaterStoneItem;
+import ru.power_umc.keepersofthestones.two.item.StoneAttackItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
+import ru.power_umc.keepersofthestones.two.item.GrassBlockAttackItem;
 import ru.power_umc.keepersofthestones.two.item.FireSwordItem;
 import ru.power_umc.keepersofthestones.two.item.FireStoneItem;
 import ru.power_umc.keepersofthestones.two.item.FireArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EtherStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthArmorItem;
+import ru.power_umc.keepersofthestones.two.item.DirtBlockAttackItem;
+import ru.power_umc.keepersofthestones.two.item.CobblestoneAttackItem;
+import ru.power_umc.keepersofthestones.two.item.CobbledDeepslateAttackItem;
 import ru.power_umc.keepersofthestones.two.item.AirStoneItem;
 import ru.power_umc.keepersofthestones.two.item.AirRapierItem;
 import ru.power_umc.keepersofthestones.two.item.AirArmorItem;
@@ -48,6 +53,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> EARTH_ARMOR_CHESTPLATE = REGISTRY.register("earth_armor_chestplate", () -> new EarthArmorItem.Chestplate());
 	public static final RegistryObject<Item> EARTH_ARMOR_LEGGINGS = REGISTRY.register("earth_armor_leggings", () -> new EarthArmorItem.Leggings());
 	public static final RegistryObject<Item> EARTH_ARMOR_BOOTS = REGISTRY.register("earth_armor_boots", () -> new EarthArmorItem.Boots());
+	public static final RegistryObject<Item> STONE_ATTACK = REGISTRY.register("stone_attack", () -> new StoneAttackItem());
+	public static final RegistryObject<Item> GRASS_BLOCK_ATTACK = REGISTRY.register("grass_block_attack", () -> new GrassBlockAttackItem());
+	public static final RegistryObject<Item> DIRT_BLOCK_ATTACK = REGISTRY.register("dirt_block_attack", () -> new DirtBlockAttackItem());
+	public static final RegistryObject<Item> COBBLESTONE_ATTACK = REGISTRY.register("cobblestone_attack", () -> new CobblestoneAttackItem());
+	public static final RegistryObject<Item> COBBLED_DEEPSLATE_ATTACK = REGISTRY.register("cobbled_deepslate_attack", () -> new CobbledDeepslateAttackItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

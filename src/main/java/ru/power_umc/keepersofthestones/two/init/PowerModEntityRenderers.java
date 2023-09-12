@@ -4,6 +4,12 @@
  */
 package ru.power_umc.keepersofthestones.two.init;
 
+import ru.power_umc.keepersofthestones.two.client.renderer.StoneAttackRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.GrassBlockAttackRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.DirtBlockAttackRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.CobblestoneAttackRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.CobbledDeepslateAttackRenderer;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -16,5 +22,10 @@ public class PowerModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.STONE_ATTACK.get(), StoneAttackRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.GRASS_BLOCK_ATTACK.get(), GrassBlockAttackRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.DIRT_BLOCK_ATTACK.get(), DirtBlockAttackRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.COBBLESTONE_ATTACK.get(), CobblestoneAttackRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), CobbledDeepslateAttackRenderer::new);
 	}
 }

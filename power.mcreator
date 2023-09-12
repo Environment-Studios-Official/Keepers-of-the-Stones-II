@@ -1262,6 +1262,129 @@
         ]
       },
       "path": "~/Elements/Earth"
+    },
+    {
+      "name": "StoneAttack",
+      "type": "rangeditem",
+      "sortid": 74,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/StoneAttackEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/StoneAttackItem.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/StoneAttackRenderer.java",
+          "src/main/resources/assets/power/models/item/stone_attack.json"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "PowerScaleSet",
+      "type": "procedure",
+      "sortid": 75,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_scale_set",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/PowerScaleSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/Commands"
+    },
+    {
+      "name": "Pw",
+      "type": "command",
+      "sortid": 76,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "pw",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/command/PwCommand.java"
+        ]
+      },
+      "path": "~/Modules/Commands"
+    },
+    {
+      "name": "GrassBlockAttack",
+      "type": "rangeditem",
+      "sortid": 77,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grass_block_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GrassBlockAttackItem.java",
+          "src/main/resources/assets/power/models/item/grass_block_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "DirtBlockAttack",
+      "type": "rangeditem",
+      "sortid": 78,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_block_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/DirtBlockAttackRenderer.java",
+          "src/main/resources/assets/power/models/item/dirt_block_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DirtBlockAttackItem.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/DirtBlockAttackEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobblestoneAttack",
+      "type": "rangeditem",
+      "sortid": 79,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblestone_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cobblestone_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobblestoneAttackItem.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobbledDeepslateAttack",
+      "type": "rangeditem",
+      "sortid": 80,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbled_deepslate_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cobbled_deepslate_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobbledDeepslateAttackItem.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobbledDeepslateAttackEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobbledDeepslateAttackRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
     }
   ],
   "variable_elements": [
@@ -1376,22 +1499,32 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.fire_sword": "Меч огня",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.ether_stone": "Камень эфира",
       "key.power.detransformation_key": "Клавиша детрансформации",
-      "effect.power.ether_master": "Мастер эфира",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
-      "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
-      "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "key.power.special_attack_key": "Клавиша специальной атаки",
-      "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item_group.power.boxes": "Шкатулки",
+      "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
+      "item.power.air_rapier": "Воздушная рапира",
+      "item.power.air_armor_leggings": "Поножи мастера воздуха",
+      "item_group.power.stones": "Камни",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
+      "item.power.cobbled_deepslate_attack": "Stone Attack",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
+      "item.power.dirt_block_attack": "Stone Attack",
+      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
+      "item.power.fire_sword": "Меч огня",
+      "effect.power.ether_master": "Мастер эфира",
+      "item.power.cobblestone_attack": "Stone Attack",
+      "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
+      "item.power.grass_block_attack": "Stone Attack",
       "gui.power.wheel_abilities_earth.button_3": "3",
       "gui.power.wheel_abilities_earth.button_2": "2",
       "item.power.fire_stone": "Камень огня",
-      "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
@@ -1399,44 +1532,49 @@
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Мастер земли",
       "gui.power.wheel_abilities_air.button_2": "2",
-      "item.power.air_rapier": "Воздушная рапира",
       "gui.power.wheel_abilities_air.button_1": "1",
-      "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "effect.power.fire_master": "Мастер огня",
-      "item_group.power.stones": "Камни",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
       "effect.power.water_master": "Мастер воды",
       "gui.power.wheel_abilities_earth.button_1": "1",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
+      "item.power.stone_attack": "Stone Attack",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.basic_box": "Базовая шкатулка",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
-      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
       "item.power.air_stone": "Камень воздуха",
       "effect.power.air_master": "Мастер воздуха",
       "item.power.water_stone": "Камень воды",
       "item.power.fire_armor_leggings": "Поножи мастера огня"
     },
     "en_us": {
-      "item.power.fire_sword": "Fire Sword",
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.ether_stone": "Ether Stone",
       "key.power.detransformation_key": "Detransformation key",
-      "effect.power.ether_master": "Master of the Ether",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
-      "item.power.fire_armor_boots": "Fire Boots",
       "item.power.air_armor_helmet": "Air Helmet",
-      "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "key.power.special_attack_key": "Special attack key",
-      "item_group.power.boxes": "Boxes",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item_group.power.boxes": "Boxes",
+      "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
+      "item.power.air_rapier": "Air Rapier",
+      "item.power.air_armor_leggings": "Air Leggings",
+      "item_group.power.stones": "Stones",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
+      "item.power.cobbled_deepslate_attack": "Stone Attack",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
+      "item.power.dirt_block_attack": "Stone Attack",
+      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
+      "item.power.fire_sword": "Fire Sword",
+      "effect.power.ether_master": "Master of the Ether",
+      "item.power.cobblestone_attack": "Stone Attack",
+      "item.power.fire_armor_boots": "Fire Boots",
+      "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
+      "item.power.grass_block_attack": "Stone Attack",
       "gui.power.wheel_abilities_earth.button_3": "3",
       "gui.power.wheel_abilities_earth.button_2": "2",
       "item.power.fire_stone": "Fire Stone",
-      "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
@@ -1444,22 +1582,17 @@
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Master of the Earth",
       "gui.power.wheel_abilities_air.button_2": "2",
-      "item.power.air_rapier": "Air Rapier",
       "gui.power.wheel_abilities_air.button_1": "1",
-      "item.power.air_armor_leggings": "Air Leggings",
       "effect.power.fire_master": "Master of Fire",
-      "item_group.power.stones": "Stones",
       "item.power.earth_armor_leggings": "Earth Leggings",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
       "effect.power.water_master": "Master of Water",
       "gui.power.wheel_abilities_earth.button_1": "1",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
+      "item.power.stone_attack": "Stone Attack",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.basic_box": "Basic Box",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
-      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
       "item.power.water_stone": "Water Stone",
@@ -1519,6 +1652,10 @@
           },
           {
             "name": "AbilityWheelModule",
+            "children": []
+          },
+          {
+            "name": "Commands",
             "children": []
           }
         ]

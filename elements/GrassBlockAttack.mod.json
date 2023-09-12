@@ -1,0 +1,39 @@
+{
+  "_fv": 48,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "earth_stone",
+    "customModelName": "Normal",
+    "name": "Stone Attack",
+    "specialInformation": {
+      "fixedValue": ""
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "Blocks.GRASS"
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "hasGlow": false,
+    "animation": "block",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.8,
+    "bulletDamage": 2.5,
+    "bulletKnockback": 3,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelblock_attack",
+    "customBulletModelTexture": "grass_block_attack.png"
+  }
+}
