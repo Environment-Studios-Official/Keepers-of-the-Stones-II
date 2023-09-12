@@ -11,6 +11,7 @@ import ru.power_umc.keepersofthestones.two.item.FireStoneItem;
 import ru.power_umc.keepersofthestones.two.item.FireArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EtherStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthStoneItem;
+import ru.power_umc.keepersofthestones.two.item.EarthArmorItem;
 import ru.power_umc.keepersofthestones.two.item.AirStoneItem;
 import ru.power_umc.keepersofthestones.two.item.AirRapierItem;
 import ru.power_umc.keepersofthestones.two.item.AirArmorItem;
@@ -43,6 +44,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AIR_ARMOR_LEGGINGS = REGISTRY.register("air_armor_leggings", () -> new AirArmorItem.Leggings());
 	public static final RegistryObject<Item> AIR_ARMOR_BOOTS = REGISTRY.register("air_armor_boots", () -> new AirArmorItem.Boots());
 	public static final RegistryObject<Item> AIR_RAPIER = REGISTRY.register("air_rapier", () -> new AirRapierItem());
+	public static final RegistryObject<Item> EARTH_ARMOR_HELMET = REGISTRY.register("earth_armor_helmet", () -> new EarthArmorItem.Helmet());
+	public static final RegistryObject<Item> EARTH_ARMOR_CHESTPLATE = REGISTRY.register("earth_armor_chestplate", () -> new EarthArmorItem.Chestplate());
+	public static final RegistryObject<Item> EARTH_ARMOR_LEGGINGS = REGISTRY.register("earth_armor_leggings", () -> new EarthArmorItem.Leggings());
+	public static final RegistryObject<Item> EARTH_ARMOR_BOOTS = REGISTRY.register("earth_armor_boots", () -> new EarthArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -13,8 +13,14 @@
     "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "EarthMasterEffectStart"
+    },
     "onActiveTick": {
       "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "EarthMasterEffectEnd"
     }
   }
 }
