@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "power:fire_sword"
+    "power:fire_sword",
+    "power:earth_hammer",
+    "power:air_rapier"
   ]
 }

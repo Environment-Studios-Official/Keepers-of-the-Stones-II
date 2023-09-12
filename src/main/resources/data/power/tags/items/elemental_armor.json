@@ -1,10 +1,14 @@
 {
   "replace": false,
   "values": [
+    "power:earth_armor_chestplate",
+    "power:earth_armor_boots",
     "power:fire_armor_boots",
     "power:air_armor_chestplate",
     "power:fire_armor_leggings",
+    "power:earth_armor_leggings",
     "power:air_armor_boots",
+    "power:earth_armor_helmet",
     "power:fire_armor_helmet",
     "power:air_armor_helmet",
     "power:fire_armor_chestplate",

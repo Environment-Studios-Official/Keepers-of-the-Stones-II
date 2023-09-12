@@ -6,6 +6,12 @@
     "items": [
       {
         "value": "CUSTOM:FireSword"
+      },
+      {
+        "value": "CUSTOM:AirRapier"
+      },
+      {
+        "value": "CUSTOM:EarthHammer"
       }
     ],
     "blocks": [],

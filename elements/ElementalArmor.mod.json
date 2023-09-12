@@ -27,6 +27,18 @@
       },
       {
         "value": "CUSTOM:AirArmor.boots"
+      },
+      {
+        "value": "CUSTOM:EarthArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:EarthArmor.body"
+      },
+      {
+        "value": "CUSTOM:EarthArmor.legs"
+      },
+      {
+        "value": "CUSTOM:EarthArmor.boots"
       }
     ],
     "blocks": [],
