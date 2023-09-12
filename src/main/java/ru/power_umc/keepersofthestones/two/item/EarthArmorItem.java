@@ -1,10 +1,10 @@
 
 package ru.power_umc.keepersofthestones.two.item;
 
-import ru.power_umc.keepersofthestones.two.procedures.AirArmorKazhdyiTikDliaShliemaProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.AirArmorKazhdyiTikDliaPonozhieiProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.AirArmorKazhdyiTikDliaNaghrudnikaProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.AirArmorKazhdyiTikDliaBotinokProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthArmorKazhdyiTikDliaShliemaProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthArmorKazhdyiTikDliaPonozhieiProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthArmorKazhdyiTikDliaNaghrudnikaProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthArmorKazhdyiTikDliaBotinokProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -84,7 +84,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+			EarthArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
 		}
 	}
 
@@ -105,7 +105,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+			EarthArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
 		}
 	}
 
@@ -126,7 +126,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+			EarthArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
 		}
 	}
 
@@ -147,7 +147,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+			EarthArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
 		}
 	}
 }

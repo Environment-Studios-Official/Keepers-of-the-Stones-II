@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "earth_armor_boots",
     "onHelmetTick": {
-      "name": "AirArmorKazhdyiTikDliaShliema"
+      "name": "EarthArmorKazhdyiTikDliaShliema"
     },
     "onBodyTick": {
-      "name": "AirArmorKazhdyiTikDliaNaghrudnika"
+      "name": "EarthArmorKazhdyiTikDliaNaghrudnika"
     },
     "onLeggingsTick": {
-      "name": "AirArmorKazhdyiTikDliaPonozhiei"
+      "name": "EarthArmorKazhdyiTikDliaPonozhiei"
     },
     "onBootsTick": {
-      "name": "AirArmorKazhdyiTikDliaBotinok"
+      "name": "EarthArmorKazhdyiTikDliaBotinok"
     },
     "creativeTab": {
       "value": "No creative tab entry"

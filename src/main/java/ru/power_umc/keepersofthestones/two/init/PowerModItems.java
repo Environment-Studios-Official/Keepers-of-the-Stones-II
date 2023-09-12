@@ -13,6 +13,7 @@ import ru.power_umc.keepersofthestones.two.item.FireStoneItem;
 import ru.power_umc.keepersofthestones.two.item.FireArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EtherStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthStoneItem;
+import ru.power_umc.keepersofthestones.two.item.EarthHammerItem;
 import ru.power_umc.keepersofthestones.two.item.EarthArmorItem;
 import ru.power_umc.keepersofthestones.two.item.DirtBlockAttackItem;
 import ru.power_umc.keepersofthestones.two.item.CobblestoneAttackItem;
@@ -58,6 +59,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DIRT_BLOCK_ATTACK = REGISTRY.register("dirt_block_attack", () -> new DirtBlockAttackItem());
 	public static final RegistryObject<Item> COBBLESTONE_ATTACK = REGISTRY.register("cobblestone_attack", () -> new CobblestoneAttackItem());
 	public static final RegistryObject<Item> COBBLED_DEEPSLATE_ATTACK = REGISTRY.register("cobbled_deepslate_attack", () -> new CobbledDeepslateAttackItem());
+	public static final RegistryObject<Item> EARTH_HAMMER = REGISTRY.register("earth_hammer", () -> new EarthHammerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

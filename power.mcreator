@@ -1385,6 +1385,121 @@
         ]
       },
       "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 81,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 82,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 83,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 84,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthHammer",
+      "type": "tool",
+      "sortid": 85,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_hammer",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EarthHammerItem.java",
+          "src/main/resources/assets/power/models/item/earth_hammer.json"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthHammerKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 86,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_hammer_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthHammerKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
     }
   ],
   "variable_elements": [
@@ -1503,6 +1618,7 @@
       "item.power.ether_stone": "Камень эфира",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
+      "item.power.earth_hammer": "Fire Sword",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
@@ -1553,6 +1669,7 @@
       "item.power.ether_stone": "Ether Stone",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
+      "item.power.earth_hammer": "Fire Sword",
       "item.power.air_armor_helmet": "Air Helmet",
       "key.power.special_attack_key": "Special attack key",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
