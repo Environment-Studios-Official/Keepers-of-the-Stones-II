@@ -11,7 +11,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.Button;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -23,9 +23,9 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_1;
-	Button button_2;
-	Button button_3;
+	ImageButton imagebutton_air_flow;
+	ImageButton imagebutton_wind_gust;
+	ImageButton imagebutton_air_flight;
 
 	public WheelAbilitiesAirScreen(WheelAbilitiesAirMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -85,29 +85,29 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_air.button_1"), e -> {
+		imagebutton_air_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_flow.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAirButtonMessage(0, x, y, z));
 				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
-		}).bounds(this.leftPos + 80, this.topPos + 24, 30, 20).build();
-		guistate.put("button:button_1", button_1);
-		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_air.button_2"), e -> {
+		});
+		guistate.put("button:imagebutton_air_flow", imagebutton_air_flow);
+		this.addRenderableWidget(imagebutton_air_flow);
+		imagebutton_wind_gust = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_wind_gust.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAirButtonMessage(1, x, y, z));
 				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 16, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_2", button_2);
-		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_air.button_3"), e -> {
+		});
+		guistate.put("button:imagebutton_wind_gust", imagebutton_wind_gust);
+		this.addRenderableWidget(imagebutton_wind_gust);
+		imagebutton_air_flight = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_flight.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAirButtonMessage(2, x, y, z));
 				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
+		});
+		guistate.put("button:imagebutton_air_flight", imagebutton_air_flight);
+		this.addRenderableWidget(imagebutton_air_flight);
 	}
 }

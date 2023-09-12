@@ -36,45 +36,42 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
+          "name": "imagebutton_air_flow",
+          "image": "air_flow.png",
+          "hoveredImage": "air_flow_highlight.png",
           "onClick": {
             "name": "Attack1"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
+          "name": "imagebutton_wind_gust",
+          "image": "wind_gust.png",
+          "hoveredImage": "wind_gust_highlight.png",
           "onClick": {
             "name": "Attack2"
           },
-          "width": 30,
-          "height": 20,
-          "x": 134,
-          "y": 112
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
+          "name": "imagebutton_air_flight",
+          "image": "air_flight.png",
+          "hoveredImage": "air_flight_highlight.png",
           "onClick": {
             "name": "Attack3"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 129,
+          "y": 97
         }
       }
     ],
@@ -83,7 +80,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
