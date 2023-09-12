@@ -3,7 +3,7 @@
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
-    "texture": "earth_stone",
+    "texture": "empty_texture",
     "customModelName": "Normal",
     "name": "Stone Attack",
     "specialInformation": {
