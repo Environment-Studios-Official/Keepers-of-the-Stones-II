@@ -40,6 +40,7 @@
         "data": {
           "name": "button_1",
           "text": "1",
+          "isUndecorated": false,
           "onClick": {
             "name": "Attack1"
           },
@@ -54,6 +55,7 @@
         "data": {
           "name": "button_2",
           "text": "2",
+          "isUndecorated": false,
           "onClick": {
             "name": "Attack2"
           },
@@ -68,6 +70,7 @@
         "data": {
           "name": "button_3",
           "text": "3",
+          "isUndecorated": false,
           "onClick": {
             "name": "Attack3"
           },
