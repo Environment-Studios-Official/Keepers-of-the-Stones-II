@@ -42,7 +42,7 @@
           "text": "1",
           "isUndecorated": false,
           "onClick": {
-            "name": "Attack1"
+            "name": "Attack9"
           },
           "width": 30,
           "height": 20,
@@ -57,11 +57,11 @@
           "text": "2",
           "isUndecorated": false,
           "onClick": {
-            "name": "Attack2"
+            "name": "Attack10"
           },
           "width": 30,
           "height": 20,
-          "x": 134,
+          "x": 260,
           "y": 112
         }
       },
@@ -72,12 +72,12 @@
           "text": "3",
           "isUndecorated": false,
           "onClick": {
-            "name": "Attack3"
+            "name": "Attack11"
           },
           "width": 30,
           "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 136,
+          "y": 110
         }
       }
     ],

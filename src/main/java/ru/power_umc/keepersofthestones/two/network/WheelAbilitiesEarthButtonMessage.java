@@ -2,9 +2,9 @@
 package ru.power_umc.keepersofthestones.two.network;
 
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEarthMenu;
-import ru.power_umc.keepersofthestones.two.procedures.Attack3Procedure;
-import ru.power_umc.keepersofthestones.two.procedures.Attack2Procedure;
-import ru.power_umc.keepersofthestones.two.procedures.Attack1Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack9Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack11Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack10Procedure;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -66,15 +66,15 @@ public class WheelAbilitiesEarthButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack1Procedure.execute(entity);
+			Attack9Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			Attack2Procedure.execute(entity);
+			Attack10Procedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			Attack3Procedure.execute(entity);
+			Attack11Procedure.execute(entity);
 		}
 	}
 

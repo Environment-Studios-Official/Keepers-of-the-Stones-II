@@ -98,7 +98,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(1, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
-		}).bounds(this.leftPos + 16, this.topPos + 88, 30, 20).build();
+		}).bounds(this.leftPos + 142, this.topPos + 88, 30, 20).build();
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
 		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_earth.button_3"), e -> {
@@ -106,7 +106,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(2, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 142, this.topPos + 88, 30, 20).build();
+		}).bounds(this.leftPos + 18, this.topPos + 86, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
 	}
