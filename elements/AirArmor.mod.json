@@ -25,7 +25,7 @@
     "creativeTab": {
       "value": "No creative tab entry"
     },
-    "armorTextureFile": "air_armor_",
+    "armorTextureFile": "air_armor",
     "helmetName": "Air Helmet",
     "bodyName": "Air Chestplate",
     "leggingsName": "Air Leggings",

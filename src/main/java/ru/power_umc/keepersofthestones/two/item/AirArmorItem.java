@@ -79,7 +79,7 @@ public abstract class AirArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/air_armor__layer_1.png";
+			return "power:textures/models/armor/air_armor_layer_1.png";
 		}
 
 		@Override
@@ -100,7 +100,7 @@ public abstract class AirArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/air_armor__layer_1.png";
+			return "power:textures/models/armor/air_armor_layer_1.png";
 		}
 
 		@Override
@@ -121,7 +121,7 @@ public abstract class AirArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/air_armor__layer_2.png";
+			return "power:textures/models/armor/air_armor_layer_2.png";
 		}
 
 		@Override
@@ -142,7 +142,7 @@ public abstract class AirArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/air_armor__layer_1.png";
+			return "power:textures/models/armor/air_armor_layer_1.png";
 		}
 
 		@Override
