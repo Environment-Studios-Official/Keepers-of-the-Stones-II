@@ -2,9 +2,9 @@
 package ru.power_umc.keepersofthestones.two.network;
 
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesAirMenu;
-import ru.power_umc.keepersofthestones.two.procedures.Attack3Procedure;
-import ru.power_umc.keepersofthestones.two.procedures.Attack2Procedure;
-import ru.power_umc.keepersofthestones.two.procedures.Attack1Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack7Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack6Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack5Procedure;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -66,15 +66,15 @@ public class WheelAbilitiesAirButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack1Procedure.execute(entity);
+			Attack5Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			Attack2Procedure.execute(entity);
+			Attack6Procedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			Attack3Procedure.execute(entity);
+			Attack7Procedure.execute(entity);
 		}
 	}
 

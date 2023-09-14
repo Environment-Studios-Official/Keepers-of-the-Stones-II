@@ -985,7 +985,7 @@
           "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesFireButtonMessage.java"
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Fire"
     },
     {
       "name": "AbilityWheelOpeningkey",
@@ -1055,7 +1055,7 @@
           }
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Fire"
     },
     {
       "name": "Attack2",
@@ -1075,7 +1075,7 @@
           }
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Fire"
     },
     {
       "name": "Attack3",
@@ -1095,7 +1095,7 @@
           }
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Fire"
     },
     {
       "name": "Attack4",
@@ -1115,7 +1115,7 @@
           }
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Fire"
     },
     {
       "name": "WheelAbilitiesAir",
@@ -1131,7 +1131,7 @@
           "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesAirButtonMessage.java"
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Air"
     },
     {
       "name": "EarthStoneUse",
@@ -1243,7 +1243,7 @@
           "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesEarthMenu.java"
         ]
       },
-      "path": "~/Modules/AbilityWheelModule"
+      "path": "~/Modules/AbilityWheelModule/Earth"
     },
     {
       "name": "EarthArmor",
@@ -1516,6 +1516,166 @@
         "dependencies": []
       },
       "path": "~/Modules/KeeperModule"
+    },
+    {
+      "name": "Attack5",
+      "type": "procedure",
+      "sortid": 88,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_5",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack5Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Air"
+    },
+    {
+      "name": "Attack6",
+      "type": "procedure",
+      "sortid": 89,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_6",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack6Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Air"
+    },
+    {
+      "name": "Attack7",
+      "type": "procedure",
+      "sortid": 90,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_7",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack7Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Air"
+    },
+    {
+      "name": "Attack8",
+      "type": "procedure",
+      "sortid": 91,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_8",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack8Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Air"
+    },
+    {
+      "name": "Attack9",
+      "type": "procedure",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_9",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack9Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Earth"
+    },
+    {
+      "name": "Attack10",
+      "type": "procedure",
+      "sortid": 93,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_10",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack10Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Earth"
+    },
+    {
+      "name": "Attack11",
+      "type": "procedure",
+      "sortid": 94,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_11",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack11Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Earth"
+    },
+    {
+      "name": "Attack12",
+      "type": "procedure",
+      "sortid": 95,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_12",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack12Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Earth"
     }
   ],
   "variable_elements": [
@@ -1637,8 +1797,8 @@
       "item.power.earth_hammer": "Земляной молот",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
-      "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item_group.power.boxes": "Шкатулки",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -1689,8 +1849,8 @@
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.air_armor_helmet": "Air Helmet",
       "key.power.special_attack_key": "Special attack key",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
@@ -1787,7 +1947,20 @@
           },
           {
             "name": "AbilityWheelModule",
-            "children": []
+            "children": [
+              {
+                "name": "Fire",
+                "children": []
+              },
+              {
+                "name": "Air",
+                "children": []
+              },
+              {
+                "name": "Earth",
+                "children": []
+              }
+            ]
           },
           {
             "name": "Commands",

@@ -42,7 +42,7 @@
           "image": "air_flow.png",
           "hoveredImage": "air_flow_highlight.png",
           "onClick": {
-            "name": "Attack1"
+            "name": "Attack5"
           },
           "x": 190,
           "y": 36
@@ -55,7 +55,7 @@
           "image": "wind_gust.png",
           "hoveredImage": "wind_gust_highlight.png",
           "onClick": {
-            "name": "Attack2"
+            "name": "Attack6"
           },
           "x": 251,
           "y": 97
@@ -68,7 +68,7 @@
           "image": "air_flight.png",
           "hoveredImage": "air_flight_highlight.png",
           "onClick": {
-            "name": "Attack3"
+            "name": "Attack7"
           },
           "x": 129,
           "y": 97
