@@ -45,6 +45,13 @@ public class DetransformationKeyUseProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.mergers = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

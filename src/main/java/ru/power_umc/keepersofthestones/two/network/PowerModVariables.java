@@ -82,6 +82,7 @@ public class PowerModVariables {
 				clone.active = original.active;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
+				clone.mergers = original.mergers;
 			}
 		}
 	}
@@ -132,6 +133,7 @@ public class PowerModVariables {
 		public double power = 100.0;
 		public double powerTimer = 50.0;
 		public double attack = 1.0;
+		public double mergers = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -155,6 +157,7 @@ public class PowerModVariables {
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("attack", attack);
+			nbt.putDouble("mergers", mergers);
 			return nbt;
 		}
 
@@ -175,6 +178,7 @@ public class PowerModVariables {
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getDouble("attack");
+			mergers = nbt.getDouble("mergers");
 		}
 	}
 
@@ -214,6 +218,7 @@ public class PowerModVariables {
 					variables.power = message.data.power;
 					variables.powerTimer = message.data.powerTimer;
 					variables.attack = message.data.attack;
+					variables.mergers = message.data.mergers;
 				}
 			});
 			context.setPacketHandled(true);
