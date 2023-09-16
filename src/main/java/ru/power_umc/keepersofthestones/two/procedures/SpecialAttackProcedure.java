@@ -788,15 +788,21 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 11) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
-						}
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
+					for (int index9 = 0; index9 < 25; index9++) {
+						world.destroyBlock(BlockPos.containing(x - Mth.nextInt(RandomSource.create(), 1, 5), y - Mth.nextInt(RandomSource.create(), 1, 5), z - Mth.nextInt(RandomSource.create(), 1, 5)), false);
+						world.destroyBlock(BlockPos.containing(x, y - Mth.nextInt(RandomSource.create(), 1, 5), z - Mth.nextInt(RandomSource.create(), 1, 5)), false);
+						world.destroyBlock(BlockPos.containing(x - Mth.nextInt(RandomSource.create(), 1, 5), y - Mth.nextInt(RandomSource.create(), 1, 5), z), false);
+						world.destroyBlock(BlockPos.containing(x, y - Mth.nextInt(RandomSource.create(), 1, 5), z + Mth.nextInt(RandomSource.create(), 1, 5)), false);
+						world.destroyBlock(BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 5), y - Mth.nextInt(RandomSource.create(), 1, 5), z), false);
+						world.destroyBlock(BlockPos.containing(x + Mth.nextInt(RandomSource.create(), 1, 5), y - Mth.nextInt(RandomSource.create(), 1, 5), z + Mth.nextInt(RandomSource.create(), 1, 5)), false);
+					}
+					{
+						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 				}
 			}
