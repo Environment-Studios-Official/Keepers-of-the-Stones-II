@@ -34,6 +34,12 @@
       "value": ""
     },
     "bulletModel": "Modelblock_attack",
-    "customBulletModelTexture": "grass_block_attack.png"
+    "customBulletModelTexture": "grass_block_attack.png",
+    "onBulletHitsBlock": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onBulletHitsEntity": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    }
   }
 }

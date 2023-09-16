@@ -34,6 +34,12 @@
       "value": ""
     },
     "bulletModel": "Modelblock_attack",
-    "customBulletModelTexture": "cobbled_deepslate_attack.png"
+    "customBulletModelTexture": "cobbled_deepslate_attack.png",
+    "onBulletHitsBlock": {
+      "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onBulletHitsEntity": {
+      "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok"
+    }
   }
 }
