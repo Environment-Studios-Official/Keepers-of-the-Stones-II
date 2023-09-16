@@ -83,6 +83,9 @@ public class PowerModVariables {
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
+				clone.wheel_one = original.wheel_one;
+				clone.wheel_two = original.wheel_two;
+				clone.wheel_three = original.wheel_three;
 			}
 		}
 	}
@@ -133,7 +136,10 @@ public class PowerModVariables {
 		public double power = 100.0;
 		public double powerTimer = 50.0;
 		public double attack = 1.0;
-		public double mergers = 0;
+		public double mergers = 0.0;
+		public double wheel_one = 0.0;
+		public double wheel_two = 0.0;
+		public double wheel_three = 0.0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -158,6 +164,9 @@ public class PowerModVariables {
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("attack", attack);
 			nbt.putDouble("mergers", mergers);
+			nbt.putDouble("wheel_one", wheel_one);
+			nbt.putDouble("wheel_two", wheel_two);
+			nbt.putDouble("wheel_three", wheel_three);
 			return nbt;
 		}
 
@@ -179,6 +188,9 @@ public class PowerModVariables {
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getDouble("attack");
 			mergers = nbt.getDouble("mergers");
+			wheel_one = nbt.getDouble("wheel_one");
+			wheel_two = nbt.getDouble("wheel_two");
+			wheel_three = nbt.getDouble("wheel_three");
 		}
 	}
 
@@ -219,6 +231,9 @@ public class PowerModVariables {
 					variables.powerTimer = message.data.powerTimer;
 					variables.attack = message.data.attack;
 					variables.mergers = message.data.mergers;
+					variables.wheel_one = message.data.wheel_one;
+					variables.wheel_two = message.data.wheel_two;
+					variables.wheel_three = message.data.wheel_three;
 				}
 			});
 			context.setPacketHandled(true);

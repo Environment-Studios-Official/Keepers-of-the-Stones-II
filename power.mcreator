@@ -1002,42 +1002,6 @@
       "path": "~/Modules/KeyBindsModule"
     },
     {
-      "name": "OpenWheel",
-      "type": "procedure",
-      "sortid": 63,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "open_wheel",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/OpenWheelProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule"
-    },
-    {
       "name": "Attack1",
       "type": "procedure",
       "sortid": 64,
@@ -1676,6 +1640,114 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Earth"
+    },
+    {
+      "name": "OpenWheelOne",
+      "type": "procedure",
+      "sortid": 96,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_wheel_one",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/OpenWheelOneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "OpenWheelTwo",
+      "type": "procedure",
+      "sortid": 97,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_wheel_two",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/OpenWheelTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "OpenWheelThree",
+      "type": "procedure",
+      "sortid": 98,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_wheel_three",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/OpenWheelThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule"
     }
   ],
   "variable_elements": [
@@ -1773,7 +1845,25 @@
       "name": "mergers",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0"
+      "value": "0.0"
+    },
+    {
+      "name": "wheel_one",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "wheel_two",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
+    },
+    {
+      "name": "wheel_three",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0.0"
     }
   ],
   "sound_elements": [
@@ -1803,8 +1893,8 @@
       "item.power.earth_hammer": "Земляной молот",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
-      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item_group.power.boxes": "Шкатулки",
+      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -1855,8 +1945,8 @@
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.air_armor_helmet": "Air Helmet",
       "key.power.special_attack_key": "Special attack key",
-      "item_group.power.boxes": "Boxes",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item_group.power.boxes": "Boxes",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",

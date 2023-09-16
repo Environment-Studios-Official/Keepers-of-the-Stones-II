@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.network;
 
-import ru.power_umc.keepersofthestones.two.procedures.OpenWheelProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelOneProcedure;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -52,7 +52,7 @@ public class AbilityWheelOpeningkeyMessage {
 			return;
 		if (type == 0) {
 
-			OpenWheelProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
