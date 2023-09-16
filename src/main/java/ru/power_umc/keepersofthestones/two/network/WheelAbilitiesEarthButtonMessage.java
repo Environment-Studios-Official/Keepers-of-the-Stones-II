@@ -2,6 +2,9 @@
 package ru.power_umc.keepersofthestones.two.network;
 
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEarthMenu;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelTwoProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelThreeProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelOneProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack9Procedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack11Procedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack10Procedure;
@@ -75,6 +78,18 @@ public class WheelAbilitiesEarthButtonMessage {
 		if (buttonID == 2) {
 
 			Attack11Procedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
