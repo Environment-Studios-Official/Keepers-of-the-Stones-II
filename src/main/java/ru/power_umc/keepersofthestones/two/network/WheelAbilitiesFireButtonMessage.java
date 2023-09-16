@@ -2,6 +2,9 @@
 package ru.power_umc.keepersofthestones.two.network;
 
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesFireMenu;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelTwoProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelThreeProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.OpenWheelOneProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack3Procedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack2Procedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack1Procedure;
@@ -75,6 +78,18 @@ public class WheelAbilitiesFireButtonMessage {
 		if (buttonID == 2) {
 
 			Attack3Procedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 	}
 

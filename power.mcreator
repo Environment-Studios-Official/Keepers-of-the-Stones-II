@@ -1748,6 +1748,48 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "GetWheelTwo",
+      "type": "procedure",
+      "sortid": 99,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_two",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/GetWheelTwoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule"
+    },
+    {
+      "name": "GetWheelThree",
+      "type": "procedure",
+      "sortid": 100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_wheel_three",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/GetWheelThreeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule"
     }
   ],
   "variable_elements": [
@@ -1893,8 +1935,8 @@
       "item.power.earth_hammer": "Земляной молот",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
-      "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item_group.power.boxes": "Шкатулки",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -1945,8 +1987,8 @@
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.air_armor_helmet": "Air Helmet",
       "key.power.special_attack_key": "Special attack key",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
