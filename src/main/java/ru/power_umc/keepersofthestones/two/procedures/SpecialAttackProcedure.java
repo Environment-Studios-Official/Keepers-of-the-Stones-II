@@ -233,7 +233,8 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-		} else if (entity instanceof LivingEntity _livEnt41 && _livEnt41.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
+		}
+		if (entity instanceof LivingEntity _livEnt41 && _livEnt41.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 5) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					for (int index1 = 0; index1 < 15; index1++) {
@@ -460,7 +461,8 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-		} else if (entity instanceof LivingEntity _livEnt144 && _livEnt144.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+		}
+		if (entity instanceof LivingEntity _livEnt144 && _livEnt144.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 9) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
