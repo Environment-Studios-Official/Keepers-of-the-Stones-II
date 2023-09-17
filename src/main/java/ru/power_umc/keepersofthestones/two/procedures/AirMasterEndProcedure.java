@@ -36,7 +36,9 @@ public class AirMasterEndProcedure {
 						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team remove air");
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers == 0) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers > 0) {
+			DetransformationKeyUseProcedure.execute(world, entity);
+		} else {
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -76,17 +78,6 @@ public class AirMasterEndProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		}
-		{
-			double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers - 1;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.mergers = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.AIR_RAPIER.get());
-			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 		}
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());

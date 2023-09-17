@@ -77,17 +77,6 @@ public class FireMasterEndProcedure {
 				});
 			}
 		}
-		{
-			double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers - 1;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.mergers = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		if (entity instanceof Player _player) {
-			ItemStack _stktoremove = new ItemStack(PowerModItems.FIRE_SWORD.get());
-			_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
-		}
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
 			_setstack.setCount(1);
