@@ -67,17 +67,13 @@ public class PowerModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.fire_stone = original.fire_stone;
-			clone.fire = original.fire;
 			clone.air_stone = original.air_stone;
-			clone.air = original.air;
 			clone.earth_stone = original.earth_stone;
-			clone.earth = original.earth;
 			clone.water_stone = original.water_stone;
-			clone.water = original.water;
 			clone.ether_stone = original.ether_stone;
-			clone.ether = original.ether;
 			clone.selected = original.selected;
 			clone.attack = original.attack;
+			clone.element_id_third = original.element_id_third;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -86,6 +82,8 @@ public class PowerModVariables {
 				clone.wheel_one = original.wheel_one;
 				clone.wheel_two = original.wheel_two;
 				clone.wheel_three = original.wheel_three;
+				clone.element_id_fist = original.element_id_fist;
+				clone.element_id_second = original.element_id_second;
 			}
 		}
 	}
@@ -123,15 +121,10 @@ public class PowerModVariables {
 	public static class PlayerVariables {
 		public boolean active = false;
 		public boolean fire_stone = false;
-		public boolean fire = false;
 		public boolean air_stone = false;
-		public boolean air = false;
 		public boolean earth_stone = false;
-		public boolean earth = false;
 		public boolean water_stone = false;
-		public boolean water = false;
 		public boolean ether_stone = false;
-		public boolean ether = false;
 		public boolean selected = false;
 		public double power = 100.0;
 		public double powerTimer = 50.0;
@@ -140,6 +133,9 @@ public class PowerModVariables {
 		public double wheel_one = 0.0;
 		public double wheel_two = 0.0;
 		public double wheel_three = 0.0;
+		public double element_id_fist = 0;
+		public double element_id_second = 0;
+		public double element_id_third = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -150,15 +146,10 @@ public class PowerModVariables {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("active", active);
 			nbt.putBoolean("fire_stone", fire_stone);
-			nbt.putBoolean("fire", fire);
 			nbt.putBoolean("air_stone", air_stone);
-			nbt.putBoolean("air", air);
 			nbt.putBoolean("earth_stone", earth_stone);
-			nbt.putBoolean("earth", earth);
 			nbt.putBoolean("water_stone", water_stone);
-			nbt.putBoolean("water", water);
 			nbt.putBoolean("ether_stone", ether_stone);
-			nbt.putBoolean("ether", ether);
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
@@ -167,6 +158,9 @@ public class PowerModVariables {
 			nbt.putDouble("wheel_one", wheel_one);
 			nbt.putDouble("wheel_two", wheel_two);
 			nbt.putDouble("wheel_three", wheel_three);
+			nbt.putDouble("element_id_fist", element_id_fist);
+			nbt.putDouble("element_id_second", element_id_second);
+			nbt.putDouble("element_id_third", element_id_third);
 			return nbt;
 		}
 
@@ -174,15 +168,10 @@ public class PowerModVariables {
 			CompoundTag nbt = (CompoundTag) Tag;
 			active = nbt.getBoolean("active");
 			fire_stone = nbt.getBoolean("fire_stone");
-			fire = nbt.getBoolean("fire");
 			air_stone = nbt.getBoolean("air_stone");
-			air = nbt.getBoolean("air");
 			earth_stone = nbt.getBoolean("earth_stone");
-			earth = nbt.getBoolean("earth");
 			water_stone = nbt.getBoolean("water_stone");
-			water = nbt.getBoolean("water");
 			ether_stone = nbt.getBoolean("ether_stone");
-			ether = nbt.getBoolean("ether");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
@@ -191,6 +180,9 @@ public class PowerModVariables {
 			wheel_one = nbt.getDouble("wheel_one");
 			wheel_two = nbt.getDouble("wheel_two");
 			wheel_three = nbt.getDouble("wheel_three");
+			element_id_fist = nbt.getDouble("element_id_fist");
+			element_id_second = nbt.getDouble("element_id_second");
+			element_id_third = nbt.getDouble("element_id_third");
 		}
 	}
 
@@ -217,15 +209,10 @@ public class PowerModVariables {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.active = message.data.active;
 					variables.fire_stone = message.data.fire_stone;
-					variables.fire = message.data.fire;
 					variables.air_stone = message.data.air_stone;
-					variables.air = message.data.air;
 					variables.earth_stone = message.data.earth_stone;
-					variables.earth = message.data.earth;
 					variables.water_stone = message.data.water_stone;
-					variables.water = message.data.water;
 					variables.ether_stone = message.data.ether_stone;
-					variables.ether = message.data.ether;
 					variables.selected = message.data.selected;
 					variables.power = message.data.power;
 					variables.powerTimer = message.data.powerTimer;
@@ -234,6 +221,9 @@ public class PowerModVariables {
 					variables.wheel_one = message.data.wheel_one;
 					variables.wheel_two = message.data.wheel_two;
 					variables.wheel_three = message.data.wheel_three;
+					variables.element_id_fist = message.data.element_id_fist;
+					variables.element_id_second = message.data.element_id_second;
+					variables.element_id_third = message.data.element_id_third;
 				}
 			});
 			context.setPacketHandled(true);

@@ -38,7 +38,7 @@ public class AirStoneItem extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		AirStoneUseProcedure.execute(world, entity);
+		AirStoneUseProcedure.execute(world, x, y, z, entity);
 		return ar;
 	}
 }

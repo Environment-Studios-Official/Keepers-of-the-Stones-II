@@ -1,6 +1,5 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
-import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,49 +35,7 @@ public class EarthMasterEffectEndProcedure {
 						_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team remove earth");
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers > 0) {
-			DetransformationKeyUseProcedure.execute(world, entity);
-		} else {
-			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.active = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
-		{
-			boolean _setval = false;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.earth = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_two == 3) {
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_two = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_three == 3) {
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_three = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		} else {
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_one = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
+		DetransformationKeyUseProcedure.execute(world, x, y, z, entity);
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
 			_setstack.setCount(1);
