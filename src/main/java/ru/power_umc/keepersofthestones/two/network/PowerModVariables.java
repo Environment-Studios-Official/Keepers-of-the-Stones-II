@@ -73,6 +73,8 @@ public class PowerModVariables {
 			clone.ether_stone = original.ether_stone;
 			clone.selected = original.selected;
 			clone.attack = original.attack;
+			clone.element_id_fist = original.element_id_fist;
+			clone.element_id_second = original.element_id_second;
 			clone.element_id_third = original.element_id_third;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
@@ -82,8 +84,6 @@ public class PowerModVariables {
 				clone.wheel_one = original.wheel_one;
 				clone.wheel_two = original.wheel_two;
 				clone.wheel_three = original.wheel_three;
-				clone.element_id_fist = original.element_id_fist;
-				clone.element_id_second = original.element_id_second;
 			}
 		}
 	}

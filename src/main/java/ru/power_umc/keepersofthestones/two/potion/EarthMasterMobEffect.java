@@ -22,7 +22,7 @@ public class EarthMasterMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		EarthMasterEffectStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		EarthMasterEffectStartProcedure.execute(entity);
 	}
 
 	@Override

@@ -1152,22 +1152,6 @@
           {
             "name": "entity",
             "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
           }
         ]
       },
@@ -1966,26 +1950,6 @@
         ]
       },
       "path": "~/Elements/Earth"
-    },
-    {
-      "name": "RemoveEffects",
-      "type": "procedure",
-      "sortid": 106,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "remove_effects",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/RemoveEffectsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -2076,13 +2040,13 @@
     {
       "name": "element_id_fist",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "element_id_second",
       "type": "number",
-      "scope": "player_lifetime",
+      "scope": "player_persistent",
       "value": "0"
     },
     {
