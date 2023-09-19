@@ -85,27 +85,6 @@ public class DetransformationKeyUseProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.element_id_fist = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.element_id_second = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.element_id_third = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
 		}
 	}
 }

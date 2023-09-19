@@ -1,5 +1,6 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
+import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -36,6 +37,31 @@ public class EarthMasterEndProcedure {
 			}
 		}
 		DetransformationKeyUseProcedure.execute(world, x, y, z, entity);
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 3) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_second = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 3) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 3) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_fist = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 		if (entity instanceof Player _player) {
 			ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
 			_setstack.setCount(1);

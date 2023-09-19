@@ -1,5 +1,6 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
+import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -24,12 +25,37 @@ public class AirMasterEndProcedure {
 			}
 		}
 		DetransformationKeyUseProcedure.execute(world, x, y, z, entity);
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 2) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_second = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 2) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 2) {
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_fist = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		}
 		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.FIRE_STONE.get(), 6000);
+			_player.getCooldowns().addCooldown(PowerModItems.AIR_STONE.get(), 6000);
 	}
 }
