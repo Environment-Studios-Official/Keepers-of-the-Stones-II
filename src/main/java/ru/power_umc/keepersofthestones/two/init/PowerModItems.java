@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.item.WaterStoneItem;
 import ru.power_umc.keepersofthestones.two.item.WaterKatanaItem;
+import ru.power_umc.keepersofthestones.two.item.WaterArmorItem;
 import ru.power_umc.keepersofthestones.two.item.StoneAttackItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
 import ru.power_umc.keepersofthestones.two.item.GrassBlockAttackItem;
@@ -62,6 +63,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> COBBLED_DEEPSLATE_ATTACK = REGISTRY.register("cobbled_deepslate_attack", () -> new CobbledDeepslateAttackItem());
 	public static final RegistryObject<Item> EARTH_HAMMER = REGISTRY.register("earth_hammer", () -> new EarthHammerItem());
 	public static final RegistryObject<Item> WATER_KATANA = REGISTRY.register("water_katana", () -> new WaterKatanaItem());
+	public static final RegistryObject<Item> WATER_ARMOR_HELMET = REGISTRY.register("water_armor_helmet", () -> new WaterArmorItem.Helmet());
+	public static final RegistryObject<Item> WATER_ARMOR_CHESTPLATE = REGISTRY.register("water_armor_chestplate", () -> new WaterArmorItem.Chestplate());
+	public static final RegistryObject<Item> WATER_ARMOR_LEGGINGS = REGISTRY.register("water_armor_leggings", () -> new WaterArmorItem.Leggings());
+	public static final RegistryObject<Item> WATER_ARMOR_BOOTS = REGISTRY.register("water_armor_boots", () -> new WaterArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

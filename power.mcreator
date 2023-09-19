@@ -93,7 +93,8 @@
       "metadata": {
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterStoneItem.java",
-          "src/main/resources/assets/power/models/item/water_stone.json"
+          "src/main/resources/assets/power/models/item/water_stone.json",
+          "src/main/resources/assets/power/models/item/water_stone_0.json"
         ]
       },
       "path": "~/Elements/Water"
@@ -157,7 +158,7 @@
       "name": "EarthMaster",
       "type": "potioneffect",
       "sortid": 11,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master",
       "metadata": {
@@ -1985,6 +1986,196 @@
         ]
       },
       "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterMasterStart",
+      "type": "procedure",
+      "sortid": 110,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterMasterEnd",
+      "type": "procedure",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterArmor",
+      "type": "armor",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/water_armor_boots.json",
+          "src/main/resources/assets/power/models/item/water_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterArmorItem.java",
+          "src/main/resources/assets/power/models/item/water_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/water_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 116,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterStoneUse",
+      "type": "procedure",
+      "sortid": 117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
     }
   ],
   "variable_elements": [
@@ -2131,6 +2322,7 @@
     "ru_ru": {
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.ether_stone": "Камень эфира",
+      "item.power.water_armor_boots": "Earth Boots",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "item.power.earth_hammer": "Земляной молот",
@@ -2139,6 +2331,7 @@
       "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
+      "item.power.water_armor_chestplate": "Earth Chestplate",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "item_group.power.stones": "Камни",
@@ -2148,10 +2341,12 @@
       "item.power.dirt_block_attack": "Stone Attack",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
+      "item.power.water_armor_leggings": "Earth Leggings",
       "item.power.fire_sword": "Меч огня",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.cobblestone_attack": "Stone Attack",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "item.power.water_armor_helmet": "Earth Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "item.power.grass_block_attack": "Stone Attack",
       "gui.power.wheel_abilities_earth.button_3": "3",
@@ -2184,6 +2379,7 @@
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.ether_stone": "Ether Stone",
+      "item.power.water_armor_boots": "Water Boots",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "item.power.earth_hammer": "Earth Hammer",
@@ -2192,6 +2388,7 @@
       "item_group.power.boxes": "Boxes",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
+      "item.power.water_armor_chestplate": "Water Chestplate",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
       "item_group.power.stones": "Stones",
@@ -2201,10 +2398,12 @@
       "item.power.dirt_block_attack": "Stone Attack",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
+      "item.power.water_armor_leggings": "Water Leggings",
       "item.power.fire_sword": "Fire Sword",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.cobblestone_attack": "Stone Attack",
       "item.power.fire_armor_boots": "Fire Boots",
+      "item.power.water_armor_helmet": "Water Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "item.power.grass_block_attack": "Stone Attack",
       "gui.power.wheel_abilities_earth.button_3": "3",
