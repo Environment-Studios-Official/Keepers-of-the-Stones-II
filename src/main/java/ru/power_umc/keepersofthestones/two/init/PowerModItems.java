@@ -5,6 +5,7 @@
 package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.item.WaterStoneItem;
+import ru.power_umc.keepersofthestones.two.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestones.two.item.StoneAttackItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
 import ru.power_umc.keepersofthestones.two.item.GrassBlockAttackItem;
@@ -60,6 +61,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> COBBLESTONE_ATTACK = REGISTRY.register("cobblestone_attack", () -> new CobblestoneAttackItem());
 	public static final RegistryObject<Item> COBBLED_DEEPSLATE_ATTACK = REGISTRY.register("cobbled_deepslate_attack", () -> new CobbledDeepslateAttackItem());
 	public static final RegistryObject<Item> EARTH_HAMMER = REGISTRY.register("earth_hammer", () -> new EarthHammerItem());
+	public static final RegistryObject<Item> WATER_KATANA = REGISTRY.register("water_katana", () -> new WaterKatanaItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

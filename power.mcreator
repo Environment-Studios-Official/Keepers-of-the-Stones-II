@@ -157,7 +157,7 @@
       "name": "EarthMaster",
       "type": "potioneffect",
       "sortid": 11,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "earth_master",
       "metadata": {
@@ -1138,62 +1138,6 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "EarthMasterEffectStart",
-      "type": "procedure",
-      "sortid": 70,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "earth_master_effect_start",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterEffectStartProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "EarthMasterEffectEnd",
-      "type": "procedure",
-      "sortid": 71,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "earth_master_effect_end",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterEffectEndProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "WheelAbilitiesEarth",
       "type": "gui",
       "sortid": 72,
@@ -1950,6 +1894,97 @@
         ]
       },
       "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterKatana",
+      "type": "tool",
+      "sortid": 107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_katana",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterKatanaItem.java",
+          "src/main/resources/assets/power/models/item/water_katana.json"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterKatanaKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_katana_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterKatanaKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "EarthMasterStart",
+      "type": "procedure",
+      "sortid": 108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthMasterEnd",
+      "type": "procedure",
+      "sortid": 109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
     }
   ],
   "variable_elements": [
@@ -2101,8 +2136,8 @@
       "item.power.earth_hammer": "Земляной молот",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "key.power.special_attack_key": "Клавиша специальной атаки",
-      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item_group.power.boxes": "Шкатулки",
+      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -2111,6 +2146,7 @@
       "item.power.cobbled_deepslate_attack": "Stone Attack",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
       "item.power.dirt_block_attack": "Stone Attack",
+      "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
       "item.power.fire_sword": "Меч огня",
       "effect.power.ether_master": "Мастер эфира",
@@ -2163,6 +2199,7 @@
       "item.power.cobbled_deepslate_attack": "Stone Attack",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
       "item.power.dirt_block_attack": "Stone Attack",
+      "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.fire_sword": "Fire Sword",
       "effect.power.ether_master": "Master of the Ether",

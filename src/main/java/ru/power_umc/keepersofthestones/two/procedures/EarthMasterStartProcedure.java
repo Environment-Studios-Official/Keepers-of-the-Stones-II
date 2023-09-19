@@ -10,7 +10,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
-public class EarthMasterEffectStartProcedure {
+public class EarthMasterStartProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;

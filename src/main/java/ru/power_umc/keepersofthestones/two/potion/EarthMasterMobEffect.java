@@ -2,8 +2,8 @@
 package ru.power_umc.keepersofthestones.two.potion;
 
 import ru.power_umc.keepersofthestones.two.procedures.EnhancedAbilitiesProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.EarthMasterEffectStartProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.EarthMasterEffectEndProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthMasterStartProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EarthMasterEndProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
@@ -22,7 +22,7 @@ public class EarthMasterMobEffect extends MobEffect {
 
 	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		EarthMasterEffectStartProcedure.execute(entity);
+		EarthMasterStartProcedure.execute(entity);
 	}
 
 	@Override
@@ -33,7 +33,7 @@ public class EarthMasterMobEffect extends MobEffect {
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		EarthMasterEffectEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		EarthMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
