@@ -2176,6 +2176,102 @@
         ]
       },
       "path": "~/Elements/Water"
+    },
+    {
+      "name": "WheelAbilitiesWater",
+      "type": "gui",
+      "sortid": 118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_water",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesWaterScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesWaterMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesWaterButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Water"
+    },
+    {
+      "name": "Attack13",
+      "type": "procedure",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_13",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack13Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Water"
+    },
+    {
+      "name": "Attack14",
+      "type": "procedure",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_14",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack14Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Water"
+    },
+    {
+      "name": "Attack15",
+      "type": "procedure",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_15",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack15Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Water"
+    },
+    {
+      "name": "Attack16",
+      "type": "procedure",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_16",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack16Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Water"
     }
   ],
   "variable_elements": [
@@ -2331,6 +2427,9 @@
       "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_water.button_3": "3",
       "item.power.water_armor_chestplate": "Earth Chestplate",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -2388,6 +2487,9 @@
       "item_group.power.boxes": "Boxes",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_water.button_3": "3",
       "item.power.water_armor_chestplate": "Water Chestplate",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
@@ -2498,6 +2600,10 @@
               },
               {
                 "name": "Earth",
+                "children": []
+              },
+              {
+                "name": "Water",
                 "children": []
               }
             ]
