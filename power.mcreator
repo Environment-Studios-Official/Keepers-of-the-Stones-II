@@ -2627,7 +2627,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.12",
+    "version": "1.0.0.0.11",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
@@ -2654,5 +2654,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300438316
+  "mcreatorVersion": 202300437423
 }
