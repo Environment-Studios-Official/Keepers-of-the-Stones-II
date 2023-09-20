@@ -13,8 +13,6 @@
  */
 package ru.power_umc.keepersofthestones.two;
 
-import software.bernie.geckolib.GeckoLib;
-
 import ru.power_umc.keepersofthestones.two.init.PowerModTabs;
 import ru.power_umc.keepersofthestones.two.init.PowerModSounds;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
@@ -68,7 +66,6 @@ public class PowerMod {
 		PowerModMobEffects.REGISTRY.register(bus);
 
 		PowerModMenus.REGISTRY.register(bus);
-		GeckoLib.initialize();
 	}
 
 	private static final String PROTOCOL_VERSION = "1";
