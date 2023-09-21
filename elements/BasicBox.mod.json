@@ -1,5 +1,5 @@
 {
-  "_fv": 49,
+  "_fv": 48,
   "_type": "block",
   "definition": {
     "texture": "basic_box",
@@ -129,7 +129,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "generateFeature": false,
+    "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [
       {
