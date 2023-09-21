@@ -772,7 +772,7 @@ public class SpecialAttackProcedure {
 												.getY()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getZ()),
-										25, 1, 1, 1, 0.25);
+										50, 1, 1, 1, 0.25);
 							{
 								final Vec3 _center = new Vec3(
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
