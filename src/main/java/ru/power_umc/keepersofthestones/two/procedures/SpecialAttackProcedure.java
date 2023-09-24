@@ -352,24 +352,42 @@ public class SpecialAttackProcedure {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, (-2.5), 0));
 									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3(0, (-2.5), 0));
+									}
 								} else if ((entityiterator.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3(0, 2.5, 0));
+									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 2.5, 0));
 									}
 								} else if ((entityiterator.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, 2.5));
 									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3(0, 0, 2.5));
+									}
 								} else if ((entityiterator.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3(0, 0, (-2.5)));
+									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, (-2.5)));
 									}
 								} else if ((entityiterator.getDirection()).getAxis() == Direction.Axis.X) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(2.5, 0, 0));
 									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3(2.5, 0, 0));
+									}
 								} else if ((entityiterator.getDirection()).getAxis() == Direction.Axis.X) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
+										entityiterator.setDeltaMovement(new Vec3((-2.5), 0, 0));
+									}
+									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3((-2.5), 0, 0));
 									}
 								}
@@ -418,7 +436,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt132 && _livEnt132.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt144 && _livEnt144.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 9) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
@@ -747,7 +765,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt214 && _livEnt214.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt226 && _livEnt226.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
