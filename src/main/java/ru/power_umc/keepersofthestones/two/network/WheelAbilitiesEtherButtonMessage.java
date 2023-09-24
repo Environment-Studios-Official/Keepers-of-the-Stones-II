@@ -5,9 +5,9 @@ import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEtherMe
 import ru.power_umc.keepersofthestones.two.procedures.OpenWheelTwoProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.OpenWheelThreeProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.OpenWheelOneProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.EtherArmorKazhdyiTikDliaBotinokProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack19Procedure;
 import ru.power_umc.keepersofthestones.two.procedures.Attack18Procedure;
+import ru.power_umc.keepersofthestones.two.procedures.Attack17Procedure;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.network.NetworkEvent;
@@ -69,7 +69,7 @@ public class WheelAbilitiesEtherButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			EtherArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+			Attack17Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
