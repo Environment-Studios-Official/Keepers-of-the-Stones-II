@@ -2498,6 +2498,102 @@
         ]
       },
       "path": "~/Elements/Ether"
+    },
+    {
+      "name": "WheelAbilitiesEther",
+      "type": "gui",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_ether",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesEtherMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesEtherScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesEtherButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ether"
+    },
+    {
+      "name": "Attack17",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_17",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack17Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ether"
+    },
+    {
+      "name": "Attack18",
+      "type": "procedure",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_18",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack18Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ether"
+    },
+    {
+      "name": "Attack19",
+      "type": "procedure",
+      "sortid": 136,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_19",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack19Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ether"
+    },
+    {
+      "name": "Attack20",
+      "type": "procedure",
+      "sortid": 137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_20",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack20Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ether"
     }
   ],
   "variable_elements": [
@@ -2665,8 +2761,11 @@
       "item.power.water_armor_helmet": "Earth Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "item.power.grass_block_attack": "Stone Attack",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.button_3": "3",
       "gui.power.wheel_abilities_earth.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Камень огня",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
@@ -2730,8 +2829,11 @@
       "item.power.water_armor_helmet": "Water Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "item.power.grass_block_attack": "Stone Attack",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.button_3": "3",
       "gui.power.wheel_abilities_earth.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Fire Stone",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
@@ -2828,6 +2930,10 @@
               },
               {
                 "name": "Water",
+                "children": []
+              },
+              {
+                "name": "Ether",
                 "children": []
               }
             ]
