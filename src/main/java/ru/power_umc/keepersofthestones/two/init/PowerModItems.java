@@ -14,6 +14,8 @@ import ru.power_umc.keepersofthestones.two.item.FireSwordItem;
 import ru.power_umc.keepersofthestones.two.item.FireStoneItem;
 import ru.power_umc.keepersofthestones.two.item.FireArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EtherStoneItem;
+import ru.power_umc.keepersofthestones.two.item.EtherGlaiveItem;
+import ru.power_umc.keepersofthestones.two.item.EtherArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EarthStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthHammerItem;
 import ru.power_umc.keepersofthestones.two.item.EarthArmorItem;
@@ -67,6 +69,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> WATER_ARMOR_CHESTPLATE = REGISTRY.register("water_armor_chestplate", () -> new WaterArmorItem.Chestplate());
 	public static final RegistryObject<Item> WATER_ARMOR_LEGGINGS = REGISTRY.register("water_armor_leggings", () -> new WaterArmorItem.Leggings());
 	public static final RegistryObject<Item> WATER_ARMOR_BOOTS = REGISTRY.register("water_armor_boots", () -> new WaterArmorItem.Boots());
+	public static final RegistryObject<Item> ETHER_GLAIVE = REGISTRY.register("ether_glaive", () -> new EtherGlaiveItem());
+	public static final RegistryObject<Item> ETHER_ARMOR_HELMET = REGISTRY.register("ether_armor_helmet", () -> new EtherArmorItem.Helmet());
+	public static final RegistryObject<Item> ETHER_ARMOR_CHESTPLATE = REGISTRY.register("ether_armor_chestplate", () -> new EtherArmorItem.Chestplate());
+	public static final RegistryObject<Item> ETHER_ARMOR_LEGGINGS = REGISTRY.register("ether_armor_leggings", () -> new EtherArmorItem.Leggings());
+	public static final RegistryObject<Item> ETHER_ARMOR_BOOTS = REGISTRY.register("ether_armor_boots", () -> new EtherArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

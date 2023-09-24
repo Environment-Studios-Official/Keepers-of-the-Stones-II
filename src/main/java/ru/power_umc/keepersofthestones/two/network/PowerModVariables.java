@@ -76,6 +76,7 @@ public class PowerModVariables {
 			clone.element_id_fist = original.element_id_fist;
 			clone.element_id_second = original.element_id_second;
 			clone.element_id_third = original.element_id_third;
+			clone.battery = original.battery;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -84,9 +85,6 @@ public class PowerModVariables {
 				clone.wheel_one = original.wheel_one;
 				clone.wheel_two = original.wheel_two;
 				clone.wheel_three = original.wheel_three;
-				clone.xr = original.xr;
-				clone.yr = original.yr;
-				clone.zr = original.zr;
 			}
 		}
 	}
@@ -139,9 +137,7 @@ public class PowerModVariables {
 		public double element_id_fist = 0;
 		public double element_id_second = 0;
 		public double element_id_third = 0;
-		public double xr = 0;
-		public double yr = 0;
-		public double zr = 0;
+		public boolean battery = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -167,9 +163,7 @@ public class PowerModVariables {
 			nbt.putDouble("element_id_fist", element_id_fist);
 			nbt.putDouble("element_id_second", element_id_second);
 			nbt.putDouble("element_id_third", element_id_third);
-			nbt.putDouble("xr", xr);
-			nbt.putDouble("yr", yr);
-			nbt.putDouble("zr", zr);
+			nbt.putBoolean("battery", battery);
 			return nbt;
 		}
 
@@ -192,9 +186,7 @@ public class PowerModVariables {
 			element_id_fist = nbt.getDouble("element_id_fist");
 			element_id_second = nbt.getDouble("element_id_second");
 			element_id_third = nbt.getDouble("element_id_third");
-			xr = nbt.getDouble("xr");
-			yr = nbt.getDouble("yr");
-			zr = nbt.getDouble("zr");
+			battery = nbt.getBoolean("battery");
 		}
 	}
 
@@ -236,9 +228,7 @@ public class PowerModVariables {
 					variables.element_id_fist = message.data.element_id_fist;
 					variables.element_id_second = message.data.element_id_second;
 					variables.element_id_third = message.data.element_id_third;
-					variables.xr = message.data.xr;
-					variables.yr = message.data.yr;
-					variables.zr = message.data.zr;
+					variables.battery = message.data.battery;
 				}
 			});
 			context.setPacketHandled(true);
