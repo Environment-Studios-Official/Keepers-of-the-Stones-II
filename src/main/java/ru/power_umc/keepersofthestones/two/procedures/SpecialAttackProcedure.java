@@ -142,7 +142,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSecondsOnFire(100);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, 6, 1);
+								}.getArrow(projectileLevel, 9, 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -169,7 +169,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSecondsOnFire(100);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 6, 1);
+									}.getArrow(projectileLevel, 9, 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -196,7 +196,7 @@ public class SpecialAttackProcedure {
 												entityToSpawn.setSecondsOnFire(100);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, 6, 1);
+										}.getArrow(projectileLevel, 9, 1);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
@@ -271,7 +271,7 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALL)), 6);
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALL)), 9);
 									if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
 											entityiterator.setDeltaMovement(new Vec3(0, 2.5, 0));
@@ -465,7 +465,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 9, 4);
+									}.getArrow(projectileLevel, 12, 4);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -518,7 +518,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 2, 2);
+									}.getArrow(projectileLevel, (float) 7.5, 2);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -571,7 +571,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 9, 4);
+									}.getArrow(projectileLevel, 12, 4);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -624,7 +624,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 10, 5);
+									}.getArrow(projectileLevel, 15, 5);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -677,7 +677,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, 5, 3);
+									}.getArrow(projectileLevel, (float) 7.5, 3);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -729,16 +729,18 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
-									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
-									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
-									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_STALACTITE)), 14);
-									if (world instanceof Level _level) {
-										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
-										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+									if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
+										world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
+										world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
+										world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
+										world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.FALLING_STALACTITE)), 21);
+										if (world instanceof Level _level) {
+											if (!_level.isClientSide()) {
+												_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
+											} else {
+												_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+											}
 										}
 									}
 								}
@@ -765,7 +767,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt226 && _livEnt226.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt227 && _livEnt227.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -802,7 +804,7 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.DROWN)), 6);
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.DROWN)), 9);
 									}
 								}
 							}
@@ -852,7 +854,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt243 && _livEnt243.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt244 && _livEnt244.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 17) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -889,7 +891,7 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.INDIRECT_MAGIC)), 6);
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.INDIRECT_MAGIC)), 9);
 									}
 								}
 							}
