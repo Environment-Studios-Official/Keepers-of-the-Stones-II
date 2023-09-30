@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Sword",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "fire_sword",
     "customModelName": "fire_sword:default",
+    "blockingModelName": "Normal blocking",
     "name": "Fire Sword",
     "specialInformation": {
       "fixedValue": []

@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Sword",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "water_katana",
     "customModelName": "water_katana:default",
+    "blockingModelName": "Normal blocking",
     "name": "Water Katana",
     "specialInformation": {
       "fixedValue": []

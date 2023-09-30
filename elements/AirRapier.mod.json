@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Sword",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "air_rapier",
     "customModelName": "air_rapier:default",
+    "blockingModelName": "Normal blocking",
     "name": "Air Rapier",
     "specialInformation": {
       "fixedValue": []
