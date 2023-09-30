@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestones.two.init;
 
+import ru.power_umc.keepersofthestones.two.entity.WaterAttackEntity;
 import ru.power_umc.keepersofthestones.two.entity.StoneAttackEntity;
 import ru.power_umc.keepersofthestones.two.entity.MagicFireballEntity;
 import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackEntity;
@@ -40,6 +41,8 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<CobbledDeepslateAttackEntity>> COBBLED_DEEPSLATE_ATTACK = register("projectile_cobbled_deepslate_attack",
 			EntityType.Builder.<CobbledDeepslateAttackEntity>of(CobbledDeepslateAttackEntity::new, MobCategory.MISC).setCustomClientFactory(CobbledDeepslateAttackEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<WaterAttackEntity>> WATER_ATTACK = register("projectile_water_attack",
+			EntityType.Builder.<WaterAttackEntity>of(WaterAttackEntity::new, MobCategory.MISC).setCustomClientFactory(WaterAttackEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

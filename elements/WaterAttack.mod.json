@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "empty_texture",
     "customModelName": "Normal",
-    "name": "Grass Block Attack",
+    "name": "Water Attack",
     "specialInformation": {
       "fixedValue": ""
     },
@@ -14,7 +14,7 @@
     },
     "stackSize": 1,
     "ammoItem": {
-      "value": "Blocks.GRASS"
+      "value": "Blocks.COBBLED_DEEPSLATE"
     },
     "shootConstantly": false,
     "usageCount": 100,
@@ -26,20 +26,20 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "bulletPower": 0.8,
-    "bulletDamage": 2.5,
-    "bulletKnockback": 3,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
     "bulletParticles": false,
     "bulletIgnitesFire": false,
     "bulletItemTexture": {
       "value": ""
     },
     "bulletModel": "Modelblock_attack",
-    "customBulletModelTexture": "grass_block_attack.png",
+    "customBulletModelTexture": "water_block_attack.png",
     "onBulletHitsBlock": {
-      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+      "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
     },
     "onBulletHitsEntity": {
-      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+      "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
     }
   }
 }

@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "empty_texture",
     "customModelName": "Normal",
-    "name": "Stone Attack",
+    "name": "Cobbled Deepslate Attack",
     "specialInformation": {
       "fixedValue": ""
     },

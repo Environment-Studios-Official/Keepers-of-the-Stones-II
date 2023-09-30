@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestones.two.init;
 
+import ru.power_umc.keepersofthestones.two.client.renderer.WaterAttackRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.StoneAttackRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.GrassBlockAttackRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.DirtBlockAttackRenderer;
@@ -27,5 +28,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DIRT_BLOCK_ATTACK.get(), DirtBlockAttackRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.COBBLESTONE_ATTACK.get(), CobblestoneAttackRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), CobbledDeepslateAttackRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.WATER_ATTACK.get(), WaterAttackRenderer::new);
 	}
 }
