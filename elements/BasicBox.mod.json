@@ -1,5 +1,5 @@
 {
-  "_fv": 48,
+  "_fv": 51,
   "_type": "block",
   "definition": {
     "texture": "basic_box",
@@ -44,8 +44,7 @@
     ],
     "name": "Box",
     "specialInformation": {
-      "fixedValue": "",
-      "name": "BasicBoxhtmlDopolnitielnaiaInformatsiiaOBlokiebrsmallIspolzuitieZapiatyieDliaRazdielieniiaZapisiei"
+      "fixedValue": []
     },
     "hardness": 1.25,
     "resistance": 1000.0,
@@ -129,7 +128,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "spawnWorldTypes": [],
+    "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
       {

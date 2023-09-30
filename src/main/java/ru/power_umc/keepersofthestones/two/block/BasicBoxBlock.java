@@ -1,7 +1,6 @@
 
 package ru.power_umc.keepersofthestones.two.block;
 
-import ru.power_umc.keepersofthestones.two.procedures.BasicBoxhtmlDopolnitielnaiaInformatsiiaOBlokiebrsmallIspolzuitieZapiatyieDliaRazdielieniiaZapisieiProcedure;
 import ru.power_umc.keepersofthestones.two.block.entity.BasicBoxBlockEntity;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
@@ -30,7 +29,6 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.Entity;
 import net.minecraft.world.MenuProvider;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.Direction;
@@ -51,11 +49,6 @@ public class BasicBoxBlock extends Block implements SimpleWaterloggedBlock, Enti
 	@Override
 	public void appendHoverText(ItemStack itemstack, BlockGetter world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		Entity entity = itemstack.getEntityRepresentation();
-		double x = entity != null ? entity.getX() : 0.0;
-		double y = entity != null ? entity.getY() : 0.0;
-		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(BasicBoxhtmlDopolnitielnaiaInformatsiiaOBlokiebrsmallIspolzuitieZapiatyieDliaRazdielieniiaZapisieiProcedure.execute()));
 	}
 
 	@Override

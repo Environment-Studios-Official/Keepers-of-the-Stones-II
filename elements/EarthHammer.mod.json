@@ -1,16 +1,14 @@
 {
-  "_fv": 48,
+  "_fv": 51,
   "_type": "tool",
   "definition": {
     "toolType": "Axe",
     "renderType": 1,
-    "blockingRenderType": 0,
     "texture": "earth_hammer",
     "customModelName": "earth_hammer:default",
-    "blockingModelName": "Normal blocking",
     "name": "Earth Hammer",
     "specialInformation": {
-      "fixedValue": ""
+      "fixedValue": []
     },
     "creativeTab": {
       "value": "No creative tab entry"
@@ -22,7 +20,9 @@
     "damageVsEntity": 14.0,
     "usageCount": 0,
     "blocksAffected": [],
-    "hasGlow": true,
+    "glowCondition": {
+      "fixedValue": true
+    },
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,

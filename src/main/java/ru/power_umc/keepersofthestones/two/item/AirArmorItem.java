@@ -22,6 +22,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.google.common.collect.Iterables;
+
 public abstract class AirArmorItem extends ArmorItem {
 	public AirArmorItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
@@ -83,8 +85,11 @@ public abstract class AirArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				AirArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -104,8 +109,11 @@ public abstract class AirArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				AirArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -125,8 +133,11 @@ public abstract class AirArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				AirArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -146,8 +157,11 @@ public abstract class AirArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			AirArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				AirArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+			}
 		}
 	}
 }

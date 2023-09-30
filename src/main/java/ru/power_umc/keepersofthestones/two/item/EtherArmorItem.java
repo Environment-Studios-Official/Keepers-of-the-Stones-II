@@ -22,6 +22,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.google.common.collect.Iterables;
+
 public abstract class EtherArmorItem extends ArmorItem {
 	public EtherArmorItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
@@ -83,8 +85,11 @@ public abstract class EtherArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			EtherArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				EtherArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -104,8 +109,11 @@ public abstract class EtherArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			EtherArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				EtherArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -125,8 +133,11 @@ public abstract class EtherArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			EtherArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				EtherArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -146,8 +157,11 @@ public abstract class EtherArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			EtherArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				EtherArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+			}
 		}
 	}
 }

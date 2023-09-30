@@ -1,16 +1,14 @@
 {
-  "_fv": 48,
+  "_fv": 51,
   "_type": "tool",
   "definition": {
     "toolType": "Sword",
     "renderType": 1,
-    "blockingRenderType": 0,
     "texture": "ether_glaive",
     "customModelName": "ether_glaive:default",
-    "blockingModelName": "Normal blocking",
     "name": "Ether Glaive",
     "specialInformation": {
-      "fixedValue": ""
+      "fixedValue": []
     },
     "creativeTab": {
       "value": "No creative tab entry"
@@ -22,7 +20,9 @@
     "damageVsEntity": 12.15,
     "usageCount": 0,
     "blocksAffected": [],
-    "hasGlow": true,
+    "glowCondition": {
+      "fixedValue": true
+    },
     "repairItems": [],
     "immuneToFire": true,
     "stayInGridWhenCrafting": false,

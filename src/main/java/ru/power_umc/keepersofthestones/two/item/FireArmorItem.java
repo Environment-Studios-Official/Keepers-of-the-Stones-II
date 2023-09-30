@@ -22,6 +22,8 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
+import com.google.common.collect.Iterables;
+
 public abstract class FireArmorItem extends ArmorItem {
 	public FireArmorItem(ArmorItem.Type type, Item.Properties properties) {
 		super(new ArmorMaterial() {
@@ -83,8 +85,11 @@ public abstract class FireArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			FireArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				FireArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -104,8 +109,11 @@ public abstract class FireArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			FireArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				FireArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -125,8 +133,11 @@ public abstract class FireArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			FireArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				FireArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+			}
 		}
 	}
 
@@ -146,8 +157,11 @@ public abstract class FireArmorItem extends ArmorItem {
 		}
 
 		@Override
-		public void onArmorTick(ItemStack itemstack, Level world, Player entity) {
-			FireArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+			super.inventoryTick(itemstack, world, entity, slot, selected);
+			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
+				FireArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+			}
 		}
 	}
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 48,
+  "_fv": 51,
   "_type": "rangeditem",
   "definition": {
     "renderType": 0,
@@ -7,7 +7,7 @@
     "customModelName": "Normal",
     "name": "Cobbled Deepslate Attack",
     "specialInformation": {
-      "fixedValue": ""
+      "fixedValue": []
     },
     "creativeTab": {
       "value": "No creative tab entry"
@@ -21,7 +21,6 @@
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
-    "hasGlow": false,
     "animation": "block",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
