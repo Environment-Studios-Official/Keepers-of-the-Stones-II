@@ -2711,6 +2711,20 @@
         ]
       },
       "path": "~/Elements/Water"
+    },
+    {
+      "name": "ErodedBlocks",
+      "type": "tag",
+      "sortid": 145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "eroded_blocks",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/tags/blocks/eroded_blocks.json"
+        ]
+      },
+      "path": "~/Elements/Water"
     }
   ],
   "variable_elements": [
