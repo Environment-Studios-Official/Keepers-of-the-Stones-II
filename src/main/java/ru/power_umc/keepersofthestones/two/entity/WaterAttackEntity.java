@@ -1,6 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.entity;
 
+import ru.power_umc.keepersofthestones.two.procedures.WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.WaterAttackKoghdaSnariadPopadaietVBlokProcedure;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
@@ -68,7 +69,7 @@ public class WaterAttackEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		WaterAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override

@@ -2643,6 +2643,38 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Ether"
+    },
+    {
+      "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_attack_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Water"
     }
   ],
   "variable_elements": [
@@ -3014,7 +3046,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.16",
+    "version": "1.0.0.0.18",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",

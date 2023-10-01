@@ -850,14 +850,15 @@ public class SpecialAttackProcedure {
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback) {
+									public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
 										AbstractArrow entityToSpawn = new WaterAttackEntity(PowerModEntities.WATER_ATTACK.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
+										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, 12, 4);
+								}.getArrow(projectileLevel, 12, 2, (byte) 2);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);

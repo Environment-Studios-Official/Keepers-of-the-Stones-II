@@ -21,6 +21,9 @@
     "actionSound": {
       "value": "entity.arrow.shoot"
     },
+    "glowCondition": {
+      "fixedValue": false
+    },
     "animation": "block",
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
@@ -38,7 +41,7 @@
       "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
     },
     "onBulletHitsEntity": {
-      "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
+      "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost"
     }
   }
 }
