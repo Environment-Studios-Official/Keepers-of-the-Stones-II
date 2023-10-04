@@ -12,6 +12,12 @@
       },
       {
         "value": "CUSTOM:EarthHammer"
+      },
+      {
+        "value": "CUSTOM:WaterKatana"
+      },
+      {
+        "value": "CUSTOM:EtherGlaive"
       }
     ],
     "blocks": [],

@@ -3,6 +3,8 @@
   "values": [
     "power:fire_sword",
     "power:earth_hammer",
+    "power:water_katana",
+    "power:ether_glaive",
     "power:air_rapier"
   ]
 }
