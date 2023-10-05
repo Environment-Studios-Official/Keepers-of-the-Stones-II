@@ -26,6 +26,7 @@ minecraft {
   }
 }
 
+
 minecraft {
   runs {
    client {    
@@ -48,6 +49,7 @@ repositories {
  dependencies {
    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
  }
+
 
 def extraModsDir = 'extra-mods-1.20.1'
 task addnewfoldersmods(type: DefaultTask){
@@ -101,4 +103,5 @@ minecraft {
         }
       }
           }
+
 

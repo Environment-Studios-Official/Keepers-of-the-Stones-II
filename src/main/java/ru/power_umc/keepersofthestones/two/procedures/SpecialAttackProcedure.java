@@ -23,10 +23,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -41,9 +43,16 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.player.AbstractClientPlayer;
 
 import java.util.List;
 import java.util.Comparator;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 public class SpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -115,6 +124,14 @@ public class SpecialAttackProcedure {
 										+ 1,
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
 								Blocks.FIRE.defaultBlockState(), 3);
+					}
+					if (world.isClientSide()) {
+						if (entity instanceof AbstractClientPlayer player) {
+							var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
+							if (animation != null && !animation.isActive()) {
+								animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.beam"))));
+							}
+						}
 					}
 					{
 						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
@@ -243,7 +260,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt44 && _livEnt44.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt45 && _livEnt45.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 5) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					for (int index1 = 0; index1 < 15; index1++) {
@@ -441,7 +458,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt147 && _livEnt147.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt148 && _livEnt148.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 9) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
@@ -772,7 +789,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt230 && _livEnt230.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt231 && _livEnt231.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -906,7 +923,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt257 && _livEnt257.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt258 && _livEnt258.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 17) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -965,9 +982,121 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 18) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot(1, 0, 1, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot((-1), 0, 1, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot(1, 0, (-1), 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot(0, 0, (-1), 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot(0, 0, 1, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot((-1), 0, 0, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+					if (world instanceof ServerLevel projectileLevel) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 9, 0);
+						_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+						_entityToSpawn.shoot(1, 0, 0, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
 					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
+						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.power = _setval;
 							capability.syncPlayerVariables(entity);
