@@ -2,6 +2,7 @@ package ru.power_umc.keepersofthestones.two.procedures;
 
 import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
+import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 import ru.power_umc.keepersofthestones.two.entity.WaterAttackEntity;
 import ru.power_umc.keepersofthestones.two.entity.StoneAttackEntity;
@@ -34,6 +35,7 @@ import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
@@ -810,18 +812,27 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 11) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
-					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 25;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.power = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Blocks.AIR.asItem()) {
+						if (entity instanceof LivingEntity _entity) {
+							ItemStack _setstack = new ItemStack(PowerModItems.EARTH_SHIELD.get());
+							_setstack.setCount(1);
+							_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
+							if (_entity instanceof Player _player)
+								_player.getInventory().setChanged();
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					}
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt232 && _livEnt232.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt235 && _livEnt235.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -963,7 +974,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt260 && _livEnt260.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt263 && _livEnt263.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 17) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {

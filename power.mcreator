@@ -2791,6 +2791,81 @@
         ]
       },
       "path": "~/Elements/Water"
+    },
+    {
+      "name": "ShieldInHands",
+      "type": "procedure",
+      "sortid": 146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_in_hands",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/ShieldInHandsProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "ShieldProtectionTick",
+      "type": "procedure",
+      "sortid": 147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shield_protection_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/ShieldProtectionTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthShield",
+      "type": "tool",
+      "sortid": 149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_shield",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/earth_shield.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EarthShieldItem.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "EarthShieldKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_shield_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EarthShieldKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Elements/Earth"
     }
   ],
   "variable_elements": [
@@ -2989,7 +3064,8 @@
       "item.power.air_stone": "Камень воздуха",
       "effect.power.air_master": "Мастер воздуха",
       "item.power.water_stone": "Камень воды",
-      "item.power.fire_armor_leggings": "Поножи мастера огня"
+      "item.power.fire_armor_leggings": "Поножи мастера огня",
+      "item.power.earth_shield": "Earth Shield"
     },
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
@@ -3058,7 +3134,8 @@
       "item.power.air_stone": "Air Stone",
       "effect.power.air_master": "Master of the Air",
       "item.power.water_stone": "Water Stone",
-      "item.power.fire_armor_leggings": "Fire Leggings"
+      "item.power.fire_armor_leggings": "Fire Leggings",
+      "item.power.earth_shield": "Earth Shield"
     }
   },
   "foldersRoot": {
