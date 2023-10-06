@@ -16,25 +16,25 @@ import net.minecraft.network.FriendlyByteBuf;
 import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class SpecialAttackKeyMessage {
+public class AbilityUsingKeyMessage {
 	int type, pressedms;
 
-	public SpecialAttackKeyMessage(int type, int pressedms) {
+	public AbilityUsingKeyMessage(int type, int pressedms) {
 		this.type = type;
 		this.pressedms = pressedms;
 	}
 
-	public SpecialAttackKeyMessage(FriendlyByteBuf buffer) {
+	public AbilityUsingKeyMessage(FriendlyByteBuf buffer) {
 		this.type = buffer.readInt();
 		this.pressedms = buffer.readInt();
 	}
 
-	public static void buffer(SpecialAttackKeyMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(AbilityUsingKeyMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.type);
 		buffer.writeInt(message.pressedms);
 	}
 
-	public static void handler(SpecialAttackKeyMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(AbilityUsingKeyMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			pressAction(context.getSender(), message.type, message.pressedms);
@@ -58,6 +58,6 @@ public class SpecialAttackKeyMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SpecialAttackKeyMessage.class, SpecialAttackKeyMessage::buffer, SpecialAttackKeyMessage::new, SpecialAttackKeyMessage::handler);
+		PowerMod.addNetworkMessage(AbilityUsingKeyMessage.class, AbilityUsingKeyMessage::buffer, AbilityUsingKeyMessage::new, AbilityUsingKeyMessage::handler);
 	}
 }

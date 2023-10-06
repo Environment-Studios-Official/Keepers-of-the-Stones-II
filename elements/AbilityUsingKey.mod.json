@@ -3,7 +3,7 @@
   "_type": "keybind",
   "definition": {
     "triggerKey": "R",
-    "keyBindingName": "Special attack key",
+    "keyBindingName": "Ability using key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
       "name": "SpecialAttack"
