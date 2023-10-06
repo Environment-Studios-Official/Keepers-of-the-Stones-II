@@ -22,7 +22,7 @@ import net.minecraft.client.KeyMapping;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PowerModKeyMappings {
-	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_U, "key.categories.power") {
+	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_U, "key.categories.power2") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -35,7 +35,7 @@ public class PowerModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping SPECIAL_ATTACK_KEY = new KeyMapping("key.power.special_attack_key", GLFW.GLFW_KEY_R, "key.categories.power") {
+	public static final KeyMapping SPECIAL_ATTACK_KEY = new KeyMapping("key.power.special_attack_key", GLFW.GLFW_KEY_R, "key.categories.power2") {
 		private boolean isDownOld = false;
 
 		@Override
@@ -48,7 +48,7 @@ public class PowerModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping ABILITY_WHEEL_OPENINGKEY = new KeyMapping("key.power.ability_wheel_openingkey", GLFW.GLFW_KEY_Y, "key.categories.power") {
+	public static final KeyMapping ABILITY_WHEEL_OPENINGKEY = new KeyMapping("key.power.ability_wheel_openingkey", GLFW.GLFW_KEY_Y, "key.categories.power2") {
 		private boolean isDownOld = false;
 
 		@Override

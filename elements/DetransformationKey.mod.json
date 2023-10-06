@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "U",
     "keyBindingName": "Detransformation key",
-    "keyBindingCategoryKey": "power",
+    "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
       "name": "DetransformationKeyUse"
     }

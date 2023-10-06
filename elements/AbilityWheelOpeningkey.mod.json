@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "Y",
     "keyBindingName": "Ability wheel opening key",
-    "keyBindingCategoryKey": "power",
+    "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
       "name": "OpenWheelOne"
     }

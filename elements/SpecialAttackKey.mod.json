@@ -4,7 +4,7 @@
   "definition": {
     "triggerKey": "R",
     "keyBindingName": "Special attack key",
-    "keyBindingCategoryKey": "power",
+    "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
       "name": "SpecialAttack"
     }
