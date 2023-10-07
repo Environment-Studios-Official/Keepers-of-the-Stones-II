@@ -36,51 +36,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack13"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack14"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack15"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 136,
-          "y": 110
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_wheel_button_1",
@@ -127,6 +82,84 @@
           "x": 282,
           "y": 178
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_water_stream",
+          "image": "water_stream.png",
+          "hoveredImage": "water_stream_highlight.png",
+          "onClick": {
+            "name": "Attack13"
+          },
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_water_shock",
+          "image": "water_shock.png",
+          "hoveredImage": "water_shock_highlight.png",
+          "onClick": {
+            "name": "Attack14"
+          },
+          "x": 251,
+          "y": 97
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_healing_water",
+          "image": "healing_water.png",
+          "hoveredImage": "healing_water_highlight.png",
+          "onClick": {
+            "name": "Attack15"
+          },
+          "x": 129,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_water_stream_uses_10_power_poin",
+          "text": {
+            "fixedValue": "Water stream, uses 10 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_water_shock_uses_20_power_point",
+          "text": {
+            "fixedValue": "Water shock, uses 20 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_healing_water_uses_30_power_poi",
+          "text": {
+            "fixedValue": "Healing water, uses 30 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 140,
+          "y": 110
+        }
       }
     ],
     "gridSettings": {
@@ -134,7 +167,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
