@@ -38,14 +38,14 @@ public class GettingStoneProcedure {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
 				random = Mth.nextInt(RandomSource.create(), 1, 6);
 				if (random == 1) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 1)) {
+					if (!PowerModVariables.MapVariables.get(world).fire_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 1;
+							PowerModVariables.MapVariables.get(world).fire_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;
@@ -60,14 +60,14 @@ public class GettingStoneProcedure {
 					}
 				}
 				if (random == 2) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 2)) {
+					if (!PowerModVariables.MapVariables.get(world).air_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 2;
+							PowerModVariables.MapVariables.get(world).air_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;
@@ -82,14 +82,14 @@ public class GettingStoneProcedure {
 					}
 				}
 				if (random == 3) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 3)) {
+					if (!PowerModVariables.MapVariables.get(world).earth_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 3;
+							PowerModVariables.MapVariables.get(world).earth_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;
@@ -104,14 +104,14 @@ public class GettingStoneProcedure {
 					}
 				}
 				if (random == 4) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 4)) {
+					if (!PowerModVariables.MapVariables.get(world).water_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 4;
+							PowerModVariables.MapVariables.get(world).water_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;
@@ -126,14 +126,14 @@ public class GettingStoneProcedure {
 					}
 				}
 				if (random == 5) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 5)) {
+					if (!PowerModVariables.MapVariables.get(world).ether_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 5;
+							PowerModVariables.MapVariables.get(world).ether_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;
@@ -148,14 +148,14 @@ public class GettingStoneProcedure {
 					}
 				}
 				if (random == 6) {
-					if (!(PowerModVariables.MapVariables.get(world).permanent_element == 6)) {
+					if (!PowerModVariables.MapVariables.get(world).ice_stone) {
 						PowerMod.queueServerWork(1, () -> {
 							if (entity instanceof Player _player) {
 								ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
 								_setstack.setCount(1);
 								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 							}
-							PowerModVariables.MapVariables.get(world).permanent_element = 6;
+							PowerModVariables.MapVariables.get(world).ice_stone = true;
 							PowerModVariables.MapVariables.get(world).syncData(world);
 							{
 								boolean _setval = true;

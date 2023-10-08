@@ -147,7 +147,12 @@ public class PowerModVariables {
 
 	public static class MapVariables extends SavedData {
 		public static final String DATA_NAME = "power_mapvars";
-		public double permanent_element = 0;
+		public boolean fire_stone = false;
+		public boolean air_stone = false;
+		public boolean earth_stone = false;
+		public boolean water_stone = false;
+		public boolean ether_stone = false;
+		public boolean ice_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -156,12 +161,22 @@ public class PowerModVariables {
 		}
 
 		public void read(CompoundTag nbt) {
-			permanent_element = nbt.getDouble("permanent_element");
+			fire_stone = nbt.getBoolean("fire_stone");
+			air_stone = nbt.getBoolean("air_stone");
+			earth_stone = nbt.getBoolean("earth_stone");
+			water_stone = nbt.getBoolean("water_stone");
+			ether_stone = nbt.getBoolean("ether_stone");
+			ice_stone = nbt.getBoolean("ice_stone");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt) {
-			nbt.putDouble("permanent_element", permanent_element);
+			nbt.putBoolean("fire_stone", fire_stone);
+			nbt.putBoolean("air_stone", air_stone);
+			nbt.putBoolean("earth_stone", earth_stone);
+			nbt.putBoolean("water_stone", water_stone);
+			nbt.putBoolean("ether_stone", ether_stone);
+			nbt.putBoolean("ice_stone", ice_stone);
 			return nbt;
 		}
 
