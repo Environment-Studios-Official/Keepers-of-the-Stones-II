@@ -1,0 +1,19 @@
+{
+  "_fv": 52,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:MagicFireball"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.firecharge.use"
+    },
+    "igniteFire": true,
+    "power": 1.0,
+    "damage": 3.0,
+    "knockback": 3,
+    "entityModel": "Default",
+    "customModelTexture": ""
+  }
+}

@@ -1,7 +1,7 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.WaterAttackEntity;
-import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
+import ru.power_umc.keepersofthestones.two.entity.EtherAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.client.model.Modelether_bullet;
 
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class WaterAttackRenderer extends EntityRenderer<WaterAttackEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/water_block_attack.png");
-	private final Modelblock_attack model;
+public class EtherAttackProjectileRenderer extends EntityRenderer<EtherAttackProjectileEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/ether_bullet.png");
+	private final Modelether_bullet model;
 
-	public WaterAttackRenderer(EntityRendererProvider.Context context) {
+	public EtherAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
+		model = new Modelether_bullet(context.bakeLayer(Modelether_bullet.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(WaterAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(EtherAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class WaterAttackRenderer extends EntityRenderer<WaterAttackEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(WaterAttackEntity entity) {
+	public ResourceLocation getTextureLocation(EtherAttackProjectileEntity entity) {
 		return texture;
 	}
 }

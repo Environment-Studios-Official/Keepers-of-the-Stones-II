@@ -1,0 +1,22 @@
+{
+  "_fv": 52,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:EtherAttack"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 9.0,
+    "knockback": 2,
+    "entityModel": "Modelether_bullet",
+    "customModelTexture": "ether_bullet.png",
+    "onFlyingTick": {
+      "name": "EtherAttackKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}

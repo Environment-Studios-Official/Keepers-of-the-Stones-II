@@ -1,6 +1,6 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.StoneAttackEntity;
+import ru.power_umc.keepersofthestones.two.entity.CobblestoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraft.util.Mth;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class StoneAttackRenderer extends EntityRenderer<StoneAttackEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/stone_attack.png");
+public class CobblestoneAttackProjectileRenderer extends EntityRenderer<CobblestoneAttackProjectileEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobblestone_attack.png");
 	private final Modelblock_attack model;
 
-	public StoneAttackRenderer(EntityRendererProvider.Context context) {
+	public CobblestoneAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
 		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(StoneAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(CobblestoneAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class StoneAttackRenderer extends EntityRenderer<StoneAttackEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(StoneAttackEntity entity) {
+	public ResourceLocation getTextureLocation(CobblestoneAttackProjectileEntity entity) {
 		return texture;
 	}
 }

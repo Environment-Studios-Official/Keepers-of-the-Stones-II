@@ -463,22 +463,6 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "MagicFireball",
-      "type": "rangeditem",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magic_fireball",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/magic_fireball.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/MagicFireballEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagicFireballItem.java"
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "SpecialAttack",
       "type": "procedure",
       "sortid": 35,
@@ -1176,23 +1160,6 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "StoneAttack",
-      "type": "rangeditem",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/StoneAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/StoneAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/StoneAttackRenderer.java",
-          "src/main/resources/assets/power/models/item/stone_attack.json"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "PowerScaleSet",
       "type": "procedure",
       "sortid": 75,
@@ -1225,74 +1192,6 @@
         ]
       },
       "path": "~/Modules/Commands"
-    },
-    {
-      "name": "GrassBlockAttack",
-      "type": "rangeditem",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grass_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/GrassBlockAttackItem.java",
-          "src/main/resources/assets/power/models/item/grass_block_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "DirtBlockAttack",
-      "type": "rangeditem",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dirt_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/DirtBlockAttackRenderer.java",
-          "src/main/resources/assets/power/models/item/dirt_block_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/DirtBlockAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/DirtBlockAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "CobblestoneAttack",
-      "type": "rangeditem",
-      "sortid": 79,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblestone_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobblestone_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobblestoneAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackRenderer.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "CobbledDeepslateAttack",
-      "type": "rangeditem",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobbled_deepslate_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobbled_deepslate_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobbledDeepslateAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobbledDeepslateAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobbledDeepslateAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthArmorKazhdyiTikDliaShliema",
@@ -2610,23 +2509,6 @@
       "path": "~/Modules/AbilityWheelModule/Ether"
     },
     {
-      "name": "WaterAttack",
-      "type": "rangeditem",
-      "sortid": 138,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "water_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/WaterAttackRenderer.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterAttackItem.java",
-          "src/main/resources/assets/power/models/item/water_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/WaterAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Water"
-    },
-    {
       "name": "WaterAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
       "sortid": 139,
@@ -2862,23 +2744,6 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule"
-    },
-    {
-      "name": "EtherAttack",
-      "type": "rangeditem",
-      "sortid": 152,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ether_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/EtherAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/EtherAttackEntity.java",
-          "src/main/resources/assets/power/models/item/ether_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/EtherAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherAttackKazhdyiTikPriPoliotieSnariada",
@@ -3575,6 +3440,245 @@
         ]
       },
       "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "MagicFireballProjectile",
+      "type": "projectile",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_fireball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/MagicFireballProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "MagicFireball",
+      "type": "item",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_fireball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/magic_fireball.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagicFireballItem.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "StoneAttackProjectile",
+      "type": "projectile",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/StoneAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/StoneAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "StoneAttack",
+      "type": "item",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/StoneAttackItem.java",
+          "src/main/resources/assets/power/models/item/stone_attack.json"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "GrassBlockAttackProjectile",
+      "type": "projectile",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grass_block_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "GrassBlockAttack",
+      "type": "item",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grass_block_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GrassBlockAttackItem.java",
+          "src/main/resources/assets/power/models/item/grass_block_attack.json"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "DirtBlockAttackProjectile",
+      "type": "projectile",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_block_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/DirtBlockAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/DirtBlockAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "DirtBlockAttack",
+      "type": "item",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_block_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/dirt_block_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DirtBlockAttackItem.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobblestoneAttackProjectile",
+      "type": "projectile",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblestone_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobblestoneAttack",
+      "type": "item",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblestone_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cobblestone_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobblestoneAttackItem.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobbledDeepslateAttackProjectile",
+      "type": "projectile",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbled_deepslate_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobbledDeepslateAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobbledDeepslateAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobbledDeepslateAttack",
+      "type": "item",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbled_deepslate_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cobbled_deepslate_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobbledDeepslateAttackItem.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterAttackProjectile",
+      "type": "projectile",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/WaterAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/WaterAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "WaterAttack",
+      "type": "item",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterAttackItem.java",
+          "src/main/resources/assets/power/models/item/water_attack.json"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "EtherAttackProjectile",
+      "type": "projectile",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/EtherAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/EtherAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Ether"
+    },
+    {
+      "name": "EtherAttack",
+      "type": "item",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EtherAttackItem.java",
+          "src/main/resources/assets/power/models/item/ether_attack.json"
+        ]
+      },
+      "path": "~/Elements/Ether"
     }
   ],
   "variable_elements": [
@@ -3763,10 +3867,10 @@
       "gui.power.wheel_abilities_ice.button_2": "2",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
-      "item.power.water_armor_chestplate": "Нагрудник мастера воды",
       "item.power.lightning_stone": "Камень молнии",
-      "item.power.air_rapier": "Воздушная рапира",
+      "item.power.water_armor_chestplate": "Нагрудник мастера воды",
       "key.power.ability_using_key": "Клавиша использования способности",
+      "item.power.air_rapier": "Воздушная рапира",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "item_group.power.stones": "Камни",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
@@ -3862,10 +3966,10 @@
       "gui.power.wheel_abilities_ice.button_2": "2",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
-      "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
-      "key.power.ability_using_key": "Ability using key",
+      "item.power.lightning_stone": "Lightning Stone",
       "item.power.air_rapier": "Air Rapier",
+      "key.power.ability_using_key": "Ability using key",
       "item.power.air_armor_leggings": "Air Leggings",
       "item_group.power.stones": "Stones",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
@@ -4114,7 +4218,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "geckolib",
       "playeranimator",
       "allmods"
     ],
@@ -4123,5 +4226,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300440415
+  "mcreatorVersion": 202300440722
 }

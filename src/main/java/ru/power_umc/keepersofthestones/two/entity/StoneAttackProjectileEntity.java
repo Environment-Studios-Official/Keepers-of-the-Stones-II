@@ -2,6 +2,7 @@
 package ru.power_umc.keepersofthestones.two.entity;
 
 import ru.power_umc.keepersofthestones.two.procedures.StoneAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,7 +13,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -26,20 +26,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class StoneAttackEntity extends AbstractArrow implements ItemSupplier {
-	public StoneAttackEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.STONE_ATTACK.get(), world);
+public class StoneAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.STONE_ATTACK.get());
+
+	public StoneAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), world);
 	}
 
-	public StoneAttackEntity(EntityType<? extends StoneAttackEntity> type, Level world) {
+	public StoneAttackProjectileEntity(EntityType<? extends StoneAttackProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public StoneAttackEntity(EntityType<? extends StoneAttackEntity> type, double x, double y, double z, Level world) {
+	public StoneAttackProjectileEntity(EntityType<? extends StoneAttackProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public StoneAttackEntity(EntityType<? extends StoneAttackEntity> type, LivingEntity entity, Level world) {
+	public StoneAttackProjectileEntity(EntityType<? extends StoneAttackProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -51,12 +53,12 @@ public class StoneAttackEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return ItemStack.EMPTY;
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return new ItemStack(Blocks.STONE);
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
@@ -84,8 +86,12 @@ public class StoneAttackEntity extends AbstractArrow implements ItemSupplier {
 			this.discard();
 	}
 
-	public static StoneAttackEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		StoneAttackEntity entityarrow = new StoneAttackEntity(PowerModEntities.STONE_ATTACK.get(), entity, world);
+	public static StoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 0.8f, 4.5, 4);
+	}
+
+	public static StoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		StoneAttackProjectileEntity entityarrow = new StoneAttackProjectileEntity(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -96,8 +102,8 @@ public class StoneAttackEntity extends AbstractArrow implements ItemSupplier {
 		return entityarrow;
 	}
 
-	public static StoneAttackEntity shoot(LivingEntity entity, LivingEntity target) {
-		StoneAttackEntity entityarrow = new StoneAttackEntity(PowerModEntities.STONE_ATTACK.get(), entity, entity.level());
+	public static StoneAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		StoneAttackProjectileEntity entityarrow = new StoneAttackProjectileEntity(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

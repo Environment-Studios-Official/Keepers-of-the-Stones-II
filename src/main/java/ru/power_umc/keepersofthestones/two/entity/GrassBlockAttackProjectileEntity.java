@@ -1,7 +1,8 @@
 
 package ru.power_umc.keepersofthestones.two.entity;
 
-import ru.power_umc.keepersofthestones.two.procedures.CobblestoneAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -12,7 +13,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -26,20 +26,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class CobblestoneAttackEntity extends AbstractArrow implements ItemSupplier {
-	public CobblestoneAttackEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.COBBLESTONE_ATTACK.get(), world);
+public class GrassBlockAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.GRASS_BLOCK_ATTACK.get());
+
+	public GrassBlockAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), world);
 	}
 
-	public CobblestoneAttackEntity(EntityType<? extends CobblestoneAttackEntity> type, Level world) {
+	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public CobblestoneAttackEntity(EntityType<? extends CobblestoneAttackEntity> type, double x, double y, double z, Level world) {
+	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public CobblestoneAttackEntity(EntityType<? extends CobblestoneAttackEntity> type, LivingEntity entity, Level world) {
+	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -51,12 +53,12 @@ public class CobblestoneAttackEntity extends AbstractArrow implements ItemSuppli
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return ItemStack.EMPTY;
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return new ItemStack(Blocks.COBBLESTONE);
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
@@ -68,13 +70,13 @@ public class CobblestoneAttackEntity extends AbstractArrow implements ItemSuppli
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		CobblestoneAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		CobblestoneAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
@@ -84,8 +86,12 @@ public class CobblestoneAttackEntity extends AbstractArrow implements ItemSuppli
 			this.discard();
 	}
 
-	public static CobblestoneAttackEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		CobblestoneAttackEntity entityarrow = new CobblestoneAttackEntity(PowerModEntities.COBBLESTONE_ATTACK.get(), entity, world);
+	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 0.8f, 2.5, 3);
+	}
+
+	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -96,15 +102,15 @@ public class CobblestoneAttackEntity extends AbstractArrow implements ItemSuppli
 		return entityarrow;
 	}
 
-	public static CobblestoneAttackEntity shoot(LivingEntity entity, LivingEntity target) {
-		CobblestoneAttackEntity entityarrow = new CobblestoneAttackEntity(PowerModEntities.COBBLESTONE_ATTACK.get(), entity, entity.level());
+	public static GrassBlockAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.8f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(4.5);
-		entityarrow.setKnockback(4);
+		entityarrow.setBaseDamage(2.5);
+		entityarrow.setKnockback(3);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));

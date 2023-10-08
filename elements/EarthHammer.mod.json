@@ -1,13 +1,11 @@
 {
-  "_fv": 51,
+  "_fv": 52,
   "_type": "tool",
   "definition": {
     "toolType": "Axe",
     "renderType": 1,
-    "blockingRenderType": 0,
     "texture": "earth_hammer",
     "customModelName": "earth_hammer:default",
-    "blockingModelName": "Normal blocking",
     "name": "Earth Hammer",
     "specialInformation": {
       "fixedValue": []

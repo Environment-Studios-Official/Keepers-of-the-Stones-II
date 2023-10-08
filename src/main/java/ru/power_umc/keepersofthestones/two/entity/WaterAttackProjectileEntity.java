@@ -3,6 +3,7 @@ package ru.power_umc.keepersofthestones.two.entity;
 
 import ru.power_umc.keepersofthestones.two.procedures.WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.WaterAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -13,7 +14,6 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -27,20 +27,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class WaterAttackEntity extends AbstractArrow implements ItemSupplier {
-	public WaterAttackEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.WATER_ATTACK.get(), world);
+public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.WATER_ATTACK.get());
+
+	public WaterAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), world);
 	}
 
-	public WaterAttackEntity(EntityType<? extends WaterAttackEntity> type, Level world) {
+	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public WaterAttackEntity(EntityType<? extends WaterAttackEntity> type, double x, double y, double z, Level world) {
+	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public WaterAttackEntity(EntityType<? extends WaterAttackEntity> type, LivingEntity entity, Level world) {
+	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -52,12 +54,12 @@ public class WaterAttackEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return ItemStack.EMPTY;
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return new ItemStack(Blocks.COBBLED_DEEPSLATE);
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
@@ -85,8 +87,12 @@ public class WaterAttackEntity extends AbstractArrow implements ItemSupplier {
 			this.discard();
 	}
 
-	public static WaterAttackEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		WaterAttackEntity entityarrow = new WaterAttackEntity(PowerModEntities.WATER_ATTACK.get(), entity, world);
+	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 0.8f, 5, 5);
+	}
+
+	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -97,8 +103,8 @@ public class WaterAttackEntity extends AbstractArrow implements ItemSupplier {
 		return entityarrow;
 	}
 
-	public static WaterAttackEntity shoot(LivingEntity entity, LivingEntity target) {
-		WaterAttackEntity entityarrow = new WaterAttackEntity(PowerModEntities.WATER_ATTACK.get(), entity, entity.level());
+	public static WaterAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

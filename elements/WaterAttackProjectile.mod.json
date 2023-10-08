@@ -1,0 +1,25 @@
+{
+  "_fv": 52,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:WaterAttack"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "water_block_attack.png",
+    "onHitsBlock": {
+      "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost"
+    }
+  }
+}

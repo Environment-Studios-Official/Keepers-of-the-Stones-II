@@ -4,14 +4,14 @@ import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 import ru.power_umc.keepersofthestones.two.init.PowerModMobEffects;
 import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
-import ru.power_umc.keepersofthestones.two.entity.WaterAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.StoneAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.MagicFireballEntity;
-import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.EtherAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.CobblestoneAttackEntity;
-import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackEntity;
+import ru.power_umc.keepersofthestones.two.entity.WaterAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.StoneAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.MagicFireballProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.EtherAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.CobblestoneAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -162,7 +162,7 @@ public class SpecialAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+										AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -189,7 +189,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+											AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -216,7 +216,7 @@ public class SpecialAttackProcedure {
 									if (!projectileLevel.isClientSide()) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), level);
+												AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
 												entityToSpawn.setSilent(true);
@@ -518,7 +518,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new StoneAttackEntity(PowerModEntities.STONE_ATTACK.get(), level);
+											AbstractArrow entityToSpawn = new StoneAttackProjectileEntity(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -571,7 +571,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new DirtBlockAttackEntity(PowerModEntities.DIRT_BLOCK_ATTACK.get(), level);
+											AbstractArrow entityToSpawn = new DirtBlockAttackProjectileEntity(PowerModEntities.DIRT_BLOCK_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -624,7 +624,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new CobblestoneAttackEntity(PowerModEntities.COBBLESTONE_ATTACK.get(), level);
+											AbstractArrow entityToSpawn = new CobblestoneAttackProjectileEntity(PowerModEntities.COBBLESTONE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -677,7 +677,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new CobbledDeepslateAttackEntity(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), level);
+											AbstractArrow entityToSpawn = new CobbledDeepslateAttackProjectileEntity(PowerModEntities.COBBLED_DEEPSLATE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -730,7 +730,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new GrassBlockAttackEntity(PowerModEntities.GRASS_BLOCK_ATTACK.get(), level);
+											AbstractArrow entityToSpawn = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
@@ -924,7 +924,7 @@ public class SpecialAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new WaterAttackEntity(PowerModEntities.WATER_ATTACK.get(), level);
+										AbstractArrow entityToSpawn = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
@@ -1057,7 +1057,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1072,7 +1072,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1087,7 +1087,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1102,7 +1102,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1117,7 +1117,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1132,7 +1132,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1147,7 +1147,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
@@ -1162,7 +1162,7 @@ public class SpecialAttackProcedure {
 					if (world instanceof ServerLevel projectileLevel) {
 						Projectile _entityToSpawn = new Object() {
 							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new EtherAttackEntity(PowerModEntities.ETHER_ATTACK.get(), level);
+								AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);

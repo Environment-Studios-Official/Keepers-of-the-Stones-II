@@ -1,7 +1,7 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.EtherAttackEntity;
-import ru.power_umc.keepersofthestones.two.client.model.Modelether_bullet;
+import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class EtherAttackRenderer extends EntityRenderer<EtherAttackEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/ether_bullet.png");
-	private final Modelether_bullet model;
+public class CobbledDeepslateAttackProjectileRenderer extends EntityRenderer<CobbledDeepslateAttackProjectileEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobbled_deepslate_attack.png");
+	private final Modelblock_attack model;
 
-	public EtherAttackRenderer(EntityRendererProvider.Context context) {
+	public CobbledDeepslateAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelether_bullet(context.bakeLayer(Modelether_bullet.LAYER_LOCATION));
+		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(EtherAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(CobbledDeepslateAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class EtherAttackRenderer extends EntityRenderer<EtherAttackEntity> {
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(EtherAttackEntity entity) {
+	public ResourceLocation getTextureLocation(CobbledDeepslateAttackProjectileEntity entity) {
 		return texture;
 	}
 }

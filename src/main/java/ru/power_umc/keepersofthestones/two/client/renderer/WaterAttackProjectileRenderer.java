@@ -1,6 +1,6 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackEntity;
+import ru.power_umc.keepersofthestones.two.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraft.util.Mth;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class GrassBlockAttackRenderer extends EntityRenderer<GrassBlockAttackEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/grass_block_attack.png");
+public class WaterAttackProjectileRenderer extends EntityRenderer<WaterAttackProjectileEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/water_block_attack.png");
 	private final Modelblock_attack model;
 
-	public GrassBlockAttackRenderer(EntityRendererProvider.Context context) {
+	public WaterAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
 		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(GrassBlockAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(WaterAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class GrassBlockAttackRenderer extends EntityRenderer<GrassBlockAttackEnt
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(GrassBlockAttackEntity entity) {
+	public ResourceLocation getTextureLocation(WaterAttackProjectileEntity entity) {
 		return texture;
 	}
 }

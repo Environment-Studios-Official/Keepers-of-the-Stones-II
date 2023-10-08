@@ -1,5 +1,5 @@
 {
-  "_fv": 51,
+  "_fv": 52,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -55,6 +55,8 @@
     "onRightClickedInAir": {
       "name": "FireStoneUse"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

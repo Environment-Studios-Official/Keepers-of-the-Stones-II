@@ -1,0 +1,25 @@
+{
+  "_fv": 52,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:StoneAttack"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 4.5,
+    "knockback": 4,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "stone_attack.png",
+    "onHitsBlock": {
+      "name": "StoneAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "StoneAttackKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

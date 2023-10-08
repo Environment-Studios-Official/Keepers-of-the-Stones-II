@@ -1,6 +1,6 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackEntity;
+import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraft.util.Mth;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class CobbledDeepslateAttackRenderer extends EntityRenderer<CobbledDeepslateAttackEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobbled_deepslate_attack.png");
+public class GrassBlockAttackProjectileRenderer extends EntityRenderer<GrassBlockAttackProjectileEntity> {
+	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/grass_block_attack.png");
 	private final Modelblock_attack model;
 
-	public CobbledDeepslateAttackRenderer(EntityRendererProvider.Context context) {
+	public GrassBlockAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
 		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(CobbledDeepslateAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(GrassBlockAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class CobbledDeepslateAttackRenderer extends EntityRenderer<CobbledDeepsl
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(CobbledDeepslateAttackEntity entity) {
+	public ResourceLocation getTextureLocation(GrassBlockAttackProjectileEntity entity) {
 		return texture;
 	}
 }

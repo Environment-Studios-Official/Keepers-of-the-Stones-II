@@ -23,20 +23,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class MagicFireballEntity extends AbstractArrow implements ItemSupplier {
-	public MagicFireballEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.MAGIC_FIREBALL.get(), world);
+public class MagicFireballProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.MAGIC_FIREBALL.get());
+
+	public MagicFireballProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), world);
 	}
 
-	public MagicFireballEntity(EntityType<? extends MagicFireballEntity> type, Level world) {
+	public MagicFireballProjectileEntity(EntityType<? extends MagicFireballProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public MagicFireballEntity(EntityType<? extends MagicFireballEntity> type, double x, double y, double z, Level world) {
+	public MagicFireballProjectileEntity(EntityType<? extends MagicFireballProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public MagicFireballEntity(EntityType<? extends MagicFireballEntity> type, LivingEntity entity, Level world) {
+	public MagicFireballProjectileEntity(EntityType<? extends MagicFireballProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -48,12 +50,12 @@ public class MagicFireballEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return new ItemStack(PowerModItems.MAGIC_FIREBALL.get());
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return ItemStack.EMPTY;
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
@@ -69,8 +71,12 @@ public class MagicFireballEntity extends AbstractArrow implements ItemSupplier {
 			this.discard();
 	}
 
-	public static MagicFireballEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		MagicFireballEntity entityarrow = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), entity, world);
+	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 1f, 3, 3);
+	}
+
+	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -82,8 +88,8 @@ public class MagicFireballEntity extends AbstractArrow implements ItemSupplier {
 		return entityarrow;
 	}
 
-	public static MagicFireballEntity shoot(LivingEntity entity, LivingEntity target) {
-		MagicFireballEntity entityarrow = new MagicFireballEntity(PowerModEntities.MAGIC_FIREBALL.get(), entity, entity.level());
+	public static MagicFireballProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

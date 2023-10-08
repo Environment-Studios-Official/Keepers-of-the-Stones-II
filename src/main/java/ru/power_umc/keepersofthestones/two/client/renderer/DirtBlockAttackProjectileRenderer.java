@@ -1,6 +1,6 @@
 package ru.power_umc.keepersofthestones.two.client.renderer;
 
-import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackEntity;
+import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraft.util.Mth;
@@ -15,17 +15,17 @@ import com.mojang.math.Axis;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-public class DirtBlockAttackRenderer extends EntityRenderer<DirtBlockAttackEntity> {
+public class DirtBlockAttackProjectileRenderer extends EntityRenderer<DirtBlockAttackProjectileEntity> {
 	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/dirt_attack.png");
 	private final Modelblock_attack model;
 
-	public DirtBlockAttackRenderer(EntityRendererProvider.Context context) {
+	public DirtBlockAttackProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
 		model = new Modelblock_attack(context.bakeLayer(Modelblock_attack.LAYER_LOCATION));
 	}
 
 	@Override
-	public void render(DirtBlockAttackEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
+	public void render(DirtBlockAttackProjectileEntity entityIn, float entityYaw, float partialTicks, PoseStack poseStack, MultiBufferSource bufferIn, int packedLightIn) {
 		VertexConsumer vb = bufferIn.getBuffer(RenderType.entityCutout(this.getTextureLocation(entityIn)));
 		poseStack.pushPose();
 		poseStack.mulPose(Axis.YP.rotationDegrees(Mth.lerp(partialTicks, entityIn.yRotO, entityIn.getYRot()) - 90));
@@ -36,7 +36,7 @@ public class DirtBlockAttackRenderer extends EntityRenderer<DirtBlockAttackEntit
 	}
 
 	@Override
-	public ResourceLocation getTextureLocation(DirtBlockAttackEntity entity) {
+	public ResourceLocation getTextureLocation(DirtBlockAttackProjectileEntity entity) {
 		return texture;
 	}
 }

@@ -1,44 +1,43 @@
 {
-  "_fv": 51,
-  "_type": "rangeditem",
+  "_fv": 52,
+  "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "empty_texture",
-    "customModelName": "Normal",
+    "customModelName": "Ranged item",
+    "customProperties": {},
+    "states": [],
     "name": "Cobbled Deepslate Attack",
-    "specialInformation": {
-      "fixedValue": []
-    },
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "No creative tab entry"
     },
     "stackSize": 1,
-    "ammoItem": {
-      "value": "Blocks.COBBLED_DEEPSLATE"
-    },
-    "shootConstantly": false,
-    "usageCount": 100,
-    "actionSound": {
-      "value": "entity.arrow.shoot"
-    },
-    "animation": "block",
+    "enchantability": 0,
+    "useDuration": 72000,
+    "toolType": 0.0,
+    "damageCount": 100,
+    "destroyAnyBlock": false,
+    "immuneToFire": false,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
-    "bulletPower": 0.8,
-    "bulletDamage": 5.0,
-    "bulletKnockback": 5,
-    "bulletParticles": false,
-    "bulletIgnitesFire": false,
-    "bulletItemTexture": {
-      "value": ""
+    "specialInformation": {
+      "fixedValue": []
     },
-    "bulletModel": "Modelblock_attack",
-    "customBulletModelTexture": "cobbled_deepslate_attack.png",
-    "onBulletHitsBlock": {
-      "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok"
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "enableRanged": true,
+    "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:CobbledDeepslateAttackProjectile"
     },
-    "onBulletHitsEntity": {
-      "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok"
-    }
+    "isFood": false,
+    "nutritionalValue": 0,
+    "saturation": 0.30000001192092896,
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "block"
   }
 }

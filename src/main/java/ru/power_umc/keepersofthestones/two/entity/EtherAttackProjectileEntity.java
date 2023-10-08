@@ -1,7 +1,8 @@
 
 package ru.power_umc.keepersofthestones.two.entity;
 
-import ru.power_umc.keepersofthestones.two.procedures.CobbledDeepslateAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.EtherAttackKazhdyiTikPriPoliotieSnariadaProcedure;
+import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -10,9 +11,6 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
-import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.BlockHitResult;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -26,20 +24,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class CobbledDeepslateAttackEntity extends AbstractArrow implements ItemSupplier {
-	public CobbledDeepslateAttackEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), world);
+public class EtherAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.ETHER_ATTACK.get());
+
+	public EtherAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), world);
 	}
 
-	public CobbledDeepslateAttackEntity(EntityType<? extends CobbledDeepslateAttackEntity> type, Level world) {
+	public EtherAttackProjectileEntity(EntityType<? extends EtherAttackProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public CobbledDeepslateAttackEntity(EntityType<? extends CobbledDeepslateAttackEntity> type, double x, double y, double z, Level world) {
+	public EtherAttackProjectileEntity(EntityType<? extends EtherAttackProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public CobbledDeepslateAttackEntity(EntityType<? extends CobbledDeepslateAttackEntity> type, LivingEntity entity, Level world) {
+	public EtherAttackProjectileEntity(EntityType<? extends EtherAttackProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -51,12 +51,12 @@ public class CobbledDeepslateAttackEntity extends AbstractArrow implements ItemS
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
-		return ItemStack.EMPTY;
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
 	protected ItemStack getPickupItem() {
-		return new ItemStack(Blocks.COBBLED_DEEPSLATE);
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
@@ -66,26 +66,19 @@ public class CobbledDeepslateAttackEntity extends AbstractArrow implements ItemS
 	}
 
 	@Override
-	public void onHitEntity(EntityHitResult entityHitResult) {
-		super.onHitEntity(entityHitResult);
-		CobbledDeepslateAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
-	}
-
-	@Override
-	public void onHitBlock(BlockHitResult blockHitResult) {
-		super.onHitBlock(blockHitResult);
-		CobbledDeepslateAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
-	}
-
-	@Override
 	public void tick() {
 		super.tick();
+		EtherAttackKazhdyiTikPriPoliotieSnariadaProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 		if (this.inGround)
 			this.discard();
 	}
 
-	public static CobbledDeepslateAttackEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		CobbledDeepslateAttackEntity entityarrow = new CobbledDeepslateAttackEntity(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), entity, world);
+	public static EtherAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 1f, 9, 2);
+	}
+
+	public static EtherAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		EtherAttackProjectileEntity entityarrow = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -96,15 +89,15 @@ public class CobbledDeepslateAttackEntity extends AbstractArrow implements ItemS
 		return entityarrow;
 	}
 
-	public static CobbledDeepslateAttackEntity shoot(LivingEntity entity, LivingEntity target) {
-		CobbledDeepslateAttackEntity entityarrow = new CobbledDeepslateAttackEntity(PowerModEntities.COBBLED_DEEPSLATE_ATTACK.get(), entity, entity.level());
+	public static EtherAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		EtherAttackProjectileEntity entityarrow = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.8f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(5);
-		entityarrow.setKnockback(5);
+		entityarrow.setBaseDamage(9);
+		entityarrow.setKnockback(2);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));

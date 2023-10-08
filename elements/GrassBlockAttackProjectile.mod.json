@@ -1,0 +1,25 @@
+{
+  "_fv": 52,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:GrassBlockAttack"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 2.5,
+    "knockback": 3,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "grass_block_attack.png",
+    "onHitsBlock": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}
