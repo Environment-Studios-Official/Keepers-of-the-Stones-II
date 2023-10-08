@@ -72,11 +72,11 @@ jobs:
               "thumbnail": {
                 "url": "https://sun9-26.userapi.com/impg/tONr8xsZxwJhkVbeV9nLh6WJTT9JL5yeGTzw0A/khlieuPeAJk.jpg?size=1920x1080&quality=96&sign=1c071ed8ac91a735a11fb8079707b499&type=album"
               },
-              "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones",
+              "url": "https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii",
               "fields": [
                   {
                     "name": "Download now:",
-                    "value": "[<:curseforge:805066577871110196> CurseForge](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones)\n[<:modrinth:805066578215043092> Modrinth](https://modrinth.com/mod/keepers-of-the-stones)\n[<:github:805066578164580392> GitHub](https://github.com/Environment-Studios-Official/Keepers-of-the-Stones)",
+                    "value": "[<:curseforge:805066577871110196> CurseForge](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones-ii)\n[<:modrinth:805066578215043092> Modrinth](https://modrinth.com/mod/keepers-of-the-stones-2)\n[<:github:805066578164580392> GitHub](https://github.com/Environment-Studios-Official/Keepers-of-the-Stones-2)",
                     "inline": true
                   }
               ],
