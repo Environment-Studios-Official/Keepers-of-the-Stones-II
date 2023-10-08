@@ -5,6 +5,6 @@
     "commandName": "pw",
     "type": "STANDARD",
     "permissionLevel": "4",
-    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">power_scale</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">count</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">PowerScaleSet</field></block></statement></block></statement></block></next></block></xml>"
+    "argsxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"args_start\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"literal\"><field name=\"name\">points</field><statement name=\"args\"><block type=\"literal\"><field name=\"name\">set</field><statement name=\"args\"><block type=\"entity\"><field name=\"name\">player</field><field name=\"type\">players</field><statement name=\"args\"><block type=\"number_default\"><field name=\"name\">count</field><statement name=\"args\"><block type=\"call_procedure\"><field name=\"procedure\">PowerScaleSet</field></block></statement></block></statement></block></statement></block></statement></block></next></block></xml>"
   }
 }

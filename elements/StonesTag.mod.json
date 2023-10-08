@@ -18,6 +18,12 @@
       },
       {
         "value": "CUSTOM:EtherStone"
+      },
+      {
+        "value": "CUSTOM:IceStone"
+      },
+      {
+        "value": "CUSTOM:LightningStone"
       }
     ],
     "blocks": [],

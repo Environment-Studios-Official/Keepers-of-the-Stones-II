@@ -3,7 +3,9 @@
   "values": [
     "power:fire_stone",
     "power:ether_stone",
+    "power:ice_stone",
     "power:air_stone",
+    "power:lightning_stone",
     "power:earth_stone",
     "power:water_stone"
   ]

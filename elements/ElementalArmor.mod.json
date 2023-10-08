@@ -63,6 +63,30 @@
       },
       {
         "value": "CUSTOM:EtherArmor.boots"
+      },
+      {
+        "value": "CUSTOM:IceArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:IceArmor.body"
+      },
+      {
+        "value": "CUSTOM:IceArmor.legs"
+      },
+      {
+        "value": "CUSTOM:IceArmor.boots"
+      },
+      {
+        "value": "CUSTOM:LightningArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:LightningArmor.body"
+      },
+      {
+        "value": "CUSTOM:LightningArmor.legs"
+      },
+      {
+        "value": "CUSTOM:LightningArmor.boots"
       }
     ],
     "blocks": [],
