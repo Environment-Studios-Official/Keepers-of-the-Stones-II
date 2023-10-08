@@ -36,51 +36,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack17"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack18"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack19"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 136,
-          "y": 110
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_wheel_button_1",
@@ -126,6 +81,84 @@
           },
           "x": 282,
           "y": 178
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ethereal_ray",
+          "image": "ethereal_ray.png",
+          "hoveredImage": "ethereal_ray_highlight.png",
+          "onClick": {
+            "name": "Attack17"
+          },
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ethereal_volley",
+          "image": "ethereal_volley.png",
+          "hoveredImage": "ethereal_volley_highlight.png",
+          "onClick": {
+            "name": "Attack18"
+          },
+          "x": 251,
+          "y": 97
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ethereal_aura",
+          "image": "ethereal_aura.png",
+          "hoveredImage": "ethereal_aura_highlight.png",
+          "onClick": {
+            "name": "Attack19"
+          },
+          "x": 129,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ethereal_ray_uses_10_power_poin",
+          "text": {
+            "fixedValue": "Ethereal ray, uses 10 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ethereal_volley_uses_30_power_p",
+          "text": {
+            "fixedValue": "Ethereal volley, uses 30 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ethereal_aura_uses_80_power_poi",
+          "text": {
+            "fixedValue": "Ethereal aura, uses 80 power points"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 138,
+          "y": 108
         }
       }
     ],

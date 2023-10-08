@@ -69,27 +69,27 @@ public class WheelAbilitiesEtherButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack17Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack18Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack19Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack17Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			Attack18Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack19Procedure.execute(entity);
 		}
 	}
 
