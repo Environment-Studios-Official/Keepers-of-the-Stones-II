@@ -1,0 +1,47 @@
+{
+  "_fv": 51,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "empty_texture",
+    "customModelName": "Normal",
+    "name": "Water Attack",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "Blocks.COBBLED_DEEPSLATE"
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "animation": "block",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.8,
+    "bulletDamage": 5.0,
+    "bulletKnockback": 5,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelblock_attack",
+    "customBulletModelTexture": "water_block_attack.png",
+    "onBulletHitsBlock": {
+      "name": "WaterAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onBulletHitsEntity": {
+      "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost"
+    }
+  }
+}

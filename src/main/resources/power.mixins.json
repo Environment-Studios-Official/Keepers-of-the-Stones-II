@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "ru.power_umc.keepersofthestones.two.mixin",
+  "compatibilityLevel": "JAVA_8",
+  "refmap": "power.refmap.json",
+  "mixins": [
+  	"MilkBucketItemMixin"
+  ],
+  "client": [
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

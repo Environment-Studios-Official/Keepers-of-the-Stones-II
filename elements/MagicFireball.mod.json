@@ -1,0 +1,38 @@
+{
+  "_fv": 51,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "magic_fireball",
+    "customModelName": "Normal",
+    "name": "Magic Fireball",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": ""
+    },
+    "shootConstantly": false,
+    "usageCount": 0,
+    "actionSound": {
+      "value": "item.firecharge.use"
+    },
+    "animation": "bow",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 1.0,
+    "bulletDamage": 3.0,
+    "bulletKnockback": 3,
+    "bulletParticles": false,
+    "bulletIgnitesFire": true,
+    "bulletItemTexture": {
+      "value": "CUSTOM:MagicFireball"
+    },
+    "bulletModel": "Default",
+    "customBulletModelTexture": ""
+  }
+}

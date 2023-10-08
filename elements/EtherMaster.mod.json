@@ -1,0 +1,26 @@
+{
+  "_fv": 51,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Ether",
+    "icon": "ether_master.png",
+    "color": {
+      "value": -6710785,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "EtherMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "EtherMasterEnd"
+    }
+  }
+}

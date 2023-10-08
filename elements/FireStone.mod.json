@@ -1,16 +1,33 @@
 {
-  "_fv": 47,
+  "_fv": 51,
   "_type": "item",
   "definition": {
     "renderType": 0,
     "texture": "fire_stone",
     "customModelName": "Normal",
     "customProperties": {},
-    "states": [],
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "recharging_stone",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": 0.0,
+              "max": 1.0,
+              "name": "cooldown",
+              "type": "number"
+            },
+            "value": 0.01
+          }
+        ]
+      }
+    ],
     "name": "Fire Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Stones"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -27,12 +44,17 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": ""
+      "fixedValue": []
     },
-    "hasGlow": false,
+    "glowCondition": {
+      "fixedValue": false
+    },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "FireStoneUse"
+    },
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,

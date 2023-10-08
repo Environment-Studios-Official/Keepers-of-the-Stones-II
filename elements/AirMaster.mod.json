@@ -1,0 +1,26 @@
+{
+  "_fv": 51,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Air",
+    "icon": "air_master.png",
+    "color": {
+      "value": -3342337,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "AirMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "AirMasterEnd"
+    }
+  }
+}

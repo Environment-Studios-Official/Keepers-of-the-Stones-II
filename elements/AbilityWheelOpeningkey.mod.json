@@ -1,0 +1,12 @@
+{
+  "_fv": 51,
+  "_type": "keybind",
+  "definition": {
+    "triggerKey": "Y",
+    "keyBindingName": "Ability wheel opening key",
+    "keyBindingCategoryKey": "power2",
+    "onKeyPressed": {
+      "name": "OpenWheelOne"
+    }
+  }
+}

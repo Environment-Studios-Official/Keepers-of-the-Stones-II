@@ -1,0 +1,44 @@
+{
+  "_fv": 51,
+  "_type": "rangeditem",
+  "definition": {
+    "renderType": 0,
+    "texture": "empty_texture",
+    "customModelName": "Normal",
+    "name": "Grass Block Attack",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "ammoItem": {
+      "value": "Blocks.GRASS"
+    },
+    "shootConstantly": false,
+    "usageCount": 100,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "animation": "block",
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "bulletPower": 0.8,
+    "bulletDamage": 2.5,
+    "bulletKnockback": 3,
+    "bulletParticles": false,
+    "bulletIgnitesFire": false,
+    "bulletItemTexture": {
+      "value": ""
+    },
+    "bulletModel": "Modelblock_attack",
+    "customBulletModelTexture": "grass_block_attack.png",
+    "onBulletHitsBlock": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onBulletHitsEntity": {
+      "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

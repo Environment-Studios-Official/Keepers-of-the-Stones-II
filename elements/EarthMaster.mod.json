@@ -1,0 +1,26 @@
+{
+  "_fv": 51,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Earth",
+    "icon": "earth_master.png",
+    "color": {
+      "value": -10079488,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "EarthMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "EarthMasterEnd"
+    }
+  }
+}

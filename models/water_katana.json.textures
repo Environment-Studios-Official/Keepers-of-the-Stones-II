@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "water_katana"
+      },
+      "name": "default"
+    }
+  }
+}

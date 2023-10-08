@@ -1,0 +1,11 @@
+{
+  "_fv": 51,
+  "_type": "tab",
+  "definition": {
+    "name": "Stones",
+    "icon": {
+      "value": "CUSTOM:FireStone"
+    },
+    "showSearch": false
+  }
+}

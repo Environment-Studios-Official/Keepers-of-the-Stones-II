@@ -1,0 +1,26 @@
+{
+  "_fv": 51,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Water",
+    "icon": "water_master.png",
+    "color": {
+      "value": -16750900,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "WaterMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "WaterMasterEnd"
+    }
+  }
+}
