@@ -3053,36 +3053,6 @@
       "value": "false"
     },
     {
-      "name": "fire_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "air_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "earth_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "water_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
-      "name": "ether_stone",
-      "type": "logic",
-      "scope": "map",
-      "value": "false"
-    },
-    {
       "name": "selected",
       "type": "logic",
       "scope": "player_persistent",
@@ -3155,10 +3125,10 @@
       "value": "false"
     },
     {
-      "name": "ice_stone",
-      "type": "logic",
+      "name": "permanent_element",
+      "type": "number",
       "scope": "map",
-      "value": "false"
+      "value": "0"
     }
   ],
   "sound_elements": [
