@@ -2915,6 +2915,134 @@
         ]
       },
       "path": "~/Elements/Ether"
+    },
+    {
+      "name": "IceStone",
+      "type": "item",
+      "sortid": 155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/IceStoneItem.java",
+          "src/main/resources/assets/power/models/item/ice_stone_0.json",
+          "src/main/resources/assets/power/models/item/ice_stone.json"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceMaster",
+      "type": "potioneffect",
+      "sortid": 156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/IceMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmor",
+      "type": "armor",
+      "sortid": 154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/ice_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/IceArmorItem.java",
+          "src/main/resources/assets/power/models/item/ice_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/ice_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/ice_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 158,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
     }
   ],
   "variable_elements": [
@@ -2927,31 +3055,31 @@
     {
       "name": "fire_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "air_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "earth_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "water_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "ether_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -3025,6 +3153,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ice_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -3058,6 +3192,7 @@
       "key.categories.power2": "Хранители Камней II",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
+      "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item_group.power.boxes": "Шкатулки",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
@@ -3072,11 +3207,13 @@
       "item_group.power.stones": "Камни",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
       "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
+      "item.power.ice_stone": "Камень льда",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
       "item.power.dirt_block_attack": "Dirt Attack",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
+      "item.power.ice_armor_boots": "Ботинки мастера льда",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.water_attack": "Water Attack",
@@ -3087,12 +3224,14 @@
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 единиц силы",
+      "item.power.ice_armor_helmet": "Шлем мастера льда",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "item.power.grass_block_attack": "Grass Block Attack",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
       "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Камень огня",
+      "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
@@ -3111,6 +3250,7 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "effect.power.water_master": "Мастер воды",
       "item.power.stone_attack": "Stone Attack",
+      "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.basic_box": "Шкатулка",
@@ -3132,12 +3272,13 @@
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
-      "key.categories.power2": "Keepers of the Stones II",
       "item.power.earth_hammer": "Earth Hammer",
+      "key.categories.power2": "Keepers of the Stones II",
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item.power.ice_armor_chestplate": "Ice Chestplate",
       "item_group.power.boxes": "Boxes",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "gui.power.wheel_abilities_water.button_2": "2",
       "gui.power.wheel_abilities_water.button_1": "1",
@@ -3150,11 +3291,13 @@
       "item_group.power.stones": "Stones",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
       "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
+      "item.power.ice_stone": "Ice Stone",
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
       "item.power.dirt_block_attack": "Dirt Attack",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
+      "item.power.ice_armor_boots": "Ice Boots",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.water_attack": "Water Attack",
@@ -3165,12 +3308,14 @@
       "item.power.water_armor_helmet": "Water Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
+      "item.power.ice_armor_helmet": "Ice Helmet",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "item.power.grass_block_attack": "Grass Block Attack",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
       "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Fire Stone",
+      "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
@@ -3189,6 +3334,7 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "effect.power.water_master": "Master of Water",
       "item.power.stone_attack": "Stone Attack",
+      "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.basic_box": "Box",
@@ -3227,6 +3373,38 @@
           },
           {
             "name": "Ether",
+            "children": []
+          },
+          {
+            "name": "Ice",
+            "children": []
+          },
+          {
+            "name": "Lightning",
+            "children": []
+          },
+          {
+            "name": "Sound",
+            "children": []
+          },
+          {
+            "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Lava",
+            "children": []
+          },
+          {
+            "name": "Rain",
+            "children": []
+          },
+          {
+            "name": "Tornado",
+            "children": []
+          },
+          {
+            "name": "Ocean",
             "children": []
           }
         ]
