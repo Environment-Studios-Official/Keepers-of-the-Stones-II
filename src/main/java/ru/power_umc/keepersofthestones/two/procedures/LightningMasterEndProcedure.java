@@ -55,7 +55,9 @@ public class LightningMasterEndProcedure {
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
-		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.LIGHTNING_STONE.get(), 6000);
+		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+			if (entity instanceof Player _player)
+				_player.getCooldowns().addCooldown(PowerModItems.LIGHTNING_STONE.get(), 6000);
+		}
 	}
 }
