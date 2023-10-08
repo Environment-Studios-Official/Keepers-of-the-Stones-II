@@ -1,0 +1,26 @@
+{
+  "_fv": 51,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Lightning",
+    "icon": "lightning_master.png",
+    "color": {
+      "value": -3407668,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "LightningMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "LightningMasterEnd"
+    }
+  }
+}

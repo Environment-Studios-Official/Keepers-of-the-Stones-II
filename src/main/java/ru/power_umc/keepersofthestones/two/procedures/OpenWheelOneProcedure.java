@@ -1,6 +1,7 @@
 package ru.power_umc.keepersofthestones.two.procedures;
 
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesWaterMenu;
+import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesLightningMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesIceMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesFireMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEtherMenu;
@@ -125,6 +126,23 @@ public class OpenWheelOneProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesIceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 7) {
+			{
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesLightning");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesLightningMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

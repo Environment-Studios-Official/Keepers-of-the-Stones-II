@@ -10,6 +10,8 @@ import ru.power_umc.keepersofthestones.two.item.WaterAttackItem;
 import ru.power_umc.keepersofthestones.two.item.WaterArmorItem;
 import ru.power_umc.keepersofthestones.two.item.StoneAttackItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
+import ru.power_umc.keepersofthestones.two.item.LightningStoneItem;
+import ru.power_umc.keepersofthestones.two.item.LightningArmorItem;
 import ru.power_umc.keepersofthestones.two.item.IceStoneItem;
 import ru.power_umc.keepersofthestones.two.item.IceArmorItem;
 import ru.power_umc.keepersofthestones.two.item.GrassBlockAttackItem;
@@ -87,6 +89,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ICE_ARMOR_LEGGINGS = REGISTRY.register("ice_armor_leggings", () -> new IceArmorItem.Leggings());
 	public static final RegistryObject<Item> ICE_ARMOR_BOOTS = REGISTRY.register("ice_armor_boots", () -> new IceArmorItem.Boots());
 	public static final RegistryObject<Item> ICE_STONE = REGISTRY.register("ice_stone", () -> new IceStoneItem());
+	public static final RegistryObject<Item> LIGHTNING_ARMOR_HELMET = REGISTRY.register("lightning_armor_helmet", () -> new LightningArmorItem.Helmet());
+	public static final RegistryObject<Item> LIGHTNING_ARMOR_CHESTPLATE = REGISTRY.register("lightning_armor_chestplate", () -> new LightningArmorItem.Chestplate());
+	public static final RegistryObject<Item> LIGHTNING_ARMOR_LEGGINGS = REGISTRY.register("lightning_armor_leggings", () -> new LightningArmorItem.Leggings());
+	public static final RegistryObject<Item> LIGHTNING_ARMOR_BOOTS = REGISTRY.register("lightning_armor_boots", () -> new LightningArmorItem.Boots());
+	public static final RegistryObject<Item> LIGHTNING_STONE = REGISTRY.register("lightning_stone", () -> new LightningStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

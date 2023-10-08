@@ -3247,6 +3247,338 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "LightningStone",
+      "type": "item",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lightning_stone.json",
+          "src/main/resources/assets/power/models/item/lightning_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LightningStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMaster",
+      "type": "potioneffect",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/LightningMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmor",
+      "type": "armor",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lightning_armor_boots.json",
+          "src/main/resources/assets/power/models/item/lightning_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LightningArmorItem.java",
+          "src/main/resources/assets/power/models/item/lightning_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/lightning_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "WheelAbilitiesLightning",
+      "type": "gui",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesLightningScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesLightningMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesLightningButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack25",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_25",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack25Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack26",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_26",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack26Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack27",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_27",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack27Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack28",
+      "type": "procedure",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_28",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack28Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "LightningStoneUse",
+      "type": "procedure",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMasterStart",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMasterEnd",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
     }
   ],
   "variable_elements": [
@@ -3429,181 +3761,199 @@
     "ru_ru": {
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.ether_stone": "Камень эфира",
-      "item.power.water_armor_boots": "Ботинки мастера воды",
-      "item.power.ether_glaive": "Эфирная глефа",
-      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
-      "key.power.detransformation_key": "Клавиша детрансформации",
-      "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
-      "key.categories.power2": "Хранители Камней II",
       "item.power.earth_hammer": "Земляной молот",
-      "item.power.air_armor_helmet": "Шлем мастера воздуха",
-      "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
+      "key.categories.power2": "Хранители Камней II",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
-      "item_group.power.boxes": "Шкатулки",
-      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
-      "gui.power.wheel_abilities_water.button_2": "2",
-      "gui.power.wheel_abilities_water.button_1": "1",
-      "gui.power.wheel_abilities_water.button_3": "3",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
-      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "item.power.lightning_stone": "Камень молнии",
       "item.power.air_rapier": "Воздушная рапира",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "item_group.power.stones": "Камни",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
+      "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
+      "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
-      "item.power.ice_stone": "Камень льда",
-      "item.power.ether_armor_boots": "Ботинки мастера эфира",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
       "item.power.dirt_block_attack": "Dirt Attack",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
-      "item.power.ice_armor_boots": "Ботинки мастера льда",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
-      "item.power.water_armor_leggings": "Поножи мастера воды",
+      "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "item.power.water_attack": "Water Attack",
       "item.power.fire_sword": "Меч огня",
-      "effect.power.ether_master": "Мастер эфира",
       "item.power.cobblestone_attack": "Cobblestone Attack",
-      "item.power.fire_armor_boots": "Ботинки мастера огня",
-      "item.power.water_armor_helmet": "Шлем мастера воды",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 единиц силы",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
-      "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
-      "gui.power.wheel_abilities_ether.button_3": "3",
-      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
-      "gui.power.wheel_abilities_ether.button_1": "1",
-      "item.power.fire_stone": "Камень огня",
       "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
+      "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20 очков силы",
+      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45 очков силы",
+      "effect.power.water_master": "Мастер воды",
+      "item.power.stone_attack": "Stone Attack",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
+      "item.power.magic_fireball": "Волшебный файрболл",
+      "block.power.basic_box": "Шкатулка",
+      "item.power.earth_stone": "Камень земли",
+      "item.power.fire_armor_helmet": "Шлем мастера огня",
+      "gui.power.wheel_abilities_ice.button_3": "3",
+      "effect.power.air_master": "Мастер воздуха",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.water_armor_boots": "Ботинки мастера воды",
+      "item.power.ether_glaive": "Эфирная глефа",
+      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
+      "key.power.detransformation_key": "Клавиша детрансформации",
+      "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
+      "item.power.air_armor_helmet": "Шлем мастера воздуха",
+      "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
+      "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item_group.power.boxes": "Шкатулки",
+      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
+      "item.power.ice_stone": "Камень льда",
+      "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
+      "gui.power.wheel_abilities_lightning.button_3": "3",
+      "item.power.ice_armor_boots": "Ботинки мастера льда",
+      "gui.power.wheel_abilities_lightning.button_2": "2",
+      "item.power.water_armor_leggings": "Поножи мастера воды",
+      "effect.power.ether_master": "Мастер эфира",
+      "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "item.power.water_armor_helmet": "Шлем мастера воды",
+      "item.power.lightning_armor_boots": "Ботинки мастера молнии",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "item.power.grass_block_attack": "Grass Block Attack",
+      "gui.power.wheel_abilities_ether.button_3": "3",
+      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
+      "gui.power.wheel_abilities_ether.button_1": "1",
+      "item.power.fire_stone": "Камень огня",
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Мастер земли",
       "gui.power.wheel_abilities_air.button_2": "2",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40 очков силы",
       "gui.power.wheel_abilities_air.button_1": "1",
-      "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20 очков силы",
       "item.power.basic_box.tooltip": "Базовая",
       "effect.power.fire_master": "Мастер огня",
-      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45 очков силы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
-      "effect.power.water_master": "Мастер воды",
-      "item.power.stone_attack": "Stone Attack",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
-      "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
-      "block.power.basic_box": "Шкатулка",
-      "item.power.earth_stone": "Камень земли",
-      "item.power.fire_armor_helmet": "Шлем мастера огня",
-      "gui.power.wheel_abilities_ice.button_3": "3",
+      "effect.power.lightning_master": "Мастер молнии",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80 очков силы",
       "item.power.air_stone": "Камень воздуха",
-      "effect.power.air_master": "Мастер воздуха",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.water_stone": "Камень воды",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
-      "item.power.earth_shield": "Earth Shield",
       "item.power.ether_attack": "Cobblestone Attack"
     },
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.ether_stone": "Ether Stone",
-      "item.power.water_armor_boots": "Water Boots",
-      "item.power.ether_glaive": "Ether Glaive",
-      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
-      "key.power.detransformation_key": "Detransformation key",
-      "item.power.fire_armor_chestplate": "Fire Chestplate",
       "key.categories.power2": "Keepers of the Stones II",
       "item.power.earth_hammer": "Earth Hammer",
-      "item.power.air_armor_helmet": "Air Helmet",
-      "item.power.ether_armor_chestplate": "Ether Chestplate",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
-      "item_group.power.boxes": "Boxes",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
-      "gui.power.wheel_abilities_water.button_2": "2",
-      "gui.power.wheel_abilities_water.button_1": "1",
-      "gui.power.wheel_abilities_water.button_3": "3",
       "item.power.water_armor_chestplate": "Water Chestplate",
-      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "item.power.lightning_stone": "Lightning Stone",
       "item.power.air_rapier": "Air Rapier",
       "key.power.ability_using_key": "Ability using key",
       "item.power.air_armor_leggings": "Air Leggings",
       "item_group.power.stones": "Stones",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
+      "item.power.lightning_armor_chestplate": "Lightning Chestplate",
+      "item.power.lightning_armor_helmet": "Lightning Helmet",
       "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
-      "item.power.ice_stone": "Ice Stone",
-      "item.power.ether_armor_boots": "Ether Boots",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
       "item.power.dirt_block_attack": "Dirt Attack",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
-      "item.power.ice_armor_boots": "Ice Boots",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
-      "item.power.water_armor_leggings": "Water Leggings",
+      "item.power.lightning_armor_leggings": "Lightning Leggings",
       "item.power.water_attack": "Water Attack",
       "item.power.fire_sword": "Fire Sword",
-      "effect.power.ether_master": "Master of the Ether",
       "item.power.cobblestone_attack": "Cobblestone Attack",
-      "item.power.fire_armor_boots": "Fire Boots",
-      "item.power.water_armor_helmet": "Water Helmet",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_helmet": "Ice Helmet",
-      "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
-      "gui.power.wheel_abilities_ether.button_3": "3",
-      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
-      "gui.power.wheel_abilities_ether.button_1": "1",
-      "item.power.fire_stone": "Fire Stone",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "item.power.ether_armor_leggings": "Ether Leggings",
+      "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20 power points",
+      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45 power points",
+      "effect.power.water_master": "Master of Water",
+      "item.power.stone_attack": "Stone Attack",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
+      "item.power.magic_fireball": "Magic Fireball",
+      "block.power.basic_box": "Box",
+      "item.power.earth_stone": "Earth Stone",
+      "item.power.fire_armor_helmet": "Fire Helmet",
+      "gui.power.wheel_abilities_ice.button_3": "3",
+      "effect.power.air_master": "Master of the Air",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.water_armor_boots": "Water Boots",
+      "item.power.ether_glaive": "Ether Glaive",
+      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
+      "key.power.detransformation_key": "Detransformation key",
+      "item.power.fire_armor_chestplate": "Fire Chestplate",
+      "item.power.air_armor_helmet": "Air Helmet",
+      "item.power.ether_armor_chestplate": "Ether Chestplate",
+      "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item_group.power.boxes": "Boxes",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
+      "item.power.ice_stone": "Ice Stone",
+      "item.power.ether_armor_boots": "Ether Boots",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
+      "gui.power.wheel_abilities_lightning.button_3": "3",
+      "item.power.ice_armor_boots": "Ice Boots",
+      "gui.power.wheel_abilities_lightning.button_2": "2",
+      "item.power.water_armor_leggings": "Water Leggings",
+      "effect.power.ether_master": "Master of the Ether",
+      "item.power.fire_armor_boots": "Fire Boots",
+      "item.power.water_armor_helmet": "Water Helmet",
+      "item.power.lightning_armor_boots": "Lightning Boots",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "item.power.grass_block_attack": "Grass Block Attack",
+      "gui.power.wheel_abilities_ether.button_3": "3",
+      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
+      "gui.power.wheel_abilities_ether.button_1": "1",
+      "item.power.fire_stone": "Fire Stone",
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Master of the Earth",
       "gui.power.wheel_abilities_air.button_2": "2",
       "item.power.ether_armor_helmet": "Ether Helmet",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40 power points",
       "gui.power.wheel_abilities_air.button_1": "1",
-      "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20 power points",
       "item.power.basic_box.tooltip": "Basic",
       "effect.power.fire_master": "Master of Fire",
-      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45 power points",
       "item.power.earth_armor_leggings": "Earth Leggings",
-      "effect.power.water_master": "Master of Water",
-      "item.power.stone_attack": "Stone Attack",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_leggings": "Ice Leggings",
-      "item.power.magic_fireball": "Magic Fireball",
       "item.power.air_armor_boots": "Air Boots",
-      "block.power.basic_box": "Box",
-      "item.power.earth_stone": "Earth Stone",
-      "item.power.fire_armor_helmet": "Fire Helmet",
-      "gui.power.wheel_abilities_ice.button_3": "3",
+      "effect.power.lightning_master": "Master of Lightning",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "item.power.air_stone": "Air Stone",
-      "effect.power.air_master": "Master of the Air",
-      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.water_stone": "Water Stone",
       "item.power.fire_armor_leggings": "Fire Leggings",
-      "item.power.earth_shield": "Earth Shield",
       "item.power.ether_attack": "Ether Attack"
     }
   },
@@ -3715,6 +4065,10 @@
               },
               {
                 "name": "Ice",
+                "children": []
+              },
+              {
+                "name": "Lightning",
                 "children": []
               }
             ]

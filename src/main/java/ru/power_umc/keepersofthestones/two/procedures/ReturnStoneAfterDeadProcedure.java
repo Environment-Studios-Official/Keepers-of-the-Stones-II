@@ -399,6 +399,67 @@ public class ReturnStoneAfterDeadProcedure {
 					}
 				}
 			}
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 7) {
+				{
+					double _setval = 0;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.element_id_fist = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team remove lightning");
+					}
+				}
+			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 7) {
+				{
+					double _setval = 0;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.element_id_second = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team remove lightning");
+					}
+				}
+			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 7) {
+				{
+					double _setval = 0;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.element_id_third = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+				{
+					Entity _ent = entity;
+					if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+						_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+								_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "team remove lightning");
+					}
+				}
+			}
 		}
 	}
 }
