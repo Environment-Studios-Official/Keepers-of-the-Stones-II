@@ -13,8 +13,14 @@
     "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "IceMasterStart"
+    },
     "onActiveTick": {
       "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "IceMasterEnd"
     }
   }
 }

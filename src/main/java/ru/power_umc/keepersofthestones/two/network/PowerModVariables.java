@@ -153,6 +153,13 @@ public class PowerModVariables {
 		public boolean water_stone = false;
 		public boolean ether_stone = false;
 		public boolean ice_stone = false;
+		public boolean lightning_stone = false;
+		public boolean sound_stone = false;
+		public boolean crystal_stone = false;
+		public boolean lava_stone = false;
+		public boolean rain_stone = false;
+		public boolean tornado_stone = false;
+		public boolean ocean_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -167,6 +174,13 @@ public class PowerModVariables {
 			water_stone = nbt.getBoolean("water_stone");
 			ether_stone = nbt.getBoolean("ether_stone");
 			ice_stone = nbt.getBoolean("ice_stone");
+			lightning_stone = nbt.getBoolean("lightning_stone");
+			sound_stone = nbt.getBoolean("sound_stone");
+			crystal_stone = nbt.getBoolean("crystal_stone");
+			lava_stone = nbt.getBoolean("lava_stone");
+			rain_stone = nbt.getBoolean("rain_stone");
+			tornado_stone = nbt.getBoolean("tornado_stone");
+			ocean_stone = nbt.getBoolean("ocean_stone");
 		}
 
 		@Override
@@ -177,6 +191,13 @@ public class PowerModVariables {
 			nbt.putBoolean("water_stone", water_stone);
 			nbt.putBoolean("ether_stone", ether_stone);
 			nbt.putBoolean("ice_stone", ice_stone);
+			nbt.putBoolean("lightning_stone", lightning_stone);
+			nbt.putBoolean("sound_stone", sound_stone);
+			nbt.putBoolean("crystal_stone", crystal_stone);
+			nbt.putBoolean("lava_stone", lava_stone);
+			nbt.putBoolean("rain_stone", rain_stone);
+			nbt.putBoolean("tornado_stone", tornado_stone);
+			nbt.putBoolean("ocean_stone", ocean_stone);
 			return nbt;
 		}
 

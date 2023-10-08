@@ -1,0 +1,140 @@
+{
+  "_fv": 51,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 192,
+    "height": 192,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_power_scale",
+          "text": {
+            "fixedValue": "000",
+            "name": "GetPowerScale"
+          },
+          "color": {
+            "value": -3355444,
+            "falpha": 0.0
+          },
+          "x": 204,
+          "y": 116
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "wheel_of_abilities.png",
+          "use1Xscale": false,
+          "x": 117,
+          "y": 24
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_1",
+          "image": "wheel_button_1.png",
+          "hoveredImage": "wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwo"
+          },
+          "x": 258,
+          "y": 178
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_2",
+          "image": "wheel_button_2.png",
+          "hoveredImage": "wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenWheelTwo"
+          },
+          "displayCondition": {
+            "name": "GetWheelTwo"
+          },
+          "x": 270,
+          "y": 178
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_wheel_button_3",
+          "image": "wheel_button_3.png",
+          "hoveredImage": "wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenWheelThree"
+          },
+          "displayCondition": {
+            "name": "GetWheelThree"
+          },
+          "x": 282,
+          "y": 178
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_1",
+          "text": "1",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Attack21"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 198,
+          "y": 50
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_2",
+          "text": "2",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Attack22"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 260,
+          "y": 112
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "name": "button_3",
+          "text": "3",
+          "isUndecorated": false,
+          "onClick": {
+            "name": "Attack23"
+          },
+          "width": 30,
+          "height": 20,
+          "x": 134,
+          "y": 112
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 4,
+      "sy": 4,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": true
+    }
+  }
+}
