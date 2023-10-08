@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestones.two.init;
 
+import ru.power_umc.keepersofthestones.two.client.model.Modelether_bullet;
 import ru.power_umc.keepersofthestones.two.client.model.Modelblock_attack;
 
 import net.minecraftforge.fml.common.Mod;
@@ -15,6 +16,7 @@ import net.minecraftforge.api.distmarker.Dist;
 public class PowerModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
+		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelblock_attack.LAYER_LOCATION, Modelblock_attack::createBodyLayer);
 	}
 }

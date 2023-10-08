@@ -16,6 +16,7 @@ import ru.power_umc.keepersofthestones.two.item.FireStoneItem;
 import ru.power_umc.keepersofthestones.two.item.FireArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EtherStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EtherGlaiveItem;
+import ru.power_umc.keepersofthestones.two.item.EtherAttackItem;
 import ru.power_umc.keepersofthestones.two.item.EtherArmorItem;
 import ru.power_umc.keepersofthestones.two.item.EarthStoneItem;
 import ru.power_umc.keepersofthestones.two.item.EarthShieldItem;
@@ -78,6 +79,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ETHER_ARMOR_BOOTS = REGISTRY.register("ether_armor_boots", () -> new EtherArmorItem.Boots());
 	public static final RegistryObject<Item> WATER_ATTACK = REGISTRY.register("water_attack", () -> new WaterAttackItem());
 	public static final RegistryObject<Item> EARTH_SHIELD = REGISTRY.register("earth_shield", () -> new EarthShieldItem());
+	public static final RegistryObject<Item> ETHER_ATTACK = REGISTRY.register("ether_attack", () -> new EtherAttackItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

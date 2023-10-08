@@ -2866,6 +2866,55 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule"
+    },
+    {
+      "name": "EtherAttack",
+      "type": "rangeditem",
+      "sortid": 152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EtherAttackItem.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/EtherAttackEntity.java",
+          "src/main/resources/assets/power/models/item/ether_attack.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/EtherAttackRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Ether"
+    },
+    {
+      "name": "EtherAttackKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_attack_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/EtherAttackKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ether"
     }
   ],
   "variable_elements": [
@@ -3002,15 +3051,15 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.ether_glaive": "Эфирная глефа",
-      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
+      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
-      "key.categories.power2": "Хранители Камней II",
       "item.power.earth_hammer": "Земляной молот",
+      "key.categories.power2": "Хранители Камней II",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
-      "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item_group.power.boxes": "Шкатулки",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
       "gui.power.wheel_abilities_water.button_2": "2",
       "gui.power.wheel_abilities_water.button_1": "1",
@@ -3069,7 +3118,8 @@
       "effect.power.air_master": "Мастер воздуха",
       "item.power.water_stone": "Камень воды",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
-      "item.power.earth_shield": "Earth Shield"
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.ether_attack": "Cobblestone Attack"
     },
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
@@ -3079,12 +3129,12 @@
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
-      "key.categories.power2": "Keepers of the Stones II",
       "item.power.earth_hammer": "Earth Hammer",
+      "key.categories.power2": "Keepers of the Stones II",
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
       "gui.power.wheel_abilities_water.button_2": "2",
       "gui.power.wheel_abilities_water.button_1": "1",
@@ -3143,7 +3193,8 @@
       "effect.power.air_master": "Master of the Air",
       "item.power.water_stone": "Water Stone",
       "item.power.fire_armor_leggings": "Fire Leggings",
-      "item.power.earth_shield": "Earth Shield"
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.ether_attack": "Ether Attack"
     }
   },
   "foldersRoot": {
@@ -3249,7 +3300,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.0.30",
+    "version": "1.0.0.0.31",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
