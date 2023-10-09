@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Special",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "earth_shield",
     "customModelName": "earth_shield:default",
+    "blockingModelName": "Normal blocking",
     "name": "Earth Shield",
     "specialInformation": {
       "fixedValue": []

@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Axe",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "earth_hammer",
     "customModelName": "earth_hammer:default",
+    "blockingModelName": "Normal blocking",
     "name": "Earth Hammer",
     "specialInformation": {
       "fixedValue": []

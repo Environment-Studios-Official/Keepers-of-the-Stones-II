@@ -4,8 +4,10 @@
   "definition": {
     "toolType": "Sword",
     "renderType": 1,
+    "blockingRenderType": 0,
     "texture": "ether_glaive",
     "customModelName": "ether_glaive:default",
+    "blockingModelName": "Normal blocking",
     "name": "Ether Glaive",
     "specialInformation": {
       "fixedValue": []
