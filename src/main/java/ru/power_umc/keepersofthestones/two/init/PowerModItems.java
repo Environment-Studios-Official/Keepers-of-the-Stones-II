@@ -9,6 +9,8 @@ import ru.power_umc.keepersofthestones.two.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestones.two.item.WaterAttackItem;
 import ru.power_umc.keepersofthestones.two.item.WaterArmorItem;
 import ru.power_umc.keepersofthestones.two.item.StoneAttackItem;
+import ru.power_umc.keepersofthestones.two.item.SoundStoneItem;
+import ru.power_umc.keepersofthestones.two.item.SoundArmorItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
 import ru.power_umc.keepersofthestones.two.item.LightningStoneItem;
 import ru.power_umc.keepersofthestones.two.item.LightningArmorItem;
@@ -94,6 +96,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> COBBLED_DEEPSLATE_ATTACK = REGISTRY.register("cobbled_deepslate_attack", () -> new CobbledDeepslateAttackItem());
 	public static final RegistryObject<Item> WATER_ATTACK = REGISTRY.register("water_attack", () -> new WaterAttackItem());
 	public static final RegistryObject<Item> ETHER_ATTACK = REGISTRY.register("ether_attack", () -> new EtherAttackItem());
+	public static final RegistryObject<Item> SOUND_STONE = REGISTRY.register("sound_stone", () -> new SoundStoneItem());
+	public static final RegistryObject<Item> SOUND_ARMOR_HELMET = REGISTRY.register("sound_armor_helmet", () -> new SoundArmorItem.Helmet());
+	public static final RegistryObject<Item> SOUND_ARMOR_CHESTPLATE = REGISTRY.register("sound_armor_chestplate", () -> new SoundArmorItem.Chestplate());
+	public static final RegistryObject<Item> SOUND_ARMOR_LEGGINGS = REGISTRY.register("sound_armor_leggings", () -> new SoundArmorItem.Leggings());
+	public static final RegistryObject<Item> SOUND_ARMOR_BOOTS = REGISTRY.register("sound_armor_boots", () -> new SoundArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
