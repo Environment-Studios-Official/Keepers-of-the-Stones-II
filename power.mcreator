@@ -4604,6 +4604,54 @@
         ]
       },
       "path": "~/Tags"
+    },
+    {
+      "name": "RainStone",
+      "type": "item",
+      "sortid": 249,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/rain_stone_0.json",
+          "src/main/resources/assets/power/models/item/rain_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/RainStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Rain"
+    },
+    {
+      "name": "TornadoStone",
+      "type": "item",
+      "sortid": 250,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/tornado_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TornadoStoneItem.java",
+          "src/main/resources/assets/power/models/item/tornado_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "OceanStone",
+      "type": "item",
+      "sortid": 251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/OceanStoneItem.java",
+          "src/main/resources/assets/power/models/item/ocean_stone.json",
+          "src/main/resources/assets/power/models/item/ocean_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Ocean"
     }
   ],
   "variable_elements": [
@@ -4832,6 +4880,7 @@
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45 очков силы",
       "effect.power.water_master": "Мастер воды",
       "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Rain Stone",
       "gui.power.wheel_abilities_lava.button_2": "2",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
@@ -4853,6 +4902,7 @@
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.rain_stone": "Lava Stone",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
@@ -4893,6 +4943,7 @@
       "effect.power.fire_master": "Мастер огня",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
+      "item.power.ocean_stone": "Tornado Stone",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
@@ -4952,6 +5003,7 @@
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45 power points",
       "effect.power.water_master": "Master of Water",
       "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Tornado Stone",
       "gui.power.wheel_abilities_lava.button_2": "2",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Sound Boots",
@@ -4973,6 +5025,7 @@
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.rain_stone": "Rain Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
@@ -5013,6 +5066,7 @@
       "effect.power.fire_master": "Master of Fire",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ice_armor_leggings": "Ice Leggings",
+      "item.power.ocean_stone": "Ocean Stone",
       "item.power.air_armor_boots": "Air Boots",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
@@ -5080,6 +5134,10 @@
           },
           {
             "name": "Ocean",
+            "children": []
+          },
+          {
+            "name": "Plants",
             "children": []
           }
         ]

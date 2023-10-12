@@ -7,8 +7,11 @@ package ru.power_umc.keepersofthestones.two.init;
 import ru.power_umc.keepersofthestones.two.item.WaterStoneItem;
 import ru.power_umc.keepersofthestones.two.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestones.two.item.WaterArmorItem;
+import ru.power_umc.keepersofthestones.two.item.TornadoStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SoundStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SoundArmorItem;
+import ru.power_umc.keepersofthestones.two.item.RainStoneItem;
+import ru.power_umc.keepersofthestones.two.item.OceanStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
 import ru.power_umc.keepersofthestones.two.item.LightningStoneItem;
 import ru.power_umc.keepersofthestones.two.item.LightningArmorItem;
@@ -103,6 +106,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
 	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
 	public static final RegistryObject<Item> LAVA_STONE = REGISTRY.register("lava_stone", () -> new LavaStoneItem());
+	public static final RegistryObject<Item> RAIN_STONE = REGISTRY.register("rain_stone", () -> new RainStoneItem());
+	public static final RegistryObject<Item> TORNADO_STONE = REGISTRY.register("tornado_stone", () -> new TornadoStoneItem());
+	public static final RegistryObject<Item> OCEAN_STONE = REGISTRY.register("ocean_stone", () -> new OceanStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
