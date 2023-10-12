@@ -7,6 +7,7 @@ import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesIceMenu
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesFireMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEtherMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEarthMenu;
+import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesCrystalMenu;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesAirMenu;
 import ru.power_umc.keepersofthestones.two.network.PowerModVariables;
 
@@ -146,6 +147,21 @@ public class OpenWheelOneProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new WheelAbilitiesSoundMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 9) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesCrystal");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesCrystalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

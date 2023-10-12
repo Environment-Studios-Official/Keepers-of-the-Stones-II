@@ -1,0 +1,26 @@
+{
+  "_fv": 52,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Crystal",
+    "icon": "crystal_master.png",
+    "color": {
+      "value": -6749953,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "CrystalMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "CrystalMasterEnd"
+    }
+  }
+}

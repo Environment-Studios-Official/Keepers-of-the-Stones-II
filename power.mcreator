@@ -3968,6 +3968,338 @@
         ]
       },
       "path": "~/Elements/Ice"
+    },
+    {
+      "name": "CrystalStone",
+      "type": "item",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/crystal_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CrystalStoneItem.java",
+          "src/main/resources/assets/power/models/item/crystal_stone.json"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmor",
+      "type": "armor",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/crystal_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CrystalArmorItem.java",
+          "src/main/resources/assets/power/models/item/crystal_armor_boots.json",
+          "src/main/resources/assets/power/models/item/crystal_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/crystal_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CystalMaster",
+      "type": "potioneffect",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cystal_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/CystalMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalStoneUse",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalMasterStart",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalMasterEnd",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "WheelAbilitiesCrystal",
+      "type": "gui",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesCrystalMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesCrystalScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesCrystalButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack33",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_33",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack33Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack34",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_34",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack34Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack35",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_35",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack35Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack36",
+      "type": "procedure",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_36",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack36Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
     }
   ],
   "variable_elements": [
@@ -4149,21 +4481,23 @@
   "language_map": {
     "ru_ru": {
       "item.power.earth_armor_boots": "Ботинки мастера земли",
-      "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
+      "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
-      "key.categories.power2": "Хранители Камней II",
+      "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "item.power.earth_hammer": "Земляной молот",
+      "key.categories.power2": "Хранители Камней II",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "effect.power.sound_master": "Мастер звука",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
-      "item.power.lightning_stone": "Камень молнии",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
+      "item.power.lightning_stone": "Камень молнии",
       "item.power.air_rapier": "Воздушная рапира",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item_group.power.stones": "Камни",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "gui.power.wheel_abilities_sound.button_3": "3",
@@ -4194,6 +4528,7 @@
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
       "gui.power.wheel_abilities_ice.button_3": "3",
+      "item.power.crystal_stone": "Камень кристалла",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.earth_shield": "Earth Shield",
@@ -4205,11 +4540,15 @@
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_crystal.button_2": "2",
       "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_crystal.button_3": "3",
       "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_crystal.button_1": "1",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
@@ -4224,6 +4563,7 @@
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
+      "effect.power.cystal_master": "Мастер кристалла",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
@@ -4242,6 +4582,7 @@
       "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "effect.power.lightning_master": "Мастер молнии",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80 очков силы",
       "item.power.air_stone": "Камень воздуха",
       "item.power.sound_stone": "Камень звука",
@@ -4251,6 +4592,7 @@
     },
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
+      "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
       "item.power.sound_armor_chestplate": "Sound Chestplate",
       "key.categories.power2": "Keepers of the Stones II",
@@ -4266,6 +4608,7 @@
       "key.power.ability_using_key": "Ability using key",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "item_group.power.stones": "Stones",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "gui.power.wheel_abilities_sound.button_3": "3",
@@ -4296,6 +4639,7 @@
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
       "gui.power.wheel_abilities_ice.button_3": "3",
+      "item.power.crystal_stone": "Crystal Stone",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.earth_shield": "Earth Shield",
@@ -4307,11 +4651,15 @@
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.crystal_armor_helmet": "Crystal Helmet",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
       "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_crystal.button_2": "2",
       "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_crystal.button_3": "3",
       "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_crystal.button_1": "1",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
@@ -4326,6 +4674,7 @@
       "item.power.fire_armor_boots": "Fire Boots",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.lightning_armor_boots": "Lightning Boots",
+      "effect.power.cystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
@@ -4344,6 +4693,7 @@
       "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.air_armor_boots": "Air Boots",
       "effect.power.lightning_master": "Master of Lightning",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "item.power.air_stone": "Air Stone",
       "item.power.sound_stone": "Sound Stone",
@@ -4468,6 +4818,10 @@
               },
               {
                 "name": "Sound",
+                "children": []
+              },
+              {
+                "name": "Crystal",
                 "children": []
               }
             ]

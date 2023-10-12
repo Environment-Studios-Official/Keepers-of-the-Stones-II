@@ -11,6 +11,7 @@ import ru.power_umc.keepersofthestones.two.potion.IceMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.FireMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.EtherMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.EarthMasterMobEffect;
+import ru.power_umc.keepersofthestones.two.potion.CystalMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.AirMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
@@ -30,4 +31,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> ICE_MASTER = REGISTRY.register("ice_master", () -> new IceMasterMobEffect());
 	public static final RegistryObject<MobEffect> LIGHTNING_MASTER = REGISTRY.register("lightning_master", () -> new LightningMasterMobEffect());
 	public static final RegistryObject<MobEffect> SOUND_MASTER = REGISTRY.register("sound_master", () -> new SoundMasterMobEffect());
+	public static final RegistryObject<MobEffect> CYSTAL_MASTER = REGISTRY.register("cystal_master", () -> new CystalMasterMobEffect());
 }

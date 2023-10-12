@@ -11,6 +11,7 @@ import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesIceScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesFireScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEtherScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEarthScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesCrystalScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesAirScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -33,6 +34,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ICE.get(), WheelAbilitiesIceScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHTNING.get(), WheelAbilitiesLightningScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SOUND.get(), WheelAbilitiesSoundScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_CRYSTAL.get(), WheelAbilitiesCrystalScreen::new);
 		});
 	}
 }
