@@ -2,7 +2,6 @@
 package ru.power_umc.keepersofthestones.two.entity;
 
 import ru.power_umc.keepersofthestones.two.procedures.EtherAttackKazhdyiTikPriPoliotieSnariadaProcedure;
-import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,6 +10,7 @@ import net.minecraftforge.network.NetworkHooks;
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -25,7 +25,7 @@ import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class EtherAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.ETHER_ATTACK.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.BEACON);
 
 	public EtherAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), world);

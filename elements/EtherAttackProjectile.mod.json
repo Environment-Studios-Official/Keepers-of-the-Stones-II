@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:EtherAttack"
+      "value": "Blocks.BEACON"
     },
     "showParticles": false,
     "actionSound": {

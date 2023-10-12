@@ -1,5 +1,6 @@
 {
   "item.power.earth_armor_boots": "Earth Boots",
+  "item.power.shadow_stone": "Shadow Stone",
   "item.power.crystal_armor_chestplate": "Crystal Chestplate",
   "item.power.ether_stone": "Ether Stone",
   "item.power.sound_armor_chestplate": "Sound Chestplate",
@@ -18,6 +19,7 @@
   "item.power.air_rapier": "Air Rapier",
   "item.power.air_armor_leggings": "Air Leggings",
   "item.power.crystal_armor_boots": "Crystal Boots",
+  "item.power.metal_stone": "Metal Stone",
   "item_group.power.stones": "Stones",
   "item.power.lightning_armor_chestplate": "Lightning Chestplate",
   "gui.power.wheel_abilities_sound.button_3": "3",
@@ -35,6 +37,7 @@
   "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
   "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
   "item.power.ice_armor_helmet": "Ice Helmet",
+  "item.power.plants_stone": "Plants Stone",
   "effect.power.ice_master": "Master of the Ice",
   "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
   "item.power.air_armor_chestplate": "Air Chestplate",
@@ -73,6 +76,8 @@
   "item.power.crystal_armor_helmet": "Crystal Helmet",
   "item.power.earth_armor_chestplate": "Earth Chestplate",
   "item_group.power.boxes": "Boxes",
+  "item.power.animals_stone": "Animals Stone",
+  "item.power.vacuum_stone": "Vacuum Stone",
   "gui.power.wheel_abilities_water.button_2": "2",
   "gui.power.wheel_abilities_crystal.button_2": "2",
   "gui.power.wheel_abilities_water.button_1": "1",
@@ -92,6 +97,7 @@
   "effect.power.ether_master": "Master of the Ether",
   "item.power.fire_armor_boots": "Fire Boots",
   "item.power.water_armor_helmet": "Water Helmet",
+  "item.power.light_stone": "Light Stone",
   "item.power.lightning_armor_boots": "Lightning Boots",
   "gui.power.wheel_abilities_ether.button_2": "2",
   "gui.power.wheel_abilities_ether.button_3": "3",
@@ -118,6 +124,5 @@
   "item.power.air_stone": "Air Stone",
   "item.power.sound_stone": "Sound Stone",
   "item.power.water_stone": "Water Stone",
-  "item.power.fire_armor_leggings": "Fire Leggings",
-  "item.power.ether_attack": "Ether Attack"
+  "item.power.fire_armor_leggings": "Fire Leggings"
 }
