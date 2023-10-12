@@ -7,6 +7,7 @@ package ru.power_umc.keepersofthestones.two.init;
 import ru.power_umc.keepersofthestones.two.potion.WaterMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.SoundMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.LightningMasterMobEffect;
+import ru.power_umc.keepersofthestones.two.potion.LavaMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.IceMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.FireMasterMobEffect;
 import ru.power_umc.keepersofthestones.two.potion.EtherMasterMobEffect;
@@ -32,4 +33,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> LIGHTNING_MASTER = REGISTRY.register("lightning_master", () -> new LightningMasterMobEffect());
 	public static final RegistryObject<MobEffect> SOUND_MASTER = REGISTRY.register("sound_master", () -> new SoundMasterMobEffect());
 	public static final RegistryObject<MobEffect> CYSTAL_MASTER = REGISTRY.register("cystal_master", () -> new CystalMasterMobEffect());
+	public static final RegistryObject<MobEffect> LAVA_MASTER = REGISTRY.register("lava_master", () -> new LavaMasterMobEffect());
 }

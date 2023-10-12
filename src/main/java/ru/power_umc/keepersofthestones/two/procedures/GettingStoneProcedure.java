@@ -235,6 +235,28 @@ public class GettingStoneProcedure {
 						GettingStoneProcedure.execute(world, entity);
 					}
 				}
+				if (random == 10) {
+					if (!PowerModVariables.MapVariables.get(world).lava_stone) {
+						PowerMod.queueServerWork(1, () -> {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							PowerModVariables.MapVariables.get(world).lava_stone = true;
+							PowerModVariables.MapVariables.get(world).syncData(world);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.selected = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+					} else {
+						GettingStoneProcedure.execute(world, entity);
+					}
+				}
 			}
 		}
 	}

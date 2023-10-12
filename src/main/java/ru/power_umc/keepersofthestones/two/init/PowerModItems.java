@@ -12,6 +12,8 @@ import ru.power_umc.keepersofthestones.two.item.SoundArmorItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
 import ru.power_umc.keepersofthestones.two.item.LightningStoneItem;
 import ru.power_umc.keepersofthestones.two.item.LightningArmorItem;
+import ru.power_umc.keepersofthestones.two.item.LavaStoneItem;
+import ru.power_umc.keepersofthestones.two.item.LavaArmorItem;
 import ru.power_umc.keepersofthestones.two.item.IceStoneItem;
 import ru.power_umc.keepersofthestones.two.item.IceArmorItem;
 import ru.power_umc.keepersofthestones.two.item.FireSwordItem;
@@ -96,6 +98,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CRYSTAL_ARMOR_LEGGINGS = REGISTRY.register("crystal_armor_leggings", () -> new CrystalArmorItem.Leggings());
 	public static final RegistryObject<Item> CRYSTAL_ARMOR_BOOTS = REGISTRY.register("crystal_armor_boots", () -> new CrystalArmorItem.Boots());
 	public static final RegistryObject<Item> CRYSTAL_STONE = REGISTRY.register("crystal_stone", () -> new CrystalStoneItem());
+	public static final RegistryObject<Item> LAVA_ARMOR_HELMET = REGISTRY.register("lava_armor_helmet", () -> new LavaArmorItem.Helmet());
+	public static final RegistryObject<Item> LAVA_ARMOR_CHESTPLATE = REGISTRY.register("lava_armor_chestplate", () -> new LavaArmorItem.Chestplate());
+	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
+	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
+	public static final RegistryObject<Item> LAVA_STONE = REGISTRY.register("lava_stone", () -> new LavaStoneItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

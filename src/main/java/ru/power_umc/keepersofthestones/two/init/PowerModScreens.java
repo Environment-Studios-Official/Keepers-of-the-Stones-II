@@ -7,6 +7,7 @@ package ru.power_umc.keepersofthestones.two.init;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesWaterScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesSoundScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesLightningScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesLavaScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesIceScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesFireScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEtherScreen;
@@ -35,6 +36,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHTNING.get(), WheelAbilitiesLightningScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SOUND.get(), WheelAbilitiesSoundScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_CRYSTAL.get(), WheelAbilitiesCrystalScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LAVA.get(), WheelAbilitiesLavaScreen::new);
 		});
 	}
 }
