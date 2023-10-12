@@ -42,6 +42,33 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.LIGHT_STONE.get());
 				tabData.accept(PowerModItems.SHADOW_STONE.get());
 				tabData.accept(PowerModItems.VACUUM_STONE.get());
+				tabData.accept(PowerModItems.SUN_STONE.get());
+				tabData.accept(PowerModItems.MOON_STONE.get());
+				tabData.accept(PowerModItems.SPACE_STONE.get());
+				tabData.accept(PowerModItems.TIME_STONE.get());
+				tabData.accept(PowerModItems.BLOOD_STONE.get());
+				tabData.accept(PowerModItems.TECHNOLOGY_STONE.get());
+				tabData.accept(PowerModItems.TELEPORTATION_STONE.get());
+				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
+				tabData.accept(PowerModItems.AMBER_STONE.get());
+				tabData.accept(PowerModItems.CREATION_STONE.get());
+				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
+				tabData.accept(PowerModItems.MIST_STONE.get());
+				tabData.accept(PowerModItems.SAND_STONE.get());
+				tabData.accept(PowerModItems.SPEED_STONE.get());
+				tabData.accept(PowerModItems.POISON_STONE.get());
+				tabData.accept(PowerModItems.MAGNET_STONE.get());
+				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
+				tabData.accept(PowerModItems.MERCURY_STONE.get());
+				tabData.accept(PowerModItems.MUSIC_STONE.get());
+				tabData.accept(PowerModItems.PLAGUE_STONE.get());
+				tabData.accept(PowerModItems.BLUE_FLAME_STONE.get());
+				tabData.accept(PowerModItems.GRAVITY_STONE.get());
+				tabData.accept(PowerModItems.SMOKE_STONE.get());
+				tabData.accept(PowerModItems.FORM_STONE.get());
+				tabData.accept(PowerModItems.MIND_STONE.get());
+				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
+				tabData.accept(PowerModItems.DARKNESS_STONE.get());
 			})
 
 					.build());

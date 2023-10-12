@@ -3522,7 +3522,7 @@
       "name": "EtherAttackProjectile",
       "type": "projectile",
       "sortid": 199,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_projectile",
       "metadata": {
@@ -4733,6 +4733,438 @@
         ]
       },
       "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "SunStone",
+      "type": "item",
+      "sortid": 258,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sun_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/sun_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SunStoneItem.java",
+          "src/main/resources/assets/power/models/item/sun_stone.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "MoonStone",
+      "type": "item",
+      "sortid": 259,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/moon_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MoonStoneItem.java",
+          "src/main/resources/assets/power/models/item/moon_stone.json"
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "SpaceStone",
+      "type": "item",
+      "sortid": 260,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/space_stone.json",
+          "src/main/resources/assets/power/models/item/space_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SpaceStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "TimeStone",
+      "type": "item",
+      "sortid": 261,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TimeStoneItem.java",
+          "src/main/resources/assets/power/models/item/time_stone.json",
+          "src/main/resources/assets/power/models/item/time_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "BloodStone",
+      "type": "item",
+      "sortid": 262,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/BloodStoneItem.java",
+          "src/main/resources/assets/power/models/item/blood_stone.json",
+          "src/main/resources/assets/power/models/item/blood_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "TechnologyStone",
+      "type": "item",
+      "sortid": 263,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TechnologyStoneItem.java",
+          "src/main/resources/assets/power/models/item/technology_stone.json",
+          "src/main/resources/assets/power/models/item/technology_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TeleportationStone",
+      "type": "item",
+      "sortid": 264,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TeleportationStoneItem.java",
+          "src/main/resources/assets/power/models/item/teleportation_stone_0.json",
+          "src/main/resources/assets/power/models/item/teleportation_stone.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "ExplosionStone",
+      "type": "item",
+      "sortid": 265,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/ExplosionStoneItem.java",
+          "src/main/resources/assets/power/models/item/explosion_stone.json",
+          "src/main/resources/assets/power/models/item/explosion_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "AmberStone",
+      "type": "item",
+      "sortid": 266,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/AmberStoneItem.java",
+          "src/main/resources/assets/power/models/item/amber_stone.json",
+          "src/main/resources/assets/power/models/item/amber_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "CreationStone",
+      "type": "item",
+      "sortid": 267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creation_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CreationStoneItem.java",
+          "src/main/resources/assets/power/models/item/creation_stone.json",
+          "src/main/resources/assets/power/models/item/creation_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Creation"
+    },
+    {
+      "name": "DestructionStone",
+      "type": "item",
+      "sortid": 268,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DestructionStoneItem.java",
+          "src/main/resources/assets/power/models/item/destruction_stone_0.json",
+          "src/main/resources/assets/power/models/item/destruction_stone.json"
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "MistStone",
+      "type": "item",
+      "sortid": 269,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mist_stone_0.json",
+          "src/main/resources/assets/power/models/item/mist_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MistStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "SandStone",
+      "type": "item",
+      "sortid": 270,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/sand_stone.json",
+          "src/main/resources/assets/power/models/item/sand_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SandStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Sand"
+    },
+    {
+      "name": "SpeedStone",
+      "type": "item",
+      "sortid": 271,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SpeedStoneItem.java",
+          "src/main/resources/assets/power/models/item/speed_stone.json",
+          "src/main/resources/assets/power/models/item/speed_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "PoisonStone",
+      "type": "item",
+      "sortid": 272,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/PoisonStoneItem.java",
+          "src/main/resources/assets/power/models/item/poison_stone.json",
+          "src/main/resources/assets/power/models/item/poison_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "MagnetStone",
+      "type": "item",
+      "sortid": 273,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/magnet_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagnetStoneItem.java",
+          "src/main/resources/assets/power/models/item/magnet_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MushroomsStone",
+      "type": "item",
+      "sortid": 274,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mushrooms_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MushroomsStoneItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MercuryStone",
+      "type": "item",
+      "sortid": 275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MercuryStoneItem.java",
+          "src/main/resources/assets/power/models/item/mercury_stone.json",
+          "src/main/resources/assets/power/models/item/mercury_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MusicStone",
+      "type": "item",
+      "sortid": 276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/music_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MusicStoneItem.java",
+          "src/main/resources/assets/power/models/item/music_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "PlagueStone",
+      "type": "item",
+      "sortid": 277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/plague_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/PlagueStoneItem.java",
+          "src/main/resources/assets/power/models/item/plague_stone.json"
+        ]
+      },
+      "path": "~/Elements/Plague"
+    },
+    {
+      "name": "BlueFlameStone",
+      "type": "item",
+      "sortid": 278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blue_flame_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/BlueFlameStoneItem.java",
+          "src/main/resources/assets/power/models/item/blue_flame_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "GravityStone",
+      "type": "item",
+      "sortid": 279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/gravity_stone_0.json",
+          "src/main/resources/assets/power/models/item/gravity_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GravityStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "SmokeStone",
+      "type": "item",
+      "sortid": 280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/smoke_stone.json",
+          "src/main/resources/assets/power/models/item/smoke_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SmokeStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "FormStone",
+      "type": "item",
+      "sortid": 281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/FormStoneItem.java",
+          "src/main/resources/assets/power/models/item/form_stone.json",
+          "src/main/resources/assets/power/models/item/form_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "MindStone",
+      "type": "item",
+      "sortid": 282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mind_stone_0.json",
+          "src/main/resources/assets/power/models/item/mind_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MindStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "GoldenDustStone",
+      "type": "item",
+      "sortid": 283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GoldenDustStoneItem.java",
+          "src/main/resources/assets/power/models/item/golden_dust_stone.json",
+          "src/main/resources/assets/power/models/item/golden_dust_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/GoldenDust"
+    },
+    {
+      "name": "DarknessStone",
+      "type": "item",
+      "sortid": 284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "darkness_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DarknessStoneItem.java",
+          "src/main/resources/assets/power/models/item/darkness_stone.json",
+          "src/main/resources/assets/power/models/item/darkness_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Darkness"
     }
   ],
   "variable_elements": [
@@ -4916,21 +5348,25 @@
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.shadow_stone": "Камень тени",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "item.power.ether_stone": "Камень эфира",
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
+      "item.power.ether_stone": "Камень эфира",
       "item.power.earth_hammer": "Земляной молот",
       "key.categories.power2": "Хранители Камней II",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "effect.power.sound_master": "Мастер звука",
-      "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
+      "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
+      "item.power.space_stone": "Камень космоса",
+      "item.power.teleportation_stone": "Камень телепортации",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
       "item.power.lightning_stone": "Камень молнии",
+      "item.power.blue_flame_stone": "Камень синего пламени",
       "item.power.air_rapier": "Воздушная рапира",
       "key.power.ability_using_key": "Клавиша использования способности",
+      "item.power.mushrooms_stone": "Камень грибов",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.metal_stone": "Камень металла",
@@ -4942,6 +5378,7 @@
       "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Водная катана",
       "item.power.lava_stone": "Камень лавы",
+      "item.power.sun_stone": "Камень солнца",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 очков силы",
@@ -4952,12 +5389,15 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 очков силы",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.plants_stone": "Камень зелени",
+      "item.power.magnet_stone": "Камень магнита",
       "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
+      "item.power.destruction_stone": "Камень разрушения",
+      "item.power.darkness_stone": "Камень тьмы",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20 очков силы",
@@ -4966,15 +5406,18 @@
       "gui.power.wheel_abilities_lava.button_3": "3",
       "item.power.tornado_stone": "Камень торнадо",
       "gui.power.wheel_abilities_lava.button_2": "2",
+      "item.power.gravity_stone": "Камень гравитации",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "gui.power.wheel_abilities_lava.button_1": "1",
       "item.power.magic_fireball": "Волшебный файрболл",
+      "item.power.smoke_stone": "Камень дыма",
       "block.power.basic_box": "Шкатулка",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
       "gui.power.wheel_abilities_ice.button_3": "3",
       "item.power.crystal_stone": "Камень кристалла",
+      "item.power.technology_stone": "Камень технологий",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.earth_shield": "Earth Shield",
@@ -4982,14 +5425,18 @@
       "item.power.ether_glaive": "Эфирная глефа",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
       "key.power.detransformation_key": "Клавиша детрансформации",
+      "item.power.golden_dust_stone": "Камннь золотой пыли",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.speed_stone": "Камень скорости",
       "item.power.rain_stone": "Камень дождя",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
+      "item.power.explosion_stone": "Камень взрыва",
       "item_group.power.boxes": "Шкатулки",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item.power.music_stone": "Камень музыки",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
       "gui.power.wheel_abilities_water.button_2": "2",
@@ -5000,24 +5447,32 @@
       "gui.power.wheel_abilities_crystal.button_1": "1",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
+      "item.power.poison_stone": "Камень яда",
+      "item.power.mercury_stone": "Камень ртути",
+      "item.power.moon_stone": "Камень луны",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
       "item.power.ice_stone": "Камень льда",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
+      "item.power.mind_stone": "Камень разума",
       "gui.power.wheel_abilities_lightning.button_3": "3",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "gui.power.wheel_abilities_lightning.button_2": "2",
       "item.power.water_armor_leggings": "Поножи мастера воды",
+      "item.power.amber_stone": "Камень янтаря",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.light_stone": "Камень света",
+      "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
       "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Камень огня",
+      "item.power.blood_stone": "Камень крови",
+      "item.power.creation_stone": "Камень созидания",
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Мастер земли",
       "gui.power.wheel_abilities_air.button_2": "2",
@@ -5025,12 +5480,16 @@
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40 очков силы",
       "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.time_stone": "Камень времени",
       "item.power.basic_box.tooltip": "Базовая",
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "effect.power.fire_master": "Мастер огня",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
+      "item.power.form_stone": "Камень формы",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.ocean_stone": "Камень океана",
+      "item.power.mist_stone": "Камень тумана",
+      "item.power.plague_stone": "Камень чумы",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
@@ -5055,10 +5514,14 @@
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
+      "item.power.space_stone": "Space Stone",
+      "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
+      "item.power.blue_flame_stone": "Blue Flame Stone",
       "key.power.ability_using_key": "Ability using key",
       "item.power.air_rapier": "Air Rapier",
+      "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.air_armor_leggings": "Air Leggings",
       "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.metal_stone": "Metal Stone",
@@ -5070,6 +5533,7 @@
       "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Water Katana",
       "item.power.lava_stone": "Lava Stone",
+      "item.power.sun_stone": "Sun Stone",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
       "item.power.lava_armor_chestplate": "Lava Chestplate",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
@@ -5080,12 +5544,15 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.plants_stone": "Plants Stone",
+      "item.power.magnet_stone": "Magnet Stone",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "item.power.ether_armor_leggings": "Ether Leggings",
+      "item.power.destruction_stone": "Destruction Stone",
+      "item.power.darkness_stone": "Darkness Stone",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20 power points",
@@ -5094,15 +5561,18 @@
       "gui.power.wheel_abilities_lava.button_3": "3",
       "item.power.tornado_stone": "Tornado Stone",
       "gui.power.wheel_abilities_lava.button_2": "2",
+      "item.power.gravity_stone": "Gravity Stone",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Sound Boots",
       "gui.power.wheel_abilities_lava.button_1": "1",
       "item.power.magic_fireball": "Magic Fireball",
+      "item.power.smoke_stone": "Smoke Stone",
       "block.power.basic_box": "Box",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
       "gui.power.wheel_abilities_ice.button_3": "3",
       "item.power.crystal_stone": "Crystal Stone",
+      "item.power.technology_stone": "Technology Stone",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
       "item.power.earth_shield": "Earth Shield",
@@ -5110,14 +5580,18 @@
       "item.power.ether_glaive": "Ether Glaive",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
       "key.power.detransformation_key": "Detransformation key",
+      "item.power.golden_dust_stone": "Golden Dust Stone",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
       "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.speed_stone": "Speed Stone",
       "item.power.rain_stone": "Rain Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
+      "item.power.explosion_stone": "Explosion Stone",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item_group.power.boxes": "Boxes",
+      "item.power.music_stone": "Music Stone",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
       "gui.power.wheel_abilities_water.button_2": "2",
@@ -5128,24 +5602,32 @@
       "gui.power.wheel_abilities_crystal.button_1": "1",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.poison_stone": "Poison Stone",
+      "item.power.mercury_stone": "Mercury Stone",
+      "item.power.moon_stone": "Moon Stone",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
       "item.power.ice_stone": "Ice Stone",
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
+      "item.power.mind_stone": "Mind Stone",
       "gui.power.wheel_abilities_lightning.button_3": "3",
       "item.power.ice_armor_boots": "Ice Boots",
       "gui.power.wheel_abilities_lightning.button_2": "2",
       "item.power.water_armor_leggings": "Water Leggings",
+      "item.power.amber_stone": "Amber Stone",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.fire_armor_boots": "Fire Boots",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.light_stone": "Light Stone",
+      "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
       "gui.power.wheel_abilities_ether.button_1": "1",
       "item.power.fire_stone": "Fire Stone",
+      "item.power.blood_stone": "Blood Stone",
+      "item.power.creation_stone": "Creation Stone",
       "gui.power.wheel_abilities_air.button_3": "3",
       "effect.power.earth_master": "Master of the Earth",
       "gui.power.wheel_abilities_air.button_2": "2",
@@ -5153,12 +5635,16 @@
       "item.power.ether_armor_helmet": "Ether Helmet",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40 power points",
       "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.time_stone": "Time Stone",
       "item.power.basic_box.tooltip": "Basic",
       "item.power.lava_armor_leggings": "Lava Leggings",
       "effect.power.fire_master": "Master of Fire",
       "item.power.earth_armor_leggings": "Earth Leggings",
+      "item.power.form_stone": "Form Stone",
       "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.ocean_stone": "Ocean Stone",
+      "item.power.mist_stone": "Mist Stone",
+      "item.power.plague_stone": "Plague Stone",
       "item.power.air_armor_boots": "Air Boots",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
@@ -5249,6 +5735,114 @@
           },
           {
             "name": "Vacuum",
+            "children": []
+          },
+          {
+            "name": "Sun",
+            "children": []
+          },
+          {
+            "name": "Moon",
+            "children": []
+          },
+          {
+            "name": "Space",
+            "children": []
+          },
+          {
+            "name": "Time",
+            "children": []
+          },
+          {
+            "name": "Blood",
+            "children": []
+          },
+          {
+            "name": "Technology",
+            "children": []
+          },
+          {
+            "name": "Teleportation",
+            "children": []
+          },
+          {
+            "name": "Explosion",
+            "children": []
+          },
+          {
+            "name": "Amber",
+            "children": []
+          },
+          {
+            "name": "Creation",
+            "children": []
+          },
+          {
+            "name": "Destruction",
+            "children": []
+          },
+          {
+            "name": "Mist",
+            "children": []
+          },
+          {
+            "name": "Sand",
+            "children": []
+          },
+          {
+            "name": "Speed",
+            "children": []
+          },
+          {
+            "name": "Poison",
+            "children": []
+          },
+          {
+            "name": "Magnet",
+            "children": []
+          },
+          {
+            "name": "Mushrooms",
+            "children": []
+          },
+          {
+            "name": "Mercury",
+            "children": []
+          },
+          {
+            "name": "Music",
+            "children": []
+          },
+          {
+            "name": "Plague",
+            "children": []
+          },
+          {
+            "name": "BlueFlame",
+            "children": []
+          },
+          {
+            "name": "Gravity",
+            "children": []
+          },
+          {
+            "name": "Smoke",
+            "children": []
+          },
+          {
+            "name": "Form",
+            "children": []
+          },
+          {
+            "name": "Mind",
+            "children": []
+          },
+          {
+            "name": "GoldenDust",
+            "children": []
+          },
+          {
+            "name": "Darkness",
             "children": []
           }
         ]
