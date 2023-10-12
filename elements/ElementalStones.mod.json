@@ -39,7 +39,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
-    "name": "stones",
-    "namespace": "mod"
+    "name": "elemental_stones",
+    "namespace": "forge"
   }
 }
