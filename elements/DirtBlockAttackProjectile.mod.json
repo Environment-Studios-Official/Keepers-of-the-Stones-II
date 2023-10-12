@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:DirtBlockAttack"
+      "value": "Blocks.DIRT#0"
     },
     "showParticles": false,
     "actionSound": {

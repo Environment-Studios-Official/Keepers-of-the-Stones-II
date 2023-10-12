@@ -3486,21 +3486,6 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "StoneAttack",
-      "type": "item",
-      "sortid": 185,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/StoneAttackItem.java",
-          "src/main/resources/assets/power/models/item/stone_attack.json"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "GrassBlockAttackProjectile",
       "type": "projectile",
       "sortid": 194,
@@ -3511,21 +3496,6 @@
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackProjectileRenderer.java",
           "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackProjectileEntity.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "GrassBlockAttack",
-      "type": "item",
-      "sortid": 186,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grass_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/GrassBlockAttackItem.java",
-          "src/main/resources/assets/power/models/item/grass_block_attack.json"
         ]
       },
       "path": "~/Elements/Earth"
@@ -3546,21 +3516,6 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "DirtBlockAttack",
-      "type": "item",
-      "sortid": 187,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dirt_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/dirt_block_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/DirtBlockAttackItem.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "CobblestoneAttackProjectile",
       "type": "projectile",
       "sortid": 196,
@@ -3571,21 +3526,6 @@
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackProjectileEntity.java",
           "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackProjectileRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "CobblestoneAttack",
-      "type": "item",
-      "sortid": 188,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblestone_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobblestone_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobblestoneAttackItem.java"
         ]
       },
       "path": "~/Elements/Earth"
@@ -3606,21 +3546,6 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "CobbledDeepslateAttack",
-      "type": "item",
-      "sortid": 189,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobbled_deepslate_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobbled_deepslate_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobbledDeepslateAttackItem.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "WaterAttackProjectile",
       "type": "projectile",
       "sortid": 198,
@@ -3631,21 +3556,6 @@
         "files": [
           "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/WaterAttackProjectileRenderer.java",
           "src/main/java/ru/power_umc/keepersofthestones/two/entity/WaterAttackProjectileEntity.java"
-        ]
-      },
-      "path": "~/Elements/Water"
-    },
-    {
-      "name": "WaterAttack",
-      "type": "item",
-      "sortid": 190,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "water_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterAttackItem.java",
-          "src/main/resources/assets/power/models/item/water_attack.json"
         ]
       },
       "path": "~/Elements/Water"
@@ -4011,6 +3921,53 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "IceAttackProjectile",
+      "type": "projectile",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/IceAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/IceAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceAttackProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_attack_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceAttackProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
     }
   ],
   "variable_elements": [
@@ -4211,17 +4168,13 @@
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "gui.power.wheel_abilities_sound.button_3": "3",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
-      "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
       "gui.power.wheel_abilities_sound.button_1": "1",
       "gui.power.wheel_abilities_sound.button_2": "2",
-      "item.power.dirt_block_attack": "Dirt Attack",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 очков силы",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
-      "item.power.water_attack": "Water Attack",
       "item.power.fire_sword": "Меч огня",
-      "item.power.cobblestone_attack": "Cobblestone Attack",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 очков силы",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
@@ -4234,7 +4187,6 @@
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20 очков силы",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45 очков силы",
       "effect.power.water_master": "Мастер воды",
-      "item.power.stone_attack": "Stone Attack",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.magic_fireball": "Волшебный файрболл",
@@ -4273,7 +4225,6 @@
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
       "gui.power.wheel_abilities_ether.button_1": "1",
@@ -4319,17 +4270,13 @@
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "gui.power.wheel_abilities_sound.button_3": "3",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
-      "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
       "gui.power.wheel_abilities_sound.button_1": "1",
-      "item.power.dirt_block_attack": "Dirt Attack",
       "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
-      "item.power.water_attack": "Water Attack",
       "item.power.fire_sword": "Fire Sword",
-      "item.power.cobblestone_attack": "Cobblestone Attack",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_helmet": "Ice Helmet",
@@ -4342,7 +4289,6 @@
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20 power points",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45 power points",
       "effect.power.water_master": "Master of Water",
-      "item.power.stone_attack": "Stone Attack",
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.magic_fireball": "Magic Fireball",
@@ -4381,7 +4327,6 @@
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
       "gui.power.wheel_abilities_ether.button_1": "1",

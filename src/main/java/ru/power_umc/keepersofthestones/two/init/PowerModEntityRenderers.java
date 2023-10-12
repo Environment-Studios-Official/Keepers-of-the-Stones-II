@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.client.renderer.WaterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.StoneAttackProjectileRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.IceAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.GrassBlockAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.EtherAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.DirtBlockAttackProjectileRenderer;
@@ -31,5 +32,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.COBBLED_DEEPSLATE_ATTACK_PROJECTILE.get(), CobbledDeepslateAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), WaterAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), EtherAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), IceAttackProjectileRenderer::new);
 	}
 }

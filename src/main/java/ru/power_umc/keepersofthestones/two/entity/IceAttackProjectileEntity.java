@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.entity;
 
-import ru.power_umc.keepersofthestones.two.procedures.GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.IceAttackProjectileProjectileHitsBlockProcedure;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,22 +26,22 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class GrassBlockAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.GRASS_BLOCK);
+public class IceAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.ICE);
 
-	public GrassBlockAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), world);
+	public IceAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), world);
 	}
 
-	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, Level world) {
+	public IceAttackProjectileEntity(EntityType<? extends IceAttackProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, double x, double y, double z, Level world) {
+	public IceAttackProjectileEntity(EntityType<? extends IceAttackProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, LivingEntity entity, Level world) {
+	public IceAttackProjectileEntity(EntityType<? extends IceAttackProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -70,13 +70,13 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		IceAttackProjectileProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		IceAttackProjectileProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
@@ -86,12 +86,12 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 			this.discard();
 	}
 
-	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 0.8f, 2.5, 3);
+	public static IceAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 0.8f, 5, 5);
 	}
 
-	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, world);
+	public static IceAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		IceAttackProjectileEntity entityarrow = new IceAttackProjectileEntity(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -102,15 +102,15 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 		return entityarrow;
 	}
 
-	public static GrassBlockAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, entity.level());
+	public static IceAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		IceAttackProjectileEntity entityarrow = new IceAttackProjectileEntity(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 0.8f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(2.5);
-		entityarrow.setKnockback(3);
+		entityarrow.setBaseDamage(5);
+		entityarrow.setKnockback(5);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));

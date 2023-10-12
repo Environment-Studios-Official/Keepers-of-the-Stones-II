@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:StoneAttack"
+      "value": "Blocks.STONE#0"
     },
     "showParticles": false,
     "actionSound": {

@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:CobblestoneAttack"
+      "value": "Blocks.COBBLESTONE"
     },
     "showParticles": false,
     "actionSound": {

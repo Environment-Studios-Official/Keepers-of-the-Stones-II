@@ -7,6 +7,7 @@ import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 import ru.power_umc.keepersofthestones.two.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.StoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.MagicFireballProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.IceAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.GrassBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.EtherAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackProjectileEntity;
@@ -1319,9 +1320,58 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 22) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+						for (int index15 = 0; index15 < 15; index15++) {
+							if (!world.getBlockState(new BlockPos(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getX(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getY(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getZ()))
+									.canOcclude()) {
+								Scaling = Scaling + 0.5;
+							} else {
+								break;
+							}
+							{
+								Entity _shootFrom = entity;
+								Level projectileLevel = _shootFrom.level();
+								if (!projectileLevel.isClientSide()) {
+									Projectile _entityToSpawn = new Object() {
+										public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
+											AbstractArrow entityToSpawn = new IceAttackProjectileEntity(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), level);
+											entityToSpawn.setBaseDamage(damage);
+											entityToSpawn.setKnockback(knockback);
+											entityToSpawn.setSilent(true);
+											entityToSpawn.setPierceLevel(piercing);
+											return entityToSpawn;
+										}
+									}.getArrow(projectileLevel, 12, 2, (byte) 2);
+									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+									projectileLevel.addFreshEntity(_entityToSpawn);
+								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
+						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.power = _setval;
 							capability.syncPlayerVariables(entity);
@@ -1340,7 +1390,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt346 && _livEnt346.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt353 && _livEnt353.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 25) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{
@@ -1373,7 +1423,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt347 && _livEnt347.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt354 && _livEnt354.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 29) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{

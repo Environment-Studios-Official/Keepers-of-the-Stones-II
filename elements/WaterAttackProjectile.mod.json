@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "CUSTOM:WaterAttack"
+      "value": "Blocks.FLOWING_WATER"
     },
     "showParticles": false,
     "actionSound": {

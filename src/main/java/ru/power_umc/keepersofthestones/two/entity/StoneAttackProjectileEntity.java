@@ -2,7 +2,6 @@
 package ru.power_umc.keepersofthestones.two.entity;
 
 import ru.power_umc.keepersofthestones.two.procedures.StoneAttackKoghdaSnariadPopadaietVBlokProcedure;
-import ru.power_umc.keepersofthestones.two.init.PowerModItems;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -13,6 +12,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ItemSupplier;
@@ -27,7 +27,7 @@ import net.minecraft.network.protocol.Packet;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class StoneAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.STONE_ATTACK.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.STONE);
 
 	public StoneAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
 		super(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), world);
