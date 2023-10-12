@@ -10,14 +10,14 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-public class CystalMasterMobEffect extends MobEffect {
-	public CystalMasterMobEffect() {
+public class CrystalMasterMobEffect extends MobEffect {
+	public CrystalMasterMobEffect() {
 		super(MobEffectCategory.NEUTRAL, -6749953);
 	}
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.cystal_master";
+		return "effect.power.crystal_master";
 	}
 
 	@Override

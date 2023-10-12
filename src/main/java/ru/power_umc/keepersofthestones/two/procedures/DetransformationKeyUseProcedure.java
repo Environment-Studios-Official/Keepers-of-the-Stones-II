@@ -57,7 +57,7 @@ public class DetransformationKeyUseProcedure {
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.SOUND_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(PowerModMobEffects.CYSTAL_MASTER.get());
+				_entity.removeEffect(PowerModMobEffects.CRYSTAL_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.LAVA_MASTER.get());
 			{

@@ -1361,7 +1361,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt327 && _livEnt327.hasEffect(PowerModMobEffects.CYSTAL_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt327 && _livEnt327.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 33) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{

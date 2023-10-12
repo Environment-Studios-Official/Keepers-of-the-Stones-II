@@ -4004,20 +4004,6 @@
       "path": "~/Elements/Crystal"
     },
     {
-      "name": "CystalMaster",
-      "type": "potioneffect",
-      "sortid": 219,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cystal_master",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/potion/CystalMasterMobEffect.java"
-        ]
-      },
-      "path": "~/Elements/Crystal"
-    },
-    {
       "name": "CrystalStoneUse",
       "type": "procedure",
       "sortid": 220,
@@ -4632,6 +4618,20 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "CrystalMaster",
+      "type": "potioneffect",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/CrystalMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Crystal"
     }
   ],
   "variable_elements": [
@@ -4844,6 +4844,7 @@
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 очков силы",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "item.power.fire_sword": "Меч огня",
+      "effect.power.crystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 очков силы",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
@@ -4903,7 +4904,6 @@
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
-      "effect.power.cystal_master": "Мастер кристалла",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
@@ -4964,6 +4964,7 @@
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "item.power.fire_sword": "Fire Sword",
+      "effect.power.crystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.ice_armor_helmet": "Ice Helmet",
@@ -5023,7 +5024,6 @@
       "item.power.fire_armor_boots": "Fire Boots",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.lightning_armor_boots": "Lightning Boots",
-      "effect.power.cystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
