@@ -24,6 +24,15 @@
       },
       {
         "value": "CUSTOM:LightningStone"
+      },
+      {
+        "value": "CUSTOM:SoundStone"
+      },
+      {
+        "value": "CUSTOM:CrystalStone"
+      },
+      {
+        "value": "CUSTOM:LavaStone"
       }
     ],
     "blocks": [],

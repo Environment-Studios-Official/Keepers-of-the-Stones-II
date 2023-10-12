@@ -723,20 +723,6 @@
       "path": "~/Elements/Air"
     },
     {
-      "name": "ElementalArmor",
-      "type": "tag",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_armor",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/tags/items/elemental_armor.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
       "name": "StonesTag",
       "type": "tag",
       "sortid": 48,
@@ -746,20 +732,6 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/tags/items/stones.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "ElementalWeapon",
-      "type": "tag",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_weapon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/tags/items/elemental_weapon.json"
         ]
       },
       "path": "~/Tags"
@@ -4814,19 +4786,19 @@
     "ru_ru": {
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
-      "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "item.power.ether_stone": "Камень эфира",
-      "key.categories.power2": "Хранители Камней II",
+      "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "item.power.earth_hammer": "Земляной молот",
+      "key.categories.power2": "Хранители Камней II",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "effect.power.sound_master": "Мастер звука",
-      "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
+      "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
-      "item.power.lightning_stone": "Камень молнии",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
+      "item.power.lightning_stone": "Камень молнии",
       "item.power.air_rapier": "Воздушная рапира",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
@@ -4839,8 +4811,8 @@
       "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Водная катана",
       "item.power.lava_stone": "Камень лавы",
-      "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
+      "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 очков силы",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "item.power.fire_sword": "Меч огня",
@@ -4934,19 +4906,19 @@
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
-      "item.power.ether_stone": "Ether Stone",
       "item.power.sound_armor_chestplate": "Sound Chestplate",
-      "key.categories.power2": "Keepers of the Stones II",
+      "item.power.ether_stone": "Ether Stone",
       "item.power.earth_hammer": "Earth Hammer",
+      "key.categories.power2": "Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.button_1": "1",
       "gui.power.wheel_abilities_ice.button_2": "2",
       "effect.power.sound_master": "Master of Sound",
-      "item.power.ice_armor_chestplate": "Ice Chestplate",
       "item.power.lava_armor_boots": "Lava Boots",
+      "item.power.ice_armor_chestplate": "Ice Chestplate",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
-      "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
+      "item.power.lightning_stone": "Lightning Stone",
       "key.power.ability_using_key": "Ability using key",
       "item.power.air_rapier": "Air Rapier",
       "item.power.air_armor_leggings": "Air Leggings",
@@ -4959,8 +4931,8 @@
       "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Water Katana",
       "item.power.lava_stone": "Lava Stone",
-      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
       "item.power.lava_armor_chestplate": "Lava Chestplate",
+      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "item.power.fire_sword": "Fire Sword",
