@@ -13,6 +13,7 @@ import ru.power_umc.keepersofthestones.two.item.TimeStoneItem;
 import ru.power_umc.keepersofthestones.two.item.TeleportationStoneItem;
 import ru.power_umc.keepersofthestones.two.item.TechnologyStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SunStoneItem;
+import ru.power_umc.keepersofthestones.two.item.SpiritStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SpeedStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SpaceStoneItem;
 import ru.power_umc.keepersofthestones.two.item.SoundStoneItem;
@@ -123,6 +124,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BLUE_FLAME_STONE = REGISTRY.register("blue_flame_stone", () -> new BlueFlameStoneItem());
 	public static final RegistryObject<Item> GRAVITY_STONE = REGISTRY.register("gravity_stone", () -> new GravityStoneItem());
 	public static final RegistryObject<Item> SMOKE_STONE = REGISTRY.register("smoke_stone", () -> new SmokeStoneItem());
+	public static final RegistryObject<Item> SPIRIT_STONE = REGISTRY.register("spirit_stone", () -> new SpiritStoneItem());
 	public static final RegistryObject<Item> FORM_STONE = REGISTRY.register("form_stone", () -> new FormStoneItem());
 	public static final RegistryObject<Item> MIND_STONE = REGISTRY.register("mind_stone", () -> new MindStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
