@@ -9,7 +9,7 @@
         "data": {
           "name": "label_proc_get_power_scale",
           "text": {
-            "fixedValue": "000",
+            "fixedValue": "0000",
             "name": "GetPowerScale"
           },
           "color": {
@@ -17,8 +17,8 @@
             "falpha": 0.0
           },
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 406,
-          "y": 216
+          "x": 398,
+          "y": 224
         }
       },
       {
@@ -27,8 +27,8 @@
           "image": "ice_master.png",
           "use1Xscale": true,
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 398,
-          "y": 217
+          "x": 390,
+          "y": 225
         }
       }
     ],

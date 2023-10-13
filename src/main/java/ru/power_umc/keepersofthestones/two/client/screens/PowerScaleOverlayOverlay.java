@@ -44,11 +44,11 @@ public class PowerScaleOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
-			event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/ice_master.png"), w - 29, h - 23, 0, 0, 8, 8, 8, 8);
+			event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/ice_master.png"), w - 37, h - 15, 0, 0, 8, 8, 8, 8);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetPowerScaleProcedure.execute(entity), w - 21, h - 24, -1, false);
+					GetPowerScaleProcedure.execute(entity), w - 29, h - 16, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
