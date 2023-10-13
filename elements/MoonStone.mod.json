@@ -27,7 +27,7 @@
     "name": "Moon Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Stones"
+      "value": "No creative tab entry"
     },
     "stackSize": 1,
     "enchantability": 0,
