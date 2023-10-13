@@ -70,7 +70,6 @@ public class SpecialAttackProcedure {
 		double TrackZ = 0;
 		double TrackY = 0;
 		double TrackX = 0;
-		double previousRecipe = 0;
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 1) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -120,11 +119,24 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-					if ((world.getBlockState(BlockPos.containing(
-							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
-							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY() + 2,
-							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ())))
-							.getBlock() == Blocks.AIR) {
+					if (world
+							.getBlockState(
+									new BlockPos(
+											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+													.getBlockPos().getX(),
+											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
+													.getBlockPos().getY(),
+											entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE,
+													entity)).getBlockPos().getZ()))
+							.canOcclude()
+							&& (world.getBlockState(BlockPos.containing(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getX(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getY() + 2,
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getZ())))
+									.getBlock() == Blocks.AIR) {
 						world.setBlock(BlockPos.containing(
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()
@@ -275,7 +287,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt46 && _livEnt46.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt50 && _livEnt50.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 5) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					for (int index1 = 0; index1 < 15; index1++) {
@@ -467,7 +479,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt134 && _livEnt134.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt138 && _livEnt138.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 9) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 					if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
@@ -735,7 +747,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt192 && _livEnt192.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt196 && _livEnt196.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -875,7 +887,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt217 && _livEnt217.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt221 && _livEnt221.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 17) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					for (int index5 = 0; index5 < 15; index5++) {
@@ -1107,7 +1119,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt271 && _livEnt271.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt275 && _livEnt275.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 21) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -1265,7 +1277,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt307 && _livEnt307.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt311 && _livEnt311.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 25) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{
@@ -1298,7 +1310,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt308 && _livEnt308.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt312 && _livEnt312.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 29) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{
@@ -1331,7 +1343,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt309 && _livEnt309.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt313 && _livEnt313.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 33) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{
@@ -1364,7 +1376,7 @@ public class SpecialAttackProcedure {
 				}
 			}
 		}
-		if (entity instanceof LivingEntity _livEnt310 && _livEnt310.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt314 && _livEnt314.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 37) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 					{

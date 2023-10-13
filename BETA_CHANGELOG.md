@@ -5,6 +5,7 @@ What's new in Keepers of the Stones version II 1.0.0.2?<br />
 <br />- Added the elemental_stones tag in the Forge namespace
 <br />- The power scale was displayed in the game screen
 <br />- [Bugfix] Fixed fire master armor
+<br />- [Bugfix] Fixed a bug that caused fire to be placed in the air when using a flamethrower
 <br />- [Bugfix] Fixed button shift in the ability wheel interface
 <br />- [Bugfix] Fixed a bug when identical stones were issued
 <br />- [Bugfix] Fixed a bug due to which the stalagmite was not placed
