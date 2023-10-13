@@ -1,5 +1,5 @@
 {
-  "_fv": 52,
+  "_fv": 53,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -10,22 +10,6 @@
     "renderBgLayer": false,
     "doesPauseGame": false,
     "components": [
-      {
-        "type": "label",
-        "data": {
-          "name": "label_proc_get_power_scale",
-          "text": {
-            "fixedValue": "000",
-            "name": "GetPowerScale"
-          },
-          "color": {
-            "value": -3355444,
-            "falpha": 0.0
-          },
-          "x": 204,
-          "y": 116
-        }
-      },
       {
         "type": "image",
         "data": {

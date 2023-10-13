@@ -5197,6 +5197,20 @@
         ]
       },
       "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "PowerScaleOverlay",
+      "type": "overlay",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_scale_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/screens/PowerScaleOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/PowerScaleModule "
     }
   ],
   "variable_elements": [
@@ -5486,6 +5500,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "gui.power.wheel_abilities_lava.button_1": "1",
+      "gui.power.fvf.label_proc_get_power_scale": "000",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.smoke_stone": "Камень дыма",
       "block.power.basic_box": "Шкатулка",
@@ -5643,6 +5658,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
       "item.power.sound_armor_boots": "Sound Boots",
       "gui.power.wheel_abilities_lava.button_1": "1",
+      "gui.power.fvf.label_proc_get_power_scale": "000",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.smoke_stone": "Smoke Stone",
       "block.power.basic_box": "Box",
@@ -6054,5 +6070,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300441510
+  "mcreatorVersion": 202300441522
 }

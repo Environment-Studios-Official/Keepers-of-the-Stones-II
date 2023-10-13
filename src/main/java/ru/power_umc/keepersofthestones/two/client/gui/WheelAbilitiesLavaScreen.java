@@ -3,7 +3,6 @@ package ru.power_umc.keepersofthestones.two.client.gui;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesLavaMenu;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelTwoProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelThreeProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.GetPowerScaleProcedure;
 import ru.power_umc.keepersofthestones.two.network.WheelAbilitiesLavaButtonMessage;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
@@ -78,9 +77,6 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font,
-
-				GetPowerScaleProcedure.execute(entity), 86, 92, -3355444, false);
 	}
 
 	@Override

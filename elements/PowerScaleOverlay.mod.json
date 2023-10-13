@@ -1,0 +1,45 @@
+{
+  "_fv": 53,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_power_scale",
+          "text": {
+            "fixedValue": "000",
+            "name": "GetPowerScale"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 406,
+          "y": 216
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "ice_master.png",
+          "use1Xscale": true,
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 398,
+          "y": 217
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

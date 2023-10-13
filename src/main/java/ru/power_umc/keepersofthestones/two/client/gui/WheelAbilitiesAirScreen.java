@@ -3,7 +3,6 @@ package ru.power_umc.keepersofthestones.two.client.gui;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesAirMenu;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelTwoProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelThreeProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.GetPowerScaleProcedure;
 import ru.power_umc.keepersofthestones.two.network.WheelAbilitiesAirButtonMessage;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
@@ -83,9 +82,6 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font,
-
-				GetPowerScaleProcedure.execute(entity), 86, 92, -3355444, false);
 	}
 
 	@Override

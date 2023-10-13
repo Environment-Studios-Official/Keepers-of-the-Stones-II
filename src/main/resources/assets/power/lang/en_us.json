@@ -66,6 +66,7 @@
   "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
   "item.power.sound_armor_boots": "Sound Boots",
   "gui.power.wheel_abilities_lava.button_1": "1",
+  "gui.power.fvf.label_proc_get_power_scale": "000",
   "item.power.magic_fireball": "Magic Fireball",
   "item.power.smoke_stone": "Smoke Stone",
   "block.power.basic_box": "Box",

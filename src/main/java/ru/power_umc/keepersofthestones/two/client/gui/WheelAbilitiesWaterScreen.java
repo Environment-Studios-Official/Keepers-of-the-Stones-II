@@ -3,7 +3,6 @@ package ru.power_umc.keepersofthestones.two.client.gui;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesWaterMenu;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelTwoProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelThreeProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.GetPowerScaleProcedure;
 import ru.power_umc.keepersofthestones.two.network.WheelAbilitiesWaterButtonMessage;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
@@ -83,9 +82,6 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font,
-
-				GetPowerScaleProcedure.execute(entity), 86, 92, -3355444, false);
 	}
 
 	@Override
