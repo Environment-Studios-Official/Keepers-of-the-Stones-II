@@ -6304,6 +6304,14 @@
       ],
       "category": "player",
       "subtitle": "Stone been deactivation"
+    },
+    {
+      "name": "electric_spark",
+      "files": [
+        "electric_spark"
+      ],
+      "category": "neutral",
+      "subtitle": "Spark"
     }
   ],
   "language_map": {
@@ -6357,6 +6365,7 @@
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
+      "subtitles.electric_spark": "Искра",
       "item.power.fire_sword": "Меч огня",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
       "effect.power.crystal_master": "Master of the Crystal",
@@ -6546,6 +6555,7 @@
       "item.power.ocean_armor_leggings": "Ocean Leggings",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
+      "subtitles.electric_spark": "Spark",
       "item.power.fire_sword": "Fire Sword",
       "item.power.animals_armor_helmet": "Animals Helmet",
       "effect.power.crystal_master": "Master of the Crystal",
