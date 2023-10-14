@@ -470,9 +470,6 @@
       "locked_code": false,
       "registry_name": "special_attack",
       "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SpecialAttackProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
