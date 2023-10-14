@@ -324,45 +324,45 @@ public class SpecialAttackProcedure {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)), 9);
 									if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 2.5, 0));
+											entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 2.5, 0));
+											entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
 										}
 									} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, (-2.5), 0));
+											entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, (-2.5), 0));
+											entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
 										}
 									} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 0, (-2.5)));
+											entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 0, (-2.5)));
+											entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
 										}
 									} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 0, 2.5));
+											entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(0, 0, 2.5));
+											entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
 										}
 									} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3((-2.5), 0, 0));
+											entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3((-2.5), 0, 0));
+											entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
 										}
 									} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
 										if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(2.5, 0, 0));
+											entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
 										}
 										if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-											entityiterator.setDeltaMovement(new Vec3(2.5, 0, 0));
+											entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
 										}
 									}
 								}

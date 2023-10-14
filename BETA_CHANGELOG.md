@@ -1,3 +1,3 @@
 What's new in Keepers of the Stones version II 1.0.0.3?<br />
-<br />- 
+<br />- Reduced knockback on air flow
 <br />- [Bugfix] 
