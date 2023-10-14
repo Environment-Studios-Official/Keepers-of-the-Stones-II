@@ -36,6 +36,7 @@ import ru.power_umc.keepersofthestones.two.item.MoonStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MistStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MindStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MetalStoneItem;
+import ru.power_umc.keepersofthestones.two.item.MetalArmorItem;
 import ru.power_umc.keepersofthestones.two.item.MercuryStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MagnetStoneItem;
 import ru.power_umc.keepersofthestones.two.item.MagicFireballItem;
@@ -70,6 +71,7 @@ import ru.power_umc.keepersofthestones.two.item.CreationStoneItem;
 import ru.power_umc.keepersofthestones.two.item.BlueFlameStoneItem;
 import ru.power_umc.keepersofthestones.two.item.BloodStoneItem;
 import ru.power_umc.keepersofthestones.two.item.AnimalsStoneItem;
+import ru.power_umc.keepersofthestones.two.item.AnimalsArmorItem;
 import ru.power_umc.keepersofthestones.two.item.AmberStoneItem;
 import ru.power_umc.keepersofthestones.two.item.AirStoneItem;
 import ru.power_umc.keepersofthestones.two.item.AirRapierItem;
@@ -199,6 +201,14 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PLANTS_ARMOR_CHESTPLATE = REGISTRY.register("plants_armor_chestplate", () -> new PlantsArmorItem.Chestplate());
 	public static final RegistryObject<Item> PLANTS_ARMOR_LEGGINGS = REGISTRY.register("plants_armor_leggings", () -> new PlantsArmorItem.Leggings());
 	public static final RegistryObject<Item> PLANTS_ARMOR_BOOTS = REGISTRY.register("plants_armor_boots", () -> new PlantsArmorItem.Boots());
+	public static final RegistryObject<Item> ANIMALS_ARMOR_HELMET = REGISTRY.register("animals_armor_helmet", () -> new AnimalsArmorItem.Helmet());
+	public static final RegistryObject<Item> ANIMALS_ARMOR_CHESTPLATE = REGISTRY.register("animals_armor_chestplate", () -> new AnimalsArmorItem.Chestplate());
+	public static final RegistryObject<Item> ANIMALS_ARMOR_LEGGINGS = REGISTRY.register("animals_armor_leggings", () -> new AnimalsArmorItem.Leggings());
+	public static final RegistryObject<Item> ANIMALS_ARMOR_BOOTS = REGISTRY.register("animals_armor_boots", () -> new AnimalsArmorItem.Boots());
+	public static final RegistryObject<Item> METAL_ARMOR_HELMET = REGISTRY.register("metal_armor_helmet", () -> new MetalArmorItem.Helmet());
+	public static final RegistryObject<Item> METAL_ARMOR_CHESTPLATE = REGISTRY.register("metal_armor_chestplate", () -> new MetalArmorItem.Chestplate());
+	public static final RegistryObject<Item> METAL_ARMOR_LEGGINGS = REGISTRY.register("metal_armor_leggings", () -> new MetalArmorItem.Leggings());
+	public static final RegistryObject<Item> METAL_ARMOR_BOOTS = REGISTRY.register("metal_armor_boots", () -> new MetalArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
