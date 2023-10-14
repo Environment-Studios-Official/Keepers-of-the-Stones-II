@@ -41,6 +41,7 @@ import ru.power_umc.keepersofthestones.two.item.LightStoneItem;
 import ru.power_umc.keepersofthestones.two.item.LavaStoneItem;
 import ru.power_umc.keepersofthestones.two.item.LavaArmorItem;
 import ru.power_umc.keepersofthestones.two.item.IceStoneItem;
+import ru.power_umc.keepersofthestones.two.item.IceSpearItem;
 import ru.power_umc.keepersofthestones.two.item.IceArmorItem;
 import ru.power_umc.keepersofthestones.two.item.GravityStoneItem;
 import ru.power_umc.keepersofthestones.two.item.GoldenDustStoneItem;
@@ -177,6 +178,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_ARMOR_CHESTPLATE = REGISTRY.register("lava_armor_chestplate", () -> new LavaArmorItem.Chestplate());
 	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
 	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
+	public static final RegistryObject<Item> ICE_SPEAR = REGISTRY.register("ice_spear", () -> new IceSpearItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
