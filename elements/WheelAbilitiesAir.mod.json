@@ -63,7 +63,7 @@
         "data": {
           "name": "tooltip_air_flow_uses_10_power_points",
           "text": {
-            "fixedValue": "Air flow, uses 10 power points"
+            "fixedValue": "Air flow, uses 10"
           },
           "width": 24,
           "height": 24,
@@ -76,7 +76,7 @@
         "data": {
           "name": "tooltip_wind_gust_uses_25_power_points",
           "text": {
-            "fixedValue": "Wind gust, uses 25 power points"
+            "fixedValue": "Wind gust, uses 25"
           },
           "width": 24,
           "height": 24,
@@ -89,7 +89,7 @@
         "data": {
           "name": "tooltip_air_flight_uses_5_power_points",
           "text": {
-            "fixedValue": "Air flight, uses 5 power points"
+            "fixedValue": "Air flight, uses 5"
           },
           "width": 24,
           "height": 24,
