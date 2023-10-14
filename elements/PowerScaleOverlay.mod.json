@@ -25,10 +25,10 @@
         "type": "image",
         "data": {
           "image": "power_scale_star.png",
-          "use1Xscale": true,
+          "use1Xscale": false,
           "anchorPoint": "BOTTOM_RIGHT",
-          "x": 390,
-          "y": 225
+          "x": 383,
+          "y": 219
         }
       }
     ],

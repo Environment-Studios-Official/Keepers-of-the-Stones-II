@@ -44,7 +44,7 @@ public class PowerScaleOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
-			event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/power_scale_star.png"), w - 37, h - 15, 0, 0, 8, 8, 8, 8);
+			event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/power_scale_star.png"), w - 44, h - 21, 0, 0, 16, 16, 16, 16);
 
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
