@@ -61,7 +61,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,7 +92,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 141, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(0, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -106,7 +106,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 153, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(1, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -120,7 +120,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 165, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(2, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -134,7 +134,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_ethereal_ray = new ImageButton(this.leftPos + 73, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_ray.png"), 46, 92, e -> {
+		imagebutton_ethereal_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_ray.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(3, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -142,7 +142,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_ethereal_ray", imagebutton_ethereal_ray);
 		this.addRenderableWidget(imagebutton_ethereal_ray);
-		imagebutton_ethereal_volley = new ImageButton(this.leftPos + 134, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_volley.png"), 46, 92, e -> {
+		imagebutton_ethereal_volley = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_volley.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(4, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -150,7 +150,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_ethereal_volley", imagebutton_ethereal_volley);
 		this.addRenderableWidget(imagebutton_ethereal_volley);
-		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 12, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_aura.png"), 46, 92, e -> {
+		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_aura.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(5, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 5, x, y, z);
