@@ -12,7 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 
 public class CrystalMasterMobEffect extends MobEffect {
 	public CrystalMasterMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -6749953);
+		super(MobEffectCategory.BENEFICIAL, -6749953);
 	}
 
 	@Override

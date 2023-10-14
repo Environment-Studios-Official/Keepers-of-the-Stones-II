@@ -10,7 +10,7 @@
     },
     "isInstant": false,
     "isBad": false,
-    "isBenefitical": false,
+    "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "onStarted": {

@@ -12,7 +12,7 @@ import net.minecraft.world.effect.MobEffect;
 
 public class LavaMasterMobEffect extends MobEffect {
 	public LavaMasterMobEffect() {
-		super(MobEffectCategory.NEUTRAL, -39424);
+		super(MobEffectCategory.BENEFICIAL, -39424);
 	}
 
 	@Override

@@ -1,0 +1,17 @@
+{
+  "_fv": 53,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Tornado",
+    "icon": "tornado_master.png",
+    "color": {
+      "value": -6724096,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true
+  }
+}
