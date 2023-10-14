@@ -35,6 +35,10 @@ public class ShieldInHandsProcedure {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
+		} else if ((entity instanceof Player == true || entity instanceof ServerPlayer == true) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EARTH_SHIELD.get()) {
+			if (event != null && event.isCancelable()) {
+				event.setCanceled(true);
+			}
 		}
 	}
 }

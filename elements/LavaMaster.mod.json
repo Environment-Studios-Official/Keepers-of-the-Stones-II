@@ -1,0 +1,26 @@
+{
+  "_fv": 53,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Lava",
+    "icon": "lava_master.png",
+    "color": {
+      "value": -39424,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "LavaMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "LavaMasterEnd"
+    }
+  }
+}

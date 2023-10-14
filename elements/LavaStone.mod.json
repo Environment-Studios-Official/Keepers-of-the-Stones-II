@@ -1,0 +1,73 @@
+{
+  "_fv": 53,
+  "_type": "item",
+  "definition": {
+    "renderType": 0,
+    "texture": "lava_stone",
+    "customModelName": "Normal",
+    "customProperties": {},
+    "states": [
+      {
+        "renderType": 0,
+        "texture": "recharging_stone",
+        "customModelName": "Normal",
+        "stateMap": [
+          {
+            "property": {
+              "min": 0.0,
+              "max": 1.0,
+              "name": "cooldown",
+              "type": "number"
+            },
+            "value": 0.01
+          }
+        ]
+      }
+    ],
+    "name": "Lava Stone",
+    "rarity": "COMMON",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "stackSize": 1,
+    "enchantability": 0,
+    "useDuration": 0,
+    "toolType": 0.0,
+    "damageCount": 0,
+    "recipeRemainder": {
+      "value": ""
+    },
+    "destroyAnyBlock": false,
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "enableMeleeDamage": false,
+    "damageVsEntity": 0.0,
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "LavaStoneUse"
+    },
+    "enableRanged": false,
+    "shootConstantly": false,
+    "projectile": {
+      "value": "CUSTOM:MagicFireballProjectile"
+    },
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
+    "eatResultItem": {
+      "value": ""
+    },
+    "isMeat": false,
+    "isAlwaysEdible": false,
+    "animation": "none"
+  }
+}

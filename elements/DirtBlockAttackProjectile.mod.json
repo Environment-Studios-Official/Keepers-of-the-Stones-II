@@ -1,0 +1,25 @@
+{
+  "_fv": 53,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.DIRT#0"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 2.0,
+    "knockback": 2,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "dirt_attack.png",
+    "onHitsBlock": {
+      "name": "DirtBlockAttackKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "DirtBlockAttackKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

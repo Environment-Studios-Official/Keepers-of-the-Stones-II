@@ -3,7 +3,7 @@
     {
       "name": "SetupAnimations",
       "type": "procedure",
-      "sortid": 6,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "setup_animations",
@@ -18,7 +18,7 @@
     {
       "name": "ReturnStoneAfterDead",
       "type": "procedure",
-      "sortid": 7,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "return_stone_after_dead",
@@ -102,7 +102,7 @@
     {
       "name": "Stones",
       "type": "tab",
-      "sortid": 8,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stones",
@@ -130,7 +130,7 @@
     {
       "name": "FireMaster",
       "type": "potioneffect",
-      "sortid": 9,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master",
@@ -144,7 +144,7 @@
     {
       "name": "AirMaster",
       "type": "potioneffect",
-      "sortid": 10,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master",
@@ -158,7 +158,7 @@
     {
       "name": "EarthMaster",
       "type": "potioneffect",
-      "sortid": 11,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master",
@@ -172,7 +172,7 @@
     {
       "name": "WaterMaster",
       "type": "potioneffect",
-      "sortid": 12,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master",
@@ -186,7 +186,7 @@
     {
       "name": "EtherMaster",
       "type": "potioneffect",
-      "sortid": 13,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master",
@@ -200,7 +200,7 @@
     {
       "name": "FireStoneUse",
       "type": "procedure",
-      "sortid": 14,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_stone_use",
@@ -236,7 +236,7 @@
     {
       "name": "DetransformationKey",
       "type": "keybind",
-      "sortid": 15,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "detransformation_key",
@@ -250,7 +250,7 @@
     {
       "name": "DetransformationKeyUse",
       "type": "procedure",
-      "sortid": 16,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "detransformation_key_use",
@@ -286,7 +286,7 @@
     {
       "name": "FireMasterStart",
       "type": "procedure",
-      "sortid": 17,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master_start",
@@ -322,7 +322,7 @@
     {
       "name": "FireMasterEnd",
       "type": "procedure",
-      "sortid": 18,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master_end",
@@ -358,7 +358,7 @@
     {
       "name": "EnhancedAbilities",
       "type": "procedure",
-      "sortid": 19,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "enhanced_abilities",
@@ -378,7 +378,7 @@
     {
       "name": "GettingStone",
       "type": "procedure",
-      "sortid": 20,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "getting_stone",
@@ -402,7 +402,7 @@
     {
       "name": "BasicBox",
       "type": "block",
-      "sortid": 21,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "basic_box",
@@ -420,7 +420,7 @@
     {
       "name": "Boxes",
       "type": "tab",
-      "sortid": 22,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "boxes",
@@ -432,7 +432,7 @@
     {
       "name": "FireArmor",
       "type": "armor",
-      "sortid": 23,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor",
@@ -450,7 +450,7 @@
     {
       "name": "FireSword",
       "type": "tool",
-      "sortid": 28,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_sword",
@@ -463,25 +463,9 @@
       "path": "~/Elements/Fire"
     },
     {
-      "name": "MagicFireball",
-      "type": "rangeditem",
-      "sortid": 32,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "magic_fireball",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/magic_fireball.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/MagicFireballEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagicFireballItem.java"
-        ]
-      },
-      "path": "~/Elements/Fire"
-    },
-    {
       "name": "SpecialAttack",
       "type": "procedure",
-      "sortid": 35,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "special_attack",
@@ -517,7 +501,7 @@
     {
       "name": "FirePassiveProtection",
       "type": "procedure",
-      "sortid": 36,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_passive_protection",
@@ -553,7 +537,7 @@
     {
       "name": "PowerScaleRegen",
       "type": "procedure",
-      "sortid": 38,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_scale_regen",
@@ -573,7 +557,7 @@
     {
       "name": "GetPowerScale",
       "type": "procedure",
-      "sortid": 39,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_power_scale",
@@ -594,7 +578,7 @@
     {
       "name": "GetActive",
       "type": "procedure",
-      "sortid": 41,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_active",
@@ -615,7 +599,7 @@
     {
       "name": "AirArmor",
       "type": "armor",
-      "sortid": 42,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor",
@@ -633,7 +617,7 @@
     {
       "name": "AirStoneUse",
       "type": "procedure",
-      "sortid": 43,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_stone_use",
@@ -669,7 +653,7 @@
     {
       "name": "AirMasterStart",
       "type": "procedure",
-      "sortid": 44,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_start",
@@ -705,7 +689,7 @@
     {
       "name": "AirMasterEnd",
       "type": "procedure",
-      "sortid": 45,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_end",
@@ -739,51 +723,9 @@
       "path": "~/Elements/Air"
     },
     {
-      "name": "ElementalArmor",
-      "type": "tag",
-      "sortid": 47,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_armor",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/tags/items/elemental_armor.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "StonesTag",
-      "type": "tag",
-      "sortid": 48,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stones_tag",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/tags/items/stones.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
-      "name": "ElementalWeapon",
-      "type": "tag",
-      "sortid": 49,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_weapon",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/tags/items/elemental_weapon.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
       "name": "FireSwordKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 50,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_sword_kazhdyi_tik_v_invientarie",
@@ -803,7 +745,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 51,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_shliema",
@@ -823,7 +765,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 52,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -843,7 +785,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 53,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -863,7 +805,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 54,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_botinok",
@@ -883,7 +825,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 55,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_shliema",
@@ -903,7 +845,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 56,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -923,7 +865,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 57,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -943,7 +885,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 58,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_botinok",
@@ -963,7 +905,7 @@
     {
       "name": "AirRapier",
       "type": "tool",
-      "sortid": 59,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_rapier",
@@ -978,7 +920,7 @@
     {
       "name": "AirRapierKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 60,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_rapier_kazhdyi_tik_v_invientarie",
@@ -998,7 +940,7 @@
     {
       "name": "WheelAbilitiesFire",
       "type": "gui",
-      "sortid": 61,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_fire",
@@ -1014,7 +956,7 @@
     {
       "name": "AbilityWheelOpeningkey",
       "type": "keybind",
-      "sortid": 62,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_wheel_openingkey",
@@ -1028,7 +970,7 @@
     {
       "name": "Attack1",
       "type": "procedure",
-      "sortid": 64,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_1",
@@ -1048,7 +990,7 @@
     {
       "name": "Attack2",
       "type": "procedure",
-      "sortid": 65,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_2",
@@ -1068,7 +1010,7 @@
     {
       "name": "Attack3",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_3",
@@ -1088,7 +1030,7 @@
     {
       "name": "Attack4",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_4",
@@ -1108,7 +1050,7 @@
     {
       "name": "WheelAbilitiesAir",
       "type": "gui",
-      "sortid": 68,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_air",
@@ -1124,7 +1066,7 @@
     {
       "name": "EarthStoneUse",
       "type": "procedure",
-      "sortid": 69,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_stone_use",
@@ -1160,7 +1102,7 @@
     {
       "name": "EarthArmor",
       "type": "armor",
-      "sortid": 73,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor",
@@ -1176,26 +1118,9 @@
       "path": "~/Elements/Earth"
     },
     {
-      "name": "StoneAttack",
-      "type": "rangeditem",
-      "sortid": 74,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/StoneAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/StoneAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/StoneAttackRenderer.java",
-          "src/main/resources/assets/power/models/item/stone_attack.json"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "PowerScaleSet",
       "type": "procedure",
-      "sortid": 75,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_scale_set",
@@ -1207,10 +1132,6 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
-          },
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -1219,7 +1140,7 @@
     {
       "name": "Pw",
       "type": "command",
-      "sortid": 76,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pw",
@@ -1231,77 +1152,9 @@
       "path": "~/Modules/Commands"
     },
     {
-      "name": "GrassBlockAttack",
-      "type": "rangeditem",
-      "sortid": 77,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grass_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/GrassBlockAttackItem.java",
-          "src/main/resources/assets/power/models/item/grass_block_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "DirtBlockAttack",
-      "type": "rangeditem",
-      "sortid": 78,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "dirt_block_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/DirtBlockAttackRenderer.java",
-          "src/main/resources/assets/power/models/item/dirt_block_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/DirtBlockAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/DirtBlockAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "CobblestoneAttack",
-      "type": "rangeditem",
-      "sortid": 79,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobblestone_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobblestone_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobblestoneAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackRenderer.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "CobbledDeepslateAttack",
-      "type": "rangeditem",
-      "sortid": 80,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cobbled_deepslate_attack",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/cobbled_deepslate_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/CobbledDeepslateAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobbledDeepslateAttackEntity.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobbledDeepslateAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "EarthArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 81,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_shliema",
@@ -1321,7 +1174,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 82,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -1341,7 +1194,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 83,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -1361,7 +1214,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 84,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_botinok",
@@ -1381,7 +1234,7 @@
     {
       "name": "EarthHammer",
       "type": "tool",
-      "sortid": 85,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_hammer",
@@ -1396,7 +1249,7 @@
     {
       "name": "EarthHammerKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 86,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_hammer_kazhdyi_tik_v_invientarie",
@@ -1416,7 +1269,7 @@
     {
       "name": "BasicBoxhtmlDopolnitielnaiaInformatsiiaOBlokiebrsmallIspolzuitieZapiatyieDliaRazdielieniiaZapisiei",
       "type": "procedure",
-      "sortid": 87,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "basic_boxhtml_dopolnitielnaia_informatsiia_o_blokiebrsmall_ispolzuitie_zapiatyie_dlia_razdielieniia_zapisiei",
@@ -1432,7 +1285,7 @@
     {
       "name": "Attack5",
       "type": "procedure",
-      "sortid": 88,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_5",
@@ -1452,7 +1305,7 @@
     {
       "name": "Attack6",
       "type": "procedure",
-      "sortid": 89,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_6",
@@ -1472,7 +1325,7 @@
     {
       "name": "Attack7",
       "type": "procedure",
-      "sortid": 90,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_7",
@@ -1492,7 +1345,7 @@
     {
       "name": "Attack8",
       "type": "procedure",
-      "sortid": 91,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_8",
@@ -1512,7 +1365,7 @@
     {
       "name": "Attack9",
       "type": "procedure",
-      "sortid": 92,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_9",
@@ -1532,7 +1385,7 @@
     {
       "name": "Attack10",
       "type": "procedure",
-      "sortid": 93,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_10",
@@ -1552,7 +1405,7 @@
     {
       "name": "Attack11",
       "type": "procedure",
-      "sortid": 94,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_11",
@@ -1572,7 +1425,7 @@
     {
       "name": "Attack12",
       "type": "procedure",
-      "sortid": 95,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_12",
@@ -1592,7 +1445,7 @@
     {
       "name": "OpenWheelOne",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_one",
@@ -1628,7 +1481,7 @@
     {
       "name": "OpenWheelTwo",
       "type": "procedure",
-      "sortid": 97,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_two",
@@ -1664,7 +1517,7 @@
     {
       "name": "OpenWheelThree",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_three",
@@ -1700,7 +1553,7 @@
     {
       "name": "GetWheelTwo",
       "type": "procedure",
-      "sortid": 99,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_wheel_two",
@@ -1721,7 +1574,7 @@
     {
       "name": "GetWheelThree",
       "type": "procedure",
-      "sortid": 100,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_wheel_three",
@@ -1742,7 +1595,7 @@
     {
       "name": "StoneAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 101,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stone_attack_koghda_snariad_popadaiet_v_blok",
@@ -1774,7 +1627,7 @@
     {
       "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 102,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grass_block_attack_koghda_snariad_popadaiet_v_blok",
@@ -1806,7 +1659,7 @@
     {
       "name": "DirtBlockAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 103,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dirt_block_attack_koghda_snariad_popadaiet_v_blok",
@@ -1838,7 +1691,7 @@
     {
       "name": "CobblestoneAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 104,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobblestone_attack_koghda_snariad_popadaiet_v_blok",
@@ -1870,7 +1723,7 @@
     {
       "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 105,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_koghda_snariad_popadaiet_v_blok",
@@ -1902,7 +1755,7 @@
     {
       "name": "WaterKatana",
       "type": "tool",
-      "sortid": 107,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_katana",
@@ -1917,7 +1770,7 @@
     {
       "name": "WaterKatanaKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 106,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_katana_kazhdyi_tik_v_invientarie",
@@ -1937,7 +1790,7 @@
     {
       "name": "EarthMasterStart",
       "type": "procedure",
-      "sortid": 108,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master_start",
@@ -1973,7 +1826,7 @@
     {
       "name": "EarthMasterEnd",
       "type": "procedure",
-      "sortid": 109,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master_end",
@@ -2009,7 +1862,7 @@
     {
       "name": "WaterMasterStart",
       "type": "procedure",
-      "sortid": 110,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master_start",
@@ -2045,7 +1898,7 @@
     {
       "name": "WaterMasterEnd",
       "type": "procedure",
-      "sortid": 111,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master_end",
@@ -2081,7 +1934,7 @@
     {
       "name": "WaterArmor",
       "type": "armor",
-      "sortid": 112,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor",
@@ -2099,7 +1952,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 113,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_shliema",
@@ -2119,7 +1972,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 114,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -2139,7 +1992,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 115,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -2159,7 +2012,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 116,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_botinok",
@@ -2179,7 +2032,7 @@
     {
       "name": "WaterStoneUse",
       "type": "procedure",
-      "sortid": 117,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_stone_use",
@@ -2215,7 +2068,7 @@
     {
       "name": "Attack13",
       "type": "procedure",
-      "sortid": 119,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_13",
@@ -2235,7 +2088,7 @@
     {
       "name": "Attack14",
       "type": "procedure",
-      "sortid": 120,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_14",
@@ -2255,7 +2108,7 @@
     {
       "name": "Attack15",
       "type": "procedure",
-      "sortid": 121,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_15",
@@ -2275,7 +2128,7 @@
     {
       "name": "Attack16",
       "type": "procedure",
-      "sortid": 122,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_16",
@@ -2295,7 +2148,7 @@
     {
       "name": "EtherMasterStart",
       "type": "procedure",
-      "sortid": 123,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master_start",
@@ -2331,7 +2184,7 @@
     {
       "name": "EtherMasterEnd",
       "type": "procedure",
-      "sortid": 124,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master_end",
@@ -2367,7 +2220,7 @@
     {
       "name": "EtherStoneUse",
       "type": "procedure",
-      "sortid": 125,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_stone_use",
@@ -2403,7 +2256,7 @@
     {
       "name": "EtherGlaive",
       "type": "tool",
-      "sortid": 126,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_glaive",
@@ -2418,7 +2271,7 @@
     {
       "name": "EtherGlaiveKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_glaive_kazhdyi_tik_v_invientarie",
@@ -2438,7 +2291,7 @@
     {
       "name": "EtherArmor",
       "type": "armor",
-      "sortid": 128,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor",
@@ -2456,7 +2309,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 129,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_shliema",
@@ -2476,7 +2329,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 130,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -2496,7 +2349,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 131,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -2516,7 +2369,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 132,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_botinok",
@@ -2536,7 +2389,7 @@
     {
       "name": "Attack17",
       "type": "procedure",
-      "sortid": 134,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_17",
@@ -2556,7 +2409,7 @@
     {
       "name": "Attack18",
       "type": "procedure",
-      "sortid": 135,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_18",
@@ -2576,7 +2429,7 @@
     {
       "name": "Attack19",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_19",
@@ -2596,7 +2449,7 @@
     {
       "name": "Attack20",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_20",
@@ -2614,26 +2467,9 @@
       "path": "~/Modules/AbilityWheelModule/Ether"
     },
     {
-      "name": "WaterAttack",
-      "type": "rangeditem",
-      "sortid": 138,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "water_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/WaterAttackRenderer.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/WaterAttackItem.java",
-          "src/main/resources/assets/power/models/item/water_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/WaterAttackEntity.java"
-        ]
-      },
-      "path": "~/Elements/Water"
-    },
-    {
       "name": "WaterAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_koghda_snariad_popadaiet_v_blok",
@@ -2665,7 +2501,7 @@
     {
       "name": "WheelAbilitiesWater",
       "type": "gui",
-      "sortid": 140,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_water",
@@ -2681,7 +2517,7 @@
     {
       "name": "WheelAbilitiesEarth",
       "type": "gui",
-      "sortid": 141,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_earth",
@@ -2697,7 +2533,7 @@
     {
       "name": "WheelAbilitiesEther",
       "type": "gui",
-      "sortid": 142,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ether",
@@ -2713,7 +2549,7 @@
     {
       "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_koghda_snariad_popadaiet_v_sushchnost",
@@ -2745,7 +2581,7 @@
     {
       "name": "WaterPassiveWaterBreath",
       "type": "procedure",
-      "sortid": 144,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_passive_water_breath",
@@ -2781,7 +2617,7 @@
     {
       "name": "ShieldInHands",
       "type": "procedure",
-      "sortid": 146,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shield_in_hands",
@@ -2801,7 +2637,7 @@
     {
       "name": "ShieldProtectionTick",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shield_protection_tick",
@@ -2821,7 +2657,7 @@
     {
       "name": "EarthShield",
       "type": "tool",
-      "sortid": 149,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_shield",
@@ -2836,7 +2672,7 @@
     {
       "name": "EarthShieldKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 150,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_shield_kazhdyi_tik_v_invientarie",
@@ -2856,7 +2692,7 @@
     {
       "name": "AbilityUsingKey",
       "type": "keybind",
-      "sortid": 151,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_using_key",
@@ -2868,26 +2704,9 @@
       "path": "~/Modules/KeyBindsModule"
     },
     {
-      "name": "EtherAttack",
-      "type": "rangeditem",
-      "sortid": 152,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "ether_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestones/two/item/EtherAttackItem.java",
-          "src/main/java/ru/power_umc/keepersofthestones/two/entity/EtherAttackEntity.java",
-          "src/main/resources/assets/power/models/item/ether_attack.json",
-          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/EtherAttackRenderer.java"
-        ]
-      },
-      "path": "~/Elements/Ether"
-    },
-    {
       "name": "EtherAttackKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_kazhdyi_tik_pri_poliotie_snariada",
@@ -2915,6 +2734,2483 @@
         ]
       },
       "path": "~/Elements/Ether"
+    },
+    {
+      "name": "IceStone",
+      "type": "item",
+      "sortid": 6,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/IceStoneItem.java",
+          "src/main/resources/assets/power/models/item/ice_stone_0.json",
+          "src/main/resources/assets/power/models/item/ice_stone.json"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceMaster",
+      "type": "potioneffect",
+      "sortid": 166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/IceMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmor",
+      "type": "armor",
+      "sortid": 167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/ice_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/IceArmorItem.java",
+          "src/main/resources/assets/power/models/item/ice_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/ice_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/ice_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceStoneUse",
+      "type": "procedure",
+      "sortid": 172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceMasterStart",
+      "type": "procedure",
+      "sortid": 173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceMasterEnd",
+      "type": "procedure",
+      "sortid": 174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "WheelAbilitiesIce",
+      "type": "gui",
+      "sortid": 175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_ice",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesIceButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesIceMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesIceScreen.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "Attack21",
+      "type": "procedure",
+      "sortid": 176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_21",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack21Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "Attack22",
+      "type": "procedure",
+      "sortid": 177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_22",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack22Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "Attack23",
+      "type": "procedure",
+      "sortid": 178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_23",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack23Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "Attack24",
+      "type": "procedure",
+      "sortid": 179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_24",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack24Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "LightningStone",
+      "type": "item",
+      "sortid": 7,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lightning_stone.json",
+          "src/main/resources/assets/power/models/item/lightning_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LightningStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMaster",
+      "type": "potioneffect",
+      "sortid": 180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/LightningMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmor",
+      "type": "armor",
+      "sortid": 181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lightning_armor_boots.json",
+          "src/main/resources/assets/power/models/item/lightning_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LightningArmorItem.java",
+          "src/main/resources/assets/power/models/item/lightning_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/lightning_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 184,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 185,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "WheelAbilitiesLightning",
+      "type": "gui",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_lightning",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesLightningScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesLightningMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesLightningButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack25",
+      "type": "procedure",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_25",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack25Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack26",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_26",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack26Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack27",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_27",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack27Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "Attack28",
+      "type": "procedure",
+      "sortid": 190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_28",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack28Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lightning"
+    },
+    {
+      "name": "LightningStoneUse",
+      "type": "procedure",
+      "sortid": 191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMasterStart",
+      "type": "procedure",
+      "sortid": 192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningMasterEnd",
+      "type": "procedure",
+      "sortid": 193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LightningMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "MagicFireballProjectile",
+      "type": "projectile",
+      "sortid": 194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_fireball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/MagicFireballProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "MagicFireball",
+      "type": "item",
+      "sortid": 195,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magic_fireball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/magic_fireball.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagicFireballItem.java"
+        ]
+      },
+      "path": "~/Elements/Fire"
+    },
+    {
+      "name": "StoneAttackProjectile",
+      "type": "projectile",
+      "sortid": 196,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/StoneAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/StoneAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "GrassBlockAttackProjectile",
+      "type": "projectile",
+      "sortid": 197,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grass_block_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/GrassBlockAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/GrassBlockAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "DirtBlockAttackProjectile",
+      "type": "projectile",
+      "sortid": 198,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "dirt_block_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/DirtBlockAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/DirtBlockAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobblestoneAttackProjectile",
+      "type": "projectile",
+      "sortid": 199,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobblestone_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobblestoneAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobblestoneAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "CobbledDeepslateAttackProjectile",
+      "type": "projectile",
+      "sortid": 200,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cobbled_deepslate_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/CobbledDeepslateAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/CobbledDeepslateAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Earth"
+    },
+    {
+      "name": "WaterAttackProjectile",
+      "type": "projectile",
+      "sortid": 201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/WaterAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/WaterAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Water"
+    },
+    {
+      "name": "EtherAttackProjectile",
+      "type": "projectile",
+      "sortid": 202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/EtherAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/EtherAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Ether"
+    },
+    {
+      "name": "SoundStone",
+      "type": "item",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SoundStoneItem.java",
+          "src/main/resources/assets/power/models/item/sound_stone_0.json",
+          "src/main/resources/assets/power/models/item/sound_stone.json"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundMaster",
+      "type": "potioneffect",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/SoundMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundArmor",
+      "type": "armor",
+      "sortid": 204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/sound_armor_helmet.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SoundArmorItem.java",
+          "src/main/resources/assets/power/models/item/sound_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/sound_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/sound_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundStoneUse",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundMasterStart",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundMasterEnd",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/SoundMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "WheelAbilitiesSound",
+      "type": "gui",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_sound",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesSoundScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesSoundButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesSoundMenu.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "Attack29",
+      "type": "procedure",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_29",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack29Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "Attack30",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_30",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack30Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "Attack31",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_31",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack31Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "Attack32",
+      "type": "procedure",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_32",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack32Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "IceAttackProjectile",
+      "type": "projectile",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/IceAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/IceAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "IceAttackProjectileProjectileHitsBlock",
+      "type": "procedure",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_attack_projectile_projectile_hits_block",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/IceAttackProjectileProjectileHitsBlockProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "CrystalStone",
+      "type": "item",
+      "sortid": 9,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/crystal_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CrystalStoneItem.java",
+          "src/main/resources/assets/power/models/item/crystal_stone.json"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmor",
+      "type": "armor",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/crystal_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CrystalArmorItem.java",
+          "src/main/resources/assets/power/models/item/crystal_armor_boots.json",
+          "src/main/resources/assets/power/models/item/crystal_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/crystal_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalStoneUse",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalMasterStart",
+      "type": "procedure",
+      "sortid": 221,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 222,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 223,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 224,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 225,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalMasterEnd",
+      "type": "procedure",
+      "sortid": 226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/CrystalMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "WheelAbilitiesCrystal",
+      "type": "gui",
+      "sortid": 227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_crystal",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesCrystalMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesCrystalScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesCrystalButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack33",
+      "type": "procedure",
+      "sortid": 228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_33",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack33Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack34",
+      "type": "procedure",
+      "sortid": 229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_34",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack34Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack35",
+      "type": "procedure",
+      "sortid": 230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_35",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack35Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "Attack36",
+      "type": "procedure",
+      "sortid": 231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_36",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack36Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Crystal"
+    },
+    {
+      "name": "LavaStone",
+      "type": "item",
+      "sortid": 10,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LavaStoneItem.java",
+          "src/main/resources/assets/power/models/item/lava_stone_0.json",
+          "src/main/resources/assets/power/models/item/lava_stone.json"
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaArmor",
+      "type": "armor",
+      "sortid": 232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lava_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/lava_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/lava_armor_leggings.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LavaArmorItem.java",
+          "src/main/resources/assets/power/models/item/lava_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaMaster",
+      "type": "potioneffect",
+      "sortid": 237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/LavaMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaStoneUse",
+      "type": "procedure",
+      "sortid": 238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaMasterStart",
+      "type": "procedure",
+      "sortid": 239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaMasterEnd",
+      "type": "procedure",
+      "sortid": 240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/LavaMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "WheelAbilitiesLava",
+      "type": "gui",
+      "sortid": 241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_lava",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/gui/WheelAbilitiesLavaScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/world/inventory/WheelAbilitiesLavaMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/network/WheelAbilitiesLavaButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "Attack37",
+      "type": "procedure",
+      "sortid": 242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_37",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack37Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "Attack38",
+      "type": "procedure",
+      "sortid": 243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_38",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack38Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "Attack39",
+      "type": "procedure",
+      "sortid": 244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_39",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack39Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "Attack40",
+      "type": "procedure",
+      "sortid": 245,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_40",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/Attack40Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Lava"
+    },
+    {
+      "name": "CrystalMaster",
+      "type": "potioneffect",
+      "sortid": 246,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/potion/CrystalMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "ElementalStones",
+      "type": "tag",
+      "sortid": 247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_stones",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/elemental_stones.json"
+        ]
+      },
+      "path": "~/Tags"
+    },
+    {
+      "name": "RainStone",
+      "type": "item",
+      "sortid": 11,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/rain_stone_0.json",
+          "src/main/resources/assets/power/models/item/rain_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/RainStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Rain"
+    },
+    {
+      "name": "TornadoStone",
+      "type": "item",
+      "sortid": 12,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/tornado_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TornadoStoneItem.java",
+          "src/main/resources/assets/power/models/item/tornado_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "OceanStone",
+      "type": "item",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/OceanStoneItem.java",
+          "src/main/resources/assets/power/models/item/ocean_stone.json",
+          "src/main/resources/assets/power/models/item/ocean_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Ocean"
+    },
+    {
+      "name": "PlantsStone",
+      "type": "item",
+      "sortid": 14,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/PlantsStoneItem.java",
+          "src/main/resources/assets/power/models/item/plants_stone.json",
+          "src/main/resources/assets/power/models/item/plants_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "AnimalsStone",
+      "type": "item",
+      "sortid": 15,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/animals_stone.json",
+          "src/main/resources/assets/power/models/item/animals_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/AnimalsStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Animals"
+    },
+    {
+      "name": "MetalStone",
+      "type": "item",
+      "sortid": 16,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/metal_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MetalStoneItem.java",
+          "src/main/resources/assets/power/models/item/metal_stone.json"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "LightStone",
+      "type": "item",
+      "sortid": 17,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/light_stone.json",
+          "src/main/resources/assets/power/models/item/light_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/LightStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Light"
+    },
+    {
+      "name": "ShadowStone",
+      "type": "item",
+      "sortid": 18,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/shadow_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/ShadowStoneItem.java",
+          "src/main/resources/assets/power/models/item/shadow_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "VacuumStone",
+      "type": "item",
+      "sortid": 19,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/vacuum_stone.json",
+          "src/main/resources/assets/power/models/item/vacuum_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/VacuumStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "SunStone",
+      "type": "item",
+      "sortid": 21,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sun_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/sun_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SunStoneItem.java",
+          "src/main/resources/assets/power/models/item/sun_stone.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "MoonStone",
+      "type": "item",
+      "sortid": 22,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/moon_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MoonStoneItem.java",
+          "src/main/resources/assets/power/models/item/moon_stone.json"
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "SpaceStone",
+      "type": "item",
+      "sortid": 23,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/space_stone.json",
+          "src/main/resources/assets/power/models/item/space_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SpaceStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "TimeStone",
+      "type": "item",
+      "sortid": 24,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TimeStoneItem.java",
+          "src/main/resources/assets/power/models/item/time_stone.json",
+          "src/main/resources/assets/power/models/item/time_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "BloodStone",
+      "type": "item",
+      "sortid": 25,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/BloodStoneItem.java",
+          "src/main/resources/assets/power/models/item/blood_stone.json",
+          "src/main/resources/assets/power/models/item/blood_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "TechnologyStone",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TechnologyStoneItem.java",
+          "src/main/resources/assets/power/models/item/technology_stone.json",
+          "src/main/resources/assets/power/models/item/technology_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TeleportationStone",
+      "type": "item",
+      "sortid": 27,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/TeleportationStoneItem.java",
+          "src/main/resources/assets/power/models/item/teleportation_stone_0.json",
+          "src/main/resources/assets/power/models/item/teleportation_stone.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "ExplosionStone",
+      "type": "item",
+      "sortid": 28,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/ExplosionStoneItem.java",
+          "src/main/resources/assets/power/models/item/explosion_stone.json",
+          "src/main/resources/assets/power/models/item/explosion_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "AmberStone",
+      "type": "item",
+      "sortid": 29,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/AmberStoneItem.java",
+          "src/main/resources/assets/power/models/item/amber_stone.json",
+          "src/main/resources/assets/power/models/item/amber_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "CreationStone",
+      "type": "item",
+      "sortid": 30,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creation_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/CreationStoneItem.java",
+          "src/main/resources/assets/power/models/item/creation_stone.json",
+          "src/main/resources/assets/power/models/item/creation_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Creation"
+    },
+    {
+      "name": "DestructionStone",
+      "type": "item",
+      "sortid": 31,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DestructionStoneItem.java",
+          "src/main/resources/assets/power/models/item/destruction_stone_0.json",
+          "src/main/resources/assets/power/models/item/destruction_stone.json"
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "MistStone",
+      "type": "item",
+      "sortid": 32,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mist_stone_0.json",
+          "src/main/resources/assets/power/models/item/mist_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MistStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "SandStone",
+      "type": "item",
+      "sortid": 33,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/sand_stone.json",
+          "src/main/resources/assets/power/models/item/sand_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SandStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Sand"
+    },
+    {
+      "name": "SpeedStone",
+      "type": "item",
+      "sortid": 34,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SpeedStoneItem.java",
+          "src/main/resources/assets/power/models/item/speed_stone.json",
+          "src/main/resources/assets/power/models/item/speed_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "PoisonStone",
+      "type": "item",
+      "sortid": 35,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/PoisonStoneItem.java",
+          "src/main/resources/assets/power/models/item/poison_stone.json",
+          "src/main/resources/assets/power/models/item/poison_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "MagnetStone",
+      "type": "item",
+      "sortid": 36,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/magnet_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MagnetStoneItem.java",
+          "src/main/resources/assets/power/models/item/magnet_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MushroomsStone",
+      "type": "item",
+      "sortid": 37,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mushrooms_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MushroomsStoneItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MercuryStone",
+      "type": "item",
+      "sortid": 38,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MercuryStoneItem.java",
+          "src/main/resources/assets/power/models/item/mercury_stone.json",
+          "src/main/resources/assets/power/models/item/mercury_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MusicStone",
+      "type": "item",
+      "sortid": 39,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/music_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MusicStoneItem.java",
+          "src/main/resources/assets/power/models/item/music_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "PlagueStone",
+      "type": "item",
+      "sortid": 40,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plague_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/plague_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/PlagueStoneItem.java",
+          "src/main/resources/assets/power/models/item/plague_stone.json"
+        ]
+      },
+      "path": "~/Elements/Plague"
+    },
+    {
+      "name": "BlueFlameStone",
+      "type": "item",
+      "sortid": 41,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blue_flame_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/BlueFlameStoneItem.java",
+          "src/main/resources/assets/power/models/item/blue_flame_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "GravityStone",
+      "type": "item",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/gravity_stone_0.json",
+          "src/main/resources/assets/power/models/item/gravity_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GravityStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "SmokeStone",
+      "type": "item",
+      "sortid": 43,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/smoke_stone.json",
+          "src/main/resources/assets/power/models/item/smoke_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SmokeStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "FormStone",
+      "type": "item",
+      "sortid": 45,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/FormStoneItem.java",
+          "src/main/resources/assets/power/models/item/form_stone.json",
+          "src/main/resources/assets/power/models/item/form_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "MindStone",
+      "type": "item",
+      "sortid": 46,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mind_stone_0.json",
+          "src/main/resources/assets/power/models/item/mind_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/MindStoneItem.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "GoldenDustStone",
+      "type": "item",
+      "sortid": 47,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "golden_dust_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/GoldenDustStoneItem.java",
+          "src/main/resources/assets/power/models/item/golden_dust_stone.json",
+          "src/main/resources/assets/power/models/item/golden_dust_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/GoldenDust"
+    },
+    {
+      "name": "DarknessStone",
+      "type": "item",
+      "sortid": 48,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "darkness_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/DarknessStoneItem.java",
+          "src/main/resources/assets/power/models/item/darkness_stone.json",
+          "src/main/resources/assets/power/models/item/darkness_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Darkness"
+    },
+    {
+      "name": "EnergyStone",
+      "type": "item",
+      "sortid": 20,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/energy_stone.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/EnergyStoneItem.java",
+          "src/main/resources/assets/power/models/item/energy_stone_0.json"
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "SpiritStone",
+      "type": "item",
+      "sortid": 44,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/spirit_stone_0.json",
+          "src/main/java/ru/power_umc/keepersofthestones/two/item/SpiritStoneItem.java",
+          "src/main/resources/assets/power/models/item/spirit_stone.json"
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "PowerScaleOverlay",
+      "type": "overlay",
+      "sortid": 248,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_scale_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/screens/PowerScaleOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/PowerScaleModule "
     }
   ],
   "variable_elements": [
@@ -2927,31 +5223,31 @@
     {
       "name": "fire_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "air_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "earth_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "water_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
       "name": "ether_stone",
       "type": "logic",
-      "scope": "player_persistent",
+      "scope": "map",
       "value": "false"
     },
     {
@@ -3025,6 +5321,96 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "ice_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "lightning_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "sound_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "crystal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "lava_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "rain_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "tornado_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "ocean_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "plants_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "animals_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "metal_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "light_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "shadow_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "vacuum_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "energy_stone",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -3048,159 +5434,319 @@
   "language_map": {
     "ru_ru": {
       "item.power.earth_armor_boots": "Ботинки мастера земли",
+      "item.power.shadow_stone": "Камень тени",
+      "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
-      "item.power.water_armor_boots": "Ботинки мастера воды",
-      "item.power.ether_glaive": "Эфирная глефа",
-      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
-      "key.power.detransformation_key": "Клавиша детрансформации",
-      "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
+      "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "item.power.earth_hammer": "Земляной молот",
       "key.categories.power2": "Хранители Камней II",
-      "item.power.air_armor_helmet": "Шлем мастера воздуха",
-      "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
-      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
-      "item_group.power.boxes": "Шкатулки",
+      "gui.power.wheel_abilities_ice.button_1": "1",
+      "gui.power.wheel_abilities_ice.button_2": "2",
+      "effect.power.sound_master": "Мастер звука",
+      "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
+      "item.power.lava_armor_boots": "Ботинки мастера лавы",
+      "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25 очков силы",
-      "gui.power.wheel_abilities_water.button_2": "2",
-      "gui.power.wheel_abilities_water.button_1": "1",
-      "gui.power.wheel_abilities_water.button_3": "3",
+      "item.power.space_stone": "Камень космоса",
+      "item.power.teleportation_stone": "Камень телепортации",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
-      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
+      "item.power.lightning_stone": "Камень молнии",
+      "item.power.blue_flame_stone": "Камень синего пламени",
       "item.power.air_rapier": "Воздушная рапира",
       "key.power.ability_using_key": "Клавиша использования способности",
+      "item.power.mushrooms_stone": "Камень грибов",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "item.power.energy_stone": "Камень энергии",
+      "item.power.metal_stone": "Камень металла",
       "item_group.power.stones": "Камни",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
-      "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
-      "item.power.ether_armor_boots": "Ботинки мастера эфира",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
-      "item.power.dirt_block_attack": "Dirt Attack",
+      "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
+      "gui.power.wheel_abilities_sound.button_3": "3",
+      "item.power.lightning_armor_helmet": "Шлем мастера молнии",
+      "gui.power.wheel_abilities_sound.button_1": "1",
+      "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Водная катана",
+      "item.power.lava_stone": "Камень лавы",
+      "item.power.sun_stone": "Камень солнца",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30 очков силы",
-      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 единиц силы",
-      "item.power.water_armor_leggings": "Поножи мастера воды",
-      "item.power.water_attack": "Water Attack",
+      "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
+      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10 очков силы",
+      "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "item.power.fire_sword": "Меч огня",
-      "effect.power.ether_master": "Мастер эфира",
-      "item.power.cobblestone_attack": "Cobblestone Attack",
-      "item.power.fire_armor_boots": "Ботинки мастера огня",
-      "item.power.water_armor_helmet": "Шлем мастера воды",
+      "effect.power.crystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5 очков силы",
-      "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 единиц силы",
-      "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
-      "gui.power.wheel_abilities_ether.button_3": "3",
-      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
-      "gui.power.wheel_abilities_ether.button_1": "1",
-      "item.power.fire_stone": "Камень огня",
+      "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10 очков силы",
+      "item.power.ice_armor_helmet": "Шлем мастера льда",
+      "item.power.plants_stone": "Камень зелени",
+      "item.power.magnet_stone": "Камень магнита",
+      "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25 очков силы",
+      "item.power.spirit_stone": "Камень духа",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
-      "gui.power.wheel_abilities_air.button_3": "3",
-      "effect.power.earth_master": "Мастер земли",
-      "gui.power.wheel_abilities_air.button_2": "2",
-      "item.power.ether_armor_helmet": "Шлем мастера эфира",
-      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40 очков силы",
-      "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.destruction_stone": "Камень разрушения",
+      "item.power.darkness_stone": "Камень тьмы",
+      "item.power.lava_armor_helmet": "Шлем мастера лавы",
+      "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20 очков силы",
-      "item.power.basic_box.tooltip": "Базовая",
-      "effect.power.fire_master": "Мастер огня",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45 очков силы",
-      "item.power.earth_armor_leggings": "Поножи мастера земли",
       "effect.power.water_master": "Мастер воды",
-      "item.power.stone_attack": "Stone Attack",
+      "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Камень торнадо",
+      "gui.power.wheel_abilities_lava.button_2": "2",
+      "item.power.gravity_stone": "Камень гравитации",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
+      "item.power.sound_armor_boots": "Ботинки мастера звука",
+      "gui.power.wheel_abilities_lava.button_1": "1",
+      "gui.power.fvf.label_proc_get_power_scale": "000",
       "item.power.magic_fireball": "Волшебный файрболл",
-      "item.power.air_armor_boots": "Ботинки мастера воздуха",
+      "item.power.smoke_stone": "Камень дыма",
       "block.power.basic_box": "Шкатулка",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
+      "gui.power.wheel_abilities_ice.button_3": "3",
+      "item.power.crystal_stone": "Камень кристалла",
+      "item.power.technology_stone": "Камень технологий",
+      "effect.power.air_master": "Мастер воздуха",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.water_armor_boots": "Ботинки мастера воды",
+      "item.power.ether_glaive": "Эфирная глефа",
+      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10 очков силыs",
+      "key.power.detransformation_key": "Клавиша детрансформации",
+      "item.power.golden_dust_stone": "Камннь золотой пыли",
+      "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
+      "item.power.air_armor_helmet": "Шлем мастера воздуха",
+      "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
+      "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.speed_stone": "Камень скорости",
+      "item.power.rain_stone": "Камень дождя",
+      "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
+      "item.power.explosion_stone": "Камень взрыва",
+      "item_group.power.boxes": "Шкатулки",
+      "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item.power.music_stone": "Камень музыки",
+      "item.power.animals_stone": "Камень животных",
+      "item.power.vacuum_stone": "Камень пустоты",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_crystal.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_crystal.button_3": "3",
+      "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_crystal.button_1": "1",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30 очков силы",
+      "item.power.poison_stone": "Камень яда",
+      "item.power.mercury_stone": "Камень ртути",
+      "item.power.moon_stone": "Камень луны",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25 очков силы",
+      "item.power.ice_stone": "Камень льда",
+      "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5 очков силы",
+      "item.power.mind_stone": "Камень разума",
+      "gui.power.wheel_abilities_lightning.button_3": "3",
+      "item.power.ice_armor_boots": "Ботинки мастера льда",
+      "gui.power.wheel_abilities_lightning.button_2": "2",
+      "item.power.water_armor_leggings": "Поножи мастера воды",
+      "item.power.amber_stone": "Камень янтаря",
+      "effect.power.ether_master": "Мастер эфира",
+      "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "item.power.water_armor_helmet": "Шлем мастера воды",
+      "item.power.light_stone": "Камень света",
+      "item.power.sand_stone": "Камень песка",
+      "item.power.lightning_armor_boots": "Ботинки мастера молнии",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_3": "3",
+      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15 очков силы",
+      "gui.power.wheel_abilities_ether.button_1": "1",
+      "item.power.fire_stone": "Камень огня",
+      "item.power.blood_stone": "Камень крови",
+      "item.power.creation_stone": "Камень созидания",
+      "gui.power.wheel_abilities_air.button_3": "3",
+      "effect.power.earth_master": "Мастер земли",
+      "gui.power.wheel_abilities_air.button_2": "2",
+      "item.power.sound_armor_helmet": "Шлем мастера звука",
+      "item.power.ether_armor_helmet": "Шлем мастера эфира",
+      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40 очков силы",
+      "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.time_stone": "Камень времени",
+      "item.power.basic_box.tooltip": "Базовая",
+      "item.power.lava_armor_leggings": "Поножи мастера лавы",
+      "effect.power.fire_master": "Мастер огня",
+      "item.power.earth_armor_leggings": "Поножи мастера земли",
+      "item.power.form_stone": "Камень формы",
+      "item.power.ice_armor_leggings": "Поножи мастера льда",
+      "item.power.ocean_stone": "Камень океана",
+      "item.power.mist_stone": "Камень тумана",
+      "item.power.plague_stone": "Камень чумы",
+      "item.power.air_armor_boots": "Ботинки мастера воздуха",
+      "effect.power.lightning_master": "Мастер молнии",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80 очков силы",
       "item.power.air_stone": "Камень воздуха",
-      "effect.power.air_master": "Мастер воздуха",
+      "item.power.sound_stone": "Камень звука",
       "item.power.water_stone": "Камень воды",
-      "item.power.fire_armor_leggings": "Поножи мастера огня",
-      "item.power.earth_shield": "Earth Shield",
-      "item.power.ether_attack": "Cobblestone Attack"
+      "item.power.fire_armor_leggings": "Поножи мастера огня"
     },
     "en_us": {
       "item.power.earth_armor_boots": "Earth Boots",
+      "item.power.shadow_stone": "Shadow Stone",
+      "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
-      "item.power.water_armor_boots": "Water Boots",
-      "item.power.ether_glaive": "Ether Glaive",
-      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
-      "key.power.detransformation_key": "Detransformation key",
-      "item.power.fire_armor_chestplate": "Fire Chestplate",
+      "item.power.sound_armor_chestplate": "Sound Chestplate",
       "key.categories.power2": "Keepers of the Stones II",
       "item.power.earth_hammer": "Earth Hammer",
-      "item.power.air_armor_helmet": "Air Helmet",
-      "item.power.ether_armor_chestplate": "Ether Chestplate",
-      "item.power.earth_armor_chestplate": "Earth Chestplate",
-      "item_group.power.boxes": "Boxes",
+      "gui.power.wheel_abilities_ice.button_1": "1",
+      "gui.power.wheel_abilities_ice.button_2": "2",
+      "effect.power.sound_master": "Master of Sound",
+      "item.power.ice_armor_chestplate": "Ice Chestplate",
+      "item.power.lava_armor_boots": "Lava Boots",
+      "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25 power points",
-      "gui.power.wheel_abilities_water.button_2": "2",
-      "gui.power.wheel_abilities_water.button_1": "1",
-      "gui.power.wheel_abilities_water.button_3": "3",
+      "item.power.space_stone": "Space Stone",
+      "item.power.teleportation_stone": "Teleportation Stone",
+      "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
-      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
-      "item.power.air_rapier": "Air Rapier",
+      "item.power.blue_flame_stone": "Blue Flame Stone",
       "key.power.ability_using_key": "Ability using key",
+      "item.power.air_rapier": "Air Rapier",
+      "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.air_armor_leggings": "Air Leggings",
+      "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.energy_stone": "Energy Stone",
+      "item.power.metal_stone": "Metal Stone",
       "item_group.power.stones": "Stones",
-      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
-      "item.power.cobbled_deepslate_attack": "Cobbled Deepslate Attack",
-      "item.power.ether_armor_boots": "Ether Boots",
-      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
-      "item.power.dirt_block_attack": "Dirt Attack",
+      "item.power.lightning_armor_chestplate": "Lightning Chestplate",
+      "gui.power.wheel_abilities_sound.button_3": "3",
+      "item.power.lightning_armor_helmet": "Lightning Helmet",
+      "gui.power.wheel_abilities_sound.button_1": "1",
+      "gui.power.wheel_abilities_sound.button_2": "2",
       "item.power.water_katana": "Water Katana",
+      "item.power.lava_stone": "Lava Stone",
+      "item.power.sun_stone": "Sun Stone",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30 power points",
+      "item.power.lava_armor_chestplate": "Lava Chestplate",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10 power points",
-      "item.power.water_armor_leggings": "Water Leggings",
-      "item.power.water_attack": "Water Attack",
+      "item.power.lightning_armor_leggings": "Lightning Leggings",
       "item.power.fire_sword": "Fire Sword",
-      "effect.power.ether_master": "Master of the Ether",
-      "item.power.cobblestone_attack": "Cobblestone Attack",
-      "item.power.fire_armor_boots": "Fire Boots",
-      "item.power.water_armor_helmet": "Water Helmet",
+      "effect.power.crystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5 power points",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
-      "gui.power.wheel_abilities_ether.button_2": "2",
-      "item.power.grass_block_attack": "Grass Block Attack",
-      "gui.power.wheel_abilities_ether.button_3": "3",
-      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
-      "gui.power.wheel_abilities_ether.button_1": "1",
-      "item.power.fire_stone": "Fire Stone",
+      "item.power.ice_armor_helmet": "Ice Helmet",
+      "item.power.plants_stone": "Plants Stone",
+      "item.power.magnet_stone": "Magnet Stone",
+      "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25 power points",
+      "item.power.spirit_stone": "Spirit Stone",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "item.power.ether_armor_leggings": "Ether Leggings",
-      "gui.power.wheel_abilities_air.button_3": "3",
-      "effect.power.earth_master": "Master of the Earth",
-      "gui.power.wheel_abilities_air.button_2": "2",
-      "item.power.ether_armor_helmet": "Ether Helmet",
-      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40 power points",
-      "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.destruction_stone": "Destruction Stone",
+      "item.power.darkness_stone": "Darkness Stone",
+      "item.power.lava_armor_helmet": "Lava Helmet",
+      "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20 power points",
-      "item.power.basic_box.tooltip": "Basic",
-      "effect.power.fire_master": "Master of Fire",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45 power points",
-      "item.power.earth_armor_leggings": "Earth Leggings",
       "effect.power.water_master": "Master of Water",
-      "item.power.stone_attack": "Stone Attack",
+      "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Tornado Stone",
+      "gui.power.wheel_abilities_lava.button_2": "2",
+      "item.power.gravity_stone": "Gravity Stone",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10 power points",
+      "item.power.sound_armor_boots": "Sound Boots",
+      "gui.power.wheel_abilities_lava.button_1": "1",
+      "gui.power.fvf.label_proc_get_power_scale": "000",
       "item.power.magic_fireball": "Magic Fireball",
-      "item.power.air_armor_boots": "Air Boots",
+      "item.power.smoke_stone": "Smoke Stone",
       "block.power.basic_box": "Box",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
+      "gui.power.wheel_abilities_ice.button_3": "3",
+      "item.power.crystal_stone": "Crystal Stone",
+      "item.power.technology_stone": "Technology Stone",
+      "effect.power.air_master": "Master of the Air",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.earth_shield": "Earth Shield",
+      "item.power.water_armor_boots": "Water Boots",
+      "item.power.ether_glaive": "Ether Glaive",
+      "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10 power points",
+      "key.power.detransformation_key": "Detransformation key",
+      "item.power.golden_dust_stone": "Golden Dust Stone",
+      "item.power.fire_armor_chestplate": "Fire Chestplate",
+      "item.power.air_armor_helmet": "Air Helmet",
+      "item.power.ether_armor_chestplate": "Ether Chestplate",
+      "gui.power.wheel_abilities_lightning.button_1": "1",
+      "item.power.speed_stone": "Speed Stone",
+      "item.power.rain_stone": "Rain Stone",
+      "item.power.crystal_armor_helmet": "Crystal Helmet",
+      "item.power.explosion_stone": "Explosion Stone",
+      "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item_group.power.boxes": "Boxes",
+      "item.power.music_stone": "Music Stone",
+      "item.power.animals_stone": "Animals Stone",
+      "item.power.vacuum_stone": "Vacuum Stone",
+      "gui.power.wheel_abilities_water.button_2": "2",
+      "gui.power.wheel_abilities_crystal.button_2": "2",
+      "gui.power.wheel_abilities_water.button_1": "1",
+      "gui.power.wheel_abilities_crystal.button_3": "3",
+      "gui.power.wheel_abilities_water.button_3": "3",
+      "gui.power.wheel_abilities_crystal.button_1": "1",
+      "gui.power.wheel_abilities_ice.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
+      "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30 power points",
+      "item.power.poison_stone": "Poison Stone",
+      "item.power.mercury_stone": "Mercury Stone",
+      "item.power.moon_stone": "Moon Stone",
+      "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10 power points",
+      "item.power.ice_stone": "Ice Stone",
+      "item.power.ether_armor_boots": "Ether Boots",
+      "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5 power points",
+      "item.power.mind_stone": "Mind Stone",
+      "gui.power.wheel_abilities_lightning.button_3": "3",
+      "item.power.ice_armor_boots": "Ice Boots",
+      "gui.power.wheel_abilities_lightning.button_2": "2",
+      "item.power.water_armor_leggings": "Water Leggings",
+      "item.power.amber_stone": "Amber Stone",
+      "effect.power.ether_master": "Master of the Ether",
+      "item.power.fire_armor_boots": "Fire Boots",
+      "item.power.water_armor_helmet": "Water Helmet",
+      "item.power.light_stone": "Light Stone",
+      "item.power.sand_stone": "Sand Stone",
+      "item.power.lightning_armor_boots": "Lightning Boots",
+      "gui.power.wheel_abilities_ether.button_2": "2",
+      "gui.power.wheel_abilities_ether.button_3": "3",
+      "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15 power points",
+      "gui.power.wheel_abilities_ether.button_1": "1",
+      "item.power.fire_stone": "Fire Stone",
+      "item.power.blood_stone": "Blood Stone",
+      "item.power.creation_stone": "Creation Stone",
+      "gui.power.wheel_abilities_air.button_3": "3",
+      "effect.power.earth_master": "Master of the Earth",
+      "gui.power.wheel_abilities_air.button_2": "2",
+      "item.power.sound_armor_helmet": "Sound Helmet",
+      "item.power.ether_armor_helmet": "Ether Helmet",
+      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40 power points",
+      "gui.power.wheel_abilities_air.button_1": "1",
+      "item.power.time_stone": "Time Stone",
+      "item.power.basic_box.tooltip": "Basic",
+      "item.power.lava_armor_leggings": "Lava Leggings",
+      "effect.power.fire_master": "Master of Fire",
+      "item.power.earth_armor_leggings": "Earth Leggings",
+      "item.power.form_stone": "Form Stone",
+      "item.power.ice_armor_leggings": "Ice Leggings",
+      "item.power.ocean_stone": "Ocean Stone",
+      "item.power.mist_stone": "Mist Stone",
+      "item.power.plague_stone": "Plague Stone",
+      "item.power.air_armor_boots": "Air Boots",
+      "effect.power.lightning_master": "Master of Lightning",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80 power points",
       "item.power.air_stone": "Air Stone",
-      "effect.power.air_master": "Master of the Air",
+      "item.power.sound_stone": "Sound Stone",
       "item.power.water_stone": "Water Stone",
-      "item.power.fire_armor_leggings": "Fire Leggings",
-      "item.power.earth_shield": "Earth Shield",
-      "item.power.ether_attack": "Ether Attack"
+      "item.power.fire_armor_leggings": "Fire Leggings"
     }
   },
   "foldersRoot": {
@@ -3227,6 +5773,178 @@
           },
           {
             "name": "Ether",
+            "children": []
+          },
+          {
+            "name": "Ice",
+            "children": []
+          },
+          {
+            "name": "Lightning",
+            "children": []
+          },
+          {
+            "name": "Sound",
+            "children": []
+          },
+          {
+            "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Lava",
+            "children": []
+          },
+          {
+            "name": "Rain",
+            "children": []
+          },
+          {
+            "name": "Tornado",
+            "children": []
+          },
+          {
+            "name": "Ocean",
+            "children": []
+          },
+          {
+            "name": "Plants",
+            "children": []
+          },
+          {
+            "name": "Animals",
+            "children": []
+          },
+          {
+            "name": "Metal",
+            "children": []
+          },
+          {
+            "name": "Light",
+            "children": []
+          },
+          {
+            "name": "Shadow",
+            "children": []
+          },
+          {
+            "name": "Vacuum",
+            "children": []
+          },
+          {
+            "name": "Sun",
+            "children": []
+          },
+          {
+            "name": "Moon",
+            "children": []
+          },
+          {
+            "name": "Space",
+            "children": []
+          },
+          {
+            "name": "Time",
+            "children": []
+          },
+          {
+            "name": "Blood",
+            "children": []
+          },
+          {
+            "name": "Technology",
+            "children": []
+          },
+          {
+            "name": "Teleportation",
+            "children": []
+          },
+          {
+            "name": "Explosion",
+            "children": []
+          },
+          {
+            "name": "Amber",
+            "children": []
+          },
+          {
+            "name": "Creation",
+            "children": []
+          },
+          {
+            "name": "Destruction",
+            "children": []
+          },
+          {
+            "name": "Mist",
+            "children": []
+          },
+          {
+            "name": "Sand",
+            "children": []
+          },
+          {
+            "name": "Speed",
+            "children": []
+          },
+          {
+            "name": "Poison",
+            "children": []
+          },
+          {
+            "name": "Magnet",
+            "children": []
+          },
+          {
+            "name": "Mushrooms",
+            "children": []
+          },
+          {
+            "name": "Mercury",
+            "children": []
+          },
+          {
+            "name": "Music",
+            "children": []
+          },
+          {
+            "name": "Plague",
+            "children": []
+          },
+          {
+            "name": "BlueFlame",
+            "children": []
+          },
+          {
+            "name": "Gravity",
+            "children": []
+          },
+          {
+            "name": "Smoke",
+            "children": []
+          },
+          {
+            "name": "Form",
+            "children": []
+          },
+          {
+            "name": "Mind",
+            "children": []
+          },
+          {
+            "name": "GoldenDust",
+            "children": []
+          },
+          {
+            "name": "Darkness",
+            "children": []
+          },
+          {
+            "name": "Energy",
+            "children": []
+          },
+          {
+            "name": "Spirit",
             "children": []
           }
         ]
@@ -3276,6 +5994,26 @@
               {
                 "name": "Ether",
                 "children": []
+              },
+              {
+                "name": "Ice",
+                "children": []
+              },
+              {
+                "name": "Lightning",
+                "children": []
+              },
+              {
+                "name": "Sound",
+                "children": []
+              },
+              {
+                "name": "Crystal",
+                "children": []
+              },
+              {
+                "name": "Lava",
+                "children": []
               }
             ]
           },
@@ -3306,7 +6044,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.1",
+    "version": "1.0.0.2",
     "description": "Keepers of the Stones II is a mod that was created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new element stones that can be used to improve the character\u0027s characteristics and abilities.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
@@ -3324,7 +6062,6 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "geckolib",
       "playeranimator",
       "allmods"
     ],
@@ -3333,5 +6070,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestones.two",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300440415
+  "mcreatorVersion": 202300441522
 }

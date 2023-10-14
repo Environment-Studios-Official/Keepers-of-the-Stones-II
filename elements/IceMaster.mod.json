@@ -1,0 +1,26 @@
+{
+  "_fv": 53,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Ice",
+    "icon": "ice_master.png",
+    "color": {
+      "value": -16737844,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "IceMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "IceMasterEnd"
+    }
+  }
+}

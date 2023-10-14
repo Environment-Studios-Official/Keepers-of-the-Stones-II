@@ -50,6 +50,16 @@ public class DetransformationKeyUseProcedure {
 				_entity.removeEffect(PowerModMobEffects.WATER_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.ETHER_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.ICE_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.LIGHTNING_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.SOUND_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.CRYSTAL_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.LAVA_MASTER.get());
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

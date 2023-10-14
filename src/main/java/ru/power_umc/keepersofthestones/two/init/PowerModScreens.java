@@ -5,9 +5,14 @@
 package ru.power_umc.keepersofthestones.two.init;
 
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesWaterScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesSoundScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesLightningScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesLavaScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesIceScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesFireScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEtherScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesEarthScreen;
+import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesCrystalScreen;
 import ru.power_umc.keepersofthestones.two.client.gui.WheelAbilitiesAirScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -27,6 +32,11 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_WATER.get(), WheelAbilitiesWaterScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_EARTH.get(), WheelAbilitiesEarthScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ETHER.get(), WheelAbilitiesEtherScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ICE.get(), WheelAbilitiesIceScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHTNING.get(), WheelAbilitiesLightningScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SOUND.get(), WheelAbilitiesSoundScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_CRYSTAL.get(), WheelAbilitiesCrystalScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LAVA.get(), WheelAbilitiesLavaScreen::new);
 		});
 	}
 }

@@ -3,7 +3,6 @@ package ru.power_umc.keepersofthestones.two.client.gui;
 import ru.power_umc.keepersofthestones.two.world.inventory.WheelAbilitiesEarthMenu;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelTwoProcedure;
 import ru.power_umc.keepersofthestones.two.procedures.GetWheelThreeProcedure;
-import ru.power_umc.keepersofthestones.two.procedures.GetPowerScaleProcedure;
 import ru.power_umc.keepersofthestones.two.network.WheelAbilitiesEarthButtonMessage;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
@@ -83,9 +82,6 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 
 	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
-		guiGraphics.drawString(this.font,
-
-				GetPowerScaleProcedure.execute(entity), 86, 92, -3355444, false);
 	}
 
 	@Override
@@ -96,7 +92,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 141, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(0, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -110,7 +106,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 153, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(1, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -124,7 +120,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 165, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(2, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -138,7 +134,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_earth_block_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_block_attack.png"), 46, 92, e -> {
+		imagebutton_earth_block_attack = new ImageButton(this.leftPos + 73, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_block_attack.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(3, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -146,7 +142,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_earth_block_attack", imagebutton_earth_block_attack);
 		this.addRenderableWidget(imagebutton_earth_block_attack);
-		imagebutton_stalagmite_piercing = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_stalagmite_piercing.png"), 46, 92, e -> {
+		imagebutton_stalagmite_piercing = new ImageButton(this.leftPos + 134, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_stalagmite_piercing.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(4, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -154,7 +150,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_stalagmite_piercing", imagebutton_stalagmite_piercing);
 		this.addRenderableWidget(imagebutton_stalagmite_piercing);
-		imagebutton_earth_shield = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_shield.png"), 46, 92, e -> {
+		imagebutton_earth_shield = new ImageButton(this.leftPos + 12, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_shield.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(5, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 5, x, y, z);

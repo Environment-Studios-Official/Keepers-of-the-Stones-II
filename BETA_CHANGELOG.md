@@ -1,5 +1,13 @@
-What's new in Keepers of the Stones version II 1.0.0.1?<br />
-<br />- Added the first five elements (fire, air, earth, water, ether)
-<br />- Added random issuance of a stone when entering the game
-<br />- Added the ability to merge for three stones
-<br />- Added a box of elements (not working yet)
+What's new in Keepers of the Stones version II 1.0.0.2?<br />
+<br />- Added new elements (Ice, Lightning, Sound, Crystal, Lava, Rain, Tornado, Ocean)
+<br />- Now if the player is in the creative, the stones will not recharge
+<br />- Now the earth shield works in the main hand
+<br />- Added the elemental_stones tag in the Forge namespace
+<br />- The power scale was displayed in the game screen
+<br />- [Bugfix] Fixed fire master armor
+<br />- [Bugfix] Fixed a bug that caused fire to be placed in the air when using a flamethrower
+<br />- [Bugfix] Fixed button shift in the ability wheel interface
+<br />- [Bugfix] Fixed a bug when identical stones were issued
+<br />- [Bugfix] Fixed a bug due to which the stalagmite was not placed
+<br />- [Bugfix] Fixed a bug that caused the stalagmite attack to waste power points just like that
+<br />- [Bugfix] Fixed a bug where a gust of wind didn't work for players

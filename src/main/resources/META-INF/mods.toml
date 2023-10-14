@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.1"
+version="1.0.0.2"
 displayName="Keepers of the Stones II"
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
 logoFile="logo.png"
@@ -51,12 +51,6 @@ description="Keepers of the Stones II is a mod that was created as a continuatio
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="geckolib"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
     mandatory=false

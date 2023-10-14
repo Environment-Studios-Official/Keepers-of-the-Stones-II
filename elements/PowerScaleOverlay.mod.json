@@ -1,0 +1,45 @@
+{
+  "_fv": 53,
+  "_type": "overlay",
+  "definition": {
+    "priority": "NORMAL",
+    "components": [
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_get_power_scale",
+          "text": {
+            "fixedValue": "0000",
+            "name": "GetPowerScale"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 398,
+          "y": 224
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "power_scale_star.png",
+          "use1Xscale": false,
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 383,
+          "y": 219
+        }
+      }
+    ],
+    "baseTexture": "",
+    "overlayTarget": "Ingame",
+    "gridSettings": {
+      "sx": 16,
+      "sy": 16,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

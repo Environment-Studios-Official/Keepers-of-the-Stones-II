@@ -1,5 +1,5 @@
 {
-  "_fv": 51,
+  "_fv": 53,
   "_type": "tool",
   "definition": {
     "toolType": "Special",
@@ -13,7 +13,7 @@
       "fixedValue": []
     },
     "creativeTab": {
-      "value": "TOOLS"
+      "value": "No creative tab entry"
     },
     "harvestLevel": 1,
     "efficiency": 0.0,

@@ -1,5 +1,5 @@
 {
-  "_fv": 51,
+  "_fv": 53,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -52,6 +52,8 @@
     "onRightClickedInAir": {
       "name": "EarthStoneUse"
     },
+    "enableRanged": false,
+    "shootConstantly": false,
     "isFood": false,
     "nutritionalValue": 4,
     "saturation": 0.3,
