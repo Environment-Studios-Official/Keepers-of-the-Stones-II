@@ -167,6 +167,34 @@ public class PowerModVariables {
 		public boolean shadow_stone = false;
 		public boolean vacuum_stone = false;
 		public boolean energy_stone = false;
+		public boolean sun_stone = false;
+		public boolean moon_stone = false;
+		public boolean space_stone = false;
+		public boolean time_stone = false;
+		public boolean blood_stone = false;
+		public boolean technology_stone = false;
+		public boolean teleportation_stone = false;
+		public boolean explosion_stone = false;
+		public boolean amber_stone = false;
+		public boolean creation_stone = false;
+		public boolean destruction_stone = false;
+		public boolean mist_stone = false;
+		public boolean sand_stone = false;
+		public boolean speed_stone = false;
+		public boolean poison_stone = false;
+		public boolean magnet_stone = false;
+		public boolean mushrooms_stone = false;
+		public boolean mercury_stone = false;
+		public boolean music_stone = false;
+		public boolean plague_stone = false;
+		public boolean blue_fire_stone = false;
+		public boolean gravity_stone = false;
+		public boolean smoke_stone = false;
+		public boolean spirit_stone = false;
+		public boolean form_stone = false;
+		public boolean mind_stone = false;
+		public boolean golden_dust_stone = false;
+		public boolean darkness_stone = false;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -195,6 +223,34 @@ public class PowerModVariables {
 			shadow_stone = nbt.getBoolean("shadow_stone");
 			vacuum_stone = nbt.getBoolean("vacuum_stone");
 			energy_stone = nbt.getBoolean("energy_stone");
+			sun_stone = nbt.getBoolean("sun_stone");
+			moon_stone = nbt.getBoolean("moon_stone");
+			space_stone = nbt.getBoolean("space_stone");
+			time_stone = nbt.getBoolean("time_stone");
+			blood_stone = nbt.getBoolean("blood_stone");
+			technology_stone = nbt.getBoolean("technology_stone");
+			teleportation_stone = nbt.getBoolean("teleportation_stone");
+			explosion_stone = nbt.getBoolean("explosion_stone");
+			amber_stone = nbt.getBoolean("amber_stone");
+			creation_stone = nbt.getBoolean("creation_stone");
+			destruction_stone = nbt.getBoolean("destruction_stone");
+			mist_stone = nbt.getBoolean("mist_stone");
+			sand_stone = nbt.getBoolean("sand_stone");
+			speed_stone = nbt.getBoolean("speed_stone");
+			poison_stone = nbt.getBoolean("poison_stone");
+			magnet_stone = nbt.getBoolean("magnet_stone");
+			mushrooms_stone = nbt.getBoolean("mushrooms_stone");
+			mercury_stone = nbt.getBoolean("mercury_stone");
+			music_stone = nbt.getBoolean("music_stone");
+			plague_stone = nbt.getBoolean("plague_stone");
+			blue_fire_stone = nbt.getBoolean("blue_fire_stone");
+			gravity_stone = nbt.getBoolean("gravity_stone");
+			smoke_stone = nbt.getBoolean("smoke_stone");
+			spirit_stone = nbt.getBoolean("spirit_stone");
+			form_stone = nbt.getBoolean("form_stone");
+			mind_stone = nbt.getBoolean("mind_stone");
+			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
+			darkness_stone = nbt.getBoolean("darkness_stone");
 		}
 
 		@Override
@@ -219,6 +275,34 @@ public class PowerModVariables {
 			nbt.putBoolean("shadow_stone", shadow_stone);
 			nbt.putBoolean("vacuum_stone", vacuum_stone);
 			nbt.putBoolean("energy_stone", energy_stone);
+			nbt.putBoolean("sun_stone", sun_stone);
+			nbt.putBoolean("moon_stone", moon_stone);
+			nbt.putBoolean("space_stone", space_stone);
+			nbt.putBoolean("time_stone", time_stone);
+			nbt.putBoolean("blood_stone", blood_stone);
+			nbt.putBoolean("technology_stone", technology_stone);
+			nbt.putBoolean("teleportation_stone", teleportation_stone);
+			nbt.putBoolean("explosion_stone", explosion_stone);
+			nbt.putBoolean("amber_stone", amber_stone);
+			nbt.putBoolean("creation_stone", creation_stone);
+			nbt.putBoolean("destruction_stone", destruction_stone);
+			nbt.putBoolean("mist_stone", mist_stone);
+			nbt.putBoolean("sand_stone", sand_stone);
+			nbt.putBoolean("speed_stone", speed_stone);
+			nbt.putBoolean("poison_stone", poison_stone);
+			nbt.putBoolean("magnet_stone", magnet_stone);
+			nbt.putBoolean("mushrooms_stone", mushrooms_stone);
+			nbt.putBoolean("mercury_stone", mercury_stone);
+			nbt.putBoolean("music_stone", music_stone);
+			nbt.putBoolean("plague_stone", plague_stone);
+			nbt.putBoolean("blue_fire_stone", blue_fire_stone);
+			nbt.putBoolean("gravity_stone", gravity_stone);
+			nbt.putBoolean("smoke_stone", smoke_stone);
+			nbt.putBoolean("spirit_stone", spirit_stone);
+			nbt.putBoolean("form_stone", form_stone);
+			nbt.putBoolean("mind_stone", mind_stone);
+			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
+			nbt.putBoolean("darkness_stone", darkness_stone);
 			return nbt;
 		}
 

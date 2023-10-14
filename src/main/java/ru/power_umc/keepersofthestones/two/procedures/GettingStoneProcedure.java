@@ -257,6 +257,94 @@ public class GettingStoneProcedure {
 						GettingStoneProcedure.execute(world, entity);
 					}
 				}
+				if (random == 11) {
+					if (!PowerModVariables.MapVariables.get(world).rain_stone) {
+						PowerMod.queueServerWork(1, () -> {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							PowerModVariables.MapVariables.get(world).rain_stone = true;
+							PowerModVariables.MapVariables.get(world).syncData(world);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.selected = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+					} else {
+						GettingStoneProcedure.execute(world, entity);
+					}
+				}
+				if (random == 12) {
+					if (!PowerModVariables.MapVariables.get(world).tornado_stone) {
+						PowerMod.queueServerWork(1, () -> {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							PowerModVariables.MapVariables.get(world).tornado_stone = true;
+							PowerModVariables.MapVariables.get(world).syncData(world);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.selected = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+					} else {
+						GettingStoneProcedure.execute(world, entity);
+					}
+				}
+				if (random == 13) {
+					if (!PowerModVariables.MapVariables.get(world).ocean_stone) {
+						PowerMod.queueServerWork(1, () -> {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							PowerModVariables.MapVariables.get(world).tornado_stone = true;
+							PowerModVariables.MapVariables.get(world).syncData(world);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.selected = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+					} else {
+						GettingStoneProcedure.execute(world, entity);
+					}
+				}
+				if (random == 14) {
+					if (!PowerModVariables.MapVariables.get(world).plants_stone) {
+						PowerMod.queueServerWork(1, () -> {
+							if (entity instanceof Player _player) {
+								ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+								_setstack.setCount(1);
+								ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+							}
+							PowerModVariables.MapVariables.get(world).plants_stone = true;
+							PowerModVariables.MapVariables.get(world).syncData(world);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.selected = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						});
+					} else {
+						GettingStoneProcedure.execute(world, entity);
+					}
+				}
 			}
 		}
 	}
