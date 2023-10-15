@@ -6033,6 +6033,21 @@
         ]
       },
       "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "BassBoom",
+      "type": "particle",
+      "sortid": 292,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "bass_boom",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/particle/BassBoomParticle.java",
+          "src/main/resources/assets/power/particles/bass_boom.json"
+        ]
+      },
+      "path": "~/Elements/Sound"
     }
   ],
   "variable_elements": [
@@ -6427,6 +6442,14 @@
       ],
       "category": "neutral",
       "subtitle": "Spark"
+    },
+    {
+      "name": "bass_boom",
+      "files": [
+        "bass_boom"
+      ],
+      "category": "neutral",
+      "subtitle": "Bass"
     }
   ],
   "language_map": {
@@ -6577,6 +6600,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
+      "subtitles.bass_boom": "Бас",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",
@@ -6767,6 +6791,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
+      "subtitles.bass_boom": "Bass",
       "item.power.plants_armor_boots": "Plants Boots",
       "gui.power.wheel_abilities_ether.button_2": "2",
       "gui.power.wheel_abilities_ether.button_3": "3",

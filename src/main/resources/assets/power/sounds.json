@@ -25,5 +25,14 @@
         "stream": false
       }
     ]
+  },
+  "bass_boom": {
+    "subtitle": "subtitles.bass_boom",
+    "sounds": [
+      {
+        "name": "power:bass_boom",
+        "stream": false
+      }
+    ]
   }
 }

@@ -18,4 +18,5 @@ public class PowerModSounds {
 	public static final RegistryObject<SoundEvent> STONE_ACTIVATION = REGISTRY.register("stone_activation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "stone_activation")));
 	public static final RegistryObject<SoundEvent> STONE_DEACTIVATION = REGISTRY.register("stone_deactivation", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "stone_deactivation")));
 	public static final RegistryObject<SoundEvent> ELECTRIC_SPARK = REGISTRY.register("electric_spark", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "electric_spark")));
+	public static final RegistryObject<SoundEvent> BASS_BOOM = REGISTRY.register("bass_boom", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "bass_boom")));
 }
