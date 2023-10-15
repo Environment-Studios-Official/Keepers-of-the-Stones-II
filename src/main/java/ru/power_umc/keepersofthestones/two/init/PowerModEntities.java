@@ -13,6 +13,7 @@ import ru.power_umc.keepersofthestones.two.entity.EtherAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.CobblestoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.BallLightningProjectileEntity;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -53,6 +54,9 @@ public class PowerModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<IceAttackProjectileEntity>> ICE_ATTACK_PROJECTILE = register("projectile_ice_attack_projectile", EntityType.Builder.<IceAttackProjectileEntity>of(IceAttackProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(IceAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<BallLightningProjectileEntity>> BALL_LIGHTNING_PROJECTILE = register("projectile_ball_lightning_projectile",
+			EntityType.Builder.<BallLightningProjectileEntity>of(BallLightningProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BallLightningProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -13,6 +13,7 @@ import ru.power_umc.keepersofthestones.two.entity.EtherAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.DirtBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.CobblestoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestones.two.entity.CobbledDeepslateAttackProjectileEntity;
+import ru.power_umc.keepersofthestones.two.entity.BallLightningProjectileEntity;
 import ru.power_umc.keepersofthestones.two.PowerMod;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -26,7 +27,6 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -1429,20 +1429,20 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 27) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 					{
 						Entity _shootFrom = entity;
 						Level projectileLevel = _shootFrom.level();
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+								public Projectile getArrow(Level level, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new BallLightningProjectileEntity(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), level);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
-									entityToSpawn.setPierceLevel(piercing);
+									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, 23, 2, (byte) 2);
+							}.getArrow(projectileLevel, 23, 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1450,13 +1450,13 @@ public class SpecialAttackProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
 					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.power = _setval;
 							capability.syncPlayerVariables(entity);

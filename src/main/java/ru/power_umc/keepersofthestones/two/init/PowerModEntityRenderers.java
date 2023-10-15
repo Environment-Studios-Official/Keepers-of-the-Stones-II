@@ -12,6 +12,7 @@ import ru.power_umc.keepersofthestones.two.client.renderer.EtherAttackProjectile
 import ru.power_umc.keepersofthestones.two.client.renderer.DirtBlockAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.CobblestoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestones.two.client.renderer.CobbledDeepslateAttackProjectileRenderer;
+import ru.power_umc.keepersofthestones.two.client.renderer.BallLightningProjectileRenderer;
 
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
@@ -33,5 +34,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), WaterAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), EtherAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), IceAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), BallLightningProjectileRenderer::new);
 	}
 }

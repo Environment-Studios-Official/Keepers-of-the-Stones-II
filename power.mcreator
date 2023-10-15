@@ -5918,6 +5918,121 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Ice"
+    },
+    {
+      "name": "BallLightningProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 288,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ball_lightning_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/BallLightningProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "BallLightningProjectileKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 289,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ball_lightning_projectile_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/BallLightningProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "BallLightningProjectile",
+      "type": "projectile",
+      "sortid": 290,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ball_lightning_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/BallLightningProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/BallLightningProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "BallLightningProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 291,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ball_lightning_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/procedures/BallLightningProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
     }
   ],
   "variable_elements": [
