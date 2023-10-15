@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "tooltip_freezing_ray_uses_10",
+          "text": {
+            "fixedValue": "Freezing ray, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ice_attack_uses_30",
+          "text": {
+            "fixedValue": "Ice attack, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ice_trap_uses_60",
+          "text": {
+            "fixedValue": "Ice trap, uses 60"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 108
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_freezing_ray",
+          "image": "freezing_ray.png",
+          "hoveredImage": "freezing_ray_highlight.png",
           "onClick": {
             "name": "Attack21"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_ice_attack",
+          "image": "ice_attack.png",
+          "hoveredImage": "ice_attack_highlight.png",
           "onClick": {
             "name": "Attack22"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_ice_trap",
+          "image": "ice_trap.png",
+          "hoveredImage": "ice_trap_highlight.png",
           "onClick": {
             "name": "Attack23"
           },
-          "width": 30,
-          "height": 20,
-          "x": 134,
-          "y": 112
+          "x": 129,
+          "y": 97
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
