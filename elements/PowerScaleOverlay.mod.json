@@ -16,6 +16,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "GetActive"
+          },
           "anchorPoint": "BOTTOM_RIGHT",
           "x": 398,
           "y": 224
@@ -26,6 +29,9 @@
         "data": {
           "image": "power_scale_star.png",
           "use1Xscale": false,
+          "displayCondition": {
+            "name": "GetActive"
+          },
           "anchorPoint": "BOTTOM_RIGHT",
           "x": 383,
           "y": 219

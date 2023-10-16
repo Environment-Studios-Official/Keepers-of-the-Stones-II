@@ -2,6 +2,7 @@
 package ru.power_umc.keepersofthestones.two.client.screens;
 
 import ru.power_umc.keepersofthestones.two.procedures.GetPowerScaleProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.GetActiveProcedure;
 
 import org.checkerframework.checker.units.qual.h;
 
@@ -44,11 +45,13 @@ public class PowerScaleOverlayOverlay {
 		RenderSystem.blendFuncSeparate(GlStateManager.SourceFactor.SRC_ALPHA, GlStateManager.DestFactor.ONE_MINUS_SRC_ALPHA, GlStateManager.SourceFactor.ONE, GlStateManager.DestFactor.ZERO);
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
-			event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/power_scale_star.png"), w - 44, h - 21, 0, 0, 16, 16, 16, 16);
+			if (GetActiveProcedure.execute(entity)) {
+				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/power_scale_star.png"), w - 44, h - 21, 0, 0, 16, 16, 16, 16);
+			}
+			if (GetActiveProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
-
-					GetPowerScaleProcedure.execute(entity), w - 29, h - 16, -1, false);
+						GetPowerScaleProcedure.execute(entity), w - 29, h - 16, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
