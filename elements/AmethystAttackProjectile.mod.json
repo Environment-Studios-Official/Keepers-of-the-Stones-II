@@ -16,10 +16,10 @@
     "entityModel": "Modelblock_attack",
     "customModelTexture": "amethyst_block_attack.png",
     "onHitsBlock": {
-      "name": "IceAttackProjectileProjectileHitsBlock"
+      "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok"
     },
     "onHitsEntity": {
-      "name": "IceAttackProjectileProjectileHitsBlock"
+      "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok"
     }
   }
 }

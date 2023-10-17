@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestones.two.entity;
 
-import ru.power_umc.keepersofthestones.two.procedures.IceAttackProjectileProjectileHitsBlockProcedure;
+import ru.power_umc.keepersofthestones.two.procedures.AmethystAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
 import ru.power_umc.keepersofthestones.two.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -70,13 +70,13 @@ public class AmethystAttackProjectileEntity extends AbstractArrow implements Ite
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		IceAttackProjectileProjectileHitsBlockProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		AmethystAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		IceAttackProjectileProjectileHitsBlockProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		AmethystAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
