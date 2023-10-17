@@ -6450,6 +6450,14 @@
       ],
       "category": "neutral",
       "subtitle": "Bass"
+    },
+    {
+      "name": "ear_ringing",
+      "files": [
+        "ear_ringing"
+      ],
+      "category": "neutral",
+      "subtitle": "Ear ringing"
     }
   ],
   "language_map": {
@@ -6467,6 +6475,7 @@
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
+      "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 25",
@@ -6658,6 +6667,7 @@
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
+      "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "item.power.rain_armor_helmet": "Rain Helmet",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 25",

@@ -37,7 +37,7 @@ public class BassBoomParticle extends TextureSheetParticle {
 		this.spriteSet = spriteSet;
 		this.setSize(0.2f, 0.2f);
 		this.quadSize *= 4f;
-		this.lifetime = 7;
+		this.lifetime = 16;
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 1;
@@ -55,7 +55,7 @@ public class BassBoomParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 1) % 7 + 1, 7));
+			this.setSprite(this.spriteSet.get((this.age / 1) % 16 + 1, 16));
 		}
 	}
 }
