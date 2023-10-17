@@ -76,7 +76,7 @@
         "data": {
           "name": "tooltip_wind_gust_uses_25_power_points",
           "text": {
-            "fixedValue": "Wind gust, uses 25"
+            "fixedValue": "Wind gust, uses 35"
           },
           "width": 24,
           "height": 24,
