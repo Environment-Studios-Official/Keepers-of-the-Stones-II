@@ -35,7 +35,7 @@ public class BassBoomParticle extends TextureSheetParticle {
 	protected BassBoomParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(0.2f, 0.2f);
+		this.setSize(4f, 4f);
 		this.quadSize *= 4f;
 		this.lifetime = 16;
 		this.gravity = 0f;
