@@ -75,10 +75,6 @@ public class SpecialAttackProcedure {
 		double xr = 0;
 		double yr = 0;
 		double zr = 0;
-		double Grow = 0;
-		double TrackZ = 0;
-		double TrackY = 0;
-		double TrackX = 0;
 		boolean success = false;
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 1) {
