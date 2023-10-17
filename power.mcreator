@@ -6048,6 +6048,21 @@
         ]
       },
       "path": "~/Elements/Sound"
+    },
+    {
+      "name": "AmethystAttackProjectile",
+      "type": "projectile",
+      "sortid": 293,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amethyst_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestones/two/client/renderer/AmethystAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestones/two/entity/AmethystAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Crystal"
     }
   ],
   "variable_elements": [
