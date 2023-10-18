@@ -421,7 +421,7 @@ public class PowerModVariables {
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
-		public double level = 0;
+		public double level = 1.0;
 		public double skill_points = 0;
 
 		public void syncPlayerVariables(Entity entity) {
