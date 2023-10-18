@@ -69,6 +69,6 @@ public class EarthShieldItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EarthShieldKazhdyiTikVInvientarieProcedure.execute(itemstack);
+		EarthShieldKazhdyiTikVInvientarieProcedure.execute(entity, itemstack);
 	}
 }
