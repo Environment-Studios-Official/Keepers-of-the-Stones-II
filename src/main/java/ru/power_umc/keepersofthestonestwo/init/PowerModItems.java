@@ -50,6 +50,7 @@ import ru.power_umc.keepersofthestonestwo.item.IceSpearItem;
 import ru.power_umc.keepersofthestonestwo.item.IceArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.GravityStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.GoldenDustStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.FrozenItem;
 import ru.power_umc.keepersofthestonestwo.item.FormStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.FireSwordItem;
 import ru.power_umc.keepersofthestonestwo.item.FireStoneItem;
@@ -209,6 +210,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> METAL_ARMOR_CHESTPLATE = REGISTRY.register("metal_armor_chestplate", () -> new MetalArmorItem.Chestplate());
 	public static final RegistryObject<Item> METAL_ARMOR_LEGGINGS = REGISTRY.register("metal_armor_leggings", () -> new MetalArmorItem.Leggings());
 	public static final RegistryObject<Item> METAL_ARMOR_BOOTS = REGISTRY.register("metal_armor_boots", () -> new MetalArmorItem.Boots());
+	public static final RegistryObject<Item> FROZEN_HELMET = REGISTRY.register("frozen_helmet", () -> new FrozenItem.Helmet());
+	public static final RegistryObject<Item> FROZEN_CHESTPLATE = REGISTRY.register("frozen_chestplate", () -> new FrozenItem.Chestplate());
+	public static final RegistryObject<Item> FROZEN_LEGGINGS = REGISTRY.register("frozen_leggings", () -> new FrozenItem.Leggings());
+	public static final RegistryObject<Item> FROZEN_BOOTS = REGISTRY.register("frozen_boots", () -> new FrozenItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

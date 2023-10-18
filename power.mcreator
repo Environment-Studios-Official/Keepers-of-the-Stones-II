@@ -6112,6 +6112,80 @@
         "type": "logic"
       },
       "path": "~/Modules/Gamerules"
+    },
+    {
+      "name": "Frozen",
+      "type": "armor",
+      "sortid": 296,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/FrozenItem.java",
+          "src/main/resources/assets/power/models/item/frozen_chestplate.json",
+          "src/main/resources/assets/power/models/item/frozen_helmet.json",
+          "src/main/resources/assets/power/models/item/frozen_leggings.json",
+          "src/main/resources/assets/power/models/item/frozen_boots.json"
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "FrozenDestructionArmor",
+      "type": "procedure",
+      "sortid": 297,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_destruction_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FrozenDestructionArmorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "FrozenLayerOnEntity",
+      "type": "procedure",
+      "sortid": 298,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_layer_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FrozenLayerOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
     }
   ],
   "variable_elements": [
@@ -6480,6 +6554,30 @@
       "type": "logic",
       "scope": "map",
       "value": "false"
+    },
+    {
+      "name": "armor_helmet",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "armor_chestplate",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "armor_leggings",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
+    },
+    {
+      "name": "armor_boots",
+      "type": "itemstack",
+      "scope": "player_lifetime",
+      "value": "ItemStack.EMPTY"
     }
   ],
   "sound_elements": [
@@ -6561,6 +6659,7 @@
       "gui.power.wheel_abilities_lava.button_2": "2",
       "item.power.gravity_stone": "Камень гравитации",
       "gui.power.wheel_abilities_lava.button_1": "1",
+      "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
       "item.power.earth_shield": "Earth Shield",
@@ -6584,6 +6683,7 @@
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
+      "item.power.frozen_helmet": "Frozen Layer Helmet",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
@@ -6703,7 +6803,9 @@
       "subtitles.bass_boom": "Бас",
       "effect.power.plants_master": "Master of Plants",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
+      "item.power.frozen_chestplate": "Frozen Layer Chestplate",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
+      "item.power.frozen_boots": "Frozen Layer Boots",
       "effect.power.metal_master": "Master of the Metal",
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
@@ -6755,6 +6857,7 @@
       "gui.power.wheel_abilities_lava.button_2": "2",
       "item.power.gravity_stone": "Gravity Stone",
       "gui.power.wheel_abilities_lava.button_1": "1",
+      "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "item.power.ocean_armor_boots": "Ocean Boots",
       "item.power.earth_shield": "Earth Shield",
@@ -6778,6 +6881,7 @@
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
+      "item.power.frozen_helmet": "Frozen Layer Helmet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
@@ -6897,7 +7001,9 @@
       "subtitles.bass_boom": "Bass",
       "effect.power.plants_master": "Master of Plants",
       "item.power.plants_armor_helmet": "Plants Helmet",
+      "item.power.frozen_chestplate": "Frozen Layer Chestplate",
       "item.power.sound_armor_helmet": "Sound Helmet",
+      "item.power.frozen_boots": "Frozen Layer Boots",
       "effect.power.metal_master": "Master of the Metal",
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "item.power.basic_box.tooltip": "Basic",
