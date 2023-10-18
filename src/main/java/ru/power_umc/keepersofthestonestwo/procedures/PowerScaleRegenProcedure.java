@@ -28,12 +28,22 @@ public class PowerScaleRegenProcedure {
 		if (entity == null)
 			return;
 		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer > 0) {
-			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer - 1;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.powerTimer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).level >= 10) {
+				{
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer - 2;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.powerTimer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			} else {
+				{
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer - 1;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.powerTimer = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
 			}
 		} else {
 			{
