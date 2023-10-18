@@ -5187,20 +5187,6 @@
       "path": "~/Elements/Spirit"
     },
     {
-      "name": "PowerScaleOverlay",
-      "type": "overlay",
-      "sortid": 248,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "power_scale_overlay",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/client/screens/PowerScaleOverlayOverlay.java"
-        ]
-      },
-      "path": "~/Modules/PowerScaleModule "
-    },
-    {
       "name": "IceSpear",
       "type": "tool",
       "sortid": 249,
@@ -6206,6 +6192,41 @@
         ]
       },
       "path": "~/Modules/Commands"
+    },
+    {
+      "name": "PowerOverlay",
+      "type": "overlay",
+      "sortid": 300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_overlay",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/screens/PowerOverlayOverlay.java"
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "GetLevel",
+      "type": "procedure",
+      "sortid": 301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_level",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GetLevelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/LevelSystemModule"
     }
   ],
   "variable_elements": [
@@ -6261,7 +6282,7 @@
       "name": "powerTimer",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "50.0"
+      "value": "0.0"
     },
     {
       "name": "attack",

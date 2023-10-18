@@ -2,6 +2,7 @@
 package ru.power_umc.keepersofthestonestwo.client.screens;
 
 import ru.power_umc.keepersofthestonestwo.procedures.GetPowerScaleProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.GetLevelProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.GetActiveProcedure;
 
 import org.checkerframework.checker.units.qual.h;
@@ -22,7 +23,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
-public class PowerScaleOverlayOverlay {
+public class PowerOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.NORMAL)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getWindow().getGuiScaledWidth();
@@ -52,6 +53,9 @@ public class PowerScaleOverlayOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						GetPowerScaleProcedure.execute(entity), w - 29, h - 16, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					GetLevelProcedure.execute(entity), w - 69, h - 16, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();

@@ -36,6 +36,23 @@
           "x": 383,
           "y": 219
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_1000",
+          "text": {
+            "fixedValue": "1000",
+            "name": "GetLevel"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "BOTTOM_RIGHT",
+          "x": 358,
+          "y": 224
+        }
       }
     ],
     "baseTexture": "",
@@ -45,7 +62,7 @@
       "sy": 16,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
