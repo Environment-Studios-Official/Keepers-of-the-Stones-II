@@ -91,6 +91,7 @@ public class PowerModVariables {
 				clone.armor_chestplate = original.armor_chestplate;
 				clone.armor_leggings = original.armor_leggings;
 				clone.armor_boots = original.armor_boots;
+				clone.ability_block = original.ability_block;
 			}
 		}
 
@@ -417,6 +418,7 @@ public class PowerModVariables {
 		public ItemStack armor_chestplate = ItemStack.EMPTY;
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
+		public boolean ability_block = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -442,6 +444,7 @@ public class PowerModVariables {
 			nbt.put("armor_chestplate", armor_chestplate.save(new CompoundTag()));
 			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
+			nbt.putBoolean("ability_block", ability_block);
 			return nbt;
 		}
 
@@ -464,6 +467,7 @@ public class PowerModVariables {
 			armor_chestplate = ItemStack.of(nbt.getCompound("armor_chestplate"));
 			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
+			ability_block = nbt.getBoolean("ability_block");
 		}
 	}
 
@@ -505,6 +509,7 @@ public class PowerModVariables {
 					variables.armor_chestplate = message.data.armor_chestplate;
 					variables.armor_leggings = message.data.armor_leggings;
 					variables.armor_boots = message.data.armor_boots;
+					variables.ability_block = message.data.ability_block;
 				}
 			});
 			context.setPacketHandled(true);

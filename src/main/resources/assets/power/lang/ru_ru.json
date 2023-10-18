@@ -147,7 +147,7 @@
   "item.power.ether_glaive": "Эфирная глефа",
   "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
   "key.power.detransformation_key": "Клавиша детрансформации",
-  "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 60",
+  "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
   "item.power.air_armor_helmet": "Шлем мастера воздуха",
   "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
   "gui.power.wheel_abilities_lightning.button_1": "1",

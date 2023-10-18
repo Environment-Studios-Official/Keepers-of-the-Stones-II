@@ -52,6 +52,8 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.CommandSource;
 import net.minecraft.client.player.AbstractClientPlayer;
 
 import java.util.List;
@@ -1184,7 +1186,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 23) {
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 60) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 					for (int index9 = 0; index9 < 10; index9++) {
 						if (!world.getBlockState(new BlockPos(
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
@@ -1236,40 +1238,49 @@ public class SpecialAttackProcedure {
 											});
 										}
 										{
-											Entity _entity = entityiterator;
-											if (_entity instanceof Player _player) {
-												_player.getInventory().armor.set(3, new ItemStack(PowerModItems.FROZEN_HELMET.get()));
-												_player.getInventory().setChanged();
-											} else if (_entity instanceof LivingEntity _living) {
-												_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.FROZEN_HELMET.get()));
+											Entity _ent = entityiterator;
+											if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+												_ent.getServer().getCommands()
+														.performPrefixedCommand(
+																new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+																		_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+																"item replace entity @s armor.head with power:frozen_helmet{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 											}
 										}
 										{
-											Entity _entity = entityiterator;
-											if (_entity instanceof Player _player) {
-												_player.getInventory().armor.set(2, new ItemStack(PowerModItems.FROZEN_CHESTPLATE.get()));
-												_player.getInventory().setChanged();
-											} else if (_entity instanceof LivingEntity _living) {
-												_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.FROZEN_CHESTPLATE.get()));
+											Entity _ent = entityiterator;
+											if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+												_ent.getServer().getCommands().performPrefixedCommand(
+														new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+																_ent.getDisplayName(), _ent.level().getServer(), _ent),
+														"item replace entity @s armor.chest with power:frozen_chestplate{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 											}
 										}
 										{
-											Entity _entity = entityiterator;
-											if (_entity instanceof Player _player) {
-												_player.getInventory().armor.set(1, new ItemStack(PowerModItems.FROZEN_LEGGINGS.get()));
-												_player.getInventory().setChanged();
-											} else if (_entity instanceof LivingEntity _living) {
-												_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.FROZEN_LEGGINGS.get()));
+											Entity _ent = entityiterator;
+											if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+												_ent.getServer().getCommands().performPrefixedCommand(
+														new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4, _ent.getName().getString(),
+																_ent.getDisplayName(), _ent.level().getServer(), _ent),
+														"item replace entity @s armor.legs with power:frozen_leggings{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 											}
 										}
 										{
-											Entity _entity = entityiterator;
-											if (_entity instanceof Player _player) {
-												_player.getInventory().armor.set(0, new ItemStack(PowerModItems.FROZEN_BOOTS.get()));
-												_player.getInventory().setChanged();
-											} else if (_entity instanceof LivingEntity _living) {
-												_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.FROZEN_BOOTS.get()));
+											Entity _ent = entityiterator;
+											if (!_ent.level().isClientSide() && _ent.getServer() != null) {
+												_ent.getServer().getCommands()
+														.performPrefixedCommand(
+																new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
+																		_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent),
+																"item replace entity @s armor.feet with power:frozen_boots{Enchantments:[{id:binding_curse,lvl:1},{id:vanishing_curse,lvl:1}]}");
 											}
+										}
+										{
+											boolean _setval = true;
+											entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+												capability.ability_block = _setval;
+												capability.syncPlayerVariables(entityiterator);
+											});
 										}
 										success = true;
 										break;
@@ -1286,7 +1297,7 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 60;
+								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
 								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);

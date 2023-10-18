@@ -85,6 +85,13 @@ public class FrozenDestructionArmorProcedure {
 								_living.setItemSlot(EquipmentSlot.FEET, ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).armor_boots));
 							}
 						}
+						{
+							boolean _setval = false;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.ability_block = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.break")), SoundSource.PLAYERS, 1, 1);
