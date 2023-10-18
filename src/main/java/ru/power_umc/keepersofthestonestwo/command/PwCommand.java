@@ -25,7 +25,7 @@ public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -39,7 +39,7 @@ public class PwCommand {
 
 					PowerScaleSetProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.literal("level").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				})))).then(Commands.literal("level").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(1, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
