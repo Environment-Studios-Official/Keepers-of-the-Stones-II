@@ -26,15 +26,6 @@
       }
     ]
   },
-  "bass_boom": {
-    "subtitle": "subtitles.bass_boom",
-    "sounds": [
-      {
-        "name": "power:bass_boom",
-        "stream": false
-      }
-    ]
-  },
   "ear_ringing": {
     "subtitle": "subtitles.ear_ringing",
     "sounds": [
