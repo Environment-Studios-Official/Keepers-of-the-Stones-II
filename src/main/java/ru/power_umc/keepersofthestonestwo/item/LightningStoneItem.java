@@ -34,7 +34,7 @@ public class LightningStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LightningStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity);
+		LightningStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 }
