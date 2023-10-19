@@ -26,6 +26,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ICE_STONE.get());
 				tabData.accept(PowerModItems.LIGHTNING_STONE.get());
 				tabData.accept(PowerModItems.SOUND_STONE.get());
+				tabData.accept(PowerModItems.CRYSTAL_STONE.get());
+				tabData.accept(PowerModItems.LAVA_STONE.get());
 			})
 
 					.build());

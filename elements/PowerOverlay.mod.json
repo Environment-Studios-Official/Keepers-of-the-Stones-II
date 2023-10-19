@@ -49,6 +49,9 @@
             "value": -1,
             "falpha": 0.0
           },
+          "displayCondition": {
+            "name": "GetActive"
+          },
           "anchorPoint": "BOTTOM_RIGHT",
           "x": 358,
           "y": 224

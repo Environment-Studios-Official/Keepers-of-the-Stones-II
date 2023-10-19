@@ -53,9 +53,10 @@ public class PowerOverlayOverlay {
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
 						GetPowerScaleProcedure.execute(entity), w - 29, h - 16, -1, false);
-			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+			if (GetActiveProcedure.execute(entity))
+				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					GetLevelProcedure.execute(entity), w - 69, h - 16, -1, false);
+						GetLevelProcedure.execute(entity), w - 69, h - 16, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
