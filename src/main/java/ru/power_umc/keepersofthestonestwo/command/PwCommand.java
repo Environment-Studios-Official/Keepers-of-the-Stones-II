@@ -39,7 +39,7 @@ public class PwCommand {
 
 					PowerScaleSetProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.literal("level").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(1, 10)).executes(arguments -> {
+				})))).then(Commands.literal("level").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(1, 100)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
