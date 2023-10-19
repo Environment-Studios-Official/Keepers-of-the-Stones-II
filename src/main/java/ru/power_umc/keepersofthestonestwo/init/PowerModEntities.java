@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
@@ -64,6 +65,8 @@ public class PowerModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<LavaAttackProjectileEntity>> LAVA_ATTACK_PROJECTILE = register("projectile_lava_attack_projectile", EntityType.Builder.<LavaAttackProjectileEntity>of(LavaAttackProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(LavaAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<SoundBombProjectileEntity>> SOUND_BOMB_PROJECTILE = register("projectile_sound_bomb_projectile", EntityType.Builder.<SoundBombProjectileEntity>of(SoundBombProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(SoundBombProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

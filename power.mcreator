@@ -6382,6 +6382,107 @@
         ]
       },
       "path": "~/Elements/Lava"
+    },
+    {
+      "name": "StunPriNalozhieniiEffiekta",
+      "type": "procedure",
+      "sortid": 306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_pri_nalozhienii_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StunPriNalozhieniiEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Sound"
+    },
+    {
+      "name": "Stun",
+      "type": "potioneffect",
+      "sortid": 307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/StunMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundBombProjectile",
+      "type": "projectile",
+      "sortid": 309,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_bomb_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/SoundBombProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/SoundBombProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 308,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SoundBombProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 310,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SoundBombProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
     }
   ],
   "variable_elements": [
@@ -6862,6 +6963,7 @@
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
+      "effect.power.stun": "Stun",
       "item.power.tornado_stone": "Камень торнадо",
       "gui.power.wheel_abilities_lava.button_3": "3",
       "gui.power.wheel_abilities_lava.button_2": "2",
@@ -6917,6 +7019,7 @@
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.plague_stone": "Камень чумы",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.water_stone": "Камень воды",
@@ -6963,6 +7066,7 @@
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "item.power.destruction_stone": "Камень разрушения",
       "item.power.darkness_stone": "Камень тьмы",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
       "effect.power.water_master": "Мастер воды",
@@ -6990,6 +7094,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Шаровая молния, расходует 80",
       "item_group.power.boxes": "Шкатулки",
       "item.power.music_stone": "Камень музыки",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_40": "Crystal volley, uses 40",
       "gui.power.wheel_abilities_crystal.button_2": "2",
       "gui.power.wheel_abilities_crystal.button_3": "3",
       "gui.power.wheel_abilities_crystal.button_1": "1",
@@ -7010,6 +7115,7 @@
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "subtitles.bass_boom": "Бас",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "effect.power.plants_master": "Master of Plants",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
       "item.power.frozen_chestplate": "Frozen Layer Chestplate",
@@ -7063,6 +7169,7 @@
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
+      "effect.power.stun": "Stun",
       "item.power.tornado_stone": "Tornado Stone",
       "gui.power.wheel_abilities_lava.button_3": "3",
       "gui.power.wheel_abilities_lava.button_2": "2",
@@ -7118,6 +7225,7 @@
       "item.power.lava_armor_leggings": "Lava Leggings",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.plague_stone": "Plague Stone",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.water_stone": "Water Stone",
@@ -7164,6 +7272,7 @@
       "item.power.air_armor_chestplate": "Air Chestplate",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.darkness_stone": "Darkness Stone",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
       "effect.power.water_master": "Master of Water",
@@ -7191,6 +7300,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Ball lightning, uses 80",
       "item_group.power.boxes": "Boxes",
       "item.power.music_stone": "Music Stone",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_40": "Crystal volley, uses 40",
       "gui.power.wheel_abilities_crystal.button_2": "2",
       "gui.power.wheel_abilities_crystal.button_3": "3",
       "gui.power.wheel_abilities_crystal.button_1": "1",
@@ -7211,6 +7321,7 @@
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "subtitles.bass_boom": "Bass",
+      "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "effect.power.plants_master": "Master of Plants",
       "item.power.plants_armor_helmet": "Plants Helmet",
       "item.power.frozen_chestplate": "Frozen Layer Chestplate",
