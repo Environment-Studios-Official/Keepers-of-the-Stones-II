@@ -13,7 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -25,12 +24,12 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_1;
-	Button button_2;
-	Button button_3;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_lava_outburst;
+	ImageButton imagebutton_lava_attack;
+	ImageButton imagebutton_melting;
 
 	public WheelAbilitiesLavaScreen(WheelAbilitiesLavaMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,6 +47,12 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35"), mouseX, mouseY);
+		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 84 && mouseY < topPos + 108)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_melting_uses_50"), mouseX, mouseY);
 	}
 
 	@Override
@@ -87,34 +92,10 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_lava.button_1"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(0, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + 80, this.topPos + 26, 30, 20).build();
-		guistate.put("button:button_1", button_1);
-		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_lava.button_2"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(1, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}).bounds(this.leftPos + 142, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_2", button_2);
-		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_lava.button_3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(2, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}).bounds(this.leftPos + 16, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(3, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(0, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
@@ -127,8 +108,8 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(4, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(1, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
@@ -141,8 +122,8 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(5, x, y, z));
-				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(2, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
@@ -153,5 +134,29 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
+		imagebutton_lava_outburst = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_lava_outburst.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(3, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_lava_outburst", imagebutton_lava_outburst);
+		this.addRenderableWidget(imagebutton_lava_outburst);
+		imagebutton_lava_attack = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_lava_attack.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(4, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_lava_attack", imagebutton_lava_attack);
+		this.addRenderableWidget(imagebutton_lava_attack);
+		imagebutton_melting = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_melting.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(5, x, y, z));
+				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_melting", imagebutton_melting);
+		this.addRenderableWidget(imagebutton_melting);
 	}
 }

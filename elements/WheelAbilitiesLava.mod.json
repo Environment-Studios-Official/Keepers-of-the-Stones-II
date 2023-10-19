@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_lava_outburst",
+          "image": "lava_outburst.png",
+          "hoveredImage": "lava_outburst_highligh.png",
           "onClick": {
             "name": "Attack37"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_lava_attack",
+          "image": "lava_attack.png",
+          "hoveredImage": "lava_attack_highligh.png",
           "onClick": {
             "name": "Attack38"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_melting",
+          "image": "melting.png",
+          "hoveredImage": "melting_highligh.png",
           "onClick": {
             "name": "Attack39"
           },
-          "width": 30,
-          "height": 20,
-          "x": 134,
-          "y": 112
+          "x": 129,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lava_outburst_uses_10",
+          "text": {
+            "fixedValue": "Lava_outburst, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lava_attack_uses_35",
+          "text": {
+            "fixedValue": "Lava attack, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_melting_uses_50",
+          "text": {
+            "fixedValue": "Melting, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 138,
+          "y": 108
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
