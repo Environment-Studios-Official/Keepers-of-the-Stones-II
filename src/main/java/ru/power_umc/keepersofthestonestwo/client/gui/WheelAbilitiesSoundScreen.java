@@ -13,7 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -25,12 +24,12 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_1;
-	Button button_2;
-	Button button_3;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_sound_wave;
+	ImageButton imagebutton_sound_bomb;
+	ImageButton imagebutton_sound_boom;
 
 	public WheelAbilitiesSoundScreen(WheelAbilitiesSoundMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,6 +47,12 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30"), mouseX, mouseY);
+		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -87,34 +92,10 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_sound.button_1"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(0, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + 80, this.topPos + 26, 30, 20).build();
-		guistate.put("button:button_1", button_1);
-		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_sound.button_2"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(1, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}).bounds(this.leftPos + 142, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_2", button_2);
-		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_sound.button_3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(2, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}).bounds(this.leftPos + 16, this.topPos + 88, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(3, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(0, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
@@ -127,8 +108,8 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(4, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(1, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
@@ -141,8 +122,8 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(5, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(2, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
@@ -153,5 +134,29 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
+		imagebutton_sound_wave = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_wave.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(3, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_sound_wave", imagebutton_sound_wave);
+		this.addRenderableWidget(imagebutton_sound_wave);
+		imagebutton_sound_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_bomb.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(4, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_sound_bomb", imagebutton_sound_bomb);
+		this.addRenderableWidget(imagebutton_sound_bomb);
+		imagebutton_sound_boom = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_boom.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(5, x, y, z));
+				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_sound_boom", imagebutton_sound_boom);
+		this.addRenderableWidget(imagebutton_sound_boom);
 	}
 }
