@@ -6267,6 +6267,121 @@
         ]
       },
       "path": "~/Modules/LevelSystemModule"
+    },
+    {
+      "name": "LavaAttackProjectile",
+      "type": "projectile",
+      "sortid": 302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/LavaAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/LavaAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaAttackProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_attack_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LavaAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaAttackProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_attack_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LavaAttackProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
+    },
+    {
+      "name": "LavaPassiveProtection",
+      "type": "procedure",
+      "sortid": 305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LavaPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Lava"
     }
   ],
   "variable_elements": [
@@ -6736,17 +6851,17 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
-      "item.power.plants_stone": "Камень зелени",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
+      "item.power.plants_stone": "Камень зелени",
       "effect.power.ice_master": "Мастер льда",
-      "item.power.spirit_stone": "Камень духа",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
+      "item.power.spirit_stone": "Камень духа",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
-      "item.power.tornado_stone": "Камень торнадо",
       "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Камень торнадо",
       "gui.power.wheel_abilities_lava.button_2": "2",
       "item.power.gravity_stone": "Камень гравитации",
       "gui.power.wheel_abilities_lava.button_1": "1",
@@ -6789,8 +6904,8 @@
       "item.power.blood_stone": "Камень крови",
       "item.power.creation_stone": "Камень созидания",
       "gui.power.wheel_abilities_air.button_3": "3",
-      "effect.power.earth_master": "Мастер земли",
       "gui.power.wheel_abilities_air.button_2": "2",
+      "effect.power.earth_master": "Мастер земли",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
       "item.power.ice_spear": "Копьё льда",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40",
@@ -6934,17 +7049,17 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.plants_stone": "Plants Stone",
       "item.power.ice_armor_helmet": "Ice Helmet",
+      "item.power.plants_stone": "Plants Stone",
       "effect.power.ice_master": "Master of the Ice",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.spirit_stone": "Spirit Stone",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
-      "item.power.tornado_stone": "Tornado Stone",
       "gui.power.wheel_abilities_lava.button_3": "3",
+      "item.power.tornado_stone": "Tornado Stone",
       "gui.power.wheel_abilities_lava.button_2": "2",
       "item.power.gravity_stone": "Gravity Stone",
       "gui.power.wheel_abilities_lava.button_1": "1",
@@ -6987,8 +7102,8 @@
       "item.power.blood_stone": "Blood Stone",
       "item.power.creation_stone": "Creation Stone",
       "gui.power.wheel_abilities_air.button_3": "3",
-      "effect.power.earth_master": "Master of the Earth",
       "gui.power.wheel_abilities_air.button_2": "2",
+      "effect.power.earth_master": "Master of the Earth",
       "item.power.ether_armor_helmet": "Ether Helmet",
       "item.power.ice_spear": "Ice Spear",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40",
