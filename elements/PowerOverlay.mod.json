@@ -36,26 +36,6 @@
           "x": 383,
           "y": 219
         }
-      },
-      {
-        "type": "label",
-        "data": {
-          "name": "label_1000",
-          "text": {
-            "fixedValue": "1000",
-            "name": "GetLevel"
-          },
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "displayCondition": {
-            "name": "GetActive"
-          },
-          "anchorPoint": "BOTTOM_RIGHT",
-          "x": 358,
-          "y": 224
-        }
       }
     ],
     "baseTexture": "",
