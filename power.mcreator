@@ -6483,6 +6483,111 @@
         ]
       },
       "path": "~/Elements/Sound"
+    },
+    {
+      "name": "LightningFalchion",
+      "type": "tool",
+      "sortid": 311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_falchion",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/LightningFalchionItem.java",
+          "src/main/resources/assets/power/models/item/lightning_falchion.json"
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "LightningFalchionKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_falchion_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LightningFalchionKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Lightning"
+    },
+    {
+      "name": "SoundDagger",
+      "type": "tool",
+      "sortid": 313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/SoundDaggerItem.java",
+          "src/main/resources/assets/power/models/item/sound_dagger.json"
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundDaggerKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_dagger_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SoundDaggerKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "CrystalKnife",
+      "type": "tool",
+      "sortid": 315,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_knife",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/CrystalKnifeItem.java",
+          "src/main/resources/assets/power/models/item/crystal_knife.json"
+        ]
+      },
+      "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "CrystalKnifeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 316,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_knife_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CrystalKnifeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Crystal"
     }
   ],
   "variable_elements": [
@@ -6976,6 +7081,7 @@
       "effect.power.rain_master": "Мастер дождя",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10",
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
+      "item.power.lightning_falchion": "Молниеносный фальшион",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "subtitles.electric_spark": "Искра",
@@ -7049,6 +7155,7 @@
       "item.power.poison_stone": "Камень яда",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
+      "item.power.crystal_knife": "Кристальный нож",
       "item.power.mercury_stone": "Камень ртути",
       "item.power.moon_stone": "Камень луны",
       "effect.power.tornado_master": "Мастер торнадо",
@@ -7072,6 +7179,7 @@
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
+      "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "subtitles.bass_boom": "Бас",
@@ -7162,6 +7270,7 @@
       "effect.power.rain_master": "Master of the Rain",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
       "item.power.ocean_armor_leggings": "Ocean Leggings",
+      "item.power.lightning_falchion": "Lightning Falchion",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "subtitles.electric_spark": "Spark",
@@ -7235,6 +7344,7 @@
       "item.power.poison_stone": "Poison Stone",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
+      "item.power.crystal_knife": "Crystal Knife",
       "item.power.mercury_stone": "Mercury Stone",
       "item.power.moon_stone": "Moon Stone",
       "effect.power.tornado_master": "Master of Tornado",
@@ -7258,6 +7368,7 @@
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
+      "item.power.sound_dagger": "Sound Dagger",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "subtitles.bass_boom": "Bass",

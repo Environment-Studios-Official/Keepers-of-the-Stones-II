@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "crystal_knife"
+      },
+      "name": "default"
+    }
+  }
+}

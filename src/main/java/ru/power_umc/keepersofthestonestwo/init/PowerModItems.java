@@ -18,6 +18,7 @@ import ru.power_umc.keepersofthestonestwo.item.SpiritStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SpeedStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SpaceStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.SoundDaggerItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.SmokeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowStoneItem;
@@ -41,6 +42,7 @@ import ru.power_umc.keepersofthestonestwo.item.MercuryStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MagnetStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MagicFireballItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.LightningFalchionItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.LightStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaStoneItem;
@@ -67,6 +69,7 @@ import ru.power_umc.keepersofthestonestwo.item.EarthArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.DestructionStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.DarknessStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.CrystalStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.CrystalKnifeItem;
 import ru.power_umc.keepersofthestonestwo.item.CrystalArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.CreationStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.BlueFlameStoneItem;
@@ -214,6 +217,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> FROZEN_CHESTPLATE = REGISTRY.register("frozen_chestplate", () -> new FrozenItem.Chestplate());
 	public static final RegistryObject<Item> FROZEN_LEGGINGS = REGISTRY.register("frozen_leggings", () -> new FrozenItem.Leggings());
 	public static final RegistryObject<Item> FROZEN_BOOTS = REGISTRY.register("frozen_boots", () -> new FrozenItem.Boots());
+	public static final RegistryObject<Item> LIGHTNING_FALCHION = REGISTRY.register("lightning_falchion", () -> new LightningFalchionItem());
+	public static final RegistryObject<Item> SOUND_DAGGER = REGISTRY.register("sound_dagger", () -> new SoundDaggerItem());
+	public static final RegistryObject<Item> CRYSTAL_KNIFE = REGISTRY.register("crystal_knife", () -> new CrystalKnifeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
