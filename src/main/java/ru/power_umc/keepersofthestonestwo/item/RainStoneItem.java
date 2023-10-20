@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.LavaStoneUseProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.RainStoneUseProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -34,7 +34,7 @@ public class RainStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LavaStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		RainStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 }

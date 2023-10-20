@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
@@ -35,4 +36,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesCrystalMenu>> WHEEL_ABILITIES_CRYSTAL = REGISTRY.register("wheel_abilities_crystal", () -> IForgeMenuType.create(WheelAbilitiesCrystalMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesLavaMenu>> WHEEL_ABILITIES_LAVA = REGISTRY.register("wheel_abilities_lava", () -> IForgeMenuType.create(WheelAbilitiesLavaMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesIceMenu>> WHEEL_ABILITIES_ICE = REGISTRY.register("wheel_abilities_ice", () -> IForgeMenuType.create(WheelAbilitiesIceMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesRainMenu>> WHEEL_ABILITIES_RAIN = REGISTRY.register("wheel_abilities_rain", () -> IForgeMenuType.create(WheelAbilitiesRainMenu::new));
 }
