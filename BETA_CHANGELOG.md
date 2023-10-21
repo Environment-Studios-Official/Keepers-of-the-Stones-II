@@ -1,13 +1,11 @@
-What's new in Keepers of the Stones version II 1.0.0.2?<br />
-<br />- Added new elements (Ice, Lightning, Sound, Crystal, Lava, Rain, Tornado, Ocean)
-<br />- Now if the player is in the creative, the stones will not recharge
-<br />- Now the earth shield works in the main hand
-<br />- Added the elemental_stones tag in the Forge namespace
-<br />- The power scale was displayed in the game screen
-<br />- [Bugfix] Fixed fire master armor
-<br />- [Bugfix] Fixed a bug that caused fire to be placed in the air when using a flamethrower
-<br />- [Bugfix] Fixed button shift in the ability wheel interface
-<br />- [Bugfix] Fixed a bug when identical stones were issued
-<br />- [Bugfix] Fixed a bug due to which the stalagmite was not placed
-<br />- [Bugfix] Fixed a bug that caused the stalagmite attack to waste power points just like that
-<br />- [Bugfix] Fixed a bug where a gust of wind didn't work for players
+What's new in Keepers of the Stones version II 1.0.0.3?<br />
+<br />- Added new elements (Ice, Lightning, Sound)
+<br />- Reduced knockback on air flow
+<br />- Added a power points icon as a symbol
+<br />- Redesigned gust of wind
+<br />- Improved earth shield
+<br />- The power scale now appears only when the stone is active
+<br />- Added stoneDistribution gamerule
+<br />- Added experimental level system
+<br />- [Bugfix] Fixed duplicate sound when using abilities
+<br />- [Bugfix] Some fixes in the pw command

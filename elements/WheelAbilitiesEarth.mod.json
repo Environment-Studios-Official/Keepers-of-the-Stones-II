@@ -111,7 +111,7 @@
         "data": {
           "name": "tooltip_earth_block_attack_uses_15_powe",
           "text": {
-            "fixedValue": "Earth block attack, uses 15 power points"
+            "fixedValue": "Earth block attack, uses 15"
           },
           "width": 24,
           "height": 24,
@@ -124,7 +124,7 @@
         "data": {
           "name": "tooltip_stalagmite_piercinguses_35_powe",
           "text": {
-            "fixedValue": "Stalagmite piercing.uses, 40 power points"
+            "fixedValue": "Stalagmite piercing.uses, 40"
           },
           "width": 24,
           "height": 24,
@@ -137,7 +137,7 @@
         "data": {
           "name": "tooltip_earth_shielduses_45power_point",
           "text": {
-            "fixedValue": "Earth shield.uses, 45 power points"
+            "fixedValue": "Earth shield.uses, 45"
           },
           "width": 24,
           "height": 24,

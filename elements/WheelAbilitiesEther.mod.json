@@ -111,7 +111,7 @@
         "data": {
           "name": "tooltip_ethereal_ray_uses_10_power_poin",
           "text": {
-            "fixedValue": "Ethereal ray, uses 10 power points"
+            "fixedValue": "Ethereal ray, uses 10"
           },
           "width": 24,
           "height": 24,
@@ -124,7 +124,7 @@
         "data": {
           "name": "tooltip_ethereal_volley_uses_30_power_p",
           "text": {
-            "fixedValue": "Ethereal volley, uses 30 power points"
+            "fixedValue": "Ethereal volley, uses 30"
           },
           "width": 24,
           "height": 24,
@@ -137,7 +137,7 @@
         "data": {
           "name": "tooltip_ethereal_aura_uses_80_power_poi",
           "text": {
-            "fixedValue": "Ethereal aura, uses 80 power points"
+            "fixedValue": "Ethereal aura, uses 80"
           },
           "width": 24,
           "height": 24,

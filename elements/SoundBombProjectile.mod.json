@@ -1,0 +1,25 @@
+{
+  "_fv": 53,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.STAINED_GLASS#6"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 23.0,
+    "knockback": 0,
+    "entityModel": "Modelether_bullet",
+    "customModelTexture": "sound_bomb.png",
+    "onHitsBlock": {
+      "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost"
+    }
+  }
+}

@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_crystal_block_attack",
+          "image": "crystal_block_attack.png",
+          "hoveredImage": "crystal_block_attack_highlight.png",
           "onClick": {
             "name": "Attack33"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "tooltip_crystal_block_attack_uses_10",
+          "text": {
+            "fixedValue": "Crystal block attack, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crystal_piercing",
+          "image": "crystal_piercing.png",
+          "hoveredImage": "crystal_piercing_highlight.png",
           "onClick": {
             "name": "Attack34"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "tooltip_crystal_piercing_uses_40",
+          "text": {
+            "fixedValue": "Crystal piercing, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 107
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_crystal_volley",
+          "image": "crystal_volley.png",
+          "hoveredImage": "crystal_volley_highlight.png",
           "onClick": {
             "name": "Attack35"
           },
-          "width": 30,
-          "height": 20,
-          "x": 134,
-          "y": 112
+          "x": 129,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_crystal_volley_uses_65",
+          "text": {
+            "fixedValue": "Crystal volley, uses 65"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 139,
+          "y": 107
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

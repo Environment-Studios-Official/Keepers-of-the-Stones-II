@@ -111,7 +111,7 @@
         "data": {
           "name": "tooltip_water_stream_uses_10_power_poin",
           "text": {
-            "fixedValue": "Water stream, uses 10 power points"
+            "fixedValue": "Water stream, uses 10"
           },
           "width": 24,
           "height": 24,
@@ -124,7 +124,7 @@
         "data": {
           "name": "tooltip_water_shock_uses_20_power_point",
           "text": {
-            "fixedValue": "Water shock, uses 20 power points"
+            "fixedValue": "Water shock, uses 20"
           },
           "width": 24,
           "height": 24,
@@ -137,7 +137,7 @@
         "data": {
           "name": "tooltip_healing_water_uses_30_power_poi",
           "text": {
-            "fixedValue": "Healing water, uses 30 power points"
+            "fixedValue": "Healing water, uses 30"
           },
           "width": 24,
           "height": 24,

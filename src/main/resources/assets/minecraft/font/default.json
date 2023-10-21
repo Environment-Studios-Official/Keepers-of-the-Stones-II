@@ -1,0 +1,12 @@
+{
+	"providers": [
+		{
+			"type": "bitmap",
+			"file": "minecraft:font/power_scale_star.png",
+			"ascent": 7,
+			"height": 8,
+			"chars": ["\uE991"]
+		}
+	
+	]
+}

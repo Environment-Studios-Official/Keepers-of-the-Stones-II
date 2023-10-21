@@ -16,5 +16,23 @@
         "stream": false
       }
     ]
+  },
+  "electric_spark": {
+    "subtitle": "subtitles.electric_spark",
+    "sounds": [
+      {
+        "name": "power:electric_spark",
+        "stream": false
+      }
+    ]
+  },
+  "ear_ringing": {
+    "subtitle": "subtitles.ear_ringing",
+    "sounds": [
+      {
+        "name": "power:ear_ringing",
+        "stream": false
+      }
+    ]
   }
 }

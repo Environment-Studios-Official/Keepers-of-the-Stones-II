@@ -1,0 +1,25 @@
+{
+  "_fv": 53,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AMETHYST_BLOCK"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "amethyst_block_attack.png",
+    "onHitsBlock": {
+      "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

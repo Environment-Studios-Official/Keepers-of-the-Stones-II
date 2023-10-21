@@ -1,0 +1,28 @@
+{
+  "_fv": 53,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.STAINED_GLASS#10"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 23.0,
+    "knockback": 0,
+    "entityModel": "Modelether_bullet",
+    "customModelTexture": "ball_lightning.png",
+    "onHitsBlock": {
+      "name": "BallLightningProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "BallLightningProjectileKoghdaSnariadPopadaietVSushchnost"
+    },
+    "onFlyingTick": {
+      "name": "BallLightningProjectileKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}
