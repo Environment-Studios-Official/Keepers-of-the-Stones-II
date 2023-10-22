@@ -51,7 +51,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe"), mouseX, mouseY);
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 147 && mouseY < topPos + 171)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_stalagmite_piercing", imagebutton_stalagmite_piercing);
 		this.addRenderableWidget(imagebutton_stalagmite_piercing);
-		imagebutton_earth_shield = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_shield.png"), 46, 92, e -> {
+		imagebutton_earth_shield = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_shield.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(5, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 5, x, y, z);

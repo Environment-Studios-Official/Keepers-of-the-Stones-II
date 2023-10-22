@@ -51,7 +51,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lightning.tooltip_electrical_discharges_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 21 && mouseX < leftPos + 45 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		});
 		guistate.put("button:imagebutton_lightning_strike", imagebutton_lightning_strike);
 		this.addRenderableWidget(imagebutton_lightning_strike);
-		imagebutton_ball_lightning = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ball_lightning.png"), 46, 92, e -> {
+		imagebutton_ball_lightning = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ball_lightning.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightningButtonMessage(5, x, y, z));
 				WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 5, x, y, z);

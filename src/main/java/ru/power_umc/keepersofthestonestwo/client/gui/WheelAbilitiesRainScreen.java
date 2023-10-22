@@ -108,7 +108,7 @@ public class WheelAbilitiesRainScreen extends AbstractContainerScreen<WheelAbili
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesRainButtonMessage(2, x, y, z));
 				WheelAbilitiesRainButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		}).bounds(this.leftPos + 18, this.topPos + 86, 30, 20).build();
+		}).bounds(this.leftPos + 79, this.topPos + 146, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {

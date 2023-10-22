@@ -55,16 +55,9 @@ import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
-import net.minecraft.client.player.AbstractClientPlayer;
 
 import java.util.List;
 import java.util.Comparator;
-
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
-import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
-import dev.kosmx.playerAnim.api.layered.ModifierLayer;
-import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
-import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 public class SpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -385,14 +378,6 @@ public class SpecialAttackProcedure {
 					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 6) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
-						if (world.isClientSide()) {
-							if (entity instanceof AbstractClientPlayer player) {
-								var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
-								if (animation != null) {
-									animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.spin"))));
-								}
-							}
-						}
 						particleAmount = 25;
 						particleRadius = 2;
 						for (int index2 = 0; index2 < (int) particleAmount; index2++) {
@@ -452,7 +437,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt118 && _livEnt118.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt117 && _livEnt117.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 9) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
@@ -723,7 +708,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt174 && _livEnt174.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt173 && _livEnt173.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -856,7 +841,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt198 && _livEnt198.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt197 && _livEnt197.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 17) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index5 = 0; index5 < 15; index5++) {
@@ -1083,7 +1068,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt251 && _livEnt251.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt250 && _livEnt250.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 21) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index8 = 0; index8 < 15; index8++) {
@@ -1358,7 +1343,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt343 && _livEnt343.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt342 && _livEnt342.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 25) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index9 = 0; index9 < 15; index9++) {
@@ -1514,7 +1499,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt378 && _livEnt378.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt377 && _livEnt377.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 29) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index11 = 0; index11 < 15; index11++) {
@@ -1636,14 +1621,14 @@ public class SpecialAttackProcedure {
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.wheel_one = _setval;
+								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt411 && _livEnt411.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt410 && _livEnt410.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 33) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						{
@@ -1872,7 +1857,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt461 && _livEnt461.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt460 && _livEnt460.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 37) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index14 = 0; index14 < 15; index14++) {
@@ -2204,9 +2189,54 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt565 && _livEnt565.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt564 && _livEnt564.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 41) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+						for (int index16 = 0; index16 < 15; index16++) {
+							if (!world.getBlockState(new BlockPos(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getX(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getY(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getZ()))
+									.canOcclude()) {
+								Scaling = Scaling + 0.5;
+							} else {
+								break;
+							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.RAIN,
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()),
+										25, 1, 1, 1, 0.25);
+							{
+								final Vec3 _center = new Vec3(
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)), 9);
+									}
+								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -2226,13 +2256,49 @@ public class SpecialAttackProcedure {
 						}
 					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 43) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
-						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+						if (world.getLevelData().isRaining()) {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.RAIN, x, y, z, 30, 0, (-1), 0, 1);
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 4, false, false));
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
+							{
+								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.power = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						} else {
+							if (world instanceof Level _level) {
+								if (!_level.isClientSide()) {
+									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
+								} else {
+									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
+								}
+							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.RAIN, x, y, z, 30, 0, (-1), 0, 1);
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 2, false, false));
+							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
+							{
+								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.power = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
 						}
 					}
 				}

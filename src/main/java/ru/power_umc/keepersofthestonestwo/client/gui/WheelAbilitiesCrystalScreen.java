@@ -51,7 +51,7 @@ public class WheelAbilitiesCrystalScreen extends AbstractContainerScreen<WheelAb
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40"), mouseX, mouseY);
-		if (mouseX > leftPos + 21 && mouseX < leftPos + 45 && mouseY > topPos + 83 && mouseY < topPos + 107)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesCrystalScreen extends AbstractContainerScreen<WheelAb
 		});
 		guistate.put("button:imagebutton_crystal_piercing", imagebutton_crystal_piercing);
 		this.addRenderableWidget(imagebutton_crystal_piercing);
-		imagebutton_crystal_volley = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_crystal_volley.png"), 46, 92, e -> {
+		imagebutton_crystal_volley = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_crystal_volley.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCrystalButtonMessage(5, x, y, z));
 				WheelAbilitiesCrystalButtonMessage.handleButtonAction(entity, 5, x, y, z);

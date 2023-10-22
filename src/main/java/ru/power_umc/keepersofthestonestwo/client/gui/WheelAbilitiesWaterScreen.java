@@ -51,7 +51,7 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point"), mouseX, mouseY);
-		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 86 && mouseY < topPos + 110)
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesWaterScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_water_shock", imagebutton_water_shock);
 		this.addRenderableWidget(imagebutton_water_shock);
-		imagebutton_healing_water = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_healing_water.png"), 46, 92, e -> {
+		imagebutton_healing_water = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_healing_water.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesWaterButtonMessage(5, x, y, z));
 				WheelAbilitiesWaterButtonMessage.handleButtonAction(entity, 5, x, y, z);

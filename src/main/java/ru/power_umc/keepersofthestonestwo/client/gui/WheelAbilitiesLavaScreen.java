@@ -51,7 +51,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_melting_uses_50"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		});
 		guistate.put("button:imagebutton_lava_attack", imagebutton_lava_attack);
 		this.addRenderableWidget(imagebutton_lava_attack);
-		imagebutton_melting = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_melting.png"), 46, 92, e -> {
+		imagebutton_melting = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_melting.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLavaButtonMessage(5, x, y, z));
 				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 5, x, y, z);
