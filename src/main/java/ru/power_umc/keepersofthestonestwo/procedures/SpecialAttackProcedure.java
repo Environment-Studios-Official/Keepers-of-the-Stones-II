@@ -1621,7 +1621,7 @@ public class SpecialAttackProcedure {
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.wheel_one = _setval;
+								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}

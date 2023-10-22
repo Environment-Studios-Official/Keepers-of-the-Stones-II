@@ -51,7 +51,7 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 85 && mouseY < topPos + 109)
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 146 && mouseY < topPos + 170)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_sound_bomb", imagebutton_sound_bomb);
 		this.addRenderableWidget(imagebutton_sound_bomb);
-		imagebutton_sound_boom = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_boom.png"), 46, 92, e -> {
+		imagebutton_sound_boom = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_boom.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(5, x, y, z));
 				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 5, x, y, z);

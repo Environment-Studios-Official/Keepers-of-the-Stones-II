@@ -51,7 +51,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 21 && mouseX < leftPos + 45 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		});
 		guistate.put("button:imagebutton_ice_attack", imagebutton_ice_attack);
 		this.addRenderableWidget(imagebutton_ice_attack);
-		imagebutton_ice_trap = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ice_trap.png"), 46, 92, e -> {
+		imagebutton_ice_trap = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ice_trap.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(5, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 5, x, y, z);

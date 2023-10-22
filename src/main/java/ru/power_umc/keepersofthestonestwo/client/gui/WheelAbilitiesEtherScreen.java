@@ -51,7 +51,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p"), mouseX, mouseY);
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi"), mouseX, mouseY);
 	}
 
@@ -150,7 +150,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_ethereal_volley", imagebutton_ethereal_volley);
 		this.addRenderableWidget(imagebutton_ethereal_volley);
-		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_aura.png"), 46, 92, e -> {
+		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_aura.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(5, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 5, x, y, z);

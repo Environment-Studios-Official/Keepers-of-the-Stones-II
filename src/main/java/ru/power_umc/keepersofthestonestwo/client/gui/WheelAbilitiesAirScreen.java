@@ -51,7 +51,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points"), mouseX, mouseY);
-		if (mouseX > leftPos + 20 && mouseX < leftPos + 44 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points"), mouseX, mouseY);
 	}
 
@@ -108,7 +108,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		});
 		guistate.put("button:imagebutton_wind_gust", imagebutton_wind_gust);
 		this.addRenderableWidget(imagebutton_wind_gust);
-		imagebutton_air_flight = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_flight.png"), 46, 92, e -> {
+		imagebutton_air_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_flight.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAirButtonMessage(2, x, y, z));
 				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 2, x, y, z);

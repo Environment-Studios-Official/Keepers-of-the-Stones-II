@@ -49,7 +49,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin"), mouseX, mouseY);
-		if (mouseX > leftPos + 22 && mouseX < leftPos + 46 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p"), mouseX, mouseY);
@@ -108,7 +108,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		});
 		guistate.put("button:imagebutton_triple_fireball", imagebutton_triple_fireball);
 		this.addRenderableWidget(imagebutton_triple_fireball);
-		imagebutton_jet_fire = new ImageButton(this.leftPos + 11, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_jet_fire.png"), 46, 92, e -> {
+		imagebutton_jet_fire = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_jet_fire.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(2, x, y, z));
 				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 2, x, y, z);
