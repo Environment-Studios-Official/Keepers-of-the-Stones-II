@@ -15,6 +15,7 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.DirtBlockAttackProject
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
 import net.minecraftforge.fml.common.Mod;
@@ -41,5 +42,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.AMETHYST_ATTACK_PROJECTILE.get(), AmethystAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), LavaAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), SoundBombProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), AmethystClusterAttackProjectileRenderer::new);
 	}
 }

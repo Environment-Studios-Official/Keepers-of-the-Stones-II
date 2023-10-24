@@ -16,6 +16,7 @@ import ru.power_umc.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity
 import ru.power_umc.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.BallLightningProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
@@ -67,6 +68,9 @@ public class PowerModEntities {
 			.setCustomClientFactory(LavaAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<SoundBombProjectileEntity>> SOUND_BOMB_PROJECTILE = register("projectile_sound_bomb_projectile", EntityType.Builder.<SoundBombProjectileEntity>of(SoundBombProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(SoundBombProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AmethystClusterAttackProjectileEntity>> AMETHYST_CLUSTER_ATTACK_PROJECTILE = register("projectile_amethyst_cluster_attack_projectile",
+			EntityType.Builder.<AmethystClusterAttackProjectileEntity>of(AmethystClusterAttackProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AmethystClusterAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true)
+					.setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
