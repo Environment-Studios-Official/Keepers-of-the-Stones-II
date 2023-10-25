@@ -6811,6 +6811,214 @@
         ]
       },
       "path": "~/Elements/Crystal"
+    },
+    {
+      "name": "TornadoMasterStart",
+      "type": "procedure",
+      "sortid": 326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/TornadoMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "TornadoMasterEnd",
+      "type": "procedure",
+      "sortid": 327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/TornadoMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "TornadoStoneUse",
+      "type": "procedure",
+      "sortid": 328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/TornadoStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "WheelAbilitiesTornado",
+      "type": "gui",
+      "sortid": 329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_tornado",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesTornadoMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesTornadoScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesTornadoButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Tornado"
+    },
+    {
+      "name": "Attack45",
+      "type": "procedure",
+      "sortid": 330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_45",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack45Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Tornado"
+    },
+    {
+      "name": "Attack46",
+      "type": "procedure",
+      "sortid": 331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_46",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack46Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Tornado"
+    },
+    {
+      "name": "Attack47",
+      "type": "procedure",
+      "sortid": 332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_47",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack47Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Tornado"
+    },
+    {
+      "name": "Attack48",
+      "type": "procedure",
+      "sortid": 333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_48",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack48Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Tornado"
     }
   ],
   "variable_elements": [
@@ -7447,7 +7655,10 @@
       "item.power.ocean_stone": "Камень океана",
       "item.power.mist_stone": "Камень тумана",
       "effect.power.animals_master": "Мастер животных",
+      "gui.power.wheel_abilities_tornado.button_3": "3",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
+      "gui.power.wheel_abilities_tornado.button_2": "2",
+      "gui.power.wheel_abilities_tornado.button_1": "1",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80",
       "item.power.air_stone": "Камень воздуха",
       "item.power.sound_stone": "Камень звука",
@@ -7642,7 +7853,10 @@
       "item.power.ocean_stone": "Ocean Stone",
       "item.power.mist_stone": "Mist Stone",
       "effect.power.animals_master": "Master of Animals",
+      "gui.power.wheel_abilities_tornado.button_3": "3",
       "item.power.air_armor_boots": "Air Boots",
+      "gui.power.wheel_abilities_tornado.button_2": "2",
+      "gui.power.wheel_abilities_tornado.button_1": "1",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80",
       "item.power.air_stone": "Air Stone",
       "item.power.sound_stone": "Sound Stone",
@@ -7917,6 +8131,10 @@
               },
               {
                 "name": "Rain",
+                "children": []
+              },
+              {
+                "name": "Tornado",
                 "children": []
               }
             ]

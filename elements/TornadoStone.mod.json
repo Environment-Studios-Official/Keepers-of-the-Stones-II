@@ -53,7 +53,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "TornadoStoneUse"
     },
     "enableRanged": false,
     "shootConstantly": false,
