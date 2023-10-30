@@ -7019,6 +7019,40 @@
         ]
       },
       "path": "~/Modules/AbilityWheelModule/Tornado"
+    },
+    {
+      "name": "WhirlwindKazhdyiTikVoVriemiaEffiekta",
+      "type": "procedure",
+      "sortid": 334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whirlwind_kazhdyi_tik_vo_vriemia_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/WhirlwindKazhdyiTikVoVriemiaEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Tornado"
+    },
+    {
+      "name": "Whirlwind",
+      "type": "potioneffect",
+      "sortid": 335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "whirlwind",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/WhirlwindMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Tornado"
     }
   ],
   "variable_elements": [
@@ -7499,6 +7533,7 @@
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
+      "effect.power.whirlwind": "Whirlwind",
       "effect.power.stun": "Оглушение",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "item.power.tornado_stone": "Камень торнадо",
@@ -7697,6 +7732,7 @@
       "item.power.rain_armor_boots": "Rain Boots",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
+      "effect.power.whirlwind": "Whirlwind",
       "effect.power.stun": "Stun",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
       "item.power.tornado_stone": "Tornado Stone",

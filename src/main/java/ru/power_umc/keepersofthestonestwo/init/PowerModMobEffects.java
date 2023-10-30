@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestonestwo.init;
 
+import ru.power_umc.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.WaterMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.StunMobEffect;
@@ -48,4 +49,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> ANIMALS_MASTER = REGISTRY.register("animals_master", () -> new AnimalsMasterMobEffect());
 	public static final RegistryObject<MobEffect> METAL_MASTER = REGISTRY.register("metal_master", () -> new MetalMasterMobEffect());
 	public static final RegistryObject<MobEffect> STUN = REGISTRY.register("stun", () -> new StunMobEffect());
+	public static final RegistryObject<MobEffect> WHIRLWIND = REGISTRY.register("whirlwind", () -> new WhirlwindMobEffect());
 }
