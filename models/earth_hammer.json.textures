@@ -5,6 +5,12 @@
         "0": "earth_hammer"
       },
       "name": "default"
+    },
+    "lava": {
+      "map": {
+        "0": "lava_hammer"
+      },
+      "name": "lava"
     }
   }
 }

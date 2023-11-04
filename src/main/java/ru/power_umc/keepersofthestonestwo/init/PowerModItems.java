@@ -47,6 +47,7 @@ import ru.power_umc.keepersofthestonestwo.item.LightningFalchionItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.LightStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.LavaHammerItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.IceStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.IceSpearItem;
@@ -222,6 +223,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SOUND_DAGGER = REGISTRY.register("sound_dagger", () -> new SoundDaggerItem());
 	public static final RegistryObject<Item> CRYSTAL_KNIFE = REGISTRY.register("crystal_knife", () -> new CrystalKnifeItem());
 	public static final RegistryObject<Item> RAIN_BOW = REGISTRY.register("rain_bow", () -> new RainBowItem());
+	public static final RegistryObject<Item> LAVA_HAMMER = REGISTRY.register("lava_hammer", () -> new LavaHammerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
