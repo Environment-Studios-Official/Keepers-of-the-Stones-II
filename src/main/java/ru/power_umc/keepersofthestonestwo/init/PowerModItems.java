@@ -24,6 +24,7 @@ import ru.power_umc.keepersofthestonestwo.item.SmokeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SandStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.RainStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.RainBowItem;
 import ru.power_umc.keepersofthestonestwo.item.RainArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.PoisonStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.PlantsStoneItem;
@@ -220,6 +221,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHTNING_FALCHION = REGISTRY.register("lightning_falchion", () -> new LightningFalchionItem());
 	public static final RegistryObject<Item> SOUND_DAGGER = REGISTRY.register("sound_dagger", () -> new SoundDaggerItem());
 	public static final RegistryObject<Item> CRYSTAL_KNIFE = REGISTRY.register("crystal_knife", () -> new CrystalKnifeItem());
+	public static final RegistryObject<Item> RAIN_BOW = REGISTRY.register("rain_bow", () -> new RainBowItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
