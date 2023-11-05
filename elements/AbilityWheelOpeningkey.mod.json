@@ -2,7 +2,7 @@
   "_fv": 55,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "Y",
+    "triggerKey": "T",
     "keyBindingName": "Ability wheel opening key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
