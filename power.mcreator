@@ -7147,6 +7147,21 @@
         ]
       },
       "path": "~/Elements/Lava"
+    },
+    {
+      "name": "RainDropProjectile",
+      "type": "projectile",
+      "sortid": 341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_drop_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/RainDropProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/RainDropProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Rain"
     }
   ],
   "variable_elements": [
@@ -8322,13 +8337,12 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "playeranimator",
-      "allmods"
+      "playeranimator"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios with support Linnett Biomes Team",
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300443423
+  "mcreatorVersion": 202300445121
 }

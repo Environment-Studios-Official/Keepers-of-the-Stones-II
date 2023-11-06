@@ -41,7 +41,7 @@
     "enableRanged": true,
     "shootConstantly": false,
     "projectile": {
-      "value": "Arrow"
+      "value": "CUSTOM:RainDropProjectile"
     },
     "onRangedItemUsed": {
       "name": "RainBowPoslieIspolzovaniiaSnariada"
