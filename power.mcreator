@@ -3448,7 +3448,7 @@
       "name": "StoneAttackProjectile",
       "type": "projectile",
       "sortid": 196,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "stone_attack_projectile",
       "metadata": {
@@ -3463,7 +3463,7 @@
       "name": "GrassBlockAttackProjectile",
       "type": "projectile",
       "sortid": 197,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "grass_block_attack_projectile",
       "metadata": {
@@ -3478,7 +3478,7 @@
       "name": "DirtBlockAttackProjectile",
       "type": "projectile",
       "sortid": 198,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "dirt_block_attack_projectile",
       "metadata": {
@@ -3493,7 +3493,7 @@
       "name": "CobblestoneAttackProjectile",
       "type": "projectile",
       "sortid": 199,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cobblestone_attack_projectile",
       "metadata": {
@@ -3508,7 +3508,7 @@
       "name": "CobbledDeepslateAttackProjectile",
       "type": "projectile",
       "sortid": 200,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_projectile",
       "metadata": {
@@ -3523,7 +3523,7 @@
       "name": "WaterAttackProjectile",
       "type": "projectile",
       "sortid": 201,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "water_attack_projectile",
       "metadata": {
@@ -3538,7 +3538,7 @@
       "name": "EtherAttackProjectile",
       "type": "projectile",
       "sortid": 202,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ether_attack_projectile",
       "metadata": {
@@ -3889,7 +3889,7 @@
       "name": "IceAttackProjectile",
       "type": "projectile",
       "sortid": 217,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ice_attack_projectile",
       "metadata": {
@@ -6017,7 +6017,7 @@
       "name": "BallLightningProjectile",
       "type": "projectile",
       "sortid": 290,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile",
       "metadata": {
@@ -6083,7 +6083,7 @@
       "name": "AmethystAttackProjectile",
       "type": "projectile",
       "sortid": 293,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amethyst_attack_projectile",
       "metadata": {
@@ -6272,7 +6272,7 @@
       "name": "LavaAttackProjectile",
       "type": "projectile",
       "sortid": 302,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lava_attack_projectile",
       "metadata": {
@@ -6421,7 +6421,7 @@
       "name": "SoundBombProjectile",
       "type": "projectile",
       "sortid": 309,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile",
       "metadata": {
@@ -6801,7 +6801,7 @@
       "name": "AmethystClusterAttackProjectile",
       "type": "projectile",
       "sortid": 325,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amethyst_cluster_attack_projectile",
       "metadata": {
@@ -7152,7 +7152,7 @@
       "name": "RainDropProjectile",
       "type": "projectile",
       "sortid": 341,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "rain_drop_projectile",
       "metadata": {
@@ -8337,7 +8337,8 @@
     "dependencies": [],
     "dependants": [],
     "mcreatorDependencies": [
-      "playeranimator"
+      "playeranimator",
+      "allmods"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios with support Linnett Biomes Team",
