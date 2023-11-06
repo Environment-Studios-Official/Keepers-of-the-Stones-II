@@ -21,7 +21,7 @@ public class Modelrain_drop<T extends Entity> extends EntityModel<T> {
 				CubeListBuilder.create().texOffs(0, 0)
 						.addBox(-2.0F, -4.0F, -2.0F, 4.0F, 4.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
 						.addBox(0.0F, -4.0F, 2.0F, 0.0F, 4.0F, 8.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(0.0F, 24.0F, 0.0F));
+				PartPose.offsetAndRotation(0.0F, 24.0F, 0.0F, 0.0F, 1.5708F, 0.0F));
 
 		return LayerDefinition.create(meshdefinition, 16, 16);
 	}
