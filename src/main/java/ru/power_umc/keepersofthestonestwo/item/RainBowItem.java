@@ -94,7 +94,7 @@ public class RainBowItem extends Item {
 							player.getInventory().removeItem(stack);
 					}
 				}
-				RainBowPoslieIspolzovaniiaSnariadaProcedure.execute(entity, itemstack);
+				RainBowPoslieIspolzovaniiaSnariadaProcedure.execute(entity);
 			}
 		}
 	}

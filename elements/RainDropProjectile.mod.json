@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.AIR"
+      "value": "CUSTOM:RainBow"
     },
     "showParticles": false,
     "actionSound": {
