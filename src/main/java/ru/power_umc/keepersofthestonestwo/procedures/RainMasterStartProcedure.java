@@ -3,13 +3,10 @@ package ru.power_umc.keepersofthestonestwo.procedures;
 import ru.power_umc.keepersofthestonestwo.network.PowerModVariables;
 import ru.power_umc.keepersofthestonestwo.init.PowerModItems;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.Vec2;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -199,10 +196,5 @@ public class RainMasterStartProcedure {
 				_player.getInventory().setChanged();
 		}
 		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
-		if (entity instanceof Player _player) {
-			ItemStack _setstack = new ItemStack(Items.ARROW);
-			_setstack.setCount(1);
-			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-		}
 	}
 }
