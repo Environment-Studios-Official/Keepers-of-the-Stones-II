@@ -120,6 +120,7 @@
   "subtitles.electric_spark": "Искра",
   "item.power.fire_sword": "Меч огня",
   "item.power.animals_armor_helmet": "Шлем мастера животных",
+  "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
   "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
   "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
   "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
@@ -158,6 +159,7 @@
   "gui.power.wheel_abilities_rain.tooltip_melting_uses_50": "Melting, uses 50",
   "item.power.music_stone": "Камень музыки",
   "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
+  "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Rain flying, uses 5",
   "item.power.crystal_knife": "Кристальный нож",
   "item.power.moon_stone": "Камень луны",
   "item.power.metal_armor_boots": "Ботинки мастера металла",
@@ -197,5 +199,6 @@
   "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80",
   "item.power.air_stone": "Камень воздуха",
   "item.power.sound_stone": "Камень звука",
-  "item.power.animals_armor_leggings": "Поножи мастера животных"
+  "item.power.animals_armor_leggings": "Поножи мастера животных",
+  "gui.power.wheel_abilities_rain.tooltip_rain_splash_uses_10": "Rain_splash, uses 10"
 }

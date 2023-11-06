@@ -69,27 +69,27 @@ public class WheelAbilitiesRainButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack41Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack42Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack43Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack41Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			Attack42Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack43Procedure.execute(entity);
 		}
 	}
 
