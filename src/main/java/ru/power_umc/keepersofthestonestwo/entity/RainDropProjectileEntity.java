@@ -72,7 +72,7 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1f, 6, 0);
+		return shoot(world, entity, source, 1f, 6, 1);
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -95,7 +95,7 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(6);
-		entityarrow.setKnockback(0);
+		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.bubble_pop")), SoundSource.PLAYERS, 1,
