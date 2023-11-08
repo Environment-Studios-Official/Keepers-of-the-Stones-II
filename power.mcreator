@@ -7158,6 +7158,214 @@
         ]
       },
       "path": "~/Elements/Rain"
+    },
+    {
+      "name": "WheelAbilitiesOcean",
+      "type": "gui",
+      "sortid": 342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_ocean",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesOceanScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesOceanButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesOceanMenu.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ocean"
+    },
+    {
+      "name": "Attack49",
+      "type": "procedure",
+      "sortid": 343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_49",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack49Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ocean"
+    },
+    {
+      "name": "Attack50",
+      "type": "procedure",
+      "sortid": 344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_50",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack50Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ocean"
+    },
+    {
+      "name": "Attack51",
+      "type": "procedure",
+      "sortid": 345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_51",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack51Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ocean"
+    },
+    {
+      "name": "Attack52",
+      "type": "procedure",
+      "sortid": 346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_52",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack52Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Ocean"
+    },
+    {
+      "name": "OceanMasterStart",
+      "type": "procedure",
+      "sortid": 347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/OceanMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ocean"
+    },
+    {
+      "name": "OceanMasterEnd",
+      "type": "procedure",
+      "sortid": 348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/OceanMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ocean"
+    },
+    {
+      "name": "OceanStoneUse",
+      "type": "procedure",
+      "sortid": 349,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/OceanStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Ocean"
     }
   ],
   "variable_elements": [
@@ -7664,6 +7872,9 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
+      "gui.power.wheel_abilities_ocean.button_3": "3",
+      "gui.power.wheel_abilities_ocean.button_2": "2",
+      "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.amber_stone": "Камень янтаря",
       "item.power.water_armor_leggings": "Поножи мастера воды",
@@ -7862,6 +8073,9 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
+      "gui.power.wheel_abilities_ocean.button_3": "3",
+      "gui.power.wheel_abilities_ocean.button_2": "2",
+      "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.amber_stone": "Amber Stone",
       "item.power.water_armor_leggings": "Water Leggings",
@@ -8274,6 +8488,10 @@
               },
               {
                 "name": "Tornado",
+                "children": []
+              },
+              {
+                "name": "Ocean",
                 "children": []
               }
             ]
