@@ -1,8 +1,8 @@
 
 package ru.power_umc.keepersofthestonestwo.potion;
 
-import ru.power_umc.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.OceanMasterStartProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.EnhancedAbilitiesProcedure;
 
 import net.minecraft.world.entity.ai.attributes.AttributeMap;
@@ -33,7 +33,7 @@ public class OceanMasterMobEffect extends MobEffect {
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		TornadoMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		OceanMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override
