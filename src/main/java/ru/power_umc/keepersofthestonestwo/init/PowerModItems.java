@@ -9,6 +9,7 @@ import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.TornadoAxeItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.TimeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TeleportationStoneItem;
@@ -224,6 +225,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CRYSTAL_KNIFE = REGISTRY.register("crystal_knife", () -> new CrystalKnifeItem());
 	public static final RegistryObject<Item> RAIN_BOW = REGISTRY.register("rain_bow", () -> new RainBowItem());
 	public static final RegistryObject<Item> LAVA_HAMMER = REGISTRY.register("lava_hammer", () -> new LavaHammerItem());
+	public static final RegistryObject<Item> TORNADO_AXE = REGISTRY.register("tornado_axe", () -> new TornadoAxeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

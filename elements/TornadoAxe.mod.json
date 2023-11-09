@@ -2,13 +2,13 @@
   "_fv": 55,
   "_type": "tool",
   "definition": {
-    "toolType": "Sword",
+    "toolType": "Axe",
     "renderType": 1,
     "blockingRenderType": 0,
-    "texture": "lava_hammer",
-    "customModelName": "earth_hammer:lava",
+    "texture": "tornado_axe",
+    "customModelName": "tornado_axe:default",
     "blockingModelName": "Normal blocking",
-    "name": "Lava Hammer",
+    "name": "Tornado Axe",
     "specialInformation": {
       "fixedValue": []
     },
@@ -17,9 +17,9 @@
     },
     "harvestLevel": 4,
     "efficiency": 12.0,
-    "attackSpeed": 0.9,
+    "attackSpeed": 1.09,
     "enchantability": 0,
-    "damageVsEntity": 14.0,
+    "damageVsEntity": 11.88,
     "usageCount": 0,
     "blocksAffected": [],
     "glowCondition": {
@@ -30,7 +30,7 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {
-      "name": "LavaHammerKazhdyiTikVInvientarie"
+      "name": "TornadoAxeKazhdyiTikVInvientarie"
     }
   }
 }
