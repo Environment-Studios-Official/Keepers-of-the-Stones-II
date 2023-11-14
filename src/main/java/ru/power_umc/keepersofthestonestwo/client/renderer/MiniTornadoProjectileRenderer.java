@@ -1,7 +1,7 @@
 package ru.power_umc.keepersofthestonestwo.client.renderer;
 
 import ru.power_umc.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
-import ru.power_umc.keepersofthestonestwo.client.model.Modelminitornado;
+import ru.power_umc.keepersofthestonestwo.client.model.Modelmini_tornado;
 
 import net.minecraft.util.Mth;
 import net.minecraft.resources.ResourceLocation;
@@ -17,11 +17,11 @@ import com.mojang.blaze3d.vertex.PoseStack;
 
 public class MiniTornadoProjectileRenderer extends EntityRenderer<MiniTornadoProjectileEntity> {
 	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/minitornado.png");
-	private final Modelminitornado model;
+	private final Modelmini_tornado model;
 
 	public MiniTornadoProjectileRenderer(EntityRendererProvider.Context context) {
 		super(context);
-		model = new Modelminitornado(context.bakeLayer(Modelminitornado.LAYER_LOCATION));
+		model = new Modelmini_tornado(context.bakeLayer(Modelmini_tornado.LAYER_LOCATION));
 	}
 
 	@Override

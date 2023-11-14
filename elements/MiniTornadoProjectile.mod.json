@@ -13,7 +13,7 @@
     "power": 1.0,
     "damage": 9.0,
     "knockback": 3,
-    "entityModel": "Modelminitornado",
+    "entityModel": "Modelmini_tornado",
     "customModelTexture": "minitornado.png"
   }
 }
