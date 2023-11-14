@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_mini_tornado_attack",
+          "image": "mini_tornado_attack.png",
+          "hoveredImage": "mini_tornado_attack_highlight.png",
           "onClick": {
             "name": "Attack45"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_tornado_capture",
+          "image": "tornado_capture.png",
+          "hoveredImage": "tornado_capture_highlight.png",
           "onClick": {
             "name": "Attack46"
           },
-          "width": 30,
-          "height": 20,
-          "x": 259,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_tornado_flight",
+          "image": "tornado_flight.png",
+          "hoveredImage": "tornado_flight_highlight.png",
           "onClick": {
             "name": "Attack47"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 170
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mini_tornado_attack_uses_15",
+          "text": {
+            "fixedValue": "Mini tornado attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_tornado_capture_attack_uses_30",
+          "text": {
+            "fixedValue": "Tornado capture attack, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_tornado_flight_uses_5",
+          "text": {
+            "fixedValue": "Tornado flight, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
         }
       }
     ],

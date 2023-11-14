@@ -7864,6 +7864,7 @@
   ],
   "language_map": {
     "ru_ru": {
+      "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
@@ -7947,6 +7948,7 @@
       "item.power.time_stone": "Камень времени",
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
+      "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "effect.power.lightning_master": "Мастер молнии",
@@ -8024,6 +8026,7 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Дождевой полёт, расходует 5",
       "item.power.crystal_knife": "Кристальный нож",
+      "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Tornado flight, uses 5",
       "item.power.moon_stone": "Камень луны",
       "item.power.metal_armor_boots": "Ботинки мастера металла",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25",
@@ -8066,6 +8069,7 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_splash_uses_10": "Дождевой всплеск, расходует 10"
     },
     "en_us": {
+      "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
@@ -8149,6 +8153,7 @@
       "item.power.time_stone": "Time Stone",
       "item.power.lava_armor_leggings": "Lava Leggings",
       "item.power.earth_armor_leggings": "Earth Leggings",
+      "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "effect.power.lightning_master": "Master of Lightning",
@@ -8226,6 +8231,7 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Rain flying, uses 5",
       "item.power.crystal_knife": "Crystal Knife",
+      "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Tornado flight, uses 5",
       "item.power.moon_stone": "Moon Stone",
       "item.power.metal_armor_boots": "Metal Boots",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10",

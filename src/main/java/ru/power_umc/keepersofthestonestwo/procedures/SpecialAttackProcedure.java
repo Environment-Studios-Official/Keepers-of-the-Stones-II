@@ -8,6 +8,7 @@ import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
 import ru.power_umc.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.SoundBombProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
@@ -34,7 +35,6 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.Arrow;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
@@ -2345,14 +2345,14 @@ public class SpecialAttackProcedure {
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new Arrow(EntityType.ARROW, level);
+									public Projectile getArrow(Level level, float damage, int knockback) {
+										AbstractArrow entityToSpawn = new MiniTornadoProjectileEntity(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setPierceLevel(piercing);
+										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, 9, 2, (byte) 2);
+								}.getArrow(projectileLevel, 9, 4);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2360,9 +2360,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
