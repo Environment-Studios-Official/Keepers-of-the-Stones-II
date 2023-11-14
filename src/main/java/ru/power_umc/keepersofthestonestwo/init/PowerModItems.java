@@ -31,6 +31,7 @@ import ru.power_umc.keepersofthestonestwo.item.PoisonStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.PlantsStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.PlantsArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.PlagueStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.OceanicTridentItem;
 import ru.power_umc.keepersofthestonestwo.item.OceanStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.OceanArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.MusicStoneItem;
@@ -226,6 +227,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> RAIN_BOW = REGISTRY.register("rain_bow", () -> new RainBowItem());
 	public static final RegistryObject<Item> LAVA_HAMMER = REGISTRY.register("lava_hammer", () -> new LavaHammerItem());
 	public static final RegistryObject<Item> TORNADO_AXE = REGISTRY.register("tornado_axe", () -> new TornadoAxeItem());
+	public static final RegistryObject<Item> OCEANIC_TRIDENT = REGISTRY.register("oceanic_trident", () -> new OceanicTridentItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
