@@ -1,0 +1,19 @@
+{
+  "_fv": 55,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.AIR"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 9.0,
+    "knockback": 3,
+    "entityModel": "Modelminitornado",
+    "customModelTexture": "minitornado.png"
+  }
+}

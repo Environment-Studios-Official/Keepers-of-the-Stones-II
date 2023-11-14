@@ -5,6 +5,7 @@
 package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.client.model.Modelrain_drop;
+import ru.power_umc.keepersofthestonestwo.client.model.Modelminitornado;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelether_bullet;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelblock_attack;
 import ru.power_umc.keepersofthestonestwo.client.model.ModelCrossed;
@@ -20,6 +21,7 @@ public class PowerModModels {
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelblock_attack.LAYER_LOCATION, Modelblock_attack::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
+		event.registerLayerDefinition(Modelminitornado.LAYER_LOCATION, Modelminitornado::createBodyLayer);
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
 	}
