@@ -2512,7 +2512,7 @@ public class SpecialAttackProcedure {
 						for (int index20 = 0; index20 < (int) particleAmount; index20++) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles(ParticleTypes.BUBBLE_POP, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 25, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
 						{
