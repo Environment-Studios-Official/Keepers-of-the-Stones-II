@@ -1,0 +1,19 @@
+{
+  "_fv": 55,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:RainBow"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "block.bubble_column.bubble_pop"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 6.0,
+    "knockback": 1,
+    "entityModel": "Modelrain_drop",
+    "customModelTexture": "rain_drop.png"
+  }
+}

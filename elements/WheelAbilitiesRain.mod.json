@@ -1,5 +1,5 @@
 {
-  "_fv": 53,
+  "_fv": 55,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_rain_splash",
+          "image": "rain_splash.png",
+          "hoveredImage": "rain_splash_highlight.png",
           "onClick": {
             "name": "Attack41"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_rain_curtain",
+          "image": "rain_curtain.png",
+          "hoveredImage": "rain_curtain_highlight.png",
           "onClick": {
             "name": "Attack42"
           },
-          "width": 30,
-          "height": 20,
-          "x": 259,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_rain_flying",
+          "image": "rain_flying.png",
+          "hoveredImage": "rain_flying_highlight.png",
           "onClick": {
             "name": "Attack43"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 170
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rain_splash_uses_10",
+          "text": {
+            "fixedValue": "Rain splash, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rain_curtain_uses_45",
+          "text": {
+            "fixedValue": "Rain curtain, uses 45"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rain_flying_uses_5",
+          "text": {
+            "fixedValue": "Rain flying, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
         }
       }
     ],

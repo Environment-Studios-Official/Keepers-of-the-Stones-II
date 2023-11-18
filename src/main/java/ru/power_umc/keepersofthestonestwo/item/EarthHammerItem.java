@@ -10,15 +10,15 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
+import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-public class EarthHammerItem extends AxeItem {
+public class EarthHammerItem extends SwordItem {
 	public EarthHammerItem() {
 		super(new Tier() {
 			public int getUses() {
@@ -44,7 +44,7 @@ public class EarthHammerItem extends AxeItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 1, -3.1f, new Item.Properties().fireResistant());
+		}, 3, -3.1f, new Item.Properties().fireResistant());
 	}
 
 	@Override

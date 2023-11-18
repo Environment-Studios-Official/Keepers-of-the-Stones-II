@@ -1,5 +1,5 @@
 {
-  "_fv": 53,
+  "_fv": 55,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -27,7 +27,7 @@
     "name": "Lava Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Stones"
     },
     "stackSize": 1,
     "enchantability": 0,

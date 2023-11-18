@@ -1,0 +1,20 @@
+{
+  "_fv": 55,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Whirlwind",
+    "icon": "whirlwind.png",
+    "color": {
+      "value": -10066330,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "WhirlwindKazhdyiTikVoVriemiaEffiekta"
+    }
+  }
+}

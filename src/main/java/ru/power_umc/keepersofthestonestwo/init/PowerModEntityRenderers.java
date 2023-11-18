@@ -7,6 +7,8 @@ package ru.power_umc.keepersofthestonestwo.init;
 import ru.power_umc.keepersofthestonestwo.client.renderer.WaterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.LavaAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.IceAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
@@ -15,6 +17,7 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.DirtBlockAttackProject
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
 import net.minecraftforge.fml.common.Mod;
@@ -41,5 +44,8 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.AMETHYST_ATTACK_PROJECTILE.get(), AmethystAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), LavaAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), SoundBombProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), AmethystClusterAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.RAIN_DROP_PROJECTILE.get(), RainDropProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), MiniTornadoProjectileRenderer::new);
 	}
 }

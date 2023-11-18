@@ -1,5 +1,5 @@
 {
-  "_fv": 53,
+  "_fv": 55,
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of Tornado",
@@ -12,6 +12,15 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "TornadoMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "TornadoMasterEnd"
+    }
   }
 }
