@@ -2564,6 +2564,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
+			if (entity instanceof LivingEntity _livEnt655 && _livEnt655.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 53) {/*code*/
+				}
+			}
 		}
 	}
 }

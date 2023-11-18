@@ -54,6 +54,7 @@ import ru.power_umc.keepersofthestonestwo.item.LavaArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.IceStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.IceSpearItem;
 import ru.power_umc.keepersofthestonestwo.item.IceArmorItem;
+import ru.power_umc.keepersofthestonestwo.item.GreenStaffItem;
 import ru.power_umc.keepersofthestonestwo.item.GravityStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.GoldenDustStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.FrozenItem;
@@ -228,6 +229,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_HAMMER = REGISTRY.register("lava_hammer", () -> new LavaHammerItem());
 	public static final RegistryObject<Item> TORNADO_AXE = REGISTRY.register("tornado_axe", () -> new TornadoAxeItem());
 	public static final RegistryObject<Item> OCEANIC_TRIDENT = REGISTRY.register("oceanic_trident", () -> new OceanicTridentItem());
+	public static final RegistryObject<Item> GREEN_STAFF = REGISTRY.register("green_staff", () -> new GreenStaffItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

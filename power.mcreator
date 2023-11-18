@@ -7471,6 +7471,249 @@
         ]
       },
       "path": "~/Elements/Ocean"
+    },
+    {
+      "name": "WheelAbilitiesPlants",
+      "type": "gui",
+      "sortid": 356,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_plants",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesPlantsScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesPlantsMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesPlantsButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Plants"
+    },
+    {
+      "name": "Attack53",
+      "type": "procedure",
+      "sortid": 357,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_53",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack53Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Plants"
+    },
+    {
+      "name": "Attack54",
+      "type": "procedure",
+      "sortid": 358,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_54",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack54Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Plants"
+    },
+    {
+      "name": "Attack55",
+      "type": "procedure",
+      "sortid": 359,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_55",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack55Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Plants"
+    },
+    {
+      "name": "Attack56",
+      "type": "procedure",
+      "sortid": 360,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_56",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack56Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Plants"
+    },
+    {
+      "name": "PlantsMasterStart",
+      "type": "procedure",
+      "sortid": 361,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PlantsMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "PlantsMasterEnd",
+      "type": "procedure",
+      "sortid": 362,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PlantsMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "PlantsStoneUse",
+      "type": "procedure",
+      "sortid": 363,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PlantsStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "GreenStaff",
+      "type": "tool",
+      "sortid": 364,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_staff",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/green_staff.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/GreenStaffItem.java"
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "GreenStaffKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 365,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "green_staff_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GreenStaffKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Plants"
     }
   ],
   "variable_elements": [
@@ -7929,8 +8172,8 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
@@ -7939,24 +8182,24 @@
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
-      "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
-      "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.plants_stone": "Камень зелени",
+      "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.spirit_stone": "Камень духа",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
-      "effect.power.whirlwind": "Whirlwind",
-      "effect.power.stun": "Оглушение",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
+      "effect.power.stun": "Оглушение",
+      "effect.power.whirlwind": "Whirlwind",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Океаническое течение, расходует 10",
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.gravity_stone": "Камень гравитации",
@@ -7985,8 +8228,8 @@
       "gui.power.wheel_abilities_ocean.button_2": "2",
       "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
-      "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
+      "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.frozen_helmet": "Frozen Layer Helmet",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
@@ -8006,12 +8249,15 @@
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
+      "gui.power.wheel_abilities_plants.tooltip_oceanic_current_uses_10": "Oceanic current, uses 10",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.water_stone": "Камень воды",
+      "gui.power.wheel_abilities_plants.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
+      "gui.power.wheel_abilities_plants.tooltip_streamlining_uses_5": "Streamlining, uses 5",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.shadow_stone": "Камень тени",
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
@@ -8020,6 +8266,7 @@
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
+      "item.power.green_staff": "Fire Sword",
       "item.power.space_stone": "Камень космоса",
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
@@ -8071,9 +8318,12 @@
       "item.power.technology_stone": "Камень технологий",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
+      "gui.power.wheel_abilities_plants.button_1": "1",
       "item.power.ether_glaive": "Эфирная глефа",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
+      "gui.power.wheel_abilities_plants.button_2": "2",
       "key.power.detransformation_key": "Клавиша детрансформации",
+      "gui.power.wheel_abilities_plants.button_3": "3",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
@@ -8138,8 +8388,8 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
       "key.power.ability_using_key": "Ability using key",
       "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
@@ -8148,24 +8398,24 @@
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
-      "item.power.lava_hammer": "Lava Hammer",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.plants_stone": "Plants Stone",
       "item.power.ice_armor_helmet": "Ice Helmet",
+      "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.spirit_stone": "Spirit Stone",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
-      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
-      "effect.power.stun": "Stun",
       "effect.power.whirlwind": "Whirlwind",
+      "effect.power.stun": "Stun",
+      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Oceanic current, uses 10",
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.gravity_stone": "Gravity Stone",
@@ -8194,8 +8444,8 @@
       "gui.power.wheel_abilities_ocean.button_2": "2",
       "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ice Boots",
-      "item.power.amber_stone": "Amber Stone",
       "item.power.water_armor_leggings": "Water Leggings",
+      "item.power.amber_stone": "Amber Stone",
       "item.power.frozen_helmet": "Frozen Layer Helmet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.fire_armor_boots": "Fire Boots",
@@ -8215,12 +8465,15 @@
       "item.power.lava_armor_leggings": "Lava Leggings",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
+      "gui.power.wheel_abilities_plants.tooltip_oceanic_current_uses_10": "Oceanic current, uses 10",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.water_stone": "Water Stone",
+      "gui.power.wheel_abilities_plants.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "item.power.fire_armor_leggings": "Fire Leggings",
+      "gui.power.wheel_abilities_plants.tooltip_streamlining_uses_5": "Streamlining, uses 5",
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.shadow_stone": "Shadow Stone",
       "item.power.sound_armor_chestplate": "Sound Chestplate",
@@ -8229,6 +8482,7 @@
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.rain_armor_helmet": "Rain Helmet",
+      "item.power.green_staff": "Green Staff",
       "item.power.space_stone": "Space Stone",
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.lightning_stone": "Lightning Stone",
@@ -8280,9 +8534,12 @@
       "item.power.technology_stone": "Technology Stone",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
+      "gui.power.wheel_abilities_plants.button_1": "1",
       "item.power.ether_glaive": "Ether Glaive",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
+      "gui.power.wheel_abilities_plants.button_2": "2",
       "key.power.detransformation_key": "Detransformation key",
+      "gui.power.wheel_abilities_plants.button_3": "3",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
@@ -8613,6 +8870,10 @@
               },
               {
                 "name": "Ocean",
+                "children": []
+              },
+              {
+                "name": "Plants",
                 "children": []
               }
             ]
