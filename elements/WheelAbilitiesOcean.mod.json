@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_oceanic_current",
+          "image": "oceanic_current.png",
+          "hoveredImage": "oceanic_current_highlight.png",
           "onClick": {
             "name": "Attack49"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_oceanic_storm",
+          "image": "oceanic_storm.png",
+          "hoveredImage": "oceanic_storm_highlight.png",
           "onClick": {
             "name": "Attack50"
           },
-          "width": 30,
-          "height": 20,
-          "x": 259,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_streamlining",
+          "image": "streamlining.png",
+          "hoveredImage": "streamlining_highlight.png",
           "onClick": {
             "name": "Attack51"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 170
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_oceanic_current_uses_10",
+          "text": {
+            "fixedValue": "Oceanic current, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_oceanic_storm_uses_35",
+          "text": {
+            "fixedValue": "Oceanic storm, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_streamlining_uses_5",
+          "text": {
+            "fixedValue": "Streamlining, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 169
         }
       }
     ],
