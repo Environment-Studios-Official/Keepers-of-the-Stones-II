@@ -2663,9 +2663,9 @@ public class SpecialAttackProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 5, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						particleAmount = 8;
