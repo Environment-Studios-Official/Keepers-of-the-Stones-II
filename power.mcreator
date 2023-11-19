@@ -7714,6 +7714,41 @@
         ]
       },
       "path": "~/Elements/Plants"
+    },
+    {
+      "name": "PoisonousThornKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 366,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonous_thorn_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PoisonousThornKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Plants"
+    },
+    {
+      "name": "PoisonousThorn",
+      "type": "projectile",
+      "sortid": 367,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poisonous_thorn",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/PoisonousThornRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/PoisonousThornEntity.java"
+        ]
+      },
+      "path": "~/Elements/Plants"
     }
   ],
   "variable_elements": [

@@ -8,6 +8,7 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.WaterAttackProjectileR
 import ru.power_umc.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.LavaAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.IceAttackProjectileRenderer;
@@ -47,5 +48,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), AmethystClusterAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.RAIN_DROP_PROJECTILE.get(), RainDropProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), MiniTornadoProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISONOUS_THORN.get(), PoisonousThornRenderer::new);
 	}
 }
