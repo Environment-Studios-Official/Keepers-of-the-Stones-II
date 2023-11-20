@@ -7749,6 +7749,174 @@
         ]
       },
       "path": "~/Elements/Plants"
+    },
+    {
+      "name": "WheelAbilitiesAnimals",
+      "type": "gui",
+      "sortid": 368,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_animals",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesAnimalsButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesAnimalsScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesAnimalsMenu.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Animals"
+    },
+    {
+      "name": "Attack57",
+      "type": "procedure",
+      "sortid": 369,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_57",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack57Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Animals"
+    },
+    {
+      "name": "Attack58",
+      "type": "procedure",
+      "sortid": 370,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_58",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack58Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Animals"
+    },
+    {
+      "name": "Attack59",
+      "type": "procedure",
+      "sortid": 371,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_59",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack59Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Animals"
+    },
+    {
+      "name": "Attack60",
+      "type": "procedure",
+      "sortid": 372,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_60",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack60Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Animals"
+    },
+    {
+      "name": "AnimalsMasterStart",
+      "type": "procedure",
+      "sortid": 373,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimalsMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Animals"
+    },
+    {
+      "name": "AnimalsMasterEnd",
+      "type": "procedure",
+      "sortid": 374,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimalsMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Animals"
     }
   ],
   "variable_elements": [
@@ -8266,8 +8434,11 @@
       "item.power.amber_stone": "Камень янтаря",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.frozen_helmet": "Frozen Layer Helmet",
+      "gui.power.wheel_abilities_animals.button_3": "3",
       "effect.power.ether_master": "Мастер эфира",
+      "gui.power.wheel_abilities_animals.button_1": "1",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
+      "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
@@ -8482,8 +8653,11 @@
       "item.power.amber_stone": "Amber Stone",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.frozen_helmet": "Frozen Layer Helmet",
+      "gui.power.wheel_abilities_animals.button_3": "3",
       "effect.power.ether_master": "Master of the Ether",
+      "gui.power.wheel_abilities_animals.button_1": "1",
       "item.power.fire_armor_boots": "Fire Boots",
+      "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "item.power.plants_armor_boots": "Plants Boots",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
@@ -8909,6 +9083,10 @@
               },
               {
                 "name": "Plants",
+                "children": []
+              },
+              {
+                "name": "Animals",
                 "children": []
               }
             ]
