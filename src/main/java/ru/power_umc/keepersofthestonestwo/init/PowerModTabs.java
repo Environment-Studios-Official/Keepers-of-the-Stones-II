@@ -31,6 +31,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.RAIN_STONE.get());
 				tabData.accept(PowerModItems.TORNADO_STONE.get());
 				tabData.accept(PowerModItems.OCEAN_STONE.get());
+				tabData.accept(PowerModItems.PLANTS_STONE.get());
 			})
 
 					.build());
