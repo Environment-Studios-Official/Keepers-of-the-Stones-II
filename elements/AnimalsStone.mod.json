@@ -53,7 +53,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "AnimalsStoneUse"
     },
     "enableRanged": false,
     "shootConstantly": false,
