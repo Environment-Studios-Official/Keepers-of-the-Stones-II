@@ -7917,6 +7917,61 @@
         ]
       },
       "path": "~/Elements/Animals"
+    },
+    {
+      "name": "AnimalsStoneUse",
+      "type": "procedure",
+      "sortid": 375,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimalsStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Animals"
+    },
+    {
+      "name": "Insects",
+      "type": "particle",
+      "sortid": 376,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "insects",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/particle/InsectsParticle.java",
+          "src/main/resources/assets/power/particles/insects.json"
+        ]
+      },
+      "path": "~/Elements/Animals"
     }
   ],
   "variable_elements": [
