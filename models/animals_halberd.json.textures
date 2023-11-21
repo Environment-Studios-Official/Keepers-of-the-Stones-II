@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "animals_halberd"
+      },
+      "name": "default"
+    }
+  }
+}

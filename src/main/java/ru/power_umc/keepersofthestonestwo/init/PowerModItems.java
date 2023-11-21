@@ -80,6 +80,7 @@ import ru.power_umc.keepersofthestonestwo.item.CreationStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.BlueFlameStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.BloodStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.AnimalsStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.AnimalsHalberdItem;
 import ru.power_umc.keepersofthestonestwo.item.AnimalsArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.AmberStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.AirStoneItem;
@@ -230,6 +231,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TORNADO_AXE = REGISTRY.register("tornado_axe", () -> new TornadoAxeItem());
 	public static final RegistryObject<Item> OCEANIC_TRIDENT = REGISTRY.register("oceanic_trident", () -> new OceanicTridentItem());
 	public static final RegistryObject<Item> GREEN_STAFF = REGISTRY.register("green_staff", () -> new GreenStaffItem());
+	public static final RegistryObject<Item> ANIMALS_HALBERD = REGISTRY.register("animals_halberd", () -> new AnimalsHalberdItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
