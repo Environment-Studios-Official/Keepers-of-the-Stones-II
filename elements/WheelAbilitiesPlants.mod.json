@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_cherry_wind",
+          "image": "cherry_wind.png",
+          "hoveredImage": "cherry_wind_highlight.png",
           "onClick": {
             "name": "Attack53"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 49
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_poisonous_thorn",
+          "image": "poisonous_thorn.png",
+          "hoveredImage": "poisonous_thorn__highlight.png",
           "onClick": {
             "name": "Attack54"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_natural_healing",
+          "image": "natural_healing.png",
+          "hoveredImage": "natural_healing_highlight.png",
           "onClick": {
             "name": "Attack55"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 171
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cherry_wind_uses_10",
+          "text": {
+            "fixedValue": "Cherry wind, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_poisonous_thorn_uses_35",
+          "text": {
+            "fixedValue": "Poisonous thorn, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_natural_healing_uses_65",
+          "text": {
+            "fixedValue": "Natural healing, uses 65"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 168
         }
       }
     ],
