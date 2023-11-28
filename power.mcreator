@@ -8007,6 +8007,17 @@
         ]
       },
       "path": "~/Elements/Animals"
+    },
+    {
+      "name": "Sdfsd",
+      "type": "procedure",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sdfsd",
+      "metadata": {
+        "dependencies": []
+      }
     }
   ],
   "variable_elements": [
@@ -9233,5 +9244,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300445723
+  "mcreatorVersion": 202300448118
 }
