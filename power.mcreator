@@ -8007,17 +8007,6 @@
         ]
       },
       "path": "~/Elements/Animals"
-    },
-    {
-      "name": "Sdfsd",
-      "type": "procedure",
-      "sortid": 379,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sdfsd",
-      "metadata": {
-        "dependencies": []
-      }
     }
   ],
   "variable_elements": [

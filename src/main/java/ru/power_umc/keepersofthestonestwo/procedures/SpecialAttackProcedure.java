@@ -2749,6 +2749,34 @@ public class SpecialAttackProcedure {
 							});
 						}
 					}
+				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 58) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == entity)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 3, false, true));
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)), 9);
+								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 59) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 60) {
 						for (int index25 = 0; index25 < 3; index25++) {
