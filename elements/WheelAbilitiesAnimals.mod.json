@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_insect_attack",
+          "image": "insect_attack.png",
+          "hoveredImage": "insect_attack_highlight.png",
           "onClick": {
             "name": "Attack57"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 49
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_scorpion_sting",
+          "image": "scorpion_sting.png",
+          "hoveredImage": "scorpion_sting_highlight.png",
           "onClick": {
             "name": "Attack58"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_wolf_pack",
+          "image": "wolf_pack.png",
+          "hoveredImage": "wolf_pack_highlight.png",
           "onClick": {
             "name": "Attack59"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 171
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_insect_attack_uses_10",
+          "text": {
+            "fixedValue": "Insect attack, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_scorpion_sting_uses_35",
+          "text": {
+            "fixedValue": "Scorpion sting, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_wolf_pack_uses_60",
+          "text": {
+            "fixedValue": "Wolf pack, uses 60"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 167
         }
       }
     ],

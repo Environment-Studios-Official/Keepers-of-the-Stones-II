@@ -69,27 +69,27 @@ public class WheelAbilitiesAnimalsButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack57Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack58Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack59Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack57Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			Attack58Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack59Procedure.execute(entity);
 		}
 	}
 
