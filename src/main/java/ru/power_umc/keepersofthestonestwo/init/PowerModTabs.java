@@ -33,6 +33,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.OCEAN_STONE.get());
 				tabData.accept(PowerModItems.PLANTS_STONE.get());
 				tabData.accept(PowerModItems.ANIMALS_STONE.get());
+				tabData.accept(PowerModItems.METAL_STONE.get());
 			})
 
 					.build());
