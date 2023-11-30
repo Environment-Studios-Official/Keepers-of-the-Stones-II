@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.GOLD_BLOCK"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 5.0,
+    "knockback": 4,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "gold_attack.png",
+    "onHitsBlock": {
+      "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

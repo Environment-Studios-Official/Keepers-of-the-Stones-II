@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.IRON_BLOCK"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 6.0,
+    "knockback": 4,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "iron_attack.png",
+    "onHitsBlock": {
+      "name": "IronAttackProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "IronAttackProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

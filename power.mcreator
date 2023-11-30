@@ -8215,6 +8215,147 @@
         ]
       },
       "path": "~/Elements/Metal"
+    },
+    {
+      "name": "CopperAttackProjectile",
+      "type": "projectile",
+      "sortid": 388,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/CopperAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/CopperAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "CopperAttackProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 389,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copper_attack_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CopperAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "GoldAttackProjectile",
+      "type": "projectile",
+      "sortid": 390,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/GoldAttackProjectileRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/GoldAttackProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 391,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gold_attack_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GoldAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "IronAttackProjectile",
+      "type": "projectile",
+      "sortid": 392,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/IronAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/IronAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "IronAttackProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 393,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_attack_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IronAttackProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
