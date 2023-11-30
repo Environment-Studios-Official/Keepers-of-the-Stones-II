@@ -10,6 +10,7 @@ import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
@@ -47,6 +48,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_OCEAN.get(), WheelAbilitiesOceanScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_PLANTS.get(), WheelAbilitiesPlantsScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ANIMALS.get(), WheelAbilitiesAnimalsScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_METAL.get(), WheelAbilitiesMetalScreen::new);
 		});
 	}
 }

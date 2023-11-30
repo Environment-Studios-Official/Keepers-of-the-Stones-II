@@ -8007,6 +8007,174 @@
         ]
       },
       "path": "~/Elements/Animals"
+    },
+    {
+      "name": "WheelAbilitiesMetal",
+      "type": "gui",
+      "sortid": 379,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_metal",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesMetalMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesMetalScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesMetalButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Metal"
+    },
+    {
+      "name": "Attack61",
+      "type": "procedure",
+      "sortid": 380,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_61",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack61Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Metal"
+    },
+    {
+      "name": "Attack62",
+      "type": "procedure",
+      "sortid": 381,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_62",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack62Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Metal"
+    },
+    {
+      "name": "Attack63",
+      "type": "procedure",
+      "sortid": 382,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_63",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack63Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Metal"
+    },
+    {
+      "name": "Attack64",
+      "type": "procedure",
+      "sortid": 383,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_64",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack64Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Metal"
+    },
+    {
+      "name": "MetalMasterStart",
+      "type": "procedure",
+      "sortid": 384,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "MetalMasterEnd",
+      "type": "procedure",
+      "sortid": 385,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
@@ -8469,6 +8637,7 @@
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -8501,7 +8670,10 @@
       "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
+      "gui.power.wheel_abilities_metal.button_3": "3",
       "item.power.earth_shield": "Earth Shield",
+      "gui.power.wheel_abilities_metal.button_2": "2",
+      "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
@@ -8548,6 +8720,7 @@
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
+      "gui.power.wheel_abilities_metal.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "effect.power.lightning_master": "Мастер молнии",
@@ -8645,6 +8818,7 @@
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
       "item.power.sound_dagger": "Звуковой кинжал",
+      "gui.power.wheel_abilities_metal.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "subtitles.bass_boom": "Бас",
@@ -8689,6 +8863,7 @@
       "effect.power.ocean_master": "Master of the Ocean",
       "key.power.ability_using_key": "Ability using key",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -8721,7 +8896,10 @@
       "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "item.power.ocean_armor_boots": "Ocean Boots",
+      "gui.power.wheel_abilities_metal.button_3": "3",
       "item.power.earth_shield": "Earth Shield",
+      "gui.power.wheel_abilities_metal.button_2": "2",
+      "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
@@ -8768,6 +8946,7 @@
       "item.power.lava_armor_leggings": "Lava Leggings",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
+      "gui.power.wheel_abilities_metal.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "effect.power.lightning_master": "Master of Lightning",
@@ -8865,6 +9044,7 @@
       "item.power.water_armor_helmet": "Water Helmet",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
       "item.power.sound_dagger": "Sound Dagger",
+      "gui.power.wheel_abilities_metal.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "subtitles.bass_boom": "Bass",
@@ -9179,6 +9359,10 @@
               },
               {
                 "name": "Animals",
+                "children": []
+              },
+              {
+                "name": "Metal",
                 "children": []
               }
             ]
