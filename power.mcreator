@@ -9596,6 +9596,7 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "playeranimator",
       "allmods"
     ],

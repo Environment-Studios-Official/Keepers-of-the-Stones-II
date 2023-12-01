@@ -69,17 +69,20 @@ import net.minecraft.core.BlockPos;
 import java.util.List;
 import java.util.Comparator;
 
+import dev.kosmx.playerAnim.core.data.quarktool.Reset;
+
 public class SpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		boolean success = false;
 		double Scaling = 0;
 		double particleRadius = 0;
 		double particleAmount = 0;
 		double xr = 0;
 		double yr = 0;
 		double zr = 0;
+		boolean success = false;
+		boolean Reset = false;
 		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability_block == false) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
