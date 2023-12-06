@@ -36,6 +36,9 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
+    "onRightClickedInAir": {
+      "name": "FireBatteryUse"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {

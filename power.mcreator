@@ -8343,6 +8343,46 @@
         ]
       },
       "path": "~/Items/Batteries/FireBattery"
+    },
+    {
+      "name": "FireBatteryUse",
+      "type": "procedure",
+      "sortid": 399,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FireBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/FireBattery"
     }
   ],
   "variable_elements": [

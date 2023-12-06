@@ -67,9 +67,19 @@ public class OceanMasterEndProcedure {
 			_setstack.setCount(1);
 			ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 		}
-		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-			if (entity instanceof Player _player)
-				_player.getCooldowns().addCooldown(PowerModItems.OCEAN_STONE.get(), 6000);
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
+			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+				if (entity instanceof Player _player)
+					_player.getCooldowns().addCooldown(PowerModItems.OCEAN_STONE.get(), 6000);
+			}
+		} else {
+			{
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.battery = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }
