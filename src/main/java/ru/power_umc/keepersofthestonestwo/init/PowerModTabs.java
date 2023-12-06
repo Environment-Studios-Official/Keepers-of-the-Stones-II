@@ -37,9 +37,9 @@ public class PowerModTabs {
 			})
 
 					.build());
-	public static final RegistryObject<CreativeModeTab> BOXES = REGISTRY.register("boxes",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.boxes")).icon(() -> new ItemStack(PowerModBlocks.BASIC_BOX.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PowerModBlocks.BASIC_BOX.get().asItem());
+	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 			})
 
 					.build());

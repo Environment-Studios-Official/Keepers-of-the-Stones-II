@@ -2,9 +2,9 @@
   "_fv": 57,
   "_type": "tab",
   "definition": {
-    "name": "Boxes",
+    "name": "KotS: Items",
     "icon": {
-      "value": "CUSTOM:BasicBox"
+      "value": "CUSTOM:EmptyBattery"
     },
     "showSearch": false
   }

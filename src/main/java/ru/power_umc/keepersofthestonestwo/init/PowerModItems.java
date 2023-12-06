@@ -67,6 +67,7 @@ import ru.power_umc.keepersofthestonestwo.item.EtherStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthShieldItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthHammerItem;
@@ -92,9 +93,7 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 
-import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.BlockItem;
 
 public class PowerModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, PowerMod.MODID);
@@ -146,7 +145,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIND_STONE = REGISTRY.register("mind_stone", () -> new MindStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> DARKNESS_STONE = REGISTRY.register("darkness_stone", () -> new DarknessStoneItem());
-	public static final RegistryObject<Item> BASIC_BOX = block(PowerModBlocks.BASIC_BOX);
 	public static final RegistryObject<Item> EARTH_SHIELD = REGISTRY.register("earth_shield", () -> new EarthShieldItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
@@ -232,8 +230,5 @@ public class PowerModItems {
 	public static final RegistryObject<Item> OCEANIC_TRIDENT = REGISTRY.register("oceanic_trident", () -> new OceanicTridentItem());
 	public static final RegistryObject<Item> GREEN_STAFF = REGISTRY.register("green_staff", () -> new GreenStaffItem());
 	public static final RegistryObject<Item> ANIMALS_HALBERD = REGISTRY.register("animals_halberd", () -> new AnimalsHalberdItem());
-
-	private static RegistryObject<Item> block(RegistryObject<Block> block) {
-		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
-	}
+	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 }
