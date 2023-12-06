@@ -2,7 +2,6 @@
 package ru.power_umc.keepersofthestonestwo.command;
 
 import ru.power_umc.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.LevelSetProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -38,20 +37,6 @@ public class PwCommand {
 						direction = entity.getDirection();
 
 					PowerScaleSetProcedure.execute(arguments);
-					return 0;
-				})))).then(Commands.literal("level").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(1, 100)).executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
-
-					LevelSetProcedure.execute(arguments);
 					return 0;
 				}))))));
 	}
