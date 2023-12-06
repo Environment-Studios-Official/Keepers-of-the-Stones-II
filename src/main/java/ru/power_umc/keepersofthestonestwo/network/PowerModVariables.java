@@ -403,7 +403,7 @@ public class PowerModVariables {
 	public static class PlayerVariables {
 		public boolean active = false;
 		public boolean selected = false;
-		public double power = 100.0;
+		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public double attack = 1.0;
 		public double mergers = 0.0;

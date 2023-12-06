@@ -8432,7 +8432,7 @@
       "name": "power",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "100.0"
+      "value": "0.0"
     },
     {
       "name": "powerTimer",

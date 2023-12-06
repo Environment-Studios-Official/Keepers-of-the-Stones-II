@@ -52,7 +52,7 @@ public class FireBatteryUseProcedure {
 					});
 				}
 				{
-					double _setval = 1750;
+					double _setval = 500;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.power = _setval;
 						capability.syncPlayerVariables(entity);
