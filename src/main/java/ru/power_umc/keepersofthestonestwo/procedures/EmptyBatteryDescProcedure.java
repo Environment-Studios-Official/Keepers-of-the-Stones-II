@@ -4,6 +4,6 @@ import net.minecraft.network.chat.Component;
 
 public class EmptyBatteryDescProcedure {
 	public static String execute() {
-		return Component.translatable("battery.desc.empty").getString();
+		return "\u00A77\u00A7o" + Component.translatable("battery.desc.empty").getString();
 	}
 }
