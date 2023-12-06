@@ -79,8 +79,6 @@ public class PowerModVariables {
 			clone.element_id_second = original.element_id_second;
 			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
-			clone.level = original.level;
-			clone.skill_points = original.skill_points;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -405,7 +403,7 @@ public class PowerModVariables {
 	public static class PlayerVariables {
 		public boolean active = false;
 		public boolean selected = false;
-		public double power = 0.0;
+		public double power = 100.0;
 		public double powerTimer = 0.0;
 		public double attack = 1.0;
 		public double mergers = 0.0;
@@ -421,8 +419,6 @@ public class PowerModVariables {
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
-		public double level = 1.0;
-		public double skill_points = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -449,8 +445,6 @@ public class PowerModVariables {
 			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
-			nbt.putDouble("level", level);
-			nbt.putDouble("skill_points", skill_points);
 			return nbt;
 		}
 
@@ -474,8 +468,6 @@ public class PowerModVariables {
 			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
-			level = nbt.getDouble("level");
-			skill_points = nbt.getDouble("skill_points");
 		}
 	}
 
@@ -518,8 +510,6 @@ public class PowerModVariables {
 					variables.armor_leggings = message.data.armor_leggings;
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
-					variables.level = message.data.level;
-					variables.skill_points = message.data.skill_points;
 				}
 			});
 			context.setPacketHandled(true);

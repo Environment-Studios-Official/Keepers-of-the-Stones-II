@@ -6214,26 +6214,6 @@
       "path": "~/Elements/Ice"
     },
     {
-      "name": "LevelSet",
-      "type": "procedure",
-      "sortid": 299,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "level_set",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LevelSetProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Modules/Commands"
-    },
-    {
       "name": "PowerOverlay",
       "type": "overlay",
       "sortid": 300,
@@ -6246,27 +6226,6 @@
         ]
       },
       "path": "~/Modules/BasicModule"
-    },
-    {
-      "name": "GetLevel",
-      "type": "procedure",
-      "sortid": 301,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "get_level",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GetLevelProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/LevelSystemModule"
     },
     {
       "name": "LavaAttackProjectile",
@@ -8405,7 +8364,7 @@
       "name": "power",
       "type": "number",
       "scope": "player_lifetime",
-      "value": "0.0"
+      "value": "100.0"
     },
     {
       "name": "powerTimer",
@@ -8754,18 +8713,6 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
-    },
-    {
-      "name": "level",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "1.0"
-    },
-    {
-      "name": "skill_points",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
     }
   ],
   "sound_elements": [
@@ -9579,7 +9526,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.6",
+    "version": "1.0.0.6.1",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
@@ -9606,5 +9553,5 @@
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300448118
+  "mcreatorVersion": 202300449117
 }
