@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "empty_battery",
+    "texture": "fire_battery",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "EmptyBatteryDesc"
+      "name": "FireBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false

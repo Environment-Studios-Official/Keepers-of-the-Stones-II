@@ -8312,6 +8312,37 @@
         "files": []
       },
       "path": "~/Tabs"
+    },
+    {
+      "name": "FireBatteryDesc",
+      "type": "procedure",
+      "sortid": 398,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FireBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/FireBattery"
+    },
+    {
+      "name": "FireBattery",
+      "type": "item",
+      "sortid": 397,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/fire_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/FireBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/FireBattery"
     }
   ],
   "variable_elements": [
@@ -8761,6 +8792,7 @@
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "key.power.ability_using_key": "Клавиша использования способности",
+      "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
@@ -8862,6 +8894,7 @@
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
+      "item.power.fire_battery": "Battery",
       "item.power.green_staff": "Зелёный посох",
       "item.power.space_stone": "Камень космоса",
       "item.power.teleportation_stone": "Камень телепортации",
@@ -8988,8 +9021,9 @@
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
       "key.power.ability_using_key": "Ability using key",
-      "item.power.crystal_armor_boots": "Crystal Boots",
+      "battery.desc.fire": "Fire",
       "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -8998,8 +9032,8 @@
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
-      "effect.power.rain_master": "Master of the Rain",
       "item.power.lava_hammer": "Lava Hammer",
+      "effect.power.rain_master": "Master of the Rain",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
@@ -9007,8 +9041,8 @@
       "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
-      "item.power.spirit_stone": "Spirit Stone",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
+      "item.power.spirit_stone": "Spirit Stone",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "effect.power.lava_master": "Master of Lava",
@@ -9048,8 +9082,8 @@
       "gui.power.wheel_abilities_ocean.button_2": "2",
       "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ice Boots",
-      "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
+      "item.power.water_armor_leggings": "Water Leggings",
       "item.power.frozen_helmet": "Frozen Layer Helmet",
       "gui.power.wheel_abilities_animals.button_3": "3",
       "effect.power.ether_master": "Master of the Ether",
@@ -9089,6 +9123,7 @@
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.rain_armor_helmet": "Rain Helmet",
+      "item.power.fire_battery": "Battery",
       "item.power.green_staff": "Green Staff",
       "item.power.space_stone": "Space Stone",
       "item.power.teleportation_stone": "Teleportation Stone",
@@ -9516,6 +9551,10 @@
             "children": [
               {
                 "name": "EmptyBattery",
+                "children": []
+              },
+              {
+                "name": "FireBattery",
                 "children": []
               }
             ]

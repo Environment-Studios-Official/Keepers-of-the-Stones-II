@@ -61,6 +61,7 @@ import ru.power_umc.keepersofthestonestwo.item.FrozenItem;
 import ru.power_umc.keepersofthestonestwo.item.FormStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.FireSwordItem;
 import ru.power_umc.keepersofthestonestwo.item.FireStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.FireBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.FireArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.ExplosionStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherStoneItem;
@@ -231,4 +232,5 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GREEN_STAFF = REGISTRY.register("green_staff", () -> new GreenStaffItem());
 	public static final RegistryObject<Item> ANIMALS_HALBERD = REGISTRY.register("animals_halberd", () -> new AnimalsHalberdItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
+	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 }
