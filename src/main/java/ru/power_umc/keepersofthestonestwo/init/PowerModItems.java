@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.item.WaterStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
+import ru.power_umc.keepersofthestonestwo.item.WaterBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoStoneItem;
@@ -66,12 +67,14 @@ import ru.power_umc.keepersofthestonestwo.item.FireArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.ExplosionStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
+import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthShieldItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthHammerItem;
+import ru.power_umc.keepersofthestonestwo.item.EarthBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.DestructionStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.DarknessStoneItem;
@@ -87,6 +90,7 @@ import ru.power_umc.keepersofthestonestwo.item.AnimalsArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.AmberStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.AirStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.AirRapierItem;
+import ru.power_umc.keepersofthestonestwo.item.AirBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.AirArmorItem;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
@@ -233,4 +237,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ANIMALS_HALBERD = REGISTRY.register("animals_halberd", () -> new AnimalsHalberdItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
+	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
+	public static final RegistryObject<Item> EARTH_BATTERY = REGISTRY.register("earth_battery", () -> new EarthBatteryItem());
+	public static final RegistryObject<Item> WATER_BATTERY = REGISTRY.register("water_battery", () -> new WaterBatteryItem());
+	public static final RegistryObject<Item> ETHER_BATTERY = REGISTRY.register("ether_battery", () -> new EtherBatteryItem());
 }

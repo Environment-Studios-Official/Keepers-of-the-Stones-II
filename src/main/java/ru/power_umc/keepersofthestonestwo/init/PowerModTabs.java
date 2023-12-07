@@ -41,6 +41,10 @@ public class PowerModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
+				tabData.accept(PowerModItems.AIR_BATTERY.get());
+				tabData.accept(PowerModItems.EARTH_BATTERY.get());
+				tabData.accept(PowerModItems.WATER_BATTERY.get());
+				tabData.accept(PowerModItems.ETHER_BATTERY.get());
 			})
 
 					.build());
