@@ -54,6 +54,7 @@ import ru.power_umc.keepersofthestonestwo.item.LavaHammerItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.IceStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.IceSpearItem;
+import ru.power_umc.keepersofthestonestwo.item.IceBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.IceArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.GreenStaffItem;
 import ru.power_umc.keepersofthestonestwo.item.GravityStoneItem;
@@ -241,4 +242,5 @@ public class PowerModItems {
 	public static final RegistryObject<Item> EARTH_BATTERY = REGISTRY.register("earth_battery", () -> new EarthBatteryItem());
 	public static final RegistryObject<Item> WATER_BATTERY = REGISTRY.register("water_battery", () -> new WaterBatteryItem());
 	public static final RegistryObject<Item> ETHER_BATTERY = REGISTRY.register("ether_battery", () -> new EtherBatteryItem());
+	public static final RegistryObject<Item> ICE_BATTERY = REGISTRY.register("ice_battery", () -> new IceBatteryItem());
 }

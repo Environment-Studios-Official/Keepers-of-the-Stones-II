@@ -8667,6 +8667,145 @@
         ]
       },
       "path": "~/Items/Batteries/EtherBattery"
+    },
+    {
+      "name": "IceBattery",
+      "type": "item",
+      "sortid": 412,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/IceBatteryItem.java",
+          "src/main/resources/assets/power/models/item/ice_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/IceBattery"
+    },
+    {
+      "name": "IceBatteryDesc",
+      "type": "procedure",
+      "sortid": 413,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IceBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/IceBattery"
+    },
+    {
+      "name": "IceBatteryUse",
+      "type": "procedure",
+      "sortid": 414,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IceBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/IceBattery"
+    },
+    {
+      "name": "LightningBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/LightningBatteryItem.java",
+          "src/main/resources/assets/power/models/item/lightning_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/LightningBattery"
+    },
+    {
+      "name": "LightningBatteryDesc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LightningBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/LightningBattery"
+    },
+    {
+      "name": "LightningBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LightningBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/LightningBattery"
     }
   ],
   "variable_elements": [
@@ -9103,7 +9242,7 @@
   ],
   "language_map": {
     "ru_ru": {
-      "item.power.ether_battery": "Battery",
+      "item.power.ether_battery": "Батарея",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Захват торнадо, расходует 30",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
@@ -9116,11 +9255,12 @@
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "item.power.lightning_battery": "Battery",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -9129,8 +9269,9 @@
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
-      "item.power.lava_hammer": "Лавовый молот",
+      "battery.desc.ice": "Лёд",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -9138,8 +9279,8 @@
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.spirit_stone": "Камень духа",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "effect.power.lava_master": "Мастер лавы",
@@ -9152,7 +9293,7 @@
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.frozen_leggings": "Frozen Layer Leggings",
-      "item.power.water_battery": "Battery",
+      "item.power.water_battery": "Батарея",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
       "gui.power.wheel_abilities_metal.button_3": "3",
@@ -9251,6 +9392,7 @@
       "subtitles.electric_spark": "Искра",
       "item.power.fire_sword": "Меч огня",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
+      "battery.desc.water": "Вода",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
@@ -9305,6 +9447,7 @@
       "item.power.air_battery": "Батарея",
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
+      "item.power.ice_battery": "Батарея",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
       "item.power.sound_dagger": "Звуковой кинжал",
       "gui.power.wheel_abilities_metal.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
@@ -9352,11 +9495,12 @@
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -9365,8 +9509,9 @@
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
-      "item.power.lava_hammer": "Lava Hammer",
+      "battery.desc.ice": "Ice",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
@@ -9374,8 +9519,8 @@
       "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.spirit_stone": "Spirit Stone",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "effect.power.lava_master": "Master of Lava",
@@ -9487,6 +9632,7 @@
       "subtitles.electric_spark": "Spark",
       "item.power.fire_sword": "Fire Sword",
       "item.power.animals_armor_helmet": "Animals Helmet",
+      "battery.desc.water": "Water",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
@@ -9541,6 +9687,7 @@
       "item.power.air_battery": "Battery",
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
+      "item.power.ice_battery": "Battery",
       "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
       "item.power.sound_dagger": "Sound Dagger",
       "gui.power.wheel_abilities_metal.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
@@ -9909,6 +10056,14 @@
               },
               {
                 "name": "EtherBattery",
+                "children": []
+              },
+              {
+                "name": "IceBattery",
+                "children": []
+              },
+              {
+                "name": "LightningBattery",
                 "children": []
               }
             ]
