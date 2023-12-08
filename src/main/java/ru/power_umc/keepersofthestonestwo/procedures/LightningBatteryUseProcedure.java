@@ -31,7 +31,7 @@ public class LightningBatteryUseProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) == 0 && entity instanceof Player
 				&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false) {
-			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.ICE_BATTERY.get()) {
+			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.LIGHTNING_BATTERY.get()) {
 				PowerMod.queueServerWork(1, () -> {
 					itemstack.shrink(1);
 				});
@@ -43,7 +43,7 @@ public class LightningBatteryUseProcedure {
 					});
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.ICE_MASTER.get(), 6000, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LIGHTNING_MASTER.get(), 6000, 0, false, false));
 				{
 					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers + 1;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

@@ -3,7 +3,7 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "ice_battery",
+    "texture": "lightning_battery",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "IceBatteryDesc"
+      "name": "LightningBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false
@@ -37,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "IceBatteryUse"
+      "name": "LightningBatteryUse"
     },
     "enableRanged": false,
     "shootConstantly": false,

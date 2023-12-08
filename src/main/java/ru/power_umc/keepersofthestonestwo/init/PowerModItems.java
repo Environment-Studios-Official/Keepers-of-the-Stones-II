@@ -47,6 +47,7 @@ import ru.power_umc.keepersofthestonestwo.item.MagnetStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MagicFireballItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningFalchionItem;
+import ru.power_umc.keepersofthestonestwo.item.LightningBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.LightStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaStoneItem;
@@ -243,4 +244,5 @@ public class PowerModItems {
 	public static final RegistryObject<Item> WATER_BATTERY = REGISTRY.register("water_battery", () -> new WaterBatteryItem());
 	public static final RegistryObject<Item> ETHER_BATTERY = REGISTRY.register("ether_battery", () -> new EtherBatteryItem());
 	public static final RegistryObject<Item> ICE_BATTERY = REGISTRY.register("ice_battery", () -> new IceBatteryItem());
+	public static final RegistryObject<Item> LIGHTNING_BATTERY = REGISTRY.register("lightning_battery", () -> new LightningBatteryItem());
 }

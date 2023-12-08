@@ -1,8 +1,8 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.IceBatteryUseProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.IceBatteryDescProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.LightningBatteryUseProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.LightningBatteryDescProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -35,13 +35,13 @@ public class LightningBatteryItem extends Item {
 		double x = entity != null ? entity.getX() : 0.0;
 		double y = entity != null ? entity.getY() : 0.0;
 		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(IceBatteryDescProcedure.execute()));
+		list.add(Component.literal(LightningBatteryDescProcedure.execute()));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		IceBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		LightningBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 }
