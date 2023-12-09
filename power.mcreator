@@ -6094,24 +6094,6 @@
       "path": "~/Modules/Gamerules"
     },
     {
-      "name": "Frozen",
-      "type": "armor",
-      "sortid": 296,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/item/FrozenItem.java",
-          "src/main/resources/assets/power/models/item/frozen_chestplate.json",
-          "src/main/resources/assets/power/models/item/frozen_helmet.json",
-          "src/main/resources/assets/power/models/item/frozen_leggings.json",
-          "src/main/resources/assets/power/models/item/frozen_boots.json"
-        ]
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
       "name": "FrozenDestructionArmor",
       "type": "procedure",
       "sortid": 297,
@@ -9316,7 +9298,6 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Океаническое течение, расходует 10",
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.gravity_stone": "Камень гравитации",
-      "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.water_battery": "Батарея",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
@@ -9348,7 +9329,6 @@
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
-      "item.power.frozen_helmet": "Frozen Layer Helmet",
       "gui.power.wheel_abilities_animals.button_3": "3",
       "effect.power.ether_master": "Мастер эфира",
       "gui.power.wheel_abilities_animals.button_1": "1",
@@ -9482,9 +9462,7 @@
       "effect.power.plants_master": "Мастер зелени",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
-      "item.power.frozen_chestplate": "Frozen Layer Chestplate",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
-      "item.power.frozen_boots": "Frozen Layer Boots",
       "effect.power.metal_master": "Мастер металла",
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
@@ -9557,7 +9535,6 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Oceanic current, uses 10",
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.gravity_stone": "Gravity Stone",
-      "item.power.frozen_leggings": "Frozen Layer Leggings",
       "item.power.water_battery": "Battery",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "item.power.ocean_armor_boots": "Ocean Boots",
@@ -9589,7 +9566,6 @@
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
-      "item.power.frozen_helmet": "Frozen Layer Helmet",
       "gui.power.wheel_abilities_animals.button_3": "3",
       "effect.power.ether_master": "Master of the Ether",
       "gui.power.wheel_abilities_animals.button_1": "1",
@@ -9723,9 +9699,7 @@
       "effect.power.plants_master": "Master of Plants",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.plants_armor_helmet": "Plants Helmet",
-      "item.power.frozen_chestplate": "Frozen Layer Chestplate",
       "item.power.sound_armor_helmet": "Sound Helmet",
-      "item.power.frozen_boots": "Frozen Layer Boots",
       "effect.power.metal_master": "Master of the Metal",
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "item.power.basic_box.tooltip": "Basic",
