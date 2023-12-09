@@ -36,7 +36,6 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
@@ -47,7 +46,6 @@ import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.LightningBolt;
-import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -1249,108 +1247,27 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
-										if (!((entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PowerModItems.FROZEN_HELMET.get())) {
-											if (!((entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == PowerModItems.FROZEN_CHESTPLATE.get())) {
-												if (!((entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PowerModItems.FROZEN_LEGGINGS.get())) {
-													if (!((entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PowerModItems.FROZEN_BOOTS.get())) {
-														{
-															ItemStack _setval = (entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY);
-															entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.armor_helmet = _setval;
-																capability.syncPlayerVariables(entityiterator);
-															});
-														}
-														{
-															ItemStack _setval = (entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY);
-															entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.armor_chestplate = _setval;
-																capability.syncPlayerVariables(entityiterator);
-															});
-														}
-														{
-															ItemStack _setval = (entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY);
-															entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.armor_leggings = _setval;
-																capability.syncPlayerVariables(entityiterator);
-															});
-														}
-														{
-															ItemStack _setval = (entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY);
-															entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.armor_boots = _setval;
-																capability.syncPlayerVariables(entityiterator);
-															});
-														}
-														{
-															Entity _entity = entityiterator;
-															if (_entity instanceof Player _player) {
-																_player.getInventory().armor.set(3, new ItemStack(PowerModItems.FROZEN_HELMET.get()));
-																_player.getInventory().setChanged();
-															} else if (_entity instanceof LivingEntity _living) {
-																_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.FROZEN_HELMET.get()));
-															}
-														}
-														{
-															Entity _entity = entityiterator;
-															if (_entity instanceof Player _player) {
-																_player.getInventory().armor.set(2, new ItemStack(PowerModItems.FROZEN_CHESTPLATE.get()));
-																_player.getInventory().setChanged();
-															} else if (_entity instanceof LivingEntity _living) {
-																_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.FROZEN_CHESTPLATE.get()));
-															}
-														}
-														{
-															Entity _entity = entityiterator;
-															if (_entity instanceof Player _player) {
-																_player.getInventory().armor.set(1, new ItemStack(PowerModItems.FROZEN_LEGGINGS.get()));
-																_player.getInventory().setChanged();
-															} else if (_entity instanceof LivingEntity _living) {
-																_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.FROZEN_LEGGINGS.get()));
-															}
-														}
-														{
-															Entity _entity = entityiterator;
-															if (_entity instanceof Player _player) {
-																_player.getInventory().armor.set(0, new ItemStack(PowerModItems.FROZEN_BOOTS.get()));
-																_player.getInventory().setChanged();
-															} else if (_entity instanceof LivingEntity _living) {
-																_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.FROZEN_BOOTS.get()));
-															}
-														}
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
-														(entityiterator instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
-														{
-															boolean _setval = true;
-															entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.ability_block = _setval;
-																capability.syncPlayerVariables(entityiterator);
-															});
-														}
-														if (world instanceof Level _level) {
-															if (!_level.isClientSide()) {
-																_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.PLAYERS, 1, 1);
-															} else {
-																_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.PLAYERS, 1, 1, false);
-															}
-														}
-														{
-															double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-															entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-																capability.power = _setval;
-																capability.syncPlayerVariables(entity);
-															});
-														}
-													}
-												}
-											}
+									{
+										boolean _setval = true;
+										entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.ability_block = _setval;
+											capability.syncPlayerVariables(entityiterator);
+										});
+									}
+									entityiterator.getPersistentData().putBoolean("frozenIceberg", true);
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.PLAYERS, 1, 1, false);
 										}
+									}
+									{
+										double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
+										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+											capability.power = _setval;
+											capability.syncPlayerVariables(entity);
+										});
 									}
 								}
 							}
@@ -1358,7 +1275,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt343 && _livEnt343.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt311 && _livEnt311.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 25) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index9 = 0; index9 < 15; index9++) {
@@ -1514,7 +1431,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt378 && _livEnt378.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt346 && _livEnt346.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 29) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index11 = 0; index11 < 15; index11++) {
@@ -1643,7 +1560,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt411 && _livEnt411.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt379 && _livEnt379.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 33) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						{
@@ -1880,7 +1797,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt461 && _livEnt461.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt429 && _livEnt429.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 37) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index14 = 0; index14 < 15; index14++) {
@@ -2212,7 +2129,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt565 && _livEnt565.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt533 && _livEnt533.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 41) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index16 = 0; index16 < 15; index16++) {
@@ -2350,7 +2267,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt603 && _livEnt603.hasEffect(PowerModMobEffects.TORNADO_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt571 && _livEnt571.hasEffect(PowerModMobEffects.TORNADO_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 45) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 						{
@@ -2462,7 +2379,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt623 && _livEnt623.hasEffect(PowerModMobEffects.OCEAN_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt591 && _livEnt591.hasEffect(PowerModMobEffects.OCEAN_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 49) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index19 = 0; index19 < 15; index19++) {
@@ -2577,7 +2494,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt656 && _livEnt656.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt624 && _livEnt624.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 53) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index21 = 0; index21 < 15; index21++) {
@@ -2699,7 +2616,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt685 && _livEnt685.hasEffect(PowerModMobEffects.ANIMALS_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt653 && _livEnt653.hasEffect(PowerModMobEffects.ANIMALS_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 57) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index24 = 0; index24 < 15; index24++) {
@@ -2813,7 +2730,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt712 && _livEnt712.hasEffect(PowerModMobEffects.METAL_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt680 && _livEnt680.hasEffect(PowerModMobEffects.METAL_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 61) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.IRON_BLOCK.asItem()) {

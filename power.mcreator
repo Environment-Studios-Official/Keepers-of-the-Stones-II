@@ -8809,6 +8809,26 @@
         ]
       },
       "path": "~/Items/Batteries/LightningBattery"
+    },
+    {
+      "name": "IcebergRender",
+      "type": "procedure",
+      "sortid": 418,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iceberg_render",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IcebergRenderProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
     }
   ],
   "variable_elements": [
@@ -9261,9 +9281,9 @@
       "item.power.lightning_battery": "Батарея",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -9273,8 +9293,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
-      "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -9502,9 +9522,9 @@
       "item.power.lightning_battery": "Battery",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "item.power.earth_battery": "Battery",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
+      "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -9514,8 +9534,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "effect.power.rain_master": "Master of the Rain",
       "item.power.lava_hammer": "Lava Hammer",
+      "effect.power.rain_master": "Master of the Rain",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
