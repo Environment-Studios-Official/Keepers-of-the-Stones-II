@@ -16,6 +16,9 @@ import ru.power_umc.keepersofthestonestwo.item.TimeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TeleportationStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TechnologyStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SunStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.StarPotion500Item;
+import ru.power_umc.keepersofthestonestwo.item.StarPotion200Item;
+import ru.power_umc.keepersofthestonestwo.item.StarPotion100Item;
 import ru.power_umc.keepersofthestonestwo.item.SpiritStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SpeedStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SpaceStoneItem;
@@ -240,4 +243,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ETHER_BATTERY = REGISTRY.register("ether_battery", () -> new EtherBatteryItem());
 	public static final RegistryObject<Item> ICE_BATTERY = REGISTRY.register("ice_battery", () -> new IceBatteryItem());
 	public static final RegistryObject<Item> LIGHTNING_BATTERY = REGISTRY.register("lightning_battery", () -> new LightningBatteryItem());
+	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
+	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
+	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
 }

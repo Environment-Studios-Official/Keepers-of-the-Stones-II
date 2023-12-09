@@ -8845,6 +8845,159 @@
         ]
       },
       "path": "~/Elements/Metal"
+    },
+    {
+      "name": "StarPotion100PriShchielchkiePKM",
+      "type": "procedure",
+      "sortid": 421,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_100_pri_shchielchkie_pkm",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion100PriShchielchkiePKMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion100",
+      "type": "item",
+      "sortid": 422,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_100",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/star_potion_100.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/StarPotion100Item.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion100DopolnitielnaiaInformatsiia",
+      "type": "procedure",
+      "sortid": 423,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_100_dopolnitielnaia_informatsiia",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion100DopolnitielnaiaInformatsiiaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion200",
+      "type": "item",
+      "sortid": 424,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_200",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/star_potion_200.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/StarPotion200Item.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion200DopolnitielnaiaInformatsiia",
+      "type": "procedure",
+      "sortid": 425,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_200_dopolnitielnaia_informatsiia",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion200DopolnitielnaiaInformatsiiaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion200PriShchielchkiePKM",
+      "type": "procedure",
+      "sortid": 426,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_200_pri_shchielchkie_pkm",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion200PriShchielchkiePKMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion500",
+      "type": "item",
+      "sortid": 427,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_500",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/star_potion_500.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/StarPotion500Item.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion500DopolnitielnaiaInformatsiia",
+      "type": "procedure",
+      "sortid": 428,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_500_dopolnitielnaia_informatsiia",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion500DopolnitielnaiaInformatsiiaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion500PriShchielchkiePKM",
+      "type": "procedure",
+      "sortid": 429,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_500_pri_shchielchkie_pkm",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StarPotion500PriShchielchkiePKMProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/StarPotions"
     }
   ],
   "variable_elements": [
@@ -9292,9 +9445,9 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
       "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
@@ -9349,6 +9502,7 @@
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
+      "item.power.star_potion_200": "Звёздное зелье",
       "item.power.poison_stone": "Камень яда",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
       "item.power.mercury_stone": "Камень ртути",
@@ -9376,6 +9530,7 @@
       "item.power.fire_stone": "Камень огня",
       "item.power.blood_stone": "Камень крови",
       "item.power.creation_stone": "Камень созидания",
+      "item.power.star_potion_100": "Звёздное зелье",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Природное исцеление, расходует 65",
       "effect.power.earth_master": "Мастер земли",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
@@ -9484,6 +9639,7 @@
       "item.power.rain_bow": "Дождевой Лук",
       "gamerule.stoneDistribution.description": "Раздача камней при входе игроков в игру. По умолчанию включена.",
       "item.power.air_battery": "Батарея",
+      "item.power.star_potion_500": "Звёздное зелье",
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.ice_battery": "Батарея",
@@ -9535,9 +9691,9 @@
       "item.power.lightning_battery": "Battery",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -9547,8 +9703,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
@@ -9556,8 +9712,8 @@
       "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.spirit_stone": "Spirit Stone",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
@@ -9587,6 +9743,7 @@
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
+      "item.power.star_potion_200": "Star Potion",
       "item.power.poison_stone": "Poison Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -9614,6 +9771,7 @@
       "item.power.fire_stone": "Fire Stone",
       "item.power.blood_stone": "Blood Stone",
       "item.power.creation_stone": "Creation Stone",
+      "item.power.star_potion_100": "Star Potion",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Natural healing, uses 65",
       "effect.power.earth_master": "Master of the Earth",
       "item.power.ether_armor_helmet": "Ether Helmet",
@@ -9722,6 +9880,7 @@
       "item.power.rain_bow": "Rain Bow",
       "gamerule.stoneDistribution.description": "Distribution of stones when players enter the game. Enabled by default.",
       "item.power.air_battery": "Battery",
+      "item.power.star_potion_500": "Star Potion",
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.ice_battery": "Battery",
@@ -10102,6 +10261,10 @@
                 "children": []
               }
             ]
+          },
+          {
+            "name": "StarPotions",
+            "children": []
           }
         ]
       },

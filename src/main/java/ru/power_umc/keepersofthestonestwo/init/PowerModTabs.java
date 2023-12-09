@@ -47,6 +47,9 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ETHER_BATTERY.get());
 				tabData.accept(PowerModItems.ICE_BATTERY.get());
 				tabData.accept(PowerModItems.LIGHTNING_BATTERY.get());
+				tabData.accept(PowerModItems.STAR_POTION_100.get());
+				tabData.accept(PowerModItems.STAR_POTION_200.get());
+				tabData.accept(PowerModItems.STAR_POTION_500.get());
 			})
 
 					.build());

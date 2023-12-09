@@ -2852,6 +2852,143 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
+				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 62) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot(1, 0, 1, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot((-1), 0, 1, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot(1, 0, (-1), 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot(0, 0, (-1), 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot(0, 0, 1, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot((-1), 0, 0, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						if (world instanceof ServerLevel projectileLevel) {
+							Projectile _entityToSpawn = new Object() {
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									entityToSpawn.setOwner(shooter);
+									entityToSpawn.setBaseDamage(damage);
+									entityToSpawn.setKnockback(knockback);
+									entityToSpawn.setSilent(true);
+									return entityToSpawn;
+								}
+							}.getArrow(projectileLevel, entity, 9, 0);
+							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
+							_entityToSpawn.shoot(1, 0, 0, 1, 0);
+							projectileLevel.addFreshEntity(_entityToSpawn);
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 63) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
@@ -2868,13 +3005,6 @@ public class SpecialAttackProcedure {
 									capability.syncPlayerVariables(entity);
 								});
 							}
-						}
-						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
 						}
 					}
 				}
