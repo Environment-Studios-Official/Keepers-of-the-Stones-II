@@ -8811,6 +8811,40 @@
         ]
       },
       "path": "~/Elements/Ice"
+    },
+    {
+      "name": "MetalGolemRenderer",
+      "type": "procedure",
+      "sortid": 419,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_golem_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalGolemRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "IronSkin",
+      "type": "potioneffect",
+      "sortid": 420,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_skin",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/IronSkinMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
@@ -9263,9 +9297,9 @@
       "item.power.lightning_battery": "Батарея",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "item.power.earth_battery": "Батарея",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "item.power.earth_battery": "Батарея",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -9275,8 +9309,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
-      "effect.power.rain_master": "Мастер дождя",
       "item.power.lava_hammer": "Лавовый молот",
+      "effect.power.rain_master": "Мастер дождя",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -9284,8 +9318,8 @@
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
-      "item.power.spirit_stone": "Камень духа",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
+      "item.power.spirit_stone": "Камень духа",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
@@ -9364,6 +9398,7 @@
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "key.categories.power2": "Хранители Камней II",
       "item.power.tornado_armor_leggings": "Поножи мастера торнадо",
+      "effect.power.iron_skin": "Железная кожа",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
@@ -9601,6 +9636,7 @@
       "item.power.sound_armor_chestplate": "Sound Chestplate",
       "key.categories.power2": "Keepers of the Stones II",
       "item.power.tornado_armor_leggings": "Tornado Leggings",
+      "effect.power.iron_skin": "Iron Skin",
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.rain_armor_helmet": "Rain Helmet",
