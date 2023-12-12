@@ -8816,19 +8816,14 @@
       "name": "MetalGolemRenderer",
       "type": "procedure",
       "sortid": 419,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_golem_renderer",
       "metadata": {
         "files": [
           "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalGolemRendererProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Elements/Metal"
     },
