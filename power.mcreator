@@ -8998,6 +8998,76 @@
         ]
       },
       "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "RightMetalGauntlet",
+      "type": "tool",
+      "sortid": 431,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_metal_gauntlet",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/right_metal_gauntlet.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/RightMetalGauntletItem.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "RightMetalGauntletKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 430,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "right_metal_gauntlet_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/RightMetalGauntletKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "LeftMetalGauntlet",
+      "type": "tool",
+      "sortid": 433,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "left_metal_gauntlet",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/LeftMetalGauntletItem.java",
+          "src/main/resources/assets/power/models/item/left_metal_gauntlet.json"
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "LeftMetalGauntletKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 432,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "left_metal_gauntlet_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LeftMetalGauntletKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
@@ -9445,14 +9515,14 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "item.power.lightning_battery": "Батарея",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -9462,8 +9532,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
-      "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -9471,8 +9541,8 @@
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.spirit_stone": "Камень духа",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
@@ -9603,6 +9673,7 @@
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
       "effect.power.water_master": "Мастер воды",
+      "item.power.left_metal_gauntlet": "Левая металлическая перчатка",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.plants_armor_leggings": "Поножи мастера зелени",
       "item.power.magic_fireball": "Волшебный файрболл",
@@ -9655,6 +9726,7 @@
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "effect.power.metal_master": "Мастер металла",
+      "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
       "effect.power.fire_master": "Мастер огня",
@@ -9844,6 +9916,7 @@
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
       "effect.power.water_master": "Master of Water",
+      "item.power.left_metal_gauntlet": "Left Metal Gauntlet",
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.plants_armor_leggings": "Plants Leggings",
       "item.power.magic_fireball": "Magic Fireball",
@@ -9896,6 +9969,7 @@
       "item.power.plants_armor_helmet": "Plants Helmet",
       "item.power.sound_armor_helmet": "Sound Helmet",
       "effect.power.metal_master": "Master of the Metal",
+      "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "item.power.basic_box.tooltip": "Basic",
       "effect.power.fire_master": "Master of Fire",

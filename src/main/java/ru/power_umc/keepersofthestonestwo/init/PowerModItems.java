@@ -28,6 +28,7 @@ import ru.power_umc.keepersofthestonestwo.item.SoundArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.SmokeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SandStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.RightMetalGauntletItem;
 import ru.power_umc.keepersofthestonestwo.item.RainStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.RainBowItem;
 import ru.power_umc.keepersofthestonestwo.item.RainArmorItem;
@@ -53,6 +54,7 @@ import ru.power_umc.keepersofthestonestwo.item.LightningFalchionItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.LightStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.LeftMetalGauntletItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaHammerItem;
 import ru.power_umc.keepersofthestonestwo.item.LavaArmorItem;
@@ -246,4 +248,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
+	public static final RegistryObject<Item> RIGHT_METAL_GAUNTLET = REGISTRY.register("right_metal_gauntlet", () -> new RightMetalGauntletItem());
+	public static final RegistryObject<Item> LEFT_METAL_GAUNTLET = REGISTRY.register("left_metal_gauntlet", () -> new LeftMetalGauntletItem());
 }
