@@ -50,6 +50,15 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_100.get());
 				tabData.accept(PowerModItems.STAR_POTION_200.get());
 				tabData.accept(PowerModItems.STAR_POTION_500.get());
+				tabData.accept(PowerModItems.SOUND_BATTERY.get());
+				tabData.accept(PowerModItems.CRYSTAL_BATTERY.get());
+				tabData.accept(PowerModItems.LAVA_BATTERY.get());
+				tabData.accept(PowerModItems.RAIN_BATTERY.get());
+				tabData.accept(PowerModItems.TORNADO_BATTERY.get());
+				tabData.accept(PowerModItems.OCEAN_BATTERY.get());
+				tabData.accept(PowerModItems.PLANTS_BATTERY.get());
+				tabData.accept(PowerModItems.ANIMALS_BATTERY.get());
+				tabData.accept(PowerModItems.METAL_BATTERY.get());
 			})
 
 					.build());

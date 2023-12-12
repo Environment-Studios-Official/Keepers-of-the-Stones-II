@@ -9063,6 +9063,645 @@
         ]
       },
       "path": "~/Elements/Metal"
+    },
+    {
+      "name": "SoundBattery",
+      "type": "item",
+      "sortid": 434,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/SoundBatteryItem.java",
+          "src/main/resources/assets/power/models/item/sound_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/SoundBattery"
+    },
+    {
+      "name": "SoundBatteryDesc",
+      "type": "procedure",
+      "sortid": 435,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SoundBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/SoundBattery"
+    },
+    {
+      "name": "SoundBatteryUse",
+      "type": "procedure",
+      "sortid": 436,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SoundBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/SoundBattery"
+    },
+    {
+      "name": "CrystalBattery",
+      "type": "item",
+      "sortid": 437,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/crystal_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/CrystalBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/CrystalBattery"
+    },
+    {
+      "name": "CrystalBatteryDesc",
+      "type": "procedure",
+      "sortid": 438,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CrystalBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/CrystalBattery"
+    },
+    {
+      "name": "CrystalBatteryUse",
+      "type": "procedure",
+      "sortid": 439,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CrystalBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/CrystalBattery"
+    },
+    {
+      "name": "LavaBattery",
+      "type": "item",
+      "sortid": 440,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/lava_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/LavaBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/LavaBattery"
+    },
+    {
+      "name": "LavaBatteryDesc",
+      "type": "procedure",
+      "sortid": 441,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LavaBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/LavaBattery"
+    },
+    {
+      "name": "LavaBatteryUse",
+      "type": "procedure",
+      "sortid": 442,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LavaBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/LavaBattery"
+    },
+    {
+      "name": "RainBattery",
+      "type": "item",
+      "sortid": 443,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/rain_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/RainBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/RainBattery"
+    },
+    {
+      "name": "RainBatteryDesc",
+      "type": "procedure",
+      "sortid": 444,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/RainBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/RainBattery"
+    },
+    {
+      "name": "RainBatteryUse",
+      "type": "procedure",
+      "sortid": 445,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/RainBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/RainBattery"
+    },
+    {
+      "name": "TornadoBattery",
+      "type": "item",
+      "sortid": 446,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/tornado_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/TornadoBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/TornadoBattery"
+    },
+    {
+      "name": "TornadoBatteryDesc",
+      "type": "procedure",
+      "sortid": 447,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/TornadoBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/TornadoBattery"
+    },
+    {
+      "name": "TornadoBatteryUse",
+      "type": "procedure",
+      "sortid": 448,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/TornadoBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/TornadoBattery"
+    },
+    {
+      "name": "OceanBattery",
+      "type": "item",
+      "sortid": 449,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/OceanBatteryItem.java",
+          "src/main/resources/assets/power/models/item/ocean_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/OceanBattery"
+    },
+    {
+      "name": "OceanBatteryDesc",
+      "type": "procedure",
+      "sortid": 450,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/OceanBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/OceanBattery"
+    },
+    {
+      "name": "OceanBatteryUse",
+      "type": "procedure",
+      "sortid": 451,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/OceanBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/OceanBattery"
+    },
+    {
+      "name": "PlantsBattery",
+      "type": "item",
+      "sortid": 452,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/PlantsBatteryItem.java",
+          "src/main/resources/assets/power/models/item/plants_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/PlantsBattery"
+    },
+    {
+      "name": "PlantsBatteryDesc",
+      "type": "procedure",
+      "sortid": 453,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PlantsBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/PlantsBattery"
+    },
+    {
+      "name": "PlantsBatteryUse",
+      "type": "procedure",
+      "sortid": 454,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/PlantsBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/PlantsBattery"
+    },
+    {
+      "name": "AnimalsBattery",
+      "type": "item",
+      "sortid": 455,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/AnimalsBatteryItem.java",
+          "src/main/resources/assets/power/models/item/animals_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/AnimalsBattery"
+    },
+    {
+      "name": "AnimalsBatteryDesc",
+      "type": "procedure",
+      "sortid": 456,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimalsBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/AnimalsBattery"
+    },
+    {
+      "name": "AnimalsBatteryUse",
+      "type": "procedure",
+      "sortid": 457,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimalsBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/AnimalsBattery"
+    },
+    {
+      "name": "MetalBattery",
+      "type": "item",
+      "sortid": 458,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/MetalBatteryItem.java",
+          "src/main/resources/assets/power/models/item/metal_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/MetalBattery"
+    },
+    {
+      "name": "MetalBatteryDesc",
+      "type": "procedure",
+      "sortid": 459,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/MetalBattery"
+    },
+    {
+      "name": "MetalBatteryUse",
+      "type": "procedure",
+      "sortid": 460,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MetalBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/MetalBattery"
     }
   ],
   "variable_elements": [
@@ -9510,14 +10149,14 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "item.power.lightning_battery": "Батарея",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "gui.power.wheel_abilities_metal.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -9527,8 +10166,8 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
-      "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -9536,8 +10175,8 @@
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.spirit_stone": "Камень духа",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
@@ -9552,6 +10191,7 @@
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.water_battery": "Батарея",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
+      "battery.desc.plants": "Зелень",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
       "gui.power.wheel_abilities_metal.button_3": "3",
       "item.power.earth_shield": "Earth Shield",
@@ -9565,6 +10205,7 @@
       "item.power.explosion_stone": "Камень взрыва",
       "battery.desc.earth": "Земля",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "item.power.lava_battery": "Лава",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.star_potion_200": "Звёздное зелье",
@@ -9573,6 +10214,7 @@
       "item.power.mercury_stone": "Камень ртути",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
+      "item.power.metal_battery": "Battery",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
@@ -9583,11 +10225,14 @@
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
       "gui.power.wheel_abilities_animals.button_3": "3",
+      "battery.desc.tornado": "Торнадо",
+      "item.power.animals_battery": "Battery",
       "effect.power.ether_master": "Мастер эфира",
       "gui.power.wheel_abilities_animals.button_1": "1",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
+      "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
@@ -9608,6 +10253,7 @@
       "gui.power.wheel_abilities_metal.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
+      "item.power.ocean_battery": "Battery",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.water_stone": "Камень воды",
@@ -9617,6 +10263,7 @@
       "item.power.shadow_stone": "Камень тени",
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "key.categories.power2": "Хранители Камней II",
+      "item.power.tornado_battery": "Battery",
       "item.power.tornado_armor_leggings": "Поножи мастера торнадо",
       "effect.power.iron_skin": "Железная кожа",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
@@ -9624,6 +10271,7 @@
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "item.power.fire_battery": "Батарея",
       "item.power.green_staff": "Зелёный посох",
+      "item.power.plants_battery": "Battery",
       "item.power.space_stone": "Камень космоса",
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
@@ -9636,7 +10284,9 @@
       "item.power.energy_stone": "Камень энергии",
       "item.power.metal_stone": "Камень металла",
       "item_group.power.stones": "KotS: Камни",
+      "battery.desc.crystal": "Кристалл",
       "battery.desc.ether": "Эфир",
+      "item.power.sound_battery": "Звук",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.lava_stone": "Камень лавы",
@@ -9677,11 +10327,16 @@
       "item.power.fire_armor_helmet": "Шлем мастера огня",
       "item.power.crystal_stone": "Камень кристалла",
       "battery.desc.air": "Воздух",
+      "item.power.rain_battery": "Battery",
+      "battery.desc.animals": "Животные",
       "item.power.technology_stone": "Камень технологий",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
+      "battery.desc.sound": "Звук",
+      "item.power.crystal_battery": "Кристалл",
       "item.power.ether_glaive": "Эфирная глефа",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
+      "battery.desc.lava": "Лава",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
@@ -9699,6 +10354,7 @@
       "item.power.metal_armor_boots": "Ботинки мастера металла",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25",
       "item.power.ice_stone": "Камень льда",
+      "battery.desc.ocean": "Океан",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
       "item.power.mind_stone": "Камень разума",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
@@ -9719,6 +10375,7 @@
       "effect.power.plants_master": "Мастер зелени",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
+      "battery.desc.metal": "Металл",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "effect.power.metal_master": "Мастер металла",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
@@ -9779,8 +10436,8 @@
       "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.spirit_stone": "Spirit Stone",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
@@ -9795,8 +10452,9 @@
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.water_battery": "Battery",
       "item.power.rain_armor_leggings": "Rain Leggings",
-      "item.power.ocean_armor_boots": "Ocean Boots",
+      "battery.desc.plants": "Plants",
       "gui.power.wheel_abilities_metal.button_3": "3",
+      "item.power.ocean_armor_boots": "Ocean Boots",
       "item.power.earth_shield": "Earth Shield",
       "gui.power.wheel_abilities_metal.button_2": "2",
       "gui.power.wheel_abilities_metal.button_1": "1",
@@ -9808,6 +10466,7 @@
       "item.power.explosion_stone": "Explosion Stone",
       "battery.desc.earth": "Earth",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "item.power.lava_battery": "Battery",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.star_potion_200": "Star Potion",
@@ -9816,6 +10475,7 @@
       "item.power.mercury_stone": "Mercury Stone",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
+      "item.power.metal_battery": "Battery",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
@@ -9826,11 +10486,14 @@
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
       "gui.power.wheel_abilities_animals.button_3": "3",
+      "battery.desc.tornado": "Tornado",
+      "item.power.animals_battery": "Battery",
       "effect.power.ether_master": "Master of the Ether",
       "gui.power.wheel_abilities_animals.button_1": "1",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
+      "battery.desc.rain": "Rain",
       "item.power.plants_armor_boots": "Plants Boots",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.tornado_armor_boots": "Tornado Boots",
@@ -9851,6 +10514,7 @@
       "gui.power.wheel_abilities_metal.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
+      "item.power.ocean_battery": "Battery",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.water_stone": "Water Stone",
@@ -9860,6 +10524,7 @@
       "item.power.shadow_stone": "Shadow Stone",
       "item.power.sound_armor_chestplate": "Sound Chestplate",
       "key.categories.power2": "Keepers of the Stones II",
+      "item.power.tornado_battery": "Battery",
       "item.power.tornado_armor_leggings": "Tornado Leggings",
       "effect.power.iron_skin": "Iron Skin",
       "item.power.metal_armor_helmet": "Metal Helmet",
@@ -9867,6 +10532,7 @@
       "item.power.rain_armor_helmet": "Rain Helmet",
       "item.power.fire_battery": "Battery",
       "item.power.green_staff": "Green Staff",
+      "item.power.plants_battery": "Battery",
       "item.power.space_stone": "Space Stone",
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.lightning_stone": "Lightning Stone",
@@ -9879,7 +10545,9 @@
       "item.power.energy_stone": "Energy Stone",
       "item.power.metal_stone": "Metal Stone",
       "item_group.power.stones": "KotS: Stones",
+      "battery.desc.crystal": "Crystal",
       "battery.desc.ether": "Ether",
+      "item.power.sound_battery": "Battery",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "item.power.lava_stone": "Lava Stone",
@@ -9920,11 +10588,16 @@
       "item.power.fire_armor_helmet": "Fire Helmet",
       "item.power.crystal_stone": "Crystal Stone",
       "battery.desc.air": "Air",
+      "item.power.rain_battery": "Battery",
+      "battery.desc.animals": "Animals",
       "item.power.technology_stone": "Technology Stone",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
+      "battery.desc.sound": "Sound",
+      "item.power.crystal_battery": "Battery",
       "item.power.ether_glaive": "Ether Glaive",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
+      "battery.desc.lava": "Lava",
       "key.power.detransformation_key": "Detransformation key",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
       "item.power.air_armor_helmet": "Air Helmet",
@@ -9942,6 +10615,7 @@
       "item.power.metal_armor_boots": "Metal Boots",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10",
       "item.power.ice_stone": "Ice Stone",
+      "battery.desc.ocean": "Ocean",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
       "item.power.mind_stone": "Mind Stone",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
@@ -9962,6 +10636,7 @@
       "effect.power.plants_master": "Master of Plants",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.plants_armor_helmet": "Plants Helmet",
+      "battery.desc.metal": "Metal",
       "item.power.sound_armor_helmet": "Sound Helmet",
       "effect.power.metal_master": "Master of the Metal",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
@@ -10327,6 +11002,42 @@
               },
               {
                 "name": "LightningBattery",
+                "children": []
+              },
+              {
+                "name": "SoundBattery",
+                "children": []
+              },
+              {
+                "name": "CrystalBattery",
+                "children": []
+              },
+              {
+                "name": "LavaBattery",
+                "children": []
+              },
+              {
+                "name": "RainBattery",
+                "children": []
+              },
+              {
+                "name": "TornadoBattery",
+                "children": []
+              },
+              {
+                "name": "OceanBattery",
+                "children": []
+              },
+              {
+                "name": "PlantsBattery",
+                "children": []
+              },
+              {
+                "name": "AnimalsBattery",
+                "children": []
+              },
+              {
+                "name": "MetalBattery",
                 "children": []
               }
             ]
