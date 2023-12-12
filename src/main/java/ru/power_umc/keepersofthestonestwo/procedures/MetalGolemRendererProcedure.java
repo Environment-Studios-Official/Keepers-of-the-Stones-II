@@ -2,11 +2,7 @@ package ru.power_umc.keepersofthestonestwo.procedures;
 
 import ru.power_umc.keepersofthestonestwo.init.PowerModMobEffects;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.client.event.RenderLivingEvent;
-import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -17,20 +13,8 @@ import net.minecraft.client.renderer.entity.EntityRenderDispatcher;
 import net.minecraft.client.player.AbstractClientPlayer;
 import net.minecraft.client.Minecraft;
 
-import javax.annotation.Nullable;
-
-@Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class MetalGolemRendererProcedure {
-	@SubscribeEvent
-	public static void KleidersRenderEvent(RenderLivingEvent event) {
-		execute(event, event.getEntity());
-	}
-
 	public static void execute(Entity entity) {
-		execute(null, entity);
-	}
-
-	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.IRON_SKIN.get())) {
