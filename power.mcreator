@@ -3402,7 +3402,7 @@
       "name": "StoneAttackProjectile",
       "type": "projectile",
       "sortid": 180,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "stone_attack_projectile",
       "metadata": {
@@ -3417,7 +3417,7 @@
       "name": "GrassBlockAttackProjectile",
       "type": "projectile",
       "sortid": 181,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "grass_block_attack_projectile",
       "metadata": {
@@ -3432,7 +3432,7 @@
       "name": "DirtBlockAttackProjectile",
       "type": "projectile",
       "sortid": 182,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "dirt_block_attack_projectile",
       "metadata": {
@@ -3447,7 +3447,7 @@
       "name": "CobblestoneAttackProjectile",
       "type": "projectile",
       "sortid": 183,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cobblestone_attack_projectile",
       "metadata": {
@@ -3462,7 +3462,7 @@
       "name": "CobbledDeepslateAttackProjectile",
       "type": "projectile",
       "sortid": 184,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_projectile",
       "metadata": {
@@ -3477,7 +3477,7 @@
       "name": "WaterAttackProjectile",
       "type": "projectile",
       "sortid": 185,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_projectile",
       "metadata": {
@@ -3492,7 +3492,7 @@
       "name": "EtherAttackProjectile",
       "type": "projectile",
       "sortid": 186,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_projectile",
       "metadata": {
@@ -3843,7 +3843,7 @@
       "name": "IceAttackProjectile",
       "type": "projectile",
       "sortid": 201,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_attack_projectile",
       "metadata": {
@@ -5971,7 +5971,7 @@
       "name": "BallLightningProjectile",
       "type": "projectile",
       "sortid": 305,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile",
       "metadata": {
@@ -6037,7 +6037,7 @@
       "name": "AmethystAttackProjectile",
       "type": "projectile",
       "sortid": 308,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_attack_projectile",
       "metadata": {
@@ -6167,7 +6167,7 @@
       "name": "LavaAttackProjectile",
       "type": "projectile",
       "sortid": 314,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_attack_projectile",
       "metadata": {
@@ -6316,7 +6316,7 @@
       "name": "SoundBombProjectile",
       "type": "projectile",
       "sortid": 320,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile",
       "metadata": {
@@ -6696,7 +6696,7 @@
       "name": "AmethystClusterAttackProjectile",
       "type": "projectile",
       "sortid": 337,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_cluster_attack_projectile",
       "metadata": {
@@ -7043,7 +7043,7 @@
       "name": "RainDropProjectile",
       "type": "projectile",
       "sortid": 353,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "rain_drop_projectile",
       "metadata": {
@@ -7301,7 +7301,7 @@
       "name": "MiniTornadoProjectile",
       "type": "projectile",
       "sortid": 364,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mini_tornado_projectile",
       "metadata": {
@@ -7634,7 +7634,7 @@
       "name": "PoisonousThorn",
       "type": "projectile",
       "sortid": 379,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "poisonous_thorn",
       "metadata": {
@@ -8115,7 +8115,7 @@
       "name": "CopperAttackProjectile",
       "type": "projectile",
       "sortid": 399,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "copper_attack_projectile",
       "metadata": {
@@ -8162,7 +8162,7 @@
       "name": "GoldAttackProjectile",
       "type": "projectile",
       "sortid": 401,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gold_attack_projectile",
       "metadata": {
@@ -8209,7 +8209,7 @@
       "name": "IronAttackProjectile",
       "type": "projectile",
       "sortid": 403,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "iron_attack_projectile",
       "metadata": {
