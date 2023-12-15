@@ -27,7 +27,7 @@
     "name": "Light Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Stones"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -53,7 +53,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "LightStoneUse"
     },
     "enableRanged": false,
     "shootConstantly": false,

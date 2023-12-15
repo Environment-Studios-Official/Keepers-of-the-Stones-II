@@ -14,6 +14,7 @@ import ru.power_umc.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.LightningMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.LightMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.LavaMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.IronSkinMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.IceMasterMobEffect;
@@ -52,4 +53,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> STUN = REGISTRY.register("stun", () -> new StunMobEffect());
 	public static final RegistryObject<MobEffect> WHIRLWIND = REGISTRY.register("whirlwind", () -> new WhirlwindMobEffect());
 	public static final RegistryObject<MobEffect> IRON_SKIN = REGISTRY.register("iron_skin", () -> new IronSkinMobEffect());
+	public static final RegistryObject<MobEffect> LIGHT_MASTER = REGISTRY.register("light_master", () -> new LightMasterMobEffect());
 }

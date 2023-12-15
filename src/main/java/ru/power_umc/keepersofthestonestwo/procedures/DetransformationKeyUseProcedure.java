@@ -72,6 +72,8 @@ public class DetransformationKeyUseProcedure {
 				_entity.removeEffect(PowerModMobEffects.ANIMALS_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.METAL_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.LIGHT_MASTER.get());
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
