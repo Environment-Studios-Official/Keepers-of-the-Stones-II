@@ -135,6 +135,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PLANTS_STONE = REGISTRY.register("plants_stone", () -> new PlantsStoneItem());
 	public static final RegistryObject<Item> ANIMALS_STONE = REGISTRY.register("animals_stone", () -> new AnimalsStoneItem());
 	public static final RegistryObject<Item> METAL_STONE = REGISTRY.register("metal_stone", () -> new MetalStoneItem());
+	public static final RegistryObject<Item> LIGHT_STONE = REGISTRY.register("light_stone", () -> new LightStoneItem());
+	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
+	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
+	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -152,9 +156,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> PLANTS_BATTERY = REGISTRY.register("plants_battery", () -> new PlantsBatteryItem());
 	public static final RegistryObject<Item> ANIMALS_BATTERY = REGISTRY.register("animals_battery", () -> new AnimalsBatteryItem());
 	public static final RegistryObject<Item> METAL_BATTERY = REGISTRY.register("metal_battery", () -> new MetalBatteryItem());
-	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
-	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
-	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
+	public static final RegistryObject<Item> LIGHT_BATTERY = REGISTRY.register("light_battery", () -> new LightBatteryItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
 	public static final RegistryObject<Item> FIRE_ARMOR_LEGGINGS = REGISTRY.register("fire_armor_leggings", () -> new FireArmorItem.Leggings());
@@ -202,7 +204,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_ARMOR_CHESTPLATE = REGISTRY.register("lava_armor_chestplate", () -> new LavaArmorItem.Chestplate());
 	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
 	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
-	public static final RegistryObject<Item> LIGHT_STONE = REGISTRY.register("light_stone", () -> new LightStoneItem());
 	public static final RegistryObject<Item> SHADOW_STONE = REGISTRY.register("shadow_stone", () -> new ShadowStoneItem());
 	public static final RegistryObject<Item> VACUUM_STONE = REGISTRY.register("vacuum_stone", () -> new VacuumStoneItem());
 	public static final RegistryObject<Item> SUN_STONE = REGISTRY.register("sun_stone", () -> new SunStoneItem());
@@ -274,5 +275,4 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_ARMOR_CHESTPLATE = REGISTRY.register("light_armor_chestplate", () -> new LightArmorItem.Chestplate());
 	public static final RegistryObject<Item> LIGHT_ARMOR_LEGGINGS = REGISTRY.register("light_armor_leggings", () -> new LightArmorItem.Leggings());
 	public static final RegistryObject<Item> LIGHT_ARMOR_BOOTS = REGISTRY.register("light_armor_boots", () -> new LightArmorItem.Boots());
-	public static final RegistryObject<Item> LIGHT_BATTERY = REGISTRY.register("light_battery", () -> new LightBatteryItem());
 }

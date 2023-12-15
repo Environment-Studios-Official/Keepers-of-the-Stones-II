@@ -40,6 +40,9 @@ public class PowerModTabs {
 					.build());
 	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.STAR_POTION_100.get());
+				tabData.accept(PowerModItems.STAR_POTION_200.get());
+				tabData.accept(PowerModItems.STAR_POTION_500.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
@@ -57,9 +60,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.PLANTS_BATTERY.get());
 				tabData.accept(PowerModItems.ANIMALS_BATTERY.get());
 				tabData.accept(PowerModItems.METAL_BATTERY.get());
-				tabData.accept(PowerModItems.STAR_POTION_100.get());
-				tabData.accept(PowerModItems.STAR_POTION_200.get());
-				tabData.accept(PowerModItems.STAR_POTION_500.get());
 				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
 			})
 
