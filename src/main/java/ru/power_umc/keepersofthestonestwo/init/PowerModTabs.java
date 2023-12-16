@@ -34,7 +34,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.PLANTS_STONE.get());
 				tabData.accept(PowerModItems.ANIMALS_STONE.get());
 				tabData.accept(PowerModItems.METAL_STONE.get());
-				tabData.accept(PowerModItems.LIGHT_STONE.get());
 			})
 
 					.build());
@@ -60,7 +59,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.PLANTS_BATTERY.get());
 				tabData.accept(PowerModItems.ANIMALS_BATTERY.get());
 				tabData.accept(PowerModItems.METAL_BATTERY.get());
-				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
 			})
 
 					.build());
