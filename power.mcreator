@@ -10093,6 +10093,21 @@
         ]
       },
       "path": "~/Items/Batteries/LightBattery"
+    },
+    {
+      "name": "KnifeAttackProjectile",
+      "type": "projectile",
+      "sortid": 469,
+      "compiles": false,
+      "locked_code": false,
+      "registry_name": "knife_attack_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/KnifeAttackProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/KnifeAttackProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
@@ -10536,6 +10551,7 @@
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.earth_hammer": "Земляной молот",
       "effect.power.sound_master": "Мастер звука",
+      "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_80": "Metal knives, uses 80",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
@@ -10571,6 +10587,7 @@
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
+      "gui.power.wheel_abilities_metal.tooltip_metal_attack_attack_uses_15": "Metal attack attack, uses 15",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
@@ -10596,6 +10613,7 @@
       "item.power.explosion_stone": "Камень взрыва",
       "battery.desc.earth": "Земля",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
+      "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.lava_battery": "Батарея",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
@@ -10807,6 +10825,7 @@
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.earth_hammer": "Earth Hammer",
       "effect.power.sound_master": "Master of Sound",
+      "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_80": "Metal knives, uses 80",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
@@ -10842,6 +10861,7 @@
       "item.power.ether_armor_leggings": "Ether Leggings",
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
+      "gui.power.wheel_abilities_metal.tooltip_metal_attack_attack_uses_15": "Metal attack attack, uses 15",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
@@ -10867,6 +10887,7 @@
       "item.power.explosion_stone": "Explosion Stone",
       "battery.desc.earth": "Earth",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
+      "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.lava_battery": "Battery",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",

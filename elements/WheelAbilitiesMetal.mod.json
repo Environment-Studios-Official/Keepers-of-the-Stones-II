@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_metal_attack",
+          "image": "metal_attack.png",
+          "hoveredImage": "metal_attack_highlight.png",
           "onClick": {
             "name": "Attack61"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_metal_knives",
+          "image": "metal_knives.png",
+          "hoveredImage": "metal_knives_highlight.png",
           "onClick": {
             "name": "Attack62"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_metal_skin",
+          "image": "metal_skin.png",
+          "hoveredImage": "metal_skin_highlight.png",
           "onClick": {
             "name": "Attack63"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 174
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_metal_attack_attack_uses_15",
+          "text": {
+            "fixedValue": "Metal attack attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_metal_knives_uses_30",
+          "text": {
+            "fixedValue": "Metal knives, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_metal_knives_uses_80",
+          "text": {
+            "fixedValue": "Metal knives, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

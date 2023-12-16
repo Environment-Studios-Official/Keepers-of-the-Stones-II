@@ -7,6 +7,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelrain_drop;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelmini_tornado;
+import ru.power_umc.keepersofthestonestwo.client.model.Modelknife;
 import ru.power_umc.keepersofthestonestwo.client.model.Modeliceberg;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelether_bullet;
 import ru.power_umc.keepersofthestonestwo.client.model.Modelblock_attack;
@@ -27,6 +28,7 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modeliceberg.LAYER_LOCATION, Modeliceberg::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
+		event.registerLayerDefinition(Modelknife.LAYER_LOCATION, Modelknife::createBodyLayer);
 		event.registerLayerDefinition(Modelpoisonous_thorn.LAYER_LOCATION, Modelpoisonous_thorn::createBodyLayer);
 	}
 }

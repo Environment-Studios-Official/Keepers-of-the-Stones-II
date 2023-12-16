@@ -12,6 +12,7 @@ import ru.power_umc.keepersofthestonestwo.entity.PoisonousThornEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.KnifeAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.IronAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
@@ -91,6 +92,9 @@ public class PowerModEntities {
 			.setCustomClientFactory(GoldAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<IronAttackProjectileEntity>> IRON_ATTACK_PROJECTILE = register("projectile_iron_attack_projectile", EntityType.Builder.<IronAttackProjectileEntity>of(IronAttackProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(IronAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<KnifeAttackProjectileEntity>> KNIFE_ATTACK_PROJECTILE = register("projectile_knife_attack_projectile",
+			EntityType.Builder.<KnifeAttackProjectileEntity>of(KnifeAttackProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(KnifeAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
