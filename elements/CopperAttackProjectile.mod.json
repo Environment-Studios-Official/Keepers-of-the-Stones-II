@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.COPPER_BLOCK"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.8,
+    "damage": 4.5,
+    "knockback": 4,
+    "entityModel": "Modelblock_attack",
+    "customModelTexture": "copper_attack.png",
+    "onHitsBlock": {
+      "name": "CopperAttackProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "CopperAttackProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

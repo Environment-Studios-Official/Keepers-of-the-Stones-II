@@ -1,5 +1,8 @@
-What's new in Keepers of the Stones version II 1.0.0.5?<br />
-<br />- Added new elements (Crystal, Lava, Rain, Tornado, Ocean)
-<br />- The third ability is moved to match the clockwise position
-<br />- [Bugfix] Fixed crush after using wind gust
-<br />- [Bugfix] Fixed a bug with the third sound ability
+What's new in Keepers of the Stones version II 1.0.0.6?<br />
+<br />- Added new elements (Plants, Animals and Metal)
+<br />- Added a battery system (without battery charger)
+<br />- Added star potions
+<br />- Added hand waving animation when using abilities
+<br />- Change in required mod dependencies
+<br />- Removed level system
+<br />- [Bugfix] 

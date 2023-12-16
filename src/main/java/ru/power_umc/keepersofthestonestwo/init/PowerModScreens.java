@@ -8,14 +8,18 @@ import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesFireScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesEtherScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -43,6 +47,10 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_RAIN.get(), WheelAbilitiesRainScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TORNADO.get(), WheelAbilitiesTornadoScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_OCEAN.get(), WheelAbilitiesOceanScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_PLANTS.get(), WheelAbilitiesPlantsScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ANIMALS.get(), WheelAbilitiesAnimalsScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_METAL.get(), WheelAbilitiesMetalScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHT.get(), WheelAbilitiesLightScreen::new);
 		});
 	}
 }

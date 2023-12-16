@@ -31,12 +31,34 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.RAIN_STONE.get());
 				tabData.accept(PowerModItems.TORNADO_STONE.get());
 				tabData.accept(PowerModItems.OCEAN_STONE.get());
+				tabData.accept(PowerModItems.PLANTS_STONE.get());
+				tabData.accept(PowerModItems.ANIMALS_STONE.get());
+				tabData.accept(PowerModItems.METAL_STONE.get());
 			})
 
 					.build());
-	public static final RegistryObject<CreativeModeTab> BOXES = REGISTRY.register("boxes",
-			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.boxes")).icon(() -> new ItemStack(PowerModBlocks.BASIC_BOX.get())).displayItems((parameters, tabData) -> {
-				tabData.accept(PowerModBlocks.BASIC_BOX.get().asItem());
+	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.STAR_POTION_100.get());
+				tabData.accept(PowerModItems.STAR_POTION_200.get());
+				tabData.accept(PowerModItems.STAR_POTION_500.get());
+				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
+				tabData.accept(PowerModItems.FIRE_BATTERY.get());
+				tabData.accept(PowerModItems.AIR_BATTERY.get());
+				tabData.accept(PowerModItems.EARTH_BATTERY.get());
+				tabData.accept(PowerModItems.WATER_BATTERY.get());
+				tabData.accept(PowerModItems.ETHER_BATTERY.get());
+				tabData.accept(PowerModItems.ICE_BATTERY.get());
+				tabData.accept(PowerModItems.LIGHTNING_BATTERY.get());
+				tabData.accept(PowerModItems.SOUND_BATTERY.get());
+				tabData.accept(PowerModItems.CRYSTAL_BATTERY.get());
+				tabData.accept(PowerModItems.LAVA_BATTERY.get());
+				tabData.accept(PowerModItems.RAIN_BATTERY.get());
+				tabData.accept(PowerModItems.TORNADO_BATTERY.get());
+				tabData.accept(PowerModItems.OCEAN_BATTERY.get());
+				tabData.accept(PowerModItems.PLANTS_BATTERY.get());
+				tabData.accept(PowerModItems.ANIMALS_BATTERY.get());
+				tabData.accept(PowerModItems.METAL_BATTERY.get());
 			})
 
 					.build());

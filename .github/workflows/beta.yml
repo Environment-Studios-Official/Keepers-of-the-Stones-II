@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.20.1                       
   JAVA_VERSION: 17      
-  VERSION: 1.0.0.5
-  RELEASE_NAME: Keepers of the Stones II 1.0.0.5 Beta
+  VERSION: 1.0.0.6
+  RELEASE_NAME: Keepers of the Stones II 1.0.0.6 Beta
 
 jobs:
   build:
@@ -82,6 +82,6 @@ jobs:
               ],
               "footer": {
                 "text": "Created by the Environment Studios team!",
-                "icon_url": "https://sun9-8.userapi.com/impg/z07zX22x1cDSTI8mxViZSNmSq1ZgWQUH2V4S6Q/iS1pjti92qo.jpg?size=1280x1280&quality=95&sign=b28d93cf356dd02eb658598caec418ca&type=album"
+                "icon_url": "https://sun9-78.userapi.com/impg/kD0AwY7Xis8STJ07eud_fyqAW2-XFMaMsbnmAw/Ew3PdOe0y7Q.jpg?size=2000x2000&quality=95&sign=f990104d07c8be4a20dfa2ed1e4739d2&type=album"
               }
             }]

@@ -4,14 +4,18 @@ import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMen
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
 import ru.power_umc.keepersofthestonestwo.network.PowerModVariables;
 
@@ -226,6 +230,66 @@ public class OpenWheelOneProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new WheelAbilitiesOceanMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 14) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesPlants");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesPlantsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 15) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesAnimals");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesAnimalsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 16) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesMetal");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesMetalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_one == 17) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesLight");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesLightMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}

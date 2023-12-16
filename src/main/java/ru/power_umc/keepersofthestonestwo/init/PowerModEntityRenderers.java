@@ -8,12 +8,17 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.WaterAttackProjectileR
 import ru.power_umc.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.LavaAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.KnifeAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.IronAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.IceAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
@@ -47,5 +52,10 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), AmethystClusterAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.RAIN_DROP_PROJECTILE.get(), RainDropProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), MiniTornadoProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISONOUS_THORN.get(), PoisonousThornRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.COPPER_ATTACK_PROJECTILE.get(), CopperAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), GoldAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), IronAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), KnifeAttackProjectileRenderer::new);
 	}
 }

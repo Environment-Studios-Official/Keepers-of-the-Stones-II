@@ -1,5 +1,5 @@
 {
-  "_fv": 55,
+  "_fv": 57,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -53,7 +53,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "LightStoneUse"
     },
     "enableRanged": false,
     "shootConstantly": false,

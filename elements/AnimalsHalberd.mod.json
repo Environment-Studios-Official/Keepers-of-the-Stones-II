@@ -1,0 +1,36 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "animals_halberd",
+    "customModelName": "animals_halberd:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Animals Halberd",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "harvestLevel": 4,
+    "efficiency": 12.0,
+    "attackSpeed": 1.04,
+    "enchantability": 0,
+    "damageVsEntity": 12.15,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "AnimalsHalberdKazhdyiTikVInvientarie"
+    }
+  }
+}

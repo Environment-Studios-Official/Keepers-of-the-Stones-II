@@ -8,14 +8,18 @@ import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMen
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
@@ -41,4 +45,8 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesRainMenu>> WHEEL_ABILITIES_RAIN = REGISTRY.register("wheel_abilities_rain", () -> IForgeMenuType.create(WheelAbilitiesRainMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesTornadoMenu>> WHEEL_ABILITIES_TORNADO = REGISTRY.register("wheel_abilities_tornado", () -> IForgeMenuType.create(WheelAbilitiesTornadoMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesOceanMenu>> WHEEL_ABILITIES_OCEAN = REGISTRY.register("wheel_abilities_ocean", () -> IForgeMenuType.create(WheelAbilitiesOceanMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesPlantsMenu>> WHEEL_ABILITIES_PLANTS = REGISTRY.register("wheel_abilities_plants", () -> IForgeMenuType.create(WheelAbilitiesPlantsMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesAnimalsMenu>> WHEEL_ABILITIES_ANIMALS = REGISTRY.register("wheel_abilities_animals", () -> IForgeMenuType.create(WheelAbilitiesAnimalsMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesMetalMenu>> WHEEL_ABILITIES_METAL = REGISTRY.register("wheel_abilities_metal", () -> IForgeMenuType.create(WheelAbilitiesMetalMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesLightMenu>> WHEEL_ABILITIES_LIGHT = REGISTRY.register("wheel_abilities_light", () -> IForgeMenuType.create(WheelAbilitiesLightMenu::new));
 }

@@ -8,13 +8,18 @@ import ru.power_umc.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.RainDropProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.PoisonousThornEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.KnifeAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.IronAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.BallLightningProjectileEntity;
@@ -77,6 +82,18 @@ public class PowerModEntities {
 			.setCustomClientFactory(RainDropProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<MiniTornadoProjectileEntity>> MINI_TORNADO_PROJECTILE = register("projectile_mini_tornado_projectile",
 			EntityType.Builder.<MiniTornadoProjectileEntity>of(MiniTornadoProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(MiniTornadoProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<PoisonousThornEntity>> POISONOUS_THORN = register("projectile_poisonous_thorn",
+			EntityType.Builder.<PoisonousThornEntity>of(PoisonousThornEntity::new, MobCategory.MISC).setCustomClientFactory(PoisonousThornEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CopperAttackProjectileEntity>> COPPER_ATTACK_PROJECTILE = register("projectile_copper_attack_projectile",
+			EntityType.Builder.<CopperAttackProjectileEntity>of(CopperAttackProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(CopperAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GoldAttackProjectileEntity>> GOLD_ATTACK_PROJECTILE = register("projectile_gold_attack_projectile", EntityType.Builder.<GoldAttackProjectileEntity>of(GoldAttackProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(GoldAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<IronAttackProjectileEntity>> IRON_ATTACK_PROJECTILE = register("projectile_iron_attack_projectile", EntityType.Builder.<IronAttackProjectileEntity>of(IronAttackProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(IronAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<KnifeAttackProjectileEntity>> KNIFE_ATTACK_PROJECTILE = register("projectile_knife_attack_projectile",
+			EntityType.Builder.<KnifeAttackProjectileEntity>of(KnifeAttackProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(KnifeAttackProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
