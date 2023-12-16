@@ -109,14 +109,14 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_metal_attack_attack_uses_15",
+          "name": "tooltip_metal_skin_uses_80",
           "text": {
-            "fixedValue": "Metal attack attack, uses 15"
+            "fixedValue": "Metal skin, uses 80"
           },
           "width": 24,
           "height": 24,
-          "x": 202,
-          "y": 46
+          "x": 200,
+          "y": 168
         }
       },
       {
@@ -135,14 +135,14 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_metal_knives_uses_80",
+          "name": "tooltip_metal_attack_uses_15",
           "text": {
-            "fixedValue": "Metal knives, uses 80"
+            "fixedValue": "Metal attack, uses 15"
           },
           "width": 24,
           "height": 24,
           "x": 200,
-          "y": 168
+          "y": 46
         }
       }
     ],
