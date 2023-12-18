@@ -48,7 +48,7 @@
     "nutritionalValue": 0,
     "saturation": 0.0,
     "eatResultItem": {
-      "value": ""
+      "value": "Items.GLASS_BOTTLE"
     },
     "isMeat": false,
     "isAlwaysEdible": true,
