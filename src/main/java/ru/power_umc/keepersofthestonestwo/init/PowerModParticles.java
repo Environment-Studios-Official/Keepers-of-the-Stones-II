@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestonestwo.init;
 
+import ru.power_umc.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import ru.power_umc.keepersofthestonestwo.client.particle.InsectsParticle;
 import ru.power_umc.keepersofthestonestwo.client.particle.BassBoomParticle;
 
@@ -18,5 +19,6 @@ public class PowerModParticles {
 	public static void registerParticles(RegisterParticleProvidersEvent event) {
 		event.registerSpriteSet(PowerModParticleTypes.BASS_BOOM.get(), BassBoomParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.INSECTS.get(), InsectsParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.LIGHT_SPARKLE.get(), LightSparkleParticle::provider);
 	}
 }
