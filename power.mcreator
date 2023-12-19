@@ -10225,6 +10225,397 @@
         ]
       },
       "path": "~/Elements/Ether"
+    },
+    {
+      "name": "WheelAbilitiesShadow",
+      "type": "gui",
+      "sortid": 476,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_shadow",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesShadowMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesShadowButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesShadowScreen.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Shadow"
+    },
+    {
+      "name": "Attack69",
+      "type": "procedure",
+      "sortid": 477,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_69",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack69Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Shadow"
+    },
+    {
+      "name": "Attack70",
+      "type": "procedure",
+      "sortid": 478,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_70",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack70Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Shadow"
+    },
+    {
+      "name": "Attack71",
+      "type": "procedure",
+      "sortid": 479,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_71",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack71Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Shadow"
+    },
+    {
+      "name": "Attack72",
+      "type": "procedure",
+      "sortid": 480,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_72",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack72Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Shadow"
+    },
+    {
+      "name": "ShadowMaster",
+      "type": "potioneffect",
+      "sortid": 481,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/ShadowMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowArmor",
+      "type": "armor",
+      "sortid": 482,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/shadow_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/shadow_armor_boots.json",
+          "src/main/resources/assets/power/models/item/shadow_armor_helmet.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/ShadowArmorItem.java",
+          "src/main/resources/assets/power/models/item/shadow_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 483,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 484,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 485,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 486,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowStoneUse",
+      "type": "procedure",
+      "sortid": 487,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowMasterStart",
+      "type": "procedure",
+      "sortid": 488,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowMasterEnd",
+      "type": "procedure",
+      "sortid": 489,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowBattery",
+      "type": "item",
+      "sortid": 490,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/ShadowBatteryItem.java",
+          "src/main/resources/assets/power/models/item/shadow_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/ShadowBattery"
+    },
+    {
+      "name": "ShadowBatteryDesc",
+      "type": "procedure",
+      "sortid": 491,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/ShadowBattery"
+    },
+    {
+      "name": "ShadowBatteryUse",
+      "type": "procedure",
+      "sortid": 492,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/ShadowBattery"
     }
   ],
   "variable_elements": [
@@ -10693,6 +11084,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
+      "item.power.shadow_armor_chestplate": "Нагрудник мастера тени",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.plants_stone": "Камень зелени",
       "item.power.tornado_axe": "Топор торнадо",
@@ -10719,6 +11111,7 @@
       "item.power.earth_shield": "Earth Shield",
       "gui.power.wheel_abilities_metal.button_2": "2",
       "gui.power.wheel_abilities_metal.button_1": "1",
+      "effect.power.shadow_master": "Мастер тени",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
@@ -10729,6 +11122,7 @@
       "battery.desc.earth": "Земля",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
+      "item.power.shadow_battery": "Battery",
       "item.power.lava_battery": "Батарея",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
@@ -10829,6 +11223,7 @@
       "subtitles.electric_spark": "Искра",
       "item.power.fire_sword": "Меч огня",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
+      "item.power.shadow_armor_helmet": "Шлем мастера тени",
       "battery.desc.water": "Вода",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
@@ -10851,11 +11246,14 @@
       "item.power.plants_armor_leggings": "Поножи мастера зелени",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.smoke_stone": "Камень дыма",
+      "gui.power.wheel_abilities_shadow.button_1": "1",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
       "item.power.crystal_stone": "Камень кристалла",
       "battery.desc.air": "Воздух",
+      "gui.power.wheel_abilities_shadow.button_2": "2",
       "item.power.rain_battery": "Батарея",
+      "gui.power.wheel_abilities_shadow.button_3": "3",
       "battery.desc.animals": "Животные",
       "item.power.technology_stone": "Камень технологий",
       "effect.power.air_master": "Мастер воздуха",
@@ -10874,6 +11272,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Шаровая молния, расходует 80",
       "item.power.animals_halberd": "Алебарда животных",
       "item.power.music_stone": "Камень музыки",
+      "item.power.shadow_armor_leggings": "Поножи мастера тени",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Дождевой полёт, расходует 5",
       "item.power.crystal_knife": "Кристальный нож",
@@ -10905,6 +11304,7 @@
       "effect.power.plants_master": "Мастер зелени",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Жало скорпиона, расходует 35",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
+      "item.power.shadow_armor_boots": "Ботинки мастера тени",
       "battery.desc.metal": "Металл",
       "item.power.light_armor_boots": "Ботинки мастера света",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
@@ -10944,13 +11344,13 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -10960,13 +11360,14 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.ice_armor_helmet": "Ice Helmet",
+      "item.power.shadow_armor_chestplate": "Shadow Chestplate",
       "item.power.plants_stone": "Plants Stone",
+      "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
       "item.power.spirit_stone": "Spirit Stone",
@@ -10991,6 +11392,7 @@
       "item.power.earth_shield": "Earth Shield",
       "gui.power.wheel_abilities_metal.button_2": "2",
       "gui.power.wheel_abilities_metal.button_1": "1",
+      "effect.power.shadow_master": "Master of Shadow",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
@@ -11001,6 +11403,7 @@
       "battery.desc.earth": "Earth",
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
+      "item.power.shadow_battery": "Battery",
       "item.power.lava_battery": "Battery",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
@@ -11101,6 +11504,7 @@
       "subtitles.electric_spark": "Spark",
       "item.power.fire_sword": "Fire Sword",
       "item.power.animals_armor_helmet": "Animals Helmet",
+      "item.power.shadow_armor_helmet": "Shadow Helmet",
       "battery.desc.water": "Water",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
@@ -11123,11 +11527,14 @@
       "item.power.plants_armor_leggings": "Plants Leggings",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.smoke_stone": "Smoke Stone",
+      "gui.power.wheel_abilities_shadow.button_1": "1",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
       "item.power.crystal_stone": "Crystal Stone",
       "battery.desc.air": "Air",
+      "gui.power.wheel_abilities_shadow.button_2": "2",
       "item.power.rain_battery": "Battery",
+      "gui.power.wheel_abilities_shadow.button_3": "3",
       "battery.desc.animals": "Animals",
       "item.power.technology_stone": "Technology Stone",
       "effect.power.air_master": "Master of the Air",
@@ -11146,6 +11553,7 @@
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Ball lightning, uses 80",
       "item.power.animals_halberd": "Animals Halberd",
       "item.power.music_stone": "Music Stone",
+      "item.power.shadow_armor_leggings": "Shadow Leggings",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Rain flying, uses 5",
       "item.power.crystal_knife": "Crystal Knife",
@@ -11177,6 +11585,7 @@
       "effect.power.plants_master": "Master of Plants",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "item.power.plants_armor_helmet": "Plants Helmet",
+      "item.power.shadow_armor_boots": "Shadow Boots",
       "battery.desc.metal": "Metal",
       "item.power.light_armor_boots": "Light Boots",
       "item.power.sound_armor_helmet": "Sound Helmet",
@@ -11494,6 +11903,10 @@
               {
                 "name": "Light",
                 "children": []
+              },
+              {
+                "name": "Shadow",
+                "children": []
               }
             ]
           },
@@ -11591,6 +12004,10 @@
               },
               {
                 "name": "LightBattery",
+                "children": []
+              },
+              {
+                "name": "ShadowBattery",
                 "children": []
               }
             ]

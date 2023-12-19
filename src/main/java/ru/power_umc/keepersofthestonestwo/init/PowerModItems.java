@@ -29,6 +29,8 @@ import ru.power_umc.keepersofthestonestwo.item.SoundBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.SmokeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.ShadowBatteryItem;
+import ru.power_umc.keepersofthestonestwo.item.ShadowArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.SandStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.RightMetalGauntletItem;
 import ru.power_umc.keepersofthestonestwo.item.RainStoneItem;
@@ -277,4 +279,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_ARMOR_LEGGINGS = REGISTRY.register("light_armor_leggings", () -> new LightArmorItem.Leggings());
 	public static final RegistryObject<Item> LIGHT_ARMOR_BOOTS = REGISTRY.register("light_armor_boots", () -> new LightArmorItem.Boots());
 	public static final RegistryObject<Item> LIGHT_SWORD = REGISTRY.register("light_sword", () -> new LightSwordItem());
+	public static final RegistryObject<Item> SHADOW_ARMOR_HELMET = REGISTRY.register("shadow_armor_helmet", () -> new ShadowArmorItem.Helmet());
+	public static final RegistryObject<Item> SHADOW_ARMOR_CHESTPLATE = REGISTRY.register("shadow_armor_chestplate", () -> new ShadowArmorItem.Chestplate());
+	public static final RegistryObject<Item> SHADOW_ARMOR_LEGGINGS = REGISTRY.register("shadow_armor_leggings", () -> new ShadowArmorItem.Leggings());
+	public static final RegistryObject<Item> SHADOW_ARMOR_BOOTS = REGISTRY.register("shadow_armor_boots", () -> new ShadowArmorItem.Boots());
+	public static final RegistryObject<Item> SHADOW_BATTERY = REGISTRY.register("shadow_battery", () -> new ShadowBatteryItem());
 }
