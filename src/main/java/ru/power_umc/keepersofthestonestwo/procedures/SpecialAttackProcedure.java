@@ -8,6 +8,7 @@ import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
 import ru.power_umc.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.SoundBombProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.ShadowSphereEntity;
 import ru.power_umc.keepersofthestonestwo.entity.ShadowEntity;
 import ru.power_umc.keepersofthestonestwo.entity.PoisonousThornEntity;
 import ru.power_umc.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
@@ -3205,7 +3206,7 @@ public class SpecialAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new LightballProjectileEntity(PowerModEntities.LIGHTBALL_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new ShadowSphereEntity(PowerModEntities.SHADOW_SPHERE.get(), level);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
