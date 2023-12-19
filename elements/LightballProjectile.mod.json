@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.LIGHT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 9.0,
+    "knockback": 2,
+    "entityModel": "Modellightball",
+    "customModelTexture": "lightball.png",
+    "onHitsEntity": {
+      "name": "LightballProjectileKoghdaSnariadPopadaietVSushchnost"
+    },
+    "onFlyingTick": {
+      "name": "LightballProjectileKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}
