@@ -10616,6 +10616,21 @@
         ]
       },
       "path": "~/Items/Batteries/ShadowBattery"
+    },
+    {
+      "name": "Shadow",
+      "type": "livingentity",
+      "sortid": 494,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/ShadowEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/ShadowRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Shadow"
     }
   ],
   "variable_elements": [
@@ -11063,13 +11078,13 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "item.power.lightning_battery": "Батарея",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
@@ -11079,14 +11094,14 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
-      "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
+      "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "effect.power.crystal_master": "Мастер кристалла",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.shadow_armor_chestplate": "Нагрудник мастера тени",
-      "item.power.plants_stone": "Камень зелени",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
+      "item.power.plants_stone": "Камень зелени",
       "item.power.tornado_axe": "Топор торнадо",
       "effect.power.ice_master": "Мастер льда",
       "item.power.spirit_stone": "Камень духа",
@@ -11123,7 +11138,7 @@
       "battery.desc.earth": "Земля",
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
-      "item.power.shadow_battery": "Battery",
+      "item.power.shadow_battery": "Батарея",
       "item.power.lava_battery": "Батарея",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
@@ -11190,6 +11205,7 @@
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "item.power.fire_battery": "Батарея",
+      "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Зелёный посох",
       "item.power.plants_battery": "Батарея",
       "item.power.space_stone": "Камень космоса",
@@ -11472,6 +11488,7 @@
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.rain_armor_helmet": "Rain Helmet",
       "item.power.fire_battery": "Battery",
+      "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
       "item.power.plants_battery": "Battery",
       "item.power.space_stone": "Space Stone",
