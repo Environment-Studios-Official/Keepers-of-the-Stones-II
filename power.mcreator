@@ -10123,6 +10123,41 @@
         ]
       },
       "path": "~/Elements/Light"
+    },
+    {
+      "name": "LightSword",
+      "type": "tool",
+      "sortid": 471,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/LightSwordItem.java",
+          "src/main/resources/assets/power/models/item/light_sword.json"
+        ]
+      },
+      "path": "~/Elements/Light"
+    },
+    {
+      "name": "LightSwordKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 472,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_sword_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/LightSwordKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Light"
     }
   ],
   "variable_elements": [
@@ -10776,6 +10811,7 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Дождевой полёт, расходует 5",
       "item.power.crystal_knife": "Кристальный нож",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Полёт торнадо, расходует 5",
+      "item.power.light_sword": "Световой меч",
       "item.power.moon_stone": "Камень луны",
       "item.power.metal_armor_boots": "Ботинки мастера металла",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25",
@@ -10841,13 +10877,13 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
-      "effect.power.ocean_master": "Master of the Ocean",
       "item.power.lightning_battery": "Battery",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "item.power.earth_battery": "Battery",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.earth_battery": "Battery",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
@@ -10857,13 +10893,13 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "effect.power.rain_master": "Master of the Rain",
       "item.power.lava_hammer": "Lava Hammer",
+      "effect.power.rain_master": "Master of the Rain",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.plants_stone": "Plants Stone",
       "item.power.ice_armor_helmet": "Ice Helmet",
+      "item.power.plants_stone": "Plants Stone",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
       "item.power.spirit_stone": "Spirit Stone",
@@ -11047,6 +11083,7 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Rain flying, uses 5",
       "item.power.crystal_knife": "Crystal Knife",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Tornado flight, uses 5",
+      "item.power.light_sword": "Light Sword",
       "item.power.moon_stone": "Moon Stone",
       "item.power.metal_armor_boots": "Metal Boots",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10",

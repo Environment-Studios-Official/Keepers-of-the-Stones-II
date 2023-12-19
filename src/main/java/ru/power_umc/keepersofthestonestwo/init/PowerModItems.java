@@ -59,6 +59,7 @@ import ru.power_umc.keepersofthestonestwo.item.LightningStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningFalchionItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.LightningArmorItem;
+import ru.power_umc.keepersofthestonestwo.item.LightSwordItem;
 import ru.power_umc.keepersofthestonestwo.item.LightStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.LightBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.LightArmorItem;
@@ -275,4 +276,5 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_ARMOR_CHESTPLATE = REGISTRY.register("light_armor_chestplate", () -> new LightArmorItem.Chestplate());
 	public static final RegistryObject<Item> LIGHT_ARMOR_LEGGINGS = REGISTRY.register("light_armor_leggings", () -> new LightArmorItem.Leggings());
 	public static final RegistryObject<Item> LIGHT_ARMOR_BOOTS = REGISTRY.register("light_armor_boots", () -> new LightArmorItem.Boots());
+	public static final RegistryObject<Item> LIGHT_SWORD = REGISTRY.register("light_sword", () -> new LightSwordItem());
 }
