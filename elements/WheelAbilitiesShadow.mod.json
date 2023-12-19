@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_shadow_ray",
+          "image": "shadow_ray.png",
+          "hoveredImage": "shadow_ray_highlight.png",
           "onClick": {
             "name": "Attack69"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_shadow_sphere",
+          "image": "shadow_sphere.png",
+          "hoveredImage": "shadow_sphere_highlight+.png",
           "onClick": {
             "name": "Attack70"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_rising_shadow",
+          "image": "rising_shadow.png",
+          "hoveredImage": "rising_shadow_highlight.png",
           "onClick": {
             "name": "Attack71"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 174
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shadow_ray_uses_10",
+          "text": {
+            "fixedValue": "Shadow ray, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 48
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shadow_sphere_uses_35",
+          "text": {
+            "fixedValue": "Shadow sphere, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rising_shadow_uses_75",
+          "text": {
+            "fixedValue": "Rising shadow, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
