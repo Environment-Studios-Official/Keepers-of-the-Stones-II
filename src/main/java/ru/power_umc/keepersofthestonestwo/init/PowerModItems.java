@@ -33,6 +33,7 @@ import ru.power_umc.keepersofthestonestwo.item.ShadowBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.SandStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.RightMetalGauntletItem;
+import ru.power_umc.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import ru.power_umc.keepersofthestonestwo.item.RainStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.RainBowItem;
 import ru.power_umc.keepersofthestonestwo.item.RainBatteryItem;
@@ -88,6 +89,7 @@ import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumIngotItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthShieldItem;
@@ -95,6 +97,7 @@ import ru.power_umc.keepersofthestonestwo.item.EarthHammerItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.DestructionStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.DepletedEnergiumIngotItem;
 import ru.power_umc.keepersofthestonestwo.item.DarknessStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.CrystalStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.CrystalKnifeItem;
@@ -118,7 +121,9 @@ import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
 
+import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BlockItem;
 
 public class PowerModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, PowerMod.MODID);
@@ -139,9 +144,16 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ANIMALS_STONE = REGISTRY.register("animals_stone", () -> new AnimalsStoneItem());
 	public static final RegistryObject<Item> METAL_STONE = REGISTRY.register("metal_stone", () -> new MetalStoneItem());
 	public static final RegistryObject<Item> LIGHT_STONE = REGISTRY.register("light_stone", () -> new LightStoneItem());
+	public static final RegistryObject<Item> SHADOW_STONE = REGISTRY.register("shadow_stone", () -> new ShadowStoneItem());
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
+	public static final RegistryObject<Item> DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEPLETED_ENERGIUM_ORE);
+	public static final RegistryObject<Item> DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK);
+	public static final RegistryObject<Item> ENERGIUM_BLOCK = block(PowerModBlocks.ENERGIUM_BLOCK);
+	public static final RegistryObject<Item> RAW_DEPLETED_ENERGIUM = REGISTRY.register("raw_depleted_energium", () -> new RawDepletedEnergiumItem());
+	public static final RegistryObject<Item> DEPLETED_ENERGIUM_INGOT = REGISTRY.register("depleted_energium_ingot", () -> new DepletedEnergiumIngotItem());
+	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -160,6 +172,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ANIMALS_BATTERY = REGISTRY.register("animals_battery", () -> new AnimalsBatteryItem());
 	public static final RegistryObject<Item> METAL_BATTERY = REGISTRY.register("metal_battery", () -> new MetalBatteryItem());
 	public static final RegistryObject<Item> LIGHT_BATTERY = REGISTRY.register("light_battery", () -> new LightBatteryItem());
+	public static final RegistryObject<Item> SHADOW_BATTERY = REGISTRY.register("shadow_battery", () -> new ShadowBatteryItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
 	public static final RegistryObject<Item> FIRE_ARMOR_LEGGINGS = REGISTRY.register("fire_armor_leggings", () -> new FireArmorItem.Leggings());
@@ -207,7 +220,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_ARMOR_CHESTPLATE = REGISTRY.register("lava_armor_chestplate", () -> new LavaArmorItem.Chestplate());
 	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
 	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
-	public static final RegistryObject<Item> SHADOW_STONE = REGISTRY.register("shadow_stone", () -> new ShadowStoneItem());
 	public static final RegistryObject<Item> VACUUM_STONE = REGISTRY.register("vacuum_stone", () -> new VacuumStoneItem());
 	public static final RegistryObject<Item> SUN_STONE = REGISTRY.register("sun_stone", () -> new SunStoneItem());
 	public static final RegistryObject<Item> MOON_STONE = REGISTRY.register("moon_stone", () -> new MoonStoneItem());
@@ -283,5 +295,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SHADOW_ARMOR_CHESTPLATE = REGISTRY.register("shadow_armor_chestplate", () -> new ShadowArmorItem.Chestplate());
 	public static final RegistryObject<Item> SHADOW_ARMOR_LEGGINGS = REGISTRY.register("shadow_armor_leggings", () -> new ShadowArmorItem.Leggings());
 	public static final RegistryObject<Item> SHADOW_ARMOR_BOOTS = REGISTRY.register("shadow_armor_boots", () -> new ShadowArmorItem.Boots());
-	public static final RegistryObject<Item> SHADOW_BATTERY = REGISTRY.register("shadow_battery", () -> new ShadowBatteryItem());
+
+	private static RegistryObject<Item> block(RegistryObject<Block> block) {
+		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
 }

@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smelting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.575,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smeltingInputStack": {
+      "value": "CUSTOM:RawDepletedEnergium"
+    },
+    "smeltingReturnStack": {
+      "value": "CUSTOM:DepletedEnergiumIngot"
+    },
+    "name": "raw_depleted_energium_recipe",
+    "namespace": "mod"
+  }
+}

@@ -38,6 +38,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 public class PowerModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerEntityRenderer(PowerModEntities.SHADOW.get(), ShadowRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), StoneAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), GrassBlockAttackProjectileRenderer::new);
@@ -60,6 +61,5 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), IronAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), KnifeAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.LIGHTBALL_PROJECTILE.get(), LightballProjectileRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.SHADOW.get(), ShadowRenderer::new);
 	}
 }

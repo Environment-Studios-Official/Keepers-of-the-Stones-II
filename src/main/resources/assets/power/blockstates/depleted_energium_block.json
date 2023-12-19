@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "power:block/depleted_energium_block"
+    }
+  }
+}

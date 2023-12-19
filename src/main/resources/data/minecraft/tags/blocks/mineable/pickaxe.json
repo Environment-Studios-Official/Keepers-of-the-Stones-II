@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "power:depleted_energium_ore",
+    "power:depleted_energium_block",
+    "power:energium_block"
+  ]
+}
