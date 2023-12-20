@@ -18,7 +18,7 @@ import java.util.List;
 
 public class DepletedEnergiumOreBlock extends Block {
 	public DepletedEnergiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(2.5f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.75f, 250f).requiresCorrectToolForDrops());
 	}
 
 	@Override

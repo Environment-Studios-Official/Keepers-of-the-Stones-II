@@ -1,10 +1,6 @@
 {
   "type": "forge:add_features",
-  "biomes": [
-    "stony_peaks",
-    "frozen_peaks",
-    "jagged_peaks"
-  ],
+  "biomes": "#is_mountain",
   "features": "power:depleted_energium_ore",
   "step": "underground_ores"
 }

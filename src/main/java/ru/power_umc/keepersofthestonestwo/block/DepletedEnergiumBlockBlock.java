@@ -19,7 +19,7 @@ import java.util.Collections;
 
 public class DepletedEnergiumBlockBlock extends Block {
 	public DepletedEnergiumBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(2.5f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f).requiresCorrectToolForDrops());
 	}
 
 	@Override

@@ -37,7 +37,7 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 2.5,
+    "hardness": 6.75,
     "resistance": 250.0,
     "hasGravity": false,
     "isWaterloggable": false,
@@ -122,13 +122,7 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "frozen_peaks"
-      },
-      {
-        "value": "jagged_peaks"
-      },
-      {
-        "value": "stony_peaks"
+        "value": "#is_mountain"
       }
     ],
     "blocksToReplace": [
@@ -137,9 +131,9 @@
       }
     ],
     "generationShape": "TRIANGLE",
-    "frequencyPerChunks": 2,
-    "frequencyOnChunk": 1,
+    "frequencyPerChunks": 16,
+    "frequencyOnChunk": 5,
     "minGenerateHeight": 16,
-    "maxGenerateHeight": 320
+    "maxGenerateHeight": 256
   }
 }
