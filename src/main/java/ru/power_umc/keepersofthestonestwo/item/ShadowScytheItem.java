@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.FireSwordKazhdyiTikVInvientarieProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.ShadowScytheKazhdyiTikVInvientarieProcedure;
 
 import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
@@ -55,7 +55,7 @@ public class ShadowScytheItem extends SwordItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		FireSwordKazhdyiTikVInvientarieProcedure.execute(entity);
+		ShadowScytheKazhdyiTikVInvientarieProcedure.execute(entity);
 	}
 
 	@Override

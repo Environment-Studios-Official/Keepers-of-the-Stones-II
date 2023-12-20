@@ -10862,6 +10862,26 @@
         ]
       },
       "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "ShadowScytheKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 508,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_scythe_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ShadowScytheKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Shadow"
     }
   ],
   "variable_elements": [

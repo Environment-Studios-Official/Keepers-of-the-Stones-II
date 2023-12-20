@@ -122,7 +122,13 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#is_overworld"
+        "value": "frozen_peaks"
+      },
+      {
+        "value": "jagged_peaks"
+      },
+      {
+        "value": "stony_peaks"
       }
     ],
     "blocksToReplace": [
@@ -130,10 +136,10 @@
         "value": "TAG:stone_ore_replaceables"
       }
     ],
-    "generationShape": "UNIFORM",
-    "frequencyPerChunks": 5,
-    "frequencyOnChunk": 3,
-    "minGenerateHeight": 1,
-    "maxGenerateHeight": 30
+    "generationShape": "TRIANGLE",
+    "frequencyPerChunks": 2,
+    "frequencyOnChunk": 1,
+    "minGenerateHeight": 16,
+    "maxGenerateHeight": 320
   }
 }

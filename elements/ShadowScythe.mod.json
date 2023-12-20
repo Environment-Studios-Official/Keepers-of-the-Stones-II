@@ -30,7 +30,7 @@
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "onItemInInventoryTick": {
-      "name": "FireSwordKazhdyiTikVInvientarie"
+      "name": "ShadowScytheKazhdyiTikVInvientarie"
     }
   }
 }
