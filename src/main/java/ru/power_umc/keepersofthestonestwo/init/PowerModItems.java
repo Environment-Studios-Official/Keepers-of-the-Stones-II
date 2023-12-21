@@ -9,6 +9,8 @@ import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.VacuumBatteryItem;
+import ru.power_umc.keepersofthestonestwo.item.VacuumArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoAxeItem;
@@ -297,6 +299,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SHADOW_ARMOR_LEGGINGS = REGISTRY.register("shadow_armor_leggings", () -> new ShadowArmorItem.Leggings());
 	public static final RegistryObject<Item> SHADOW_ARMOR_BOOTS = REGISTRY.register("shadow_armor_boots", () -> new ShadowArmorItem.Boots());
 	public static final RegistryObject<Item> SHADOW_SCYTHE = REGISTRY.register("shadow_scythe", () -> new ShadowScytheItem());
+	public static final RegistryObject<Item> VACUUM_ARMOR_HELMET = REGISTRY.register("vacuum_armor_helmet", () -> new VacuumArmorItem.Helmet());
+	public static final RegistryObject<Item> VACUUM_ARMOR_CHESTPLATE = REGISTRY.register("vacuum_armor_chestplate", () -> new VacuumArmorItem.Chestplate());
+	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
+	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
+	public static final RegistryObject<Item> VACUUM_BATTERY = REGISTRY.register("vacuum_battery", () -> new VacuumBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -6,6 +6,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.WaterMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.StunMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.SoundMasterMobEffect;
@@ -56,4 +57,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> IRON_SKIN = REGISTRY.register("iron_skin", () -> new IronSkinMobEffect());
 	public static final RegistryObject<MobEffect> LIGHT_MASTER = REGISTRY.register("light_master", () -> new LightMasterMobEffect());
 	public static final RegistryObject<MobEffect> SHADOW_MASTER = REGISTRY.register("shadow_master", () -> new ShadowMasterMobEffect());
+	public static final RegistryObject<MobEffect> VACUUM_MASTER = REGISTRY.register("vacuum_master", () -> new VacuumMasterMobEffect());
 }

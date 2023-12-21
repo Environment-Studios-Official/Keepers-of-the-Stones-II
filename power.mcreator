@@ -10882,6 +10882,397 @@
         ]
       },
       "path": "~/Elements/Shadow"
+    },
+    {
+      "name": "VacuumMaster",
+      "type": "potioneffect",
+      "sortid": 509,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/VacuumMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumArmor",
+      "type": "armor",
+      "sortid": 510,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/vacuum_armor_boots.json",
+          "src/main/resources/assets/power/models/item/vacuum_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/vacuum_armor_chestplate.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/VacuumArmorItem.java",
+          "src/main/resources/assets/power/models/item/vacuum_armor_leggings.json"
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 511,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 512,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 513,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 514,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "WheelAbilitiesVacuum",
+      "type": "gui",
+      "sortid": 515,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_vacuum",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesVacuumMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesVacuumButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesVacuumScreen.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Vacuum"
+    },
+    {
+      "name": "Atttack73",
+      "type": "procedure",
+      "sortid": 516,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atttack_73",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Atttack73Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Vacuum"
+    },
+    {
+      "name": "Attack74",
+      "type": "procedure",
+      "sortid": 517,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_74",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack74Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Vacuum"
+    },
+    {
+      "name": "Attack75",
+      "type": "procedure",
+      "sortid": 518,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_75",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack75Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Vacuum"
+    },
+    {
+      "name": "Attack76",
+      "type": "procedure",
+      "sortid": 519,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_76",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack76Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Vacuum"
+    },
+    {
+      "name": "VacuumMasterStart",
+      "type": "procedure",
+      "sortid": 520,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumMasterEnd",
+      "type": "procedure",
+      "sortid": 521,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumStoneUse",
+      "type": "procedure",
+      "sortid": 522,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumBattery",
+      "type": "item",
+      "sortid": 523,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/vacuum_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/VacuumBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/VacuumBattery"
+    },
+    {
+      "name": "VacuumBatteryDesc",
+      "type": "procedure",
+      "sortid": 524,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/VacuumBattery"
+    },
+    {
+      "name": "VacuumBatteryUse",
+      "type": "procedure",
+      "sortid": 525,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/VacuumBattery"
     }
   ],
   "variable_elements": [
@@ -11332,19 +11723,21 @@
       "item.power.lightning_battery": "Батарея",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item_group.power.items": "KotS: Предметы",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
-      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
-      "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
+      "item.power.animals_armor_boots": "Ботинки мастера животных",
+      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.lava_hammer": "Лавовый молот",
       "effect.power.rain_master": "Мастер дождя",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
@@ -11371,6 +11764,7 @@
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.water_battery": "Батарея",
+      "battery.desc.vacuum": "Пустота",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "battery.desc.plants": "Зелень",
@@ -11381,6 +11775,7 @@
       "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
       "effect.power.shadow_master": "Мастер тени",
+      "item.power.vacuum_battery": "Батарея",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
@@ -11392,6 +11787,7 @@
       "item.power.earth_armor_chestplate": "Нагрудник мастера земли",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.shadow_battery": "Батарея",
+      "item.power.vacuum_armor_leggings": "Поножи мастера пустоты",
       "item.power.lava_battery": "Батарея",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
@@ -11445,6 +11841,7 @@
       "item.power.ocean_battery": "Батарея",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
@@ -11503,13 +11900,17 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
       "item.power.empty_battery": "Батарея",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
+      "gui.power.wheel_abilities_vacuum.button_3": "3",
       "item.power.magnet_stone": "Камень магнита",
+      "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
       "item.power.destruction_stone": "Камень разрушения",
       "item.power.darkness_stone": "Камень тьмы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Атака кристаллическим блоком, расходует 10",
+      "gui.power.wheel_abilities_vacuum.button_1": "1",
+      "gui.power.wheel_abilities_vacuum.button_2": "2",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
       "effect.power.water_master": "Мастер воды",
@@ -11622,30 +12023,32 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
+      "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item_group.power.items": "KotS: Items",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
-      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
-      "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
+      "item.power.animals_armor_boots": "Animals Boots",
+      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.shadow_armor_chestplate": "Shadow Chestplate",
-      "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.plants_stone": "Plants Stone",
+      "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
       "block.power.depleted_energium_ore": "Depleted Energium Ore",
@@ -11664,6 +12067,7 @@
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.water_battery": "Battery",
+      "battery.desc.vacuum": "Vacuum",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "battery.desc.plants": "Plants",
@@ -11674,6 +12078,7 @@
       "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "effect.power.shadow_master": "Master of Shadow",
+      "item.power.vacuum_battery": "Battery",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
@@ -11685,6 +12090,7 @@
       "item.power.earth_armor_chestplate": "Earth Chestplate",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.shadow_battery": "Battery",
+      "item.power.vacuum_armor_leggings": "Vacuum Leggings",
       "item.power.lava_battery": "Battery",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
@@ -11738,6 +12144,7 @@
       "item.power.ocean_battery": "Battery",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
+      "item.power.vacuum_armor_boots": "Vacuum Boots",
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
       "item.power.fire_armor_leggings": "Fire Leggings",
@@ -11796,13 +12203,17 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
       "item.power.empty_battery": "Battery",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
+      "gui.power.wheel_abilities_vacuum.button_3": "3",
       "item.power.magnet_stone": "Magnet Stone",
+      "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.air_armor_chestplate": "Air Chestplate",
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.darkness_stone": "Darkness Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
+      "gui.power.wheel_abilities_vacuum.button_1": "1",
+      "gui.power.wheel_abilities_vacuum.button_2": "2",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
       "effect.power.water_master": "Master of Water",
@@ -12197,6 +12608,10 @@
               {
                 "name": "Shadow",
                 "children": []
+              },
+              {
+                "name": "Vacuum",
+                "children": []
               }
             ]
           },
@@ -12298,6 +12713,10 @@
               },
               {
                 "name": "ShadowBattery",
+                "children": []
+              },
+              {
+                "name": "VacuumBattery",
                 "children": []
               }
             ]

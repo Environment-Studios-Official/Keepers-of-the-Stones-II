@@ -5,6 +5,7 @@
 package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesVacuumScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
@@ -53,6 +54,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_METAL.get(), WheelAbilitiesMetalScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHT.get(), WheelAbilitiesLightScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SHADOW.get(), WheelAbilitiesShadowScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_VACUUM.get(), WheelAbilitiesVacuumScreen::new);
 		});
 	}
 }
