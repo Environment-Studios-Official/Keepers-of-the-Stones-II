@@ -1,6 +1,11 @@
 package ru.power_umc.keepersofthestonestwo.client.gui;
 
 import ru.power_umc.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
+import ru.power_umc.keepersofthestonestwo.procedures.BatteryChargerProgress5Procedure;
+import ru.power_umc.keepersofthestonestwo.procedures.BatteryChargerProgress4Procedure;
+import ru.power_umc.keepersofthestonestwo.procedures.BatteryChargerProgress3Procedure;
+import ru.power_umc.keepersofthestonestwo.procedures.BatteryChargerProgress2Procedure;
+import ru.power_umc.keepersofthestonestwo.procedures.BatteryChargerProgress1Procedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -46,6 +51,21 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 
 		guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
+		if (BatteryChargerProgress1Procedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_1.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+		}
+		if (BatteryChargerProgress2Procedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_2.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+		}
+		if (BatteryChargerProgress3Procedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_3.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+		}
+		if (BatteryChargerProgress4Procedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_4.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+		}
+		if (BatteryChargerProgress5Procedure.execute(world, x, y, z)) {
+			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_5.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+		}
 		RenderSystem.disableBlend();
 	}
 

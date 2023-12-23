@@ -31,7 +31,7 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
-	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public BatteryChargerBlockEntity(BlockPos position, BlockState state) {
@@ -84,7 +84,7 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public int getMaxStackSize() {
-		return 64;
+		return 1;
 	}
 
 	@Override
@@ -109,6 +109,8 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public boolean canPlaceItem(int index, ItemStack stack) {
+		if (index == 2)
+			return false;
 		return true;
 	}
 
@@ -124,6 +126,10 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public boolean canTakeItemThroughFace(int index, ItemStack stack, Direction direction) {
+		if (index == 0)
+			return false;
+		if (index == 1)
+			return false;
 		return true;
 	}
 
