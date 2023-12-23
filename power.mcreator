@@ -12759,6 +12759,7 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "geckolib",
       "playeranimator",
       "allmods"
     ],
