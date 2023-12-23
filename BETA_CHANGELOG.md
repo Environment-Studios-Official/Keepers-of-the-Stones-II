@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones version II 1.0.0.7?<br />
+**#WARNING! Some features may not be displayed correctly on clients due to poor synchronization.**
 <br />- Added new elements (Light, Shadow)
 <br />- Added energium ore
 <br />- The battery system is fully ready
