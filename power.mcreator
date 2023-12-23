@@ -11717,6 +11717,34 @@
         ]
       },
       "path": "~/Items/Energium"
+    },
+    {
+      "name": "DepletedEnergiumOreBlastingRecipe",
+      "type": "recipe",
+      "sortid": 546,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "depleted_energium_ore_blasting_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/depleted_energium_ore_blasting_recipe.json"
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "RawDepletedEnergiumBlastingRecipe",
+      "type": "recipe",
+      "sortid": 547,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_depleted_energium_blasting_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_depleted_energium_blasting_recipe.json"
+        ]
+      },
+      "path": "~/Items/Energium"
     }
   ],
   "variable_elements": [
