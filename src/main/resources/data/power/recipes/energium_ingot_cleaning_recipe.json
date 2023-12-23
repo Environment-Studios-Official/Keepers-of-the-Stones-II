@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": [],
+  "base": {
+    "item": "power:depleted_energium_ingot"
+  },
+  "addition": {
+    "item": "minecraft:redstone"
+  },
+  "result": {
+    "item": "power:energium_ingot"
+  }
+}

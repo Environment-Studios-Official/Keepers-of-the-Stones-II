@@ -11745,6 +11745,20 @@
         ]
       },
       "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumIngotCleaningRecipe",
+      "type": "recipe",
+      "sortid": 548,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_ingot_cleaning_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/energium_ingot_cleaning_recipe.json"
+        ]
+      },
+      "path": "~/Items/Energium"
     }
   ],
   "variable_elements": [

@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Smithing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "smithingInputStack": {
+      "value": "CUSTOM:DepletedEnergiumIngot"
+    },
+    "smithingInputAdditionStack": {
+      "value": "Items.REDSTONE"
+    },
+    "smithingInputTemplateStack": {
+      "value": ""
+    },
+    "smithingReturnStack": {
+      "value": "CUSTOM:EnergiumIngot"
+    },
+    "name": "energium_ingot_cleaning_recipe",
+    "namespace": "mod"
+  }
+}
