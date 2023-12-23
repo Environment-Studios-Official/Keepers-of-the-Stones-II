@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "missing": "vacuum_dagger"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -11773,6 +11773,56 @@
         ]
       },
       "path": "~/Tags"
+    },
+    {
+      "name": "VacuumDagger",
+      "type": "tool",
+      "sortid": 550,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_dagger",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/VacuumDaggerItem.java",
+          "src/main/resources/assets/power/models/item/vacuum_dagger.json"
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "VacuumDaggerKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 551,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_dagger_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/VacuumDaggerKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "SphereNothingProjectile",
+      "type": "projectile",
+      "sortid": 552,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sphere_nothing_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/SphereNothingProjectileEntity.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/SphereNothingProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Vacuum"
     }
   ],
   "variable_elements": [
@@ -12469,6 +12519,7 @@
       "item.power.rain_bow": "Дождевой Лук",
       "gamerule.stoneDistribution.description": "Раздача камней при входе игроков в игру. По умолчанию включена.",
       "item.power.light_armor_helmet": "Шлем мастера света",
+      "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
       "item.power.star_potion_500": "Звёздное зелье",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
@@ -12525,14 +12576,14 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -12540,17 +12591,17 @@
       "item_group.power.items": "KotS: Items",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
-      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
-      "item.power.animals_armor_boots": "Animals Boots",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
+      "item.power.animals_armor_boots": "Animals Boots",
+      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "effect.power.rain_master": "Master of the Rain",
+      "item.power.lava_hammer": "Lava Hammer",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "effect.power.crystal_master": "Master of the Crystal",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.shadow_armor_chestplate": "Shadow Chestplate",
-      "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.plants_stone": "Plants Stone",
+      "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.tornado_axe": "Tornado Axe",
       "effect.power.ice_master": "Master of the Ice",
       "block.power.depleted_energium_ore": "Depleted Energium Ore",
@@ -12774,6 +12825,7 @@
       "item.power.rain_bow": "Rain Bow",
       "gamerule.stoneDistribution.description": "Distribution of stones when players enter the game. Enabled by default.",
       "item.power.light_armor_helmet": "Light Helmet",
+      "item.power.vacuum_dagger": "Vacuum Dagger",
       "item.power.air_battery": "Battery",
       "item.power.star_potion_500": "Star Potion",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",

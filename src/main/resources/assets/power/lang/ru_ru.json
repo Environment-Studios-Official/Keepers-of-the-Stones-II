@@ -259,6 +259,7 @@
   "item.power.rain_bow": "Дождевой Лук",
   "gamerule.stoneDistribution.description": "Раздача камней при входе игроков в игру. По умолчанию включена.",
   "item.power.light_armor_helmet": "Шлем мастера света",
+  "item.power.vacuum_dagger": "Пустотный кинжал",
   "item.power.air_battery": "Батарея",
   "item.power.star_potion_500": "Звёздное зелье",
   "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",

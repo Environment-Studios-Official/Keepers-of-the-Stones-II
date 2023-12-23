@@ -9,6 +9,7 @@ import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.VacuumDaggerItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.VacuumArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.TornadoStoneItem;
@@ -305,6 +306,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> VACUUM_ARMOR_CHESTPLATE = REGISTRY.register("vacuum_armor_chestplate", () -> new VacuumArmorItem.Chestplate());
 	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
 	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
+	public static final RegistryObject<Item> VACUUM_DAGGER = REGISTRY.register("vacuum_dagger", () -> new VacuumDaggerItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
