@@ -1,6 +1,8 @@
 package ru.power_umc.keepersofthestonestwo.client.gui;
 
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
+import ru.power_umc.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import ru.power_umc.keepersofthestonestwo.network.WheelAbilitiesVacuumButtonMessage;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
@@ -10,6 +12,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -25,6 +28,9 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 	Button button_1;
 	Button button_2;
 	Button button_3;
+	ImageButton imagebutton_wheel_button_1;
+	ImageButton imagebutton_wheel_button_2;
+	ImageButton imagebutton_wheel_button_3;
 
 	public WheelAbilitiesVacuumScreen(WheelAbilitiesVacuumMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -105,5 +111,47 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		}).bounds(this.leftPos + 78, this.topPos + 146, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+			if (GetWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(3, x, y, z));
+				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetWheelTwoProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
+		this.addRenderableWidget(imagebutton_wheel_button_1);
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+			if (GetWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(4, x, y, z));
+				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetWheelTwoProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
+		this.addRenderableWidget(imagebutton_wheel_button_2);
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+			if (GetWheelThreeProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(5, x, y, z));
+				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetWheelThreeProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
+		this.addRenderableWidget(imagebutton_wheel_button_3);
 	}
 }

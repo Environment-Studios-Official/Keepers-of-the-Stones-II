@@ -2,6 +2,9 @@
 package ru.power_umc.keepersofthestonestwo.network;
 
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
+import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.Atttack73Procedure;
 import ru.power_umc.keepersofthestonestwo.procedures.Attack75Procedure;
 import ru.power_umc.keepersofthestonestwo.procedures.Attack74Procedure;
@@ -75,6 +78,18 @@ public class WheelAbilitiesVacuumButtonMessage {
 		if (buttonID == 2) {
 
 			Attack75Procedure.execute(entity);
+		}
+		if (buttonID == 3) {
+
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 4) {
+
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 5) {
+
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
