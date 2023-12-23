@@ -11352,7 +11352,8 @@
             "type": "entity"
           }
         ]
-      }
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
