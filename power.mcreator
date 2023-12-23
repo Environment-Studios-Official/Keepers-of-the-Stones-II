@@ -11759,6 +11759,20 @@
         ]
       },
       "path": "~/Items/Energium"
+    },
+    {
+      "name": "ElementalBatteries",
+      "type": "tag",
+      "sortid": 549,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_batteries",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/forge/tags/items/elemental_batteries.json"
+        ]
+      },
+      "path": "~/Tags"
     }
   ],
   "variable_elements": [

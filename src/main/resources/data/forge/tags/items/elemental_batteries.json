@@ -1,0 +1,25 @@
+{
+  "replace": false,
+  "values": [
+    "power:ocean_battery",
+    "power:vacuum_battery",
+    "power:fire_battery",
+    "power:tornado_battery",
+    "power:metal_battery",
+    "power:crystal_battery",
+    "power:empty_battery",
+    "power:earth_battery",
+    "power:lightning_battery",
+    "power:rain_battery",
+    "power:plants_battery",
+    "power:lava_battery",
+    "power:shadow_battery",
+    "power:animals_battery",
+    "power:light_battery",
+    "power:ether_battery",
+    "power:sound_battery",
+    "power:air_battery",
+    "power:water_battery",
+    "power:ice_battery"
+  ]
+}
