@@ -51,6 +51,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
+				tabData.accept(PowerModBlocks.BATTERY_CHARGER.get().asItem());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());

@@ -65,7 +65,7 @@ public class ShadowEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 10, (float) 2, false));
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4, false));
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
@@ -73,7 +73,7 @@ public class ShadowEntity extends TamableAnimal {
 			}
 		});
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
-		this.targetSelector.addGoal(4, new HurtByTargetGoal(this));
+		this.targetSelector.addGoal(4, new HurtByTargetGoal(this).setAlertOthers());
 		this.goalSelector.addGoal(5, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(6, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(7, new RandomLookAroundGoal(this));

@@ -150,6 +150,7 @@
     "functions": [],
     "entities": [],
     "biomes": [],
+    "damageTypes": [],
     "name": "elemental_stones",
     "namespace": "forge"
   }

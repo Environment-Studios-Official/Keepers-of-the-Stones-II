@@ -23,6 +23,7 @@ import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -55,6 +56,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_LIGHT.get(), WheelAbilitiesLightScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SHADOW.get(), WheelAbilitiesShadowScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_VACUUM.get(), WheelAbilitiesVacuumScreen::new);
+			MenuScreens.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
 		});
 	}
 }

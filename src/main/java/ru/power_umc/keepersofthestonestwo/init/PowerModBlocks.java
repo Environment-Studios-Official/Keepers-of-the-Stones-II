@@ -7,6 +7,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 import ru.power_umc.keepersofthestonestwo.block.EnergiumBlockBlock;
 import ru.power_umc.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import ru.power_umc.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import ru.power_umc.keepersofthestonestwo.block.BatteryChargerBlock;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -20,4 +21,5 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> DEPLETED_ENERGIUM_ORE = REGISTRY.register("depleted_energium_ore", () -> new DepletedEnergiumOreBlock());
 	public static final RegistryObject<Block> DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("depleted_energium_block", () -> new DepletedEnergiumBlockBlock());
 	public static final RegistryObject<Block> ENERGIUM_BLOCK = REGISTRY.register("energium_block", () -> new EnergiumBlockBlock());
+	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
 }
