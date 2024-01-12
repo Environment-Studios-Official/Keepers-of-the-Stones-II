@@ -57,6 +57,14 @@ public class UnlockRecipesProcedure {
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_shovel_recipe")});
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_hoe_recipe")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_armor_helmet_recipe")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_armor_chestplate_recipe")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_armor_leggings_recipe")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_armor_boots_recipe")});
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.ENERGIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)

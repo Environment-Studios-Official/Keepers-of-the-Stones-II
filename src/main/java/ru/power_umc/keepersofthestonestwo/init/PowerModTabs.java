@@ -58,6 +58,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_SWORD.get());
 				tabData.accept(PowerModItems.ENERGIUM_SHOVEL.get());
 				tabData.accept(PowerModItems.ENERGIUM_HOE.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_HELMET.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
