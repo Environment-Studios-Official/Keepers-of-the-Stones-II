@@ -52,6 +52,12 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
 				tabData.accept(PowerModBlocks.BATTERY_CHARGER.get().asItem());
+				tabData.accept(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get());
+				tabData.accept(PowerModItems.ENERGIUM_PICKAXE.get());
+				tabData.accept(PowerModItems.ENERGIUM_AXE.get());
+				tabData.accept(PowerModItems.ENERGIUM_SWORD.get());
+				tabData.accept(PowerModItems.ENERGIUM_SHOVEL.get());
+				tabData.accept(PowerModItems.ENERGIUM_HOE.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
@@ -72,7 +78,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
 				tabData.accept(PowerModItems.SHADOW_BATTERY.get());
 				tabData.accept(PowerModItems.VACUUM_BATTERY.get());
-				tabData.accept(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get());
 			})
 
 					.build());

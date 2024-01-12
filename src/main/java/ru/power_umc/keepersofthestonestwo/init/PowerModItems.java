@@ -94,7 +94,12 @@ import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumSwordItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumShovelItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumIngotItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumHoeItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumAxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthShieldItem;
@@ -161,6 +166,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_INGOT = REGISTRY.register("depleted_energium_ingot", () -> new DepletedEnergiumIngotItem());
 	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
 	public static final RegistryObject<Item> BATTERY_CHARGER = block(PowerModBlocks.BATTERY_CHARGER);
+	public static final RegistryObject<Item> ENERGIUM_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("energium_upgrade_smithing_template", () -> new EnergiumUpgradeSmithingTemplateItem());
+	public static final RegistryObject<Item> ENERGIUM_PICKAXE = REGISTRY.register("energium_pickaxe", () -> new EnergiumPickaxeItem());
+	public static final RegistryObject<Item> ENERGIUM_AXE = REGISTRY.register("energium_axe", () -> new EnergiumAxeItem());
+	public static final RegistryObject<Item> ENERGIUM_SWORD = REGISTRY.register("energium_sword", () -> new EnergiumSwordItem());
+	public static final RegistryObject<Item> ENERGIUM_SHOVEL = REGISTRY.register("energium_shovel", () -> new EnergiumShovelItem());
+	public static final RegistryObject<Item> ENERGIUM_HOE = REGISTRY.register("energium_hoe", () -> new EnergiumHoeItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -308,7 +319,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
 	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
 	public static final RegistryObject<Item> VACUUM_DAGGER = REGISTRY.register("vacuum_dagger", () -> new VacuumDaggerItem());
-	public static final RegistryObject<Item> ENERGIUM_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("energium_upgrade_smithing_template", () -> new EnergiumUpgradeSmithingTemplateItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
