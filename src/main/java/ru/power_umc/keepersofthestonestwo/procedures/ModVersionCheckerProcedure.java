@@ -1,5 +1,7 @@
 package ru.power_umc.keepersofthestonestwo.procedures;
 
+import ru.power_umc.keepersofthestonestwo.network.PowerModVariables;
+
 import org.checkerframework.checker.units.qual.s;
 
 import net.minecraftforge.forgespi.language.IModInfo;
@@ -48,76 +50,147 @@ public class ModVersionCheckerProcedure {
 		double v2 = 0;
 		double v3 = 0;
 		double v4 = 0;
-		List<IModInfo> mods = ModList.get().getMods();
-		for (IModInfo mod : mods) {
-			if ((mod.getModId()).equals("power")) {
-				version = mod.getVersion().toString();
-				String[] ver = version.split("[.]");
-				v1 = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+		if ((PowerModVariables.mod_channel).equals("beta")) {
+			List<IModInfo> mods = ModList.get().getMods();
+			for (IModInfo mod : mods) {
+				if ((mod.getModId()).equals("power")) {
+					version = mod.getVersion().toString();
+					String[] ver = version.split("[.]");
+					v1 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
 						}
-						return 0;
-					}
-				}.convert(ver[0]);
-				v2 = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+					}.convert(ver[0]);
+					v2 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
 						}
-						return 0;
-					}
-				}.convert(ver[1]);
-				v3 = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+					}.convert(ver[1]);
+					v3 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
 						}
-						return 0;
-					}
-				}.convert(ver[2]);
-				v4 = new Object() {
-					double convert(String s) {
-						try {
-							return Double.parseDouble(s.trim());
-						} catch (Exception e) {
+					}.convert(ver[2]);
+					v4 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
 						}
-						return 0;
-					}
-				}.convert(ver[4]);
+					}.convert(ver[3]);
+				}
 			}
-		}
-		testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
-		jmain = jmain;
-		url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/dev/modver.json";
-		try {
-			org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		{
+			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "latest_beta.json");
+			jmain = jmain;
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/dev/modver.json";
 			try {
-				BufferedReader bufferedReader = new BufferedReader(new FileReader(testfile));
-				StringBuilder jsonstringbuilder = new StringBuilder();
-				String line;
-				while ((line = bufferedReader.readLine()) != null) {
-					jsonstringbuilder.append(line);
-				}
-				bufferedReader.close();
-				jmain = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
-				if (jmain.get("ver1").getAsDouble() > v1 || jmain.get("ver2").getAsDouble() > v2 && jmain.get("ver1").getAsDouble() >= v1
-						|| jmain.get("ver3").getAsDouble() > v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1
-						|| jmain.get("ver4").getAsDouble() > v4 && jmain.get("ver3").getAsDouble() >= v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1) {
-					if (entity instanceof Player _player && !_player.level().isClientSide())
-						_player.displayClientMessage(Component.literal((Component.translatable("power.modinfo.outdated_mod").getString() + "" + Math.round(jmain.get("ver1").getAsDouble()) + "." + Math.round(jmain.get("ver2").getAsDouble()) + "."
-								+ Math.round(jmain.get("ver3").getAsDouble()) + "." + Math.round(jmain.get("ver4").getAsDouble()) + ")")), false);
-				}
+				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
 				e.printStackTrace();
+			}
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(testfile));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					jmain = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (jmain.get("ver1").getAsDouble() > v1 || jmain.get("ver2").getAsDouble() > v2 && jmain.get("ver1").getAsDouble() >= v1
+							|| jmain.get("ver3").getAsDouble() > v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1
+							|| jmain.get("ver4").getAsDouble() > v4 && jmain.get("ver3").getAsDouble() >= v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1) {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal((Component.translatable("power.modinfo.outdated_mod").getString() + "" + Math.round(jmain.get("ver1").getAsDouble()) + "." + Math.round(jmain.get("ver2").getAsDouble()) + "."
+									+ Math.round(jmain.get("ver3").getAsDouble()) + "." + Math.round(jmain.get("ver4").getAsDouble()) + ")")), false);
+					} else {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.actual_version").getString())), false);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		} else if ((PowerModVariables.mod_channel).equals("release")) {
+			List<IModInfo> mods = ModList.get().getMods();
+			for (IModInfo mod : mods) {
+				if ((mod.getModId()).equals("power")) {
+					version = mod.getVersion().toString();
+					String[] ver = version.split("[.]");
+					v1 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(ver[0]);
+					v2 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(ver[1]);
+					v3 = new Object() {
+						double convert(String s) {
+							try {
+								return Double.parseDouble(s.trim());
+							} catch (Exception e) {
+							}
+							return 0;
+						}
+					}.convert(ver[2]);
+				}
+			}
+			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "latest_release.json");
+			jmain = jmain;
+			url = "https://raw.githubusercontent.com/RedWirePlatinumTwo/RedWiresMinecraftMod/main/modver.json";
+			try {
+				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+			{
+				try {
+					BufferedReader bufferedReader = new BufferedReader(new FileReader(testfile));
+					StringBuilder jsonstringbuilder = new StringBuilder();
+					String line;
+					while ((line = bufferedReader.readLine()) != null) {
+						jsonstringbuilder.append(line);
+					}
+					bufferedReader.close();
+					jmain = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					if (jmain.get("ver1").getAsDouble() > v1 || jmain.get("ver2").getAsDouble() > v2 && jmain.get("ver1").getAsDouble() >= v1
+							|| jmain.get("ver3").getAsDouble() > v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1) {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal((Component.translatable("power.modinfo.outdated_mod").getString() + "" + Math.round(jmain.get("ver1").getAsDouble()) + "." + Math.round(jmain.get("ver2").getAsDouble()) + "."
+									+ Math.round(jmain.get("ver3").getAsDouble()) + ")")), false);
+					} else {
+						if (entity instanceof Player _player && !_player.level().isClientSide())
+							_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.actual_version").getString())), false);
+					}
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
 			}
 		}
 	}
