@@ -50,7 +50,7 @@ public class ModVersionCheckerProcedure {
 		double v2 = 0;
 		double v3 = 0;
 		double v4 = 0;
-		if ((PowerModVariables.mod_channel).equals("beta")) {
+		if (PowerModVariables.dev_channel == 0) {
 			List<IModInfo> mods = ModList.get().getMods();
 			for (IModInfo mod : mods) {
 				if ((mod.getModId()).equals("power")) {
@@ -94,9 +94,9 @@ public class ModVersionCheckerProcedure {
 					}.convert(ver[3]);
 				}
 			}
-			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "latest_beta.json");
+			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/dev/modver.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/dev/latest_beta.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
@@ -126,7 +126,7 @@ public class ModVersionCheckerProcedure {
 					e.printStackTrace();
 				}
 			}
-		} else if ((PowerModVariables.mod_channel).equals("release")) {
+		} else if (PowerModVariables.dev_channel == 1) {
 			List<IModInfo> mods = ModList.get().getMods();
 			for (IModInfo mod : mods) {
 				if ((mod.getModId()).equals("power")) {
@@ -161,9 +161,9 @@ public class ModVersionCheckerProcedure {
 					}.convert(ver[2]);
 				}
 			}
-			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "latest_release.json");
+			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/RedWirePlatinumTwo/RedWiresMinecraftMod/main/modver.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/dev/latest_release.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
@@ -192,6 +192,9 @@ public class ModVersionCheckerProcedure {
 					e.printStackTrace();
 				}
 			}
+		} else if (PowerModVariables.dev_channel == 2) {
+			if (entity instanceof Player _player && !_player.level().isClientSide())
+				_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.unofficial_version").getString())), false);
 		}
 	}
 }
