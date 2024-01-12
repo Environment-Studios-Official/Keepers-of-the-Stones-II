@@ -93,6 +93,7 @@ import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumIngotItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EarthStoneItem;
@@ -307,6 +308,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
 	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
 	public static final RegistryObject<Item> VACUUM_DAGGER = REGISTRY.register("vacuum_dagger", () -> new VacuumDaggerItem());
+	public static final RegistryObject<Item> ENERGIUM_UPGRADE_SMITHING_TEMPLATE = REGISTRY.register("energium_upgrade_smithing_template", () -> new EnergiumUpgradeSmithingTemplateItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

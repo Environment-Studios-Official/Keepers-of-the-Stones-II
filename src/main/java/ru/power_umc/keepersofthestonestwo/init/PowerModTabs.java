@@ -72,6 +72,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
 				tabData.accept(PowerModItems.SHADOW_BATTERY.get());
 				tabData.accept(PowerModItems.VACUUM_BATTERY.get());
+				tabData.accept(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get());
 			})
 
 					.build());
