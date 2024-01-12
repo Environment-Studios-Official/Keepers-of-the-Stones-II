@@ -12290,7 +12290,7 @@
       "name": "mod_channel",
       "type": "string",
       "scope": "global",
-      "value": "\"beta\""
+      "value": "beta"
     }
   ],
   "sound_elements": [
