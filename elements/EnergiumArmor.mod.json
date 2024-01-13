@@ -7,9 +7,9 @@
     "enableBody": true,
     "textureBody": "energium_body",
     "enableLeggings": true,
-    "textureLeggings": "energium_leggings",
+    "textureLeggings": "energium_boots",
     "enableBoots": true,
-    "textureBoots": "energium_boots",
+    "textureBoots": "energium_leggings",
     "onHelmetTick": {
       "name": "EnergiumItemsPowerLocked"
     },
