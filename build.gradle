@@ -17,9 +17,9 @@ plugins {
 apply plugin: 'org.spongepowered.mixin'
 
 
-version = '1.0.0.8'
+version = '1.0'
 group = 'com.yourname.modid'
-archivesBaseName = 'Keepers-of-the-Stones-II'
+archivesBaseName = 'modid'
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(17)
 

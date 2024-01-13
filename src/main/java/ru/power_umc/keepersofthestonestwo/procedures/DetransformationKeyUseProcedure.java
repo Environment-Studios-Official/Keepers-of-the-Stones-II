@@ -32,11 +32,13 @@ public class DetransformationKeyUseProcedure {
 					_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
+			PowerModVariables.MapVariables.get(world).animation = "animation.player.detransformation";
+			PowerModVariables.MapVariables.get(world).syncData(world);
 			if (world.isClientSide()) {
 				if (entity instanceof AbstractClientPlayer player) {
 					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
 					if (animation != null && !animation.isActive()) {
-						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.detransformation"))));
+						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", PowerModVariables.MapVariables.get(world).animation))));
 					}
 				}
 			}

@@ -203,6 +203,7 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
+		public String animation = "none";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -259,6 +260,7 @@ public class PowerModVariables {
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 			darkness_stone = nbt.getBoolean("darkness_stone");
+			animation = nbt.getString("animation");
 		}
 
 		@Override
@@ -311,6 +313,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			nbt.putBoolean("darkness_stone", darkness_stone);
+			nbt.putString("animation", animation);
 			return nbt;
 		}
 
