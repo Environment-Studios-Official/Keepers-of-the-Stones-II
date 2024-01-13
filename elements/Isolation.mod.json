@@ -1,0 +1,53 @@
+{
+  "_fv": 57,
+  "_type": "enchantment",
+  "definition": {
+    "name": "Isolation",
+    "type": "WEAPON",
+    "rarity": "UNCOMMON",
+    "minLevel": 1,
+    "maxLevel": 1,
+    "damageModifier": 0,
+    "compatibleEnchantments": [
+      {
+        "value": "CUSTOM:Revenge"
+      }
+    ],
+    "excludeEnchantments": true,
+    "compatibleItems": [
+      {
+        "value": "CUSTOM:EnergiumPickaxe"
+      },
+      {
+        "value": "CUSTOM:EnergiumAxe"
+      },
+      {
+        "value": "CUSTOM:EnergiumSword"
+      },
+      {
+        "value": "CUSTOM:EnergiumShovel"
+      },
+      {
+        "value": "CUSTOM:EnergiumHoe"
+      },
+      {
+        "value": "CUSTOM:EnergiumArmor.helmet"
+      },
+      {
+        "value": "CUSTOM:EnergiumArmor.body"
+      },
+      {
+        "value": "CUSTOM:EnergiumArmor.legs"
+      },
+      {
+        "value": "CUSTOM:EnergiumArmor.boots"
+      }
+    ],
+    "excludeItems": false,
+    "isTreasureEnchantment": false,
+    "isCurse": false,
+    "isAllowedOnBooks": true,
+    "canGenerateInLootTables": true,
+    "canVillagerTrade": true
+  }
+}

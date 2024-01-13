@@ -11685,6 +11685,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
           }
         ]
       },
@@ -12100,6 +12104,58 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/recipes/energium_armor_boots_recipe.json"
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "Revenge",
+      "type": "enchantment",
+      "sortid": 571,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "revenge",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/enchantment/RevengeEnchantment.java"
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumRevengeAttack",
+      "type": "procedure",
+      "sortid": 572,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_revenge_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergiumRevengeAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "Isolation",
+      "type": "enchantment",
+      "sortid": 573,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "isolation",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/enchantment/IsolationEnchantment.java"
         ]
       },
       "path": "~/Items/Energium"
@@ -12569,6 +12625,7 @@
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
+      "enchantment.power.revenge": "Возмездие",
       "item_group.power.items": "KotS: Предметы",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
@@ -12734,6 +12791,7 @@
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
+      "enchantment.power.isolation": "Изоляция",
       "subtitles.electric_spark": "Искра",
       "item.power.fire_sword": "Меч огня",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
@@ -12888,6 +12946,7 @@
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
+      "enchantment.power.revenge": "Revenge",
       "item_group.power.items": "KotS: Items",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
@@ -13053,6 +13112,7 @@
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
+      "enchantment.power.isolation": "Isolation",
       "subtitles.electric_spark": "Spark",
       "item.power.fire_sword": "Fire Sword",
       "item.power.animals_armor_helmet": "Animals Helmet",

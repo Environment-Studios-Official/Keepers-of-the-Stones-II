@@ -20,6 +20,7 @@ import ru.power_umc.keepersofthestonestwo.init.PowerModMobEffects;
 import ru.power_umc.keepersofthestonestwo.init.PowerModMenus;
 import ru.power_umc.keepersofthestonestwo.init.PowerModItems;
 import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
+import ru.power_umc.keepersofthestonestwo.init.PowerModEnchantments;
 import ru.power_umc.keepersofthestonestwo.init.PowerModBlocks;
 import ru.power_umc.keepersofthestonestwo.init.PowerModBlockEntities;
 
@@ -61,7 +62,7 @@ public class PowerMod {
 		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModItems.REGISTRY.register(bus);
 		PowerModEntities.REGISTRY.register(bus);
-
+		PowerModEnchantments.REGISTRY.register(bus);
 		PowerModTabs.REGISTRY.register(bus);
 
 		PowerModMobEffects.REGISTRY.register(bus);
