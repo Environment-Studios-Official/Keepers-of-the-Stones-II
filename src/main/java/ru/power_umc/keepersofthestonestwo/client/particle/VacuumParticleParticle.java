@@ -35,8 +35,9 @@ public class VacuumParticleParticle extends TextureSheetParticle {
 	protected VacuumParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(1f, 1f);
-		this.lifetime = 14;
+		this.setSize(4f, 4f);
+		this.quadSize *= 4f;
+		this.lifetime = 13;
 		this.gravity = 0f;
 		this.hasPhysics = true;
 		this.xd = vx * 0.1;

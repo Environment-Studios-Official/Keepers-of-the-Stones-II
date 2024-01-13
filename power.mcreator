@@ -11841,7 +11841,7 @@
           "src/main/resources/assets/power/particles/vacuum_particle.json"
         ]
       },
-      "path": "~/Elements/Light"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "EnergiumUpgradeSmithingTemplate",
@@ -12164,17 +12164,21 @@
       "path": "~/Items/Energium"
     },
     {
-      "name": "SphereNothingProjectileRadiusAttack",
+      "name": "SphereNothingProjectileKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
       "sortid": 574,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "sphere_nothing_projectile_radius_attack",
+      "registry_name": "sphere_nothing_projectile_kazhdyi_tik_pri_poliotie_snariada",
       "metadata": {
         "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SphereNothingProjectileRadiusAttackProcedure.java"
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
         ],
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "number"

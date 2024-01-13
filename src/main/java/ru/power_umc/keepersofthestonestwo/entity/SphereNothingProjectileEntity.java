@@ -1,7 +1,7 @@
 
 package ru.power_umc.keepersofthestonestwo.entity;
 
-import ru.power_umc.keepersofthestonestwo.procedures.SphereNothingProjectileRadiusAttackProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure;
 import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
 
 import net.minecraftforge.registries.ForgeRegistries;
@@ -11,7 +11,6 @@ import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
-import net.minecraft.world.phys.BlockHitResult;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -70,13 +69,7 @@ public class SphereNothingProjectileEntity extends AbstractArrow implements Item
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		SphereNothingProjectileRadiusAttackProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
-	}
-
-	@Override
-	public void onHitBlock(BlockHitResult blockHitResult) {
-		super.onHitBlock(blockHitResult);
-		SphereNothingProjectileRadiusAttackProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), entityHitResult.getEntity());
 	}
 
 	@Override

@@ -15,11 +15,8 @@
     "knockback": 2,
     "entityModel": "Modellightball",
     "customModelTexture": "sphere_nothing.png",
-    "onHitsBlock": {
-      "name": "SphereNothingProjectileRadiusAttack"
-    },
     "onHitsEntity": {
-      "name": "SphereNothingProjectileRadiusAttack"
+      "name": "SphereNothingProjectileKazhdyiTikPriPoliotieSnariada"
     }
   }
 }
