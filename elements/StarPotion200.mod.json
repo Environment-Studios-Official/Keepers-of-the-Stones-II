@@ -31,7 +31,7 @@
       "name": "StarPotion200DopolnitielnaiaInformatsiia"
     },
     "glowCondition": {
-      "fixedValue": false
+      "fixedValue": true
     },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
