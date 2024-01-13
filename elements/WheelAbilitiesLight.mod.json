@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_light_beam",
+          "image": "light_beam.png",
+          "hoveredImage": "light_beam_highlight.png",
           "onClick": {
             "name": "Attack65"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_light_ball",
+          "image": "light_ball.png",
+          "hoveredImage": "light_ball_highlight.png",
           "onClick": {
             "name": "Attack66"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_blinding_flash",
+          "image": "blinding_flash.png",
+          "hoveredImage": "blinding_flash_highlight.png",
           "onClick": {
             "name": "Attack67"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 174
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_light_beam_uses_10",
+          "text": {
+            "fixedValue": "Light beam, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_light_ball_uses_35",
+          "text": {
+            "fixedValue": "Light ball, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_blinding_flash_uses_75",
+          "text": {
+            "fixedValue": "Blinding flash, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

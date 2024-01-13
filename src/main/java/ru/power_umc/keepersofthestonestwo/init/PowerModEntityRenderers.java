@@ -6,10 +6,14 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.client.renderer.WaterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.SphereNothingProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.LightballProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.LavaAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.KnifeAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.IronAttackProjectileRenderer;
@@ -36,6 +40,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 public class PowerModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
+		event.registerEntityRenderer(PowerModEntities.SHADOW.get(), ShadowRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), StoneAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), GrassBlockAttackProjectileRenderer::new);
@@ -57,5 +62,8 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), GoldAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), IronAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), KnifeAttackProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.LIGHTBALL_PROJECTILE.get(), LightballProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
 	}
 }

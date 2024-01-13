@@ -1,0 +1,23 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Power lock",
+    "icon": "power_lock.png",
+    "color": {
+      "value": -3368704,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": true,
+    "isBenefitical": false,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "PowerLockStart"
+    },
+    "onExpired": {
+      "name": "PowerLockEnd"
+    }
+  }
+}

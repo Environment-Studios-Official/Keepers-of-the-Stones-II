@@ -1,0 +1,139 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 176,
+    "height": 166,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_gui.png",
+          "use1Xscale": false,
+          "x": 126,
+          "y": 37
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "CUSTOM:EmptyBattery"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 0,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 181,
+          "y": 95
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": "TAG:forge:elemental_stones"
+          },
+          "disablePlacement": {
+            "fixedValue": false
+          },
+          "id": 1,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 229,
+          "y": 95
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "disablePickup": {
+            "fixedValue": false
+          },
+          "dropItemsWhenNotBound": false,
+          "x": 205,
+          "y": 71
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_progress_1.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryChargerProgress1"
+          },
+          "x": 163,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_progress_2.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryChargerProgress2"
+          },
+          "x": 163,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_progress_3.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryChargerProgress3"
+          },
+          "x": 163,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_progress_4.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryChargerProgress4"
+          },
+          "x": 163,
+          "y": 51
+        }
+      },
+      {
+        "type": "image",
+        "data": {
+          "image": "battery_charger_progress_5.png",
+          "use1Xscale": false,
+          "displayCondition": {
+            "name": "BatteryChargerProgress5"
+          },
+          "x": 163,
+          "y": 51
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 19,
+      "sy": 19,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

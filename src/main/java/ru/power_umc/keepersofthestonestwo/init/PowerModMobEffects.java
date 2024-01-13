@@ -6,10 +6,13 @@ package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.WaterMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.StunMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.SoundMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.RainMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.PowerLockMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.MetalMasterMobEffect;
@@ -54,4 +57,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> WHIRLWIND = REGISTRY.register("whirlwind", () -> new WhirlwindMobEffect());
 	public static final RegistryObject<MobEffect> IRON_SKIN = REGISTRY.register("iron_skin", () -> new IronSkinMobEffect());
 	public static final RegistryObject<MobEffect> LIGHT_MASTER = REGISTRY.register("light_master", () -> new LightMasterMobEffect());
+	public static final RegistryObject<MobEffect> SHADOW_MASTER = REGISTRY.register("shadow_master", () -> new ShadowMasterMobEffect());
+	public static final RegistryObject<MobEffect> VACUUM_MASTER = REGISTRY.register("vacuum_master", () -> new VacuumMasterMobEffect());
+	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
 }

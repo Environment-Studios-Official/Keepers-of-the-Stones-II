@@ -34,6 +34,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.PLANTS_STONE.get());
 				tabData.accept(PowerModItems.ANIMALS_STONE.get());
 				tabData.accept(PowerModItems.METAL_STONE.get());
+				tabData.accept(PowerModItems.LIGHT_STONE.get());
+				tabData.accept(PowerModItems.SHADOW_STONE.get());
 			})
 
 					.build());
@@ -42,6 +44,23 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_100.get());
 				tabData.accept(PowerModItems.STAR_POTION_200.get());
 				tabData.accept(PowerModItems.STAR_POTION_500.get());
+				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
+				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
+				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
+				tabData.accept(PowerModBlocks.BATTERY_CHARGER.get().asItem());
+				tabData.accept(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get());
+				tabData.accept(PowerModItems.ENERGIUM_PICKAXE.get());
+				tabData.accept(PowerModItems.ENERGIUM_AXE.get());
+				tabData.accept(PowerModItems.ENERGIUM_SWORD.get());
+				tabData.accept(PowerModItems.ENERGIUM_SHOVEL.get());
+				tabData.accept(PowerModItems.ENERGIUM_HOE.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_HELMET.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
+				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
@@ -59,6 +78,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.PLANTS_BATTERY.get());
 				tabData.accept(PowerModItems.ANIMALS_BATTERY.get());
 				tabData.accept(PowerModItems.METAL_BATTERY.get());
+				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
+				tabData.accept(PowerModItems.SHADOW_BATTERY.get());
 			})
 
 					.build());

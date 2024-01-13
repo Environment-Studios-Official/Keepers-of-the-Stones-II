@@ -1,0 +1,76 @@
+{
+  "_fv": 57,
+  "_type": "tag",
+  "definition": {
+    "type": "Items",
+    "items": [
+      {
+        "value": "CUSTOM:EmptyBattery"
+      },
+      {
+        "value": "CUSTOM:FireBattery"
+      },
+      {
+        "value": "CUSTOM:AirBattery"
+      },
+      {
+        "value": "CUSTOM:EarthBattery"
+      },
+      {
+        "value": "CUSTOM:WaterBattery"
+      },
+      {
+        "value": "CUSTOM:EtherBattery"
+      },
+      {
+        "value": "CUSTOM:IceBattery"
+      },
+      {
+        "value": "CUSTOM:LightningBattery"
+      },
+      {
+        "value": "CUSTOM:SoundBattery"
+      },
+      {
+        "value": "CUSTOM:CrystalBattery"
+      },
+      {
+        "value": "CUSTOM:LavaBattery"
+      },
+      {
+        "value": "CUSTOM:RainBattery"
+      },
+      {
+        "value": "CUSTOM:TornadoBattery"
+      },
+      {
+        "value": "CUSTOM:OceanBattery"
+      },
+      {
+        "value": "CUSTOM:PlantsBattery"
+      },
+      {
+        "value": "CUSTOM:AnimalsBattery"
+      },
+      {
+        "value": "CUSTOM:MetalBattery"
+      },
+      {
+        "value": "CUSTOM:LightBattery"
+      },
+      {
+        "value": "CUSTOM:ShadowBattery"
+      },
+      {
+        "value": "CUSTOM:VacuumBattery"
+      }
+    ],
+    "blocks": [],
+    "functions": [],
+    "entities": [],
+    "biomes": [],
+    "damageTypes": [],
+    "name": "elemental_batteries",
+    "namespace": "forge"
+  }
+}

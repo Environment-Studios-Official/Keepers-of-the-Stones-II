@@ -37,6 +37,8 @@ import java.util.function.Supplier;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
+	public static double dev_channel = 0.0;
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		PowerMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);

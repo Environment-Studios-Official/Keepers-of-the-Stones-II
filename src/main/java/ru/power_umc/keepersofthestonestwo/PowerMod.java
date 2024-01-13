@@ -20,6 +20,9 @@ import ru.power_umc.keepersofthestonestwo.init.PowerModMobEffects;
 import ru.power_umc.keepersofthestonestwo.init.PowerModMenus;
 import ru.power_umc.keepersofthestonestwo.init.PowerModItems;
 import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
+import ru.power_umc.keepersofthestonestwo.init.PowerModEnchantments;
+import ru.power_umc.keepersofthestonestwo.init.PowerModBlocks;
+import ru.power_umc.keepersofthestonestwo.init.PowerModBlockEntities;
 
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
@@ -55,10 +58,11 @@ public class PowerMod {
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PowerModSounds.REGISTRY.register(bus);
-
+		PowerModBlocks.REGISTRY.register(bus);
+		PowerModBlockEntities.REGISTRY.register(bus);
 		PowerModItems.REGISTRY.register(bus);
 		PowerModEntities.REGISTRY.register(bus);
-
+		PowerModEnchantments.REGISTRY.register(bus);
 		PowerModTabs.REGISTRY.register(bus);
 
 		PowerModMobEffects.REGISTRY.register(bus);

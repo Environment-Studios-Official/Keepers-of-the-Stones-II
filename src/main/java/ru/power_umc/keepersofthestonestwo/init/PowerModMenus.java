@@ -5,8 +5,10 @@
 package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
@@ -21,6 +23,7 @@ import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMen
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
 import net.minecraftforge.registries.RegistryObject;
@@ -49,4 +52,7 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesAnimalsMenu>> WHEEL_ABILITIES_ANIMALS = REGISTRY.register("wheel_abilities_animals", () -> IForgeMenuType.create(WheelAbilitiesAnimalsMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesMetalMenu>> WHEEL_ABILITIES_METAL = REGISTRY.register("wheel_abilities_metal", () -> IForgeMenuType.create(WheelAbilitiesMetalMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesLightMenu>> WHEEL_ABILITIES_LIGHT = REGISTRY.register("wheel_abilities_light", () -> IForgeMenuType.create(WheelAbilitiesLightMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesShadowMenu>> WHEEL_ABILITIES_SHADOW = REGISTRY.register("wheel_abilities_shadow", () -> IForgeMenuType.create(WheelAbilitiesShadowMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesVacuumMenu>> WHEEL_ABILITIES_VACUUM = REGISTRY.register("wheel_abilities_vacuum", () -> IForgeMenuType.create(WheelAbilitiesVacuumMenu::new));
+	public static final RegistryObject<MenuType<BatteryChargerGUIMenu>> BATTERY_CHARGER_GUI = REGISTRY.register("battery_charger_gui", () -> IForgeMenuType.create(BatteryChargerGUIMenu::new));
 }
