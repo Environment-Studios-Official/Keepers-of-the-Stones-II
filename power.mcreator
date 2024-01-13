@@ -11876,9 +11876,6 @@
       "locked_code": false,
       "registry_name": "mod_version_checker",
       "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ModVersionCheckerProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
