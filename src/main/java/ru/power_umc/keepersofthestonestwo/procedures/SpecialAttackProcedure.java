@@ -3021,8 +3021,6 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN.get(), 300, 0, false, false));
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_RESISTANCE, 300, 3, false, false));
-							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2, false, false));
 							{
 								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
@@ -3035,7 +3033,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt732 && _livEnt732.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt731 && _livEnt731.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 65) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index26 = 0; index26 < 15; index26++) {
@@ -3167,7 +3165,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt768 && _livEnt768.hasEffect(PowerModMobEffects.SHADOW_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt767 && _livEnt767.hasEffect(PowerModMobEffects.SHADOW_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 69) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
 						for (int index29 = 0; index29 < 15; index29++) {
@@ -3287,7 +3285,7 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt792 && _livEnt792.hasEffect(PowerModMobEffects.VACUUM_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt791 && _livEnt791.hasEffect(PowerModMobEffects.VACUUM_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 73) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
 						{

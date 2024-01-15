@@ -1,7 +1,9 @@
 What's new in Keepers of the Stones version II 1.0.0.8?<br />
 **#WARNING! Some features may not be displayed correctly on clients due to poor synchronization.**
+<br />- Added new elements (Vacuum)
 <br />- Star potion now has a glow
 <br />- Improved generation of energium ore
+<br />- The third ability of the element of metal has been redesigned
 <br />- [Bugfix] Fixed particles when using the third ability of the element of light
 <br />- [Bugfix] Fixed damage to the elements of metal and earth
 <br />- [Bugfix] Fixed a bug that made shadows practically invulnerable

@@ -12198,6 +12198,46 @@
         ]
       },
       "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "IronSkinEffectStart",
+      "type": "procedure",
+      "sortid": 575,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_skin_effect_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IronSkinEffectStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
+    },
+    {
+      "name": "IronSkinEffectEnd",
+      "type": "procedure",
+      "sortid": 576,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "iron_skin_effect_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IronSkinEffectEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Metal"
     }
   ],
   "variable_elements": [
