@@ -3133,9 +3133,10 @@ public class SpecialAttackProcedure {
 						particleRadius = 3;
 						for (int index27 = 0; index27 < 60; index27++) {
 							for (int index28 = 0; index28 < (int) particleAmount; index28++) {
-								world.addParticle((SimpleParticleType) (PowerModParticleTypes.LIGHT_SPARKLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.LIGHT_SPARKLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
