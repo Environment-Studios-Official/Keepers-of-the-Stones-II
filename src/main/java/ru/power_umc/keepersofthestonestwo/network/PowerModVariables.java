@@ -94,6 +94,7 @@ public class PowerModVariables {
 				clone.armor_leggings = original.armor_leggings;
 				clone.armor_boots = original.armor_boots;
 				clone.ability_block = original.ability_block;
+				clone.animation = original.animation;
 			}
 		}
 
@@ -203,7 +204,6 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
-		public String animation = "none";
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -260,7 +260,6 @@ public class PowerModVariables {
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 			darkness_stone = nbt.getBoolean("darkness_stone");
-			animation = nbt.getString("animation");
 		}
 
 		@Override
@@ -313,7 +312,6 @@ public class PowerModVariables {
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			nbt.putBoolean("darkness_stone", darkness_stone);
-			nbt.putString("animation", animation);
 			return nbt;
 		}
 
@@ -424,6 +422,7 @@ public class PowerModVariables {
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
+		public String animation = "none";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -450,6 +449,7 @@ public class PowerModVariables {
 			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
+			nbt.putString("animation", animation);
 			return nbt;
 		}
 
@@ -473,6 +473,7 @@ public class PowerModVariables {
 			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
+			animation = nbt.getString("animation");
 		}
 	}
 
@@ -515,6 +516,7 @@ public class PowerModVariables {
 					variables.armor_leggings = message.data.armor_leggings;
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
+					variables.animation = message.data.animation;
 				}
 			});
 			context.setPacketHandled(true);

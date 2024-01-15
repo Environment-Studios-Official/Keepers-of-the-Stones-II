@@ -12198,38 +12198,6 @@
         ]
       },
       "path": "~/Elements/Vacuum"
-    },
-    {
-      "name": "AnimationTick",
-      "type": "procedure",
-      "sortid": 575,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "animation_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/AnimationTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -12634,12 +12602,6 @@
       "type": "number",
       "scope": "global",
       "value": "0.0"
-    },
-    {
-      "name": "animation",
-      "type": "string",
-      "scope": "map",
-      "value": "none"
     }
   ],
   "sound_elements": [
