@@ -13,8 +13,6 @@ import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtByTargetGoal;
@@ -32,7 +30,6 @@ import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
@@ -109,10 +106,6 @@ public class ShadowEntity extends TamableAnimal {
 	public boolean hurt(DamageSource damagesource, float amount) {
 		if (damagesource.is(DamageTypes.IN_FIRE))
 			return false;
-		if (damagesource.getDirectEntity() instanceof AbstractArrow)
-			return false;
-		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
-			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
 		if (damagesource.is(DamageTypes.CACTUS))
@@ -120,8 +113,6 @@ public class ShadowEntity extends TamableAnimal {
 		if (damagesource.is(DamageTypes.DROWN))
 			return false;
 		if (damagesource.is(DamageTypes.LIGHTNING_BOLT))
-			return false;
-		if (damagesource.is(DamageTypes.TRIDENT))
 			return false;
 		if (damagesource.is(DamageTypes.FALLING_ANVIL))
 			return false;

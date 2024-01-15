@@ -4,6 +4,9 @@ package ru.power_umc.keepersofthestonestwo.item;
 import ru.power_umc.keepersofthestonestwo.procedures.StarPotion100PriShchielchkiePKMProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.StarPotion100DopolnitielnaiaInformatsiiaProcedure;
 
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
+
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.UseAnim;
@@ -33,6 +36,12 @@ public class StarPotion100Item extends Item {
 	@Override
 	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
 		return 0f;
+	}
+
+	@Override
+	@OnlyIn(Dist.CLIENT)
+	public boolean isFoil(ItemStack itemstack) {
+		return true;
 	}
 
 	@Override
