@@ -40,7 +40,7 @@ jobs:
 
       - name: Publish mod to CurseForge and Modrinth
         id: publish
-        uses: Kir-Antipov/mc-publish@v3.2
+        uses: Kir-Antipov/mc-publish@v3.3
         with:
           curseforge-id: 906406
           curseforge-token: ${{ secrets.CURSEFORGE_TOKEN }}
