@@ -3,3 +3,4 @@ What's new in Keepers of the Stones version II 1.0.0.8?<br />
 <br />- Star potion now has a glow
 <br />- Improved generation of energium ore
 <br />- [Bugfix] Fixed a bug with mixed textures of energium armor
+<br />- [Bugfix] Fixed a bug where the source of damage from elemental abilities was not determined
