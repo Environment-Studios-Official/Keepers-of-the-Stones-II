@@ -12238,6 +12238,26 @@
         ]
       },
       "path": "~/Elements/Metal"
+    },
+    {
+      "name": "CancelUseMilkInActiveStone",
+      "type": "procedure",
+      "sortid": 577,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_use_milk_in_active_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CancelUseMilkInActiveStoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
