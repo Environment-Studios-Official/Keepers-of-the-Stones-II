@@ -12328,24 +12328,6 @@
       "value": "0.0"
     },
     {
-      "name": "wheel_one",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "wheel_two",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
-      "name": "wheel_three",
-      "type": "number",
-      "scope": "player_lifetime",
-      "value": "0.0"
-    },
-    {
       "name": "element_id_fist",
       "type": "number",
       "scope": "player_persistent",

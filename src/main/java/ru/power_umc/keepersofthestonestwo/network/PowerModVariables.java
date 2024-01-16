@@ -86,9 +86,6 @@ public class PowerModVariables {
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
-				clone.wheel_one = original.wheel_one;
-				clone.wheel_two = original.wheel_two;
-				clone.wheel_three = original.wheel_three;
 				clone.armor_helmet = original.armor_helmet;
 				clone.armor_chestplate = original.armor_chestplate;
 				clone.armor_leggings = original.armor_leggings;
@@ -409,9 +406,6 @@ public class PowerModVariables {
 		public double powerTimer = 0.0;
 		public double attack = 1.0;
 		public double mergers = 0.0;
-		public double wheel_one = 0.0;
-		public double wheel_two = 0.0;
-		public double wheel_three = 0.0;
 		public double element_id_fist = 0;
 		public double element_id_second = 0;
 		public double element_id_third = 0;
@@ -435,9 +429,6 @@ public class PowerModVariables {
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("attack", attack);
 			nbt.putDouble("mergers", mergers);
-			nbt.putDouble("wheel_one", wheel_one);
-			nbt.putDouble("wheel_two", wheel_two);
-			nbt.putDouble("wheel_three", wheel_three);
 			nbt.putDouble("element_id_fist", element_id_fist);
 			nbt.putDouble("element_id_second", element_id_second);
 			nbt.putDouble("element_id_third", element_id_third);
@@ -458,9 +449,6 @@ public class PowerModVariables {
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getDouble("attack");
 			mergers = nbt.getDouble("mergers");
-			wheel_one = nbt.getDouble("wheel_one");
-			wheel_two = nbt.getDouble("wheel_two");
-			wheel_three = nbt.getDouble("wheel_three");
 			element_id_fist = nbt.getDouble("element_id_fist");
 			element_id_second = nbt.getDouble("element_id_second");
 			element_id_third = nbt.getDouble("element_id_third");
@@ -500,9 +488,6 @@ public class PowerModVariables {
 					variables.powerTimer = message.data.powerTimer;
 					variables.attack = message.data.attack;
 					variables.mergers = message.data.mergers;
-					variables.wheel_one = message.data.wheel_one;
-					variables.wheel_two = message.data.wheel_two;
-					variables.wheel_three = message.data.wheel_three;
 					variables.element_id_fist = message.data.element_id_fist;
 					variables.element_id_second = message.data.element_id_second;
 					variables.element_id_third = message.data.element_id_third;
