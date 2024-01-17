@@ -11890,7 +11890,7 @@
           }
         ]
       },
-      "path": "~/Modules/FilesModule"
+      "path": "~/Modules/BasicModule"
     },
     {
       "name": "EnergiumPickaxe",
@@ -13630,10 +13630,6 @@
           },
           {
             "name": "Gamerules",
-            "children": []
-          },
-          {
-            "name": "FilesModule",
             "children": []
           }
         ]
