@@ -192,7 +192,7 @@ public class ModVersionCheckerProcedure {
 					e.printStackTrace();
 				}
 			}
-		} else if (PowerModVariables.dev_channel == 2) {
+		} else if (PowerModVariables.dev_channel >= 2) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.unofficial_version").getString())), false);
 		}
