@@ -93,6 +93,8 @@ import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergyBatteryItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergyArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumSwordItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumShovelItem;
@@ -324,6 +326,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
 	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
 	public static final RegistryObject<Item> VACUUM_DAGGER = REGISTRY.register("vacuum_dagger", () -> new VacuumDaggerItem());
+	public static final RegistryObject<Item> ENERGY_ARMOR_HELMET = REGISTRY.register("energy_armor_helmet", () -> new EnergyArmorItem.Helmet());
+	public static final RegistryObject<Item> ENERGY_ARMOR_CHESTPLATE = REGISTRY.register("energy_armor_chestplate", () -> new EnergyArmorItem.Chestplate());
+	public static final RegistryObject<Item> ENERGY_ARMOR_LEGGINGS = REGISTRY.register("energy_armor_leggings", () -> new EnergyArmorItem.Leggings());
+	public static final RegistryObject<Item> ENERGY_ARMOR_BOOTS = REGISTRY.register("energy_armor_boots", () -> new EnergyArmorItem.Boots());
+	public static final RegistryObject<Item> ENERGY_BATTERY = REGISTRY.register("energy_battery", () -> new EnergyBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

@@ -12258,6 +12258,397 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "WheelAbilitiesEnergy",
+      "type": "gui",
+      "sortid": 578,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_energy",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesEnergyButtonMessage.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesEnergyMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesEnergyScreen.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Energy"
+    },
+    {
+      "name": "Attack77",
+      "type": "procedure",
+      "sortid": 579,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_77",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack77Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Energy"
+    },
+    {
+      "name": "Attack78",
+      "type": "procedure",
+      "sortid": 580,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_78",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack78Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Energy"
+    },
+    {
+      "name": "Attack79",
+      "type": "procedure",
+      "sortid": 581,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_79",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack79Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Energy"
+    },
+    {
+      "name": "Attack80",
+      "type": "procedure",
+      "sortid": 582,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_80",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack80Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Energy"
+    },
+    {
+      "name": "EnergyMaster",
+      "type": "potioneffect",
+      "sortid": 583,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/EnergyMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyStoneUse",
+      "type": "procedure",
+      "sortid": 584,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyMasterStart",
+      "type": "procedure",
+      "sortid": 585,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyArmor",
+      "type": "armor",
+      "sortid": 586,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/energy_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/energy_armor_boots.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/EnergyArmorItem.java",
+          "src/main/resources/assets/power/models/item/energy_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/energy_armor_helmet.json"
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 587,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 588,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 589,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 590,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyMasterEnd",
+      "type": "procedure",
+      "sortid": 591,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyBattery",
+      "type": "item",
+      "sortid": 592,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/energy_battery.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/EnergyBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/EnergyBattery"
+    },
+    {
+      "name": "EnergyBatteryUse",
+      "type": "procedure",
+      "sortid": 593,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/EnergyBattery"
+    },
+    {
+      "name": "EnergyVacuumDesc",
+      "type": "procedure",
+      "sortid": 594,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_vacuum_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyVacuumDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/EnergyBattery"
     }
   ],
   "variable_elements": [
@@ -12742,6 +13133,8 @@
       "battery.desc.vacuum": "Пустота",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
+      "gui.power.wheel_abilities_energy.button_2": "2",
+      "gui.power.wheel_abilities_energy.button_3": "3",
       "battery.desc.plants": "Зелень",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
       "gui.power.wheel_abilities_metal.button_3": "3",
@@ -12749,8 +13142,10 @@
       "gui.power.wheel_abilities_metal.button_2": "2",
       "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
+      "gui.power.wheel_abilities_energy.button_1": "1",
       "effect.power.shadow_master": "Мастер тени",
       "item.power.vacuum_battery": "Батарея",
+      "item.power.energy_battery": "Батарея",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
@@ -12818,6 +13213,7 @@
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
+      "battery.desc.energy": "Энергия",
       "item.power.ocean_battery": "Батарея",
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
@@ -12825,6 +13221,7 @@
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
+      "effect.power.energy_master": "Мастер энергии",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
       "item.power.shadow_stone": "Камень тени",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
@@ -12850,6 +13247,7 @@
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.mushrooms_stone": "Камень грибов",
       "item.power.shadow_scythe": "Теневая коса",
+      "item.power.energy_armor_leggings": "Поножи мастера энергии",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
       "item.power.energy_stone": "Камень энергии",
@@ -12948,6 +13346,7 @@
       "item.power.ice_stone": "Камень льда",
       "battery.desc.ocean": "Океан",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
+      "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "item.power.mind_stone": "Камень разума",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
@@ -12956,6 +13355,7 @@
       "item.power.light_armor_helmet": "Шлем мастера света",
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
+      "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "item.power.star_potion_500": "Звёздное зелье",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "item.power.light_stone": "Камень света",
@@ -12976,6 +13376,7 @@
       "item.power.light_armor_boots": "Ботинки мастера света",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "battery.desc.light": "Свет",
+      "item.power.energy_armor_boots": "Ботинки мастера энергии",
       "effect.power.light_master": "Мастер света",
       "effect.power.metal_master": "Мастер металла",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
@@ -13063,6 +13464,8 @@
       "battery.desc.vacuum": "Vacuum",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
+      "gui.power.wheel_abilities_energy.button_2": "2",
+      "gui.power.wheel_abilities_energy.button_3": "3",
       "battery.desc.plants": "Plants",
       "gui.power.wheel_abilities_metal.button_3": "3",
       "item.power.ocean_armor_boots": "Ocean Boots",
@@ -13070,8 +13473,10 @@
       "gui.power.wheel_abilities_metal.button_2": "2",
       "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
+      "gui.power.wheel_abilities_energy.button_1": "1",
       "effect.power.shadow_master": "Master of Shadow",
       "item.power.vacuum_battery": "Battery",
+      "item.power.energy_battery": "Battery",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
@@ -13139,6 +13544,7 @@
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
+      "battery.desc.energy": "Energy",
       "item.power.ocean_battery": "Battery",
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
@@ -13146,6 +13552,7 @@
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
       "item.power.fire_armor_leggings": "Fire Leggings",
+      "effect.power.energy_master": "Master of Energy",
       "item.power.earth_armor_boots": "Earth Boots",
       "item.power.shadow_stone": "Shadow Stone",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
@@ -13171,6 +13578,7 @@
       "item.power.air_rapier": "Air Rapier",
       "item.power.mushrooms_stone": "Mushrooms Stone",
       "item.power.shadow_scythe": "Shadow Scythe",
+      "item.power.energy_armor_leggings": "Energy Leggings",
       "item.power.air_armor_leggings": "Air Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Streamlining, uses 5",
       "item.power.energy_stone": "Energy Stone",
@@ -13269,6 +13677,7 @@
       "item.power.ice_stone": "Ice Stone",
       "battery.desc.ocean": "Ocean",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
+      "item.power.energy_armor_chestplate": "Energy Chestplate",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
       "item.power.mind_stone": "Mind Stone",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
@@ -13277,6 +13686,7 @@
       "item.power.light_armor_helmet": "Light Helmet",
       "item.power.vacuum_dagger": "Vacuum Dagger",
       "item.power.air_battery": "Battery",
+      "item.power.energy_armor_helmet": "Energy Helmet",
       "item.power.star_potion_500": "Star Potion",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
       "item.power.light_stone": "Light Stone",
@@ -13297,6 +13707,7 @@
       "item.power.light_armor_boots": "Light Boots",
       "item.power.sound_armor_helmet": "Sound Helmet",
       "battery.desc.light": "Light",
+      "item.power.energy_armor_boots": "Energy Boots",
       "effect.power.light_master": "Master of Light",
       "effect.power.metal_master": "Master of the Metal",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
@@ -13621,6 +14032,10 @@
               {
                 "name": "Vacuum",
                 "children": []
+              },
+              {
+                "name": "Energy",
+                "children": []
               }
             ]
           },
@@ -13726,6 +14141,10 @@
               },
               {
                 "name": "VacuumBattery",
+                "children": []
+              },
+              {
+                "name": "EnergyBattery",
                 "children": []
               }
             ]
