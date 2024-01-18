@@ -14083,10 +14083,6 @@
         "name": "Items",
         "children": [
           {
-            "name": "Amplifiers",
-            "children": []
-          },
-          {
             "name": "Energium",
             "children": []
           },
