@@ -81,6 +81,7 @@ public class PowerModVariables {
 			clone.element_id_second = original.element_id_second;
 			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
+			clone.zeroing = original.zeroing;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -415,6 +416,7 @@ public class PowerModVariables {
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
+		public boolean zeroing = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -438,6 +440,7 @@ public class PowerModVariables {
 			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
+			nbt.putBoolean("zeroing", zeroing);
 			return nbt;
 		}
 
@@ -458,6 +461,7 @@ public class PowerModVariables {
 			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
+			zeroing = nbt.getBoolean("zeroing");
 		}
 	}
 
@@ -497,6 +501,7 @@ public class PowerModVariables {
 					variables.armor_leggings = message.data.armor_leggings;
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
+					variables.zeroing = message.data.zeroing;
 				}
 			});
 			context.setPacketHandled(true);

@@ -12649,6 +12649,30 @@
         "dependencies": []
       },
       "path": "~/Items/Batteries/EnergyBattery"
+    },
+    {
+      "name": "ZeroingUsing",
+      "type": "procedure",
+      "sortid": 595,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "zeroing_using",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/ZeroingUsingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Vacuum"
     }
   ],
   "variable_elements": [
@@ -13035,6 +13059,12 @@
       "type": "number",
       "scope": "global",
       "value": "0.0"
+    },
+    {
+      "name": "zeroing",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
