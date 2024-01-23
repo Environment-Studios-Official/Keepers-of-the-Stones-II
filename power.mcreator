@@ -12658,6 +12658,21 @@
         ]
       },
       "path": "~/Elements/Vacuum"
+    },
+    {
+      "name": "EnergySpark",
+      "type": "particle",
+      "sortid": 596,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_spark",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/energy_spark.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/particle/EnergySparkParticle.java"
+        ]
+      },
+      "path": "~/Elements/Energy"
     }
   ],
   "variable_elements": [
