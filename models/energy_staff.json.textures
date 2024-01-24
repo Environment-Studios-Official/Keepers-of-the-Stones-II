@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "energy_staff"
+      },
+      "name": "default"
+    }
+  }
+}

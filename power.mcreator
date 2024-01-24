@@ -12688,6 +12688,41 @@
         ]
       },
       "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergyStaff",
+      "type": "tool",
+      "sortid": 597,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_staff",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/energy_staff.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/EnergyStaffItem.java"
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyStaffKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 598,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_staff_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyStaffKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
     }
   ],
   "variable_elements": [
@@ -13129,9 +13164,9 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
@@ -13146,9 +13181,9 @@
       "item_group.power.items": "KotS: Предметы",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
-      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
-      "item.power.animals_armor_boots": "Ботинки мастера животных",
       "battery.desc.ice": "Лёд",
+      "item.power.animals_armor_boots": "Ботинки мастера животных",
+      "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "effect.power.rain_master": "Мастер дождя",
       "item.power.lava_hammer": "Лавовый молот",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
@@ -13225,6 +13260,7 @@
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
+      "item.power.energy_staff": "Посох Энергии",
       "gui.power.wheel_abilities_animals.button_3": "3",
       "battery.desc.tornado": "Торнадо",
       "item.power.animals_battery": "Батарея",
@@ -13366,7 +13402,7 @@
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
       "battery.desc.lava": "Лава",
       "key.power.detransformation_key": "Клавиша детрансформации",
-      "item.power.energium_core": "Energium Core",
+      "item.power.energium_core": "Энерджиумное ядро",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
@@ -13461,9 +13497,9 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
-      "effect.power.ocean_master": "Master of the Ocean",
       "item.power.lightning_battery": "Battery",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
@@ -13557,6 +13593,7 @@
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
+      "item.power.energy_staff": "Energy Staff",
       "gui.power.wheel_abilities_animals.button_3": "3",
       "battery.desc.tornado": "Tornado",
       "item.power.animals_battery": "Battery",
@@ -13865,6 +13902,10 @@
             "children": []
           },
           {
+            "name": "Energy",
+            "children": []
+          },
+          {
             "name": "Sun",
             "children": []
           },
@@ -13970,10 +14011,6 @@
           },
           {
             "name": "Darkness",
-            "children": []
-          },
-          {
-            "name": "Energy",
             "children": []
           },
           {
