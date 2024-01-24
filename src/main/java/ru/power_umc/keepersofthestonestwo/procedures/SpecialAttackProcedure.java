@@ -3420,7 +3420,7 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 7);
-										if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 60, 0));
 									}
 								}
