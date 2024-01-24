@@ -101,6 +101,7 @@ import ru.power_umc.keepersofthestonestwo.item.EnergiumShovelItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumIngotItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumHoeItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumCoreItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumAxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
@@ -159,6 +160,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_STONE = REGISTRY.register("light_stone", () -> new LightStoneItem());
 	public static final RegistryObject<Item> SHADOW_STONE = REGISTRY.register("shadow_stone", () -> new ShadowStoneItem());
 	public static final RegistryObject<Item> VACUUM_STONE = REGISTRY.register("vacuum_stone", () -> new VacuumStoneItem());
+	public static final RegistryObject<Item> ENERGY_STONE = REGISTRY.register("energy_stone", () -> new EnergyStoneItem());
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
@@ -179,6 +181,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_CHESTPLATE = REGISTRY.register("energium_armor_chestplate", () -> new EnergiumArmorItem.Chestplate());
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_LEGGINGS = REGISTRY.register("energium_armor_leggings", () -> new EnergiumArmorItem.Leggings());
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_BOOTS = REGISTRY.register("energium_armor_boots", () -> new EnergiumArmorItem.Boots());
+	public static final RegistryObject<Item> ENERGIUM_CORE = REGISTRY.register("energium_core", () -> new EnergiumCoreItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -199,6 +202,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_BATTERY = REGISTRY.register("light_battery", () -> new LightBatteryItem());
 	public static final RegistryObject<Item> SHADOW_BATTERY = REGISTRY.register("shadow_battery", () -> new ShadowBatteryItem());
 	public static final RegistryObject<Item> VACUUM_BATTERY = REGISTRY.register("vacuum_battery", () -> new VacuumBatteryItem());
+	public static final RegistryObject<Item> ENERGY_BATTERY = REGISTRY.register("energy_battery", () -> new EnergyBatteryItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
 	public static final RegistryObject<Item> FIRE_ARMOR_LEGGINGS = REGISTRY.register("fire_armor_leggings", () -> new FireArmorItem.Leggings());
@@ -273,7 +277,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIND_STONE = REGISTRY.register("mind_stone", () -> new MindStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> DARKNESS_STONE = REGISTRY.register("darkness_stone", () -> new DarknessStoneItem());
-	public static final RegistryObject<Item> ENERGY_STONE = REGISTRY.register("energy_stone", () -> new EnergyStoneItem());
 	public static final RegistryObject<Item> SPIRIT_STONE = REGISTRY.register("spirit_stone", () -> new SpiritStoneItem());
 	public static final RegistryObject<Item> ICE_SPEAR = REGISTRY.register("ice_spear", () -> new IceSpearItem());
 	public static final RegistryObject<Item> RAIN_ARMOR_HELMET = REGISTRY.register("rain_armor_helmet", () -> new RainArmorItem.Helmet());
@@ -330,7 +333,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGY_ARMOR_CHESTPLATE = REGISTRY.register("energy_armor_chestplate", () -> new EnergyArmorItem.Chestplate());
 	public static final RegistryObject<Item> ENERGY_ARMOR_LEGGINGS = REGISTRY.register("energy_armor_leggings", () -> new EnergyArmorItem.Leggings());
 	public static final RegistryObject<Item> ENERGY_ARMOR_BOOTS = REGISTRY.register("energy_armor_boots", () -> new EnergyArmorItem.Boots());
-	public static final RegistryObject<Item> ENERGY_BATTERY = REGISTRY.register("energy_battery", () -> new EnergyBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
