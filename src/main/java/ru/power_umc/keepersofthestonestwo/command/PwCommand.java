@@ -24,7 +24,7 @@ public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
+				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
