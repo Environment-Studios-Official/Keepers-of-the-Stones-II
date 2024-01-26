@@ -1082,9 +1082,10 @@ public class SpecialAttackProcedure {
 						particleRadius = 2;
 						for (int index6 = 0; index6 < 60; index6++) {
 							for (int index7 = 0; index7 < (int) particleAmount; index7++) {
-								world.addParticle(ParticleTypes.ENCHANTED_HIT, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.ENCHANTED_HIT, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
@@ -2625,9 +2626,10 @@ public class SpecialAttackProcedure {
 						particleRadius = 2;
 						for (int index22 = 0; index22 < 60; index22++) {
 							for (int index23 = 0; index23 < (int) particleAmount; index23++) {
-								world.addParticle(ParticleTypes.SPORE_BLOSSOM_AIR, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.SPORE_BLOSSOM_AIR, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
