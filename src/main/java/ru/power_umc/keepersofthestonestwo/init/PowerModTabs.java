@@ -46,6 +46,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_100.get());
 				tabData.accept(PowerModItems.STAR_POTION_200.get());
 				tabData.accept(PowerModItems.STAR_POTION_500.get());
+				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());

@@ -165,6 +165,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
+	public static final RegistryObject<Item> KEEPERS_BOX = block(PowerModBlocks.KEEPERS_BOX);
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEPLETED_ENERGIUM_ORE);
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK);
 	public static final RegistryObject<Item> ENERGIUM_BLOCK = block(PowerModBlocks.ENERGIUM_BLOCK);
