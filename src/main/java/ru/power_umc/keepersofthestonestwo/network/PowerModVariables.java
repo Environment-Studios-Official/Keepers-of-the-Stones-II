@@ -92,6 +92,9 @@ public class PowerModVariables {
 				clone.armor_leggings = original.armor_leggings;
 				clone.armor_boots = original.armor_boots;
 				clone.ability_block = original.ability_block;
+				clone.stone_id_first = original.stone_id_first;
+				clone.stone_id_second = original.stone_id_second;
+				clone.stone_id_third = original.stone_id_third;
 			}
 		}
 
@@ -417,6 +420,9 @@ public class PowerModVariables {
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
 		public boolean zeroing = false;
+		public ItemStack stone_id_first = ItemStack.EMPTY;
+		public ItemStack stone_id_second = ItemStack.EMPTY;
+		public ItemStack stone_id_third = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -441,6 +447,9 @@ public class PowerModVariables {
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putBoolean("zeroing", zeroing);
+			nbt.put("stone_id_first", stone_id_first.save(new CompoundTag()));
+			nbt.put("stone_id_second", stone_id_second.save(new CompoundTag()));
+			nbt.put("stone_id_third", stone_id_third.save(new CompoundTag()));
 			return nbt;
 		}
 
@@ -462,6 +471,9 @@ public class PowerModVariables {
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
 			zeroing = nbt.getBoolean("zeroing");
+			stone_id_first = ItemStack.of(nbt.getCompound("stone_id_first"));
+			stone_id_second = ItemStack.of(nbt.getCompound("stone_id_second"));
+			stone_id_third = ItemStack.of(nbt.getCompound("stone_id_third"));
 		}
 	}
 
@@ -502,6 +514,9 @@ public class PowerModVariables {
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
 					variables.zeroing = message.data.zeroing;
+					variables.stone_id_first = message.data.stone_id_first;
+					variables.stone_id_second = message.data.stone_id_second;
+					variables.stone_id_third = message.data.stone_id_third;
 				}
 			});
 			context.setPacketHandled(true);
