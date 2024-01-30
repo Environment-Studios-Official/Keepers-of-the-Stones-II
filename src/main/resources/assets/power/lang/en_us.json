@@ -289,6 +289,7 @@
   "block.power.keepers_box": "Keeper\u0027s Box",
   "item.power.energy_armor_helmet": "Energy Helmet",
   "item.power.star_potion_500": "Star Potion",
+  "power.modinfo.recharge_stone.done": "Ready to use",
   "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
   "item.power.light_stone": "Light Stone",
   "item.power.water_armor_helmet": "Water Helmet",
