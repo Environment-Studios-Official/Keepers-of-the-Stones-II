@@ -6,7 +6,7 @@
   "overrides": [
     {
       "predicate": {
-        "cooldown": 0.01
+        "power:ice_stone_recharge": 0.01
       },
       "model": "power:item/ice_stone_0"
     }
