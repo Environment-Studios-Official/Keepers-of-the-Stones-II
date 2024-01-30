@@ -12788,6 +12788,68 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "GetRechargeInfo",
+      "type": "procedure",
+      "sortid": 602,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_recharge_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GetRechargeInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
+    },
+    {
+      "name": "StoneGetRechargeState",
+      "type": "procedure",
+      "sortid": 603,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_get_recharge_state",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StoneGetRechargeStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
+    },
+    {
+      "name": "RechargeStoneTickEvent",
+      "type": "procedure",
+      "sortid": 604,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_stone_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/RechargeStoneTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
     }
   ],
   "variable_elements": [
@@ -13254,8 +13316,9 @@
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "power.modinfo.recharge_stone.seconds": " секунд",
       "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -13383,6 +13446,7 @@
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
+      "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
@@ -13584,15 +13648,16 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
+      "power.modinfo.recharge_stone.seconds": " seconds",
       "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -13720,6 +13785,7 @@
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
+      "power.modinfo.recharge_stone": "Recharge: ",
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
       "item.power.fire_armor_leggings": "Fire Leggings",
@@ -14220,6 +14286,10 @@
           },
           {
             "name": "Gamerules",
+            "children": []
+          },
+          {
+            "name": "RechargeStoneModule",
             "children": []
           }
         ]

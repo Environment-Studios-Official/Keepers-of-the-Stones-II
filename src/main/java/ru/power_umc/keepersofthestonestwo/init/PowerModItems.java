@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestonestwo.init;
 
+import ru.power_umc.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
 import ru.power_umc.keepersofthestonestwo.item.WaterStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterBatteryItem;
@@ -135,11 +136,18 @@ import ru.power_umc.keepersofthestonestwo.PowerMod;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, PowerMod.MODID);
 	public static final RegistryObject<Item> FIRE_STONE = REGISTRY.register("fire_stone", () -> new FireStoneItem());
@@ -339,5 +347,30 @@ public class PowerModItems {
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	@SubscribeEvent
+	public static void clientLoad(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> {
+			ItemProperties.register(FIRE_STONE.get(), new ResourceLocation("power:fire_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(AIR_STONE.get(), new ResourceLocation("power:air_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(EARTH_STONE.get(), new ResourceLocation("power:earth_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(WATER_STONE.get(), new ResourceLocation("power:water_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ETHER_STONE.get(), new ResourceLocation("power:ether_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LIGHTNING_STONE.get(), new ResourceLocation("power:lightning_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(SOUND_STONE.get(), new ResourceLocation("power:sound_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(CRYSTAL_STONE.get(), new ResourceLocation("power:crystal_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LAVA_STONE.get(), new ResourceLocation("power:lava_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(RAIN_STONE.get(), new ResourceLocation("power:rain_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(TORNADO_STONE.get(), new ResourceLocation("power:tornado_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(OCEAN_STONE.get(), new ResourceLocation("power:ocean_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(PLANTS_STONE.get(), new ResourceLocation("power:plants_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ANIMALS_STONE.get(), new ResourceLocation("power:animals_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(METAL_STONE.get(), new ResourceLocation("power:metal_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LIGHT_STONE.get(), new ResourceLocation("power:light_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(SHADOW_STONE.get(), new ResourceLocation("power:shadow_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(VACUUM_STONE.get(), new ResourceLocation("power:vacuum_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ENERGY_STONE.get(), new ResourceLocation("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+		});
 	}
 }

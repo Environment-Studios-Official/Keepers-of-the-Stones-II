@@ -44,7 +44,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "GetRechargeInfo"
     },
     "glowCondition": {
       "fixedValue": false
@@ -54,6 +55,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "IceStoneUse"
+    },
+    "onItemInInventoryTick": {
+      "name": "RechargeStoneTickEvent"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -1,7 +1,6 @@
 package ru.power_umc.keepersofthestonestwo.procedures;
 
 import ru.power_umc.keepersofthestonestwo.network.PowerModVariables;
-import ru.power_umc.keepersofthestonestwo.init.PowerModItems;
 
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.items.ItemHandlerHelper;
@@ -37,7 +36,45 @@ public class TornadoMasterEndProcedure {
 			}
 		}
 		DetransformationKeyUseProcedure.execute(world, x, y, z, entity);
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 12) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 12) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).stone_id_first);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else {
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.battery = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.element_id_fist = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 12) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).stone_id_second);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else {
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.battery = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			{
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -46,37 +83,25 @@ public class TornadoMasterEndProcedure {
 				});
 			}
 		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 12) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
+				if (entity instanceof Player _player) {
+					ItemStack _setstack = ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).stone_id_third);
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+				}
+			} else {
+				{
+					boolean _setval = false;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.battery = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			{
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.element_id_third = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 12) {
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.element_id_fist = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
-			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
-				_setstack.setCount(1);
-				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-			}
-			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(PowerModItems.TORNADO_STONE.get(), 6000);
-			}
-		} else {
-			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.battery = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

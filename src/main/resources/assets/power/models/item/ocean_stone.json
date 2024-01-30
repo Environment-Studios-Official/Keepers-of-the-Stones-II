@@ -6,7 +6,7 @@
   "overrides": [
     {
       "predicate": {
-        "cooldown": 0.01
+        "power:ocean_stone_recharge": 0.01
       },
       "model": "power:item/ocean_stone_0"
     }
