@@ -12788,6 +12788,68 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "GetRechargeInfo",
+      "type": "procedure",
+      "sortid": 602,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "get_recharge_info",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/GetRechargeInfoProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
+    },
+    {
+      "name": "StoneGetRechargeState",
+      "type": "procedure",
+      "sortid": 603,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stone_get_recharge_state",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/StoneGetRechargeStateProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
+    },
+    {
+      "name": "RechargeStoneTickEvent",
+      "type": "procedure",
+      "sortid": 604,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "recharge_stone_tick_event",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/RechargeStoneTickEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/Modules/RechargeStoneModule"
     }
   ],
   "variable_elements": [
@@ -13247,15 +13309,16 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "item.power.earth_battery": "Батарея",
+      "power.modinfo.recharge_stone.seconds": " секунд",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -13383,6 +13446,7 @@
       "effect.power.lightning_master": "Мастер молнии",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
+      "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
       "item.power.fire_armor_leggings": "Поножи мастера огня",
@@ -13524,6 +13588,7 @@
       "block.power.keepers_box": "Шкатулка хранителя",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "item.power.star_potion_500": "Звёздное зелье",
+      "power.modinfo.recharge_stone.done": "Готов к использованию",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
@@ -13593,6 +13658,7 @@
       "battery.desc.fire": "Fire",
       "item.power.crystal_armor_boots": "Crystal Boots",
       "item.power.earth_battery": "Battery",
+      "power.modinfo.recharge_stone.seconds": " seconds",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -13720,6 +13786,7 @@
       "effect.power.lightning_master": "Master of Lightning",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
+      "power.modinfo.recharge_stone": "Recharge: ",
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
       "item.power.fire_armor_leggings": "Fire Leggings",
@@ -13861,6 +13928,7 @@
       "block.power.keepers_box": "Keeper\u0027s Box",
       "item.power.energy_armor_helmet": "Energy Helmet",
       "item.power.star_potion_500": "Star Potion",
+      "power.modinfo.recharge_stone.done": "Ready to use",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
@@ -14221,6 +14289,10 @@
           {
             "name": "Gamerules",
             "children": []
+          },
+          {
+            "name": "RechargeStoneModule",
+            "children": []
           }
         ]
       },
@@ -14347,7 +14419,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.9",
+    "version": "1.0.0.9.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
