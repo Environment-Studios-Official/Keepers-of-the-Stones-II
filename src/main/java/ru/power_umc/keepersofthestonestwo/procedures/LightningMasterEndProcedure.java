@@ -54,11 +54,8 @@ public class LightningMasterEndProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
 				_setstack.setCount(1);
+				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? 6000 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-			}
-			if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-				if (entity instanceof Player _player)
-					_player.getCooldowns().addCooldown(PowerModItems.LIGHTNING_STONE.get(), 6000);
 			}
 		} else {
 			{
