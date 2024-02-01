@@ -1,0 +1,323 @@
+{
+  "_fv": 57,
+  "_type": "block",
+  "definition": {
+    "texture": "basic_box",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
+    "renderType": 2,
+    "customModelName": "box:default",
+    "rotationMode": 0,
+    "enablePitch": false,
+    "emissiveRendering": false,
+    "displayFluidOverlay": false,
+    "itemTexture": "",
+    "particleTexture": "",
+    "tintType": "No tint",
+    "isItemTinted": false,
+    "hasTransparency": true,
+    "connectedSides": false,
+    "transparencyType": "SOLID",
+    "disableOffset": false,
+    "boundingBoxes": [
+      {
+        "mx": 4.0,
+        "my": 0.0,
+        "mz": 1.0,
+        "Mx": 12.0,
+        "My": 8.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 1.0,
+        "my": 0.0,
+        "mz": 4.0,
+        "Mx": 4.0,
+        "My": 8.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 12.0,
+        "my": 0.0,
+        "mz": 4.0,
+        "Mx": 15.0,
+        "My": 8.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 12.14017,
+        "my": 0.0,
+        "mz": 4.16161,
+        "Mx": 15.14017,
+        "My": 8.0,
+        "Mz": 7.16161,
+        "subtract": false
+      },
+      {
+        "mx": 10.96859,
+        "my": 0.0,
+        "mz": 3.99004,
+        "Mx": 12.96859,
+        "My": 8.0,
+        "Mz": 6.99004,
+        "subtract": false
+      },
+      {
+        "mx": 3.03141,
+        "my": 0.0,
+        "mz": 3.99004,
+        "Mx": 5.03141,
+        "My": 8.0,
+        "Mz": 6.99004,
+        "subtract": false
+      },
+      {
+        "mx": 0.85983,
+        "my": 0.0,
+        "mz": 4.16161,
+        "Mx": 3.85983,
+        "My": 8.0,
+        "Mz": 7.16161,
+        "subtract": false
+      },
+      {
+        "mx": 3.03141,
+        "my": 0.0,
+        "mz": 9.00996,
+        "Mx": 5.03141,
+        "My": 8.0,
+        "Mz": 12.00996,
+        "subtract": false
+      },
+      {
+        "mx": 0.85983,
+        "my": 0.0,
+        "mz": 8.83839,
+        "Mx": 3.85983,
+        "My": 8.0,
+        "Mz": 11.83839,
+        "subtract": false
+      },
+      {
+        "mx": 10.96859,
+        "my": 0.0,
+        "mz": 9.00996,
+        "Mx": 12.96859,
+        "My": 8.0,
+        "Mz": 12.00996,
+        "subtract": false
+      },
+      {
+        "mx": 12.14017,
+        "my": 0.0,
+        "mz": 8.83839,
+        "Mx": 15.14017,
+        "My": 8.0,
+        "Mz": 11.83839,
+        "subtract": false
+      },
+      {
+        "mx": 4.0,
+        "my": 8.0,
+        "mz": 1.0,
+        "Mx": 12.0,
+        "My": 10.0,
+        "Mz": 15.0,
+        "subtract": false
+      },
+      {
+        "mx": 1.0,
+        "my": 8.0,
+        "mz": 4.0,
+        "Mx": 4.0,
+        "My": 10.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 12.0,
+        "my": 8.0,
+        "mz": 4.0,
+        "Mx": 15.0,
+        "My": 10.0,
+        "Mz": 12.0,
+        "subtract": false
+      },
+      {
+        "mx": 12.14017,
+        "my": 8.0,
+        "mz": 4.16161,
+        "Mx": 15.14017,
+        "My": 10.0,
+        "Mz": 7.16161,
+        "subtract": false
+      },
+      {
+        "mx": 10.96859,
+        "my": 8.0,
+        "mz": 3.99004,
+        "Mx": 12.96859,
+        "My": 10.0,
+        "Mz": 6.99004,
+        "subtract": false
+      },
+      {
+        "mx": 3.03141,
+        "my": 8.0,
+        "mz": 3.99004,
+        "Mx": 5.03141,
+        "My": 10.0,
+        "Mz": 6.99004,
+        "subtract": false
+      },
+      {
+        "mx": 0.85983,
+        "my": 8.0,
+        "mz": 4.16161,
+        "Mx": 3.85983,
+        "My": 10.0,
+        "Mz": 7.16161,
+        "subtract": false
+      },
+      {
+        "mx": 3.03141,
+        "my": 8.0,
+        "mz": 9.00996,
+        "Mx": 5.03141,
+        "My": 10.0,
+        "Mz": 12.00996,
+        "subtract": false
+      },
+      {
+        "mx": 0.85983,
+        "my": 8.0,
+        "mz": 8.83839,
+        "Mx": 3.85983,
+        "My": 10.0,
+        "Mz": 11.83839,
+        "subtract": false
+      },
+      {
+        "mx": 10.96859,
+        "my": 8.0,
+        "mz": 9.00996,
+        "Mx": 12.96859,
+        "My": 10.0,
+        "Mz": 12.00996,
+        "subtract": false
+      },
+      {
+        "mx": 12.14017,
+        "my": 8.0,
+        "mz": 8.83839,
+        "Mx": 15.14017,
+        "My": 10.0,
+        "Mz": 11.83839,
+        "subtract": false
+      }
+    ],
+    "name": "Keeper's Box",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "hardness": 2.5,
+    "resistance": 5000.0,
+    "hasGravity": false,
+    "isWaterloggable": true,
+    "creativeTab": {
+      "value": "CUSTOM:Items"
+    },
+    "destroyTool": "pickaxe",
+    "customDrop": {
+      "value": ""
+    },
+    "dropAmount": 1,
+    "useLootTableForDrops": false,
+    "requiresCorrectTool": true,
+    "enchantPowerBonus": 0.0,
+    "plantsGrowOn": false,
+    "canRedstoneConnect": false,
+    "lightOpacity": 0,
+    "material": {
+      "value": "ROCK"
+    },
+    "tickRate": 0,
+    "tickRandomly": false,
+    "isReplaceable": false,
+    "canProvidePower": false,
+    "emittedRedstonePower": {
+      "fixedValue": 15.0
+    },
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "offsetType": "NONE",
+    "aiPathNodeType": "DEFAULT",
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "isLadder": false,
+    "slipperiness": 0.6,
+    "speedFactor": 1.0,
+    "jumpFactor": 1.0,
+    "reactionToPushing": "DESTROY",
+    "isNotColidable": false,
+    "isCustomSoundType": false,
+    "soundOnStep": {
+      "value": "STONE"
+    },
+    "breakSound": {
+      "value": ""
+    },
+    "fallSound": {
+      "value": ""
+    },
+    "hitSound": {
+      "value": ""
+    },
+    "placeSound": {
+      "value": ""
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "luminance": 0,
+    "unbreakable": false,
+    "breakHarvestLevel": 0,
+    "placingCondition": {
+      "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
+    },
+    "isBonemealable": false,
+    "hasInventory": true,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "inventoryDropWhenDestroyed": true,
+    "inventoryComparatorPower": true,
+    "inventoryOutSlotIDs": [],
+    "inventoryInSlotIDs": [],
+    "hasEnergyStorage": false,
+    "energyInitial": 0,
+    "energyCapacity": 400000,
+    "energyMaxReceive": 200,
+    "energyMaxExtract": 200,
+    "isFluidTank": false,
+    "fluidCapacity": 8000,
+    "fluidRestrictions": [],
+    "generateFeature": false,
+    "restrictionBiomes": [],
+    "blocksToReplace": [],
+    "generationShape": "UNIFORM",
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
+  }
+}

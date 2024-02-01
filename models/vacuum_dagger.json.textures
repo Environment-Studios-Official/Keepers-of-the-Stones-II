@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "missing": "vacuum_dagger"
+        "0": "vacuum_dagger"
       },
       "name": "default"
     }

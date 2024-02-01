@@ -23,6 +23,7 @@ import ru.power_umc.keepersofthestonestwo.potion.IronSkinMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.IceMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.FireMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.EtherMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
@@ -60,4 +61,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> SHADOW_MASTER = REGISTRY.register("shadow_master", () -> new ShadowMasterMobEffect());
 	public static final RegistryObject<MobEffect> VACUUM_MASTER = REGISTRY.register("vacuum_master", () -> new VacuumMasterMobEffect());
 	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
+	public static final RegistryObject<MobEffect> ENERGY_MASTER = REGISTRY.register("energy_master", () -> new EnergyMasterMobEffect());
 }

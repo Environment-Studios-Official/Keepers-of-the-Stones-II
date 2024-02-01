@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestonestwo.init;
 
+import ru.power_umc.keepersofthestonestwo.procedures.StoneGetRechargeStateProcedure;
 import ru.power_umc.keepersofthestonestwo.item.WaterStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterKatanaItem;
 import ru.power_umc.keepersofthestonestwo.item.WaterBatteryItem;
@@ -93,12 +94,16 @@ import ru.power_umc.keepersofthestonestwo.item.EtherGlaiveItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.EtherArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergyStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergyStaffItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergyBatteryItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergyArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumSwordItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumShovelItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumIngotItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumHoeItem;
+import ru.power_umc.keepersofthestonestwo.item.EnergiumCoreItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumAxeItem;
 import ru.power_umc.keepersofthestonestwo.item.EnergiumArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.EmptyBatteryItem;
@@ -131,11 +136,18 @@ import ru.power_umc.keepersofthestonestwo.PowerMod;
 import net.minecraftforge.registries.RegistryObject;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.renderer.item.ItemProperties;
 
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModItems {
 	public static final DeferredRegister<Item> REGISTRY = DeferredRegister.create(ForgeRegistries.ITEMS, PowerMod.MODID);
 	public static final RegistryObject<Item> FIRE_STONE = REGISTRY.register("fire_stone", () -> new FireStoneItem());
@@ -157,9 +169,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_STONE = REGISTRY.register("light_stone", () -> new LightStoneItem());
 	public static final RegistryObject<Item> SHADOW_STONE = REGISTRY.register("shadow_stone", () -> new ShadowStoneItem());
 	public static final RegistryObject<Item> VACUUM_STONE = REGISTRY.register("vacuum_stone", () -> new VacuumStoneItem());
+	public static final RegistryObject<Item> ENERGY_STONE = REGISTRY.register("energy_stone", () -> new EnergyStoneItem());
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
+	public static final RegistryObject<Item> KEEPERS_BOX = block(PowerModBlocks.KEEPERS_BOX);
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEPLETED_ENERGIUM_ORE);
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK);
 	public static final RegistryObject<Item> ENERGIUM_BLOCK = block(PowerModBlocks.ENERGIUM_BLOCK);
@@ -177,6 +191,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_CHESTPLATE = REGISTRY.register("energium_armor_chestplate", () -> new EnergiumArmorItem.Chestplate());
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_LEGGINGS = REGISTRY.register("energium_armor_leggings", () -> new EnergiumArmorItem.Leggings());
 	public static final RegistryObject<Item> ENERGIUM_ARMOR_BOOTS = REGISTRY.register("energium_armor_boots", () -> new EnergiumArmorItem.Boots());
+	public static final RegistryObject<Item> ENERGIUM_CORE = REGISTRY.register("energium_core", () -> new EnergiumCoreItem());
 	public static final RegistryObject<Item> EMPTY_BATTERY = REGISTRY.register("empty_battery", () -> new EmptyBatteryItem());
 	public static final RegistryObject<Item> FIRE_BATTERY = REGISTRY.register("fire_battery", () -> new FireBatteryItem());
 	public static final RegistryObject<Item> AIR_BATTERY = REGISTRY.register("air_battery", () -> new AirBatteryItem());
@@ -197,6 +212,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LIGHT_BATTERY = REGISTRY.register("light_battery", () -> new LightBatteryItem());
 	public static final RegistryObject<Item> SHADOW_BATTERY = REGISTRY.register("shadow_battery", () -> new ShadowBatteryItem());
 	public static final RegistryObject<Item> VACUUM_BATTERY = REGISTRY.register("vacuum_battery", () -> new VacuumBatteryItem());
+	public static final RegistryObject<Item> ENERGY_BATTERY = REGISTRY.register("energy_battery", () -> new EnergyBatteryItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
 	public static final RegistryObject<Item> FIRE_ARMOR_LEGGINGS = REGISTRY.register("fire_armor_leggings", () -> new FireArmorItem.Leggings());
@@ -271,7 +287,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIND_STONE = REGISTRY.register("mind_stone", () -> new MindStoneItem());
 	public static final RegistryObject<Item> GOLDEN_DUST_STONE = REGISTRY.register("golden_dust_stone", () -> new GoldenDustStoneItem());
 	public static final RegistryObject<Item> DARKNESS_STONE = REGISTRY.register("darkness_stone", () -> new DarknessStoneItem());
-	public static final RegistryObject<Item> ENERGY_STONE = REGISTRY.register("energy_stone", () -> new EnergyStoneItem());
 	public static final RegistryObject<Item> SPIRIT_STONE = REGISTRY.register("spirit_stone", () -> new SpiritStoneItem());
 	public static final RegistryObject<Item> ICE_SPEAR = REGISTRY.register("ice_spear", () -> new IceSpearItem());
 	public static final RegistryObject<Item> RAIN_ARMOR_HELMET = REGISTRY.register("rain_armor_helmet", () -> new RainArmorItem.Helmet());
@@ -324,8 +339,39 @@ public class PowerModItems {
 	public static final RegistryObject<Item> VACUUM_ARMOR_LEGGINGS = REGISTRY.register("vacuum_armor_leggings", () -> new VacuumArmorItem.Leggings());
 	public static final RegistryObject<Item> VACUUM_ARMOR_BOOTS = REGISTRY.register("vacuum_armor_boots", () -> new VacuumArmorItem.Boots());
 	public static final RegistryObject<Item> VACUUM_DAGGER = REGISTRY.register("vacuum_dagger", () -> new VacuumDaggerItem());
+	public static final RegistryObject<Item> ENERGY_ARMOR_HELMET = REGISTRY.register("energy_armor_helmet", () -> new EnergyArmorItem.Helmet());
+	public static final RegistryObject<Item> ENERGY_ARMOR_CHESTPLATE = REGISTRY.register("energy_armor_chestplate", () -> new EnergyArmorItem.Chestplate());
+	public static final RegistryObject<Item> ENERGY_ARMOR_LEGGINGS = REGISTRY.register("energy_armor_leggings", () -> new EnergyArmorItem.Leggings());
+	public static final RegistryObject<Item> ENERGY_ARMOR_BOOTS = REGISTRY.register("energy_armor_boots", () -> new EnergyArmorItem.Boots());
+	public static final RegistryObject<Item> ENERGY_STAFF = REGISTRY.register("energy_staff", () -> new EnergyStaffItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
+	}
+
+	@SubscribeEvent
+	public static void clientLoad(FMLClientSetupEvent event) {
+		event.enqueueWork(() -> {
+			ItemProperties.register(FIRE_STONE.get(), new ResourceLocation("power:fire_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(AIR_STONE.get(), new ResourceLocation("power:air_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(EARTH_STONE.get(), new ResourceLocation("power:earth_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(WATER_STONE.get(), new ResourceLocation("power:water_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ETHER_STONE.get(), new ResourceLocation("power:ether_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ICE_STONE.get(), new ResourceLocation("power:ice_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LIGHTNING_STONE.get(), new ResourceLocation("power:lightning_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(SOUND_STONE.get(), new ResourceLocation("power:sound_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(CRYSTAL_STONE.get(), new ResourceLocation("power:crystal_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LAVA_STONE.get(), new ResourceLocation("power:lava_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(RAIN_STONE.get(), new ResourceLocation("power:rain_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(TORNADO_STONE.get(), new ResourceLocation("power:tornado_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(OCEAN_STONE.get(), new ResourceLocation("power:ocean_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(PLANTS_STONE.get(), new ResourceLocation("power:plants_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ANIMALS_STONE.get(), new ResourceLocation("power:animals_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(METAL_STONE.get(), new ResourceLocation("power:metal_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(LIGHT_STONE.get(), new ResourceLocation("power:light_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(SHADOW_STONE.get(), new ResourceLocation("power:shadow_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(VACUUM_STONE.get(), new ResourceLocation("power:vacuum_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(ENERGY_STONE.get(), new ResourceLocation("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+		});
 	}
 }

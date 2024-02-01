@@ -2,6 +2,8 @@
 package ru.power_umc.keepersofthestonestwo.command;
 
 import ru.power_umc.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.ModVersionCheckerProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.CPAPICheckProcedure;
 
 import org.checkerframework.checker.units.qual.s;
 
@@ -23,21 +25,48 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
-		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
-					Level world = arguments.getSource().getUnsidedLevel();
-					double x = arguments.getSource().getPosition().x();
-					double y = arguments.getSource().getPosition().y();
-					double z = arguments.getSource().getPosition().z();
-					Entity entity = arguments.getSource().getEntity();
-					if (entity == null && world instanceof ServerLevel _servLevel)
-						entity = FakePlayerFactory.getMinecraft(_servLevel);
-					Direction direction = Direction.DOWN;
-					if (entity != null)
-						direction = entity.getDirection();
+		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4)).then(Commands.literal("check").then(Commands.literal("mod").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
 
-					PowerScaleSetProcedure.execute(arguments);
-					return 0;
-				}))))));
+			ModVersionCheckerProcedure.execute(entity);
+			return 0;
+		})).then(Commands.literal("cpapi").executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			CPAPICheckProcedure.execute(world, entity);
+			return 0;
+		}))).then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
+			Level world = arguments.getSource().getUnsidedLevel();
+			double x = arguments.getSource().getPosition().x();
+			double y = arguments.getSource().getPosition().y();
+			double z = arguments.getSource().getPosition().z();
+			Entity entity = arguments.getSource().getEntity();
+			if (entity == null && world instanceof ServerLevel _servLevel)
+				entity = FakePlayerFactory.getMinecraft(_servLevel);
+			Direction direction = Direction.DOWN;
+			if (entity != null)
+				direction = entity.getDirection();
+
+			PowerScaleSetProcedure.execute(arguments);
+			return 0;
+		}))))));
 	}
 }

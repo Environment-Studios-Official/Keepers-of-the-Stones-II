@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_sphere_of_nothing",
+          "image": "sphere_of_nothing.png",
+          "hoveredImage": "sphere_of_nothing_highlight.png",
           "onClick": {
             "name": "Atttack73"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_rifts",
+          "image": "rifts.png",
+          "hoveredImage": "rifts_highlight.png",
           "onClick": {
             "name": "Attack74"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_zeroing_out",
+          "image": "zeroing_out.png",
+          "hoveredImage": "zeroing_out_highlight.png",
           "onClick": {
             "name": "Attack75"
           },
-          "width": 30,
-          "height": 20,
-          "x": 196,
-          "y": 170
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sphere_of_nothing_uses_20",
+          "text": {
+            "fixedValue": "Sphere of nothing, uses 20"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rifts_uses_45",
+          "text": {
+            "fixedValue": "Rifts, uses 45"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_zeroing_out_uses_100",
+          "text": {
+            "fixedValue": "Zeroing out, uses 100"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

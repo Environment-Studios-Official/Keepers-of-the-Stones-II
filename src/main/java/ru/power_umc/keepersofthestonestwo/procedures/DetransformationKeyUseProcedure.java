@@ -78,6 +78,8 @@ public class DetransformationKeyUseProcedure {
 				_entity.removeEffect(PowerModMobEffects.SHADOW_MASTER.get());
 			if (entity instanceof LivingEntity _entity)
 				_entity.removeEffect(PowerModMobEffects.VACUUM_MASTER.get());
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.ENERGY_MASTER.get());
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -89,27 +91,6 @@ public class DetransformationKeyUseProcedure {
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.mergers = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_one = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_two = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_three = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

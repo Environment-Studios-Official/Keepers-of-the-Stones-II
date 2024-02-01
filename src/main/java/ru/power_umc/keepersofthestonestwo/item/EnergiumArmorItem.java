@@ -33,7 +33,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 			@Override
 			public int getDefenseForType(ArmorItem.Type type) {
-				return new int[]{5, 14, 11, 5}[type.getSlot().getIndex()];
+				return new int[]{4, 13, 10, 4}[type.getSlot().getIndex()];
 			}
 
 			@Override

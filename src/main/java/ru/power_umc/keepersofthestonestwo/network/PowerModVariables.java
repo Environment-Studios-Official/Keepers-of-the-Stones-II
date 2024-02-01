@@ -81,19 +81,20 @@ public class PowerModVariables {
 			clone.element_id_second = original.element_id_second;
 			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
+			clone.zeroing = original.zeroing;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
-				clone.wheel_one = original.wheel_one;
-				clone.wheel_two = original.wheel_two;
-				clone.wheel_three = original.wheel_three;
 				clone.armor_helmet = original.armor_helmet;
 				clone.armor_chestplate = original.armor_chestplate;
 				clone.armor_leggings = original.armor_leggings;
 				clone.armor_boots = original.armor_boots;
 				clone.ability_block = original.ability_block;
+				clone.stone_id_first = original.stone_id_first;
+				clone.stone_id_second = original.stone_id_second;
+				clone.stone_id_third = original.stone_id_third;
 			}
 		}
 
@@ -203,6 +204,7 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
+		public double cpapi_version = 1.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -259,6 +261,7 @@ public class PowerModVariables {
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 			darkness_stone = nbt.getBoolean("darkness_stone");
+			cpapi_version = nbt.getDouble("cpapi_version");
 		}
 
 		@Override
@@ -311,6 +314,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			nbt.putBoolean("darkness_stone", darkness_stone);
+			nbt.putDouble("cpapi_version", cpapi_version);
 			return nbt;
 		}
 
@@ -409,9 +413,6 @@ public class PowerModVariables {
 		public double powerTimer = 0.0;
 		public double attack = 1.0;
 		public double mergers = 0.0;
-		public double wheel_one = 0.0;
-		public double wheel_two = 0.0;
-		public double wheel_three = 0.0;
 		public double element_id_fist = 0;
 		public double element_id_second = 0;
 		public double element_id_third = 0;
@@ -421,6 +422,10 @@ public class PowerModVariables {
 		public ItemStack armor_leggings = ItemStack.EMPTY;
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
+		public boolean zeroing = false;
+		public ItemStack stone_id_first = ItemStack.EMPTY;
+		public ItemStack stone_id_second = ItemStack.EMPTY;
+		public ItemStack stone_id_third = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -435,9 +440,6 @@ public class PowerModVariables {
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putDouble("attack", attack);
 			nbt.putDouble("mergers", mergers);
-			nbt.putDouble("wheel_one", wheel_one);
-			nbt.putDouble("wheel_two", wheel_two);
-			nbt.putDouble("wheel_three", wheel_three);
 			nbt.putDouble("element_id_fist", element_id_fist);
 			nbt.putDouble("element_id_second", element_id_second);
 			nbt.putDouble("element_id_third", element_id_third);
@@ -447,6 +449,10 @@ public class PowerModVariables {
 			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
+			nbt.putBoolean("zeroing", zeroing);
+			nbt.put("stone_id_first", stone_id_first.save(new CompoundTag()));
+			nbt.put("stone_id_second", stone_id_second.save(new CompoundTag()));
+			nbt.put("stone_id_third", stone_id_third.save(new CompoundTag()));
 			return nbt;
 		}
 
@@ -458,9 +464,6 @@ public class PowerModVariables {
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getDouble("attack");
 			mergers = nbt.getDouble("mergers");
-			wheel_one = nbt.getDouble("wheel_one");
-			wheel_two = nbt.getDouble("wheel_two");
-			wheel_three = nbt.getDouble("wheel_three");
 			element_id_fist = nbt.getDouble("element_id_fist");
 			element_id_second = nbt.getDouble("element_id_second");
 			element_id_third = nbt.getDouble("element_id_third");
@@ -470,6 +473,10 @@ public class PowerModVariables {
 			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
+			zeroing = nbt.getBoolean("zeroing");
+			stone_id_first = ItemStack.of(nbt.getCompound("stone_id_first"));
+			stone_id_second = ItemStack.of(nbt.getCompound("stone_id_second"));
+			stone_id_third = ItemStack.of(nbt.getCompound("stone_id_third"));
 		}
 	}
 
@@ -500,9 +507,6 @@ public class PowerModVariables {
 					variables.powerTimer = message.data.powerTimer;
 					variables.attack = message.data.attack;
 					variables.mergers = message.data.mergers;
-					variables.wheel_one = message.data.wheel_one;
-					variables.wheel_two = message.data.wheel_two;
-					variables.wheel_three = message.data.wheel_three;
 					variables.element_id_fist = message.data.element_id_fist;
 					variables.element_id_second = message.data.element_id_second;
 					variables.element_id_third = message.data.element_id_third;
@@ -512,6 +516,10 @@ public class PowerModVariables {
 					variables.armor_leggings = message.data.armor_leggings;
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
+					variables.zeroing = message.data.zeroing;
+					variables.stone_id_first = message.data.stone_id_first;
+					variables.stone_id_second = message.data.stone_id_second;
+					variables.stone_id_third = message.data.stone_id_third;
 				}
 			});
 			context.setPacketHandled(true);

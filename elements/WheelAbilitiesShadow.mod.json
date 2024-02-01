@@ -85,7 +85,7 @@
         "data": {
           "name": "imagebutton_shadow_sphere",
           "image": "shadow_sphere.png",
-          "hoveredImage": "shadow_sphere_highlight+.png",
+          "hoveredImage": "shadow_sphere_highlight.png",
           "onClick": {
             "name": "Attack70"
           },

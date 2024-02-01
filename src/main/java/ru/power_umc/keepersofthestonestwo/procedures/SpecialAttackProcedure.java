@@ -40,6 +40,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -55,7 +56,6 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
@@ -63,6 +63,7 @@ import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
@@ -126,10 +127,14 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entity.isInWater()) {
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													(float) 13.5);
 										} else {
 											entityiterator.setSecondsOnFire(7);
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 0);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													0);
 										}
 									}
 								}
@@ -201,7 +206,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSecondsOnFire(100);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 9, 1);
+									}.getArrow(projectileLevel, entity, (float) 13.5, 1);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -229,7 +234,7 @@ public class SpecialAttackProcedure {
 												entityToSpawn.setSecondsOnFire(100);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, entity, 9, 1);
+										}.getArrow(projectileLevel, entity, (float) 13.5, 1);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
@@ -257,7 +262,7 @@ public class SpecialAttackProcedure {
 													entityToSpawn.setSecondsOnFire(100);
 													return entityToSpawn;
 												}
-											}.getArrow(projectileLevel, entity, 9, 1);
+											}.getArrow(projectileLevel, entity, (float) 13.5, 1);
 											_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 											projectileLevel.addFreshEntity(_entityToSpawn);
@@ -335,7 +340,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 										if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 											if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
 												entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
@@ -413,7 +420,9 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 15);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+											(float) 22.5);
 								}
 							}
 						}
@@ -476,7 +485,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 14, 4);
+									}.getArrow(projectileLevel, entity, 18, 4);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -516,7 +525,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 9, 2);
+									}.getArrow(projectileLevel, entity, (float) 13.5, 2);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -556,7 +565,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 14, 4);
+									}.getArrow(projectileLevel, entity, 18, 4);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -596,7 +605,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 18, 5);
+									}.getArrow(projectileLevel, entity, 21, 5);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -636,7 +645,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 9, 3);
+									}.getArrow(projectileLevel, entity, 27, 3);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -693,7 +702,9 @@ public class SpecialAttackProcedure {
 										if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 21);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													(float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
 													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -738,59 +749,51 @@ public class SpecialAttackProcedure {
 			if (entity instanceof LivingEntity _livEnt176 && _livEnt176.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
 				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 13) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
-							for (int index4 = 0; index4 < 15; index4++) {
-								if (!world.getBlockState(new BlockPos(
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getX(),
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getY(),
-										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getZ()))
-										.canOcclude()) {
-									Scaling = Scaling + 0.5;
-								} else {
-									break;
-								}
-								if (world instanceof ServerLevel _level)
-									_level.sendParticles(ParticleTypes.SPLASH,
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getX()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getY()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getZ()),
-											50, 1, 1, 1, 0.25);
-								{
-									final Vec3 _center = new Vec3(
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getX()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getY()),
-											(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity))
-													.getBlockPos().getZ()));
-									List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
-											.toList();
-									for (Entity entityiterator : _entfound) {
-										if (!(entityiterator == entity)) {
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
-										}
+						for (int index4 = 0; index4 < 15; index4++) {
+							if (!world.getBlockState(new BlockPos(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getX(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getY(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getZ()))
+									.canOcclude()) {
+								Scaling = Scaling + 0.5;
+							} else {
+								break;
+							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles(ParticleTypes.SPLASH,
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()),
+										50, 1, 1, 1, 0.25);
+							{
+								final Vec3 _center = new Vec3(
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
-							if (world instanceof Level _level) {
-								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1);
-								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1, false);
-								}
-							}
-							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -817,7 +820,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 12, 2, (byte) 2);
+								}.getArrow(projectileLevel, entity, 18, 2, (byte) 2);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -886,7 +889,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.ENCHANTED_HIT,
+								_level.sendParticles(ParticleTypes.CRIT,
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -905,7 +908,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -944,7 +949,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -959,7 +964,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -974,7 +979,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -989,7 +994,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1004,7 +1009,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1019,7 +1024,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1034,7 +1039,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1049,7 +1054,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1081,9 +1086,10 @@ public class SpecialAttackProcedure {
 						particleRadius = 2;
 						for (int index6 = 0; index6 < 60; index6++) {
 							for (int index7 = 0; index7 < (int) particleAmount; index7++) {
-								world.addParticle(ParticleTypes.ENCHANTED_HIT, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.ENCHANTED_HIT, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
@@ -1133,7 +1139,9 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										entityiterator.setTicksFrozen(140);
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -1222,7 +1230,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 12, 2, (byte) 2);
+								}.getArrow(projectileLevel, entity, 18, 2, (byte) 2);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1327,7 +1335,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -1373,7 +1383,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 15);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 22.5);
 										success = true;
 									}
 								}
@@ -1425,7 +1437,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 23, 0);
+								}.getArrow(projectileLevel, entity, (float) 34.5, 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1484,7 +1496,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -1519,7 +1533,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 13, 0);
+								}.getArrow(projectileLevel, entity, (float) 19.5, 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1562,7 +1576,9 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 21);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+											(float) 31.5);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 300, 0, false, false));
 								}
@@ -1594,7 +1610,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 9, 2);
+								}.getArrow(projectileLevel, entity, (float) 13.5, 2);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1644,7 +1660,9 @@ public class SpecialAttackProcedure {
 										if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.AMETHYST_CLUSTER.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.AMETHYST_CLUSTER.defaultBlockState()));
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 21);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													(float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
 													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -1689,7 +1707,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1705,7 +1723,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1721,7 +1739,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1737,7 +1755,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1753,7 +1771,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1769,7 +1787,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1785,7 +1803,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1801,7 +1819,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setPierceLevel(piercing);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 15, 0, (byte) 3);
+							}.getArrow(projectileLevel, entity, (float) 22.5, 0, (byte) 3);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -1853,9 +1871,13 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entity.isInWater()) {
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													(float) 13.5);
 										} else {
-											entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 0);
+											entityiterator.hurt(
+													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+													0);
 											entityiterator.setSecondsOnFire(7);
 										}
 									}
@@ -1920,7 +1942,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 12, 2, (byte) 2);
+								}.getArrow(projectileLevel, entity, 18, 2, (byte) 2);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2186,7 +2208,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -2221,7 +2245,8 @@ public class SpecialAttackProcedure {
 													(entityiterator.getY() + 0 + Mth.nextDouble(RandomSource.create(), 0, 5) * particleRadius), (entityiterator.getZ() + 0 + Mth.nextDouble(RandomSource.create(), -0.1, 0.1) * particleRadius), 10, 1, 1,
 													1, 1);
 									}
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 12);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 18);
 								}
 							}
 						}
@@ -2304,7 +2329,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 9, 4);
+								}.getArrow(projectileLevel, entity, (float) 13.5, 4);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2437,7 +2462,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -2472,7 +2499,9 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 15);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+											(float) 22.5);
 								}
 							}
 						}
@@ -2505,7 +2534,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.BUBBLE_POP, x, y, z, 30, 0, 1, 0, 1);
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 100, 9, false, false));
+							_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 100, 18, false, false));
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -2552,7 +2581,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -2588,7 +2619,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 5, 1, (byte) 5);
+								}.getArrow(projectileLevel, entity, (float) 7.5, 1, (byte) 5);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2624,9 +2655,10 @@ public class SpecialAttackProcedure {
 						particleRadius = 2;
 						for (int index22 = 0; index22 < 60; index22++) {
 							for (int index23 = 0; index23 < (int) particleAmount; index23++) {
-								world.addParticle(ParticleTypes.SPORE_BLOSSOM_AIR, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-										(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles(ParticleTypes.SPORE_BLOSSOM_AIR, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
@@ -2675,7 +2707,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -2704,7 +2738,8 @@ public class SpecialAttackProcedure {
 								if (!(entityiterator == entity)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 3, false, true));
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 27);
 								}
 							}
 						}
@@ -2770,7 +2805,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 14, 4);
+									}.getArrow(projectileLevel, entity, 21, 4);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2810,7 +2845,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 10, 3);
+									}.getArrow(projectileLevel, entity, 15, 3);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2850,7 +2885,7 @@ public class SpecialAttackProcedure {
 											entityToSpawn.setSilent(true);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, 9, 2);
+									}.getArrow(projectileLevel, entity, (float) 13.5, 2);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2897,7 +2932,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2912,7 +2947,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2927,7 +2962,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2942,7 +2977,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2957,7 +2992,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, (-1), 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2972,7 +3007,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(0, 0, 1, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -2987,7 +3022,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot((-1), 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -3002,7 +3037,7 @@ public class SpecialAttackProcedure {
 									entityToSpawn.setSilent(true);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, 9, 0);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 0);
 							_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
 							_entityToSpawn.shoot(1, 0, 0, 1, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -3069,7 +3104,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -3104,7 +3141,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 12, 0);
+								}.getArrow(projectileLevel, entity, 18, 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -3142,7 +3179,8 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 0);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
 								}
@@ -3201,7 +3239,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 9);
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 13.5);
 									}
 								}
 							}
@@ -3236,7 +3276,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setSilent(true);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 12, 0);
+								}.getArrow(projectileLevel, entity, 18, 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -3302,7 +3342,7 @@ public class SpecialAttackProcedure {
 										entityToSpawn.setPierceLevel(piercing);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, 6, 1, (byte) 1);
+								}.getArrow(projectileLevel, entity, 9, 1, (byte) 1);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -3345,12 +3385,137 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC), entity), 12);
+									entityiterator.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 18);
 								}
 							}
 						}
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 75) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 100) {
+						if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY) == false) {
+							world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, world.getServer());
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
+							{
+								boolean _setval = true;
+								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									capability.zeroing = _setval;
+									capability.syncPlayerVariables(entity);
+								});
+							}
+						} else {
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 100;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				}
+			}
+			if (entity instanceof LivingEntity _livEnt813 && _livEnt813.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
+				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 77) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+						for (int index31 = 0; index31 < 15; index31++) {
+							if (!world.getBlockState(new BlockPos(
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getX(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getY(),
+									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+											.getZ()))
+									.canOcclude()) {
+								Scaling = Scaling + 1.2;
+							} else {
+								break;
+							}
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()),
+										25, 0.1, 0.1, 0.1, 2);
+							{
+								final Vec3 _center = new Vec3(
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getX()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getY()),
+										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
+												.getZ()));
+								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+								for (Entity entityiterator : _entfound) {
+									if (!(entityiterator == entity)) {
+										entityiterator.hurt(
+												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+												(float) 10.5);
+										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 60, 0));
+									}
+								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 78) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 25;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
+				} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack == 79) {
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 4, false, false));
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1, false);
+							}
+						}
+						particleAmount = 8;
+						particleRadius = 2;
+						for (int index32 = 0; index32 < 60; index32++) {
+							for (int index33 = 0; index33 < (int) particleAmount; index33++) {
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);

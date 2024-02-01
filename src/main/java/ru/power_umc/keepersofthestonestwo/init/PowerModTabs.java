@@ -36,6 +36,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.METAL_STONE.get());
 				tabData.accept(PowerModItems.LIGHT_STONE.get());
 				tabData.accept(PowerModItems.SHADOW_STONE.get());
+				tabData.accept(PowerModItems.VACUUM_STONE.get());
 			})
 
 					.build());
@@ -44,6 +45,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_100.get());
 				tabData.accept(PowerModItems.STAR_POTION_200.get());
 				tabData.accept(PowerModItems.STAR_POTION_500.get());
+				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
@@ -61,6 +63,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
+				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
@@ -80,6 +83,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.METAL_BATTERY.get());
 				tabData.accept(PowerModItems.LIGHT_BATTERY.get());
 				tabData.accept(PowerModItems.SHADOW_BATTERY.get());
+				tabData.accept(PowerModItems.VACUUM_BATTERY.get());
 			})
 
 					.build());
