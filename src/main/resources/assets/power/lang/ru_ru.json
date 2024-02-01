@@ -211,6 +211,7 @@
   "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
   "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
   "item.power.energium_sword": "Энерджиумный меч",
+  "power.modinfo.cpapi_check": "§9[CPAPI]§r Текущая версия Colorful Powers API: v",
   "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
   "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
   "item.power.empty_battery": "Батарея",
