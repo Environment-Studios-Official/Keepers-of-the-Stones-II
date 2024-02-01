@@ -632,7 +632,7 @@
       "name": "AirMasterStart",
       "type": "procedure",
       "sortid": 86,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_start",
       "metadata": {
@@ -668,7 +668,7 @@
       "name": "AirMasterEnd",
       "type": "procedure",
       "sortid": 87,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_end",
       "metadata": {
@@ -949,7 +949,7 @@
       "name": "Attack1",
       "type": "procedure",
       "sortid": 101,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_1",
       "metadata": {
@@ -969,7 +969,7 @@
       "name": "Attack2",
       "type": "procedure",
       "sortid": 102,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_2",
       "metadata": {
@@ -989,7 +989,7 @@
       "name": "Attack3",
       "type": "procedure",
       "sortid": 103,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_3",
       "metadata": {
@@ -1009,7 +1009,7 @@
       "name": "Attack4",
       "type": "procedure",
       "sortid": 104,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_4",
       "metadata": {
@@ -1252,7 +1252,7 @@
       "name": "Attack5",
       "type": "procedure",
       "sortid": 116,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_5",
       "metadata": {
@@ -1272,7 +1272,7 @@
       "name": "Attack6",
       "type": "procedure",
       "sortid": 117,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_6",
       "metadata": {
@@ -1292,7 +1292,7 @@
       "name": "Attack7",
       "type": "procedure",
       "sortid": 118,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_7",
       "metadata": {
@@ -1312,7 +1312,7 @@
       "name": "Attack8",
       "type": "procedure",
       "sortid": 119,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_8",
       "metadata": {
@@ -1332,7 +1332,7 @@
       "name": "Attack9",
       "type": "procedure",
       "sortid": 120,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_9",
       "metadata": {
@@ -1352,7 +1352,7 @@
       "name": "Attack10",
       "type": "procedure",
       "sortid": 121,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_10",
       "metadata": {
@@ -1372,7 +1372,7 @@
       "name": "Attack11",
       "type": "procedure",
       "sortid": 122,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_11",
       "metadata": {
@@ -1392,7 +1392,7 @@
       "name": "Attack12",
       "type": "procedure",
       "sortid": 123,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_12",
       "metadata": {
@@ -2039,7 +2039,7 @@
       "name": "Attack13",
       "type": "procedure",
       "sortid": 146,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_13",
       "metadata": {
@@ -2059,7 +2059,7 @@
       "name": "Attack14",
       "type": "procedure",
       "sortid": 147,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_14",
       "metadata": {
@@ -2079,7 +2079,7 @@
       "name": "Attack15",
       "type": "procedure",
       "sortid": 148,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_15",
       "metadata": {
@@ -2099,7 +2099,7 @@
       "name": "Attack16",
       "type": "procedure",
       "sortid": 149,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_16",
       "metadata": {
@@ -2364,7 +2364,7 @@
       "name": "Attack17",
       "type": "procedure",
       "sortid": 160,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_17",
       "metadata": {
@@ -2384,7 +2384,7 @@
       "name": "Attack18",
       "type": "procedure",
       "sortid": 161,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_18",
       "metadata": {
@@ -2404,7 +2404,7 @@
       "name": "Attack19",
       "type": "procedure",
       "sortid": 162,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_19",
       "metadata": {
@@ -2424,7 +2424,7 @@
       "name": "Attack20",
       "type": "procedure",
       "sortid": 163,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_20",
       "metadata": {
@@ -2957,7 +2957,7 @@
       "name": "Attack21",
       "type": "procedure",
       "sortid": 185,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_21",
       "metadata": {
@@ -2977,7 +2977,7 @@
       "name": "Attack22",
       "type": "procedure",
       "sortid": 186,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_22",
       "metadata": {
@@ -2997,7 +2997,7 @@
       "name": "Attack23",
       "type": "procedure",
       "sortid": 187,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_23",
       "metadata": {
@@ -3017,7 +3017,7 @@
       "name": "Attack24",
       "type": "procedure",
       "sortid": 188,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_24",
       "metadata": {
@@ -3181,7 +3181,7 @@
       "name": "Attack25",
       "type": "procedure",
       "sortid": 196,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_25",
       "metadata": {
@@ -3201,7 +3201,7 @@
       "name": "Attack26",
       "type": "procedure",
       "sortid": 197,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_26",
       "metadata": {
@@ -3221,7 +3221,7 @@
       "name": "Attack27",
       "type": "procedure",
       "sortid": 198,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_27",
       "metadata": {
@@ -3241,7 +3241,7 @@
       "name": "Attack28",
       "type": "procedure",
       "sortid": 199,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_28",
       "metadata": {
@@ -3763,7 +3763,7 @@
       "name": "Attack29",
       "type": "procedure",
       "sortid": 222,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_29",
       "metadata": {
@@ -3783,7 +3783,7 @@
       "name": "Attack30",
       "type": "procedure",
       "sortid": 223,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_30",
       "metadata": {
@@ -3803,7 +3803,7 @@
       "name": "Attack31",
       "type": "procedure",
       "sortid": 224,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_31",
       "metadata": {
@@ -3823,7 +3823,7 @@
       "name": "Attack32",
       "type": "procedure",
       "sortid": 225,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_32",
       "metadata": {
@@ -4080,7 +4080,7 @@
       "name": "CrystalMasterEnd",
       "type": "procedure",
       "sortid": 235,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_master_end",
       "metadata": {
@@ -4132,7 +4132,7 @@
       "name": "Attack33",
       "type": "procedure",
       "sortid": 237,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_33",
       "metadata": {
@@ -4152,7 +4152,7 @@
       "name": "Attack34",
       "type": "procedure",
       "sortid": 238,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_34",
       "metadata": {
@@ -4172,7 +4172,7 @@
       "name": "Attack35",
       "type": "procedure",
       "sortid": 239,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_35",
       "metadata": {
@@ -4192,7 +4192,7 @@
       "name": "Attack36",
       "type": "procedure",
       "sortid": 240,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_36",
       "metadata": {
@@ -4468,7 +4468,7 @@
       "name": "Attack37",
       "type": "procedure",
       "sortid": 251,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_37",
       "metadata": {
@@ -4488,7 +4488,7 @@
       "name": "Attack38",
       "type": "procedure",
       "sortid": 252,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_38",
       "metadata": {
@@ -4508,7 +4508,7 @@
       "name": "Attack39",
       "type": "procedure",
       "sortid": 253,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_39",
       "metadata": {
@@ -4528,7 +4528,7 @@
       "name": "Attack40",
       "type": "procedure",
       "sortid": 254,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_40",
       "metadata": {
@@ -6616,7 +6616,7 @@
       "name": "Attack41",
       "type": "procedure",
       "sortid": 354,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_41",
       "metadata": {
@@ -6636,7 +6636,7 @@
       "name": "Attack42",
       "type": "procedure",
       "sortid": 355,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_42",
       "metadata": {
@@ -6656,7 +6656,7 @@
       "name": "Attack43",
       "type": "procedure",
       "sortid": 356,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_43",
       "metadata": {
@@ -6676,7 +6676,7 @@
       "name": "Attack44",
       "type": "procedure",
       "sortid": 357,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_44",
       "metadata": {
@@ -6839,7 +6839,7 @@
       "name": "Attack45",
       "type": "procedure",
       "sortid": 363,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_45",
       "metadata": {
@@ -6859,7 +6859,7 @@
       "name": "Attack46",
       "type": "procedure",
       "sortid": 364,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_46",
       "metadata": {
@@ -6879,7 +6879,7 @@
       "name": "Attack47",
       "type": "procedure",
       "sortid": 365,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_47",
       "metadata": {
@@ -6899,7 +6899,7 @@
       "name": "Attack48",
       "type": "procedure",
       "sortid": 366,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_48",
       "metadata": {
@@ -7074,7 +7074,7 @@
       "name": "Attack49",
       "type": "procedure",
       "sortid": 376,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_49",
       "metadata": {
@@ -7094,7 +7094,7 @@
       "name": "Attack50",
       "type": "procedure",
       "sortid": 377,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_50",
       "metadata": {
@@ -7114,7 +7114,7 @@
       "name": "Attack51",
       "type": "procedure",
       "sortid": 378,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_51",
       "metadata": {
@@ -7134,7 +7134,7 @@
       "name": "Attack52",
       "type": "procedure",
       "sortid": 379,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_52",
       "metadata": {
@@ -7387,7 +7387,7 @@
       "name": "Attack53",
       "type": "procedure",
       "sortid": 390,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_53",
       "metadata": {
@@ -7407,7 +7407,7 @@
       "name": "Attack54",
       "type": "procedure",
       "sortid": 391,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_54",
       "metadata": {
@@ -7427,7 +7427,7 @@
       "name": "Attack55",
       "type": "procedure",
       "sortid": 392,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_55",
       "metadata": {
@@ -7447,7 +7447,7 @@
       "name": "Attack56",
       "type": "procedure",
       "sortid": 393,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_56",
       "metadata": {
@@ -7665,7 +7665,7 @@
       "name": "Attack57",
       "type": "procedure",
       "sortid": 402,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_57",
       "metadata": {
@@ -7685,7 +7685,7 @@
       "name": "Attack58",
       "type": "procedure",
       "sortid": 403,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_58",
       "metadata": {
@@ -7705,7 +7705,7 @@
       "name": "Attack59",
       "type": "procedure",
       "sortid": 404,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_59",
       "metadata": {
@@ -7725,7 +7725,7 @@
       "name": "Attack60",
       "type": "procedure",
       "sortid": 405,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_60",
       "metadata": {
@@ -7745,7 +7745,7 @@
       "name": "AnimalsMasterStart",
       "type": "procedure",
       "sortid": 406,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master_start",
       "metadata": {
@@ -7781,7 +7781,7 @@
       "name": "AnimalsMasterEnd",
       "type": "procedure",
       "sortid": 407,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master_end",
       "metadata": {
@@ -7923,7 +7923,7 @@
       "name": "Attack61",
       "type": "procedure",
       "sortid": 413,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_61",
       "metadata": {
@@ -7943,7 +7943,7 @@
       "name": "Attack62",
       "type": "procedure",
       "sortid": 414,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_62",
       "metadata": {
@@ -7963,7 +7963,7 @@
       "name": "Attack63",
       "type": "procedure",
       "sortid": 415,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_63",
       "metadata": {
@@ -7983,7 +7983,7 @@
       "name": "Attack64",
       "type": "procedure",
       "sortid": 416,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_64",
       "metadata": {
@@ -9932,7 +9932,7 @@
       "name": "Attack65",
       "type": "procedure",
       "sortid": 482,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_65",
       "metadata": {
@@ -9952,7 +9952,7 @@
       "name": "Attack66",
       "type": "procedure",
       "sortid": 483,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_66",
       "metadata": {
@@ -9972,7 +9972,7 @@
       "name": "Attack67",
       "type": "procedure",
       "sortid": 484,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_67",
       "metadata": {
@@ -9992,7 +9992,7 @@
       "name": "Attack68",
       "type": "procedure",
       "sortid": 485,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_68",
       "metadata": {
@@ -10231,7 +10231,7 @@
       "name": "Attack69",
       "type": "procedure",
       "sortid": 496,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_69",
       "metadata": {
@@ -10251,7 +10251,7 @@
       "name": "Attack70",
       "type": "procedure",
       "sortid": 497,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_70",
       "metadata": {
@@ -10271,7 +10271,7 @@
       "name": "Attack71",
       "type": "procedure",
       "sortid": 498,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_71",
       "metadata": {
@@ -10291,7 +10291,7 @@
       "name": "Attack72",
       "type": "procedure",
       "sortid": 499,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_72",
       "metadata": {
@@ -11000,7 +11000,7 @@
       "name": "Atttack73",
       "type": "procedure",
       "sortid": 527,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "atttack_73",
       "metadata": {
@@ -11020,7 +11020,7 @@
       "name": "Attack74",
       "type": "procedure",
       "sortid": 528,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_74",
       "metadata": {
@@ -11040,7 +11040,7 @@
       "name": "Attack75",
       "type": "procedure",
       "sortid": 529,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_75",
       "metadata": {
@@ -11060,7 +11060,7 @@
       "name": "Attack76",
       "type": "procedure",
       "sortid": 530,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_76",
       "metadata": {
@@ -12264,7 +12264,7 @@
       "name": "Attack77",
       "type": "procedure",
       "sortid": 581,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_77",
       "metadata": {
@@ -12284,7 +12284,7 @@
       "name": "Attack78",
       "type": "procedure",
       "sortid": 582,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_78",
       "metadata": {
@@ -12304,7 +12304,7 @@
       "name": "Attack79",
       "type": "procedure",
       "sortid": 583,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_79",
       "metadata": {
@@ -12324,7 +12324,7 @@
       "name": "Attack80",
       "type": "procedure",
       "sortid": 584,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "attack_80",
       "metadata": {
@@ -12965,19 +12965,19 @@
     },
     {
       "name": "element_id_fist",
-      "type": "string",
+      "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "element_id_second",
-      "type": "string",
+      "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
     {
       "name": "element_id_third",
-      "type": "string",
+      "type": "number",
       "scope": "player_persistent",
       "value": "0"
     },
@@ -13291,7 +13291,7 @@
       "name": "cpapi_version",
       "type": "number",
       "scope": "map",
-      "value": "1.0"
+      "value": "2.0"
     }
   ],
   "sound_elements": [

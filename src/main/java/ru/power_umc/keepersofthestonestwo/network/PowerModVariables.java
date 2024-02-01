@@ -410,9 +410,9 @@ public class PowerModVariables {
 		public double powerTimer = 0.0;
 		public String attack = "0";
 		public double mergers = 0.0;
-		public String element_id_fist = "0";
-		public String element_id_second = "0";
-		public String element_id_third = "0";
+		public double element_id_fist = 0;
+		public double element_id_second = 0;
+		public double element_id_third = 0;
 		public boolean battery = false;
 		public ItemStack armor_helmet = ItemStack.EMPTY;
 		public ItemStack armor_chestplate = ItemStack.EMPTY;
@@ -434,9 +434,9 @@ public class PowerModVariables {
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("attack", attack);
 			nbt.putDouble("mergers", mergers);
-			nbt.putString("element_id_fist", element_id_fist);
-			nbt.putString("element_id_second", element_id_second);
-			nbt.putString("element_id_third", element_id_third);
+			nbt.putDouble("element_id_fist", element_id_fist);
+			nbt.putDouble("element_id_second", element_id_second);
+			nbt.putDouble("element_id_third", element_id_third);
 			nbt.putBoolean("battery", battery);
 			nbt.put("armor_helmet", armor_helmet.save(new CompoundTag()));
 			nbt.put("armor_chestplate", armor_chestplate.save(new CompoundTag()));
@@ -455,9 +455,9 @@ public class PowerModVariables {
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getString("attack");
 			mergers = nbt.getDouble("mergers");
-			element_id_fist = nbt.getString("element_id_fist");
-			element_id_second = nbt.getString("element_id_second");
-			element_id_third = nbt.getString("element_id_third");
+			element_id_fist = nbt.getDouble("element_id_fist");
+			element_id_second = nbt.getDouble("element_id_second");
+			element_id_third = nbt.getDouble("element_id_third");
 			battery = nbt.getBoolean("battery");
 			armor_helmet = ItemStack.of(nbt.getCompound("armor_helmet"));
 			armor_chestplate = ItemStack.of(nbt.getCompound("armor_chestplate"));
