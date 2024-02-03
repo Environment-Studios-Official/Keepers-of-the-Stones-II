@@ -12,7 +12,7 @@ public class BallLightningProjectileKoghdaSnariadPopadaietVSushchnostProcedure {
 		if (entity == null)
 			return;
 		if (world instanceof Level _level && !_level.isClientSide())
-			_level.explode(null, x, y, z, 3, Level.ExplosionInteraction.MOB);
+			_level.explode(null, x, y, z, (float) 4.5, Level.ExplosionInteraction.MOB);
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, false));
 	}
