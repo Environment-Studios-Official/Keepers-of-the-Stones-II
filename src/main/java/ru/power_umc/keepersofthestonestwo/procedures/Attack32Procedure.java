@@ -10,7 +10,7 @@ public class Attack32Procedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 32;
+			String _setval = "sound_attack_4";
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.attack = _setval;
 				capability.syncPlayerVariables(entity);

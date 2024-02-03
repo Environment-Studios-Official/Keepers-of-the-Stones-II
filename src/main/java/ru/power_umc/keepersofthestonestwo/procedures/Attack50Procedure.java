@@ -10,7 +10,7 @@ public class Attack50Procedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 50;
+			String _setval = "ocean_attack_2";
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.attack = _setval;
 				capability.syncPlayerVariables(entity);

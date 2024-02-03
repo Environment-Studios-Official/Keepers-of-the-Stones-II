@@ -92,9 +92,6 @@ public class PowerModVariables {
 				clone.armor_leggings = original.armor_leggings;
 				clone.armor_boots = original.armor_boots;
 				clone.ability_block = original.ability_block;
-				clone.stone_id_first = original.stone_id_first;
-				clone.stone_id_second = original.stone_id_second;
-				clone.stone_id_third = original.stone_id_third;
 			}
 		}
 
@@ -204,7 +201,7 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
-		public double cpapi_version = 1.0;
+		public double cpapi_version = 2.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -411,7 +408,7 @@ public class PowerModVariables {
 		public boolean selected = false;
 		public double power = 0.0;
 		public double powerTimer = 0.0;
-		public double attack = 1.0;
+		public String attack = "0";
 		public double mergers = 0.0;
 		public double element_id_fist = 0;
 		public double element_id_second = 0;
@@ -423,9 +420,6 @@ public class PowerModVariables {
 		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
 		public boolean zeroing = false;
-		public ItemStack stone_id_first = ItemStack.EMPTY;
-		public ItemStack stone_id_second = ItemStack.EMPTY;
-		public ItemStack stone_id_third = ItemStack.EMPTY;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -438,7 +432,7 @@ public class PowerModVariables {
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
-			nbt.putDouble("attack", attack);
+			nbt.putString("attack", attack);
 			nbt.putDouble("mergers", mergers);
 			nbt.putDouble("element_id_fist", element_id_fist);
 			nbt.putDouble("element_id_second", element_id_second);
@@ -450,9 +444,6 @@ public class PowerModVariables {
 			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putBoolean("zeroing", zeroing);
-			nbt.put("stone_id_first", stone_id_first.save(new CompoundTag()));
-			nbt.put("stone_id_second", stone_id_second.save(new CompoundTag()));
-			nbt.put("stone_id_third", stone_id_third.save(new CompoundTag()));
 			return nbt;
 		}
 
@@ -462,7 +453,7 @@ public class PowerModVariables {
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
-			attack = nbt.getDouble("attack");
+			attack = nbt.getString("attack");
 			mergers = nbt.getDouble("mergers");
 			element_id_fist = nbt.getDouble("element_id_fist");
 			element_id_second = nbt.getDouble("element_id_second");
@@ -474,9 +465,6 @@ public class PowerModVariables {
 			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
 			zeroing = nbt.getBoolean("zeroing");
-			stone_id_first = ItemStack.of(nbt.getCompound("stone_id_first"));
-			stone_id_second = ItemStack.of(nbt.getCompound("stone_id_second"));
-			stone_id_third = ItemStack.of(nbt.getCompound("stone_id_third"));
 		}
 	}
 
@@ -517,9 +505,6 @@ public class PowerModVariables {
 					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
 					variables.zeroing = message.data.zeroing;
-					variables.stone_id_first = message.data.stone_id_first;
-					variables.stone_id_second = message.data.stone_id_second;
-					variables.stone_id_third = message.data.stone_id_third;
 				}
 			});
 			context.setPacketHandled(true);
