@@ -12894,6 +12894,85 @@
         ]
       },
       "path": "~/Modules/Commands"
+    },
+    {
+      "name": "EnergyChargeExplode",
+      "type": "procedure",
+      "sortid": 607,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_charge_explode",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyChargeExplodeProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyCharge",
+      "type": "projectile",
+      "sortid": 608,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_charge",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/renderer/EnergyChargeRenderer.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/entity/EnergyChargeEntity.java"
+        ]
+      },
+      "path": "~/Elements/Energy"
+    },
+    {
+      "name": "EnergyChargeTick",
+      "type": "procedure",
+      "sortid": 609,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_charge_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/EnergyChargeTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Energy"
     }
   ],
   "variable_elements": [
@@ -13341,16 +13420,16 @@
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
-      "power.modinfo.recharge_stone.seconds": " секунд",
-      "item.power.earth_battery": "Батарея",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "item.power.earth_battery": "Батарея",
+      "power.modinfo.recharge_stone.seconds": " секунд",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -13683,16 +13762,16 @@
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
-      "effect.power.ocean_master": "Master of the Ocean",
       "item.power.lightning_battery": "Battery",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "power.modinfo.recharge_stone.seconds": " seconds",
-      "item.power.earth_battery": "Battery",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.earth_battery": "Battery",
+      "power.modinfo.recharge_stone.seconds": " seconds",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
