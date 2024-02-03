@@ -22,6 +22,7 @@ import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.EnergyChargeEntity;
 import ru.power_umc.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
@@ -3491,7 +3492,7 @@ public class SpecialAttackProcedure {
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnergyChargeEntity(PowerModEntities.DELETED_MOD_ELEMENT.get(), level);
+										AbstractArrow entityToSpawn = new EnergyChargeEntity(PowerModEntities.ENERGY_CHARGE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
