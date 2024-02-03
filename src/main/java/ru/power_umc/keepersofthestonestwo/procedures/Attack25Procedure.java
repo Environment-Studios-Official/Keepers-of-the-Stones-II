@@ -10,7 +10,7 @@ public class Attack25Procedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 25;
+			String _setval = "lightning_attack_1";
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.attack = _setval;
 				capability.syncPlayerVariables(entity);
