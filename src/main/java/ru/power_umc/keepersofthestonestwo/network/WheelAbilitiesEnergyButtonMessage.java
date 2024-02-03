@@ -6,7 +6,6 @@ import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.Attack79Procedure;
-import ru.power_umc.keepersofthestonestwo.procedures.Attack78Procedure;
 import ru.power_umc.keepersofthestonestwo.procedures.Attack77Procedure;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
@@ -69,27 +68,23 @@ public class WheelAbilitiesEnergyButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack77Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack78Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack79Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack77Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
-		}
-		if (buttonID == 5) {
-
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack79Procedure.execute(entity);
 		}
 	}
 
