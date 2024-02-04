@@ -7,6 +7,7 @@ package ru.power_umc.keepersofthestonestwo.init;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
+import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
 import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
@@ -57,4 +58,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesVacuumMenu>> WHEEL_ABILITIES_VACUUM = REGISTRY.register("wheel_abilities_vacuum", () -> IForgeMenuType.create(WheelAbilitiesVacuumMenu::new));
 	public static final RegistryObject<MenuType<BatteryChargerGUIMenu>> BATTERY_CHARGER_GUI = REGISTRY.register("battery_charger_gui", () -> IForgeMenuType.create(BatteryChargerGUIMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesEnergyMenu>> WHEEL_ABILITIES_ENERGY = REGISTRY.register("wheel_abilities_energy", () -> IForgeMenuType.create(WheelAbilitiesEnergyMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesSunMenu>> WHEEL_ABILITIES_SUN = REGISTRY.register("wheel_abilities_sun", () -> IForgeMenuType.create(WheelAbilitiesSunMenu::new));
 }

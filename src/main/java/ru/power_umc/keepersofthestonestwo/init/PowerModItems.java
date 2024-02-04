@@ -21,6 +21,8 @@ import ru.power_umc.keepersofthestonestwo.item.TimeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TeleportationStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.TechnologyStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SunStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.SunBatteryItem;
+import ru.power_umc.keepersofthestonestwo.item.SunArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.StarPotion500Item;
 import ru.power_umc.keepersofthestonestwo.item.StarPotion200Item;
 import ru.power_umc.keepersofthestonestwo.item.StarPotion100Item;
@@ -344,6 +346,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGY_ARMOR_LEGGINGS = REGISTRY.register("energy_armor_leggings", () -> new EnergyArmorItem.Leggings());
 	public static final RegistryObject<Item> ENERGY_ARMOR_BOOTS = REGISTRY.register("energy_armor_boots", () -> new EnergyArmorItem.Boots());
 	public static final RegistryObject<Item> ENERGY_STAFF = REGISTRY.register("energy_staff", () -> new EnergyStaffItem());
+	public static final RegistryObject<Item> SUN_ARMOR_HELMET = REGISTRY.register("sun_armor_helmet", () -> new SunArmorItem.Helmet());
+	public static final RegistryObject<Item> SUN_ARMOR_CHESTPLATE = REGISTRY.register("sun_armor_chestplate", () -> new SunArmorItem.Chestplate());
+	public static final RegistryObject<Item> SUN_ARMOR_LEGGINGS = REGISTRY.register("sun_armor_leggings", () -> new SunArmorItem.Leggings());
+	public static final RegistryObject<Item> SUN_ARMOR_BOOTS = REGISTRY.register("sun_armor_boots", () -> new SunArmorItem.Boots());
+	public static final RegistryObject<Item> SUN_BATTERY = REGISTRY.register("sun_battery", () -> new SunBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

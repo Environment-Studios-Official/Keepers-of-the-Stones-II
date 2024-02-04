@@ -1,8 +1,8 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.EnergyVacuumDescProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.EnergyBatteryUseProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.EnergyBatteryDescProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -35,7 +35,7 @@ public class EnergyBatteryItem extends Item {
 		double x = entity != null ? entity.getX() : 0.0;
 		double y = entity != null ? entity.getY() : 0.0;
 		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(EnergyVacuumDescProcedure.execute()));
+		list.add(Component.literal(EnergyBatteryDescProcedure.execute()));
 	}
 
 	@Override

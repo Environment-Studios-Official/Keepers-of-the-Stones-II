@@ -1,8 +1,8 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
+import ru.power_umc.keepersofthestonestwo.procedures.SunStoneUseProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.LavaStoneUseProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -42,7 +42,7 @@ public class SunStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LavaStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		SunStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 
