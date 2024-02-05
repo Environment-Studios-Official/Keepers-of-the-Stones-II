@@ -14973,7 +14973,8 @@
       "bettercombat",
       "geckolib",
       "playeranimator",
-      "allmods"
+      "allmods",
+      "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",

@@ -117,3 +117,17 @@ minecraft {
          }
 
 
+repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
+   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
+}
+
+
