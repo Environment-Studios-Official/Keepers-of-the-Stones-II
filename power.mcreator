@@ -13735,30 +13735,6 @@
       "value": "false"
     },
     {
-      "name": "armor_helmet",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_chestplate",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_leggings",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_boots",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
       "name": "ability_block",
       "type": "logic",
       "scope": "player_lifetime",
@@ -13781,12 +13757,6 @@
       "type": "number",
       "scope": "map",
       "value": "2.0"
-    },
-    {
-      "name": "element_name",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
     }
   ],
   "sound_elements": [

@@ -21,7 +21,6 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -82,16 +81,11 @@ public class PowerModVariables {
 			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
 			clone.zeroing = original.zeroing;
-			clone.element_name = original.element_name;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
-				clone.armor_helmet = original.armor_helmet;
-				clone.armor_chestplate = original.armor_chestplate;
-				clone.armor_leggings = original.armor_leggings;
-				clone.armor_boots = original.armor_boots;
 				clone.ability_block = original.ability_block;
 			}
 		}
@@ -415,13 +409,8 @@ public class PowerModVariables {
 		public double element_id_second = 0;
 		public double element_id_third = 0;
 		public boolean battery = false;
-		public ItemStack armor_helmet = ItemStack.EMPTY;
-		public ItemStack armor_chestplate = ItemStack.EMPTY;
-		public ItemStack armor_leggings = ItemStack.EMPTY;
-		public ItemStack armor_boots = ItemStack.EMPTY;
 		public boolean ability_block = false;
 		public boolean zeroing = false;
-		public String element_name = "0";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -440,13 +429,8 @@ public class PowerModVariables {
 			nbt.putDouble("element_id_second", element_id_second);
 			nbt.putDouble("element_id_third", element_id_third);
 			nbt.putBoolean("battery", battery);
-			nbt.put("armor_helmet", armor_helmet.save(new CompoundTag()));
-			nbt.put("armor_chestplate", armor_chestplate.save(new CompoundTag()));
-			nbt.put("armor_leggings", armor_leggings.save(new CompoundTag()));
-			nbt.put("armor_boots", armor_boots.save(new CompoundTag()));
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putBoolean("zeroing", zeroing);
-			nbt.putString("element_name", element_name);
 			return nbt;
 		}
 
@@ -462,13 +446,8 @@ public class PowerModVariables {
 			element_id_second = nbt.getDouble("element_id_second");
 			element_id_third = nbt.getDouble("element_id_third");
 			battery = nbt.getBoolean("battery");
-			armor_helmet = ItemStack.of(nbt.getCompound("armor_helmet"));
-			armor_chestplate = ItemStack.of(nbt.getCompound("armor_chestplate"));
-			armor_leggings = ItemStack.of(nbt.getCompound("armor_leggings"));
-			armor_boots = ItemStack.of(nbt.getCompound("armor_boots"));
 			ability_block = nbt.getBoolean("ability_block");
 			zeroing = nbt.getBoolean("zeroing");
-			element_name = nbt.getString("element_name");
 		}
 	}
 
@@ -503,13 +482,8 @@ public class PowerModVariables {
 					variables.element_id_second = message.data.element_id_second;
 					variables.element_id_third = message.data.element_id_third;
 					variables.battery = message.data.battery;
-					variables.armor_helmet = message.data.armor_helmet;
-					variables.armor_chestplate = message.data.armor_chestplate;
-					variables.armor_leggings = message.data.armor_leggings;
-					variables.armor_boots = message.data.armor_boots;
 					variables.ability_block = message.data.ability_block;
 					variables.zeroing = message.data.zeroing;
-					variables.element_name = message.data.element_name;
 				}
 			});
 			context.setPacketHandled(true);
