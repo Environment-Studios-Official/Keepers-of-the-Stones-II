@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "overlay",
   "definition": {
-    "priority": "NORMAL",
+    "priority": "HIGHEST",
     "components": [
       {
         "type": "label",
@@ -20,8 +20,8 @@
             "name": "GetActive"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 387,
-          "y": 15
+          "x": 392,
+          "y": 35
         }
       },
       {
@@ -33,8 +33,8 @@
             "name": "GetActive"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 358,
-          "y": 8
+          "x": 363,
+          "y": 28
         }
       }
     ],
