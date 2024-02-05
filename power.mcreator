@@ -8793,26 +8793,6 @@
       "path": "~/Items/Batteries/LightningBattery"
     },
     {
-      "name": "IcebergRender",
-      "type": "procedure",
-      "sortid": 442,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "iceberg_render",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/IcebergRenderProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
       "name": "IronSkin",
       "type": "potioneffect",
       "sortid": 443,
@@ -14982,7 +14962,6 @@
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
-      "kleiders_custom_renderer",
       "geckolib",
       "playeranimator"
     ],
@@ -14991,7 +14970,6 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "bettercombat",
       "geckolib",
       "playeranimator",
