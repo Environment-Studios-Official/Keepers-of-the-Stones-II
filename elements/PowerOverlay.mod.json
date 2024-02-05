@@ -20,7 +20,7 @@
             "name": "GetActive"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 392,
+          "x": 396,
           "y": 35
         }
       },
@@ -33,7 +33,7 @@
             "name": "GetActive"
           },
           "anchorPoint": "TOP_RIGHT",
-          "x": 363,
+          "x": 367,
           "y": 28
         }
       }
