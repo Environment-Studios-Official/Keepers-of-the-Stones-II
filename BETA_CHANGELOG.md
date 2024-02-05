@@ -4,3 +4,4 @@ What's new in Keepers of the Stones II version 1.0.0.11?<br />
 <br />- 
 <br />- [API] 
 <br />- [Bugfix] Fixed a bug that caused the second energy ability to fail
+<br />- [Bugfix] Fixed a bug where the second ability used 25 instead of 35 star points
