@@ -33,6 +33,7 @@ import ru.power_umc.keepersofthestonestwo.item.SoundStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundDaggerItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.SoundArmorItem;
+import ru.power_umc.keepersofthestonestwo.item.SolarBladeItem;
 import ru.power_umc.keepersofthestonestwo.item.SmokeStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.ShadowScytheItem;
@@ -351,6 +352,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SUN_ARMOR_LEGGINGS = REGISTRY.register("sun_armor_leggings", () -> new SunArmorItem.Leggings());
 	public static final RegistryObject<Item> SUN_ARMOR_BOOTS = REGISTRY.register("sun_armor_boots", () -> new SunArmorItem.Boots());
 	public static final RegistryObject<Item> SUN_BATTERY = REGISTRY.register("sun_battery", () -> new SunBatteryItem());
+	public static final RegistryObject<Item> SOLAR_BLADE = REGISTRY.register("solar_blade", () -> new SolarBladeItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

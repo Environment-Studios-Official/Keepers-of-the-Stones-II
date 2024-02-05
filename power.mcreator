@@ -13348,6 +13348,41 @@
         "dependencies": []
       },
       "path": "~/Items/Batteries/EnergyBattery"
+    },
+    {
+      "name": "SolarBlade",
+      "type": "tool",
+      "sortid": 628,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_blade",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/SolarBladeItem.java",
+          "src/main/resources/assets/power/models/item/solar_blade.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "SolarBladeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 629,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_blade_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SolarBladeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sun"
     }
   ],
   "variable_elements": [
@@ -13848,7 +13883,7 @@
       "item.power.sun_armor_helmet": "Шлем мастера солнца",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
-      "effect.power.whirlwind": "Whirlwind",
+      "effect.power.whirlwind": "Водоворот",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Океаническое течение, расходует 10",
       "item.power.tornado_stone": "Камень торнадо",
       "battery.desc.sun": "Солнце",
@@ -14062,6 +14097,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_beam_uses_10": "Световой луч, расходует 10",
       "item.power.rain_stone": "Камень дождя",
       "power.modinfo.actual_version": "§9[Keepers of the Stones II]§r У вас установлена актуальная версия мода!",
+      "item.power.solar_blade": "Солнечное лезвие",
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Шаровая молния, расходует 80",
       "item.power.animals_halberd": "Алебарда животных",
       "item.power.energium_ingot": "Слиток энерджиума",
@@ -14149,8 +14185,8 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
-      "item.power.tornado_armor_helmet": "Tornado Helmet",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
+      "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.sun_battery": "Battery",
       "effect.power.sound_master": "Master of Sound",
@@ -14165,9 +14201,9 @@
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
-      "item.power.earth_battery": "Battery",
       "power.modinfo.recharge_stone.seconds": " seconds",
+      "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -14417,6 +14453,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_beam_uses_10": "Light beam, uses 10",
       "item.power.rain_stone": "Rain Stone",
       "power.modinfo.actual_version": "§9[Keepers of the Stones II]§r You have the latest version of the mod installed!",
+      "item.power.solar_blade": "Solar Blade",
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Ball lightning, uses 80",
       "item.power.animals_halberd": "Animals Halberd",
       "item.power.energium_ingot": "Energium Ingot",
