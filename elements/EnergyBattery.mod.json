@@ -10,7 +10,7 @@
     "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Items"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "EnergyVacuumDesc"
+      "name": "EnergyBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false

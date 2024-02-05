@@ -24,8 +24,8 @@ public class UpdateCPAPIWhenJoinInGameProcedure {
 	}
 
 	private static void execute(@Nullable Event event, LevelAccessor world) {
-		if (PowerModVariables.MapVariables.get(world).cpapi_version != 1) {
-			PowerModVariables.MapVariables.get(world).cpapi_version = 1;
+		if (PowerModVariables.MapVariables.get(world).cpapi_version != 2) {
+			PowerModVariables.MapVariables.get(world).cpapi_version = 2;
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			PowerMod.LOGGER.warn((Component.translatable("power.modinfo.update_cpapi").getString() + "" + Math.round(PowerModVariables.MapVariables.get(world).cpapi_version)));
 		}

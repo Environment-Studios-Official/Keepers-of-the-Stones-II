@@ -13,7 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.gui.components.ImageButton;
-import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
 
 import java.util.HashMap;
@@ -25,12 +24,12 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	Button button_1;
-	Button button_2;
-	Button button_3;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_energy_flux;
+	ImageButton imagebutton_energy_charge;
+	ImageButton imagebutton_energy_charged_ball;
 
 	public WheelAbilitiesEnergyScreen(WheelAbilitiesEnergyMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,6 +47,12 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -87,34 +92,10 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_energy.button_1"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(0, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}).bounds(this.leftPos + 80, this.topPos + 24, 30, 20).build();
-		guistate.put("button:button_1", button_1);
-		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_energy.button_2"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(1, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}).bounds(this.leftPos + 142, this.topPos + 86, 30, 20).build();
-		guistate.put("button:button_2", button_2);
-		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_energy.button_3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(2, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}).bounds(this.leftPos + 78, this.topPos + 146, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(3, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(0, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
@@ -127,8 +108,8 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(4, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(1, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
 			@Override
@@ -141,8 +122,8 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(5, x, y, z));
-				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(2, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
@@ -153,5 +134,25 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
+		imagebutton_energy_flux = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_energy_flux.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(3, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_energy_flux", imagebutton_energy_flux);
+		this.addRenderableWidget(imagebutton_energy_flux);
+		imagebutton_energy_charge = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_energy_charge.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(4, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_energy_charge", imagebutton_energy_charge);
+		this.addRenderableWidget(imagebutton_energy_charge);
+		imagebutton_energy_charged_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_energy_charged_ball.png"), 46, 92, e -> {
+		});
+		guistate.put("button:imagebutton_energy_charged_ball", imagebutton_energy_charged_ball);
+		this.addRenderableWidget(imagebutton_energy_charged_ball);
 	}
 }

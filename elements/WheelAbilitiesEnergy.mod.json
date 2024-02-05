@@ -68,48 +68,78 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_energy_flux",
+          "image": "energy_flux.png",
+          "hoveredImage": "energy_flux_highlight.png",
           "onClick": {
             "name": "Attack77"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack78"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_energy_charge",
+          "image": "energy_charge.png",
+          "hoveredImage": "energy_charge_highlight.png",
           "onClick": {
             "name": "Attack79"
           },
-          "width": 30,
-          "height": 20,
-          "x": 196,
-          "y": 170
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_energy_flux_uses_10",
+          "text": {
+            "fixedValue": "Energy flux, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_energy_charged_ball_uses_35",
+          "text": {
+            "fixedValue": "Energy charged ball, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_energy_charge_uses_80",
+          "text": {
+            "fixedValue": "Energy charge, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_energy_charged_ball",
+          "image": "energy_charged_ball.png",
+          "hoveredImage": "energy_charged_ball_highlight.png",
+          "x": 251,
+          "y": 97
         }
       }
     ],
@@ -118,7 +148,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

@@ -2,8 +2,8 @@ package ru.power_umc.keepersofthestonestwo.procedures;
 
 import net.minecraft.network.chat.Component;
 
-public class EnergyVacuumDescProcedure {
+public class SunBatteryDescProcedure {
 	public static String execute() {
-		return "\u00A7e\u00A7o" + Component.translatable("battery.desc.energy").getString();
+		return "\u00A7e\u00A7o" + Component.translatable("battery.desc.sun").getString();
 	}
 }

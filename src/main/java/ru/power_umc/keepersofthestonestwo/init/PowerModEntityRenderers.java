@@ -21,6 +21,7 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.IceAttackProjectileRen
 import ru.power_umc.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
@@ -65,5 +66,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.LIGHTBALL_PROJECTILE.get(), LightballProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
 	}
 }

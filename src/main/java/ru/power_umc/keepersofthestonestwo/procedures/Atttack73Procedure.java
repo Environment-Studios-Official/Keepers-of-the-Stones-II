@@ -10,7 +10,7 @@ public class Atttack73Procedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 73;
+			String _setval = "vacuum_attack_1";
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.attack = _setval;
 				capability.syncPlayerVariables(entity);

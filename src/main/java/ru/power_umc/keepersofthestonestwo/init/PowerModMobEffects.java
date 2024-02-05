@@ -8,6 +8,7 @@ import ru.power_umc.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.WaterMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.TornadoMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.SunMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.StunMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.ShadowMasterMobEffect;
@@ -62,4 +63,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> VACUUM_MASTER = REGISTRY.register("vacuum_master", () -> new VacuumMasterMobEffect());
 	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
 	public static final RegistryObject<MobEffect> ENERGY_MASTER = REGISTRY.register("energy_master", () -> new EnergyMasterMobEffect());
+	public static final RegistryObject<MobEffect> SUN_MASTER = REGISTRY.register("sun_master", () -> new SunMasterMobEffect());
 }

@@ -1,0 +1,28 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.LIGHT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 11.0,
+    "knockback": 0,
+    "entityModel": "Modelether_bullet",
+    "customModelTexture": "energy_charge.png",
+    "onHitsBlock": {
+      "name": "EnergyChargeExplode"
+    },
+    "onHitsEntity": {
+      "name": "EnergyChargeExplode"
+    },
+    "onFlyingTick": {
+      "name": "EnergyChargeTick"
+    }
+  }
+}

@@ -22,6 +22,7 @@ import ru.power_umc.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
+import ru.power_umc.keepersofthestonestwo.entity.EnergyChargeEntity;
 import ru.power_umc.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
@@ -111,6 +112,8 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<SphereNothingProjectileEntity>> SPHERE_NOTHING_PROJECTILE = register("projectile_sphere_nothing_projectile",
 			EntityType.Builder.<SphereNothingProjectileEntity>of(SphereNothingProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(SphereNothingProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EnergyChargeEntity>> ENERGY_CHARGE = register("projectile_energy_charge",
+			EntityType.Builder.<EnergyChargeEntity>of(EnergyChargeEntity::new, MobCategory.MISC).setCustomClientFactory(EnergyChargeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
