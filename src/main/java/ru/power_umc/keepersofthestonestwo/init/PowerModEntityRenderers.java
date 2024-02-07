@@ -8,6 +8,7 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.WaterAttackProjectileR
 import ru.power_umc.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SphereNothingProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
+import ru.power_umc.keepersofthestonestwo.client.renderer.SolarSalvoRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
@@ -67,5 +68,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SOLAR_SALVO.get(), SolarSalvoRenderer::new);
 	}
 }
