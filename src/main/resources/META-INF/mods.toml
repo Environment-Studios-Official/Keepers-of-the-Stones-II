@@ -21,7 +21,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 
 
 [[dependencies.power]]
-    modId="kleidersplayerrenderer"
+    modId="kleiders_custom_renderer"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"
