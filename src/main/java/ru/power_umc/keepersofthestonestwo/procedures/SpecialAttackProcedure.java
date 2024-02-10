@@ -9,7 +9,6 @@ import ru.power_umc.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import ru.power_umc.keepersofthestonestwo.entity.SoundBombProjectileEntity;
-import ru.power_umc.keepersofthestonestwo.entity.SolarSalvoEntity;
 import ru.power_umc.keepersofthestonestwo.entity.ShadowSphereEntity;
 import ru.power_umc.keepersofthestonestwo.entity.ShadowEntity;
 import ru.power_umc.keepersofthestonestwo.entity.PoisonousThornEntity;
@@ -3555,26 +3554,6 @@ public class SpecialAttackProcedure {
 			if (entity instanceof LivingEntity _livEnt843 && _livEnt843.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
-						{
-							Entity _shootFrom = entity;
-							Level projectileLevel = _shootFrom.level();
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new SolarSalvoEntity(PowerModEntities.SOLAR_SALVO.get(), level);
-										entityToSpawn.setOwner(shooter);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										entityToSpawn.setPierceLevel(piercing);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, entity, 9, 0, (byte) 1);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
-						}
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
