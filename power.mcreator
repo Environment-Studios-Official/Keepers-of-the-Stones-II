@@ -13423,6 +13423,21 @@
         ]
       },
       "path": "~/Elements/Ice"
+    },
+    {
+      "name": "LightSparkleStatic",
+      "type": "particle",
+      "sortid": 632,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_sparkle_static",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/particle/LightSparkleStaticParticle.java",
+          "src/main/resources/assets/power/particles/light_sparkle_static.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
     }
   ],
   "variable_elements": [
