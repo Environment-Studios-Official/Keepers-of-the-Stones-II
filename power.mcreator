@@ -12820,50 +12820,6 @@
       "path": "~/Modules/RechargeStoneModule"
     },
     {
-      "name": "UpdateCPAPIWhenJoinInGame",
-      "type": "procedure",
-      "sortid": 605,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "update_cpapi_when_join_in_game",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/UpdateCPAPIWhenJoinInGameProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/CPAPIModule"
-    },
-    {
-      "name": "CPAPICheck",
-      "type": "procedure",
-      "sortid": 606,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cpapi_check",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CPAPICheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/Commands"
-    },
-    {
       "name": "EnergyChargeExplode",
       "type": "procedure",
       "sortid": 607,
@@ -13806,12 +13762,6 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "cpapi_version",
-      "type": "number",
-      "scope": "map",
-      "value": "2.0"
     }
   ],
   "sound_elements": [
