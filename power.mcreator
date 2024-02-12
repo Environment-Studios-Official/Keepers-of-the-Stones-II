@@ -14958,7 +14958,6 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
-      "bettercombat",
       "geckolib",
       "playeranimator",
       "cloth-config"
