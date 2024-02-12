@@ -10,6 +10,20 @@ dependencies {
 
 
 repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
+   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
+}
+
+
+repositories {
   maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }

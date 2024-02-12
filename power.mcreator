@@ -14958,11 +14958,12 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "bettercombat",
       "geckolib",
       "playeranimator",
       "cloth-config"
     ],
-    "currentGenerator": "neoforge-1.20.1",
+    "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
     "lockBaseModFiles": false
