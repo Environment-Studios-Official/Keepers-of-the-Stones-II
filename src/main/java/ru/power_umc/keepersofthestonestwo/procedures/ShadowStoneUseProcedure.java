@@ -16,6 +16,13 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.player.AbstractClientPlayer;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 public class ShadowStoneUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -38,6 +45,14 @@ public class ShadowStoneUseProcedure {
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = 100;
 					_vars.syncPlayerVariables(entity);
+				}
+				if (world.isClientSide()) {
+					if (entity instanceof AbstractClientPlayer player) {
+						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
+						if (animation != null && !animation.isActive()) {
+							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.transformation"))));
+						}
+					}
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

@@ -8,6 +8,9 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SetupAnimationsProcedure.java"
+        ],
         "dependencies": []
       },
       "path": "~/Modules/BasicModule"
@@ -13838,8 +13841,8 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Захват торнадо, расходует 30",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
-      "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
+      "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.smithing_template.applies_to": "§7Применяется к:",
       "item.power.earth_hammer": "Земляной молот",
       "item.power.sun_battery": "Батарея",
@@ -13855,9 +13858,9 @@
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
-      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
-      "item.power.earth_battery": "Батарея",
       "power.modinfo.recharge_stone.seconds": " секунд",
+      "item.power.earth_battery": "Батарея",
+      "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -14181,8 +14184,8 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
-      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
+      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.smithing_template.applies_to": "",
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.sun_battery": "Battery",
@@ -14199,9 +14202,9 @@
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "power.modinfo.recharge_stone.seconds": " seconds",
-      "item.power.earth_battery": "Battery",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.earth_battery": "Battery",
+      "power.modinfo.recharge_stone.seconds": " seconds",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -14980,12 +14983,16 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [],
+    "requiredMods": [
+      "playeranimator"
+    ],
     "dependencies": [
       "bettercombat"
     ],
     "dependants": [],
-    "mcreatorDependencies": [],
+    "mcreatorDependencies": [
+      "playeranimator"
+    ],
     "currentGenerator": "neoforge-1.20.4",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
