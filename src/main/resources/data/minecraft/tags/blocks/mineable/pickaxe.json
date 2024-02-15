@@ -2,9 +2,9 @@
   "replace": false,
   "values": [
     "power:keepers_box",
-    "power:depleted_energium_ore",
-    "power:depleted_energium_block",
+    "power:battery_charger",
     "power:energium_block",
-    "power:battery_charger"
+    "power:depleted_energium_block",
+    "power:depleted_energium_ore"
   ]
 }

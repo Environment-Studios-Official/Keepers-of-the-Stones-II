@@ -4,7 +4,8 @@ import ru.power_umc.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
 import ru.power_umc.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import ru.power_umc.keepersofthestonestwo.network.WheelAbilitiesSunButtonMessage;
-import ru.power_umc.keepersofthestonestwo.PowerMod;
+
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
@@ -12,6 +13,7 @@ import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.components.Button;
 import net.minecraft.client.gui.GuiGraphics;
@@ -45,7 +47,7 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 	}
@@ -71,11 +73,6 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 	}
 
@@ -89,7 +86,7 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		super.init();
 		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_sun.button_1"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(0, x, y, z));
+				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(0, x, y, z));
 				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 80, this.topPos + 26, 30, 20).build();
@@ -97,7 +94,7 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		this.addRenderableWidget(button_1);
 		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_sun.button_2"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(1, x, y, z));
+				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(1, x, y, z));
 				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 141, this.topPos + 86, 30, 20).build();
@@ -105,50 +102,53 @@ public class WheelAbilitiesSunScreen extends AbstractContainerScreen<WheelAbilit
 		this.addRenderableWidget(button_2);
 		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_sun.button_3"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(2, x, y, z));
+				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(2, x, y, z));
 				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 79, this.topPos + 147, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(3, x, y, z));
-				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 3, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+					if (GetWheelTwoProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(3, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelTwoProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(4, x, y, z));
-				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 4, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+					if (GetWheelTwoProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(4, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelTwoProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
-			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSunButtonMessage(5, x, y, z));
-				WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 5, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+					if (GetWheelThreeProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSunButtonMessage(5, x, y, z));
+						WheelAbilitiesSunButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelThreeProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);

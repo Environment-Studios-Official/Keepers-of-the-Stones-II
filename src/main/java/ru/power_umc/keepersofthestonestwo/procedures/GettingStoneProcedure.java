@@ -5,11 +5,11 @@ import ru.power_umc.keepersofthestonestwo.init.PowerModItems;
 import ru.power_umc.keepersofthestonestwo.init.PowerModGameRules;
 import ru.power_umc.keepersofthestonestwo.PowerMod;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -36,25 +36,23 @@ public class GettingStoneProcedure {
 			return;
 		double random = 0;
 		if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.STONE_DISTRIBUTION) == true) {
-			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
-				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
+			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active) {
+				if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).selected) {
 					random = Mth.nextInt(RandomSource.create(), 1, 20);
 					if (random == 1) {
 						if (!PowerModVariables.MapVariables.get(world).fire_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).fire_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -65,18 +63,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).air_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).air_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -87,18 +83,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).earth_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).earth_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -109,18 +103,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).water_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).water_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -131,18 +123,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).ether_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).ether_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -153,18 +143,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).ice_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).ice_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -175,18 +163,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).lightning_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).lightning_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -197,18 +183,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).sound_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).sound_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -219,18 +203,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).crystal_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).crystal_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -241,18 +223,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).lava_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).lava_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -263,18 +243,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).rain_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).rain_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -285,18 +263,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).tornado_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).tornado_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -307,18 +283,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).ocean_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).tornado_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -329,18 +303,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).plants_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).plants_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -351,18 +323,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).animals_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).animals_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -373,18 +343,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).metal_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).metal_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -395,18 +363,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).light_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).light_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -417,18 +383,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).shadow_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).shadow_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -439,18 +403,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).vacuum_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).vacuum_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -461,18 +423,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).energy_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).energy_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {
@@ -483,18 +443,16 @@ public class GettingStoneProcedure {
 						if (!PowerModVariables.MapVariables.get(world).sun_stone) {
 							PowerMod.queueServerWork(1, () -> {
 								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+									ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 									_setstack.setCount(1);
 									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 								}
 								PowerModVariables.MapVariables.get(world).sun_stone = true;
 								PowerModVariables.MapVariables.get(world).syncData(world);
 								{
-									boolean _setval = true;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.selected = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.selected = true;
+									_vars.syncPlayerVariables(entity);
 								}
 							});
 						} else {

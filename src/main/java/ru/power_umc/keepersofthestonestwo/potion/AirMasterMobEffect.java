@@ -3,9 +3,7 @@ package ru.power_umc.keepersofthestonestwo.potion;
 
 import ru.power_umc.keepersofthestonestwo.procedures.EnhancedAbilitiesProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.AirMasterStartProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.AirMasterEndProcedure;
 
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
@@ -21,23 +19,17 @@ public class AirMasterMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+	public void onEffectStarted(LivingEntity entity, int amplifier) {
 		AirMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+	}
+
+	@Override
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+		return true;
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		EnhancedAbilitiesProcedure.execute(entity);
-	}
-
-	@Override
-	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		AirMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
 	}
 }

@@ -3,8 +3,8 @@ package ru.power_umc.keepersofthestonestwo.item;
 
 import ru.power_umc.keepersofthestonestwo.procedures.ShadowScytheKazhdyiTikVInvientarieProcedure;
 
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -30,7 +30,7 @@ public class ShadowScytheItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 9.47f;
+				return 7.47f;
 			}
 
 			public int getLevel() {
@@ -48,8 +48,8 @@ public class ShadowScytheItem extends SwordItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
 	}
 
 	@Override

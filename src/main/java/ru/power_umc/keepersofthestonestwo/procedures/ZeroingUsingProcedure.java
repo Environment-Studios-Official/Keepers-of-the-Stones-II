@@ -2,10 +2,10 @@ package ru.power_umc.keepersofthestonestwo.procedures;
 
 import ru.power_umc.keepersofthestonestwo.network.PowerModVariables;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.GameRules;
@@ -27,14 +27,12 @@ public class ZeroingUsingProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).zeroing) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).zeroing) {
 			world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(false, world.getServer());
 			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.zeroing = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.zeroing = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

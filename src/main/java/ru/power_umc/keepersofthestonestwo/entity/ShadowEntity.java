@@ -1,11 +1,9 @@
 
 package ru.power_umc.keepersofthestonestwo.entity;
 
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.server.level.ServerPlayer;
 import ru.power_umc.keepersofthestonestwo.init.PowerModEntities;
-
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
 
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
@@ -41,11 +39,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-public class ShadowEntity extends TamableAnimal {
-	public ShadowEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.SHADOW.get(), world);
-	}
+import java.nio.channels.NetworkChannel;
 
+public class ShadowEntity extends TamableAnimal {
 	public ShadowEntity(EntityType<ShadowEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
@@ -55,16 +51,10 @@ public class ShadowEntity extends TamableAnimal {
 	}
 
 	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected void registerGoals() {
 		super.registerGoals();
 		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4, false));
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
-			@Override
 			protected double getAttackReachSqr(LivingEntity entity) {
 				return this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth();
 			}
@@ -87,19 +77,18 @@ public class ShadowEntity extends TamableAnimal {
 		return false;
 	}
 
-	@Override
 	public double getMyRidingOffset() {
 		return -0.35D;
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.zombie.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.death"));
 	}
 
 	@Override
@@ -151,7 +140,7 @@ public class ShadowEntity extends TamableAnimal {
 				}
 			} else if (this.isFood(itemstack)) {
 				this.usePlayerItem(sourceentity, hand, itemstack);
-				if (this.random.nextInt(3) == 0 && !net.minecraftforge.event.ForgeEventFactory.onAnimalTame(this, sourceentity)) {
+				if (this.random.nextInt(3) == 0 && !net.neoforged.neoforge.event.EventHooks.onAnimalTame(this, sourceentity)) {
 					this.tame(sourceentity);
 					this.level().broadcastEntityEvent(this, (byte) 7);
 				} else {

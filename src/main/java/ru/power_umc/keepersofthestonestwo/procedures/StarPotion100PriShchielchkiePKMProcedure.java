@@ -9,11 +9,9 @@ public class StarPotion100PriShchielchkiePKMProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 100;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.power = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 100;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

@@ -8,9 +8,6 @@
       "locked_code": false,
       "registry_name": "setup_animations",
       "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SetupAnimationsProcedure.java"
-        ],
         "dependencies": []
       },
       "path": "~/Modules/BasicModule"
@@ -429,7 +426,7 @@
       "type": "procedure",
       "sortid": 79,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "special_attack",
       "metadata": {
         "files": [
@@ -4545,20 +4542,6 @@
         ]
       },
       "path": "~/Elements/Crystal"
-    },
-    {
-      "name": "ElementalStones",
-      "type": "tag",
-      "sortid": 256,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_stones",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/items/elemental_stones.json"
-        ]
-      },
-      "path": "~/Tags"
     },
     {
       "name": "RainStone",
@@ -10575,7 +10558,7 @@
       "type": "livingentity",
       "sortid": 61,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "shadow",
       "metadata": {
         "files": [
@@ -10625,7 +10608,7 @@
         "files": [
           "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json",
           "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
-          "src/main/resources/data/power/forge/biome_modifier/depleted_energium_ore_biome_modifier.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json",
           "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
           "src/main/resources/data/power/worldgen/placed_feature/depleted_energium_ore.json",
           "src/main/java/ru/power_umc/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
@@ -11716,20 +11699,6 @@
         ]
       },
       "path": "~/Items/Energium"
-    },
-    {
-      "name": "ElementalBatteries",
-      "type": "tag",
-      "sortid": 557,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_batteries",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/items/elemental_batteries.json"
-        ]
-      },
-      "path": "~/Tags"
     },
     {
       "name": "VacuumDagger",
@@ -13356,9 +13325,6 @@
       "locked_code": false,
       "registry_name": "frozen_event_renderer",
       "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FrozenEventRendererProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "entity",
@@ -13786,14 +13752,94 @@
       "subtitle": "Ear ringing"
     }
   ],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:KeepersBox",
+      "~CUSTOM:BatteryCharger",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:forge:elemental_batteries": [
+      "CUSTOM:EmptyBattery",
+      "CUSTOM:FireBattery",
+      "CUSTOM:AirBattery",
+      "CUSTOM:EarthBattery",
+      "CUSTOM:WaterBattery",
+      "CUSTOM:EtherBattery",
+      "CUSTOM:IceBattery",
+      "CUSTOM:LightningBattery",
+      "CUSTOM:SoundBattery",
+      "CUSTOM:CrystalBattery",
+      "CUSTOM:LavaBattery",
+      "CUSTOM:RainBattery",
+      "CUSTOM:TornadoBattery",
+      "CUSTOM:OceanBattery",
+      "CUSTOM:PlantsBattery",
+      "CUSTOM:AnimalsBattery",
+      "CUSTOM:MetalBattery",
+      "CUSTOM:LightBattery",
+      "CUSTOM:ShadowBattery",
+      "CUSTOM:VacuumBattery"
+    ],
+    "ITEMS:forge:elemental_stones": [
+      "CUSTOM:FireStone",
+      "CUSTOM:AirStone",
+      "CUSTOM:EarthStone",
+      "CUSTOM:WaterStone",
+      "CUSTOM:EtherStone",
+      "CUSTOM:IceStone",
+      "CUSTOM:LightningStone",
+      "CUSTOM:SoundStone",
+      "CUSTOM:CrystalStone",
+      "CUSTOM:RainStone",
+      "CUSTOM:TornadoStone",
+      "CUSTOM:OceanStone",
+      "CUSTOM:PlantsStone",
+      "CUSTOM:AnimalsStone",
+      "CUSTOM:MetalStone",
+      "CUSTOM:LightStone",
+      "CUSTOM:ShadowStone",
+      "CUSTOM:VacuumStone",
+      "CUSTOM:SunStone",
+      "CUSTOM:MoonStone",
+      "CUSTOM:SpaceStone",
+      "CUSTOM:TimeStone",
+      "CUSTOM:BloodStone",
+      "CUSTOM:TechnologyStone",
+      "CUSTOM:TeleportationStone",
+      "CUSTOM:ExplosionStone",
+      "CUSTOM:AmberStone",
+      "CUSTOM:CreationStone",
+      "CUSTOM:DestructionStone",
+      "CUSTOM:MistStone",
+      "CUSTOM:SandStone",
+      "CUSTOM:SpeedStone",
+      "CUSTOM:PoisonStone",
+      "CUSTOM:MagnetStone",
+      "CUSTOM:MushroomsStone",
+      "CUSTOM:MercuryStone",
+      "CUSTOM:MusicStone",
+      "CUSTOM:PlagueStone",
+      "CUSTOM:BlueFlameStone",
+      "CUSTOM:GravityStone",
+      "CUSTOM:SmokeStone",
+      "CUSTOM:FormStone",
+      "CUSTOM:MindStone",
+      "CUSTOM:GoldenDustStone",
+      "CUSTOM:DarknessStone",
+      "CUSTOM:EnergyStone",
+      "CUSTOM:SpiritStone"
+    ]
+  },
   "language_map": {
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Захват торнадо, расходует 30",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
-      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
+      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
       "item.power.smithing_template.applies_to": "§7Применяется к:",
       "item.power.earth_hammer": "Земляной молот",
       "item.power.sun_battery": "Батарея",
@@ -13809,9 +13855,9 @@
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
-      "power.modinfo.recharge_stone.seconds": " секунд",
-      "item.power.earth_battery": "Батарея",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "item.power.earth_battery": "Батарея",
+      "power.modinfo.recharge_stone.seconds": " секунд",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -14135,8 +14181,8 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
-      "item.power.tornado_armor_helmet": "Tornado Helmet",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
+      "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.smithing_template.applies_to": "",
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.sun_battery": "Battery",
@@ -14153,9 +14199,9 @@
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
-      "item.power.earth_battery": "Battery",
       "power.modinfo.recharge_stone.seconds": " seconds",
+      "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -14932,29 +14978,18 @@
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
     "license": "GNU General Public License version 3 (GPLv3)",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "logo",
-    "requiredMods": [
-      "kleiders_custom_renderer",
-      "geckolib",
-      "playeranimator"
-    ],
+    "requiredMods": [],
     "dependencies": [
       "bettercombat"
     ],
     "dependants": [],
-    "mcreatorDependencies": [
-      "kleidersplayerrenderer",
-      "bettercombat",
-      "geckolib",
-      "playeranimator",
-      "cloth-config"
-    ],
-    "currentGenerator": "forge-1.20.1",
+    "mcreatorDependencies": [],
+    "currentGenerator": "neoforge-1.20.4",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "ru.power_umc.keepersofthestonestwo",
     "lockBaseModFiles": false
   },
-  "mcreatorVersion": 202300452316
+  "mcreatorVersion": 202400106500
 }

@@ -30,10 +30,10 @@ import ru.power_umc.keepersofthestonestwo.client.renderer.BallLightningProjectil
 import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import ru.power_umc.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 

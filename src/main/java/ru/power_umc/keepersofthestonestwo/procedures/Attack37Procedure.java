@@ -10,11 +10,9 @@ public class Attack37Procedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "lava_attack_1";
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.attack = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.attack = "lava_attack_1";
+			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

@@ -8,6 +8,6 @@ public class GetWheelTwoProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second > 0;
+		return entity.getData(PowerModVariables.PLAYER_VARIABLES).element_id_second > 0;
 	}
 }

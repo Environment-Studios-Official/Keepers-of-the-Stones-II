@@ -30,7 +30,7 @@ public class EnergiumSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 12f;
+				return 10f;
 			}
 
 			public int getLevel() {
@@ -55,8 +55,8 @@ public class EnergiumSwordItem extends SwordItem {
 	}
 
 	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
+	public void appendHoverText(ItemStack itemstack, Level level, List<Component> list, TooltipFlag flag) {
+		super.appendHoverText(itemstack, level, list, flag);
 	}
 
 	@Override

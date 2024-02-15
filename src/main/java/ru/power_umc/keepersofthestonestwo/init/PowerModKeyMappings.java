@@ -7,15 +7,15 @@ package ru.power_umc.keepersofthestonestwo.init;
 import ru.power_umc.keepersofthestonestwo.network.DetransformationKeyMessage;
 import ru.power_umc.keepersofthestonestwo.network.AbilityWheelOpeningkeyMessage;
 import ru.power_umc.keepersofthestonestwo.network.AbilityUsingKeyMessage;
-import ru.power_umc.keepersofthestonestwo.PowerMod;
 
 import org.lwjgl.glfw.GLFW;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.TickEvent;
-import net.minecraftforge.client.event.RegisterKeyMappingsEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.KeyMapping;
@@ -29,7 +29,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PowerMod.PACKET_HANDLER.sendToServer(new DetransformationKeyMessage(0, 0));
+				PacketDistributor.SERVER.noArg().send(new DetransformationKeyMessage(0, 0));
 				DetransformationKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -42,7 +42,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PowerMod.PACKET_HANDLER.sendToServer(new AbilityWheelOpeningkeyMessage(0, 0));
+				PacketDistributor.SERVER.noArg().send(new AbilityWheelOpeningkeyMessage(0, 0));
 				AbilityWheelOpeningkeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -55,7 +55,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PowerMod.PACKET_HANDLER.sendToServer(new AbilityUsingKeyMessage(0, 0));
+				PacketDistributor.SERVER.noArg().send(new AbilityUsingKeyMessage(0, 0));
 				AbilityUsingKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
