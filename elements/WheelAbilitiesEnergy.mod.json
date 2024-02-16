@@ -138,6 +138,9 @@
           "name": "imagebutton_energy_charged_ball",
           "image": "energy_charged_ball.png",
           "hoveredImage": "energy_charged_ball_highlight.png",
+          "onClick": {
+            "name": "Attack78"
+          },
           "x": 251,
           "y": 97
         }

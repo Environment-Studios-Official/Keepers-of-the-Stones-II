@@ -8,6 +8,8 @@ public class GetPowerScaleProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "" + Math.round((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power);
+		return "" + ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power > 9999
+				? "\u221E"
+				: Math.round((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power));
 	}
 }

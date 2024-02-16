@@ -151,6 +151,10 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_energy_charge", imagebutton_energy_charge);
 		this.addRenderableWidget(imagebutton_energy_charge);
 		imagebutton_energy_charged_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_energy_charged_ball.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEnergyButtonMessage(5, x, y, z));
+				WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
 		});
 		guistate.put("button:imagebutton_energy_charged_ball", imagebutton_energy_charged_ball);
 		this.addRenderableWidget(imagebutton_energy_charged_ball);

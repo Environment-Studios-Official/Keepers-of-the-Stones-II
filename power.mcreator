@@ -268,18 +268,6 @@
             "type": "entity"
           },
           {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
             "name": "world",
             "type": "world"
           }
@@ -11813,7 +11801,7 @@
       "type": "item",
       "sortid": 32,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "energium_upgrade_smithing_template",
       "metadata": {
         "files": [
@@ -12820,50 +12808,6 @@
       "path": "~/Modules/RechargeStoneModule"
     },
     {
-      "name": "UpdateCPAPIWhenJoinInGame",
-      "type": "procedure",
-      "sortid": 605,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "update_cpapi_when_join_in_game",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/UpdateCPAPIWhenJoinInGameProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/CPAPIModule"
-    },
-    {
-      "name": "CPAPICheck",
-      "type": "procedure",
-      "sortid": 606,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cpapi_check",
-      "metadata": {
-        "files": [
-          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/CPAPICheckProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/Commands"
-    },
-    {
       "name": "EnergyChargeExplode",
       "type": "procedure",
       "sortid": 607,
@@ -13348,6 +13292,96 @@
         "dependencies": []
       },
       "path": "~/Items/Batteries/EnergyBattery"
+    },
+    {
+      "name": "SolarBlade",
+      "type": "tool",
+      "sortid": 628,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_blade",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/SolarBladeItem.java",
+          "src/main/resources/assets/power/models/item/solar_blade.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "SolarBladeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 629,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_blade_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SolarBladeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "SolarSalvoKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 630,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "solar_salvo_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/SolarSalvoKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sun"
+    },
+    {
+      "name": "FrozenEventRenderer",
+      "type": "procedure",
+      "sortid": 631,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_event_renderer",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/FrozenEventRendererProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "LightSparkleStatic",
+      "type": "particle",
+      "sortid": 632,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_sparkle_static",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/particle/LightSparkleStaticParticle.java",
+          "src/main/resources/assets/power/particles/light_sparkle_static.json"
+        ]
+      },
+      "path": "~/Elements/Sun"
     }
   ],
   "variable_elements": [
@@ -13700,30 +13734,6 @@
       "value": "false"
     },
     {
-      "name": "armor_helmet",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_chestplate",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_leggings",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
-      "name": "armor_boots",
-      "type": "itemstack",
-      "scope": "player_lifetime",
-      "value": "ItemStack.EMPTY"
-    },
-    {
       "name": "ability_block",
       "type": "logic",
       "scope": "player_lifetime",
@@ -13740,18 +13750,6 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
-    },
-    {
-      "name": "cpapi_version",
-      "type": "number",
-      "scope": "map",
-      "value": "2.0"
-    },
-    {
-      "name": "element_name",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "0"
     }
   ],
   "sound_elements": [
@@ -13796,6 +13794,7 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
+      "item.power.smithing_template.applies_to": "§7Применяется к:",
       "item.power.earth_hammer": "Земляной молот",
       "item.power.sun_battery": "Батарея",
       "effect.power.sound_master": "Мастер звука",
@@ -13826,6 +13825,7 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "effect.power.rain_master": "Мастер дождя",
       "item.power.lava_hammer": "Лавовый молот",
+      "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
       "effect.power.crystal_master": "Мастер кристалла",
@@ -13844,11 +13844,10 @@
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
-      "gui.power.wheel_abilities_sun.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.sun_armor_helmet": "Шлем мастера солнца",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
-      "effect.power.whirlwind": "Whirlwind",
+      "effect.power.whirlwind": "Вихрь",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Океаническое течение, расходует 10",
       "item.power.tornado_stone": "Камень торнадо",
       "battery.desc.sun": "Солнце",
@@ -13859,11 +13858,8 @@
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "battery.desc.plants": "Зелень",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
-      "gui.power.wheel_abilities_metal.button_3": "3",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
-      "item.power.earth_shield": "Earth Shield",
-      "gui.power.wheel_abilities_metal.button_2": "2",
-      "gui.power.wheel_abilities_metal.button_1": "1",
+      "item.power.earth_shield": "Щит земли",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
       "effect.power.shadow_master": "Мастер тени",
       "item.power.vacuum_battery": "Батарея",
@@ -13896,30 +13892,25 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
-      "gui.power.wheel_abilities_ocean.button_3": "3",
-      "gui.power.wheel_abilities_ocean.button_2": "2",
-      "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
-      "item.power.energy_staff": "Посох Энергии",
-      "gui.power.wheel_abilities_animals.button_3": "3",
+      "item.power.energy_staff": "Посох энергии",
       "battery.desc.tornado": "Торнадо",
       "item.power.animals_battery": "Батарея",
       "item.power.energium_pickaxe": "Энерджиумная кирка",
       "item.power.energium_axe": "Энерджиумный топор",
       "effect.power.ether_master": "Мастер эфира",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
-      "gui.power.wheel_abilities_animals.button_1": "1",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
-      "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "battery.desc.rain": "Дождь",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
+      "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.metal_armor_leggings": "Поножи мастера металла",
       "item.power.fire_stone": "Камень огня",
       "battery.desc.shadow": "Тень",
@@ -13936,7 +13927,6 @@
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
-      "gui.power.wheel_abilities_sun.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "battery.desc.energy": "Энергия",
@@ -13963,7 +13953,6 @@
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
-      "gui.power.wheel_abilities_sun.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.fire_battery": "Батарея",
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
@@ -14019,6 +14008,7 @@
       "gui.power.wheel_abilities_sun.button_3": "3",
       "item.power.magnet_stone": "Камень магнита",
       "gui.power.wheel_abilities_sun.button_1": "1",
+      "item.power.energium_upgrade_smithing_template.upgrade": "§7Энерджиумное улучшение",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
@@ -14035,14 +14025,11 @@
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Обнуление, расходует 100",
       "item.power.magic_fireball": "Волшебный файрболл",
       "item.power.smoke_stone": "Камень дыма",
-      "gui.power.wheel_abilities_shadow.button_1": "1",
       "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
       "item.power.crystal_stone": "Камень кристалла",
       "battery.desc.air": "Воздух",
-      "gui.power.wheel_abilities_shadow.button_2": "2",
       "item.power.rain_battery": "Батарея",
-      "gui.power.wheel_abilities_shadow.button_3": "3",
       "battery.desc.animals": "Животные",
       "item.power.technology_stone": "Камень технологий",
       "effect.power.air_master": "Мастер воздуха",
@@ -14062,6 +14049,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_beam_uses_10": "Световой луч, расходует 10",
       "item.power.rain_stone": "Камень дождя",
       "power.modinfo.actual_version": "§9[Keepers of the Stones II]§r У вас установлена актуальная версия мода!",
+      "item.power.solar_blade": "Солнечное лезвие",
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Шаровая молния, расходует 80",
       "item.power.animals_halberd": "Алебарда животных",
       "item.power.energium_ingot": "Слиток энерджиума",
@@ -14084,6 +14072,7 @@
       "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "item.power.mind_stone": "Камень разума",
+      "item.power.energium_upgrade_smithing_template.ingredients": " §9Редстоун",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
       "item.power.rain_bow": "Дождевой Лук",
       "gamerule.stoneDistribution.description": "Раздача камней при входе игроков в игру. По умолчанию включена.",
@@ -14098,7 +14087,7 @@
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.ice_battery": "Батарея",
-      "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
+      "gamerule.stoneDistribution": "Раздача камней при входе на сервер",
       "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
       "item.power.sand_stone": "Камень песка",
@@ -14130,11 +14119,8 @@
       "item.power.ocean_stone": "Камень океана",
       "item.power.mist_stone": "Камень тумана",
       "effect.power.animals_master": "Мастер животных",
-      "gui.power.wheel_abilities_tornado.button_3": "3",
       "item.power.light_armor_leggings": "Поножи мастера света",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
-      "gui.power.wheel_abilities_tornado.button_2": "2",
-      "gui.power.wheel_abilities_tornado.button_1": "1",
       "battery.desc.empty": "Пустая",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Разломы, расходует 45",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80",
@@ -14151,8 +14137,10 @@
       "item.power.ether_stone": "Ether Stone",
       "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
+      "item.power.smithing_template.applies_to": "",
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.sun_battery": "Battery",
+      "item.power.energium_upgrade_smithing_template.name_upgrade": "§7Energium Upgrade",
       "effect.power.sound_master": "Master of Sound",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
@@ -14176,11 +14164,12 @@
       "item_group.power.items": "KotS: Items",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
-      "battery.desc.ice": "Ice",
-      "item.power.animals_armor_boots": "Animals Boots",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
+      "item.power.animals_armor_boots": "Animals Boots",
+      "battery.desc.ice": "Ice",
       "effect.power.rain_master": "Master of the Rain",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
       "effect.power.crystal_master": "Master of the Crystal",
@@ -14199,7 +14188,6 @@
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
-      "gui.power.wheel_abilities_sun.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.sun_armor_helmet": "Sun Helmet",
       "effect.power.whirlwind": "Whirlwind",
       "effect.power.stun": "Stun",
@@ -14213,12 +14201,9 @@
       "item.power.rain_armor_leggings": "Rain Leggings",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "battery.desc.plants": "Plants",
-      "gui.power.wheel_abilities_metal.button_3": "3",
       "item.power.ocean_armor_boots": "Ocean Boots",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "item.power.earth_shield": "Earth Shield",
-      "gui.power.wheel_abilities_metal.button_2": "2",
-      "gui.power.wheel_abilities_metal.button_1": "1",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "effect.power.shadow_master": "Master of Shadow",
       "item.power.vacuum_battery": "Battery",
@@ -14251,30 +14236,25 @@
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
       "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
-      "gui.power.wheel_abilities_ocean.button_3": "3",
-      "gui.power.wheel_abilities_ocean.button_2": "2",
-      "gui.power.wheel_abilities_ocean.button_1": "1",
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
       "item.power.energy_staff": "Energy Staff",
-      "gui.power.wheel_abilities_animals.button_3": "3",
       "battery.desc.tornado": "Tornado",
       "item.power.animals_battery": "Battery",
       "item.power.energium_pickaxe": "Energium Pickaxe",
       "item.power.energium_axe": "Energium Axe",
       "effect.power.ether_master": "Master of the Ether",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_animals.button_1": "1",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "item.power.fire_armor_boots": "Fire Boots",
-      "gui.power.wheel_abilities_animals.button_2": "2",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "battery.desc.rain": "Rain",
       "item.power.energium_armor_helmet": "Energium Helmet",
       "item.power.plants_armor_boots": "Plants Boots",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.tornado_armor_boots": "Tornado Boots",
+      "item.power.smithing_template.ingredients": "",
       "item.power.metal_armor_leggings": "Metal Leggings",
       "item.power.fire_stone": "Fire Stone",
       "battery.desc.shadow": "Shadow",
@@ -14291,7 +14271,6 @@
       "item.power.lava_armor_leggings": "Lava Leggings",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
-      "gui.power.wheel_abilities_sun.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "battery.desc.energy": "Energy",
@@ -14318,7 +14297,6 @@
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.rain_armor_helmet": "Rain Helmet",
-      "gui.power.wheel_abilities_sun.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.fire_battery": "Battery",
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
@@ -14390,14 +14368,11 @@
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Zeroing out, uses 100",
       "item.power.magic_fireball": "Magic Fireball",
       "item.power.smoke_stone": "Smoke Stone",
-      "gui.power.wheel_abilities_shadow.button_1": "1",
       "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
       "item.power.crystal_stone": "Crystal Stone",
       "battery.desc.air": "Air",
-      "gui.power.wheel_abilities_shadow.button_2": "2",
       "item.power.rain_battery": "Battery",
-      "gui.power.wheel_abilities_shadow.button_3": "3",
       "battery.desc.animals": "Animals",
       "item.power.technology_stone": "Technology Stone",
       "effect.power.air_master": "Master of the Air",
@@ -14417,6 +14392,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_beam_uses_10": "Light beam, uses 10",
       "item.power.rain_stone": "Rain Stone",
       "power.modinfo.actual_version": "§9[Keepers of the Stones II]§r You have the latest version of the mod installed!",
+      "item.power.solar_blade": "Solar Blade",
       "gui.power.wheel_abilities_lightning.tooltip_ball_lightning_uses_80": "Ball lightning, uses 80",
       "item.power.animals_halberd": "Animals Halberd",
       "item.power.energium_ingot": "Energium Ingot",
@@ -14439,6 +14415,7 @@
       "item.power.energy_armor_chestplate": "Energy Chestplate",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
       "item.power.mind_stone": "Mind Stone",
+      "item.power.energium_upgrade_smithing_template.ingredients": "§9Redstone",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
       "item.power.rain_bow": "Rain Bow",
       "gamerule.stoneDistribution.description": "Distribution of stones when players enter the game. Enabled by default.",
@@ -14485,11 +14462,8 @@
       "item.power.ocean_stone": "Ocean Stone",
       "item.power.mist_stone": "Mist Stone",
       "effect.power.animals_master": "Master of Animals",
-      "gui.power.wheel_abilities_tornado.button_3": "3",
       "item.power.light_armor_leggings": "Light Leggings",
       "item.power.air_armor_boots": "Air Boots",
-      "gui.power.wheel_abilities_tornado.button_2": "2",
-      "gui.power.wheel_abilities_tornado.button_1": "1",
       "battery.desc.empty": "Empty",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Rifts, uses 45",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80",
@@ -14953,7 +14927,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.10",
+    "version": "1.0.0.11",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
@@ -14962,6 +14936,7 @@
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
+      "kleiders_custom_renderer",
       "geckolib",
       "playeranimator"
     ],
@@ -14970,10 +14945,10 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "bettercombat",
       "geckolib",
       "playeranimator",
-      "allmods",
       "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",

@@ -18,11 +18,11 @@ public class EnergiumUpgradeSmithingTemplateItem extends Item {
 	@Override
 	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
 		super.appendHoverText(itemstack, world, list, flag);
-		list.add(Component.literal("\u00A77Energium Upgrade"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.upgrade"));
 		list.add(Component.literal(""));
-		list.add(Component.literal("\u00A77Applies to:"));
-		list.add(Component.literal("\u00A79Depleted Energium"));
-		list.add(Component.literal("\u00A77Ingredients:"));
-		list.add(Component.literal("\u00A79Redstone"));
+		list.add(Component.translatable("item.power.smithing_template.applies_to"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.applies_to"));
+		list.add(Component.translatable("item.power.smithing_template.ingredients"));
+		list.add(Component.translatable("item.power.energium_upgrade_smithing_template.ingredients"));
 	}
 }

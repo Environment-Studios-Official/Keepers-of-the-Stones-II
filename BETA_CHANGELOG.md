@@ -1,6 +1,6 @@
-What's new in Keepers of the Stones II version 1.0.0.10?<br />
-<br />- Added new element - Energy
-<br />- Some abilities were rebalanced
-<br />- Removed dependency on Kleiders Custom Render
-<br />- [API] Updated Colorful Powers API to version 2
-<br />- [Bugfix] Fixed a bug that caused the stone to remain in the inventory with a weak Internet connection
+What's new in Keepers of the Stones II version 1.0.0.11?<br />
+<br />- The glow effect when activating the stone is now white
+<br />- [Bugfix] Fixed a bug that caused the second energy ability to fail
+<br />- [Bugfix] Fixed a bug where the second ability used 25 instead of 35 star points
+<br />- [Bugfix] Fixed a bug where the sound was not played at the end of the master effect
+<br />- [Bugfix] Fixed the location of the overlay with star points so that it is not covered by effects

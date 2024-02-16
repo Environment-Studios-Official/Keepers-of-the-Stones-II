@@ -23,7 +23,7 @@ import com.mojang.blaze3d.platform.GlStateManager;
 
 @Mod.EventBusSubscriber({Dist.CLIENT})
 public class PowerOverlayOverlay {
-	@SubscribeEvent(priority = EventPriority.NORMAL)
+	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
 		int w = event.getWindow().getGuiScaledWidth();
 		int h = event.getWindow().getGuiScaledHeight();
@@ -46,12 +46,12 @@ public class PowerOverlayOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
 			if (GetActiveProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), w - 69, 8, 0, 0, 59, 20, 59, 20);
+				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), w - 60, 28, 0, 0, 59, 20, 59, 20);
 			}
 			if (GetActiveProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						GetPowerScaleProcedure.execute(entity), w - 40, 15, -1, false);
+						GetPowerScaleProcedure.execute(entity), w - 31, 35, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
