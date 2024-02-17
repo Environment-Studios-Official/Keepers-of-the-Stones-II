@@ -13839,8 +13839,10 @@
       "item.power.spirit_stone": "Камень духа",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
+      "gui.power.wheel_abilities_sun.tooltip_sun_healing_uses_80": "Sun healing, uses 80",
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
+      "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
@@ -14080,6 +14082,7 @@
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
       "block.power.keepers_box": "Шкатулка хранителя",
+      "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "item.power.star_potion_500": "Звёздное зелье",
       "power.modinfo.recharge_stone.done": "Готов к использованию",
@@ -14183,8 +14186,10 @@
       "item.power.spirit_stone": "Spirit Stone",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
+      "gui.power.wheel_abilities_sun.tooltip_sun_healing_uses_80": "Sun healing, uses 80",
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
+      "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
@@ -14423,6 +14428,7 @@
       "item.power.vacuum_dagger": "Vacuum Dagger",
       "item.power.air_battery": "Battery",
       "block.power.keepers_box": "Keeper\u0027s Box",
+      "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
       "item.power.star_potion_500": "Star Potion",
       "power.modinfo.recharge_stone.done": "Ready to use",
@@ -14792,10 +14798,6 @@
           },
           {
             "name": "RechargeStoneModule",
-            "children": []
-          },
-          {
-            "name": "CPAPIModule",
             "children": []
           }
         ]
