@@ -58,6 +58,7 @@ import ru.power_umc.keepersofthestonestwo.item.OceanArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.MusicStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MushroomsStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MoonStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.MoonArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.MistStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MindStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MetalStoneItem;
@@ -353,6 +354,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SUN_ARMOR_BOOTS = REGISTRY.register("sun_armor_boots", () -> new SunArmorItem.Boots());
 	public static final RegistryObject<Item> SUN_BATTERY = REGISTRY.register("sun_battery", () -> new SunBatteryItem());
 	public static final RegistryObject<Item> SOLAR_BLADE = REGISTRY.register("solar_blade", () -> new SolarBladeItem());
+	public static final RegistryObject<Item> MOON_ARMOR_HELMET = REGISTRY.register("moon_armor_helmet", () -> new MoonArmorItem.Helmet());
+	public static final RegistryObject<Item> MOON_ARMOR_CHESTPLATE = REGISTRY.register("moon_armor_chestplate", () -> new MoonArmorItem.Chestplate());
+	public static final RegistryObject<Item> MOON_ARMOR_LEGGINGS = REGISTRY.register("moon_armor_leggings", () -> new MoonArmorItem.Leggings());
+	public static final RegistryObject<Item> MOON_ARMOR_BOOTS = REGISTRY.register("moon_armor_boots", () -> new MoonArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

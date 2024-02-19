@@ -15,7 +15,7 @@ import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
-public class MetalMasterEndProcedure {
+public class MoonMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -42,7 +42,7 @@ public class MetalMasterEndProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 16) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_second == 22) {
 			{
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -50,7 +50,7 @@ public class MetalMasterEndProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 16) {
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_third == 22) {
 			{
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -58,7 +58,7 @@ public class MetalMasterEndProcedure {
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 16) {
+		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_id_fist == 22) {
 			{
 				double _setval = 0;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -69,7 +69,7 @@ public class MetalMasterEndProcedure {
 		}
 		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
 			if (entity instanceof Player _player) {
-				ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+				ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
 				_setstack.setCount(1);
 				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? 6000 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);

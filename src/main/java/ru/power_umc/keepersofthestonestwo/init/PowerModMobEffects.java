@@ -16,6 +16,7 @@ import ru.power_umc.keepersofthestonestwo.potion.RainMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.PowerLockMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.OceanMasterMobEffect;
+import ru.power_umc.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.LightningMasterMobEffect;
 import ru.power_umc.keepersofthestonestwo.potion.LightMasterMobEffect;
@@ -64,4 +65,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> POWER_LOCK = REGISTRY.register("power_lock", () -> new PowerLockMobEffect());
 	public static final RegistryObject<MobEffect> ENERGY_MASTER = REGISTRY.register("energy_master", () -> new EnergyMasterMobEffect());
 	public static final RegistryObject<MobEffect> SUN_MASTER = REGISTRY.register("sun_master", () -> new SunMasterMobEffect());
+	public static final RegistryObject<MobEffect> MOON_MASTER = REGISTRY.register("moon_master", () -> new MoonMasterMobEffect());
 }

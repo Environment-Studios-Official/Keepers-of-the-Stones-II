@@ -13382,6 +13382,110 @@
         ]
       },
       "path": "~/Elements/Sun"
+    },
+    {
+      "name": "MoonMaster",
+      "type": "potioneffect",
+      "sortid": 633,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_master",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/potion/MoonMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonArmor",
+      "type": "armor",
+      "sortid": 634,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/moon_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/moon_armor_boots.json",
+          "src/main/resources/assets/power/models/item/moon_armor_leggings.json",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/MoonArmorItem.java",
+          "src/main/resources/assets/power/models/item/moon_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonMasterStart",
+      "type": "procedure",
+      "sortid": 635,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonMasterEnd",
+      "type": "procedure",
+      "sortid": 636,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
     }
   ],
   "variable_elements": [
@@ -13801,6 +13905,7 @@
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "subtitles.ear_ringing": "Звон в ушах",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
+      "item.power.moon_armor_chestplate": "Sun Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
       "effect.power.ocean_master": "Мастер океана",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
@@ -13880,6 +13985,7 @@
       "item.power.shadow_battery": "Батарея",
       "item.power.vacuum_armor_leggings": "Поножи мастера пустоты",
       "item.power.lava_battery": "Батарея",
+      "item.power.moon_armor_boots": "Sun Boots",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.star_potion_200": "Звёздное зелье",
@@ -13954,6 +14060,7 @@
       "effect.power.iron_skin": "Железная кожа",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
+      "item.power.moon_armor_helmet": "Sun Helmet",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "item.power.fire_battery": "Батарея",
       "entity.power.shadow": "Тень",
@@ -13970,6 +14077,7 @@
       "item.power.energy_armor_leggings": "Поножи мастера энергии",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
+      "effect.power.moon_master": "Master of the Moon",
       "item.power.energy_stone": "Камень энергии",
       "item.power.metal_stone": "Камень металла",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
@@ -14096,6 +14204,7 @@
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "subtitles.bass_boom": "Бас",
+      "item.power.moon_armor_leggings": "Sun Leggings",
       "item.power.sun_armor_leggings": "Поножи мастера солнца",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "effect.power.plants_master": "Мастер зелени",
@@ -14148,6 +14257,7 @@
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
       "item.power.sound_armor_leggings": "Sound Leggings",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "effect.power.ocean_master": "Master of the Ocean",
@@ -14227,6 +14337,7 @@
       "item.power.shadow_battery": "Battery",
       "item.power.vacuum_armor_leggings": "Vacuum Leggings",
       "item.power.lava_battery": "Battery",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.star_potion_200": "Star Potion",
@@ -14301,6 +14412,7 @@
       "effect.power.iron_skin": "Iron Skin",
       "item.power.metal_armor_helmet": "Metal Helmet",
       "item.power.lava_armor_boots": "Lava Boots",
+      "item.power.moon_armor_helmet": "Moon Helmet",
       "item.power.rain_armor_helmet": "Rain Helmet",
       "item.power.fire_battery": "Battery",
       "entity.power.shadow": "Shadow",
@@ -14317,6 +14429,7 @@
       "item.power.energy_armor_leggings": "Energy Leggings",
       "item.power.air_armor_leggings": "Air Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Streamlining, uses 5",
+      "effect.power.moon_master": "Master of the Moon",
       "item.power.energy_stone": "Energy Stone",
       "item.power.metal_stone": "Metal Stone",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
@@ -14442,6 +14555,7 @@
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "subtitles.bass_boom": "Bass",
+      "item.power.moon_armor_leggings": "Moon Leggings",
       "item.power.sun_armor_leggings": "Sun Leggings",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "effect.power.plants_master": "Master of Plants",
