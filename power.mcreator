@@ -13854,6 +13854,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "element_name_first",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "element_name_second",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "element_name_third",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [

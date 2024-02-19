@@ -91,6 +91,9 @@ public class PowerModVariables {
 			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
 			clone.zeroing = original.zeroing;
+			clone.element_name_first = original.element_name_first;
+			clone.element_name_second = original.element_name_second;
+			clone.element_name_third = original.element_name_third;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -423,6 +426,9 @@ public class PowerModVariables {
 		public boolean battery = false;
 		public boolean ability_block = false;
 		public boolean zeroing = false;
+		public String element_name_first = "0";
+		public String element_name_second = "0";
+		public String element_name_third = "0";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -443,6 +449,9 @@ public class PowerModVariables {
 			nbt.putBoolean("battery", battery);
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putBoolean("zeroing", zeroing);
+			nbt.putString("element_name_first", element_name_first);
+			nbt.putString("element_name_second", element_name_second);
+			nbt.putString("element_name_third", element_name_third);
 			return nbt;
 		}
 
@@ -460,6 +469,9 @@ public class PowerModVariables {
 			battery = nbt.getBoolean("battery");
 			ability_block = nbt.getBoolean("ability_block");
 			zeroing = nbt.getBoolean("zeroing");
+			element_name_first = nbt.getString("element_name_first");
+			element_name_second = nbt.getString("element_name_second");
+			element_name_third = nbt.getString("element_name_third");
 		}
 	}
 
@@ -505,6 +517,9 @@ public class PowerModVariables {
 					variables.battery = message.data.battery;
 					variables.ability_block = message.data.ability_block;
 					variables.zeroing = message.data.zeroing;
+					variables.element_name_first = message.data.element_name_first;
+					variables.element_name_second = message.data.element_name_second;
+					variables.element_name_third = message.data.element_name_third;
 				}
 			});
 			context.setPacketHandled(true);
