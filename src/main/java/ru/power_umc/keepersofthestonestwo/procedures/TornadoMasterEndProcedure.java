@@ -26,22 +26,7 @@ public class TornadoMasterEndProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers == 0) {
-			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.active = _setval;
-					capability.syncPlayerVariables(entity);
-				});
-			}
-		}
-		{
-			double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers - 1;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.mergers = _setval;
-				capability.syncPlayerVariables(entity);
-			});
-		}
+		DetransformationKeyUseProcedure.execute(world, entity);
 		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
 			{
 				String _setval = "0";
