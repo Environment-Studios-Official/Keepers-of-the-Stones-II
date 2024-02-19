@@ -86,9 +86,6 @@ public class PowerModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.selected = original.selected;
 			clone.attack = original.attack;
-			clone.element_id_fist = original.element_id_fist;
-			clone.element_id_second = original.element_id_second;
-			clone.element_id_third = original.element_id_third;
 			clone.battery = original.battery;
 			clone.zeroing = original.zeroing;
 			clone.element_name_first = original.element_name_first;
@@ -420,9 +417,6 @@ public class PowerModVariables {
 		public double powerTimer = 0.0;
 		public String attack = "0";
 		public double mergers = 0.0;
-		public double element_id_fist = 0;
-		public double element_id_second = 0;
-		public double element_id_third = 0;
 		public boolean battery = false;
 		public boolean ability_block = false;
 		public boolean zeroing = false;
@@ -443,9 +437,6 @@ public class PowerModVariables {
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("attack", attack);
 			nbt.putDouble("mergers", mergers);
-			nbt.putDouble("element_id_fist", element_id_fist);
-			nbt.putDouble("element_id_second", element_id_second);
-			nbt.putDouble("element_id_third", element_id_third);
 			nbt.putBoolean("battery", battery);
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putBoolean("zeroing", zeroing);
@@ -463,9 +454,6 @@ public class PowerModVariables {
 			powerTimer = nbt.getDouble("powerTimer");
 			attack = nbt.getString("attack");
 			mergers = nbt.getDouble("mergers");
-			element_id_fist = nbt.getDouble("element_id_fist");
-			element_id_second = nbt.getDouble("element_id_second");
-			element_id_third = nbt.getDouble("element_id_third");
 			battery = nbt.getBoolean("battery");
 			ability_block = nbt.getBoolean("ability_block");
 			zeroing = nbt.getBoolean("zeroing");
@@ -511,9 +499,6 @@ public class PowerModVariables {
 					variables.powerTimer = message.data.powerTimer;
 					variables.attack = message.data.attack;
 					variables.mergers = message.data.mergers;
-					variables.element_id_fist = message.data.element_id_fist;
-					variables.element_id_second = message.data.element_id_second;
-					variables.element_id_third = message.data.element_id_third;
 					variables.battery = message.data.battery;
 					variables.ability_block = message.data.ability_block;
 					variables.zeroing = message.data.zeroing;

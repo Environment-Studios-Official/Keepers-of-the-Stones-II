@@ -13556,24 +13556,6 @@
       "value": "0.0"
     },
     {
-      "name": "element_id_fist",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "element_id_second",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
-      "name": "element_id_third",
-      "type": "number",
-      "scope": "player_persistent",
-      "value": "0"
-    },
-    {
       "name": "battery",
       "type": "logic",
       "scope": "player_persistent",
