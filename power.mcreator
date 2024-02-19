@@ -14082,7 +14082,7 @@
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
       "block.power.keepers_box": "Шкатулка хранителя",
-      "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
+      "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "item.power.star_potion_500": "Звёздное зелье",
       "power.modinfo.recharge_stone.done": "Готов к использованию",
