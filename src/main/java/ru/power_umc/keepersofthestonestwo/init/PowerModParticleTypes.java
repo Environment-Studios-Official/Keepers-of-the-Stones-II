@@ -20,5 +20,5 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> LIGHT_SPARKLE = REGISTRY.register("light_sparkle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> VACUUM_PARTICLE = REGISTRY.register("vacuum_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> ENERGY_SPARK = REGISTRY.register("energy_spark", () -> new SimpleParticleType(false));
-	public static final RegistryObject<SimpleParticleType> LIGHT_SPARKLE_STATIC = REGISTRY.register("light_sparkle_static", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> SUN_PARTICLES = REGISTRY.register("sun_particles", () -> new SimpleParticleType(false));
 }

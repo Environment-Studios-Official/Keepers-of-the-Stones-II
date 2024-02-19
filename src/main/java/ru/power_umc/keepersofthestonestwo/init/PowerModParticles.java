@@ -5,7 +5,7 @@
 package ru.power_umc.keepersofthestonestwo.init;
 
 import ru.power_umc.keepersofthestonestwo.client.particle.VacuumParticleParticle;
-import ru.power_umc.keepersofthestonestwo.client.particle.LightSparkleStaticParticle;
+import ru.power_umc.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import ru.power_umc.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import ru.power_umc.keepersofthestonestwo.client.particle.InsectsParticle;
 import ru.power_umc.keepersofthestonestwo.client.particle.EnergySparkParticle;
@@ -25,6 +25,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.LIGHT_SPARKLE.get(), LightSparkleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.VACUUM_PARTICLE.get(), VacuumParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.ENERGY_SPARK.get(), EnergySparkParticle::provider);
-		event.registerSpriteSet(PowerModParticleTypes.LIGHT_SPARKLE_STATIC.get(), LightSparkleStaticParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.SUN_PARTICLES.get(), SunParticlesParticle::provider);
 	}
 }

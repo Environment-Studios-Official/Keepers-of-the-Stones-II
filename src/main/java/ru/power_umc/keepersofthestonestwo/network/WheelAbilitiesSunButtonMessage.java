@@ -69,27 +69,27 @@ public class WheelAbilitiesSunButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack81Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack82Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack83Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack81Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			Attack82Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack83Procedure.execute(entity);
 		}
 	}
 

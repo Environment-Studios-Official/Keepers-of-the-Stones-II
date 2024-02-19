@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_sun_ray",
+          "image": "sun_ray.png",
+          "hoveredImage": "sun_ray_highlight.png",
           "onClick": {
             "name": "Attack81"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_sun_explosion",
+          "image": "sun_explosion.png",
+          "hoveredImage": "sun_explosion_highlight.png",
           "onClick": {
             "name": "Attack82"
           },
-          "width": 30,
-          "height": 20,
-          "x": 259,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_sun_healing",
+          "image": "sun_healing.png",
+          "hoveredImage": "sun_healing_highlight.png",
           "onClick": {
             "name": "Attack83"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 171
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun_ray_uses_15",
+          "text": {
+            "fixedValue": "Sun ray, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun_explosion_uses_45",
+          "text": {
+            "fixedValue": "Sun explosion, uses 45"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun_healing_uses_80",
+          "text": {
+            "fixedValue": "Sun healing, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
