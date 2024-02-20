@@ -389,6 +389,7 @@ public class PowerModItems {
 			ItemProperties.register(VACUUM_STONE.get(), new ResourceLocation("power:vacuum_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(ENERGY_STONE.get(), new ResourceLocation("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(SUN_STONE.get(), new ResourceLocation("power:sun_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(MOON_STONE.get(), new ResourceLocation("power:moon_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 		});
 	}
 }
