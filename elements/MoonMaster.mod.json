@@ -12,6 +12,15 @@
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MoonMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "MoonMasterEnd"
+    }
   }
 }

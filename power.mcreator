@@ -13486,6 +13486,293 @@
         ]
       },
       "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonStoneUse",
+      "type": "procedure",
+      "sortid": 637,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 638,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 639,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 640,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "MoonArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 641,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Moon"
+    },
+    {
+      "name": "WheelAbilitiesMoon",
+      "type": "gui",
+      "sortid": 642,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_moon",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/client/gui/WheelAbilitiesMoonScreen.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/world/inventory/WheelAbilitiesMoonMenu.java",
+          "src/main/java/ru/power_umc/keepersofthestonestwo/network/WheelAbilitiesMoonButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Moon"
+    },
+    {
+      "name": "Attack85",
+      "type": "procedure",
+      "sortid": 643,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_85",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack85Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Moon"
+    },
+    {
+      "name": "Attack86",
+      "type": "procedure",
+      "sortid": 644,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_86",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack86Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Moon"
+    },
+    {
+      "name": "Attack87",
+      "type": "procedure",
+      "sortid": 645,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_87",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack87Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Moon"
+    },
+    {
+      "name": "Attack88",
+      "type": "procedure",
+      "sortid": 646,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_88",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/Attack88Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Moon"
+    },
+    {
+      "name": "MoonBattery",
+      "type": "item",
+      "sortid": 647,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/item/MoonBatteryItem.java",
+          "src/main/resources/assets/power/models/item/moon_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/MoonBattery"
+    },
+    {
+      "name": "MoonBatteryDesc",
+      "type": "procedure",
+      "sortid": 648,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/MoonBattery"
+    },
+    {
+      "name": "MoonBatteryUse",
+      "type": "procedure",
+      "sortid": 649,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/ru/power_umc/keepersofthestonestwo/procedures/MoonBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/MoonBattery"
     }
   ],
   "variable_elements": [
@@ -13896,27 +14183,28 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Захват торнадо, расходует 30",
       "item.power.crystal_armor_chestplate": "Нагрудник мастера кристалла",
       "item.power.ether_stone": "Камень эфира",
-      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
+      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Поток энергии, расходует 10",
       "item.power.smithing_template.applies_to": "§7Применяется к:",
+      "item.power.moon_battery": "Батарея",
       "item.power.earth_hammer": "Земляной молот",
       "item.power.sun_battery": "Батарея",
       "effect.power.sound_master": "Мастер звука",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "subtitles.ear_ringing": "Звон в ушах",
+      "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
-      "item.power.moon_armor_chestplate": "Sun Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "key.power.ability_using_key": "Клавиша использования способности",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "battery.desc.fire": "Огонь",
-      "power.modinfo.recharge_stone.seconds": " секунд",
-      "item.power.earth_battery": "Батарея",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
+      "item.power.earth_battery": "Батарея",
+      "power.modinfo.recharge_stone.seconds": " секунд",
       "effect.power.vacuum_master": "Мастер пустоты",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
@@ -13985,7 +14273,7 @@
       "item.power.shadow_battery": "Батарея",
       "item.power.vacuum_armor_leggings": "Поножи мастера пустоты",
       "item.power.lava_battery": "Батарея",
-      "item.power.moon_armor_boots": "Sun Boots",
+      "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.star_potion_200": "Звёздное зелье",
@@ -14060,7 +14348,7 @@
       "effect.power.iron_skin": "Железная кожа",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
-      "item.power.moon_armor_helmet": "Sun Helmet",
+      "item.power.moon_armor_helmet": "Шлем мастера луны",
       "item.power.rain_armor_helmet": "Шлем мастера дождя",
       "item.power.fire_battery": "Батарея",
       "entity.power.shadow": "Тень",
@@ -14077,7 +14365,7 @@
       "item.power.energy_armor_leggings": "Поножи мастера энергии",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
-      "effect.power.moon_master": "Master of the Moon",
+      "effect.power.moon_master": "Мастер луны",
       "item.power.energy_stone": "Камень энергии",
       "item.power.metal_stone": "Камень металла",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
@@ -14088,7 +14376,9 @@
       "item.power.sound_battery": "Батарея",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
+      "gui.power.wheel_abilities_moon.button_2": "2",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
+      "gui.power.wheel_abilities_moon.button_1": "1",
       "item.power.lava_stone": "Камень лавы",
       "item.power.energium_hoe": "Энерджиумная мотыга",
       "item.power.sun_stone": "Камень солнца",
@@ -14097,6 +14387,7 @@
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
       "item.power.lightning_falchion": "Молниеносный фальшион",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
+      "gui.power.wheel_abilities_moon.button_3": "3",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "enchantment.power.isolation": "Изоляция",
@@ -14127,6 +14418,7 @@
       "item.power.darkness_stone": "Камень тьмы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Атака кристаллическим блоком, расходует 10",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
+      "battery.desc.moon": "Луна",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
       "effect.power.water_master": "Мастер воды",
       "item.power.left_metal_gauntlet": "Левая металлическая перчатка",
@@ -14204,7 +14496,7 @@
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "subtitles.bass_boom": "Бас",
-      "item.power.moon_armor_leggings": "Sun Leggings",
+      "item.power.moon_armor_leggings": "Поножи мастера луны",
       "item.power.sun_armor_leggings": "Поножи мастера солнца",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "effect.power.plants_master": "Мастер зелени",
@@ -14247,28 +14539,29 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30": "Tornado capture attack, uses 30",
       "item.power.crystal_armor_chestplate": "Crystal Chestplate",
       "item.power.ether_stone": "Ether Stone",
-      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
+      "gui.power.wheel_abilities_energy.tooltip_energy_flux_uses_10": "Energy flux, uses 10",
       "item.power.smithing_template.applies_to": "",
+      "item.power.moon_battery": "Battery",
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.sun_battery": "Battery",
       "item.power.energium_upgrade_smithing_template.name_upgrade": "§7Energium Upgrade",
       "effect.power.sound_master": "Master of Sound",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
-      "item.power.sound_armor_leggings": "Sound Leggings",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
+      "item.power.sound_armor_leggings": "Sound Leggings",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
-      "effect.power.ocean_master": "Master of the Ocean",
       "item.power.lightning_battery": "Battery",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "power.modinfo.recharge_stone.seconds": " seconds",
-      "item.power.earth_battery": "Battery",
       "item.power.crystal_armor_boots": "Crystal Boots",
+      "item.power.earth_battery": "Battery",
+      "power.modinfo.recharge_stone.seconds": " seconds",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -14440,7 +14733,9 @@
       "item.power.sound_battery": "Battery",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
       "item.power.light_armor_chestplate": "Light Chestplate",
+      "gui.power.wheel_abilities_moon.button_2": "2",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
+      "gui.power.wheel_abilities_moon.button_1": "1",
       "item.power.lava_stone": "Lava Stone",
       "item.power.energium_hoe": "Energium Hoe",
       "item.power.sun_stone": "Sun Stone",
@@ -14449,6 +14744,7 @@
       "item.power.ocean_armor_leggings": "Ocean Leggings",
       "item.power.lightning_falchion": "Lightning Falchion",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
+      "gui.power.wheel_abilities_moon.button_3": "3",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "enchantment.power.isolation": "Isolation",
@@ -14478,6 +14774,7 @@
       "item.power.darkness_stone": "Darkness Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
       "item.power.lava_armor_helmet": "Lava Helmet",
+      "battery.desc.moon": "Moon",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
       "effect.power.water_master": "Master of Water",
       "item.power.left_metal_gauntlet": "Left Metal Gauntlet",
@@ -14899,6 +15196,10 @@
               {
                 "name": "Sun",
                 "children": []
+              },
+              {
+                "name": "Moon",
+                "children": []
               }
             ]
           },
@@ -15012,6 +15313,10 @@
               },
               {
                 "name": "SunBattery",
+                "children": []
+              },
+              {
+                "name": "MoonBattery",
                 "children": []
               }
             ]

@@ -58,6 +58,7 @@ import ru.power_umc.keepersofthestonestwo.item.OceanArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.MusicStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MushroomsStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MoonStoneItem;
+import ru.power_umc.keepersofthestonestwo.item.MoonBatteryItem;
 import ru.power_umc.keepersofthestonestwo.item.MoonArmorItem;
 import ru.power_umc.keepersofthestonestwo.item.MistStoneItem;
 import ru.power_umc.keepersofthestonestwo.item.MindStoneItem;
@@ -358,6 +359,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MOON_ARMOR_CHESTPLATE = REGISTRY.register("moon_armor_chestplate", () -> new MoonArmorItem.Chestplate());
 	public static final RegistryObject<Item> MOON_ARMOR_LEGGINGS = REGISTRY.register("moon_armor_leggings", () -> new MoonArmorItem.Leggings());
 	public static final RegistryObject<Item> MOON_ARMOR_BOOTS = REGISTRY.register("moon_armor_boots", () -> new MoonArmorItem.Boots());
+	public static final RegistryObject<Item> MOON_BATTERY = REGISTRY.register("moon_battery", () -> new MoonBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));

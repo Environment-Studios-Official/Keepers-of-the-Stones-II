@@ -11,16 +11,16 @@
     "enableBoots": true,
     "textureBoots": "moon_armor_boots",
     "onHelmetTick": {
-      "name": "SunArmorKazhdyiTikDliaShliema"
+      "name": "MoonArmorKazhdyiTikDliaShliema"
     },
     "onBodyTick": {
-      "name": "SunArmorKazhdyiTikDliaNaghrudnika"
+      "name": "MoonArmorKazhdyiTikDliaNaghrudnika"
     },
     "onLeggingsTick": {
-      "name": "SunArmorKazhdyiTikDliaPonozhiei"
+      "name": "MoonArmorKazhdyiTikDliaPonozhiei"
     },
     "onBootsTick": {
-      "name": "SunArmorKazhdyiTikDliaBotinok"
+      "name": "MoonArmorKazhdyiTikDliaBotinok"
     },
     "creativeTab": {
       "value": "No creative tab entry"

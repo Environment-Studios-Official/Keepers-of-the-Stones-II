@@ -88,6 +88,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.VACUUM_BATTERY.get());
 				tabData.accept(PowerModItems.ENERGY_BATTERY.get());
 				tabData.accept(PowerModItems.SUN_BATTERY.get());
+				tabData.accept(PowerModItems.MOON_BATTERY.get());
 			})
 
 					.build());

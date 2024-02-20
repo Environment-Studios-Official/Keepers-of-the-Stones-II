@@ -3,31 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "moon_stone",
+    "texture": "moon_battery",
     "customModelName": "Normal",
     "customProperties": {},
-    "states": [
-      {
-        "renderType": 0,
-        "texture": "recharging_stone",
-        "customModelName": "Normal",
-        "stateMap": [
-          {
-            "property": {
-              "min": 0.0,
-              "max": 1.0,
-              "name": "cooldown",
-              "type": "number"
-            },
-            "value": 0.01
-          }
-        ]
-      }
-    ],
-    "name": "Moon Stone",
+    "states": [],
+    "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Items"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -38,14 +21,14 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "GetRechargeInfo"
+      "name": "MoonBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false
@@ -54,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "MoonStoneUse"
+      "name": "MoonBatteryUse"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -1,8 +1,8 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.MoonStoneUseProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonBatteryUseProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonBatteryDescProcedure;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
@@ -18,9 +18,9 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-public class MoonStoneItem extends Item {
-	public MoonStoneItem() {
-		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+public class MoonBatteryItem extends Item {
+	public MoonBatteryItem() {
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -35,13 +35,13 @@ public class MoonStoneItem extends Item {
 		double x = entity != null ? entity.getX() : 0.0;
 		double y = entity != null ? entity.getY() : 0.0;
 		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(GetRechargeInfoProcedure.execute(itemstack)));
+		list.add(Component.literal(MoonBatteryDescProcedure.execute()));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		MoonStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		MoonBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 }

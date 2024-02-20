@@ -1,10 +1,10 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
-import ru.power_umc.keepersofthestonestwo.procedures.SunArmorKazhdyiTikDliaShliemaProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.SunArmorKazhdyiTikDliaPonozhieiProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.SunArmorKazhdyiTikDliaNaghrudnikaProcedure;
-import ru.power_umc.keepersofthestonestwo.procedures.SunArmorKazhdyiTikDliaBotinokProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonArmorKazhdyiTikDliaShliemaProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonArmorKazhdyiTikDliaPonozhieiProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonArmorKazhdyiTikDliaNaghrudnikaProcedure;
+import ru.power_umc.keepersofthestonestwo.procedures.MoonArmorKazhdyiTikDliaBotinokProcedure;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
@@ -94,7 +94,7 @@ public abstract class MoonArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SunArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
+				MoonArmorKazhdyiTikDliaShliemaProcedure.execute(entity);
 			}
 		}
 	}
@@ -123,7 +123,7 @@ public abstract class MoonArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SunArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
+				MoonArmorKazhdyiTikDliaNaghrudnikaProcedure.execute(entity);
 			}
 		}
 	}
@@ -152,7 +152,7 @@ public abstract class MoonArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SunArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
+				MoonArmorKazhdyiTikDliaPonozhieiProcedure.execute(entity);
 			}
 		}
 	}
@@ -181,7 +181,7 @@ public abstract class MoonArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				SunArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
+				MoonArmorKazhdyiTikDliaBotinokProcedure.execute(entity);
 			}
 		}
 	}

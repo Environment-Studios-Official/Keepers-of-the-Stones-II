@@ -13,6 +13,7 @@ import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
+import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
 import ru.power_umc.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
@@ -61,6 +62,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ENERGY.get(), WheelAbilitiesEnergyScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SUN.get(), WheelAbilitiesSunScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MOON.get(), WheelAbilitiesMoonScreen::new);
 		});
 	}
 }
