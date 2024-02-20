@@ -1,6 +1,7 @@
 
 package ru.power_umc.keepersofthestonestwo.item;
 
+import ru.power_umc.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.MoonStoneUseProcedure;
 import ru.power_umc.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
 
@@ -43,5 +44,11 @@ public class MoonStoneItem extends Item {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
 		MoonStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
+	}
+
+	@Override
+	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(itemstack, world, entity, slot, selected);
+		RechargeStoneTickEventProcedure.execute(world, itemstack);
 	}
 }

@@ -31,7 +31,7 @@
     "name": "Moon Stone",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Stones"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -59,6 +59,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "MoonStoneUse"
+    },
+    "onItemInInventoryTick": {
+      "name": "RechargeStoneTickEvent"
     },
     "enableRanged": false,
     "shootConstantly": false,

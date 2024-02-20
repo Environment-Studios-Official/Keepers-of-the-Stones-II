@@ -39,6 +39,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.VACUUM_STONE.get());
 				tabData.accept(PowerModItems.ENERGY_STONE.get());
 				tabData.accept(PowerModItems.SUN_STONE.get());
+				tabData.accept(PowerModItems.MOON_STONE.get());
 			})
 
 					.build());
