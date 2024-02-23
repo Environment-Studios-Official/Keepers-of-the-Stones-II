@@ -4,6 +4,7 @@
  */
 package ru.power_umc.keepersofthestonestwo.init;
 
+import ru.power_umc.keepersofthestonestwo.block.MoonBlockBlock;
 import ru.power_umc.keepersofthestonestwo.block.KeepersBoxBlock;
 import ru.power_umc.keepersofthestonestwo.block.EnergiumBlockBlock;
 import ru.power_umc.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
@@ -24,4 +25,5 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("depleted_energium_block", () -> new DepletedEnergiumBlockBlock());
 	public static final RegistryObject<Block> ENERGIUM_BLOCK = REGISTRY.register("energium_block", () -> new EnergiumBlockBlock());
 	public static final RegistryObject<Block> BATTERY_CHARGER = REGISTRY.register("battery_charger", () -> new BatteryChargerBlock());
+	public static final RegistryObject<Block> MOON_BLOCK = REGISTRY.register("moon_block", () -> new MoonBlockBlock());
 }

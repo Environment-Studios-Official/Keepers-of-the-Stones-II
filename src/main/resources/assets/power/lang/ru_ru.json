@@ -148,6 +148,7 @@
   "battery.desc.energy": "Энергия",
   "item.power.ocean_battery": "Батарея",
   "effect.power.lightning_master": "Мастер молнии",
+  "block.power.moon_block": "Moon Block",
   "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
   "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
   "power.modinfo.recharge_stone": "Перезарядка: ",

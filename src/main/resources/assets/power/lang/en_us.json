@@ -149,6 +149,7 @@
   "battery.desc.energy": "Energy",
   "item.power.ocean_battery": "Battery",
   "effect.power.lightning_master": "Master of Lightning",
+  "block.power.moon_block": "Moon Block",
   "item.power.crystal_armor_leggings": "Crystal Leggings",
   "item.power.vacuum_armor_boots": "Vacuum Boots",
   "power.modinfo.recharge_stone": "Recharge: ",
