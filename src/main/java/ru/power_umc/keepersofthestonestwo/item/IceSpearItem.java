@@ -30,7 +30,7 @@ public class IceSpearItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 7f;
+				return -0.8f;
 			}
 
 			public int getLevel() {
@@ -44,7 +44,7 @@ public class IceSpearItem extends SwordItem {
 			public Ingredient getRepairIngredient() {
 				return Ingredient.of();
 			}
-		}, 3, -2.08f, new Item.Properties().fireResistant());
+		}, 3, 7.25f, new Item.Properties().fireResistant());
 	}
 
 	@Override
