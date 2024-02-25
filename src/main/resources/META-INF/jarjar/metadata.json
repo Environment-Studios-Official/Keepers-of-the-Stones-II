@@ -3,10 +3,10 @@
     {
       "identifier": {
         "group": "com.esmods.cpapi",
-        "artifact": "cpapi-v4"
+        "artifact": "cpapi"
       },
       "version": {
-        "range": "[1,)",
+        "range": "[0,)",
         "artifactVersion": "4"
       },
       "path": "META-INF/jarjar/cpapi-v4.jar",
