@@ -3,7 +3,7 @@
     {
       "name": "SetupAnimations",
       "type": "procedure",
-      "sortid": 66,
+      "sortid": 67,
       "compiles": true,
       "locked_code": false,
       "registry_name": "setup_animations",
@@ -18,7 +18,7 @@
     {
       "name": "ReturnStoneAfterDead",
       "type": "procedure",
-      "sortid": 67,
+      "sortid": 68,
       "compiles": true,
       "locked_code": false,
       "registry_name": "return_stone_after_dead",
@@ -102,7 +102,7 @@
     {
       "name": "Stones",
       "type": "tab",
-      "sortid": 68,
+      "sortid": 69,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stones",
@@ -130,7 +130,7 @@
     {
       "name": "FireMaster",
       "type": "potioneffect",
-      "sortid": 69,
+      "sortid": 70,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master",
@@ -144,7 +144,7 @@
     {
       "name": "AirMaster",
       "type": "potioneffect",
-      "sortid": 70,
+      "sortid": 71,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master",
@@ -158,7 +158,7 @@
     {
       "name": "EarthMaster",
       "type": "potioneffect",
-      "sortid": 71,
+      "sortid": 72,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master",
@@ -172,7 +172,7 @@
     {
       "name": "WaterMaster",
       "type": "potioneffect",
-      "sortid": 72,
+      "sortid": 73,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master",
@@ -186,7 +186,7 @@
     {
       "name": "EtherMaster",
       "type": "potioneffect",
-      "sortid": 73,
+      "sortid": 74,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master",
@@ -200,7 +200,7 @@
     {
       "name": "FireStoneUse",
       "type": "procedure",
-      "sortid": 74,
+      "sortid": 75,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_stone_use",
@@ -240,7 +240,7 @@
     {
       "name": "DetransformationKey",
       "type": "keybind",
-      "sortid": 75,
+      "sortid": 76,
       "compiles": true,
       "locked_code": false,
       "registry_name": "detransformation_key",
@@ -254,7 +254,7 @@
     {
       "name": "DetransformationKeyUse",
       "type": "procedure",
-      "sortid": 76,
+      "sortid": 77,
       "compiles": true,
       "locked_code": false,
       "registry_name": "detransformation_key_use",
@@ -278,7 +278,7 @@
     {
       "name": "FireMasterStart",
       "type": "procedure",
-      "sortid": 77,
+      "sortid": 78,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master_start",
@@ -314,7 +314,7 @@
     {
       "name": "FireMasterEnd",
       "type": "procedure",
-      "sortid": 78,
+      "sortid": 79,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_master_end",
@@ -350,7 +350,7 @@
     {
       "name": "EnhancedAbilities",
       "type": "procedure",
-      "sortid": 79,
+      "sortid": 80,
       "compiles": true,
       "locked_code": false,
       "registry_name": "enhanced_abilities",
@@ -370,7 +370,7 @@
     {
       "name": "GettingStone",
       "type": "procedure",
-      "sortid": 80,
+      "sortid": 81,
       "compiles": true,
       "locked_code": false,
       "registry_name": "getting_stone",
@@ -394,7 +394,7 @@
     {
       "name": "FireArmor",
       "type": "armor",
-      "sortid": 81,
+      "sortid": 82,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor",
@@ -412,7 +412,7 @@
     {
       "name": "FireSword",
       "type": "tool",
-      "sortid": 82,
+      "sortid": 83,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_sword",
@@ -427,7 +427,7 @@
     {
       "name": "SpecialAttack",
       "type": "procedure",
-      "sortid": 83,
+      "sortid": 84,
       "compiles": true,
       "locked_code": false,
       "registry_name": "special_attack",
@@ -463,7 +463,7 @@
     {
       "name": "FirePassiveProtection",
       "type": "procedure",
-      "sortid": 84,
+      "sortid": 85,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_passive_protection",
@@ -499,7 +499,7 @@
     {
       "name": "PowerScaleRegen",
       "type": "procedure",
-      "sortid": 85,
+      "sortid": 86,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_scale_regen",
@@ -519,7 +519,7 @@
     {
       "name": "GetPowerScale",
       "type": "procedure",
-      "sortid": 86,
+      "sortid": 87,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_power_scale",
@@ -540,7 +540,7 @@
     {
       "name": "GetActive",
       "type": "procedure",
-      "sortid": 87,
+      "sortid": 88,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_active",
@@ -561,7 +561,7 @@
     {
       "name": "AirArmor",
       "type": "armor",
-      "sortid": 88,
+      "sortid": 89,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor",
@@ -579,7 +579,7 @@
     {
       "name": "AirStoneUse",
       "type": "procedure",
-      "sortid": 89,
+      "sortid": 90,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_stone_use",
@@ -619,7 +619,7 @@
     {
       "name": "AirMasterStart",
       "type": "procedure",
-      "sortid": 90,
+      "sortid": 91,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_start",
@@ -655,7 +655,7 @@
     {
       "name": "AirMasterEnd",
       "type": "procedure",
-      "sortid": 91,
+      "sortid": 92,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_master_end",
@@ -691,7 +691,7 @@
     {
       "name": "FireSwordKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 92,
+      "sortid": 93,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_sword_kazhdyi_tik_v_invientarie",
@@ -711,7 +711,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 93,
+      "sortid": 94,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_shliema",
@@ -731,7 +731,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 94,
+      "sortid": 95,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -751,7 +751,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 95,
+      "sortid": 96,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -771,7 +771,7 @@
     {
       "name": "FireArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 96,
+      "sortid": 97,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_armor_kazhdyi_tik_dlia_botinok",
@@ -791,7 +791,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 97,
+      "sortid": 98,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_shliema",
@@ -811,7 +811,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 98,
+      "sortid": 99,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -831,7 +831,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 99,
+      "sortid": 100,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -851,7 +851,7 @@
     {
       "name": "AirArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 100,
+      "sortid": 101,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_armor_kazhdyi_tik_dlia_botinok",
@@ -871,7 +871,7 @@
     {
       "name": "AirRapier",
       "type": "tool",
-      "sortid": 101,
+      "sortid": 102,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_rapier",
@@ -886,7 +886,7 @@
     {
       "name": "AirRapierKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 102,
+      "sortid": 103,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_rapier_kazhdyi_tik_v_invientarie",
@@ -906,7 +906,7 @@
     {
       "name": "WheelAbilitiesFire",
       "type": "gui",
-      "sortid": 103,
+      "sortid": 104,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_fire",
@@ -922,7 +922,7 @@
     {
       "name": "AbilityWheelOpeningkey",
       "type": "keybind",
-      "sortid": 104,
+      "sortid": 105,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_wheel_openingkey",
@@ -936,7 +936,7 @@
     {
       "name": "Attack1",
       "type": "procedure",
-      "sortid": 105,
+      "sortid": 106,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_1",
@@ -956,7 +956,7 @@
     {
       "name": "Attack2",
       "type": "procedure",
-      "sortid": 106,
+      "sortid": 107,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_2",
@@ -976,7 +976,7 @@
     {
       "name": "Attack3",
       "type": "procedure",
-      "sortid": 107,
+      "sortid": 108,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_3",
@@ -996,7 +996,7 @@
     {
       "name": "Attack4",
       "type": "procedure",
-      "sortid": 108,
+      "sortid": 109,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_4",
@@ -1016,7 +1016,7 @@
     {
       "name": "WheelAbilitiesAir",
       "type": "gui",
-      "sortid": 109,
+      "sortid": 110,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_air",
@@ -1032,7 +1032,7 @@
     {
       "name": "EarthStoneUse",
       "type": "procedure",
-      "sortid": 110,
+      "sortid": 111,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_stone_use",
@@ -1072,7 +1072,7 @@
     {
       "name": "EarthArmor",
       "type": "armor",
-      "sortid": 111,
+      "sortid": 112,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor",
@@ -1090,7 +1090,7 @@
     {
       "name": "PowerScaleSet",
       "type": "procedure",
-      "sortid": 112,
+      "sortid": 113,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_scale_set",
@@ -1110,7 +1110,7 @@
     {
       "name": "Pw",
       "type": "command",
-      "sortid": 113,
+      "sortid": 114,
       "compiles": true,
       "locked_code": false,
       "registry_name": "pw",
@@ -1124,7 +1124,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 114,
+      "sortid": 115,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_shliema",
@@ -1144,7 +1144,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 115,
+      "sortid": 116,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -1164,7 +1164,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 116,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -1184,7 +1184,7 @@
     {
       "name": "EarthArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 117,
+      "sortid": 118,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_armor_kazhdyi_tik_dlia_botinok",
@@ -1204,7 +1204,7 @@
     {
       "name": "EarthHammer",
       "type": "tool",
-      "sortid": 118,
+      "sortid": 119,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_hammer",
@@ -1219,7 +1219,7 @@
     {
       "name": "EarthHammerKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 119,
+      "sortid": 120,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_hammer_kazhdyi_tik_v_invientarie",
@@ -1239,7 +1239,7 @@
     {
       "name": "Attack5",
       "type": "procedure",
-      "sortid": 120,
+      "sortid": 121,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_5",
@@ -1259,7 +1259,7 @@
     {
       "name": "Attack6",
       "type": "procedure",
-      "sortid": 121,
+      "sortid": 122,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_6",
@@ -1279,7 +1279,7 @@
     {
       "name": "Attack7",
       "type": "procedure",
-      "sortid": 122,
+      "sortid": 123,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_7",
@@ -1299,7 +1299,7 @@
     {
       "name": "Attack8",
       "type": "procedure",
-      "sortid": 123,
+      "sortid": 124,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_8",
@@ -1319,7 +1319,7 @@
     {
       "name": "Attack9",
       "type": "procedure",
-      "sortid": 124,
+      "sortid": 125,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_9",
@@ -1339,7 +1339,7 @@
     {
       "name": "Attack10",
       "type": "procedure",
-      "sortid": 125,
+      "sortid": 126,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_10",
@@ -1359,7 +1359,7 @@
     {
       "name": "Attack11",
       "type": "procedure",
-      "sortid": 126,
+      "sortid": 127,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_11",
@@ -1379,7 +1379,7 @@
     {
       "name": "Attack12",
       "type": "procedure",
-      "sortid": 127,
+      "sortid": 128,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_12",
@@ -1399,7 +1399,7 @@
     {
       "name": "OpenWheelOne",
       "type": "procedure",
-      "sortid": 128,
+      "sortid": 129,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_one",
@@ -1435,7 +1435,7 @@
     {
       "name": "OpenWheelTwo",
       "type": "procedure",
-      "sortid": 129,
+      "sortid": 130,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_two",
@@ -1471,7 +1471,7 @@
     {
       "name": "OpenWheelThree",
       "type": "procedure",
-      "sortid": 130,
+      "sortid": 131,
       "compiles": true,
       "locked_code": false,
       "registry_name": "open_wheel_three",
@@ -1507,7 +1507,7 @@
     {
       "name": "GetWheelTwo",
       "type": "procedure",
-      "sortid": 131,
+      "sortid": 132,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_wheel_two",
@@ -1528,7 +1528,7 @@
     {
       "name": "GetWheelThree",
       "type": "procedure",
-      "sortid": 132,
+      "sortid": 133,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_wheel_three",
@@ -1549,7 +1549,7 @@
     {
       "name": "StoneAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 133,
+      "sortid": 134,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stone_attack_koghda_snariad_popadaiet_v_blok",
@@ -1581,7 +1581,7 @@
     {
       "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 134,
+      "sortid": 135,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grass_block_attack_koghda_snariad_popadaiet_v_blok",
@@ -1613,7 +1613,7 @@
     {
       "name": "DirtBlockAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 135,
+      "sortid": 136,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dirt_block_attack_koghda_snariad_popadaiet_v_blok",
@@ -1645,7 +1645,7 @@
     {
       "name": "CobblestoneAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 136,
+      "sortid": 137,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobblestone_attack_koghda_snariad_popadaiet_v_blok",
@@ -1677,7 +1677,7 @@
     {
       "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 137,
+      "sortid": 138,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_koghda_snariad_popadaiet_v_blok",
@@ -1709,7 +1709,7 @@
     {
       "name": "WaterKatana",
       "type": "tool",
-      "sortid": 138,
+      "sortid": 139,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_katana",
@@ -1724,7 +1724,7 @@
     {
       "name": "WaterKatanaKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 139,
+      "sortid": 140,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_katana_kazhdyi_tik_v_invientarie",
@@ -1744,7 +1744,7 @@
     {
       "name": "EarthMasterStart",
       "type": "procedure",
-      "sortid": 140,
+      "sortid": 141,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master_start",
@@ -1780,7 +1780,7 @@
     {
       "name": "EarthMasterEnd",
       "type": "procedure",
-      "sortid": 141,
+      "sortid": 142,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_master_end",
@@ -1816,7 +1816,7 @@
     {
       "name": "WaterMasterStart",
       "type": "procedure",
-      "sortid": 142,
+      "sortid": 143,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master_start",
@@ -1852,7 +1852,7 @@
     {
       "name": "WaterMasterEnd",
       "type": "procedure",
-      "sortid": 143,
+      "sortid": 144,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_master_end",
@@ -1888,7 +1888,7 @@
     {
       "name": "WaterArmor",
       "type": "armor",
-      "sortid": 144,
+      "sortid": 145,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor",
@@ -1906,7 +1906,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 145,
+      "sortid": 146,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_shliema",
@@ -1926,7 +1926,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 146,
+      "sortid": 147,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -1946,7 +1946,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 147,
+      "sortid": 148,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -1966,7 +1966,7 @@
     {
       "name": "WaterArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 148,
+      "sortid": 149,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_armor_kazhdyi_tik_dlia_botinok",
@@ -1986,7 +1986,7 @@
     {
       "name": "WaterStoneUse",
       "type": "procedure",
-      "sortid": 149,
+      "sortid": 150,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_stone_use",
@@ -2026,7 +2026,7 @@
     {
       "name": "Attack13",
       "type": "procedure",
-      "sortid": 150,
+      "sortid": 151,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_13",
@@ -2046,7 +2046,7 @@
     {
       "name": "Attack14",
       "type": "procedure",
-      "sortid": 151,
+      "sortid": 152,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_14",
@@ -2066,7 +2066,7 @@
     {
       "name": "Attack15",
       "type": "procedure",
-      "sortid": 152,
+      "sortid": 153,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_15",
@@ -2086,7 +2086,7 @@
     {
       "name": "Attack16",
       "type": "procedure",
-      "sortid": 153,
+      "sortid": 154,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_16",
@@ -2106,7 +2106,7 @@
     {
       "name": "EtherMasterStart",
       "type": "procedure",
-      "sortid": 154,
+      "sortid": 155,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master_start",
@@ -2142,7 +2142,7 @@
     {
       "name": "EtherMasterEnd",
       "type": "procedure",
-      "sortid": 155,
+      "sortid": 156,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_master_end",
@@ -2178,7 +2178,7 @@
     {
       "name": "EtherStoneUse",
       "type": "procedure",
-      "sortid": 156,
+      "sortid": 157,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_stone_use",
@@ -2218,7 +2218,7 @@
     {
       "name": "EtherGlaive",
       "type": "tool",
-      "sortid": 157,
+      "sortid": 158,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_glaive",
@@ -2233,7 +2233,7 @@
     {
       "name": "EtherGlaiveKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 158,
+      "sortid": 159,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_glaive_kazhdyi_tik_v_invientarie",
@@ -2253,7 +2253,7 @@
     {
       "name": "EtherArmor",
       "type": "armor",
-      "sortid": 159,
+      "sortid": 160,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor",
@@ -2271,7 +2271,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 160,
+      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_shliema",
@@ -2291,7 +2291,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 161,
+      "sortid": 162,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -2311,7 +2311,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 162,
+      "sortid": 163,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -2331,7 +2331,7 @@
     {
       "name": "EtherArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 163,
+      "sortid": 164,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_armor_kazhdyi_tik_dlia_botinok",
@@ -2351,7 +2351,7 @@
     {
       "name": "Attack17",
       "type": "procedure",
-      "sortid": 164,
+      "sortid": 165,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_17",
@@ -2371,7 +2371,7 @@
     {
       "name": "Attack18",
       "type": "procedure",
-      "sortid": 165,
+      "sortid": 166,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_18",
@@ -2391,7 +2391,7 @@
     {
       "name": "Attack19",
       "type": "procedure",
-      "sortid": 166,
+      "sortid": 167,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_19",
@@ -2411,7 +2411,7 @@
     {
       "name": "Attack20",
       "type": "procedure",
-      "sortid": 167,
+      "sortid": 168,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_20",
@@ -2431,7 +2431,7 @@
     {
       "name": "WaterAttackKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 168,
+      "sortid": 169,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_koghda_snariad_popadaiet_v_blok",
@@ -2463,7 +2463,7 @@
     {
       "name": "WheelAbilitiesWater",
       "type": "gui",
-      "sortid": 169,
+      "sortid": 170,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_water",
@@ -2479,7 +2479,7 @@
     {
       "name": "WheelAbilitiesEarth",
       "type": "gui",
-      "sortid": 170,
+      "sortid": 171,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_earth",
@@ -2495,7 +2495,7 @@
     {
       "name": "WheelAbilitiesEther",
       "type": "gui",
-      "sortid": 171,
+      "sortid": 172,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ether",
@@ -2511,7 +2511,7 @@
     {
       "name": "WaterAttackKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 172,
+      "sortid": 173,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_koghda_snariad_popadaiet_v_sushchnost",
@@ -2543,7 +2543,7 @@
     {
       "name": "WaterPassiveWaterBreath",
       "type": "procedure",
-      "sortid": 173,
+      "sortid": 174,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_passive_water_breath",
@@ -2579,7 +2579,7 @@
     {
       "name": "ShieldInHands",
       "type": "procedure",
-      "sortid": 174,
+      "sortid": 175,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shield_in_hands",
@@ -2599,7 +2599,7 @@
     {
       "name": "ShieldProtectionTick",
       "type": "procedure",
-      "sortid": 175,
+      "sortid": 176,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shield_protection_tick",
@@ -2619,7 +2619,7 @@
     {
       "name": "EarthShield",
       "type": "tool",
-      "sortid": 176,
+      "sortid": 177,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_shield",
@@ -2634,7 +2634,7 @@
     {
       "name": "EarthShieldKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 177,
+      "sortid": 178,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_shield_kazhdyi_tik_v_invientarie",
@@ -2658,7 +2658,7 @@
     {
       "name": "AbilityUsingKey",
       "type": "keybind",
-      "sortid": 178,
+      "sortid": 179,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ability_using_key",
@@ -2672,7 +2672,7 @@
     {
       "name": "EtherAttackKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 179,
+      "sortid": 180,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_kazhdyi_tik_pri_poliotie_snariada",
@@ -2720,7 +2720,7 @@
     {
       "name": "IceMaster",
       "type": "potioneffect",
-      "sortid": 180,
+      "sortid": 181,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_master",
@@ -2734,7 +2734,7 @@
     {
       "name": "IceArmor",
       "type": "armor",
-      "sortid": 181,
+      "sortid": 182,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_armor",
@@ -2752,7 +2752,7 @@
     {
       "name": "IceArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 182,
+      "sortid": 183,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_armor_kazhdyi_tik_dlia_shliema",
@@ -2772,7 +2772,7 @@
     {
       "name": "IceArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 183,
+      "sortid": 184,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -2792,7 +2792,7 @@
     {
       "name": "IceArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 184,
+      "sortid": 185,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -2812,7 +2812,7 @@
     {
       "name": "IceArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 185,
+      "sortid": 186,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_armor_kazhdyi_tik_dlia_botinok",
@@ -2832,7 +2832,7 @@
     {
       "name": "IceStoneUse",
       "type": "procedure",
-      "sortid": 186,
+      "sortid": 187,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_stone_use",
@@ -2872,7 +2872,7 @@
     {
       "name": "IceMasterStart",
       "type": "procedure",
-      "sortid": 187,
+      "sortid": 188,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_master_start",
@@ -2908,7 +2908,7 @@
     {
       "name": "IceMasterEnd",
       "type": "procedure",
-      "sortid": 188,
+      "sortid": 189,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_master_end",
@@ -2944,7 +2944,7 @@
     {
       "name": "Attack21",
       "type": "procedure",
-      "sortid": 189,
+      "sortid": 190,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_21",
@@ -2964,7 +2964,7 @@
     {
       "name": "Attack22",
       "type": "procedure",
-      "sortid": 190,
+      "sortid": 191,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_22",
@@ -2984,7 +2984,7 @@
     {
       "name": "Attack23",
       "type": "procedure",
-      "sortid": 191,
+      "sortid": 192,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_23",
@@ -3004,7 +3004,7 @@
     {
       "name": "Attack24",
       "type": "procedure",
-      "sortid": 192,
+      "sortid": 193,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_24",
@@ -3040,7 +3040,7 @@
     {
       "name": "LightningMaster",
       "type": "potioneffect",
-      "sortid": 193,
+      "sortid": 194,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_master",
@@ -3054,7 +3054,7 @@
     {
       "name": "LightningArmor",
       "type": "armor",
-      "sortid": 194,
+      "sortid": 195,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_armor",
@@ -3072,7 +3072,7 @@
     {
       "name": "LightningArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 195,
+      "sortid": 196,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_armor_kazhdyi_tik_dlia_shliema",
@@ -3092,7 +3092,7 @@
     {
       "name": "LightningArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 196,
+      "sortid": 197,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -3112,7 +3112,7 @@
     {
       "name": "LightningArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 197,
+      "sortid": 198,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -3132,7 +3132,7 @@
     {
       "name": "LightningArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 198,
+      "sortid": 199,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_armor_kazhdyi_tik_dlia_botinok",
@@ -3152,7 +3152,7 @@
     {
       "name": "WheelAbilitiesLightning",
       "type": "gui",
-      "sortid": 199,
+      "sortid": 200,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_lightning",
@@ -3168,7 +3168,7 @@
     {
       "name": "Attack25",
       "type": "procedure",
-      "sortid": 200,
+      "sortid": 201,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_25",
@@ -3188,7 +3188,7 @@
     {
       "name": "Attack26",
       "type": "procedure",
-      "sortid": 201,
+      "sortid": 202,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_26",
@@ -3208,7 +3208,7 @@
     {
       "name": "Attack27",
       "type": "procedure",
-      "sortid": 202,
+      "sortid": 203,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_27",
@@ -3228,7 +3228,7 @@
     {
       "name": "Attack28",
       "type": "procedure",
-      "sortid": 203,
+      "sortid": 204,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_28",
@@ -3248,7 +3248,7 @@
     {
       "name": "LightningStoneUse",
       "type": "procedure",
-      "sortid": 204,
+      "sortid": 205,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_stone_use",
@@ -3288,7 +3288,7 @@
     {
       "name": "LightningMasterStart",
       "type": "procedure",
-      "sortid": 205,
+      "sortid": 206,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_master_start",
@@ -3324,7 +3324,7 @@
     {
       "name": "LightningMasterEnd",
       "type": "procedure",
-      "sortid": 206,
+      "sortid": 207,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_master_end",
@@ -3360,7 +3360,7 @@
     {
       "name": "MagicFireballProjectile",
       "type": "projectile",
-      "sortid": 207,
+      "sortid": 208,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magic_fireball_projectile",
@@ -3374,7 +3374,7 @@
     {
       "name": "MagicFireball",
       "type": "item",
-      "sortid": 208,
+      "sortid": 209,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magic_fireball",
@@ -3389,7 +3389,7 @@
     {
       "name": "StoneAttackProjectile",
       "type": "projectile",
-      "sortid": 209,
+      "sortid": 210,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stone_attack_projectile",
@@ -3404,7 +3404,7 @@
     {
       "name": "GrassBlockAttackProjectile",
       "type": "projectile",
-      "sortid": 210,
+      "sortid": 211,
       "compiles": true,
       "locked_code": false,
       "registry_name": "grass_block_attack_projectile",
@@ -3419,7 +3419,7 @@
     {
       "name": "DirtBlockAttackProjectile",
       "type": "projectile",
-      "sortid": 211,
+      "sortid": 212,
       "compiles": true,
       "locked_code": false,
       "registry_name": "dirt_block_attack_projectile",
@@ -3434,7 +3434,7 @@
     {
       "name": "CobblestoneAttackProjectile",
       "type": "projectile",
-      "sortid": 212,
+      "sortid": 213,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobblestone_attack_projectile",
@@ -3449,7 +3449,7 @@
     {
       "name": "CobbledDeepslateAttackProjectile",
       "type": "projectile",
-      "sortid": 213,
+      "sortid": 214,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_projectile",
@@ -3464,7 +3464,7 @@
     {
       "name": "WaterAttackProjectile",
       "type": "projectile",
-      "sortid": 214,
+      "sortid": 215,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_projectile",
@@ -3479,7 +3479,7 @@
     {
       "name": "EtherAttackProjectile",
       "type": "projectile",
-      "sortid": 215,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_projectile",
@@ -3510,7 +3510,7 @@
     {
       "name": "SoundMaster",
       "type": "potioneffect",
-      "sortid": 216,
+      "sortid": 217,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_master",
@@ -3524,7 +3524,7 @@
     {
       "name": "SoundArmor",
       "type": "armor",
-      "sortid": 217,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_armor",
@@ -3542,7 +3542,7 @@
     {
       "name": "SoundArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 218,
+      "sortid": 219,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_armor_kazhdyi_tik_dlia_shliema",
@@ -3562,7 +3562,7 @@
     {
       "name": "SoundArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 219,
+      "sortid": 220,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -3582,7 +3582,7 @@
     {
       "name": "SoundArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 220,
+      "sortid": 221,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -3602,7 +3602,7 @@
     {
       "name": "SoundArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 221,
+      "sortid": 222,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_armor_kazhdyi_tik_dlia_botinok",
@@ -3622,7 +3622,7 @@
     {
       "name": "SoundStoneUse",
       "type": "procedure",
-      "sortid": 222,
+      "sortid": 223,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_stone_use",
@@ -3662,7 +3662,7 @@
     {
       "name": "SoundMasterStart",
       "type": "procedure",
-      "sortid": 223,
+      "sortid": 224,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_master_start",
@@ -3698,7 +3698,7 @@
     {
       "name": "SoundMasterEnd",
       "type": "procedure",
-      "sortid": 224,
+      "sortid": 225,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_master_end",
@@ -3734,7 +3734,7 @@
     {
       "name": "WheelAbilitiesSound",
       "type": "gui",
-      "sortid": 225,
+      "sortid": 226,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sound",
@@ -3750,7 +3750,7 @@
     {
       "name": "Attack29",
       "type": "procedure",
-      "sortid": 226,
+      "sortid": 227,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_29",
@@ -3770,7 +3770,7 @@
     {
       "name": "Attack30",
       "type": "procedure",
-      "sortid": 227,
+      "sortid": 228,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_30",
@@ -3790,7 +3790,7 @@
     {
       "name": "Attack31",
       "type": "procedure",
-      "sortid": 228,
+      "sortid": 229,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_31",
@@ -3810,7 +3810,7 @@
     {
       "name": "Attack32",
       "type": "procedure",
-      "sortid": 229,
+      "sortid": 230,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_32",
@@ -3830,7 +3830,7 @@
     {
       "name": "IceAttackProjectile",
       "type": "projectile",
-      "sortid": 230,
+      "sortid": 231,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_attack_projectile",
@@ -3845,7 +3845,7 @@
     {
       "name": "IceAttackProjectileProjectileHitsBlock",
       "type": "procedure",
-      "sortid": 231,
+      "sortid": 232,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_attack_projectile_projectile_hits_block",
@@ -3893,7 +3893,7 @@
     {
       "name": "CrystalArmor",
       "type": "armor",
-      "sortid": 232,
+      "sortid": 233,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_armor",
@@ -3911,7 +3911,7 @@
     {
       "name": "CrystalStoneUse",
       "type": "procedure",
-      "sortid": 233,
+      "sortid": 234,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_stone_use",
@@ -3951,7 +3951,7 @@
     {
       "name": "CrystalMasterStart",
       "type": "procedure",
-      "sortid": 234,
+      "sortid": 235,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_master_start",
@@ -3987,7 +3987,7 @@
     {
       "name": "CrystalArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 235,
+      "sortid": 236,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_armor_kazhdyi_tik_dlia_shliema",
@@ -4007,7 +4007,7 @@
     {
       "name": "CrystalArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 236,
+      "sortid": 237,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -4027,7 +4027,7 @@
     {
       "name": "CrystalArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 237,
+      "sortid": 238,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -4047,7 +4047,7 @@
     {
       "name": "CrystalArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 238,
+      "sortid": 239,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_armor_kazhdyi_tik_dlia_botinok",
@@ -4067,7 +4067,7 @@
     {
       "name": "CrystalMasterEnd",
       "type": "procedure",
-      "sortid": 239,
+      "sortid": 240,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_master_end",
@@ -4103,7 +4103,7 @@
     {
       "name": "WheelAbilitiesCrystal",
       "type": "gui",
-      "sortid": 240,
+      "sortid": 241,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_crystal",
@@ -4119,7 +4119,7 @@
     {
       "name": "Attack33",
       "type": "procedure",
-      "sortid": 241,
+      "sortid": 242,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_33",
@@ -4139,7 +4139,7 @@
     {
       "name": "Attack34",
       "type": "procedure",
-      "sortid": 242,
+      "sortid": 243,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_34",
@@ -4159,7 +4159,7 @@
     {
       "name": "Attack35",
       "type": "procedure",
-      "sortid": 243,
+      "sortid": 244,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_35",
@@ -4179,7 +4179,7 @@
     {
       "name": "Attack36",
       "type": "procedure",
-      "sortid": 244,
+      "sortid": 245,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_36",
@@ -4215,7 +4215,7 @@
     {
       "name": "LavaArmor",
       "type": "armor",
-      "sortid": 245,
+      "sortid": 246,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_armor",
@@ -4233,7 +4233,7 @@
     {
       "name": "LavaArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 246,
+      "sortid": 247,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_armor_kazhdyi_tik_dlia_shliema",
@@ -4253,7 +4253,7 @@
     {
       "name": "LavaArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 247,
+      "sortid": 248,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -4273,7 +4273,7 @@
     {
       "name": "LavaArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 248,
+      "sortid": 249,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -4293,7 +4293,7 @@
     {
       "name": "LavaArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 249,
+      "sortid": 250,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_armor_kazhdyi_tik_dlia_botinok",
@@ -4313,7 +4313,7 @@
     {
       "name": "LavaMaster",
       "type": "potioneffect",
-      "sortid": 250,
+      "sortid": 251,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_master",
@@ -4327,7 +4327,7 @@
     {
       "name": "LavaStoneUse",
       "type": "procedure",
-      "sortid": 251,
+      "sortid": 252,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_stone_use",
@@ -4367,7 +4367,7 @@
     {
       "name": "LavaMasterStart",
       "type": "procedure",
-      "sortid": 252,
+      "sortid": 253,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_master_start",
@@ -4403,7 +4403,7 @@
     {
       "name": "LavaMasterEnd",
       "type": "procedure",
-      "sortid": 253,
+      "sortid": 254,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_master_end",
@@ -4439,7 +4439,7 @@
     {
       "name": "WheelAbilitiesLava",
       "type": "gui",
-      "sortid": 254,
+      "sortid": 255,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_lava",
@@ -4455,7 +4455,7 @@
     {
       "name": "Attack37",
       "type": "procedure",
-      "sortid": 255,
+      "sortid": 256,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_37",
@@ -4475,7 +4475,7 @@
     {
       "name": "Attack38",
       "type": "procedure",
-      "sortid": 256,
+      "sortid": 257,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_38",
@@ -4495,7 +4495,7 @@
     {
       "name": "Attack39",
       "type": "procedure",
-      "sortid": 257,
+      "sortid": 258,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_39",
@@ -4515,7 +4515,7 @@
     {
       "name": "Attack40",
       "type": "procedure",
-      "sortid": 258,
+      "sortid": 259,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_40",
@@ -4535,7 +4535,7 @@
     {
       "name": "CrystalMaster",
       "type": "potioneffect",
-      "sortid": 259,
+      "sortid": 260,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_master",
@@ -4549,7 +4549,7 @@
     {
       "name": "ElementalStones",
       "type": "tag",
-      "sortid": 260,
+      "sortid": 261,
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_stones",
@@ -4739,7 +4739,7 @@
     {
       "name": "SpaceStone",
       "type": "item",
-      "sortid": 261,
+      "sortid": 262,
       "compiles": true,
       "locked_code": false,
       "registry_name": "space_stone",
@@ -4755,7 +4755,7 @@
     {
       "name": "TimeStone",
       "type": "item",
-      "sortid": 262,
+      "sortid": 263,
       "compiles": true,
       "locked_code": false,
       "registry_name": "time_stone",
@@ -4771,7 +4771,7 @@
     {
       "name": "BloodStone",
       "type": "item",
-      "sortid": 263,
+      "sortid": 264,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blood_stone",
@@ -4787,7 +4787,7 @@
     {
       "name": "TechnologyStone",
       "type": "item",
-      "sortid": 264,
+      "sortid": 265,
       "compiles": true,
       "locked_code": false,
       "registry_name": "technology_stone",
@@ -4803,7 +4803,7 @@
     {
       "name": "TeleportationStone",
       "type": "item",
-      "sortid": 265,
+      "sortid": 266,
       "compiles": true,
       "locked_code": false,
       "registry_name": "teleportation_stone",
@@ -4819,7 +4819,7 @@
     {
       "name": "ExplosionStone",
       "type": "item",
-      "sortid": 266,
+      "sortid": 267,
       "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_stone",
@@ -4835,7 +4835,7 @@
     {
       "name": "AmberStone",
       "type": "item",
-      "sortid": 267,
+      "sortid": 268,
       "compiles": true,
       "locked_code": false,
       "registry_name": "amber_stone",
@@ -4851,7 +4851,7 @@
     {
       "name": "CreationStone",
       "type": "item",
-      "sortid": 268,
+      "sortid": 269,
       "compiles": true,
       "locked_code": false,
       "registry_name": "creation_stone",
@@ -4867,7 +4867,7 @@
     {
       "name": "DestructionStone",
       "type": "item",
-      "sortid": 269,
+      "sortid": 270,
       "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_stone",
@@ -4883,7 +4883,7 @@
     {
       "name": "MistStone",
       "type": "item",
-      "sortid": 270,
+      "sortid": 271,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mist_stone",
@@ -4899,7 +4899,7 @@
     {
       "name": "SandStone",
       "type": "item",
-      "sortid": 271,
+      "sortid": 272,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sand_stone",
@@ -4915,7 +4915,7 @@
     {
       "name": "SpeedStone",
       "type": "item",
-      "sortid": 272,
+      "sortid": 273,
       "compiles": true,
       "locked_code": false,
       "registry_name": "speed_stone",
@@ -4931,7 +4931,7 @@
     {
       "name": "PoisonStone",
       "type": "item",
-      "sortid": 273,
+      "sortid": 274,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poison_stone",
@@ -4947,7 +4947,7 @@
     {
       "name": "MagnetStone",
       "type": "item",
-      "sortid": 274,
+      "sortid": 275,
       "compiles": true,
       "locked_code": false,
       "registry_name": "magnet_stone",
@@ -4963,7 +4963,7 @@
     {
       "name": "MushroomsStone",
       "type": "item",
-      "sortid": 275,
+      "sortid": 276,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mushrooms_stone",
@@ -4979,7 +4979,7 @@
     {
       "name": "MercuryStone",
       "type": "item",
-      "sortid": 276,
+      "sortid": 277,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mercury_stone",
@@ -4995,7 +4995,7 @@
     {
       "name": "MusicStone",
       "type": "item",
-      "sortid": 277,
+      "sortid": 278,
       "compiles": true,
       "locked_code": false,
       "registry_name": "music_stone",
@@ -5011,7 +5011,7 @@
     {
       "name": "PlagueStone",
       "type": "item",
-      "sortid": 278,
+      "sortid": 279,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plague_stone",
@@ -5027,7 +5027,7 @@
     {
       "name": "BlueFlameStone",
       "type": "item",
-      "sortid": 279,
+      "sortid": 280,
       "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_stone",
@@ -5043,7 +5043,7 @@
     {
       "name": "GravityStone",
       "type": "item",
-      "sortid": 280,
+      "sortid": 281,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_stone",
@@ -5059,7 +5059,7 @@
     {
       "name": "SmokeStone",
       "type": "item",
-      "sortid": 281,
+      "sortid": 282,
       "compiles": true,
       "locked_code": false,
       "registry_name": "smoke_stone",
@@ -5075,7 +5075,7 @@
     {
       "name": "FormStone",
       "type": "item",
-      "sortid": 282,
+      "sortid": 283,
       "compiles": true,
       "locked_code": false,
       "registry_name": "form_stone",
@@ -5091,7 +5091,7 @@
     {
       "name": "MindStone",
       "type": "item",
-      "sortid": 283,
+      "sortid": 284,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mind_stone",
@@ -5107,7 +5107,7 @@
     {
       "name": "GoldenDustStone",
       "type": "item",
-      "sortid": 284,
+      "sortid": 285,
       "compiles": true,
       "locked_code": false,
       "registry_name": "golden_dust_stone",
@@ -5123,7 +5123,7 @@
     {
       "name": "DarknessStone",
       "type": "item",
-      "sortid": 285,
+      "sortid": 286,
       "compiles": true,
       "locked_code": false,
       "registry_name": "darkness_stone",
@@ -5155,7 +5155,7 @@
     {
       "name": "SpiritStone",
       "type": "item",
-      "sortid": 286,
+      "sortid": 287,
       "compiles": true,
       "locked_code": false,
       "registry_name": "spirit_stone",
@@ -5171,7 +5171,7 @@
     {
       "name": "IceSpear",
       "type": "tool",
-      "sortid": 287,
+      "sortid": 288,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_spear",
@@ -5186,7 +5186,7 @@
     {
       "name": "IceSpearKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 288,
+      "sortid": 289,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_spear_kazhdyi_tik_v_invientarie",
@@ -5206,7 +5206,7 @@
     {
       "name": "RainMaster",
       "type": "potioneffect",
-      "sortid": 289,
+      "sortid": 290,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_master",
@@ -5220,7 +5220,7 @@
     {
       "name": "RainArmor",
       "type": "armor",
-      "sortid": 290,
+      "sortid": 291,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_armor",
@@ -5238,7 +5238,7 @@
     {
       "name": "RainArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 291,
+      "sortid": 292,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_armor_kazhdyi_tik_dlia_shliema",
@@ -5258,7 +5258,7 @@
     {
       "name": "RainArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 292,
+      "sortid": 293,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5278,7 +5278,7 @@
     {
       "name": "RainArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 293,
+      "sortid": 294,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5298,7 +5298,7 @@
     {
       "name": "RainArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 294,
+      "sortid": 295,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_armor_kazhdyi_tik_dlia_botinok",
@@ -5318,7 +5318,7 @@
     {
       "name": "TornadoMaster",
       "type": "potioneffect",
-      "sortid": 295,
+      "sortid": 296,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_master",
@@ -5332,7 +5332,7 @@
     {
       "name": "TornadoArmor",
       "type": "armor",
-      "sortid": 296,
+      "sortid": 297,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_armor",
@@ -5350,7 +5350,7 @@
     {
       "name": "TornadoArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 297,
+      "sortid": 298,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_armor_kazhdyi_tik_dlia_shliema",
@@ -5370,7 +5370,7 @@
     {
       "name": "TornadoArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 298,
+      "sortid": 299,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5390,7 +5390,7 @@
     {
       "name": "TornadoArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 299,
+      "sortid": 300,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5410,7 +5410,7 @@
     {
       "name": "TornadoArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 300,
+      "sortid": 301,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_armor_kazhdyi_tik_dlia_botinok",
@@ -5430,7 +5430,7 @@
     {
       "name": "OceanMaster",
       "type": "potioneffect",
-      "sortid": 301,
+      "sortid": 302,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_master",
@@ -5444,7 +5444,7 @@
     {
       "name": "OceanArmor",
       "type": "armor",
-      "sortid": 302,
+      "sortid": 303,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_armor",
@@ -5462,7 +5462,7 @@
     {
       "name": "OceanArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 303,
+      "sortid": 304,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_armor_kazhdyi_tik_dlia_shliema",
@@ -5482,7 +5482,7 @@
     {
       "name": "OceanArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 304,
+      "sortid": 305,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5502,7 +5502,7 @@
     {
       "name": "OceanArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 305,
+      "sortid": 306,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5522,7 +5522,7 @@
     {
       "name": "OceanArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 306,
+      "sortid": 307,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_armor_kazhdyi_tik_dlia_botinok",
@@ -5542,7 +5542,7 @@
     {
       "name": "PlantsMaster",
       "type": "potioneffect",
-      "sortid": 307,
+      "sortid": 308,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_master",
@@ -5556,7 +5556,7 @@
     {
       "name": "PlantsArmor",
       "type": "armor",
-      "sortid": 308,
+      "sortid": 309,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_armor",
@@ -5574,7 +5574,7 @@
     {
       "name": "PlantsArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 309,
+      "sortid": 310,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_armor_kazhdyi_tik_dlia_shliema",
@@ -5594,7 +5594,7 @@
     {
       "name": "PlantsArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 310,
+      "sortid": 311,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5614,7 +5614,7 @@
     {
       "name": "PlantsArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 311,
+      "sortid": 312,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5634,7 +5634,7 @@
     {
       "name": "PlantsArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 312,
+      "sortid": 313,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_armor_kazhdyi_tik_dlia_botinok",
@@ -5654,7 +5654,7 @@
     {
       "name": "AnimalsMaster",
       "type": "potioneffect",
-      "sortid": 313,
+      "sortid": 314,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master",
@@ -5668,7 +5668,7 @@
     {
       "name": "AnimalsArmor",
       "type": "armor",
-      "sortid": 314,
+      "sortid": 315,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_armor",
@@ -5686,7 +5686,7 @@
     {
       "name": "AnimalsArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 315,
+      "sortid": 316,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_armor_kazhdyi_tik_dlia_shliema",
@@ -5706,7 +5706,7 @@
     {
       "name": "AnimalsArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 316,
+      "sortid": 317,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5726,7 +5726,7 @@
     {
       "name": "AnimalsArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 317,
+      "sortid": 318,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5746,7 +5746,7 @@
     {
       "name": "AnimalsArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 318,
+      "sortid": 319,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_armor_kazhdyi_tik_dlia_botinok",
@@ -5766,7 +5766,7 @@
     {
       "name": "MetalMaster",
       "type": "potioneffect",
-      "sortid": 319,
+      "sortid": 320,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_master",
@@ -5780,7 +5780,7 @@
     {
       "name": "MetalArmor",
       "type": "armor",
-      "sortid": 320,
+      "sortid": 321,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_armor",
@@ -5798,7 +5798,7 @@
     {
       "name": "MetalArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 321,
+      "sortid": 322,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_armor_kazhdyi_tik_dlia_shliema",
@@ -5818,7 +5818,7 @@
     {
       "name": "MetalArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 322,
+      "sortid": 323,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -5838,7 +5838,7 @@
     {
       "name": "MetalArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 323,
+      "sortid": 324,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -5858,7 +5858,7 @@
     {
       "name": "MetalArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 324,
+      "sortid": 325,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_armor_kazhdyi_tik_dlia_botinok",
@@ -5878,7 +5878,7 @@
     {
       "name": "WheelAbilitiesIce",
       "type": "gui",
-      "sortid": 325,
+      "sortid": 326,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ice",
@@ -5894,7 +5894,7 @@
     {
       "name": "BallLightningProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 326,
+      "sortid": 327,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile_koghda_snariad_popadaiet_v_blok",
@@ -5926,7 +5926,7 @@
     {
       "name": "BallLightningProjectileKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 327,
+      "sortid": 328,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile_kazhdyi_tik_pri_poliotie_snariada",
@@ -5958,7 +5958,7 @@
     {
       "name": "BallLightningProjectile",
       "type": "projectile",
-      "sortid": 328,
+      "sortid": 329,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile",
@@ -5973,7 +5973,7 @@
     {
       "name": "BallLightningProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 329,
+      "sortid": 330,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile_koghda_snariad_popadaiet_v_sushchnost",
@@ -6009,7 +6009,7 @@
     {
       "name": "BassBoom",
       "type": "particle",
-      "sortid": 330,
+      "sortid": 331,
       "compiles": true,
       "locked_code": false,
       "registry_name": "bass_boom",
@@ -6024,7 +6024,7 @@
     {
       "name": "AmethystAttackProjectile",
       "type": "projectile",
-      "sortid": 331,
+      "sortid": 332,
       "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_attack_projectile",
@@ -6039,7 +6039,7 @@
     {
       "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 332,
+      "sortid": 333,
       "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_attack_projectile_koghda_snariad_popadaiet_v_blok",
@@ -6071,7 +6071,7 @@
     {
       "name": "StoneDistribution",
       "type": "gamerule",
-      "sortid": 333,
+      "sortid": 334,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stone_distribution",
@@ -6084,7 +6084,7 @@
     {
       "name": "FrozenDestructionArmor",
       "type": "procedure",
-      "sortid": 334,
+      "sortid": 335,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frozen_destruction_armor",
@@ -6120,7 +6120,7 @@
     {
       "name": "FrozenLayerOnEntity",
       "type": "procedure",
-      "sortid": 335,
+      "sortid": 336,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frozen_layer_on_entity",
@@ -6140,7 +6140,7 @@
     {
       "name": "PowerOverlay",
       "type": "overlay",
-      "sortid": 336,
+      "sortid": 337,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_overlay",
@@ -6154,7 +6154,7 @@
     {
       "name": "LavaAttackProjectile",
       "type": "projectile",
-      "sortid": 337,
+      "sortid": 338,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_attack_projectile",
@@ -6169,7 +6169,7 @@
     {
       "name": "LavaAttackProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 338,
+      "sortid": 339,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_attack_projectile_koghda_snariad_popadaiet_v_blok",
@@ -6201,7 +6201,7 @@
     {
       "name": "LavaAttackProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 339,
+      "sortid": 340,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_attack_projectile_koghda_snariad_popadaiet_v_sushchnost",
@@ -6233,7 +6233,7 @@
     {
       "name": "LavaPassiveProtection",
       "type": "procedure",
-      "sortid": 340,
+      "sortid": 341,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_passive_protection",
@@ -6269,7 +6269,7 @@
     {
       "name": "StunPriNalozhieniiEffiekta",
       "type": "procedure",
-      "sortid": 341,
+      "sortid": 342,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stun_pri_nalozhienii_effiekta",
@@ -6289,7 +6289,7 @@
     {
       "name": "Stun",
       "type": "potioneffect",
-      "sortid": 342,
+      "sortid": 343,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stun",
@@ -6303,7 +6303,7 @@
     {
       "name": "SoundBombProjectile",
       "type": "projectile",
-      "sortid": 343,
+      "sortid": 344,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile",
@@ -6318,7 +6318,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 344,
+      "sortid": 345,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_blok",
@@ -6350,7 +6350,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 345,
+      "sortid": 346,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_sushchnost",
@@ -6370,7 +6370,7 @@
     {
       "name": "LightningFalchion",
       "type": "tool",
-      "sortid": 346,
+      "sortid": 347,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_falchion",
@@ -6385,7 +6385,7 @@
     {
       "name": "LightningFalchionKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 347,
+      "sortid": 348,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_falchion_kazhdyi_tik_v_invientarie",
@@ -6405,7 +6405,7 @@
     {
       "name": "SoundDagger",
       "type": "tool",
-      "sortid": 348,
+      "sortid": 349,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_dagger",
@@ -6420,7 +6420,7 @@
     {
       "name": "SoundDaggerKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 349,
+      "sortid": 350,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_dagger_kazhdyi_tik_v_invientarie",
@@ -6440,7 +6440,7 @@
     {
       "name": "CrystalKnife",
       "type": "tool",
-      "sortid": 350,
+      "sortid": 351,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_knife",
@@ -6455,7 +6455,7 @@
     {
       "name": "CrystalKnifeKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 351,
+      "sortid": 352,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_knife_kazhdyi_tik_v_invientarie",
@@ -6475,7 +6475,7 @@
     {
       "name": "RainStoneUse",
       "type": "procedure",
-      "sortid": 352,
+      "sortid": 353,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_stone_use",
@@ -6515,7 +6515,7 @@
     {
       "name": "RainMasterStart",
       "type": "procedure",
-      "sortid": 353,
+      "sortid": 354,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_master_start",
@@ -6551,7 +6551,7 @@
     {
       "name": "RainMasterEnd",
       "type": "procedure",
-      "sortid": 354,
+      "sortid": 355,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_master_end",
@@ -6587,7 +6587,7 @@
     {
       "name": "WheelAbilitiesRain",
       "type": "gui",
-      "sortid": 355,
+      "sortid": 356,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_rain",
@@ -6603,7 +6603,7 @@
     {
       "name": "Attack41",
       "type": "procedure",
-      "sortid": 356,
+      "sortid": 357,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_41",
@@ -6623,7 +6623,7 @@
     {
       "name": "Attack42",
       "type": "procedure",
-      "sortid": 357,
+      "sortid": 358,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_42",
@@ -6643,7 +6643,7 @@
     {
       "name": "Attack43",
       "type": "procedure",
-      "sortid": 358,
+      "sortid": 359,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_43",
@@ -6663,7 +6663,7 @@
     {
       "name": "Attack44",
       "type": "procedure",
-      "sortid": 359,
+      "sortid": 360,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_44",
@@ -6683,7 +6683,7 @@
     {
       "name": "AmethystClusterAttackProjectile",
       "type": "projectile",
-      "sortid": 360,
+      "sortid": 361,
       "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_cluster_attack_projectile",
@@ -6698,7 +6698,7 @@
     {
       "name": "TornadoMasterStart",
       "type": "procedure",
-      "sortid": 361,
+      "sortid": 362,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_master_start",
@@ -6734,7 +6734,7 @@
     {
       "name": "TornadoMasterEnd",
       "type": "procedure",
-      "sortid": 362,
+      "sortid": 363,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_master_end",
@@ -6770,7 +6770,7 @@
     {
       "name": "TornadoStoneUse",
       "type": "procedure",
-      "sortid": 363,
+      "sortid": 364,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_stone_use",
@@ -6810,7 +6810,7 @@
     {
       "name": "WheelAbilitiesTornado",
       "type": "gui",
-      "sortid": 364,
+      "sortid": 365,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_tornado",
@@ -6826,7 +6826,7 @@
     {
       "name": "Attack45",
       "type": "procedure",
-      "sortid": 365,
+      "sortid": 366,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_45",
@@ -6846,7 +6846,7 @@
     {
       "name": "Attack46",
       "type": "procedure",
-      "sortid": 366,
+      "sortid": 367,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_46",
@@ -6866,7 +6866,7 @@
     {
       "name": "Attack47",
       "type": "procedure",
-      "sortid": 367,
+      "sortid": 368,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_47",
@@ -6886,7 +6886,7 @@
     {
       "name": "Attack48",
       "type": "procedure",
-      "sortid": 368,
+      "sortid": 369,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_48",
@@ -6906,7 +6906,7 @@
     {
       "name": "WhirlwindKazhdyiTikVoVriemiaEffiekta",
       "type": "procedure",
-      "sortid": 369,
+      "sortid": 370,
       "compiles": true,
       "locked_code": false,
       "registry_name": "whirlwind_kazhdyi_tik_vo_vriemia_effiekta",
@@ -6926,7 +6926,7 @@
     {
       "name": "Whirlwind",
       "type": "potioneffect",
-      "sortid": 370,
+      "sortid": 371,
       "compiles": true,
       "locked_code": false,
       "registry_name": "whirlwind",
@@ -6940,7 +6940,7 @@
     {
       "name": "RainBow",
       "type": "item",
-      "sortid": 371,
+      "sortid": 372,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_bow",
@@ -6955,7 +6955,7 @@
     {
       "name": "RainBowPoslieIspolzovaniiaSnariada",
       "type": "procedure",
-      "sortid": 372,
+      "sortid": 373,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_bow_poslie_ispolzovaniia_snariada",
@@ -6975,7 +6975,7 @@
     {
       "name": "RainBowKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 373,
+      "sortid": 374,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_bow_kazhdyi_tik_v_invientarie",
@@ -6995,7 +6995,7 @@
     {
       "name": "LavaHammer",
       "type": "tool",
-      "sortid": 374,
+      "sortid": 375,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_hammer",
@@ -7010,7 +7010,7 @@
     {
       "name": "LavaHammerKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 375,
+      "sortid": 376,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_hammer_kazhdyi_tik_v_invientarie",
@@ -7030,7 +7030,7 @@
     {
       "name": "RainDropProjectile",
       "type": "projectile",
-      "sortid": 376,
+      "sortid": 377,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_drop_projectile",
@@ -7045,7 +7045,7 @@
     {
       "name": "WheelAbilitiesOcean",
       "type": "gui",
-      "sortid": 377,
+      "sortid": 378,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_ocean",
@@ -7061,7 +7061,7 @@
     {
       "name": "Attack49",
       "type": "procedure",
-      "sortid": 378,
+      "sortid": 379,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_49",
@@ -7081,7 +7081,7 @@
     {
       "name": "Attack50",
       "type": "procedure",
-      "sortid": 379,
+      "sortid": 380,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_50",
@@ -7101,7 +7101,7 @@
     {
       "name": "Attack51",
       "type": "procedure",
-      "sortid": 380,
+      "sortid": 381,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_51",
@@ -7121,7 +7121,7 @@
     {
       "name": "Attack52",
       "type": "procedure",
-      "sortid": 381,
+      "sortid": 382,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_52",
@@ -7141,7 +7141,7 @@
     {
       "name": "OceanMasterStart",
       "type": "procedure",
-      "sortid": 382,
+      "sortid": 383,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_master_start",
@@ -7177,7 +7177,7 @@
     {
       "name": "OceanMasterEnd",
       "type": "procedure",
-      "sortid": 383,
+      "sortid": 384,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_master_end",
@@ -7213,7 +7213,7 @@
     {
       "name": "OceanStoneUse",
       "type": "procedure",
-      "sortid": 384,
+      "sortid": 385,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_stone_use",
@@ -7253,7 +7253,7 @@
     {
       "name": "TornadoAxe",
       "type": "tool",
-      "sortid": 385,
+      "sortid": 386,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_axe",
@@ -7268,7 +7268,7 @@
     {
       "name": "TornadoAxeKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 386,
+      "sortid": 387,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_axe_kazhdyi_tik_v_invientarie",
@@ -7288,7 +7288,7 @@
     {
       "name": "MiniTornadoProjectile",
       "type": "projectile",
-      "sortid": 387,
+      "sortid": 388,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mini_tornado_projectile",
@@ -7303,7 +7303,7 @@
     {
       "name": "OceanicTrident",
       "type": "tool",
-      "sortid": 388,
+      "sortid": 389,
       "compiles": true,
       "locked_code": false,
       "registry_name": "oceanic_trident",
@@ -7318,7 +7318,7 @@
     {
       "name": "OceanicTridentKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 389,
+      "sortid": 390,
       "compiles": true,
       "locked_code": false,
       "registry_name": "oceanic_trident_kazhdyi_tik_v_invientarie",
@@ -7338,7 +7338,7 @@
     {
       "name": "OceanPassiveConduit",
       "type": "procedure",
-      "sortid": 390,
+      "sortid": 391,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_passive_conduit",
@@ -7358,7 +7358,7 @@
     {
       "name": "WheelAbilitiesPlants",
       "type": "gui",
-      "sortid": 391,
+      "sortid": 392,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_plants",
@@ -7374,7 +7374,7 @@
     {
       "name": "Attack53",
       "type": "procedure",
-      "sortid": 392,
+      "sortid": 393,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_53",
@@ -7394,7 +7394,7 @@
     {
       "name": "Attack54",
       "type": "procedure",
-      "sortid": 393,
+      "sortid": 394,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_54",
@@ -7414,7 +7414,7 @@
     {
       "name": "Attack55",
       "type": "procedure",
-      "sortid": 394,
+      "sortid": 395,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_55",
@@ -7434,7 +7434,7 @@
     {
       "name": "Attack56",
       "type": "procedure",
-      "sortid": 395,
+      "sortid": 396,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_56",
@@ -7454,7 +7454,7 @@
     {
       "name": "PlantsMasterStart",
       "type": "procedure",
-      "sortid": 396,
+      "sortid": 397,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_master_start",
@@ -7490,7 +7490,7 @@
     {
       "name": "PlantsMasterEnd",
       "type": "procedure",
-      "sortid": 397,
+      "sortid": 398,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_master_end",
@@ -7526,7 +7526,7 @@
     {
       "name": "PlantsStoneUse",
       "type": "procedure",
-      "sortid": 398,
+      "sortid": 399,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_stone_use",
@@ -7566,7 +7566,7 @@
     {
       "name": "GreenStaff",
       "type": "tool",
-      "sortid": 399,
+      "sortid": 400,
       "compiles": true,
       "locked_code": false,
       "registry_name": "green_staff",
@@ -7581,7 +7581,7 @@
     {
       "name": "GreenStaffKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 400,
+      "sortid": 401,
       "compiles": true,
       "locked_code": false,
       "registry_name": "green_staff_kazhdyi_tik_v_invientarie",
@@ -7601,7 +7601,7 @@
     {
       "name": "PoisonousThornKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 401,
+      "sortid": 402,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisonous_thorn_koghda_snariad_popadaiet_v_sushchnost",
@@ -7621,7 +7621,7 @@
     {
       "name": "PoisonousThorn",
       "type": "projectile",
-      "sortid": 402,
+      "sortid": 403,
       "compiles": true,
       "locked_code": false,
       "registry_name": "poisonous_thorn",
@@ -7636,7 +7636,7 @@
     {
       "name": "WheelAbilitiesAnimals",
       "type": "gui",
-      "sortid": 403,
+      "sortid": 404,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_animals",
@@ -7652,7 +7652,7 @@
     {
       "name": "Attack57",
       "type": "procedure",
-      "sortid": 404,
+      "sortid": 405,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_57",
@@ -7672,7 +7672,7 @@
     {
       "name": "Attack58",
       "type": "procedure",
-      "sortid": 405,
+      "sortid": 406,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_58",
@@ -7692,7 +7692,7 @@
     {
       "name": "Attack59",
       "type": "procedure",
-      "sortid": 406,
+      "sortid": 407,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_59",
@@ -7712,7 +7712,7 @@
     {
       "name": "Attack60",
       "type": "procedure",
-      "sortid": 407,
+      "sortid": 408,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_60",
@@ -7732,7 +7732,7 @@
     {
       "name": "AnimalsMasterStart",
       "type": "procedure",
-      "sortid": 408,
+      "sortid": 409,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master_start",
@@ -7768,7 +7768,7 @@
     {
       "name": "AnimalsMasterEnd",
       "type": "procedure",
-      "sortid": 409,
+      "sortid": 410,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_master_end",
@@ -7804,7 +7804,7 @@
     {
       "name": "AnimalsStoneUse",
       "type": "procedure",
-      "sortid": 410,
+      "sortid": 411,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_stone_use",
@@ -7844,7 +7844,7 @@
     {
       "name": "Insects",
       "type": "particle",
-      "sortid": 411,
+      "sortid": 412,
       "compiles": true,
       "locked_code": false,
       "registry_name": "insects",
@@ -7859,7 +7859,7 @@
     {
       "name": "AnimalsHalberd",
       "type": "tool",
-      "sortid": 412,
+      "sortid": 413,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_halberd",
@@ -7874,7 +7874,7 @@
     {
       "name": "AnimalsHalberdKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 413,
+      "sortid": 414,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_halberd_kazhdyi_tik_v_invientarie",
@@ -7894,7 +7894,7 @@
     {
       "name": "WheelAbilitiesMetal",
       "type": "gui",
-      "sortid": 414,
+      "sortid": 415,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_metal",
@@ -7910,7 +7910,7 @@
     {
       "name": "Attack61",
       "type": "procedure",
-      "sortid": 415,
+      "sortid": 416,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_61",
@@ -7930,7 +7930,7 @@
     {
       "name": "Attack62",
       "type": "procedure",
-      "sortid": 416,
+      "sortid": 417,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_62",
@@ -7950,7 +7950,7 @@
     {
       "name": "Attack63",
       "type": "procedure",
-      "sortid": 417,
+      "sortid": 418,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_63",
@@ -7970,7 +7970,7 @@
     {
       "name": "Attack64",
       "type": "procedure",
-      "sortid": 418,
+      "sortid": 419,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_64",
@@ -7990,7 +7990,7 @@
     {
       "name": "MetalMasterStart",
       "type": "procedure",
-      "sortid": 419,
+      "sortid": 420,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_master_start",
@@ -8026,7 +8026,7 @@
     {
       "name": "MetalMasterEnd",
       "type": "procedure",
-      "sortid": 420,
+      "sortid": 421,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_master_end",
@@ -8062,7 +8062,7 @@
     {
       "name": "MetalStoneUse",
       "type": "procedure",
-      "sortid": 421,
+      "sortid": 422,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_stone_use",
@@ -8102,7 +8102,7 @@
     {
       "name": "CopperAttackProjectile",
       "type": "projectile",
-      "sortid": 422,
+      "sortid": 423,
       "compiles": true,
       "locked_code": false,
       "registry_name": "copper_attack_projectile",
@@ -8117,7 +8117,7 @@
     {
       "name": "CopperAttackProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 423,
+      "sortid": 424,
       "compiles": true,
       "locked_code": false,
       "registry_name": "copper_attack_projectile_koghda_snariad_popadaiet_v_blok",
@@ -8149,7 +8149,7 @@
     {
       "name": "GoldAttackProjectile",
       "type": "projectile",
-      "sortid": 424,
+      "sortid": 425,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gold_attack_projectile",
@@ -8164,7 +8164,7 @@
     {
       "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 425,
+      "sortid": 426,
       "compiles": true,
       "locked_code": false,
       "registry_name": "gold_attack_projectile_koghda_snariad_popadaiet_v_blok",
@@ -8196,7 +8196,7 @@
     {
       "name": "IronAttackProjectile",
       "type": "projectile",
-      "sortid": 426,
+      "sortid": 427,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_attack_projectile",
@@ -8211,7 +8211,7 @@
     {
       "name": "IronAttackProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "sortid": 427,
+      "sortid": 428,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_attack_projectile_koghda_snariad_popadaiet_v_blok",
@@ -8243,7 +8243,7 @@
     {
       "name": "EmptyBatteryDesc",
       "type": "procedure",
-      "sortid": 428,
+      "sortid": 429,
       "compiles": true,
       "locked_code": false,
       "registry_name": "empty_battery_desc",
@@ -8259,7 +8259,7 @@
     {
       "name": "EmptyBattery",
       "type": "item",
-      "sortid": 42,
+      "sortid": 43,
       "compiles": true,
       "locked_code": false,
       "registry_name": "empty_battery",
@@ -8274,7 +8274,7 @@
     {
       "name": "Items",
       "type": "tab",
-      "sortid": 429,
+      "sortid": 430,
       "compiles": true,
       "locked_code": false,
       "registry_name": "items",
@@ -8286,7 +8286,7 @@
     {
       "name": "FireBatteryDesc",
       "type": "procedure",
-      "sortid": 430,
+      "sortid": 431,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_battery_desc",
@@ -8302,7 +8302,7 @@
     {
       "name": "FireBattery",
       "type": "item",
-      "sortid": 43,
+      "sortid": 44,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_battery",
@@ -8317,7 +8317,7 @@
     {
       "name": "FireBatteryUse",
       "type": "procedure",
-      "sortid": 431,
+      "sortid": 432,
       "compiles": true,
       "locked_code": false,
       "registry_name": "fire_battery_use",
@@ -8357,7 +8357,7 @@
     {
       "name": "AirBatteryDesc",
       "type": "procedure",
-      "sortid": 432,
+      "sortid": 433,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_battery_desc",
@@ -8373,7 +8373,7 @@
     {
       "name": "AirBattery",
       "type": "item",
-      "sortid": 44,
+      "sortid": 45,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_battery",
@@ -8388,7 +8388,7 @@
     {
       "name": "AirBatteryUse",
       "type": "procedure",
-      "sortid": 433,
+      "sortid": 434,
       "compiles": true,
       "locked_code": false,
       "registry_name": "air_battery_use",
@@ -8428,7 +8428,7 @@
     {
       "name": "EarthBattery",
       "type": "item",
-      "sortid": 45,
+      "sortid": 46,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_battery",
@@ -8443,7 +8443,7 @@
     {
       "name": "EarthBatteryDesc",
       "type": "procedure",
-      "sortid": 434,
+      "sortid": 435,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_battery_desc",
@@ -8459,7 +8459,7 @@
     {
       "name": "EarthBatteryUse",
       "type": "procedure",
-      "sortid": 435,
+      "sortid": 436,
       "compiles": true,
       "locked_code": false,
       "registry_name": "earth_battery_use",
@@ -8499,7 +8499,7 @@
     {
       "name": "WaterBattery",
       "type": "item",
-      "sortid": 46,
+      "sortid": 47,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_battery",
@@ -8514,7 +8514,7 @@
     {
       "name": "WaterBatteryDesc",
       "type": "procedure",
-      "sortid": 436,
+      "sortid": 437,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_battery_desc",
@@ -8530,7 +8530,7 @@
     {
       "name": "WaterBatteryUse",
       "type": "procedure",
-      "sortid": 437,
+      "sortid": 438,
       "compiles": true,
       "locked_code": false,
       "registry_name": "water_battery_use",
@@ -8570,7 +8570,7 @@
     {
       "name": "EtherBattery",
       "type": "item",
-      "sortid": 47,
+      "sortid": 48,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_battery",
@@ -8585,7 +8585,7 @@
     {
       "name": "EtherBatteryDesc",
       "type": "procedure",
-      "sortid": 438,
+      "sortid": 439,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_battery_desc",
@@ -8601,7 +8601,7 @@
     {
       "name": "EtherBatteryUse",
       "type": "procedure",
-      "sortid": 439,
+      "sortid": 440,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ether_battery_use",
@@ -8641,7 +8641,7 @@
     {
       "name": "IceBattery",
       "type": "item",
-      "sortid": 48,
+      "sortid": 49,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_battery",
@@ -8656,7 +8656,7 @@
     {
       "name": "IceBatteryDesc",
       "type": "procedure",
-      "sortid": 440,
+      "sortid": 441,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_battery_desc",
@@ -8672,7 +8672,7 @@
     {
       "name": "IceBatteryUse",
       "type": "procedure",
-      "sortid": 441,
+      "sortid": 442,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ice_battery_use",
@@ -8712,7 +8712,7 @@
     {
       "name": "LightningBattery",
       "type": "item",
-      "sortid": 49,
+      "sortid": 50,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_battery",
@@ -8727,7 +8727,7 @@
     {
       "name": "LightningBatteryDesc",
       "type": "procedure",
-      "sortid": 442,
+      "sortid": 443,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_battery_desc",
@@ -8743,7 +8743,7 @@
     {
       "name": "LightningBatteryUse",
       "type": "procedure",
-      "sortid": 443,
+      "sortid": 444,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_battery_use",
@@ -8783,7 +8783,7 @@
     {
       "name": "IronSkin",
       "type": "potioneffect",
-      "sortid": 444,
+      "sortid": 445,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_skin",
@@ -8797,7 +8797,7 @@
     {
       "name": "StarPotion100PriShchielchkiePKM",
       "type": "procedure",
-      "sortid": 445,
+      "sortid": 446,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_100_pri_shchielchkie_pkm",
@@ -8832,7 +8832,7 @@
     {
       "name": "StarPotion100DopolnitielnaiaInformatsiia",
       "type": "procedure",
-      "sortid": 446,
+      "sortid": 447,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_100_dopolnitielnaia_informatsiia",
@@ -8863,7 +8863,7 @@
     {
       "name": "StarPotion200DopolnitielnaiaInformatsiia",
       "type": "procedure",
-      "sortid": 447,
+      "sortid": 448,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_200_dopolnitielnaia_informatsiia",
@@ -8879,7 +8879,7 @@
     {
       "name": "StarPotion200PriShchielchkiePKM",
       "type": "procedure",
-      "sortid": 448,
+      "sortid": 449,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_200_pri_shchielchkie_pkm",
@@ -8914,7 +8914,7 @@
     {
       "name": "StarPotion500DopolnitielnaiaInformatsiia",
       "type": "procedure",
-      "sortid": 449,
+      "sortid": 450,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_500_dopolnitielnaia_informatsiia",
@@ -8930,7 +8930,7 @@
     {
       "name": "StarPotion500PriShchielchkiePKM",
       "type": "procedure",
-      "sortid": 450,
+      "sortid": 451,
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_potion_500_pri_shchielchkie_pkm",
@@ -8950,7 +8950,7 @@
     {
       "name": "RightMetalGauntlet",
       "type": "tool",
-      "sortid": 451,
+      "sortid": 452,
       "compiles": true,
       "locked_code": false,
       "registry_name": "right_metal_gauntlet",
@@ -8965,7 +8965,7 @@
     {
       "name": "RightMetalGauntletKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 452,
+      "sortid": 453,
       "compiles": true,
       "locked_code": false,
       "registry_name": "right_metal_gauntlet_kazhdyi_tik_v_invientarie",
@@ -8985,7 +8985,7 @@
     {
       "name": "LeftMetalGauntlet",
       "type": "tool",
-      "sortid": 453,
+      "sortid": 454,
       "compiles": true,
       "locked_code": false,
       "registry_name": "left_metal_gauntlet",
@@ -9000,7 +9000,7 @@
     {
       "name": "LeftMetalGauntletKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 454,
+      "sortid": 455,
       "compiles": true,
       "locked_code": false,
       "registry_name": "left_metal_gauntlet_kazhdyi_tik_v_invientarie",
@@ -9020,7 +9020,7 @@
     {
       "name": "SoundBattery",
       "type": "item",
-      "sortid": 50,
+      "sortid": 51,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_battery",
@@ -9035,7 +9035,7 @@
     {
       "name": "SoundBatteryDesc",
       "type": "procedure",
-      "sortid": 455,
+      "sortid": 456,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_battery_desc",
@@ -9051,7 +9051,7 @@
     {
       "name": "SoundBatteryUse",
       "type": "procedure",
-      "sortid": 456,
+      "sortid": 457,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sound_battery_use",
@@ -9091,7 +9091,7 @@
     {
       "name": "CrystalBattery",
       "type": "item",
-      "sortid": 51,
+      "sortid": 52,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_battery",
@@ -9106,7 +9106,7 @@
     {
       "name": "CrystalBatteryDesc",
       "type": "procedure",
-      "sortid": 457,
+      "sortid": 458,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_battery_desc",
@@ -9122,7 +9122,7 @@
     {
       "name": "CrystalBatteryUse",
       "type": "procedure",
-      "sortid": 458,
+      "sortid": 459,
       "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_battery_use",
@@ -9162,7 +9162,7 @@
     {
       "name": "LavaBattery",
       "type": "item",
-      "sortid": 52,
+      "sortid": 53,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery",
@@ -9177,7 +9177,7 @@
     {
       "name": "LavaBatteryDesc",
       "type": "procedure",
-      "sortid": 459,
+      "sortid": 460,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery_desc",
@@ -9193,7 +9193,7 @@
     {
       "name": "LavaBatteryUse",
       "type": "procedure",
-      "sortid": 460,
+      "sortid": 461,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery_use",
@@ -9233,7 +9233,7 @@
     {
       "name": "RainBattery",
       "type": "item",
-      "sortid": 53,
+      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_battery",
@@ -9248,7 +9248,7 @@
     {
       "name": "RainBatteryDesc",
       "type": "procedure",
-      "sortid": 461,
+      "sortid": 462,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_battery_desc",
@@ -9264,7 +9264,7 @@
     {
       "name": "RainBatteryUse",
       "type": "procedure",
-      "sortid": 462,
+      "sortid": 463,
       "compiles": true,
       "locked_code": false,
       "registry_name": "rain_battery_use",
@@ -9304,7 +9304,7 @@
     {
       "name": "TornadoBattery",
       "type": "item",
-      "sortid": 54,
+      "sortid": 55,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_battery",
@@ -9319,7 +9319,7 @@
     {
       "name": "TornadoBatteryDesc",
       "type": "procedure",
-      "sortid": 463,
+      "sortid": 464,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_battery_desc",
@@ -9335,7 +9335,7 @@
     {
       "name": "TornadoBatteryUse",
       "type": "procedure",
-      "sortid": 464,
+      "sortid": 465,
       "compiles": true,
       "locked_code": false,
       "registry_name": "tornado_battery_use",
@@ -9375,7 +9375,7 @@
     {
       "name": "OceanBattery",
       "type": "item",
-      "sortid": 55,
+      "sortid": 56,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_battery",
@@ -9390,7 +9390,7 @@
     {
       "name": "OceanBatteryDesc",
       "type": "procedure",
-      "sortid": 465,
+      "sortid": 466,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_battery_desc",
@@ -9406,7 +9406,7 @@
     {
       "name": "OceanBatteryUse",
       "type": "procedure",
-      "sortid": 466,
+      "sortid": 467,
       "compiles": true,
       "locked_code": false,
       "registry_name": "ocean_battery_use",
@@ -9446,7 +9446,7 @@
     {
       "name": "PlantsBattery",
       "type": "item",
-      "sortid": 56,
+      "sortid": 57,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_battery",
@@ -9461,7 +9461,7 @@
     {
       "name": "PlantsBatteryDesc",
       "type": "procedure",
-      "sortid": 467,
+      "sortid": 468,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_battery_desc",
@@ -9477,7 +9477,7 @@
     {
       "name": "PlantsBatteryUse",
       "type": "procedure",
-      "sortid": 468,
+      "sortid": 469,
       "compiles": true,
       "locked_code": false,
       "registry_name": "plants_battery_use",
@@ -9517,7 +9517,7 @@
     {
       "name": "AnimalsBattery",
       "type": "item",
-      "sortid": 57,
+      "sortid": 58,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_battery",
@@ -9532,7 +9532,7 @@
     {
       "name": "AnimalsBatteryDesc",
       "type": "procedure",
-      "sortid": 469,
+      "sortid": 470,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_battery_desc",
@@ -9548,7 +9548,7 @@
     {
       "name": "AnimalsBatteryUse",
       "type": "procedure",
-      "sortid": 470,
+      "sortid": 471,
       "compiles": true,
       "locked_code": false,
       "registry_name": "animals_battery_use",
@@ -9588,7 +9588,7 @@
     {
       "name": "MetalBattery",
       "type": "item",
-      "sortid": 58,
+      "sortid": 59,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery",
@@ -9603,7 +9603,7 @@
     {
       "name": "MetalBatteryDesc",
       "type": "procedure",
-      "sortid": 471,
+      "sortid": 472,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery_desc",
@@ -9619,7 +9619,7 @@
     {
       "name": "MetalBatteryUse",
       "type": "procedure",
-      "sortid": 472,
+      "sortid": 473,
       "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery_use",
@@ -9659,7 +9659,7 @@
     {
       "name": "LightMaster",
       "type": "potioneffect",
-      "sortid": 473,
+      "sortid": 474,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_master",
@@ -9673,7 +9673,7 @@
     {
       "name": "LightArmor",
       "type": "armor",
-      "sortid": 474,
+      "sortid": 475,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_armor",
@@ -9691,7 +9691,7 @@
     {
       "name": "LightArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 475,
+      "sortid": 476,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_armor_kazhdyi_tik_dlia_shliema",
@@ -9711,7 +9711,7 @@
     {
       "name": "LightArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 476,
+      "sortid": 477,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -9731,7 +9731,7 @@
     {
       "name": "LightArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 477,
+      "sortid": 478,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -9751,7 +9751,7 @@
     {
       "name": "LightArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 478,
+      "sortid": 479,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_armor_kazhdyi_tik_dlia_botinok",
@@ -9771,7 +9771,7 @@
     {
       "name": "LightStoneUse",
       "type": "procedure",
-      "sortid": 479,
+      "sortid": 480,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_stone_use",
@@ -9811,7 +9811,7 @@
     {
       "name": "LightMasterStart",
       "type": "procedure",
-      "sortid": 480,
+      "sortid": 481,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_master_start",
@@ -9847,7 +9847,7 @@
     {
       "name": "LightMasterEnd",
       "type": "procedure",
-      "sortid": 481,
+      "sortid": 482,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_master_end",
@@ -9883,7 +9883,7 @@
     {
       "name": "WheelAbilitiesLight",
       "type": "gui",
-      "sortid": 482,
+      "sortid": 483,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_light",
@@ -9899,7 +9899,7 @@
     {
       "name": "Attack65",
       "type": "procedure",
-      "sortid": 483,
+      "sortid": 484,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_65",
@@ -9919,7 +9919,7 @@
     {
       "name": "Attack66",
       "type": "procedure",
-      "sortid": 484,
+      "sortid": 485,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_66",
@@ -9939,7 +9939,7 @@
     {
       "name": "Attack67",
       "type": "procedure",
-      "sortid": 485,
+      "sortid": 486,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_67",
@@ -9959,7 +9959,7 @@
     {
       "name": "Attack68",
       "type": "procedure",
-      "sortid": 486,
+      "sortid": 487,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_68",
@@ -9979,7 +9979,7 @@
     {
       "name": "LightBattery",
       "type": "item",
-      "sortid": 59,
+      "sortid": 60,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_battery",
@@ -9994,7 +9994,7 @@
     {
       "name": "LightBatteryDesc",
       "type": "procedure",
-      "sortid": 487,
+      "sortid": 488,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_battery_desc",
@@ -10010,7 +10010,7 @@
     {
       "name": "LightBatteryUse",
       "type": "procedure",
-      "sortid": 488,
+      "sortid": 489,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_battery_use",
@@ -10050,7 +10050,7 @@
     {
       "name": "KnifeAttackProjectile",
       "type": "projectile",
-      "sortid": 489,
+      "sortid": 490,
       "compiles": true,
       "locked_code": false,
       "registry_name": "knife_attack_projectile",
@@ -10065,7 +10065,7 @@
     {
       "name": "LightSparkle",
       "type": "particle",
-      "sortid": 490,
+      "sortid": 491,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_sparkle",
@@ -10080,7 +10080,7 @@
     {
       "name": "LightSword",
       "type": "tool",
-      "sortid": 491,
+      "sortid": 492,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_sword",
@@ -10095,7 +10095,7 @@
     {
       "name": "LightSwordKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 492,
+      "sortid": 493,
       "compiles": true,
       "locked_code": false,
       "registry_name": "light_sword_kazhdyi_tik_v_invientarie",
@@ -10115,7 +10115,7 @@
     {
       "name": "LightballProjectile",
       "type": "projectile",
-      "sortid": 493,
+      "sortid": 494,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightball_projectile",
@@ -10130,7 +10130,7 @@
     {
       "name": "LightballProjectileKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 494,
+      "sortid": 495,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightball_projectile_kazhdyi_tik_pri_poliotie_snariada",
@@ -10162,7 +10162,7 @@
     {
       "name": "LightballProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 495,
+      "sortid": 496,
       "compiles": true,
       "locked_code": false,
       "registry_name": "lightball_projectile_koghda_snariad_popadaiet_v_sushchnost",
@@ -10182,7 +10182,7 @@
     {
       "name": "WheelAbilitiesShadow",
       "type": "gui",
-      "sortid": 496,
+      "sortid": 497,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_shadow",
@@ -10198,7 +10198,7 @@
     {
       "name": "Attack69",
       "type": "procedure",
-      "sortid": 497,
+      "sortid": 498,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_69",
@@ -10218,7 +10218,7 @@
     {
       "name": "Attack70",
       "type": "procedure",
-      "sortid": 498,
+      "sortid": 499,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_70",
@@ -10238,7 +10238,7 @@
     {
       "name": "Attack71",
       "type": "procedure",
-      "sortid": 499,
+      "sortid": 500,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_71",
@@ -10258,7 +10258,7 @@
     {
       "name": "Attack72",
       "type": "procedure",
-      "sortid": 500,
+      "sortid": 501,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_72",
@@ -10278,7 +10278,7 @@
     {
       "name": "ShadowMaster",
       "type": "potioneffect",
-      "sortid": 501,
+      "sortid": 502,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_master",
@@ -10292,7 +10292,7 @@
     {
       "name": "ShadowArmor",
       "type": "armor",
-      "sortid": 502,
+      "sortid": 503,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor",
@@ -10310,7 +10310,7 @@
     {
       "name": "ShadowArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 503,
+      "sortid": 504,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor_kazhdyi_tik_dlia_shliema",
@@ -10330,7 +10330,7 @@
     {
       "name": "ShadowArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 504,
+      "sortid": 505,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -10350,7 +10350,7 @@
     {
       "name": "ShadowArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 505,
+      "sortid": 506,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -10370,7 +10370,7 @@
     {
       "name": "ShadowArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 506,
+      "sortid": 507,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_armor_kazhdyi_tik_dlia_botinok",
@@ -10390,7 +10390,7 @@
     {
       "name": "ShadowStoneUse",
       "type": "procedure",
-      "sortid": 507,
+      "sortid": 508,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_stone_use",
@@ -10430,7 +10430,7 @@
     {
       "name": "ShadowMasterStart",
       "type": "procedure",
-      "sortid": 508,
+      "sortid": 509,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_master_start",
@@ -10466,7 +10466,7 @@
     {
       "name": "ShadowMasterEnd",
       "type": "procedure",
-      "sortid": 509,
+      "sortid": 510,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_master_end",
@@ -10502,7 +10502,7 @@
     {
       "name": "ShadowBattery",
       "type": "item",
-      "sortid": 60,
+      "sortid": 61,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_battery",
@@ -10517,7 +10517,7 @@
     {
       "name": "ShadowBatteryDesc",
       "type": "procedure",
-      "sortid": 510,
+      "sortid": 511,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_battery_desc",
@@ -10533,7 +10533,7 @@
     {
       "name": "ShadowBatteryUse",
       "type": "procedure",
-      "sortid": 511,
+      "sortid": 512,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_battery_use",
@@ -10573,7 +10573,7 @@
     {
       "name": "Shadow",
       "type": "livingentity",
-      "sortid": 65,
+      "sortid": 66,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow",
@@ -10588,7 +10588,7 @@
     {
       "name": "DepletedEnergiumOreLoot",
       "type": "loottable",
-      "sortid": 512,
+      "sortid": 513,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore_loot",
@@ -10602,7 +10602,7 @@
     {
       "name": "DepletedEnergiumIngot",
       "type": "item",
-      "sortid": 31,
+      "sortid": 32,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ingot",
@@ -10617,7 +10617,7 @@
     {
       "name": "DepletedEnergiumOre",
       "type": "block",
-      "sortid": 27,
+      "sortid": 28,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore",
@@ -10637,7 +10637,7 @@
     {
       "name": "DepletedEnergiumBlock",
       "type": "block",
-      "sortid": 28,
+      "sortid": 29,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_block",
@@ -10654,7 +10654,7 @@
     {
       "name": "DepletedEnergiumOreBlockRecipe",
       "type": "recipe",
-      "sortid": 513,
+      "sortid": 514,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore_block_recipe",
@@ -10668,7 +10668,7 @@
     {
       "name": "DepletedEnergiumBlockOreRecipe",
       "type": "recipe",
-      "sortid": 514,
+      "sortid": 515,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_block_ore_recipe",
@@ -10682,7 +10682,7 @@
     {
       "name": "DepletedEnergiumOreSmelting",
       "type": "recipe",
-      "sortid": 515,
+      "sortid": 516,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore_smelting",
@@ -10696,7 +10696,7 @@
     {
       "name": "RawDepletedEnergium",
       "type": "item",
-      "sortid": 30,
+      "sortid": 31,
       "compiles": true,
       "locked_code": false,
       "registry_name": "raw_depleted_energium",
@@ -10711,7 +10711,7 @@
     {
       "name": "RawDepletedEnergiumRecipe",
       "type": "recipe",
-      "sortid": 516,
+      "sortid": 517,
       "compiles": true,
       "locked_code": false,
       "registry_name": "raw_depleted_energium_recipe",
@@ -10725,7 +10725,7 @@
     {
       "name": "EnergiumIngot",
       "type": "item",
-      "sortid": 32,
+      "sortid": 33,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ingot",
@@ -10740,7 +10740,7 @@
     {
       "name": "EnergiumBlock",
       "type": "block",
-      "sortid": 29,
+      "sortid": 30,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_block",
@@ -10757,7 +10757,7 @@
     {
       "name": "ShadowSphere",
       "type": "projectile",
-      "sortid": 517,
+      "sortid": 518,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_sphere",
@@ -10772,7 +10772,7 @@
     {
       "name": "ShadowSphereKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 518,
+      "sortid": 519,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_sphere_kazhdyi_tik_pri_poliotie_snariada",
@@ -10804,7 +10804,7 @@
     {
       "name": "ShadowScythe",
       "type": "tool",
-      "sortid": 519,
+      "sortid": 520,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_scythe",
@@ -10819,7 +10819,7 @@
     {
       "name": "ShadowScytheKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 520,
+      "sortid": 521,
       "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_scythe_kazhdyi_tik_v_invientarie",
@@ -10839,7 +10839,7 @@
     {
       "name": "VacuumMaster",
       "type": "potioneffect",
-      "sortid": 521,
+      "sortid": 522,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_master",
@@ -10853,7 +10853,7 @@
     {
       "name": "VacuumArmor",
       "type": "armor",
-      "sortid": 522,
+      "sortid": 523,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_armor",
@@ -10871,7 +10871,7 @@
     {
       "name": "VacuumArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 523,
+      "sortid": 524,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_armor_kazhdyi_tik_dlia_shliema",
@@ -10891,7 +10891,7 @@
     {
       "name": "VacuumArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 524,
+      "sortid": 525,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -10911,7 +10911,7 @@
     {
       "name": "VacuumArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 525,
+      "sortid": 526,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -10931,7 +10931,7 @@
     {
       "name": "VacuumArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 526,
+      "sortid": 527,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_armor_kazhdyi_tik_dlia_botinok",
@@ -10951,7 +10951,7 @@
     {
       "name": "WheelAbilitiesVacuum",
       "type": "gui",
-      "sortid": 527,
+      "sortid": 528,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_vacuum",
@@ -10967,7 +10967,7 @@
     {
       "name": "Atttack73",
       "type": "procedure",
-      "sortid": 528,
+      "sortid": 529,
       "compiles": true,
       "locked_code": false,
       "registry_name": "atttack_73",
@@ -10987,7 +10987,7 @@
     {
       "name": "Attack74",
       "type": "procedure",
-      "sortid": 529,
+      "sortid": 530,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_74",
@@ -11007,7 +11007,7 @@
     {
       "name": "Attack75",
       "type": "procedure",
-      "sortid": 530,
+      "sortid": 531,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_75",
@@ -11027,7 +11027,7 @@
     {
       "name": "Attack76",
       "type": "procedure",
-      "sortid": 531,
+      "sortid": 532,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_76",
@@ -11047,7 +11047,7 @@
     {
       "name": "VacuumMasterStart",
       "type": "procedure",
-      "sortid": 532,
+      "sortid": 533,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_master_start",
@@ -11083,7 +11083,7 @@
     {
       "name": "VacuumMasterEnd",
       "type": "procedure",
-      "sortid": 533,
+      "sortid": 534,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_master_end",
@@ -11119,7 +11119,7 @@
     {
       "name": "VacuumStoneUse",
       "type": "procedure",
-      "sortid": 534,
+      "sortid": 535,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_stone_use",
@@ -11159,7 +11159,7 @@
     {
       "name": "VacuumBattery",
       "type": "item",
-      "sortid": 61,
+      "sortid": 62,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_battery",
@@ -11174,7 +11174,7 @@
     {
       "name": "VacuumBatteryDesc",
       "type": "procedure",
-      "sortid": 535,
+      "sortid": 536,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_battery_desc",
@@ -11190,7 +11190,7 @@
     {
       "name": "VacuumBatteryUse",
       "type": "procedure",
-      "sortid": 536,
+      "sortid": 537,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_battery_use",
@@ -11230,7 +11230,7 @@
     {
       "name": "BatteryCharger",
       "type": "block",
-      "sortid": 33,
+      "sortid": 34,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger",
@@ -11248,7 +11248,7 @@
     {
       "name": "BatteryChargerRecipe",
       "type": "recipe",
-      "sortid": 537,
+      "sortid": 538,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_recipe",
@@ -11262,7 +11262,7 @@
     {
       "name": "BatteryChargerGUI",
       "type": "gui",
-      "sortid": 538,
+      "sortid": 539,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_gui",
@@ -11277,7 +11277,7 @@
     {
       "name": "EmptyBatteryRecipe",
       "type": "recipe",
-      "sortid": 539,
+      "sortid": 540,
       "compiles": true,
       "locked_code": false,
       "registry_name": "empty_battery_recipe",
@@ -11291,7 +11291,7 @@
     {
       "name": "UnlockRecipes",
       "type": "procedure",
-      "sortid": 540,
+      "sortid": 541,
       "compiles": true,
       "locked_code": false,
       "registry_name": "unlock_recipes",
@@ -11311,7 +11311,7 @@
     {
       "name": "BatteryChargerTick",
       "type": "procedure",
-      "sortid": 541,
+      "sortid": 542,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_tick",
@@ -11343,7 +11343,7 @@
     {
       "name": "BatteryChargerProgress1",
       "type": "procedure",
-      "sortid": 542,
+      "sortid": 543,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_progress_1",
@@ -11376,7 +11376,7 @@
     {
       "name": "BatteryChargerProgress2",
       "type": "procedure",
-      "sortid": 543,
+      "sortid": 544,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_progress_2",
@@ -11409,7 +11409,7 @@
     {
       "name": "BatteryChargerProgress3",
       "type": "procedure",
-      "sortid": 544,
+      "sortid": 545,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_progress_3",
@@ -11442,7 +11442,7 @@
     {
       "name": "BatteryChargerProgress4",
       "type": "procedure",
-      "sortid": 545,
+      "sortid": 546,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_progress_4",
@@ -11475,7 +11475,7 @@
     {
       "name": "BatteryChargerProgress5",
       "type": "procedure",
-      "sortid": 546,
+      "sortid": 547,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_progress_5",
@@ -11508,7 +11508,7 @@
     {
       "name": "BatteryChargerClientTick",
       "type": "procedure",
-      "sortid": 547,
+      "sortid": 548,
       "compiles": true,
       "locked_code": false,
       "registry_name": "battery_charger_client_tick",
@@ -11540,7 +11540,7 @@
     {
       "name": "PowerLockStart",
       "type": "procedure",
-      "sortid": 548,
+      "sortid": 549,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_lock_start",
@@ -11560,7 +11560,7 @@
     {
       "name": "PowerLockEnd",
       "type": "procedure",
-      "sortid": 549,
+      "sortid": 550,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_lock_end",
@@ -11580,7 +11580,7 @@
     {
       "name": "PowerLock",
       "type": "potioneffect",
-      "sortid": 550,
+      "sortid": 551,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_lock",
@@ -11594,7 +11594,7 @@
     {
       "name": "EnergiumBlockPowerLock",
       "type": "procedure",
-      "sortid": 551,
+      "sortid": 552,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_block_power_lock",
@@ -11626,7 +11626,7 @@
     {
       "name": "EnergiumItemsPowerLocked",
       "type": "procedure",
-      "sortid": 552,
+      "sortid": 553,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_items_power_locked",
@@ -11650,7 +11650,7 @@
     {
       "name": "EnergiumBlockOreRecipe",
       "type": "recipe",
-      "sortid": 553,
+      "sortid": 554,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_block_ore_recipe",
@@ -11664,7 +11664,7 @@
     {
       "name": "EnergiumOreBlockRecipe",
       "type": "recipe",
-      "sortid": 554,
+      "sortid": 555,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ore_block_recipe",
@@ -11678,7 +11678,7 @@
     {
       "name": "DepletedEnergiumOreBlastingRecipe",
       "type": "recipe",
-      "sortid": 555,
+      "sortid": 556,
       "compiles": true,
       "locked_code": false,
       "registry_name": "depleted_energium_ore_blasting_recipe",
@@ -11692,7 +11692,7 @@
     {
       "name": "RawDepletedEnergiumBlastingRecipe",
       "type": "recipe",
-      "sortid": 556,
+      "sortid": 557,
       "compiles": true,
       "locked_code": false,
       "registry_name": "raw_depleted_energium_blasting_recipe",
@@ -11706,7 +11706,7 @@
     {
       "name": "EnergiumIngotCleaningRecipe",
       "type": "recipe",
-      "sortid": 557,
+      "sortid": 558,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ingot_cleaning_recipe",
@@ -11720,7 +11720,7 @@
     {
       "name": "ElementalBatteries",
       "type": "tag",
-      "sortid": 558,
+      "sortid": 559,
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_batteries",
@@ -11734,7 +11734,7 @@
     {
       "name": "VacuumDagger",
       "type": "tool",
-      "sortid": 559,
+      "sortid": 560,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_dagger",
@@ -11749,7 +11749,7 @@
     {
       "name": "VacuumDaggerKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 560,
+      "sortid": 561,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_dagger_kazhdyi_tik_v_invientarie",
@@ -11769,7 +11769,7 @@
     {
       "name": "SphereNothingProjectile",
       "type": "projectile",
-      "sortid": 561,
+      "sortid": 562,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sphere_nothing_projectile",
@@ -11784,7 +11784,7 @@
     {
       "name": "VacuumParticle",
       "type": "particle",
-      "sortid": 562,
+      "sortid": 563,
       "compiles": true,
       "locked_code": false,
       "registry_name": "vacuum_particle",
@@ -11799,7 +11799,7 @@
     {
       "name": "EnergiumUpgradeSmithingTemplate",
       "type": "item",
-      "sortid": 34,
+      "sortid": 35,
       "compiles": true,
       "locked_code": true,
       "registry_name": "energium_upgrade_smithing_template",
@@ -11814,7 +11814,7 @@
     {
       "name": "DuplicateEnergiumUpgradeSmithingTemplate",
       "type": "recipe",
-      "sortid": 563,
+      "sortid": 564,
       "compiles": true,
       "locked_code": false,
       "registry_name": "duplicate_energium_upgrade_smithing_template",
@@ -11828,7 +11828,7 @@
     {
       "name": "ModVersionChecker",
       "type": "procedure",
-      "sortid": 564,
+      "sortid": 565,
       "compiles": true,
       "locked_code": false,
       "registry_name": "mod_version_checker",
@@ -11848,7 +11848,7 @@
     {
       "name": "EnergiumPickaxe",
       "type": "tool",
-      "sortid": 35,
+      "sortid": 36,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_pickaxe",
@@ -11863,7 +11863,7 @@
     {
       "name": "EnergiumAxe",
       "type": "tool",
-      "sortid": 36,
+      "sortid": 37,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_axe",
@@ -11878,7 +11878,7 @@
     {
       "name": "EnergiumSword",
       "type": "tool",
-      "sortid": 37,
+      "sortid": 38,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_sword",
@@ -11893,7 +11893,7 @@
     {
       "name": "EnergiumShovel",
       "type": "tool",
-      "sortid": 38,
+      "sortid": 39,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_shovel",
@@ -11908,7 +11908,7 @@
     {
       "name": "EnergiumHoe",
       "type": "tool",
-      "sortid": 39,
+      "sortid": 40,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_hoe",
@@ -11923,7 +11923,7 @@
     {
       "name": "EnergiumPickaxeRecipe",
       "type": "recipe",
-      "sortid": 565,
+      "sortid": 566,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_pickaxe_recipe",
@@ -11937,7 +11937,7 @@
     {
       "name": "EnergiumAxeRecipe",
       "type": "recipe",
-      "sortid": 566,
+      "sortid": 567,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_axe_recipe",
@@ -11951,7 +11951,7 @@
     {
       "name": "EnergiumSwordRecipe",
       "type": "recipe",
-      "sortid": 567,
+      "sortid": 568,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_sword_recipe",
@@ -11965,7 +11965,7 @@
     {
       "name": "EnergiumShovelRecipe",
       "type": "recipe",
-      "sortid": 568,
+      "sortid": 569,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_shovel_recipe",
@@ -11979,7 +11979,7 @@
     {
       "name": "EnergiumHoeRecipe",
       "type": "recipe",
-      "sortid": 569,
+      "sortid": 570,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_hoe_recipe",
@@ -11993,7 +11993,7 @@
     {
       "name": "EnergiumArmor",
       "type": "armor",
-      "sortid": 40,
+      "sortid": 41,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_armor",
@@ -12011,7 +12011,7 @@
     {
       "name": "EnergiumArmorHelmetRecipe",
       "type": "recipe",
-      "sortid": 570,
+      "sortid": 571,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_armor_helmet_recipe",
@@ -12025,7 +12025,7 @@
     {
       "name": "EnergiumArmorChestplateRecipe",
       "type": "recipe",
-      "sortid": 571,
+      "sortid": 572,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_armor_chestplate_recipe",
@@ -12039,7 +12039,7 @@
     {
       "name": "EnergiumArmorLeggingsRecipe",
       "type": "recipe",
-      "sortid": 572,
+      "sortid": 573,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_armor_leggings_recipe",
@@ -12053,7 +12053,7 @@
     {
       "name": "EnergiumArmorBootsRecipe",
       "type": "recipe",
-      "sortid": 573,
+      "sortid": 574,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_armor_boots_recipe",
@@ -12067,7 +12067,7 @@
     {
       "name": "Revenge",
       "type": "enchantment",
-      "sortid": 574,
+      "sortid": 575,
       "compiles": true,
       "locked_code": false,
       "registry_name": "revenge",
@@ -12081,7 +12081,7 @@
     {
       "name": "EnergiumRevengeAttack",
       "type": "procedure",
-      "sortid": 575,
+      "sortid": 576,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_revenge_attack",
@@ -12105,7 +12105,7 @@
     {
       "name": "Isolation",
       "type": "enchantment",
-      "sortid": 576,
+      "sortid": 577,
       "compiles": true,
       "locked_code": false,
       "registry_name": "isolation",
@@ -12119,7 +12119,7 @@
     {
       "name": "SphereNothingProjectileKazhdyiTikPriPoliotieSnariada",
       "type": "procedure",
-      "sortid": 577,
+      "sortid": 578,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sphere_nothing_projectile_kazhdyi_tik_pri_poliotie_snariada",
@@ -12155,7 +12155,7 @@
     {
       "name": "IronSkinEffectStart",
       "type": "procedure",
-      "sortid": 578,
+      "sortid": 579,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_skin_effect_start",
@@ -12175,7 +12175,7 @@
     {
       "name": "IronSkinEffectEnd",
       "type": "procedure",
-      "sortid": 579,
+      "sortid": 580,
       "compiles": true,
       "locked_code": false,
       "registry_name": "iron_skin_effect_end",
@@ -12195,7 +12195,7 @@
     {
       "name": "CancelUseMilkInActiveStone",
       "type": "procedure",
-      "sortid": 580,
+      "sortid": 581,
       "compiles": true,
       "locked_code": false,
       "registry_name": "cancel_use_milk_in_active_stone",
@@ -12215,7 +12215,7 @@
     {
       "name": "WheelAbilitiesEnergy",
       "type": "gui",
-      "sortid": 581,
+      "sortid": 582,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_energy",
@@ -12231,7 +12231,7 @@
     {
       "name": "Attack77",
       "type": "procedure",
-      "sortid": 582,
+      "sortid": 583,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_77",
@@ -12251,7 +12251,7 @@
     {
       "name": "Attack78",
       "type": "procedure",
-      "sortid": 583,
+      "sortid": 584,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_78",
@@ -12271,7 +12271,7 @@
     {
       "name": "Attack79",
       "type": "procedure",
-      "sortid": 584,
+      "sortid": 585,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_79",
@@ -12291,7 +12291,7 @@
     {
       "name": "Attack80",
       "type": "procedure",
-      "sortid": 585,
+      "sortid": 586,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_80",
@@ -12311,7 +12311,7 @@
     {
       "name": "EnergyMaster",
       "type": "potioneffect",
-      "sortid": 586,
+      "sortid": 587,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_master",
@@ -12325,7 +12325,7 @@
     {
       "name": "EnergyStoneUse",
       "type": "procedure",
-      "sortid": 587,
+      "sortid": 588,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_stone_use",
@@ -12365,7 +12365,7 @@
     {
       "name": "EnergyMasterStart",
       "type": "procedure",
-      "sortid": 588,
+      "sortid": 589,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_master_start",
@@ -12401,7 +12401,7 @@
     {
       "name": "EnergyArmor",
       "type": "armor",
-      "sortid": 589,
+      "sortid": 590,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_armor",
@@ -12419,7 +12419,7 @@
     {
       "name": "EnergyArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 590,
+      "sortid": 591,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_armor_kazhdyi_tik_dlia_shliema",
@@ -12439,7 +12439,7 @@
     {
       "name": "EnergyArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 591,
+      "sortid": 592,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -12459,7 +12459,7 @@
     {
       "name": "EnergyArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 592,
+      "sortid": 593,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -12479,7 +12479,7 @@
     {
       "name": "EnergyArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 593,
+      "sortid": 594,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_armor_kazhdyi_tik_dlia_botinok",
@@ -12499,7 +12499,7 @@
     {
       "name": "EnergyMasterEnd",
       "type": "procedure",
-      "sortid": 594,
+      "sortid": 595,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_master_end",
@@ -12535,7 +12535,7 @@
     {
       "name": "EnergyBattery",
       "type": "item",
-      "sortid": 62,
+      "sortid": 63,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_battery",
@@ -12550,7 +12550,7 @@
     {
       "name": "EnergyBatteryUse",
       "type": "procedure",
-      "sortid": 595,
+      "sortid": 596,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_battery_use",
@@ -12590,7 +12590,7 @@
     {
       "name": "ZeroingUsing",
       "type": "procedure",
-      "sortid": 596,
+      "sortid": 597,
       "compiles": true,
       "locked_code": false,
       "registry_name": "zeroing_using",
@@ -12614,7 +12614,7 @@
     {
       "name": "EnergySpark",
       "type": "particle",
-      "sortid": 597,
+      "sortid": 598,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_spark",
@@ -12629,7 +12629,7 @@
     {
       "name": "EnergiumCore",
       "type": "item",
-      "sortid": 41,
+      "sortid": 42,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_core",
@@ -12644,7 +12644,7 @@
     {
       "name": "EnergyStaff",
       "type": "tool",
-      "sortid": 598,
+      "sortid": 599,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_staff",
@@ -12659,7 +12659,7 @@
     {
       "name": "EnergyStaffKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 599,
+      "sortid": 600,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_staff_kazhdyi_tik_v_invientarie",
@@ -12679,7 +12679,7 @@
     {
       "name": "KeepersBox",
       "type": "block",
-      "sortid": 26,
+      "sortid": 27,
       "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box",
@@ -12697,7 +12697,7 @@
     {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka",
       "type": "procedure",
-      "sortid": 600,
+      "sortid": 601,
       "compiles": true,
       "locked_code": false,
       "registry_name": "keepers_box_usloviie_razmieshchieniia_bloka",
@@ -12730,7 +12730,7 @@
     {
       "name": "ElementalPowers",
       "type": "damagetype",
-      "sortid": 601,
+      "sortid": 602,
       "compiles": true,
       "locked_code": false,
       "registry_name": "elemental_powers",
@@ -12744,7 +12744,7 @@
     {
       "name": "GetRechargeInfo",
       "type": "procedure",
-      "sortid": 602,
+      "sortid": 603,
       "compiles": true,
       "locked_code": false,
       "registry_name": "get_recharge_info",
@@ -12765,7 +12765,7 @@
     {
       "name": "StoneGetRechargeState",
       "type": "procedure",
-      "sortid": 603,
+      "sortid": 604,
       "compiles": true,
       "locked_code": false,
       "registry_name": "stone_get_recharge_state",
@@ -12786,7 +12786,7 @@
     {
       "name": "RechargeStoneTickEvent",
       "type": "procedure",
-      "sortid": 604,
+      "sortid": 605,
       "compiles": true,
       "locked_code": false,
       "registry_name": "recharge_stone_tick_event",
@@ -12810,7 +12810,7 @@
     {
       "name": "EnergyChargeExplode",
       "type": "procedure",
-      "sortid": 605,
+      "sortid": 606,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_charge_explode",
@@ -12842,7 +12842,7 @@
     {
       "name": "EnergyCharge",
       "type": "projectile",
-      "sortid": 606,
+      "sortid": 607,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_charge",
@@ -12857,7 +12857,7 @@
     {
       "name": "EnergyChargeTick",
       "type": "procedure",
-      "sortid": 607,
+      "sortid": 608,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_charge_tick",
@@ -12889,7 +12889,7 @@
     {
       "name": "SunMaster",
       "type": "potioneffect",
-      "sortid": 608,
+      "sortid": 609,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_master",
@@ -12903,7 +12903,7 @@
     {
       "name": "SunArmor",
       "type": "armor",
-      "sortid": 609,
+      "sortid": 610,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_armor",
@@ -12921,7 +12921,7 @@
     {
       "name": "SunArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 610,
+      "sortid": 611,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_armor_kazhdyi_tik_dlia_shliema",
@@ -12941,7 +12941,7 @@
     {
       "name": "SunArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 611,
+      "sortid": 612,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -12961,7 +12961,7 @@
     {
       "name": "SunArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 612,
+      "sortid": 613,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -12981,7 +12981,7 @@
     {
       "name": "SunArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 613,
+      "sortid": 614,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_armor_kazhdyi_tik_dlia_botinok",
@@ -13001,7 +13001,7 @@
     {
       "name": "SunStoneUse",
       "type": "procedure",
-      "sortid": 614,
+      "sortid": 615,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_stone_use",
@@ -13041,7 +13041,7 @@
     {
       "name": "SunMasterStart",
       "type": "procedure",
-      "sortid": 615,
+      "sortid": 616,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_master_start",
@@ -13077,7 +13077,7 @@
     {
       "name": "SunMasterEnd",
       "type": "procedure",
-      "sortid": 616,
+      "sortid": 617,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_master_end",
@@ -13113,7 +13113,7 @@
     {
       "name": "WheelAbilitiesSun",
       "type": "gui",
-      "sortid": 617,
+      "sortid": 618,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_sun",
@@ -13129,7 +13129,7 @@
     {
       "name": "Attack81",
       "type": "procedure",
-      "sortid": 618,
+      "sortid": 619,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_81",
@@ -13149,7 +13149,7 @@
     {
       "name": "Attack82",
       "type": "procedure",
-      "sortid": 619,
+      "sortid": 620,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_82",
@@ -13169,7 +13169,7 @@
     {
       "name": "Attack83",
       "type": "procedure",
-      "sortid": 620,
+      "sortid": 621,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_83",
@@ -13189,7 +13189,7 @@
     {
       "name": "Attack84",
       "type": "procedure",
-      "sortid": 621,
+      "sortid": 622,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_84",
@@ -13209,7 +13209,7 @@
     {
       "name": "SunBattery",
       "type": "item",
-      "sortid": 63,
+      "sortid": 64,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_battery",
@@ -13224,7 +13224,7 @@
     {
       "name": "SunBatteryUse",
       "type": "procedure",
-      "sortid": 622,
+      "sortid": 623,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_battery_use",
@@ -13264,7 +13264,7 @@
     {
       "name": "SunBatteryDesc",
       "type": "procedure",
-      "sortid": 623,
+      "sortid": 624,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_battery_desc",
@@ -13280,7 +13280,7 @@
     {
       "name": "EnergyBatteryDesc",
       "type": "procedure",
-      "sortid": 624,
+      "sortid": 625,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energy_battery_desc",
@@ -13296,7 +13296,7 @@
     {
       "name": "SolarBlade",
       "type": "tool",
-      "sortid": 625,
+      "sortid": 626,
       "compiles": true,
       "locked_code": false,
       "registry_name": "solar_blade",
@@ -13311,7 +13311,7 @@
     {
       "name": "SolarBladeKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 626,
+      "sortid": 627,
       "compiles": true,
       "locked_code": false,
       "registry_name": "solar_blade_kazhdyi_tik_v_invientarie",
@@ -13331,7 +13331,7 @@
     {
       "name": "SolarSalvoKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "sortid": 627,
+      "sortid": 628,
       "compiles": true,
       "locked_code": false,
       "registry_name": "solar_salvo_koghda_snariad_popadaiet_v_sushchnost",
@@ -13351,7 +13351,7 @@
     {
       "name": "FrozenEventRenderer",
       "type": "procedure",
-      "sortid": 628,
+      "sortid": 629,
       "compiles": true,
       "locked_code": false,
       "registry_name": "frozen_event_renderer",
@@ -13371,7 +13371,7 @@
     {
       "name": "SunParticles",
       "type": "particle",
-      "sortid": 629,
+      "sortid": 630,
       "compiles": true,
       "locked_code": false,
       "registry_name": "sun_particles",
@@ -13386,7 +13386,7 @@
     {
       "name": "MoonMaster",
       "type": "potioneffect",
-      "sortid": 630,
+      "sortid": 631,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_master",
@@ -13400,7 +13400,7 @@
     {
       "name": "MoonArmor",
       "type": "armor",
-      "sortid": 631,
+      "sortid": 632,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_armor",
@@ -13418,7 +13418,7 @@
     {
       "name": "MoonMasterStart",
       "type": "procedure",
-      "sortid": 632,
+      "sortid": 633,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_master_start",
@@ -13454,7 +13454,7 @@
     {
       "name": "MoonMasterEnd",
       "type": "procedure",
-      "sortid": 633,
+      "sortid": 634,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_master_end",
@@ -13490,7 +13490,7 @@
     {
       "name": "MoonStoneUse",
       "type": "procedure",
-      "sortid": 634,
+      "sortid": 635,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_stone_use",
@@ -13530,7 +13530,7 @@
     {
       "name": "MoonArmorKazhdyiTikDliaShliema",
       "type": "procedure",
-      "sortid": 635,
+      "sortid": 636,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_armor_kazhdyi_tik_dlia_shliema",
@@ -13550,7 +13550,7 @@
     {
       "name": "MoonArmorKazhdyiTikDliaNaghrudnika",
       "type": "procedure",
-      "sortid": 636,
+      "sortid": 637,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_armor_kazhdyi_tik_dlia_naghrudnika",
@@ -13570,7 +13570,7 @@
     {
       "name": "MoonArmorKazhdyiTikDliaPonozhiei",
       "type": "procedure",
-      "sortid": 637,
+      "sortid": 638,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_armor_kazhdyi_tik_dlia_ponozhiei",
@@ -13590,7 +13590,7 @@
     {
       "name": "MoonArmorKazhdyiTikDliaBotinok",
       "type": "procedure",
-      "sortid": 638,
+      "sortid": 639,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_armor_kazhdyi_tik_dlia_botinok",
@@ -13610,7 +13610,7 @@
     {
       "name": "WheelAbilitiesMoon",
       "type": "gui",
-      "sortid": 639,
+      "sortid": 640,
       "compiles": true,
       "locked_code": false,
       "registry_name": "wheel_abilities_moon",
@@ -13626,7 +13626,7 @@
     {
       "name": "Attack85",
       "type": "procedure",
-      "sortid": 640,
+      "sortid": 641,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_85",
@@ -13646,7 +13646,7 @@
     {
       "name": "Attack86",
       "type": "procedure",
-      "sortid": 641,
+      "sortid": 642,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_86",
@@ -13666,7 +13666,7 @@
     {
       "name": "Attack87",
       "type": "procedure",
-      "sortid": 642,
+      "sortid": 643,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_87",
@@ -13686,7 +13686,7 @@
     {
       "name": "Attack88",
       "type": "procedure",
-      "sortid": 643,
+      "sortid": 644,
       "compiles": true,
       "locked_code": false,
       "registry_name": "attack_88",
@@ -13706,7 +13706,7 @@
     {
       "name": "MoonBattery",
       "type": "item",
-      "sortid": 64,
+      "sortid": 65,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_battery",
@@ -13721,7 +13721,7 @@
     {
       "name": "MoonBatteryDesc",
       "type": "procedure",
-      "sortid": 644,
+      "sortid": 645,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_battery_desc",
@@ -13737,7 +13737,7 @@
     {
       "name": "MoonBatteryUse",
       "type": "procedure",
-      "sortid": 645,
+      "sortid": 646,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_battery_use",
@@ -13777,7 +13777,7 @@
     {
       "name": "MoonDoubleSidedSpear",
       "type": "tool",
-      "sortid": 646,
+      "sortid": 647,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_double_sided_spear",
@@ -13792,7 +13792,7 @@
     {
       "name": "MoonDoubleSidedSpearKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 647,
+      "sortid": 648,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_double_sided_spear_kazhdyi_tik_v_invientarie",
@@ -13812,7 +13812,7 @@
     {
       "name": "MoonParticle",
       "type": "particle",
-      "sortid": 648,
+      "sortid": 649,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_particle",
@@ -13827,7 +13827,7 @@
     {
       "name": "MoonBlock",
       "type": "block",
-      "sortid": 649,
+      "sortid": 650,
       "compiles": true,
       "locked_code": false,
       "registry_name": "moon_block",
@@ -13840,6 +13840,57 @@
         ]
       },
       "path": "~/Elements/Moon"
+    },
+    {
+      "name": "StarPotionInfinityPriZaviershieniiIspolzovaniia",
+      "type": "procedure",
+      "sortid": 651,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_infinity_pri_zaviershienii_ispolzovaniia",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotionInfinityPriZaviershieniiIspolzovaniiaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotionInfinityDopolnitielnaiaInformatsiia",
+      "type": "procedure",
+      "sortid": 652,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_infinity_dopolnitielnaia_informatsiia",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotionInfinityDopolnitielnaiaInformatsiiaProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/PowerScaleModule "
+    },
+    {
+      "name": "StarPotionInfinity",
+      "type": "item",
+      "sortid": 26,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_infinity",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotionInfinityItem.java",
+          "src/main/resources/assets/power/models/item/star_potion_infinity.json"
+        ]
+      },
+      "path": "~/Items/StarPotions"
     }
   ],
   "variable_elements": [
@@ -14344,6 +14395,7 @@
       "item.power.animals_stone": "Камень животных",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.star_potion_200": "Звёздное зелье",
+      "item.power.star_potion_infinity": "Звёздное зелье",
       "item.power.energium_armor_boots": "Энерджиумные ботинки",
       "item.power.poison_stone": "Камень яда",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
@@ -14618,19 +14670,19 @@
       "effect.power.sound_master": "Master of Sound",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
-      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.sound_armor_leggings": "Sound Leggings",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "key.power.ability_using_key": "Ability using key",
       "item.power.energium_shovel": "Energium Shovel",
       "battery.desc.fire": "Fire",
-      "item.power.crystal_armor_boots": "Crystal Boots",
-      "item.power.earth_battery": "Battery",
       "power.modinfo.recharge_stone.seconds": " seconds",
+      "item.power.earth_battery": "Battery",
+      "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
@@ -14703,6 +14755,7 @@
       "item.power.animals_stone": "Animals Stone",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.star_potion_200": "Star Potion",
+      "item.power.star_potion_infinity": "Star Potion",
       "item.power.energium_armor_boots": "Energium Boots",
       "item.power.poison_stone": "Poison Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
