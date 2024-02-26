@@ -10,20 +10,6 @@ dependencies {
 
 
 repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-}
-
-
-repositories {
   maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }
@@ -75,17 +61,56 @@ repositories {
  }
 
 
+def extraModsDir = 'extra-mods-1.20.1'
+task addnewfoldersmods(type: DefaultTask){
+  ant.mkdir(dir: 'extra-mods-1.20.1/');
+}
 repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
+  flatDir {
+  name "extra-mods" 
+  dir file(extraModsDir)
+  }
+}
+
+dependencies 
+{
+  for (extraModJar in fileTree(dir: extraModsDir, include: '*.jar')) {
+  def basename = extraModJar.name.substring(0, extraModJar.name.length() - ".jar".length()) 
+  def versionSep = basename.lastIndexOf('-') 
+  assert versionSep != -1 
+  def artifactId = basename.substring(0, versionSep) 
+  def version = basename.substring(versionSep + 1)
+  runtimeOnly fg.deobf("extra-mods:$artifactId:$version")}
+}
+minecraft {
+ mappings channel: 'official', version: '1.20.1'
+  accessTransformer = file('src/main/resources/META-INF/accesstransformer.cfg')
+ runs {
+  client {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
+  }
+  server {
+      workingDirectory project.file('run')
+      property 'forge.logging.markers', 'REGISTRIES'
+      property 'forge.logging.console.level', 'debug'
+      property 'mixin.env.remapRefMap', 'true'
+      property 'mixin.env.refMapRemappingFile', "${buildDir}/createSrgToMcp/output.srg"
+      mods {
+          examplemod {
+              source sourceSets.main
+          }
+      }
         }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
-   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
-}
+      }
+         }
 
 
