@@ -57,6 +57,17 @@ jobs:
             neoforge
           game-versions: "${{env.MINECRAFT_VERSION}}"
           java: "${{env.JAVA_VERSION}}"
+          dependencies: |
+            required-dependency
+            optional-dependency@0.1.0(optional)
+            recommended-dependency@0.2.0(recommended)
+            embedded-dependency@0.3.0(embedded)
+            conflicting-dependency(conflicting)
+            incompatible-dependency(incompatible)
+            geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
+            better-combat(required){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
+            kleiders-custom-renderer-api(required){modrinth:oaG6aa1j}{curseforge:682065}#(ignore:github)
+            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
 
           modrinth-featured: false
           fail-mode: warn	
