@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_moon_light",
+          "image": "moon_light.png",
+          "hoveredImage": "moon_light__highlight.png",
           "onClick": {
             "name": "Attack85"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_moon_dripstone",
+          "image": "moon_dripstone.png",
+          "hoveredImage": "moon_dripstone_highlight.png",
           "onClick": {
             "name": "Attack86"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_moon_withering",
+          "image": "moon_withering.png",
+          "hoveredImage": "moon_withering_highlight.png",
           "onClick": {
             "name": "Attack87"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon_light_uses_15",
+          "text": {
+            "fixedValue": "Moon light, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon_dripstone_uses_40",
+          "text": {
+            "fixedValue": "Moon dripstone, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon_withering_uses_80",
+          "text": {
+            "fixedValue": "Moon withering, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 167
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
