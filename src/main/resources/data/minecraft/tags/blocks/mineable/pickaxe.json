@@ -5,6 +5,7 @@
     "power:depleted_energium_ore",
     "power:depleted_energium_block",
     "power:energium_block",
-    "power:battery_charger"
+    "power:battery_charger",
+    "power:moon_block"
   ]
 }

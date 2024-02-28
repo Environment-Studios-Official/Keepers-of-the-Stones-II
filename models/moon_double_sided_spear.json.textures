@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "moon_double_sided_spear"
+      },
+      "name": "default"
+    }
+  }
+}

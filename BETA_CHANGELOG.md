@@ -1,4 +1,8 @@
-What's new in Keepers of the Stones II version 1.0.0.12?<br />
-<br />- Added new element - Sun
-<br />- [API] Updated Colorful Powers API to version 3
-<br />- [Bugfix] Fixed a bug that caused a crash when entering the world
+What's new in Keepers of the Stones II version 1.0.0.13?<br />
+<br />- Added new element - Moon
+<br />- Added a star potion with infinite power points
+<br />- Added compatibility with Epic Fight
+<br />- The power of the sun and moon spells is now affected by the time of day
+<br />- [API] Colorful Powers API has been updated to version 4
+<br />- [Bugfix] Fixed bugs when using stones when merging
+<br />- [Bugfix] Fixed the characteristics of the ice spear
