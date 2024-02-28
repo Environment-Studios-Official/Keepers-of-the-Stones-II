@@ -70,7 +70,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="allmods"
+    modId="cloth-config"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
