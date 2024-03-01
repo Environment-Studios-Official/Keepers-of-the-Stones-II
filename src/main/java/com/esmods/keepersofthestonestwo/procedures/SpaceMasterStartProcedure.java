@@ -9,8 +9,6 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffects;
-import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -34,8 +32,6 @@ public class SpaceMasterStartProcedure {
 				capability.syncPlayerVariables(entity);
 			});
 		}
-		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.GLOWING, 40, 0, false, false));
 		for (int index0 = 0; index0 < 40; index0++) {
 			if (world instanceof ServerLevel _level && _level.getServer() != null) {
 				Optional<CommandFunction> _fopt = _level.getServer().getFunctions().get(new ResourceLocation("power:space_master"));

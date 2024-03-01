@@ -26,7 +26,7 @@ public class OceanMasterEndProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
-		DetransformationKeyUseProcedure.execute(world, entity);
+		DetransformationKeyUseProcedure.execute(entity);
 		{
 			double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers - 1;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
