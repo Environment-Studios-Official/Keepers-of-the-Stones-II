@@ -33,6 +33,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectil
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.BlackHoleRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
@@ -67,5 +68,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 	}
 }
