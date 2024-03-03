@@ -1,21 +1,6 @@
 {
   "mod_elements": [
     {
-      "name": "SetupAnimations",
-      "type": "procedure",
-      "sortid": 67,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "setup_animations",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SetupAnimationsProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "ReturnStoneAfterDead",
       "type": "procedure",
       "sortid": 68,
@@ -9048,7 +9033,7 @@
       "name": "SoundBatteryUse",
       "type": "procedure",
       "sortid": 457,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sound_battery_use",
       "metadata": {
@@ -9119,7 +9104,7 @@
       "name": "CrystalBatteryUse",
       "type": "procedure",
       "sortid": 459,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "crystal_battery_use",
       "metadata": {
@@ -9190,7 +9175,7 @@
       "name": "LavaBatteryUse",
       "type": "procedure",
       "sortid": 461,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "lava_battery_use",
       "metadata": {
@@ -9261,7 +9246,7 @@
       "name": "RainBatteryUse",
       "type": "procedure",
       "sortid": 463,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "rain_battery_use",
       "metadata": {
@@ -9332,7 +9317,7 @@
       "name": "TornadoBatteryUse",
       "type": "procedure",
       "sortid": 465,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "tornado_battery_use",
       "metadata": {
@@ -9403,7 +9388,7 @@
       "name": "OceanBatteryUse",
       "type": "procedure",
       "sortid": 467,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "ocean_battery_use",
       "metadata": {
@@ -9474,7 +9459,7 @@
       "name": "PlantsBatteryUse",
       "type": "procedure",
       "sortid": 469,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "plants_battery_use",
       "metadata": {
@@ -9545,7 +9530,7 @@
       "name": "AnimalsBatteryUse",
       "type": "procedure",
       "sortid": 471,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "animals_battery_use",
       "metadata": {
@@ -9616,7 +9601,7 @@
       "name": "MetalBatteryUse",
       "type": "procedure",
       "sortid": 473,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "metal_battery_use",
       "metadata": {
@@ -10007,7 +9992,7 @@
       "name": "LightBatteryUse",
       "type": "procedure",
       "sortid": 489,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "light_battery_use",
       "metadata": {
@@ -10530,7 +10515,7 @@
       "name": "ShadowBatteryUse",
       "type": "procedure",
       "sortid": 512,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "shadow_battery_use",
       "metadata": {
@@ -11187,7 +11172,7 @@
       "name": "VacuumBatteryUse",
       "type": "procedure",
       "sortid": 537,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "vacuum_battery_use",
       "metadata": {
@@ -12547,7 +12532,7 @@
       "name": "EnergyBatteryUse",
       "type": "procedure",
       "sortid": 596,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "energy_battery_use",
       "metadata": {
@@ -13221,7 +13206,7 @@
       "name": "SunBatteryUse",
       "type": "procedure",
       "sortid": 623,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sun_battery_use",
       "metadata": {
@@ -13734,7 +13719,7 @@
       "name": "MoonBatteryUse",
       "type": "procedure",
       "sortid": 646,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "moon_battery_use",
       "metadata": {
@@ -14243,7 +14228,7 @@
       "name": "SpaceBatteryUse",
       "type": "procedure",
       "sortid": 669,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "space_battery_use",
       "metadata": {
@@ -15968,8 +15953,7 @@
     "modPicture": "logo",
     "requiredMods": [
       "kleiders_custom_renderer",
-      "geckolib",
-      "playeranimator"
+      "geckolib"
     ],
     "dependencies": [
       "bettercombat",
@@ -15980,7 +15964,6 @@
       "kleidersplayerrenderer",
       "bettercombat",
       "geckolib",
-      "playeranimator",
       "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",
