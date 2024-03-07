@@ -14339,6 +14339,26 @@
         ]
       },
       "path": "~/Elements/Space"
+    },
+    {
+      "name": "SpacePassiveAbIlity",
+      "type": "procedure",
+      "sortid": 674,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_passive_ab_ility",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpacePassiveAbIlityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Space"
     }
   ],
   "variable_elements": [
