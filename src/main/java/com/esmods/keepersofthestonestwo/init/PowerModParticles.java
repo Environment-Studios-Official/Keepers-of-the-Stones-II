@@ -11,6 +11,7 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
+import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
@@ -28,5 +29,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.ENERGY_SPARK.get(), EnergySparkParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.SUN_PARTICLES.get(), SunParticlesParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MOON_PARTICLE.get(), MoonParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.STAR_PARTICLE.get(), StarParticleParticle::provider);
 	}
 }
