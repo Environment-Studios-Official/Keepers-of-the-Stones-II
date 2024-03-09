@@ -14359,6 +14359,41 @@
         ]
       },
       "path": "~/Elements/Space"
+    },
+    {
+      "name": "ConstellationSword",
+      "type": "tool",
+      "sortid": 675,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constellation_sword",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ConstellationSwordItem.java",
+          "src/main/resources/assets/power/models/item/constellation_sword.json"
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "ConstellationSwordKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 676,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "constellation_sword_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConstellationSwordKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Space"
     }
   ],
   "variable_elements": [
@@ -14774,19 +14809,19 @@
       "item.power.smithing_template.applies_to": "§7Применяется к:",
       "item.power.moon_battery": "Батарея",
       "item.power.earth_hammer": "Земляной молот",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "effect.power.sound_master": "Мастер звука",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "subtitles.ear_ringing": "Звон в ушах",
-      "item.power.sound_armor_leggings": "Поножи мастера звука",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
+      "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
-      "effect.power.ocean_master": "Мастер океана",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "item.power.lightning_battery": "Батарея",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "key.power.ability_using_key": "Клавиша использования способности",
@@ -15123,6 +15158,7 @@
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "item.power.basic_box.tooltip": "Базовая",
       "effect.power.fire_master": "Мастер огня",
+      "item.power.constellation_sword": "Меч созвездий",
       "item.power.form_stone": "Камень формы",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.energium_armor_chestplate": "Энерджиумный нагрудник",
@@ -15158,12 +15194,12 @@
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "subtitles.ear_ringing": "Ear ringing",
-      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.sound_armor_leggings": "Sound Leggings",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
-      "item.power.lightning_battery": "Battery",
-      "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
+      "item.power.lightning_battery": "Battery",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "key.power.ability_using_key": "Ability using key",
@@ -15499,6 +15535,7 @@
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "item.power.basic_box.tooltip": "Basic",
       "effect.power.fire_master": "Master of Fire",
+      "item.power.constellation_sword": "Constellation Sword",
       "item.power.form_stone": "Form Stone",
       "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.energium_armor_chestplate": "Energium Chestplate",

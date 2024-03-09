@@ -1,0 +1,36 @@
+{
+  "_fv": 57,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "constellation_sword",
+    "customModelName": "constellation_sword:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Constellation Sword",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "harvestLevel": 4,
+    "efficiency": 12.0,
+    "attackSpeed": 1.6,
+    "enchantability": 0,
+    "damageVsEntity": 9.0,
+    "usageCount": 0,
+    "blocksAffected": [],
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "ConstellationSwordKazhdyiTikVInvientarie"
+    }
+  }
+}
