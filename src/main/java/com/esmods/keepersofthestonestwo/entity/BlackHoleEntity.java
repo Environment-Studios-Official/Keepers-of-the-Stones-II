@@ -30,6 +30,7 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnPlacements;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
@@ -57,7 +58,7 @@ import com.esmods.keepersofthestonestwo.procedures.BlackHolePriObnovlieniiTikaSu
 import com.esmods.keepersofthestonestwo.procedures.BlackHolePriNachalnomPrizyvieSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class BlackHoleEntity extends Monster implements GeoEntity {
+public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(BlackHoleEntity.class, EntityDataSerializers.BOOLEAN);
 	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(BlackHoleEntity.class, EntityDataSerializers.STRING);
 	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(BlackHoleEntity.class, EntityDataSerializers.STRING);
@@ -206,8 +207,10 @@ public class BlackHoleEntity extends Monster implements GeoEntity {
 		super.setNoGravity(true);
 	}
 
+	@Override
 	public void aiStep() {
 		super.aiStep();
+		this.updateSwingTime();
 		this.setNoGravity(true);
 	}
 
