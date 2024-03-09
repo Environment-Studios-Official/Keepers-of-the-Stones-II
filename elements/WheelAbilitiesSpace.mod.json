@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_star_flow",
+          "image": "star_flow.png",
+          "hoveredImage": "star_flow_highlight.png",
           "onClick": {
             "name": "Attack89"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_meteorite",
+          "image": "meteorite.png",
+          "hoveredImage": "meteorite_highlight.png",
           "onClick": {
             "name": "Attack90"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_black_hole",
+          "image": "black_hole.png",
+          "hoveredImage": "black_hole_highlight.png",
           "onClick": {
             "name": "Attack91"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_star_flow_uses_10",
+          "text": {
+            "fixedValue": "Star flow, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_meteorite_uses_45",
+          "text": {
+            "fixedValue": "Meteorite, uses 45"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_black_hole_uses_80",
+          "text": {
+            "fixedValue": "Black hole, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
