@@ -14394,6 +14394,85 @@
         ]
       },
       "path": "~/Elements/Space"
+    },
+    {
+      "name": "MeteoriteProjectile",
+      "type": "projectile",
+      "sortid": 677,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteorite_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/MeteoriteProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/MeteoriteProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "MeteoriteProjectileKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 678,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteorite_projectile_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MeteoriteProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Space"
+    },
+    {
+      "name": "MeteoriteProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 679,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "meteorite_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MeteoriteProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Space"
     }
   ],
   "variable_elements": [

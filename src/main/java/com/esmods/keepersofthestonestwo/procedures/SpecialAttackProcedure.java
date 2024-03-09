@@ -58,6 +58,7 @@ import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
 import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.MeteoriteProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.LightballProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
@@ -3907,12 +3908,41 @@ public class SpecialAttackProcedure {
 						}
 					}
 				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_2")) {
-					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.power = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+						{
+							Entity _shootFrom = entity;
+							Level projectileLevel = _shootFrom.level();
+							if (!projectileLevel.isClientSide()) {
+								Projectile _entityToSpawn = new Object() {
+									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+										AbstractArrow entityToSpawn = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), level);
+										entityToSpawn.setOwner(shooter);
+										entityToSpawn.setBaseDamage(damage);
+										entityToSpawn.setKnockback(knockback);
+										entityToSpawn.setSilent(true);
+										entityToSpawn.setSecondsOnFire(100);
+										return entityToSpawn;
+									}
+								}.getArrow(projectileLevel, entity, (float) 11.25, 8);
+								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+								projectileLevel.addFreshEntity(_entityToSpawn);
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					}
 				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_3")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
