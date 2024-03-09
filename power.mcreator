@@ -16038,7 +16038,8 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
-      "geckolib"
+      "geckolib",
+      "allmods"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
