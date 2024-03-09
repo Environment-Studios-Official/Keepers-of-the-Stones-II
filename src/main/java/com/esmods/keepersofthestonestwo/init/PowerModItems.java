@@ -32,6 +32,8 @@ import com.esmods.keepersofthestonestwo.item.TornadoBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TornadoAxeItem;
 import com.esmods.keepersofthestonestwo.item.TornadoArmorItem;
 import com.esmods.keepersofthestonestwo.item.TimeStoneItem;
+import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
+import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunStoneItem;
@@ -374,6 +376,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPACE_ARMOR_BOOTS = REGISTRY.register("space_armor_boots", () -> new SpaceArmorItem.Boots());
 	public static final RegistryObject<Item> SPACE_BATTERY = REGISTRY.register("space_battery", () -> new SpaceBatteryItem());
 	public static final RegistryObject<Item> CONSTELLATION_SWORD = REGISTRY.register("constellation_sword", () -> new ConstellationSwordItem());
+	public static final RegistryObject<Item> TIME_ARMOR_HELMET = REGISTRY.register("time_armor_helmet", () -> new TimeArmorItem.Helmet());
+	public static final RegistryObject<Item> TIME_ARMOR_CHESTPLATE = REGISTRY.register("time_armor_chestplate", () -> new TimeArmorItem.Chestplate());
+	public static final RegistryObject<Item> TIME_ARMOR_LEGGINGS = REGISTRY.register("time_armor_leggings", () -> new TimeArmorItem.Leggings());
+	public static final RegistryObject<Item> TIME_ARMOR_BOOTS = REGISTRY.register("time_armor_boots", () -> new TimeArmorItem.Boots());
+	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -405,6 +412,7 @@ public class PowerModItems {
 			ItemProperties.register(SUN_STONE.get(), new ResourceLocation("power:sun_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(MOON_STONE.get(), new ResourceLocation("power:moon_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(SPACE_STONE.get(), new ResourceLocation("power:space_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(TIME_STONE.get(), new ResourceLocation("power:time_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 		});
 	}
 }

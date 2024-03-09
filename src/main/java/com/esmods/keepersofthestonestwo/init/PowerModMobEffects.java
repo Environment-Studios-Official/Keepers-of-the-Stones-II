@@ -14,6 +14,7 @@ import com.esmods.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import com.esmods.keepersofthestonestwo.potion.WaterMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TimeMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
@@ -68,4 +69,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> SUN_MASTER = REGISTRY.register("sun_master", () -> new SunMasterMobEffect());
 	public static final RegistryObject<MobEffect> MOON_MASTER = REGISTRY.register("moon_master", () -> new MoonMasterMobEffect());
 	public static final RegistryObject<MobEffect> SPACE_MASTER = REGISTRY.register("space_master", () -> new SpaceMasterMobEffect());
+	public static final RegistryObject<MobEffect> TIME_MASTER = REGISTRY.register("time_master", () -> new TimeMasterMobEffect());
 }
