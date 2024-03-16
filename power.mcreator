@@ -14864,6 +14864,85 @@
         ]
       },
       "path": "~/Items/Batteries/TimeBattery"
+    },
+    {
+      "name": "TimeSlow",
+      "type": "particle",
+      "sortid": 697,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_slow",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/time_slow.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeSlowParticle.java"
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "TimeStop",
+      "type": "particle",
+      "sortid": 698,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stop",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeStopParticle.java",
+          "src/main/resources/assets/power/particles/time_stop.json"
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "TimeFast",
+      "type": "particle",
+      "sortid": 699,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_fast",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeFastParticle.java",
+          "src/main/resources/assets/power/particles/time_fast.json"
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "TimeSlowingKazhdyiTikVoVriemiaEffiekta",
+      "type": "procedure",
+      "sortid": 700,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_slowing_kazhdyi_tik_vo_vriemia_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TimeSlowingKazhdyiTikVoVriemiaEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Time"
+    },
+    {
+      "name": "TimeSlowing",
+      "type": "potioneffect",
+      "sortid": 701,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_slowing",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/TimeSlowingMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Time"
     }
   ],
   "variable_elements": [
@@ -15467,6 +15546,7 @@
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
+      "effect.power.time_slowing": "Time Slowing",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "effect.power.rain_master": "Мастер дождя",
@@ -15858,6 +15938,7 @@
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
+      "effect.power.time_slowing": "Time Slowing",
       "item.power.animals_armor_boots": "Animals Boots",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "effect.power.rain_master": "Master of the Rain",

@@ -23,4 +23,7 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> SUN_PARTICLES = REGISTRY.register("sun_particles", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> MOON_PARTICLE = REGISTRY.register("moon_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> STAR_PARTICLE = REGISTRY.register("star_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_SLOW = REGISTRY.register("time_slow", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_STOP = REGISTRY.register("time_stop", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_FAST = REGISTRY.register("time_fast", () -> new SimpleParticleType(false));
 }

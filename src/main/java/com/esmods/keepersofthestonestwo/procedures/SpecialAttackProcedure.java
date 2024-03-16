@@ -4021,36 +4021,34 @@ public class SpecialAttackProcedure {
 						}
 					}
 				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
-						{
-							Entity _shootFrom = entity;
-							Level projectileLevel = _shootFrom.level();
-							if (!projectileLevel.isClientSide()) {
-								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), level);
-										entityToSpawn.setOwner(shooter);
-										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
-										entityToSpawn.setSilent(true);
-										entityToSpawn.setSecondsOnFire(100);
-										return entityToSpawn;
-									}
-								}.getArrow(projectileLevel, entity, (float) 11.25, 8);
-								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-								projectileLevel.addFreshEntity(_entityToSpawn);
-							}
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+						particleAmount = 125;
+						particleRadius = 2;
+						for (int index41 = 0; index41 < (int) particleAmount; index41++) {
+							if (world instanceof ServerLevel _level)
+								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 2, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == entity)) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_SLOWING.get(), 200, 0, false, false));
+								}
+							}
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
 							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
