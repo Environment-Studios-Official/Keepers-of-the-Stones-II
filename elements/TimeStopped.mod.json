@@ -2,19 +2,19 @@
   "_fv": 57,
   "_type": "potioneffect",
   "definition": {
-    "effectName": "Time Slowing",
-    "icon": "time_slowing.png",
+    "effectName": "Time Stopped",
+    "icon": "time_stopped.png",
     "color": {
-      "value": -16750900,
+      "value": -3407821,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
-    "isBenefitical": false,
+    "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
     "onActiveTick": {
-      "name": "TimeSlowingKazhdyiTikVoVriemiaEffiekta"
+      "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta"
     }
   }
 }

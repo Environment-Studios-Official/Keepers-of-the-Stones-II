@@ -67,7 +67,6 @@ jobs:
             geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             kleiders-custom-renderer-api(required){modrinth:oaG6aa1j}{curseforge:682065}#(ignore:github)
-
           modrinth-featured: false
           fail-mode: warn	
           

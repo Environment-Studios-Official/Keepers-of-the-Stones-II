@@ -18,6 +18,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack95Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack94Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack93Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -76,7 +77,7 @@ public class WheelAbilitiesTimeButtonMessage {
 		}
 		if (buttonID == 2) {
 
-			Attack94Procedure.execute(entity);
+			Attack95Procedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
