@@ -32,6 +32,7 @@ import com.esmods.keepersofthestonestwo.item.TornadoBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TornadoAxeItem;
 import com.esmods.keepersofthestonestwo.item.TornadoArmorItem;
 import com.esmods.keepersofthestonestwo.item.TimeStoneItem;
+import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
@@ -381,6 +382,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TIME_ARMOR_LEGGINGS = REGISTRY.register("time_armor_leggings", () -> new TimeArmorItem.Leggings());
 	public static final RegistryObject<Item> TIME_ARMOR_BOOTS = REGISTRY.register("time_armor_boots", () -> new TimeArmorItem.Boots());
 	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
+	public static final RegistryObject<Item> TIME_KHOPESH = REGISTRY.register("time_khopesh", () -> new TimeKhopeshItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
