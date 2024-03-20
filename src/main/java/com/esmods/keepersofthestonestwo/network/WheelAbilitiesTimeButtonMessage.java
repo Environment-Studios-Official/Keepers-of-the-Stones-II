@@ -69,27 +69,27 @@ public class WheelAbilitiesTimeButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack93Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack94Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			Attack95Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack93Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			Attack94Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack95Procedure.execute(entity);
 		}
 	}
 

@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_time_stopping",
+          "image": "time_stopping.png",
+          "hoveredImage": "time_stopping_highlight.png",
           "onClick": {
             "name": "Attack93"
           },
-          "width": 30,
-          "height": 20,
-          "x": 196,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "tooltip_stopping_time_uses_30",
+          "text": {
+            "fixedValue": "Stopping time, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_time_dilation",
+          "image": "time_dilation.png",
+          "hoveredImage": "time_dilation_highlight.png",
           "onClick": {
             "name": "Attack94"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "tooltip_time_dilation_uses_30",
+          "text": {
+            "fixedValue": "Time dilation, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_acceleration_time",
+          "image": "acceleration_time.png",
+          "hoveredImage": "acceleration_time_highlight.png",
           "onClick": {
             "name": "Attack95"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_acceleration_of_time_uses_30",
+          "text": {
+            "fixedValue": "Acceleration of time, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
