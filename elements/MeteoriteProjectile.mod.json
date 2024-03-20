@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.REINFORCED_DEEPSLATE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "block.deepslate.break"
+    },
+    "igniteFire": true,
+    "power": 0.8,
+    "damage": 4.5,
+    "knockback": 4,
+    "entityModel": "Modelmeteorite",
+    "customModelTexture": "meteorite.png",
+    "onHitsBlock": {
+      "name": "MeteoriteProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onFlyingTick": {
+      "name": "MeteoriteProjectileKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}

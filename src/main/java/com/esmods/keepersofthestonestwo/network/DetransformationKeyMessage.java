@@ -52,7 +52,7 @@ public class DetransformationKeyMessage {
 			return;
 		if (type == 0) {
 
-			DetransformationKeyUseProcedure.execute(world, entity);
+			DetransformationKeyUseProcedure.execute(entity);
 		}
 	}
 

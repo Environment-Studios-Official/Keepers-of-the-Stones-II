@@ -351,7 +351,7 @@ public class ReturnStoneAfterDeadProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sound")) {
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
 					{
 						String _setval = "0";
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -364,7 +364,7 @@ public class ReturnStoneAfterDeadProcedure {
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("sound")) {
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("crystal")) {
 					{
 						String _setval = "0";
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -377,7 +377,7 @@ public class ReturnStoneAfterDeadProcedure {
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sound")) {
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("crystal")) {
 					{
 						String _setval = "0";
 						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -907,6 +907,86 @@ public class ReturnStoneAfterDeadProcedure {
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("space")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_first = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("space")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_second = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("space")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_third = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("time")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_first = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("time")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_second = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("time")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_third = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

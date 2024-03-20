@@ -13,6 +13,7 @@ import com.esmods.keepersofthestonestwo.client.model.Modelsolar_salvo;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 import com.esmods.keepersofthestonestwo.client.model.Modelmini_tornado;
+import com.esmods.keepersofthestonestwo.client.model.Modelmeteorite;
 import com.esmods.keepersofthestonestwo.client.model.Modellightball;
 import com.esmods.keepersofthestonestwo.client.model.Modelknife;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
@@ -25,6 +26,7 @@ public class PowerModModels {
 	@SubscribeEvent
 	public static void registerLayerDefinitions(EntityRenderersEvent.RegisterLayerDefinitions event) {
 		event.registerLayerDefinition(Modelmini_tornado.LAYER_LOCATION, Modelmini_tornado::createBodyLayer);
+		event.registerLayerDefinition(Modelmeteorite.LAYER_LOCATION, Modelmeteorite::createBodyLayer);
 		event.registerLayerDefinition(Modelblock_attack.LAYER_LOCATION, Modelblock_attack::createBodyLayer);
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
 		event.registerLayerDefinition(Modelsolar_salvo.LAYER_LOCATION, Modelsolar_salvo::createBodyLayer);

@@ -32,6 +32,9 @@ import com.esmods.keepersofthestonestwo.item.TornadoBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TornadoAxeItem;
 import com.esmods.keepersofthestonestwo.item.TornadoArmorItem;
 import com.esmods.keepersofthestonestwo.item.TimeStoneItem;
+import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
+import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
+import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunStoneItem;
@@ -44,6 +47,8 @@ import com.esmods.keepersofthestonestwo.item.StarPotion100Item;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
+import com.esmods.keepersofthestonestwo.item.SpaceArmorItem;
 import com.esmods.keepersofthestonestwo.item.SoundStoneItem;
 import com.esmods.keepersofthestonestwo.item.SoundDaggerItem;
 import com.esmods.keepersofthestonestwo.item.SoundBatteryItem;
@@ -141,6 +146,7 @@ import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CrystalArmorItem;
 import com.esmods.keepersofthestonestwo.item.CreationStoneItem;
+import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsStoneItem;
@@ -365,6 +371,18 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MOON_ARMOR_BOOTS = REGISTRY.register("moon_armor_boots", () -> new MoonArmorItem.Boots());
 	public static final RegistryObject<Item> MOON_DOUBLE_SIDED_SPEAR = REGISTRY.register("moon_double_sided_spear", () -> new MoonDoubleSidedSpearItem());
 	public static final RegistryObject<Item> MOON_BLOCK = block(PowerModBlocks.MOON_BLOCK);
+	public static final RegistryObject<Item> SPACE_ARMOR_HELMET = REGISTRY.register("space_armor_helmet", () -> new SpaceArmorItem.Helmet());
+	public static final RegistryObject<Item> SPACE_ARMOR_CHESTPLATE = REGISTRY.register("space_armor_chestplate", () -> new SpaceArmorItem.Chestplate());
+	public static final RegistryObject<Item> SPACE_ARMOR_LEGGINGS = REGISTRY.register("space_armor_leggings", () -> new SpaceArmorItem.Leggings());
+	public static final RegistryObject<Item> SPACE_ARMOR_BOOTS = REGISTRY.register("space_armor_boots", () -> new SpaceArmorItem.Boots());
+	public static final RegistryObject<Item> SPACE_BATTERY = REGISTRY.register("space_battery", () -> new SpaceBatteryItem());
+	public static final RegistryObject<Item> CONSTELLATION_SWORD = REGISTRY.register("constellation_sword", () -> new ConstellationSwordItem());
+	public static final RegistryObject<Item> TIME_ARMOR_HELMET = REGISTRY.register("time_armor_helmet", () -> new TimeArmorItem.Helmet());
+	public static final RegistryObject<Item> TIME_ARMOR_CHESTPLATE = REGISTRY.register("time_armor_chestplate", () -> new TimeArmorItem.Chestplate());
+	public static final RegistryObject<Item> TIME_ARMOR_LEGGINGS = REGISTRY.register("time_armor_leggings", () -> new TimeArmorItem.Leggings());
+	public static final RegistryObject<Item> TIME_ARMOR_BOOTS = REGISTRY.register("time_armor_boots", () -> new TimeArmorItem.Boots());
+	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
+	public static final RegistryObject<Item> TIME_KHOPESH = REGISTRY.register("time_khopesh", () -> new TimeKhopeshItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -395,6 +413,8 @@ public class PowerModItems {
 			ItemProperties.register(ENERGY_STONE.get(), new ResourceLocation("power:energy_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(SUN_STONE.get(), new ResourceLocation("power:sun_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(MOON_STONE.get(), new ResourceLocation("power:moon_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(SPACE_STONE.get(), new ResourceLocation("power:space_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(TIME_STONE.get(), new ResourceLocation("power:time_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 		});
 	}
 }

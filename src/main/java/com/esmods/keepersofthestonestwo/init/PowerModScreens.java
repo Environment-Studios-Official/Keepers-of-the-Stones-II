@@ -14,7 +14,9 @@ import net.minecraft.client.gui.screens.MenuScreens;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesVacuumScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTimeScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSunScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpaceScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
@@ -63,6 +65,8 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_ENERGY.get(), WheelAbilitiesEnergyScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SUN.get(), WheelAbilitiesSunScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MOON.get(), WheelAbilitiesMoonScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SPACE.get(), WheelAbilitiesSpaceScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TIME.get(), WheelAbilitiesTimeScreen::new);
 		});
 	}
 }

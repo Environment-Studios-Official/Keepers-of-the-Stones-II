@@ -18,7 +18,9 @@ import io.netty.buffer.Unpooled;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpaceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
@@ -370,6 +372,36 @@ public class OpenWheelOneProcedure {
 					@Override
 					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 						return new WheelAbilitiesMoonMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("space")) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesSpace");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesSpaceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+					}
+				}, _bpos);
+			}
+		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("time")) {
+			if (entity instanceof ServerPlayer _ent) {
+				BlockPos _bpos = BlockPos.containing(x, y, z);
+				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					@Override
+					public Component getDisplayName() {
+						return Component.literal("WheelAbilitiesTime");
+					}
+
+					@Override
+					public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+						return new WheelAbilitiesTimeMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 					}
 				}, _bpos);
 			}
