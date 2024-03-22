@@ -1879,7 +1879,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_BATTERY.get());
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
