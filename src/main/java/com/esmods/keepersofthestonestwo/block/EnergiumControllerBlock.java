@@ -1,7 +1,12 @@
 
 package com.esmods.keepersofthestonestwo.block;
 
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.storage.loot.LootParams;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,13 +32,22 @@ import net.minecraft.core.BlockPos;
 import java.util.List;
 import java.util.Collections;
 
+import com.esmods.keepersofthestonestwo.procedures.EnergiumControllerRiedstounVykliuchienProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EnergiumControllerRiedstounVkliuchionProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumControllerObnovlieniieTikaProcedure;
 
 public class EnergiumControllerBlock extends Block {
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public EnergiumControllerBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f).lightLevel(s -> (new Object() {
+			public int getLightLevel() {
+				if (s.getValue(BLOCKSTATE) == 1)
+					return 0;
+				return 0;
+			}
+		}.getLightLevel())).requiresCorrectToolForDrops());
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 
@@ -48,8 +62,18 @@ public class EnergiumControllerBlock extends Block {
 	}
 
 	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return switch (state.getValue(FACING)) {
+			default -> box(0, 0, 0, 16, 16, 16);
+			case NORTH -> box(0, 0, 0, 16, 16, 16);
+			case EAST -> box(0, 0, 0, 16, 16, 16);
+			case WEST -> box(0, 0, 0, 16, 16, 16);
+		};
+	}
+
+	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
-		builder.add(FACING);
+		builder.add(FACING, BLOCKSTATE);
 	}
 
 	@Override
@@ -89,6 +113,16 @@ public class EnergiumControllerBlock extends Block {
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
 		world.scheduleTick(pos, this, 1);
+	}
+
+	@Override
+	public void neighborChanged(BlockState blockstate, Level world, BlockPos pos, Block neighborBlock, BlockPos fromPos, boolean moving) {
+		super.neighborChanged(blockstate, world, pos, neighborBlock, fromPos, moving);
+		if (world.getBestNeighborSignal(pos) > 0) {
+			EnergiumControllerRiedstounVkliuchionProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		} else {
+			EnergiumControllerRiedstounVykliuchienProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+		}
 	}
 
 	@Override

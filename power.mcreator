@@ -15492,6 +15492,98 @@
         ]
       },
       "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumControllerRecipe",
+      "type": "recipe",
+      "sortid": 726,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_controller_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/energium_controller_recipe.json"
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumBlockBlockstates",
+      "type": "blockstates",
+      "sortid": 727,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_block_blockstates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/energium_block_blockstates_blockstate_0.json"
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumControllerRiedstounVkliuchion",
+      "type": "procedure",
+      "sortid": 728,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_controller_riedstoun_vkliuchion",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumControllerRiedstounVkliuchionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Energium"
+    },
+    {
+      "name": "EnergiumControllerRiedstounVykliuchien",
+      "type": "procedure",
+      "sortid": 729,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_controller_riedstoun_vykliuchien",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumControllerRiedstounVykliuchienProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Energium"
     }
   ],
   "variable_elements": [

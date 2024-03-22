@@ -3,7 +3,7 @@
   "_type": "block",
   "definition": {
     "texture": "energium_block",
-    "textureTop": "energium_controller",
+    "textureTop": "energium_controller_off",
     "textureLeft": "energium_block",
     "textureFront": "energium_block",
     "textureRight": "energium_block",
@@ -121,6 +121,12 @@
     "fluidRestrictions": [],
     "onTickUpdate": {
       "name": "EnergiumControllerObnovlieniieTika"
+    },
+    "onRedstoneOn": {
+      "name": "EnergiumControllerRiedstounVkliuchion"
+    },
+    "onRedstoneOff": {
+      "name": "EnergiumControllerRiedstounVykliuchien"
     },
     "generateFeature": false,
     "restrictionBiomes": [],
