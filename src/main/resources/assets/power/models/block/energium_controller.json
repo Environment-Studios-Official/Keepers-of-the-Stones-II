@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "power:block/energium_block",
+    "up": "power:block/energium_block",
+    "north": "power:block/energium_controller",
+    "east": "power:block/energium_block",
+    "south": "power:block/energium_block",
+    "west": "power:block/energium_block",
+    "particle": "power:block/energium_block"
+  },
+  "render_type": "solid"
+}

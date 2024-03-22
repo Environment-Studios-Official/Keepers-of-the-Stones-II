@@ -56,6 +56,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
 				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());

@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "power:block/energium_controller"
+    },
+    "facing=east": {
+      "model": "power:block/energium_controller",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "power:block/energium_controller",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "power:block/energium_controller",
+      "y": 270
+    }
+  }
+}

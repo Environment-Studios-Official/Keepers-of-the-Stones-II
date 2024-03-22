@@ -187,6 +187,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGY_STONE = REGISTRY.register("energy_stone", () -> new EnergyStoneItem());
 	public static final RegistryObject<Item> SUN_STONE = REGISTRY.register("sun_stone", () -> new SunStoneItem());
 	public static final RegistryObject<Item> MOON_STONE = REGISTRY.register("moon_stone", () -> new MoonStoneItem());
+	public static final RegistryObject<Item> SPACE_STONE = REGISTRY.register("space_stone", () -> new SpaceStoneItem());
+	public static final RegistryObject<Item> TIME_STONE = REGISTRY.register("time_stone", () -> new TimeStoneItem());
+	public static final RegistryObject<Item> CREATION_STONE = REGISTRY.register("creation_stone", () -> new CreationStoneItem());
 	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> STAR_POTION_200 = REGISTRY.register("star_potion_200", () -> new StarPotion200Item());
 	public static final RegistryObject<Item> STAR_POTION_500 = REGISTRY.register("star_potion_500", () -> new StarPotion500Item());
@@ -195,6 +198,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEPLETED_ENERGIUM_ORE);
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK);
 	public static final RegistryObject<Item> ENERGIUM_BLOCK = block(PowerModBlocks.ENERGIUM_BLOCK);
+	public static final RegistryObject<Item> ENERGIUM_CONTROLLER = block(PowerModBlocks.ENERGIUM_CONTROLLER);
 	public static final RegistryObject<Item> RAW_DEPLETED_ENERGIUM = REGISTRY.register("raw_depleted_energium", () -> new RawDepletedEnergiumItem());
 	public static final RegistryObject<Item> DEPLETED_ENERGIUM_INGOT = REGISTRY.register("depleted_energium_ingot", () -> new DepletedEnergiumIngotItem());
 	public static final RegistryObject<Item> ENERGIUM_INGOT = REGISTRY.register("energium_ingot", () -> new EnergiumIngotItem());
@@ -233,6 +237,9 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ENERGY_BATTERY = REGISTRY.register("energy_battery", () -> new EnergyBatteryItem());
 	public static final RegistryObject<Item> SUN_BATTERY = REGISTRY.register("sun_battery", () -> new SunBatteryItem());
 	public static final RegistryObject<Item> MOON_BATTERY = REGISTRY.register("moon_battery", () -> new MoonBatteryItem());
+	public static final RegistryObject<Item> SPACE_BATTERY = REGISTRY.register("space_battery", () -> new SpaceBatteryItem());
+	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
+	public static final RegistryObject<Item> CREATION_BATTERY = REGISTRY.register("creation_battery", () -> new CreationBatteryItem());
 	public static final RegistryObject<Item> FIRE_ARMOR_HELMET = REGISTRY.register("fire_armor_helmet", () -> new FireArmorItem.Helmet());
 	public static final RegistryObject<Item> FIRE_ARMOR_CHESTPLATE = REGISTRY.register("fire_armor_chestplate", () -> new FireArmorItem.Chestplate());
 	public static final RegistryObject<Item> FIRE_ARMOR_LEGGINGS = REGISTRY.register("fire_armor_leggings", () -> new FireArmorItem.Leggings());
@@ -280,14 +287,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> LAVA_ARMOR_CHESTPLATE = REGISTRY.register("lava_armor_chestplate", () -> new LavaArmorItem.Chestplate());
 	public static final RegistryObject<Item> LAVA_ARMOR_LEGGINGS = REGISTRY.register("lava_armor_leggings", () -> new LavaArmorItem.Leggings());
 	public static final RegistryObject<Item> LAVA_ARMOR_BOOTS = REGISTRY.register("lava_armor_boots", () -> new LavaArmorItem.Boots());
-	public static final RegistryObject<Item> SPACE_STONE = REGISTRY.register("space_stone", () -> new SpaceStoneItem());
-	public static final RegistryObject<Item> TIME_STONE = REGISTRY.register("time_stone", () -> new TimeStoneItem());
 	public static final RegistryObject<Item> BLOOD_STONE = REGISTRY.register("blood_stone", () -> new BloodStoneItem());
 	public static final RegistryObject<Item> TECHNOLOGY_STONE = REGISTRY.register("technology_stone", () -> new TechnologyStoneItem());
 	public static final RegistryObject<Item> TELEPORTATION_STONE = REGISTRY.register("teleportation_stone", () -> new TeleportationStoneItem());
 	public static final RegistryObject<Item> EXPLOSION_STONE = REGISTRY.register("explosion_stone", () -> new ExplosionStoneItem());
 	public static final RegistryObject<Item> AMBER_STONE = REGISTRY.register("amber_stone", () -> new AmberStoneItem());
-	public static final RegistryObject<Item> CREATION_STONE = REGISTRY.register("creation_stone", () -> new CreationStoneItem());
 	public static final RegistryObject<Item> DESTRUCTION_STONE = REGISTRY.register("destruction_stone", () -> new DestructionStoneItem());
 	public static final RegistryObject<Item> MIST_STONE = REGISTRY.register("mist_stone", () -> new MistStoneItem());
 	public static final RegistryObject<Item> SAND_STONE = REGISTRY.register("sand_stone", () -> new SandStoneItem());
@@ -377,19 +381,16 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPACE_ARMOR_CHESTPLATE = REGISTRY.register("space_armor_chestplate", () -> new SpaceArmorItem.Chestplate());
 	public static final RegistryObject<Item> SPACE_ARMOR_LEGGINGS = REGISTRY.register("space_armor_leggings", () -> new SpaceArmorItem.Leggings());
 	public static final RegistryObject<Item> SPACE_ARMOR_BOOTS = REGISTRY.register("space_armor_boots", () -> new SpaceArmorItem.Boots());
-	public static final RegistryObject<Item> SPACE_BATTERY = REGISTRY.register("space_battery", () -> new SpaceBatteryItem());
 	public static final RegistryObject<Item> CONSTELLATION_SWORD = REGISTRY.register("constellation_sword", () -> new ConstellationSwordItem());
 	public static final RegistryObject<Item> TIME_ARMOR_HELMET = REGISTRY.register("time_armor_helmet", () -> new TimeArmorItem.Helmet());
 	public static final RegistryObject<Item> TIME_ARMOR_CHESTPLATE = REGISTRY.register("time_armor_chestplate", () -> new TimeArmorItem.Chestplate());
 	public static final RegistryObject<Item> TIME_ARMOR_LEGGINGS = REGISTRY.register("time_armor_leggings", () -> new TimeArmorItem.Leggings());
 	public static final RegistryObject<Item> TIME_ARMOR_BOOTS = REGISTRY.register("time_armor_boots", () -> new TimeArmorItem.Boots());
-	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
 	public static final RegistryObject<Item> TIME_KHOPESH = REGISTRY.register("time_khopesh", () -> new TimeKhopeshItem());
 	public static final RegistryObject<Item> CREATION_ARMOR_HELMET = REGISTRY.register("creation_armor_helmet", () -> new CreationArmorItem.Helmet());
 	public static final RegistryObject<Item> CREATION_ARMOR_CHESTPLATE = REGISTRY.register("creation_armor_chestplate", () -> new CreationArmorItem.Chestplate());
 	public static final RegistryObject<Item> CREATION_ARMOR_LEGGINGS = REGISTRY.register("creation_armor_leggings", () -> new CreationArmorItem.Leggings());
 	public static final RegistryObject<Item> CREATION_ARMOR_BOOTS = REGISTRY.register("creation_armor_boots", () -> new CreationArmorItem.Boots());
-	public static final RegistryObject<Item> CREATION_BATTERY = REGISTRY.register("creation_battery", () -> new CreationBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
