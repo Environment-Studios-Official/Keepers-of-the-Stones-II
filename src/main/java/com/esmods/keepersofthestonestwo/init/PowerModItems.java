@@ -146,6 +146,7 @@ import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CrystalArmorItem;
 import com.esmods.keepersofthestonestwo.item.CreationStoneItem;
+import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
@@ -383,6 +384,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TIME_ARMOR_BOOTS = REGISTRY.register("time_armor_boots", () -> new TimeArmorItem.Boots());
 	public static final RegistryObject<Item> TIME_BATTERY = REGISTRY.register("time_battery", () -> new TimeBatteryItem());
 	public static final RegistryObject<Item> TIME_KHOPESH = REGISTRY.register("time_khopesh", () -> new TimeKhopeshItem());
+	public static final RegistryObject<Item> CREATION_ARMOR_HELMET = REGISTRY.register("creation_armor_helmet", () -> new CreationArmorItem.Helmet());
+	public static final RegistryObject<Item> CREATION_ARMOR_CHESTPLATE = REGISTRY.register("creation_armor_chestplate", () -> new CreationArmorItem.Chestplate());
+	public static final RegistryObject<Item> CREATION_ARMOR_LEGGINGS = REGISTRY.register("creation_armor_leggings", () -> new CreationArmorItem.Leggings());
+	public static final RegistryObject<Item> CREATION_ARMOR_BOOTS = REGISTRY.register("creation_armor_boots", () -> new CreationArmorItem.Boots());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
@@ -415,6 +420,7 @@ public class PowerModItems {
 			ItemProperties.register(MOON_STONE.get(), new ResourceLocation("power:moon_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(SPACE_STONE.get(), new ResourceLocation("power:space_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 			ItemProperties.register(TIME_STONE.get(), new ResourceLocation("power:time_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
+			ItemProperties.register(CREATION_STONE.get(), new ResourceLocation("power:creation_stone_recharge"), (itemStackToRender, clientWorld, entity, itemEntityId) -> (float) StoneGetRechargeStateProcedure.execute(itemStackToRender));
 		});
 	}
 }

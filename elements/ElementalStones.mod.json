@@ -144,6 +144,9 @@
       },
       {
         "value": "CUSTOM:SpiritStone"
+      },
+      {
+        "value": "CUSTOM:LavaStone"
       }
     ],
     "blocks": [],
