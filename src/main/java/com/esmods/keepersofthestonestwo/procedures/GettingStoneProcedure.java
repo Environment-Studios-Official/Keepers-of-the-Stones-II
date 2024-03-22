@@ -38,7 +38,7 @@ public class GettingStoneProcedure {
 		if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.STONE_DISTRIBUTION) == true) {
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
 				if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).selected) {
-					random = Mth.nextInt(RandomSource.create(), 1, 24);
+					random = Mth.nextInt(RandomSource.create(), 1, 26);
 					if (random == 1) {
 						if (!PowerModVariables.MapVariables.get(world).fire_stone) {
 							PowerMod.queueServerWork(1, () -> {

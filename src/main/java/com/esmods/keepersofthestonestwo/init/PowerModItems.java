@@ -146,6 +146,7 @@ import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CrystalArmorItem;
 import com.esmods.keepersofthestonestwo.item.CreationStoneItem;
+import com.esmods.keepersofthestonestwo.item.CreationBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
@@ -388,6 +389,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CREATION_ARMOR_CHESTPLATE = REGISTRY.register("creation_armor_chestplate", () -> new CreationArmorItem.Chestplate());
 	public static final RegistryObject<Item> CREATION_ARMOR_LEGGINGS = REGISTRY.register("creation_armor_leggings", () -> new CreationArmorItem.Leggings());
 	public static final RegistryObject<Item> CREATION_ARMOR_BOOTS = REGISTRY.register("creation_armor_boots", () -> new CreationArmorItem.Boots());
+	public static final RegistryObject<Item> CREATION_BATTERY = REGISTRY.register("creation_battery", () -> new CreationBatteryItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
