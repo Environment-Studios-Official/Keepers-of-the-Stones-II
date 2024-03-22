@@ -13,8 +13,14 @@
     "isBenefitical": true,
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "TimeStoppedPriNalozhieniiEffiekta"
+    },
     "onActiveTick": {
       "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta"
+    },
+    "onExpired": {
+      "name": "TimeStoppedPriIstiechieniiEffiekta"
     }
   }
 }
