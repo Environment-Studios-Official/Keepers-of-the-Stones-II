@@ -3,9 +3,9 @@
   "_type": "block",
   "definition": {
     "texture": "energium_block",
-    "textureTop": "energium_block",
+    "textureTop": "energium_controller",
     "textureLeft": "energium_block",
-    "textureFront": "energium_controller",
+    "textureFront": "energium_block",
     "textureRight": "energium_block",
     "textureBack": "energium_block",
     "renderType": 10,
