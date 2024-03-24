@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "keepers_of_the_stones_2:block/battery_charger_bottom",
+    "up": "keepers_of_the_stones_2:block/battery_charger_top",
+    "north": "keepers_of_the_stones_2:block/battery_charger_front",
+    "east": "keepers_of_the_stones_2:block/battery_charger_side",
+    "south": "keepers_of_the_stones_2:block/battery_charger_side",
+    "west": "keepers_of_the_stones_2:block/battery_charger_side",
+    "particle": "keepers_of_the_stones_2:block/battery_charger_bottom"
+  },
+  "render_type": "solid"
+}

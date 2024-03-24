@@ -16,7 +16,7 @@ import net.minecraft.core.particles.ParticleTypes;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
 
 @Mod.EventBusSubscriber
 public class WaterPassiveWaterBreathProcedure {
@@ -36,7 +36,7 @@ public class WaterPassiveWaterBreathProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KeepersOfTheStones2ModMobEffects.WATER_MASTER.get())) {
 			if (entity.isInWater()) {
 				particleAmount = 8;
 				particleRadius = 2;

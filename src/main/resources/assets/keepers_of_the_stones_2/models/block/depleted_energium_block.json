@@ -1,0 +1,8 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "keepers_of_the_stones_2:block/depleted_energium_block",
+    "particle": "keepers_of_the_stones_2:block/depleted_energium_block"
+  },
+  "render_type": "solid"
+}

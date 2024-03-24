@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumRevengeAttackProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class EnergiumSwordItem extends SwordItem {
 	public EnergiumSwordItem() {
@@ -42,7 +42,7 @@ public class EnergiumSwordItem extends SwordItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get()));
+				return Ingredient.of(new ItemStack(KeepersOfTheStones2ModItems.ENERGIUM_INGOT.get()));
 			}
 		}, 3, -2.4f, new Item.Properties());
 	}

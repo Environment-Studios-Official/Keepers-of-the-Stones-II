@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aba",
+    "aca",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:diamond"
+    },
+    "b": {
+      "item": "keepers_of_the_stones_2:energium_upgrade_smithing_template"
+    },
+    "c": {
+      "item": "keepers_of_the_stones_2:depleted_energium_block"
+    }
+  },
+  "result": {
+    "item": "keepers_of_the_stones_2:energium_upgrade_smithing_template",
+    "count": 2
+  }
+}

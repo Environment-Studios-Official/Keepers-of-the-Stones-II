@@ -17,7 +17,7 @@ public class RainMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.rain_master";
+		return "effect.keepers_of_the_stones_2.rain_master";
 	}
 
 	@Override

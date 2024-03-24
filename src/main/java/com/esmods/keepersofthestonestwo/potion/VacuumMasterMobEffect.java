@@ -17,7 +17,7 @@ public class VacuumMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.vacuum_master";
+		return "effect.keepers_of_the_stones_2.vacuum_master";
 	}
 
 	@Override

@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "keepers_of_the_stones_2:item/water_stone"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "keepers_of_the_stones_2:water_stone_recharge": 0.01
+      },
+      "model": "keepers_of_the_stones_2:item/water_stone_0"
+    }
+  ]
+}

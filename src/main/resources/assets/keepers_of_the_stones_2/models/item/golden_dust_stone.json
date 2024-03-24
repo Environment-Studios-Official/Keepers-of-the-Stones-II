@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "keepers_of_the_stones_2:item/golden_dust_stone"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "keepers_of_the_stones_2:golden_dust_stone_recharge": 0.01
+      },
+      "model": "keepers_of_the_stones_2:item/golden_dust_stone_0"
+    }
+  ]
+}

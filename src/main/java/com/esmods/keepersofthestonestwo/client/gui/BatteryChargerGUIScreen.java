@@ -49,22 +49,22 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_gui.png"), this.leftPos + 0, this.topPos + 0, 0, 0, 176, 166, 176, 166);
 
 		if (BatteryChargerProgress1Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_1.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+			guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_progress_1.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
 		}
 		if (BatteryChargerProgress2Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_2.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+			guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_progress_2.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
 		}
 		if (BatteryChargerProgress3Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_3.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+			guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_progress_3.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
 		}
 		if (BatteryChargerProgress4Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_4.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+			guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_progress_4.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
 		}
 		if (BatteryChargerProgress5Procedure.execute(world, x, y, z)) {
-			guiGraphics.blit(new ResourceLocation("power:textures/screens/battery_charger_progress_5.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
+			guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/battery_charger_progress_5.png"), this.leftPos + 37, this.topPos + 14, 0, 0, 102, 10, 102, 10);
 		}
 		RenderSystem.disableBlend();
 	}

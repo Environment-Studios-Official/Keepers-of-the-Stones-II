@@ -17,7 +17,7 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 @Mod.EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
@@ -43,7 +43,7 @@ public class FrozenDestructionArmorProcedure {
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(Blocks.ICE.defaultBlockState()));
 			{
 				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.ability_block = _setval;
 					capability.syncPlayerVariables(entity);
 				});

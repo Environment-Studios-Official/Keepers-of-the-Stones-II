@@ -40,13 +40,13 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMen
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 public class OpenWheelOneProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("fire")) {
+		if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("fire")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -61,7 +61,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("air")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("air")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -76,7 +76,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("earth")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("earth")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -91,7 +91,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("water")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("water")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -106,7 +106,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ether")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ether")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -121,7 +121,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ice")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ice")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -136,7 +136,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lightning")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("lightning")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -151,7 +151,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sound")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("sound")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -166,7 +166,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -181,7 +181,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lava")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("lava")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -196,7 +196,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("rain")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("rain")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -211,7 +211,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -226,7 +226,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ocean")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ocean")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -241,7 +241,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("plants")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("plants")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -256,7 +256,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("animals")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("animals")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -271,7 +271,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("metal")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("metal")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -286,7 +286,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("light")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("light")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -301,7 +301,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("shadow")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("shadow")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -316,7 +316,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("vacuum")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("vacuum")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -331,7 +331,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("energy")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("energy")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -346,7 +346,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sun")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("sun")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -361,7 +361,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("moon")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("moon")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -376,7 +376,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("space")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("space")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -391,7 +391,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("time")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("time")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -406,7 +406,7 @@ public class OpenWheelOneProcedure {
 					}
 				}, _bpos);
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("creation")) {
+		} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("creation")) {
 			if (entity instanceof ServerPlayer _ent) {
 				BlockPos _bpos = BlockPos.containing(x, y, z);
 				NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {

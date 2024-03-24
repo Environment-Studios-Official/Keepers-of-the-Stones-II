@@ -10,7 +10,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
 
 public class EnergiumBlockPowerLockProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -19,7 +19,7 @@ public class EnergiumBlockPowerLockProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
+					_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.POWER_LOCK.get(), 200, 0));
 			}
 		}
 	}

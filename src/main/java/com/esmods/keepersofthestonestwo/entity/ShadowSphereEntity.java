@@ -23,14 +23,14 @@ import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.ShadowSphereKazhdyiTikPriPoliotieSnariadaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightballProjectileKoghdaSnariadPopadaietVSushchnostProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class ShadowSphereEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.LIGHT);
 
 	public ShadowSphereEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.SHADOW_SPHERE.get(), world);
+		super(KeepersOfTheStones2ModEntities.SHADOW_SPHERE.get(), world);
 	}
 
 	public ShadowSphereEntity(EntityType<? extends ShadowSphereEntity> type, Level world) {
@@ -86,7 +86,7 @@ public class ShadowSphereEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static ShadowSphereEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		ShadowSphereEntity entityarrow = new ShadowSphereEntity(PowerModEntities.SHADOW_SPHERE.get(), entity, world);
+		ShadowSphereEntity entityarrow = new ShadowSphereEntity(KeepersOfTheStones2ModEntities.SHADOW_SPHERE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -98,7 +98,7 @@ public class ShadowSphereEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static ShadowSphereEntity shoot(LivingEntity entity, LivingEntity target) {
-		ShadowSphereEntity entityarrow = new ShadowSphereEntity(PowerModEntities.SHADOW_SPHERE.get(), entity, entity.level());
+		ShadowSphereEntity entityarrow = new ShadowSphereEntity(KeepersOfTheStones2ModEntities.SHADOW_SPHERE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

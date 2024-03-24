@@ -1,0 +1,14 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "keepers_of_the_stones_2:item/darkness_stone"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "cooldown": 0.01
+      },
+      "model": "keepers_of_the_stones_2:item/darkness_stone_0"
+    }
+  ]
+}

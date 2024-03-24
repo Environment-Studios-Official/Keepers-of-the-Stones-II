@@ -12,7 +12,7 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 @Mod.EventBusSubscriber
 public class CancelUseMilkInActiveStoneProcedure {
@@ -31,7 +31,7 @@ public class CancelUseMilkInActiveStoneProcedure {
 		if (entity == null)
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.MILK_BUCKET
-				&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
+				&& (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).active) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}

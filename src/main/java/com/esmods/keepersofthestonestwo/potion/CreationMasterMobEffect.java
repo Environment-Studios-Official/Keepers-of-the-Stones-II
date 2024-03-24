@@ -17,7 +17,7 @@ public class CreationMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.creation_master";
+		return "effect.keepers_of_the_stones_2.creation_master";
 	}
 
 	@Override

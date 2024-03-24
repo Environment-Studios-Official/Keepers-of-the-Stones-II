@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modellightball;
 
 public class ShadowSphereRenderer extends EntityRenderer<ShadowSphereEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/shadow_sphere.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/shadow_sphere.png");
 	private final Modellightball model;
 
 	public ShadowSphereRenderer(EntityRendererProvider.Context context) {

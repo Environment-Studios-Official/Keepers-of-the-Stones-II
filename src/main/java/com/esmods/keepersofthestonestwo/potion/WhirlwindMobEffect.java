@@ -14,7 +14,7 @@ public class WhirlwindMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.whirlwind";
+		return "effect.keepers_of_the_stones_2.whirlwind";
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class AirMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.air_master";
+		return "effect.keepers_of_the_stones_2.air_master";
 	}
 
 	@Override

@@ -16,7 +16,7 @@ import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumRevengeAttackProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class EnergiumPickaxeItem extends PickaxeItem {
 	public EnergiumPickaxeItem() {
@@ -42,7 +42,7 @@ public class EnergiumPickaxeItem extends PickaxeItem {
 			}
 
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get()));
+				return Ingredient.of(new ItemStack(KeepersOfTheStones2ModItems.ENERGIUM_INGOT.get()));
 			}
 		}, 1, -2.8f, new Item.Properties());
 	}

@@ -19,15 +19,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class RainDropProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.RAIN_BOW.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(KeepersOfTheStones2ModItems.RAIN_BOW.get());
 
 	public RainDropProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.RAIN_DROP_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.RAIN_DROP_PROJECTILE.get(), world);
 	}
 
 	public RainDropProjectileEntity(EntityType<? extends RainDropProjectileEntity> type, Level world) {
@@ -76,7 +76,7 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		RainDropProjectileEntity entityarrow = new RainDropProjectileEntity(PowerModEntities.RAIN_DROP_PROJECTILE.get(), entity, world);
+		RainDropProjectileEntity entityarrow = new RainDropProjectileEntity(KeepersOfTheStones2ModEntities.RAIN_DROP_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -88,7 +88,7 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	public static RainDropProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		RainDropProjectileEntity entityarrow = new RainDropProjectileEntity(PowerModEntities.RAIN_DROP_PROJECTILE.get(), entity, entity.level());
+		RainDropProjectileEntity entityarrow = new RainDropProjectileEntity(KeepersOfTheStones2ModEntities.RAIN_DROP_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

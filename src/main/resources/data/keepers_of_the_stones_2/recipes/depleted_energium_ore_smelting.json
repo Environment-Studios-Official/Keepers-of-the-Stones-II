@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "category": "misc",
+  "experience": 0.575,
+  "cookingtime": 200,
+  "ingredient": {
+    "item": "keepers_of_the_stones_2:depleted_energium_ore"
+  },
+  "result": "keepers_of_the_stones_2:depleted_energium_ingot"
+}

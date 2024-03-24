@@ -11,7 +11,7 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 @Mod.EventBusSubscriber
 public class ZeroingUsingProcedure {
@@ -27,11 +27,11 @@ public class ZeroingUsingProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).zeroing) {
+		if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).zeroing) {
 			world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(false, world.getServer());
 			{
 				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.zeroing = _setval;
 					capability.syncPlayerVariables(entity);
 				});

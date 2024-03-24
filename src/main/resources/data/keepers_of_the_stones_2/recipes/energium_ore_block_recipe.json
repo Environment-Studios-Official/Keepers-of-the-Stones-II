@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "aaa",
+    "aaa",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "keepers_of_the_stones_2:energium_ingot"
+    }
+  },
+  "result": {
+    "item": "keepers_of_the_stones_2:energium_block",
+    "count": 1
+  }
+}

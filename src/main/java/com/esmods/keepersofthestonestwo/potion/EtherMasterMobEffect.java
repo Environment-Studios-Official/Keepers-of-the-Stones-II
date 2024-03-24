@@ -17,7 +17,7 @@ public class EtherMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.ether_master";
+		return "effect.keepers_of_the_stones_2.ether_master";
 	}
 
 	@Override

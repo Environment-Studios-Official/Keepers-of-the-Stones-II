@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class CobblestoneAttackProjectileRenderer extends EntityRenderer<CobblestoneAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobblestone_attack.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/cobblestone_attack.png");
 	private final Modelblock_attack model;
 
 	public CobblestoneAttackProjectileRenderer(EntityRendererProvider.Context context) {

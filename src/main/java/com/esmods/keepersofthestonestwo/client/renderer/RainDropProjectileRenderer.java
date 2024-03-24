@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 
 public class RainDropProjectileRenderer extends EntityRenderer<RainDropProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/rain_drop.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/rain_drop.png");
 	private final Modelrain_drop model;
 
 	public RainDropProjectileRenderer(EntityRendererProvider.Context context) {

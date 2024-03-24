@@ -3,7 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 public class Attack80Procedure {
 	public static void execute(Entity entity) {
@@ -11,7 +11,7 @@ public class Attack80Procedure {
 			return;
 		{
 			String _setval = "energy_attack_4";
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.attack = _setval;
 				capability.syncPlayerVariables(entity);
 			});

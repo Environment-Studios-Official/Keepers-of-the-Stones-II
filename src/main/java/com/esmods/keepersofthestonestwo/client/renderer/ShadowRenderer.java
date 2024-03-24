@@ -18,6 +18,6 @@ public class ShadowRenderer extends HumanoidMobRenderer<ShadowEntity, HumanoidMo
 
 	@Override
 	public ResourceLocation getTextureLocation(ShadowEntity entity) {
-		return new ResourceLocation("power:textures/entities/shadow.png");
+		return new ResourceLocation("keepers_of_the_stones_2:textures/entities/shadow.png");
 	}
 }

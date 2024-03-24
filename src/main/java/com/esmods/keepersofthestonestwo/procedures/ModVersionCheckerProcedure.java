@@ -26,7 +26,7 @@ import java.io.BufferedReader;
 
 import com.google.gson.Gson;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 @Mod.EventBusSubscriber
 public class ModVersionCheckerProcedure {
@@ -50,8 +50,8 @@ public class ModVersionCheckerProcedure {
 		double v2 = 0;
 		double v3 = 0;
 		double v4 = 0;
-		PowerModVariables.dev_channel = 0;
-		if (PowerModVariables.dev_channel == 0) {
+		KeepersOfTheStones2ModVariables.dev_channel = 0;
+		if (KeepersOfTheStones2ModVariables.dev_channel == 0) {
 			List<IModInfo> mods = ModList.get().getMods();
 			for (IModInfo mod : mods) {
 				if ((mod.getModId()).equals("power")) {
@@ -124,7 +124,7 @@ public class ModVersionCheckerProcedure {
 					e.printStackTrace();
 				}
 			}
-		} else if (PowerModVariables.dev_channel == 1) {
+		} else if (KeepersOfTheStones2ModVariables.dev_channel == 1) {
 			List<IModInfo> mods = ModList.get().getMods();
 			for (IModInfo mod : mods) {
 				if ((mod.getModId()).equals("power")) {
@@ -187,7 +187,7 @@ public class ModVersionCheckerProcedure {
 					e.printStackTrace();
 				}
 			}
-		} else if (PowerModVariables.dev_channel >= 2) {
+		} else if (KeepersOfTheStones2ModVariables.dev_channel >= 2) {
 			if (entity instanceof Player _player && !_player.level().isClientSide())
 				_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.unofficial_version").getString())), false);
 		}

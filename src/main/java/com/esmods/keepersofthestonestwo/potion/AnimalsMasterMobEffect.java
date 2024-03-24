@@ -17,7 +17,7 @@ public class AnimalsMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.animals_master";
+		return "effect.keepers_of_the_stones_2.animals_master";
 	}
 
 	@Override

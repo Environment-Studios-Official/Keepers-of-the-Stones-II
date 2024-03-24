@@ -17,7 +17,7 @@ public class LavaMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.lava_master";
+		return "effect.keepers_of_the_stones_2.lava_master";
 	}
 
 	@Override

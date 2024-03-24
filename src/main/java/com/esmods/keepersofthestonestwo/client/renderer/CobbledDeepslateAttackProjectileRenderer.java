@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileE
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class CobbledDeepslateAttackProjectileRenderer extends EntityRenderer<CobbledDeepslateAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/cobbled_deepslate_attack.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/cobbled_deepslate_attack.png");
 	private final Modelblock_attack model;
 
 	public CobbledDeepslateAttackProjectileRenderer(EntityRendererProvider.Context context) {

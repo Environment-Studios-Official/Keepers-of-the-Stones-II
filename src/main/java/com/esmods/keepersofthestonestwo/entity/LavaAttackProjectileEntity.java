@@ -24,14 +24,14 @@ import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.LavaAttackProjectileKoghdaSnariadPopadaietVSushchnostProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LavaAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.LAVA);
 
 	public LavaAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.LAVA_ATTACK_PROJECTILE.get(), world);
 	}
 
 	public LavaAttackProjectileEntity(EntityType<? extends LavaAttackProjectileEntity> type, Level world) {
@@ -92,7 +92,7 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static LavaAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		LavaAttackProjectileEntity entityarrow = new LavaAttackProjectileEntity(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), entity, world);
+		LavaAttackProjectileEntity entityarrow = new LavaAttackProjectileEntity(KeepersOfTheStones2ModEntities.LAVA_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -104,7 +104,7 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static LavaAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		LavaAttackProjectileEntity entityarrow = new LavaAttackProjectileEntity(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), entity, entity.level());
+		LavaAttackProjectileEntity entityarrow = new LavaAttackProjectileEntity(KeepersOfTheStones2ModEntities.LAVA_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

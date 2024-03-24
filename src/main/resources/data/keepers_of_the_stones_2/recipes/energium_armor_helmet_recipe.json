@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "pattern": [
+    "aaa",
+    "a a"
+  ],
+  "key": {
+    "a": {
+      "item": "keepers_of_the_stones_2:energium_ingot"
+    }
+  },
+  "result": {
+    "item": "keepers_of_the_stones_2:energium_armor_helmet",
+    "count": 1
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "redstone",
+  "ingredients": [
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    },
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    },
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "minecraft:quartz"
+    },
+    {
+      "item": "minecraft:redstone"
+    },
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    },
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    },
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    }
+  ],
+  "result": {
+    "item": "keepers_of_the_stones_2:battery_charger",
+    "count": 1
+  }
+}

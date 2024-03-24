@@ -17,7 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesIceButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilitiesIceMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesIceMenu.guistate;
@@ -48,11 +48,11 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_ice.tooltip_freezing_ray_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 84 && mouseY < topPos + 108)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_ice.tooltip_ice_attack_uses_30"), mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_ice.tooltip_ice_trap_uses_60"), mouseX, mouseY);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,9 +92,9 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(0, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(0, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
@@ -106,9 +106,9 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(1, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(1, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
@@ -120,9 +120,9 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(2, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(2, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
@@ -134,25 +134,25 @@ public class WheelAbilitiesIceScreen extends AbstractContainerScreen<WheelAbilit
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_freezing_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_freezing_ray.png"), 46, 92, e -> {
+		imagebutton_freezing_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_freezing_ray.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(3, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(3, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_freezing_ray", imagebutton_freezing_ray);
 		this.addRenderableWidget(imagebutton_freezing_ray);
-		imagebutton_ice_attack = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ice_attack.png"), 46, 92, e -> {
+		imagebutton_ice_attack = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_ice_attack.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(4, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(4, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_ice_attack", imagebutton_ice_attack);
 		this.addRenderableWidget(imagebutton_ice_attack);
-		imagebutton_ice_trap = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ice_trap.png"), 46, 92, e -> {
+		imagebutton_ice_trap = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_ice_trap.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(5, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesIceButtonMessage(5, x, y, z));
 				WheelAbilitiesIceButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});

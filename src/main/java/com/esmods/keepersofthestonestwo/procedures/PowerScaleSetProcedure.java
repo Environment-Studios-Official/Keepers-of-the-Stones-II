@@ -8,7 +8,7 @@ import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 public class PowerScaleSetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
@@ -23,7 +23,7 @@ public class PowerScaleSetProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			}.getEntity()).getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.power = _setval;
 				capability.syncPlayerVariables((new Object() {
 					public Entity getEntity() {

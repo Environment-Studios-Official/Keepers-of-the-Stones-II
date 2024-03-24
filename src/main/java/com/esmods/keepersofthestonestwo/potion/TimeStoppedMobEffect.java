@@ -17,7 +17,7 @@ public class TimeStoppedMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.time_stopped";
+		return "effect.keepers_of_the_stones_2.time_stopped";
 	}
 
 	@Override

@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/crystal_knife",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/crystal_knife",
+    "particle": "keepers_of_the_stones_2:item/crystal_knife"
+  }
+}

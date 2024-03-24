@@ -46,7 +46,7 @@ public class PowerOverlayOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
 			if (GetActiveProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), w - 60, 28, 0, 0, 59, 20, 59, 20);
+				event.getGuiGraphics().blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/star_points_overlay.png"), w - 60, 28, 0, 0, 59, 20, 59, 20);
 			}
 			if (GetActiveProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,

@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelmini_tornado;
 
 public class MiniTornadoProjectileRenderer extends EntityRenderer<MiniTornadoProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/minitornado.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/minitornado.png");
 	private final Modelmini_tornado model;
 
 	public MiniTornadoProjectileRenderer(EntityRendererProvider.Context context) {

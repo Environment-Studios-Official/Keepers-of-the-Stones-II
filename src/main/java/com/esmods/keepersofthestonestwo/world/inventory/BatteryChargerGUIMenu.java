@@ -25,8 +25,8 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMenus;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMenus;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
@@ -42,7 +42,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 	private BlockEntity boundBlockEntity = null;
 
 	public BatteryChargerGUIMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.BATTERY_CHARGER_GUI.get(), id);
+		super(KeepersOfTheStones2ModMenus.BATTERY_CHARGER_GUI.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(3);
@@ -85,7 +85,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return PowerModItems.EMPTY_BATTERY.get() == stack.getItem();
+				return KeepersOfTheStones2ModItems.EMPTY_BATTERY.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 104, 59) {

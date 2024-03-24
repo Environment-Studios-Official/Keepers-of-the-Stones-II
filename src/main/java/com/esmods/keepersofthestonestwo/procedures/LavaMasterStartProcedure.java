@@ -19,8 +19,8 @@ import net.minecraft.commands.CommandFunction;
 
 import java.util.Optional;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class LavaMasterStartProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -28,7 +28,7 @@ public class LavaMasterStartProcedure {
 			return;
 		{
 			boolean _setval = true;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.active = _setval;
 				capability.syncPlayerVariables(entity);
 			});
@@ -40,41 +40,41 @@ public class LavaMasterStartProcedure {
 					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null));
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers == 0) {
+		if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).mergers == 0) {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(3, new ItemStack(PowerModItems.LAVA_ARMOR_HELMET.get()));
+					_player.getInventory().armor.set(3, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_HELMET.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(PowerModItems.LAVA_ARMOR_HELMET.get()));
+					_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_HELMET.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(2, new ItemStack(PowerModItems.LAVA_ARMOR_CHESTPLATE.get()));
+					_player.getInventory().armor.set(2, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_CHESTPLATE.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(PowerModItems.LAVA_ARMOR_CHESTPLATE.get()));
+					_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_CHESTPLATE.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_player.getInventory().armor.set(1, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, new ItemStack(PowerModItems.LAVA_ARMOR_BOOTS.get()));
+					_player.getInventory().armor.set(0, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_BOOTS.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.LAVA_ARMOR_BOOTS.get()));
+					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_BOOTS.get()));
 				}
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
@@ -87,28 +87,28 @@ public class LavaMasterStartProcedure {
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 			{
 				String _setval = "lava";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.element_name_first = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers == 1) {
+		} else if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).mergers == 1) {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_player.getInventory().armor.set(1, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 				}
 			}
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(0, new ItemStack(PowerModItems.LAVA_ARMOR_BOOTS.get()));
+					_player.getInventory().armor.set(0, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_BOOTS.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(PowerModItems.LAVA_ARMOR_BOOTS.get()));
+					_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_BOOTS.get()));
 				}
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
@@ -117,33 +117,33 @@ public class LavaMasterStartProcedure {
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 			{
 				String _setval = "lava";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.element_name_second = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
-		} else if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers == 2) {
+		} else if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).mergers == 2) {
 			{
 				Entity _entity = entity;
 				if (_entity instanceof Player _player) {
-					_player.getInventory().armor.set(1, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_player.getInventory().armor.set(1, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 					_player.getInventory().setChanged();
 				} else if (_entity instanceof LivingEntity _living) {
-					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(PowerModItems.LAVA_ARMOR_LEGGINGS.get()));
+					_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(KeepersOfTheStones2ModItems.LAVA_ARMOR_LEGGINGS.get()));
 				}
 			}
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 			{
 				String _setval = "lava";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.element_name_third = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.LAVA_HAMMER.get());
+			ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LAVA_HAMMER.get());
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

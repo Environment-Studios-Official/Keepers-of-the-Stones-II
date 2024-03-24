@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modellightball;
 
 public class SphereNothingProjectileRenderer extends EntityRenderer<SphereNothingProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/sphere_nothing.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/sphere_nothing.png");
 	private final Modellightball model;
 
 	public SphereNothingProjectileRenderer(EntityRendererProvider.Context context) {

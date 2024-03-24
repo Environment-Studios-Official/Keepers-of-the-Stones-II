@@ -17,7 +17,7 @@ public class IceMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.ice_master";
+		return "effect.keepers_of_the_stones_2.ice_master";
 	}
 
 	@Override

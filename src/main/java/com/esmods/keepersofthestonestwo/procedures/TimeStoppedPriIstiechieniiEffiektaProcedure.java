@@ -5,7 +5,7 @@ import net.minecraftforge.common.ForgeMod;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
 
 public class TimeStoppedPriIstiechieniiEffiektaProcedure {
 	public static void execute(Entity entity) {
@@ -15,7 +15,7 @@ public class TimeStoppedPriIstiechieniiEffiektaProcedure {
 		((LivingEntity) entity).getAttribute(ForgeMod.ENTITY_GRAVITY.get()).setBaseValue(0.08);
 		{
 			boolean _setval = false;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+			entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 				capability.ability_block = _setval;
 				capability.syncPlayerVariables(entity);
 			});

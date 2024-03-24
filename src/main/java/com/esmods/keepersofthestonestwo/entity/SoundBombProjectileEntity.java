@@ -24,14 +24,14 @@ import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.SoundBombProjectileKoghdaSnariadPopadaietVSushchnostProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundBombProjectileKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class SoundBombProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.PINK_STAINED_GLASS);
 
 	public SoundBombProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.SOUND_BOMB_PROJECTILE.get(), world);
 	}
 
 	public SoundBombProjectileEntity(EntityType<? extends SoundBombProjectileEntity> type, Level world) {
@@ -92,7 +92,7 @@ public class SoundBombProjectileEntity extends AbstractArrow implements ItemSupp
 	}
 
 	public static SoundBombProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		SoundBombProjectileEntity entityarrow = new SoundBombProjectileEntity(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), entity, world);
+		SoundBombProjectileEntity entityarrow = new SoundBombProjectileEntity(KeepersOfTheStones2ModEntities.SOUND_BOMB_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -104,7 +104,7 @@ public class SoundBombProjectileEntity extends AbstractArrow implements ItemSupp
 	}
 
 	public static SoundBombProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		SoundBombProjectileEntity entityarrow = new SoundBombProjectileEntity(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), entity, entity.level());
+		SoundBombProjectileEntity entityarrow = new SoundBombProjectileEntity(KeepersOfTheStones2ModEntities.SOUND_BOMB_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

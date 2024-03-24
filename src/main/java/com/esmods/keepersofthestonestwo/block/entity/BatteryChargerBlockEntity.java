@@ -28,14 +28,14 @@ import java.util.stream.IntStream;
 import io.netty.buffer.Unpooled;
 
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
-import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModBlockEntities;
 
 public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public BatteryChargerBlockEntity(BlockPos position, BlockState state) {
-		super(PowerModBlockEntities.BATTERY_CHARGER.get(), position, state);
+		super(KeepersOfTheStones2ModBlockEntities.BATTERY_CHARGER.get(), position, state);
 	}
 
 	@Override

@@ -17,7 +17,7 @@ public class TornadoMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.tornado_master";
+		return "effect.keepers_of_the_stones_2.tornado_master";
 	}
 
 	@Override

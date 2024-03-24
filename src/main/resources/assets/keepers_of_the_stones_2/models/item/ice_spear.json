@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/ice_spear",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/ice_spear",
+    "particle": "keepers_of_the_stones_2:item/ice_spear"
+  }
+}

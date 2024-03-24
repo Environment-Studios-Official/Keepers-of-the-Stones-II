@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "keepers_of_the_stones_2:item/sound_armor_leggings"
+  }
+}

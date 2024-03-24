@@ -20,7 +20,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMenus;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMenus;
 
 public class WheelAbilitiesCrystalMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
@@ -36,7 +36,7 @@ public class WheelAbilitiesCrystalMenu extends AbstractContainerMenu implements 
 	private BlockEntity boundBlockEntity = null;
 
 	public WheelAbilitiesCrystalMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.WHEEL_ABILITIES_CRYSTAL.get(), id);
+		super(KeepersOfTheStones2ModMenus.WHEEL_ABILITIES_CRYSTAL.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);

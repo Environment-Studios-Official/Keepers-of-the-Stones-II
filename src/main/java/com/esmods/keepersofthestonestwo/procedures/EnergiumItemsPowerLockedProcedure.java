@@ -6,16 +6,16 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
-import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEnchantments;
 
 public class EnergiumItemsPowerLockedProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
-		if (!(EnchantmentHelper.getItemEnchantmentLevel(PowerModEnchantments.ISOLATION.get(), itemstack) != 0)) {
+		if (!(EnchantmentHelper.getItemEnchantmentLevel(KeepersOfTheStones2ModEnchantments.ISOLATION.get(), itemstack) != 0)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
+				_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.POWER_LOCK.get(), 200, 0));
 		}
 	}
 }

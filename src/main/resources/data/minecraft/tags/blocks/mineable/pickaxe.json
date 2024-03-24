@@ -1,12 +1,12 @@
 {
   "replace": false,
   "values": [
-    "power:keepers_box",
-    "power:depleted_energium_ore",
-    "power:depleted_energium_block",
-    "power:energium_block",
-    "power:energium_controller",
-    "power:battery_charger",
-    "power:moon_block"
+    "keepers_of_the_stones_2:keepers_box",
+    "keepers_of_the_stones_2:depleted_energium_ore",
+    "keepers_of_the_stones_2:depleted_energium_block",
+    "keepers_of_the_stones_2:energium_block",
+    "keepers_of_the_stones_2:energium_controller",
+    "keepers_of_the_stones_2:battery_charger",
+    "keepers_of_the_stones_2:moon_block"
   ]
 }

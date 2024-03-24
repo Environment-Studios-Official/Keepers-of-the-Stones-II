@@ -15,8 +15,8 @@ import net.minecraft.core.particles.SimpleParticleType;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModParticleTypes;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
 
 public class SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -28,7 +28,7 @@ public class SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure {
 			final Vec3 _center = new Vec3(x, y, z);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.VACUUM_MASTER.get()))) {
+				if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(KeepersOfTheStones2ModMobEffects.VACUUM_MASTER.get()))) {
 					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)), 9);
 				}
 			}
@@ -36,9 +36,9 @@ public class SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure {
 		particleAmount = 9;
 		particleRadius = 3;
 		for (int index0 = 0; index0 < (int) particleAmount; index0++) {
-			world.addParticle((SimpleParticleType) (PowerModParticleTypes.VACUUM_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-					(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-					(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
+			world.addParticle((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.VACUUM_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+					(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+					(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)));
 		}
 	}
 }

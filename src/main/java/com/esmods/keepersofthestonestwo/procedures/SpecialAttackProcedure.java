@@ -44,12 +44,12 @@ import net.minecraft.commands.CommandSource;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModParticleTypes;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModBlocks;
 import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
@@ -76,7 +76,7 @@ import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileE
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class SpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -90,12 +90,12 @@ public class SpecialAttackProcedure {
 		double zr = 0;
 		boolean success = false;
 		boolean Reset = false;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability_block == false) {
+		if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).ability_block == false) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
-			if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(KeepersOfTheStones2ModMobEffects.FIRE_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("fire_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index0 = 0; index0 < 15; index0++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -130,14 +130,14 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entity.isInWater()) {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													(float) 13.5);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), (float) 13.5);
 										} else {
 											entityiterator.setSecondsOnFire(7);
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													0);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), 0);
 										}
 									}
 								}
@@ -178,16 +178,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
-						PowerMod.queueServerWork(10, () -> {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("fire_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 25) {
+						KeepersOfTheStones2Mod.queueServerWork(10, () -> {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
@@ -201,7 +201,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -215,7 +215,7 @@ public class SpecialAttackProcedure {
 									projectileLevel.addFreshEntity(_entityToSpawn);
 								}
 							}
-							PowerMod.queueServerWork(10, () -> {
+							KeepersOfTheStones2Mod.queueServerWork(10, () -> {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
 										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
@@ -229,7 +229,7 @@ public class SpecialAttackProcedure {
 									if (!projectileLevel.isClientSide()) {
 										Projectile _entityToSpawn = new Object() {
 											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
+												AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 												entityToSpawn.setOwner(shooter);
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
@@ -243,7 +243,7 @@ public class SpecialAttackProcedure {
 										projectileLevel.addFreshEntity(_entityToSpawn);
 									}
 								}
-								PowerMod.queueServerWork(10, () -> {
+								KeepersOfTheStones2Mod.queueServerWork(10, () -> {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
 											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
@@ -257,7 +257,7 @@ public class SpecialAttackProcedure {
 										if (!projectileLevel.isClientSide()) {
 											Projectile _entityToSpawn = new Object() {
 												public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-													AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
+													AbstractArrow entityToSpawn = new MagicFireballProjectileEntity(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), level);
 													entityToSpawn.setOwner(shooter);
 													entityToSpawn.setBaseDamage(damage);
 													entityToSpawn.setKnockback(knockback);
@@ -275,15 +275,15 @@ public class SpecialAttackProcedure {
 							});
 						});
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 25;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 25;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("fire_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
@@ -298,8 +298,8 @@ public class SpecialAttackProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -307,9 +307,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt51 && _livEnt51.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt51 && _livEnt51.hasEffect(KeepersOfTheStones2ModMobEffects.AIR_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("air_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index1 = 0; index1 < 15; index1++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -343,8 +343,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 										if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 											if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
@@ -401,15 +401,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("air_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						particleAmount = 25;
 						particleRadius = 2;
 						for (int index2 = 0; index2 < (int) particleAmount; index2++) {
@@ -423,15 +423,15 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 											(float) 22.5);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -444,9 +444,9 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("air_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
+						if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
@@ -461,8 +461,8 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -471,9 +471,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt120 && _livEnt120.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+			if (entity instanceof LivingEntity _livEnt120 && _livEnt120.hasEffect(KeepersOfTheStones2ModMobEffects.EARTH_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("earth_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
 							{
 								Entity _shootFrom = entity;
@@ -481,7 +481,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new StoneAttackProjectileEntity(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new StoneAttackProjectileEntity(KeepersOfTheStones2ModEntities.STONE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -501,8 +501,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -521,7 +521,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new DirtBlockAttackProjectileEntity(PowerModEntities.DIRT_BLOCK_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new DirtBlockAttackProjectileEntity(KeepersOfTheStones2ModEntities.DIRT_BLOCK_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -541,8 +541,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -561,7 +561,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new CobblestoneAttackProjectileEntity(PowerModEntities.COBBLESTONE_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new CobblestoneAttackProjectileEntity(KeepersOfTheStones2ModEntities.COBBLESTONE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -581,8 +581,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -601,7 +601,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new CobbledDeepslateAttackProjectileEntity(PowerModEntities.COBBLED_DEEPSLATE_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new CobbledDeepslateAttackProjectileEntity(KeepersOfTheStones2ModEntities.COBBLED_DEEPSLATE_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -621,8 +621,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -641,7 +641,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new GrassBlockAttackProjectileEntity(KeepersOfTheStones2ModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -661,8 +661,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -676,8 +676,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("earth_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 40) {
 						for (int index3 = 0; index3 < 10; index3++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -705,9 +705,9 @@ public class SpecialAttackProcedure {
 										if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													(float) 31.5);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), (float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
 													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -723,8 +723,8 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 40;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -732,16 +732,16 @@ public class SpecialAttackProcedure {
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("earth_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PowerModItems.EARTH_SHIELD.get());
+							ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.EARTH_SHIELD.get());
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -749,9 +749,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt176 && _livEnt176.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt176 && _livEnt176.hasEffect(KeepersOfTheStones2ModMobEffects.WATER_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("water_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index4 = 0; index4 < 15; index4++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -785,8 +785,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -800,22 +800,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("water_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new WaterAttackProjectileEntity(KeepersOfTheStones2ModEntities.WATER_ATTACK_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -837,15 +837,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 20;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("water_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -863,8 +863,8 @@ public class SpecialAttackProcedure {
 										}
 									}
 									{
-										double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+										entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.power = _setval;
 											capability.syncPlayerVariables(entity);
 										});
@@ -875,9 +875,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt200 && _livEnt200.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt200 && _livEnt200.hasEffect(KeepersOfTheStones2ModMobEffects.ETHER_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ether_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index5 = 0; index5 < 15; index5++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -911,8 +911,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -926,15 +926,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ether_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.PLAYERS, 1, 1);
@@ -945,7 +945,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -960,7 +960,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -975,7 +975,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -990,7 +990,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1005,7 +1005,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1020,7 +1020,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1035,7 +1035,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1050,7 +1050,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(PowerModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new EtherAttackProjectileEntity(KeepersOfTheStones2ModEntities.ETHER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1063,15 +1063,15 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ether_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 3, false, false));
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -1096,8 +1096,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -1105,9 +1105,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt253 && _livEnt253.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt253 && _livEnt253.hasEffect(KeepersOfTheStones2ModMobEffects.ICE_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ice_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index8 = 0; index8 < 15; index8++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1142,8 +1142,8 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										entityiterator.setTicksFrozen(140);
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -1210,22 +1210,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ice_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new IceAttackProjectileEntity(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new IceAttackProjectileEntity(KeepersOfTheStones2ModEntities.ICE_ATTACK_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1247,15 +1247,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 20;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ice_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						if (!world.getBlockState(new BlockPos(
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
@@ -1276,7 +1276,7 @@ public class SpecialAttackProcedure {
 								if (!(entityiterator == entity)) {
 									{
 										boolean _setval = true;
-										entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										entityiterator.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.ability_block = _setval;
 											capability.syncPlayerVariables(entityiterator);
 										});
@@ -1290,8 +1290,8 @@ public class SpecialAttackProcedure {
 										}
 									}
 									{
-										double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+										entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 											capability.power = _setval;
 											capability.syncPlayerVariables(entity);
 										});
@@ -1302,9 +1302,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt313 && _livEnt313.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt313 && _livEnt313.hasEffect(KeepersOfTheStones2ModMobEffects.LIGHTNING_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lightning_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index9 = 0; index9 < 15; index9++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1338,8 +1338,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -1347,21 +1347,21 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lightning_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						for (int index10 = 0; index10 < 15; index10++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1386,8 +1386,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 22.5);
 										success = true;
 									}
@@ -1416,8 +1416,8 @@ public class SpecialAttackProcedure {
 								_level.addFreshEntity(entityToSpawn);
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -1425,15 +1425,15 @@ public class SpecialAttackProcedure {
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lightning_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new BallLightningProjectileEntity(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new BallLightningProjectileEntity(KeepersOfTheStones2ModEntities.BALL_LIGHTNING_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1448,14 +1448,14 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -1463,9 +1463,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt348 && _livEnt348.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt348 && _livEnt348.hasEffect(KeepersOfTheStones2ModMobEffects.SOUND_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sound_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index11 = 0; index11 < 15; index11++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1480,7 +1480,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.BASS_BOOM.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.BASS_BOOM.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1499,8 +1499,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -1514,22 +1514,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sound_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new SoundBombProjectileEntity(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new SoundBombProjectileEntity(KeepersOfTheStones2ModEntities.SOUND_BOMB_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1550,20 +1550,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sound_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index12 = 0; index12 < (int) particleAmount; index12++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.BASS_BOOM.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.BASS_BOOM.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -1579,17 +1579,17 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 											(float) 31.5);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 300, 0, false, false));
+										_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.STUN.get(), 300, 0, false, false));
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -1597,16 +1597,16 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt381 && _livEnt381.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt381 && _livEnt381.hasEffect(KeepersOfTheStones2ModMobEffects.CRYSTAL_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("crystal_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new AmethystAttackProjectileEntity(PowerModEntities.AMETHYST_ATTACK_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new AmethystAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_ATTACK_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1627,15 +1627,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("crystal_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 40) {
 						for (int index13 = 0; index13 < 10; index13++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1663,9 +1663,9 @@ public class SpecialAttackProcedure {
 										if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.AMETHYST_CLUSTER.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.AMETHYST_CLUSTER.defaultBlockState()));
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													(float) 31.5);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), (float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
 													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -1681,8 +1681,8 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 40;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -1690,8 +1690,8 @@ public class SpecialAttackProcedure {
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("crystal_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -1702,7 +1702,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1718,7 +1718,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1734,7 +1734,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1750,7 +1750,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1766,7 +1766,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1782,7 +1782,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1798,7 +1798,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1814,7 +1814,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new AmethystClusterAttackProjectileEntity(KeepersOfTheStones2ModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -1828,8 +1828,8 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -1837,9 +1837,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt431 && _livEnt431.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt431 && _livEnt431.hasEffect(KeepersOfTheStones2ModMobEffects.LAVA_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lava_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index14 = 0; index14 < 15; index14++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1874,13 +1874,13 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (entity.isInWater()) {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													(float) 13.5);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), (float) 13.5);
 										} else {
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													0);
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), 0);
 											entityiterator.setSecondsOnFire(7);
 										}
 									}
@@ -1922,22 +1922,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lava_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new LavaAttackProjectileEntity(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new LavaAttackProjectileEntity(KeepersOfTheStones2ModEntities.LAVA_ATTACK_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -1959,15 +1959,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("lava_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 50) {
 						for (int index15 = 0; index15 < 15; index15++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2014,8 +2014,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2044,8 +2044,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2074,8 +2074,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2104,8 +2104,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2134,8 +2134,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2164,8 +2164,8 @@ public class SpecialAttackProcedure {
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+									double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 50;
+									entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.power = _setval;
 										capability.syncPlayerVariables(entity);
 									});
@@ -2175,9 +2175,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt537 && _livEnt537.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt537 && _livEnt537.hasEffect(KeepersOfTheStones2ModMobEffects.RAIN_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("rain_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index16 = 0; index16 < 15; index16++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2211,8 +2211,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -2226,15 +2226,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("rain_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -2248,8 +2248,8 @@ public class SpecialAttackProcedure {
 													(entityiterator.getY() + 0 + Mth.nextDouble(RandomSource.create(), 0, 5) * particleRadius), (entityiterator.getZ() + 0 + Mth.nextDouble(RandomSource.create(), -0.1, 0.1) * particleRadius), 10, 1, 1,
 													1, 1);
 									}
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 18);
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 18);
 								}
 							}
 						}
@@ -2261,15 +2261,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("rain_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
 						if (world.getLevelData().isRaining()) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
@@ -2285,8 +2285,8 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2306,8 +2306,8 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2316,16 +2316,16 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt575 && _livEnt575.hasEffect(PowerModMobEffects.TORNADO_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+			if (entity instanceof LivingEntity _livEnt575 && _livEnt575.hasEffect(KeepersOfTheStones2ModMobEffects.TORNADO_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("tornado_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 15) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new MiniTornadoProjectileEntity(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new MiniTornadoProjectileEntity(KeepersOfTheStones2ModEntities.MINI_TORNADO_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -2346,15 +2346,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("tornado_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						for (int index18 = 0; index18 < 15; index18++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2382,7 +2382,7 @@ public class SpecialAttackProcedure {
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 3, false, false));
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WHIRLWIND.get(), 100, 0, false, false));
+											_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.WHIRLWIND.get(), 100, 0, false, false));
 									}
 								}
 							}
@@ -2395,16 +2395,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("tornado_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
+						if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
@@ -2419,8 +2419,8 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2429,9 +2429,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt595 && _livEnt595.hasEffect(PowerModMobEffects.OCEAN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt595 && _livEnt595.hasEffect(KeepersOfTheStones2ModMobEffects.OCEAN_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ocean_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index19 = 0; index19 < 15; index19++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2465,8 +2465,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -2480,15 +2480,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ocean_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						particleAmount = 25;
 						particleRadius = 2;
 						for (int index20 = 0; index20 < (int) particleAmount; index20++) {
@@ -2502,15 +2502,15 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 											(float) 22.5);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -2523,8 +2523,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("ocean_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 5) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.splash")), SoundSource.PLAYERS, 1, 1);
@@ -2539,8 +2539,8 @@ public class SpecialAttackProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 100, 18, false, false));
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 5;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -2548,9 +2548,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt628 && _livEnt628.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt628 && _livEnt628.hasEffect(KeepersOfTheStones2ModMobEffects.PLANTS_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("plants_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index21 = 0; index21 < 15; index21++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2584,8 +2584,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -2599,22 +2599,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("plants_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new PoisonousThornEntity(PowerModEntities.POISONOUS_THORN.get(), level);
+										AbstractArrow entityToSpawn = new PoisonousThornEntity(KeepersOfTheStones2ModEntities.POISONOUS_THORN.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -2636,15 +2636,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 65) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("plants_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 65) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 5, false, false));
 						if (world instanceof Level _level) {
@@ -2665,8 +2665,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 65;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 65;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -2674,9 +2674,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt657 && _livEnt657.hasEffect(PowerModMobEffects.ANIMALS_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt657 && _livEnt657.hasEffect(KeepersOfTheStones2ModMobEffects.ANIMALS_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("animals_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index24 = 0; index24 < 15; index24++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2691,7 +2691,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.INSECTS.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.INSECTS.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2710,8 +2710,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -2725,15 +2725,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("animals_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -2741,8 +2741,8 @@ public class SpecialAttackProcedure {
 								if (!(entityiterator == entity)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.POISON, 200, 3, false, true));
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 27);
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 27);
 								}
 							}
 						}
@@ -2754,15 +2754,15 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 60) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("animals_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 60) {
 						for (int index25 = 0; index25 < 3; index25++) {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
@@ -2782,8 +2782,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 60;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 60;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -2791,9 +2791,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt684 && _livEnt684.hasEffect(PowerModMobEffects.METAL_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+			if (entity instanceof LivingEntity _livEnt684 && _livEnt684.hasEffect(KeepersOfTheStones2ModMobEffects.METAL_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("metal_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.IRON_BLOCK.asItem()) {
 							{
 								Entity _shootFrom = entity;
@@ -2801,7 +2801,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new IronAttackProjectileEntity(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new IronAttackProjectileEntity(KeepersOfTheStones2ModEntities.IRON_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -2821,8 +2821,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2841,7 +2841,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new GoldAttackProjectileEntity(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new GoldAttackProjectileEntity(KeepersOfTheStones2ModEntities.GOLD_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -2861,8 +2861,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2881,7 +2881,7 @@ public class SpecialAttackProcedure {
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
 										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new CopperAttackProjectileEntity(PowerModEntities.COPPER_ATTACK_PROJECTILE.get(), level);
+											AbstractArrow entityToSpawn = new CopperAttackProjectileEntity(KeepersOfTheStones2ModEntities.COPPER_ATTACK_PROJECTILE.get(), level);
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
@@ -2901,8 +2901,8 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -2916,8 +2916,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("metal_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
 								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1);
@@ -2928,7 +2928,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -2943,7 +2943,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -2958,7 +2958,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -2973,7 +2973,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -2988,7 +2988,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -3003,7 +3003,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -3018,7 +3018,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -3033,7 +3033,7 @@ public class SpecialAttackProcedure {
 						if (world instanceof ServerLevel projectileLevel) {
 							Projectile _entityToSpawn = new Object() {
 								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
+									AbstractArrow entityToSpawn = new KnifeAttackProjectileEntity(KeepersOfTheStones2ModEntities.KNIFE_ATTACK_PROJECTILE.get(), level);
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
@@ -3046,23 +3046,23 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("metal_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
+						if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN.get(), 300, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.IRON_SKIN.get(), 300, 0, false, false));
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -3071,9 +3071,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt731 && _livEnt731.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt731 && _livEnt731.hasEffect(KeepersOfTheStones2ModMobEffects.LIGHT_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("light_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index26 = 0; index26 < 15; index26++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3088,7 +3088,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.LIGHT_SPARKLE.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.LIGHT_SPARKLE.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3107,8 +3107,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -3122,22 +3122,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("light_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new LightballProjectileEntity(PowerModEntities.LIGHTBALL_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new LightballProjectileEntity(KeepersOfTheStones2ModEntities.LIGHTBALL_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -3158,21 +3158,21 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 75) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("light_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 75) {
 						particleAmount = 50;
 						particleRadius = 3;
 						for (int index27 = 0; index27 < 60; index27++) {
 							for (int index28 = 0; index28 < (int) particleAmount; index28++) {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.LIGHT_SPARKLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.LIGHT_SPARKLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
@@ -3182,8 +3182,8 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entity == entityiterator)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 0);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 200, 1, false, false));
 								}
@@ -3197,8 +3197,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 75;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 75;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3206,9 +3206,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt767 && _livEnt767.hasEffect(PowerModMobEffects.SHADOW_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt767 && _livEnt767.hasEffect(KeepersOfTheStones2ModMobEffects.SHADOW_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("shadow_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index29 = 0; index29 < 15; index29++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3242,8 +3242,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -3257,22 +3257,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("shadow_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new ShadowSphereEntity(PowerModEntities.SHADOW_SPHERE.get(), level);
+										AbstractArrow entityToSpawn = new ShadowSphereEntity(KeepersOfTheStones2ModEntities.SHADOW_SPHERE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -3293,17 +3293,17 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 75) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("shadow_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 75) {
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.SHADOW.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+							Entity entityToSpawn = KeepersOfTheStones2ModEntities.SHADOW.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 							}
@@ -3319,8 +3319,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 75;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 75;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3328,16 +3328,16 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt791 && _livEnt791.hasEffect(PowerModMobEffects.VACUUM_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+			if (entity instanceof LivingEntity _livEnt791 && _livEnt791.hasEffect(KeepersOfTheStones2ModMobEffects.VACUUM_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("vacuum_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
-										AbstractArrow entityToSpawn = new SphereNothingProjectileEntity(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new SphereNothingProjectileEntity(KeepersOfTheStones2ModEntities.SPHERE_NOTHING_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -3359,20 +3359,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 20;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("vacuum_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						particleAmount = 30;
 						particleRadius = 5;
 						for (int index30 = 0; index30 < (int) particleAmount; index30++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.VACUUM_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.VACUUM_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -3388,37 +3388,39 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 18);
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 18);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 100) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("vacuum_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 100) {
 						if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY) == false) {
 							world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, world.getServer());
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+									entity), 1000000);
 							{
 								boolean _setval = true;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.zeroing = _setval;
 									capability.syncPlayerVariables(entity);
 								});
 							}
 						} else {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
+							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+									entity), 1000000);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 100;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 100;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3426,9 +3428,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt813 && _livEnt813.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt813 && _livEnt813.hasEffect(KeepersOfTheStones2ModMobEffects.ENERGY_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("energy_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index31 = 0; index31 < 15; index31++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3443,7 +3445,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.ENERGY_SPARK.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3462,11 +3464,11 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 10.5);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 60, 0));
+											_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.POWER_LOCK.get(), 60, 0));
 									}
 								}
 							}
@@ -3479,22 +3481,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("energy_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new EnergyChargeEntity(PowerModEntities.ENERGY_CHARGE.get(), level);
+										AbstractArrow entityToSpawn = new EnergyChargeEntity(KeepersOfTheStones2ModEntities.ENERGY_CHARGE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -3515,22 +3517,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 35;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("energy_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 4, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("keepers_of_the_stones_2:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -3538,14 +3540,14 @@ public class SpecialAttackProcedure {
 						for (int index32 = 0; index32 < 60; index32++) {
 							for (int index33 = 0; index33 < (int) particleAmount; index33++) {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.ENERGY_SPARK.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3553,9 +3555,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt843 && _livEnt843.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+			if (entity instanceof LivingEntity _livEnt843 && _livEnt843.hasEffect(KeepersOfTheStones2ModMobEffects.SUN_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sun_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 15) {
 						for (int index34 = 0; index34 < 15; index34++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3580,8 +3582,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 9);
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
+												9);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 3));
 										if (world instanceof Level _lvl855 && _lvl855.isDay()) {
@@ -3602,8 +3605,8 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -3618,8 +3621,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sun_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -3631,8 +3634,8 @@ public class SpecialAttackProcedure {
 											_player.onUpdateAbilities();
 										}
 									}
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 0);
 									if (world instanceof Level _level && !_level.isClientSide())
 										_level.explode(null, x, y, z, 5, true, Level.ExplosionInteraction.MOB);
 									if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -3647,20 +3650,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("sun_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index35 = 0; index35 < (int) particleAmount; index35++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.SUN_PARTICLES.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.SUN_PARTICLES.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -3682,8 +3685,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3691,9 +3694,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt881 && _livEnt881.hasEffect(PowerModMobEffects.MOON_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+			if (entity instanceof LivingEntity _livEnt881 && _livEnt881.hasEffect(KeepersOfTheStones2ModMobEffects.MOON_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("moon_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 15) {
 						for (int index36 = 0; index36 < 15; index36++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3718,8 +3721,9 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 9);
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
+												9);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 3));
 										if (!(world instanceof Level _lvl893 && _lvl893.isDay())) {
@@ -3740,8 +3744,8 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 15;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -3756,8 +3760,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("moon_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 40) {
 						for (int index37 = 0; index37 < 10; index37++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3783,11 +3787,11 @@ public class SpecialAttackProcedure {
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
 										if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
-											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), PowerModBlocks.MOON_BLOCK.get().defaultBlockState(), 3);
-											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(PowerModBlocks.MOON_BLOCK.get().defaultBlockState()));
-											entityiterator.hurt(
-													new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-													(float) 31.5);
+											world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), KeepersOfTheStones2ModBlocks.MOON_BLOCK.get().defaultBlockState(), 3);
+											world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(KeepersOfTheStones2ModBlocks.MOON_BLOCK.get().defaultBlockState()));
+											entityiterator.hurt(new DamageSource(
+													world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))),
+													entity), (float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
 													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -3803,8 +3807,8 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 40;
+								entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 									capability.power = _setval;
 									capability.syncPlayerVariables(entity);
 								});
@@ -3812,13 +3816,13 @@ public class SpecialAttackProcedure {
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("moon_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index38 = 0; index38 < (int) particleAmount; index38++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.MOON_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.MOON_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -3840,8 +3844,8 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3849,9 +3853,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt930 && _livEnt930.hasEffect(PowerModMobEffects.SPACE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+			if (entity instanceof LivingEntity _livEnt930 && _livEnt930.hasEffect(KeepersOfTheStones2ModMobEffects.SPACE_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("space_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 10) {
 						for (int index39 = 0; index39 < 15; index39++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3866,7 +3870,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.STAR_PARTICLE.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.STAR_PARTICLE.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3885,8 +3889,8 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
 												(float) 13.5);
 									}
 								}
@@ -3900,22 +3904,22 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 10;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("space_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 45) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
 									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), level);
+										AbstractArrow entityToSpawn = new MeteoriteProjectileEntity(KeepersOfTheStones2ModEntities.METEORITE_PROJECTILE.get(), level);
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
@@ -3937,24 +3941,24 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 45;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("space_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 80) {
 						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.BLACK_HOLE.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+							Entity entityToSpawn = KeepersOfTheStones2ModEntities.BLACK_HOLE.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
 								entityToSpawn.setDeltaMovement(0, 0, 0);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 80;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -3962,9 +3966,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt951 && _livEnt951.hasEffect(PowerModMobEffects.TIME_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+			if (entity instanceof LivingEntity _livEnt951 && _livEnt951.hasEffect(KeepersOfTheStones2ModMobEffects.TIME_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("time_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						for (int index40 = 0; index40 < 15; index40++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3979,7 +3983,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_STOP.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_STOP.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3998,10 +4002,11 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
+												0);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_STOPPED.get(), 200, 1, false, false));
+											_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.TIME_STOPPED.get(), 200, 1, false, false));
 									}
 								}
 							}
@@ -4014,20 +4019,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("time_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						particleAmount = 125;
 						particleRadius = 4;
 						for (int index41 = 0; index41 < (int) particleAmount; index41++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 2, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -4044,22 +4049,22 @@ public class SpecialAttackProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_SLOWING.get(), 200, 0, false, false));
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+										_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.TIME_SLOWING.get(), 200, 0, false, false));
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 0);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("time_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4, false, false));
 						if (world instanceof Level _level) {
@@ -4074,14 +4079,14 @@ public class SpecialAttackProcedure {
 						for (int index42 = 0; index42 < 60; index42++) {
 							for (int index43 = 0; index43 < (int) particleAmount; index43++) {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_FAST.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_FAST.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
@@ -4089,9 +4094,9 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt991 && _livEnt991.hasEffect(PowerModMobEffects.CREATION_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+			if (entity instanceof LivingEntity _livEnt991 && _livEnt991.hasEffect(KeepersOfTheStones2ModMobEffects.CREATION_MASTER.get())) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("creation_attack_1")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						for (int index44 = 0; index44 < 15; index44++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4106,7 +4111,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_STOP.get()),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_STOP.get()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4125,10 +4130,11 @@ public class SpecialAttackProcedure {
 								List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 								for (Entity entityiterator : _entfound) {
 									if (!(entityiterator == entity)) {
-										entityiterator.hurt(
-												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+										entityiterator.hurt(new DamageSource(
+												world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity),
+												0);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_STOPPED.get(), 200, 1, false, false));
+											_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.TIME_STOPPED.get(), 200, 1, false, false));
 									}
 								}
 							}
@@ -4141,20 +4147,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("creation_attack_2")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						particleAmount = 125;
 						particleRadius = 4;
 						for (int index45 = 0; index45 < (int) particleAmount; index45++) {
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 2, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
 						}
@@ -4171,22 +4177,22 @@ public class SpecialAttackProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TIME_SLOWING.get(), 200, 0, false, false));
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+										_entity.addEffect(new MobEffectInstance(KeepersOfTheStones2ModMobEffects.TIME_SLOWING.get(), 200, 0, false, false));
+									entityiterator.hurt(new DamageSource(
+											world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("keepers_of_the_stones_2:elemental_powers"))), entity), 0);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).attack).equals("creation_attack_3")) {
+					if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power >= 30) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4, false, false));
 						if (world instanceof Level _level) {
@@ -4201,14 +4207,14 @@ public class SpecialAttackProcedure {
 						for (int index46 = 0; index46 < 60; index46++) {
 							for (int index47 = 0; index47 < (int) particleAmount; index47++) {
 								if (world instanceof ServerLevel _level)
-									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_FAST.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									_level.sendParticles((SimpleParticleType) (KeepersOfTheStones2ModParticleTypes.TIME_FAST.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							double _setval = (entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).power - 30;
+							entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 								capability.power = _setval;
 								capability.syncPlayerVariables(entity);
 							});

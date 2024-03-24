@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEn
 import com.esmods.keepersofthestonestwo.client.model.ModelCrossed;
 
 public class AmethystClusterAttackProjectileRenderer extends EntityRenderer<AmethystClusterAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/amethyst_cluster_attack.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/amethyst_cluster_attack.png");
 	private final ModelCrossed model;
 
 	public AmethystClusterAttackProjectileRenderer(EntityRendererProvider.Context context) {

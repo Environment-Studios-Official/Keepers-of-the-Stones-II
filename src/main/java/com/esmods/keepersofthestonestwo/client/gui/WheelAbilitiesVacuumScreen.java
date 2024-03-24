@@ -17,7 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesVacuumButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbilitiesVacuumMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesVacuumMenu.guistate;
@@ -48,11 +48,11 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 23 && mouseY < topPos + 47)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_vacuum.tooltip_rifts_uses_45"), mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100"), mouseX, mouseY);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,9 +92,9 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(0, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(0, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
@@ -106,9 +106,9 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(1, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(1, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
@@ -120,9 +120,9 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(2, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(2, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
@@ -134,25 +134,25 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_sphere_of_nothing = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sphere_of_nothing.png"), 46, 92, e -> {
+		imagebutton_sphere_of_nothing = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_sphere_of_nothing.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(3, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(3, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_sphere_of_nothing", imagebutton_sphere_of_nothing);
 		this.addRenderableWidget(imagebutton_sphere_of_nothing);
-		imagebutton_rifts = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_rifts.png"), 46, 92, e -> {
+		imagebutton_rifts = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_rifts.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(4, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(4, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_rifts", imagebutton_rifts);
 		this.addRenderableWidget(imagebutton_rifts);
-		imagebutton_zeroing_out = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_zeroing_out.png"), 46, 92, e -> {
+		imagebutton_zeroing_out = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_zeroing_out.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(5, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesVacuumButtonMessage(5, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});

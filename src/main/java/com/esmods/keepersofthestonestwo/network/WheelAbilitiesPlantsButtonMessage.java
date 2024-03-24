@@ -21,7 +21,7 @@ import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack55Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack54Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack53Procedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class WheelAbilitiesPlantsButtonMessage {
@@ -95,6 +95,6 @@ public class WheelAbilitiesPlantsButtonMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(WheelAbilitiesPlantsButtonMessage.class, WheelAbilitiesPlantsButtonMessage::buffer, WheelAbilitiesPlantsButtonMessage::new, WheelAbilitiesPlantsButtonMessage::handler);
+		KeepersOfTheStones2Mod.addNetworkMessage(WheelAbilitiesPlantsButtonMessage.class, WheelAbilitiesPlantsButtonMessage::buffer, WheelAbilitiesPlantsButtonMessage::new, WheelAbilitiesPlantsButtonMessage::handler);
 	}
 }

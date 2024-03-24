@@ -1,0 +1,8 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/tornado_axe",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/tornado_axe",
+    "missing": "keepers_of_the_stones_2:block/tornado_axe",
+    "particle": "keepers_of_the_stones_2:item/tornado_axe"
+  }
+}

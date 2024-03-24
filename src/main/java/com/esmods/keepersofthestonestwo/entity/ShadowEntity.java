@@ -39,11 +39,11 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 public class ShadowEntity extends TamableAnimal {
 	public ShadowEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.SHADOW.get(), world);
+		this(KeepersOfTheStones2ModEntities.SHADOW.get(), world);
 	}
 
 	public ShadowEntity(EntityType<ShadowEntity> type, Level world) {
@@ -170,7 +170,7 @@ public class ShadowEntity extends TamableAnimal {
 
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-		ShadowEntity retval = PowerModEntities.SHADOW.get().create(serverWorld);
+		ShadowEntity retval = KeepersOfTheStones2ModEntities.SHADOW.get().create(serverWorld);
 		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
 		return retval;
 	}

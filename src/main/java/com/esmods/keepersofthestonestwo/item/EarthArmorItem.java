@@ -81,7 +81,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/earth_armor_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/earth_armor_layer_1.png";
 		}
 
 		@Override
@@ -105,7 +105,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/earth_armor_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/earth_armor_layer_1.png";
 		}
 
 		@Override
@@ -129,7 +129,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/earth_armor_layer_2.png";
+			return "keepers_of_the_stones_2:textures/models/armor/earth_armor_layer_2.png";
 		}
 
 		@Override
@@ -153,7 +153,7 @@ public abstract class EarthArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/earth_armor_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/earth_armor_layer_1.png";
 		}
 
 		@Override

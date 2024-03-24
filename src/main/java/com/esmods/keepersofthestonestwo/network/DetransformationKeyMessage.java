@@ -13,7 +13,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import java.util.function.Supplier;
 
 import com.esmods.keepersofthestonestwo.procedures.DetransformationKeyUseProcedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class DetransformationKeyMessage {
@@ -58,6 +58,6 @@ public class DetransformationKeyMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(DetransformationKeyMessage.class, DetransformationKeyMessage::buffer, DetransformationKeyMessage::new, DetransformationKeyMessage::handler);
+		KeepersOfTheStones2Mod.addNetworkMessage(DetransformationKeyMessage.class, DetransformationKeyMessage::buffer, DetransformationKeyMessage::new, DetransformationKeyMessage::handler);
 	}
 }

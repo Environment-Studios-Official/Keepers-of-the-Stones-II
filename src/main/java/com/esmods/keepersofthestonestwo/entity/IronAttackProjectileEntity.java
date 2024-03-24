@@ -23,14 +23,14 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.IronAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class IronAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.IRON_BLOCK);
 
 	public IronAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.IRON_ATTACK_PROJECTILE.get(), world);
 	}
 
 	public IronAttackProjectileEntity(EntityType<? extends IronAttackProjectileEntity> type, Level world) {
@@ -91,7 +91,7 @@ public class IronAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		IronAttackProjectileEntity entityarrow = new IronAttackProjectileEntity(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), entity, world);
+		IronAttackProjectileEntity entityarrow = new IronAttackProjectileEntity(KeepersOfTheStones2ModEntities.IRON_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -103,7 +103,7 @@ public class IronAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static IronAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		IronAttackProjectileEntity entityarrow = new IronAttackProjectileEntity(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), entity, entity.level());
+		IronAttackProjectileEntity entityarrow = new IronAttackProjectileEntity(KeepersOfTheStones2ModEntities.IRON_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/animals_halberd",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/animals_halberd",
+    "particle": "keepers_of_the_stones_2:item/animals_halberd"
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/lightning_falchion",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/lightning_falchion",
+    "particle": "keepers_of_the_stones_2:item/lightning_falchion"
+  }
+}

@@ -23,14 +23,14 @@ import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.MeteoriteProjectileKoghdaSnariadPopadaietVBlokProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MeteoriteProjectileKazhdyiTikPriPoliotieSnariadaProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.REINFORCED_DEEPSLATE);
 
 	public MeteoriteProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.METEORITE_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.METEORITE_PROJECTILE.get(), world);
 	}
 
 	public MeteoriteProjectileEntity(EntityType<? extends MeteoriteProjectileEntity> type, Level world) {
@@ -86,7 +86,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 	}
 
 	public static MeteoriteProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		MeteoriteProjectileEntity entityarrow = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), entity, world);
+		MeteoriteProjectileEntity entityarrow = new MeteoriteProjectileEntity(KeepersOfTheStones2ModEntities.METEORITE_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -99,7 +99,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 	}
 
 	public static MeteoriteProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		MeteoriteProjectileEntity entityarrow = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), entity, entity.level());
+		MeteoriteProjectileEntity entityarrow = new MeteoriteProjectileEntity(KeepersOfTheStones2ModEntities.METEORITE_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

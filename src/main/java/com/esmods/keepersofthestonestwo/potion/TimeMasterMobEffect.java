@@ -17,7 +17,7 @@ public class TimeMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.time_master";
+		return "effect.keepers_of_the_stones_2.time_master";
 	}
 
 	@Override

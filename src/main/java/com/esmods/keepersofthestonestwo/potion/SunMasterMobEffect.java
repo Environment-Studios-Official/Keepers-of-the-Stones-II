@@ -17,7 +17,7 @@ public class SunMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.sun_master";
+		return "effect.keepers_of_the_stones_2.sun_master";
 	}
 
 	@Override

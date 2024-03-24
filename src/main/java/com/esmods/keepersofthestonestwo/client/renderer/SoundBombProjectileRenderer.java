@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
 
 public class SoundBombProjectileRenderer extends EntityRenderer<SoundBombProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/sound_bomb.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/sound_bomb.png");
 	private final Modelether_bullet model;
 
 	public SoundBombProjectileRenderer(EntityRendererProvider.Context context) {

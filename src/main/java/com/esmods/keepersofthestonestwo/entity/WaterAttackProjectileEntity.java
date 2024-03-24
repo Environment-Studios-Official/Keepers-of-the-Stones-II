@@ -24,14 +24,14 @@ import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterAttackKoghdaSnariadPopadaietVSushchnostProcedure;
 import com.esmods.keepersofthestonestwo.procedures.WaterAttackKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.WATER);
 
 	public WaterAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.WATER_ATTACK_PROJECTILE.get(), world);
 	}
 
 	public WaterAttackProjectileEntity(EntityType<? extends WaterAttackProjectileEntity> type, Level world) {
@@ -92,7 +92,7 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), entity, world);
+		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(KeepersOfTheStones2ModEntities.WATER_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -104,7 +104,7 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	public static WaterAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), entity, entity.level());
+		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(KeepersOfTheStones2ModEntities.WATER_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

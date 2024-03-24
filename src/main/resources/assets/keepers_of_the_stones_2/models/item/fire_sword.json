@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/fire_sword",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/fire_sword",
+    "particle": "keepers_of_the_stones_2:item/fire_sword"
+  }
+}

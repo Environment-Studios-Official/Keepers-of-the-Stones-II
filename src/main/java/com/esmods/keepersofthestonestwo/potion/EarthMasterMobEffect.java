@@ -17,7 +17,7 @@ public class EarthMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.earth_master";
+		return "effect.keepers_of_the_stones_2.earth_master";
 	}
 
 	@Override

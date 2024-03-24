@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/creation_staff",
+  "textures": {
+    "3": "keepers_of_the_stones_2:block/creation_staff",
+    "particle": "keepers_of_the_stones_2:item/creation_staff"
+  }
+}

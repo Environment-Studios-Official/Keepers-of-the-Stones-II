@@ -1,0 +1,15 @@
+{
+  "type": "minecraft:smithing_transform",
+  "template": {
+    "item": "keepers_of_the_stones_2:energium_upgrade_smithing_template"
+  },
+  "base": {
+    "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+  },
+  "addition": {
+    "item": "minecraft:redstone"
+  },
+  "result": {
+    "item": "keepers_of_the_stones_2:energium_ingot"
+  }
+}

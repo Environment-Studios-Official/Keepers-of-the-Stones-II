@@ -16,7 +16,7 @@ public class IronSkinMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.iron_skin";
+		return "effect.keepers_of_the_stones_2.iron_skin";
 	}
 
 	@Override

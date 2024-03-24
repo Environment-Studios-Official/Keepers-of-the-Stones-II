@@ -17,7 +17,7 @@ public class ShadowMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.shadow_master";
+		return "effect.keepers_of_the_stones_2.shadow_master";
 	}
 
 	@Override

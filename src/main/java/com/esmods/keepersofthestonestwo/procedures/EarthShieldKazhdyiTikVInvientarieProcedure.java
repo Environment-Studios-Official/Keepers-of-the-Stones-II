@@ -6,8 +6,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.util.RandomSource;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class EarthShieldKazhdyiTikVInvientarieProcedure {
 	public static void execute(Entity entity, ItemStack itemstack) {
@@ -30,9 +30,9 @@ public class EarthShieldKazhdyiTikVInvientarieProcedure {
 				}
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false) {
+		if ((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).active == false) {
 			if (entity instanceof Player _player) {
-				ItemStack _stktoremove = new ItemStack(PowerModItems.EARTH_SHIELD.get());
+				ItemStack _stktoremove = new ItemStack(KeepersOfTheStones2ModItems.EARTH_SHIELD.get());
 				_player.getInventory().clearOrCountMatchingItems(p -> _stktoremove.getItem() == p.getItem(), 1, _player.inventoryMenu.getCraftSlots());
 			}
 		}

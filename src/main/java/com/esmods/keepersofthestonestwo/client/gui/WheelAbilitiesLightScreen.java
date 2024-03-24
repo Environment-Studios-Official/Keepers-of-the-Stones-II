@@ -17,7 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesLightButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbilitiesLightMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesLightMenu.guistate;
@@ -48,11 +48,11 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_light.tooltip_light_beam_uses_10"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_light.tooltip_light_beam_uses_10"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_light.tooltip_light_ball_uses_35"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_light.tooltip_light_ball_uses_35"), mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_light.tooltip_blinding_flash_uses_75"), mouseX, mouseY);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,9 +92,9 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(0, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(0, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
@@ -106,9 +106,9 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(1, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(1, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
@@ -120,9 +120,9 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(2, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(2, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
@@ -134,25 +134,25 @@ public class WheelAbilitiesLightScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_light_beam = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_light_beam.png"), 46, 92, e -> {
+		imagebutton_light_beam = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_light_beam.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(3, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(3, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_light_beam", imagebutton_light_beam);
 		this.addRenderableWidget(imagebutton_light_beam);
-		imagebutton_light_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_light_ball.png"), 46, 92, e -> {
+		imagebutton_light_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_light_ball.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(4, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(4, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_light_ball", imagebutton_light_ball);
 		this.addRenderableWidget(imagebutton_light_ball);
-		imagebutton_blinding_flash = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_blinding_flash.png"), 46, 92, e -> {
+		imagebutton_blinding_flash = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_blinding_flash.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(5, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesLightButtonMessage(5, x, y, z));
 				WheelAbilitiesLightButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});

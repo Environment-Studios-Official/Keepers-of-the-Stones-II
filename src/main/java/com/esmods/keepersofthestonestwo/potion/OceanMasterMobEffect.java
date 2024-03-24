@@ -17,7 +17,7 @@ public class OceanMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.ocean_master";
+		return "effect.keepers_of_the_stones_2.ocean_master";
 	}
 
 	@Override

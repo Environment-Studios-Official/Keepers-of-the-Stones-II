@@ -23,14 +23,14 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.GoldAttackProjectileKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class GoldAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.GOLD_BLOCK);
 
 	public GoldAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.GOLD_ATTACK_PROJECTILE.get(), world);
 	}
 
 	public GoldAttackProjectileEntity(EntityType<? extends GoldAttackProjectileEntity> type, Level world) {
@@ -91,7 +91,7 @@ public class GoldAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static GoldAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		GoldAttackProjectileEntity entityarrow = new GoldAttackProjectileEntity(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), entity, world);
+		GoldAttackProjectileEntity entityarrow = new GoldAttackProjectileEntity(KeepersOfTheStones2ModEntities.GOLD_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -103,7 +103,7 @@ public class GoldAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	public static GoldAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		GoldAttackProjectileEntity entityarrow = new GoldAttackProjectileEntity(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), entity, entity.level());
+		GoldAttackProjectileEntity entityarrow = new GoldAttackProjectileEntity(KeepersOfTheStones2ModEntities.GOLD_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

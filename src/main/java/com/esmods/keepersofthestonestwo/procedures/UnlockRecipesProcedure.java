@@ -13,8 +13,8 @@ import net.minecraft.resources.ResourceLocation;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModBlocks;
 
 @Mod.EventBusSubscriber
 public class UnlockRecipesProcedure {
@@ -32,7 +32,7 @@ public class UnlockRecipesProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.DEPLETED_ENERGIUM_INGOT.get())) : false) {
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KeepersOfTheStones2ModItems.DEPLETED_ENERGIUM_INGOT.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:empty_battery_recipe")});
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -40,11 +40,11 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:battery_charger_recipe")});
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get())) : false) {
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KeepersOfTheStones2ModBlocks.DEPLETED_ENERGIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:depleted_energium_block_ore_recipe")});
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGIUM_INGOT.get())) : false) {
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KeepersOfTheStones2ModItems.ENERGIUM_INGOT.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_ore_block_recipe")});
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -66,11 +66,11 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_armor_boots_recipe")});
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.ENERGIUM_BLOCK.get())) : false) {
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KeepersOfTheStones2ModBlocks.ENERGIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:energium_block_ore_recipe")});
 		}
-		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get())) : false) {
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(KeepersOfTheStones2ModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:duplicate_energium_upgrade_smithing_template")});
 		}

@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "keepers_of_the_stones_2:block/energium_block",
+    "up": "keepers_of_the_stones_2:block/energium_controller_on",
+    "north": "keepers_of_the_stones_2:block/energium_block",
+    "east": "keepers_of_the_stones_2:block/energium_block",
+    "south": "keepers_of_the_stones_2:block/energium_block",
+    "west": "keepers_of_the_stones_2:block/energium_block",
+    "particle": "keepers_of_the_stones_2:block/energium_block"
+  },
+  "render_type": "solid"
+}

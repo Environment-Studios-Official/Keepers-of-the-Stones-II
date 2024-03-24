@@ -13,7 +13,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import java.util.function.Supplier;
 
 import com.esmods.keepersofthestonestwo.procedures.SpecialAttackProcedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AbilityUsingKeyMessage {
@@ -58,6 +58,6 @@ public class AbilityUsingKeyMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(AbilityUsingKeyMessage.class, AbilityUsingKeyMessage::buffer, AbilityUsingKeyMessage::new, AbilityUsingKeyMessage::handler);
+		KeepersOfTheStones2Mod.addNetworkMessage(AbilityUsingKeyMessage.class, AbilityUsingKeyMessage::buffer, AbilityUsingKeyMessage::new, AbilityUsingKeyMessage::handler);
 	}
 }

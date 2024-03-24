@@ -21,7 +21,7 @@ import java.util.List;
 import com.google.common.collect.Iterables;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public abstract class EnergiumArmorItem extends ArmorItem {
 	public EnergiumArmorItem(ArmorItem.Type type, Item.Properties properties) {
@@ -48,7 +48,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 			@Override
 			public Ingredient getRepairIngredient() {
-				return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get()));
+				return Ingredient.of(new ItemStack(KeepersOfTheStones2ModItems.ENERGIUM_INGOT.get()));
 			}
 
 			@Override
@@ -80,7 +80,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/energium_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/energium_layer_1.png";
 		}
 
 		@Override
@@ -109,7 +109,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/energium_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/energium_layer_1.png";
 		}
 
 		@Override
@@ -138,7 +138,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/energium_layer_2.png";
+			return "keepers_of_the_stones_2:textures/models/armor/energium_layer_2.png";
 		}
 
 		@Override
@@ -167,7 +167,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 
 		@Override
 		public String getArmorTexture(ItemStack stack, Entity entity, EquipmentSlot slot, String type) {
-			return "power:textures/models/armor/energium_layer_1.png";
+			return "keepers_of_the_stones_2:textures/models/armor/energium_layer_1.png";
 		}
 
 		@Override

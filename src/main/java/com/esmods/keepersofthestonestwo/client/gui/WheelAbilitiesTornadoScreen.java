@@ -17,7 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMen
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesTornadoButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAbilitiesTornadoMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesTornadoMenu.guistate;
@@ -48,11 +48,11 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_tornado.tooltip_tornado_capture_attack_uses_30"), mouseX, mouseY);
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_tornado.tooltip_tornado_flight_uses_5"), mouseX, mouseY);
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,9 +92,9 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(0, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(0, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
@@ -106,9 +106,9 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(1, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(1, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}) {
@@ -120,9 +120,9 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(2, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(2, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
@@ -134,25 +134,25 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_mini_tornado_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mini_tornado_attack.png"), 46, 92, e -> {
+		imagebutton_mini_tornado_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_mini_tornado_attack.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(3, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(3, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_mini_tornado_attack", imagebutton_mini_tornado_attack);
 		this.addRenderableWidget(imagebutton_mini_tornado_attack);
-		imagebutton_tornado_capture = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_tornado_capture.png"), 46, 92, e -> {
+		imagebutton_tornado_capture = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_tornado_capture.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(4, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(4, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_tornado_capture", imagebutton_tornado_capture);
 		this.addRenderableWidget(imagebutton_tornado_capture);
-		imagebutton_tornado_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_tornado_flight.png"), 46, 92, e -> {
+		imagebutton_tornado_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_tornado_flight.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(5, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(5, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});

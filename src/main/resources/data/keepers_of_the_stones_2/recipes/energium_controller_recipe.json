@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "keepers_of_the_stones_2:energium_block"
+    },
+    {
+      "item": "keepers_of_the_stones_2:energium_core"
+    }
+  ],
+  "result": {
+    "item": "keepers_of_the_stones_2:energium_controller",
+    "count": 1
+  }
+}

@@ -19,15 +19,15 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class MagicFireballProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.MAGIC_FIREBALL.get());
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(KeepersOfTheStones2ModItems.MAGIC_FIREBALL.get());
 
 	public MagicFireballProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), world);
 	}
 
 	public MagicFireballProjectileEntity(EntityType<? extends MagicFireballProjectileEntity> type, Level world) {
@@ -76,7 +76,7 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 	}
 
 	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, world);
+		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -89,7 +89,7 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 	}
 
 	public static MagicFireballProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, entity.level());
+		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(KeepersOfTheStones2ModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

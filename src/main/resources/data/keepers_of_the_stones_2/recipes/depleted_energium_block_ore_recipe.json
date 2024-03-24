@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "keepers_of_the_stones_2:depleted_energium_block"
+    }
+  ],
+  "result": {
+    "item": "keepers_of_the_stones_2:depleted_energium_ingot",
+    "count": 9
+  }
+}

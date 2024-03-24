@@ -23,14 +23,14 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.GrassBlockAttackKoghdaSnariadPopadaietVBlokProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class GrassBlockAttackProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.GRASS_BLOCK);
 
 	public GrassBlockAttackProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), world);
 	}
 
 	public GrassBlockAttackProjectileEntity(EntityType<? extends GrassBlockAttackProjectileEntity> type, Level world) {
@@ -91,7 +91,7 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 	}
 
 	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, world);
+		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(KeepersOfTheStones2ModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -103,7 +103,7 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 	}
 
 	public static GrassBlockAttackProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, entity.level());
+		GrassBlockAttackProjectileEntity entityarrow = new GrassBlockAttackProjectileEntity(KeepersOfTheStones2ModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

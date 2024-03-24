@@ -13,7 +13,7 @@ import net.minecraft.server.level.ServerPlayer;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 @Mod.EventBusSubscriber
 public class ShieldInHandsProcedure {
@@ -31,11 +31,11 @@ public class ShieldInHandsProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof Player == true || entity instanceof ServerPlayer == true) && (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EARTH_SHIELD.get()) {
+		if ((entity instanceof Player == true || entity instanceof ServerPlayer == true) && (entity instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == KeepersOfTheStones2ModItems.EARTH_SHIELD.get()) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}
-		} else if ((entity instanceof Player == true || entity instanceof ServerPlayer == true) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.EARTH_SHIELD.get()) {
+		} else if ((entity instanceof Player == true || entity instanceof ServerPlayer == true) && (entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == KeepersOfTheStones2ModItems.EARTH_SHIELD.get()) {
 			if (event != null && event.isCancelable()) {
 				event.setCanceled(true);
 			}

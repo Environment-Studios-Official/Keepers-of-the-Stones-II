@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class WaterAttackProjectileRenderer extends EntityRenderer<WaterAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/water_block_attack.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/water_block_attack.png");
 	private final Modelblock_attack model;
 
 	public WaterAttackProjectileRenderer(EntityRendererProvider.Context context) {

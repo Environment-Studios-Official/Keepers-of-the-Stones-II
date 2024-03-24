@@ -13,7 +13,7 @@ import net.minecraft.network.FriendlyByteBuf;
 import java.util.function.Supplier;
 
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class AbilityWheelOpeningkeyMessage {
@@ -58,6 +58,6 @@ public class AbilityWheelOpeningkeyMessage {
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(AbilityWheelOpeningkeyMessage.class, AbilityWheelOpeningkeyMessage::buffer, AbilityWheelOpeningkeyMessage::new, AbilityWheelOpeningkeyMessage::handler);
+		KeepersOfTheStones2Mod.addNetworkMessage(AbilityWheelOpeningkeyMessage.class, AbilityWheelOpeningkeyMessage::buffer, AbilityWheelOpeningkeyMessage::new, AbilityWheelOpeningkeyMessage::handler);
 	}
 }

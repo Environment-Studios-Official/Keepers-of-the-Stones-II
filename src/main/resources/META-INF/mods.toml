@@ -3,7 +3,7 @@ loaderVersion="[47,)"
 license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
-modId="power"
+modId="keepers_of_the_stones_2"
 version="1.0.0.16"
 displayName="Keepers of the Stones II"
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
@@ -12,7 +12,7 @@ credits="Created by Environment Studios"
 authors="Environment Studios"
 description="Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character's skills and powers."
 
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
@@ -20,50 +20,50 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 
 
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="kleiders_custom_renderer"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="geckolib"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="kleidersplayerrenderer"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="pehkui"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="bettercombat"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="geckolib"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="epicfight"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
-[[dependencies.power]]
+[[dependencies.keepers_of_the_stones_2]]
     modId="allmods"
     mandatory=false
     versionRange="[0,)"

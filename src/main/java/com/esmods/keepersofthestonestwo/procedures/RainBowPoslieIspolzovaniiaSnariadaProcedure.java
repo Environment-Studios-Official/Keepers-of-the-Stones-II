@@ -7,7 +7,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 public class RainBowPoslieIspolzovaniiaSnariadaProcedure {
 	public static void execute(Entity entity) {
@@ -15,7 +15,7 @@ public class RainBowPoslieIspolzovaniiaSnariadaProcedure {
 			return;
 		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 			if (entity instanceof LivingEntity _entity) {
-				ItemStack _setstack = new ItemStack(PowerModItems.RAIN_BOW.get());
+				ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.RAIN_BOW.get());
 				_setstack.setCount(1);
 				_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 				if (_entity instanceof Player _player)
@@ -24,6 +24,6 @@ public class RainBowPoslieIspolzovaniiaSnariadaProcedure {
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.RAIN_BOW.get(), 20);
+			_player.getCooldowns().addCooldown(KeepersOfTheStones2ModItems.RAIN_BOW.get(), 20);
 	}
 }

@@ -17,7 +17,7 @@ public class LightMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.light_master";
+		return "effect.keepers_of_the_stones_2.light_master";
 	}
 
 	@Override

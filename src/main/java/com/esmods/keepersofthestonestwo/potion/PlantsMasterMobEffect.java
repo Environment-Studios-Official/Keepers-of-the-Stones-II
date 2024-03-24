@@ -17,7 +17,7 @@ public class PlantsMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.plants_master";
+		return "effect.keepers_of_the_stones_2.plants_master";
 	}
 
 	@Override

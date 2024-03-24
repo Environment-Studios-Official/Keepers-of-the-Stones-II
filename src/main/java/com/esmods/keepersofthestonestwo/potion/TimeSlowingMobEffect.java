@@ -14,7 +14,7 @@ public class TimeSlowingMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.time_slowing";
+		return "effect.keepers_of_the_stones_2.time_slowing";
 	}
 
 	@Override

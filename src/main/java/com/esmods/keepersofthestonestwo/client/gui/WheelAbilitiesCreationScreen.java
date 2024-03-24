@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMe
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesCreationButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
 
 public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelAbilitiesCreationMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesCreationMenu.guistate;
@@ -56,7 +56,7 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(new ResourceLocation("keepers_of_the_stones_2:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,33 +87,33 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 	@Override
 	public void init() {
 		super.init();
-		button_1 = Button.builder(Component.translatable("gui.power.wheel_abilities_creation.button_1"), e -> {
+		button_1 = Button.builder(Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_creation.button_1"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(0, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(0, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}).bounds(this.leftPos + 78, this.topPos + 24, 30, 20).build();
 		guistate.put("button:button_1", button_1);
 		this.addRenderableWidget(button_1);
-		button_2 = Button.builder(Component.translatable("gui.power.wheel_abilities_creation.button_2"), e -> {
+		button_2 = Button.builder(Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_creation.button_2"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(1, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(1, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 1, x, y, z);
 			}
 		}).bounds(this.leftPos + 142, this.topPos + 86, 30, 20).build();
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_creation.button_3"), e -> {
+		button_3 = Button.builder(Component.translatable("gui.keepers_of_the_stones_2.wheel_abilities_creation.button_3"), e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(2, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(2, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}).bounds(this.leftPos + 80, this.topPos + 148, 30, 20).build();
 		guistate.put("button:button_3", button_3);
 		this.addRenderableWidget(button_3);
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(3, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(3, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}) {
@@ -125,9 +125,9 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(4, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(4, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}) {
@@ -139,9 +139,9 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("keepers_of_the_stones_2:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(5, x, y, z));
+				KeepersOfTheStones2Mod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(5, x, y, z));
 				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		}) {

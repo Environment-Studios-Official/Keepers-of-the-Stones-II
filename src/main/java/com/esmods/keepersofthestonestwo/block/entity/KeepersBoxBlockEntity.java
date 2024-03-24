@@ -25,14 +25,14 @@ import javax.annotation.Nullable;
 
 import java.util.stream.IntStream;
 
-import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModBlockEntities;
 
 public class KeepersBoxBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
 	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
 
 	public KeepersBoxBlockEntity(BlockPos position, BlockState state) {
-		super(PowerModBlockEntities.KEEPERS_BOX.get(), position, state);
+		super(KeepersOfTheStones2ModBlockEntities.KEEPERS_BOX.get(), position, state);
 	}
 
 	@Override

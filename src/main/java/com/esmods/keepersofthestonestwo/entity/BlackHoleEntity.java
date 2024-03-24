@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.procedures.BlackHolePriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlackHolePriNachalnomPrizyvieSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(BlackHoleEntity.class, EntityDataSerializers.BOOLEAN);
@@ -69,7 +69,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	public String animationprocedure = "empty";
 
 	public BlackHoleEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.BLACK_HOLE.get(), world);
+		this(KeepersOfTheStones2ModEntities.BLACK_HOLE.get(), world);
 	}
 
 	public BlackHoleEntity(EntityType<BlackHoleEntity> type, Level world) {
@@ -215,7 +215,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	public static void init() {
-		SpawnPlacements.register(PowerModEntities.BLACK_HOLE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+		SpawnPlacements.register(KeepersOfTheStones2ModEntities.BLACK_HOLE.get(), SpawnPlacements.Type.ON_GROUND, Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
 				(entityType, world, reason, pos, random) -> (world.getDifficulty() != Difficulty.PEACEFUL && Monster.isDarkEnoughToSpawn(world, pos, random) && Mob.checkMobSpawnRules(entityType, world, reason, pos, random)));
 	}
 

@@ -1,0 +1,7 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/earth_hammer",
+  "textures": {
+    "0": "keepers_of_the_stones_2:block/earth_hammer",
+    "particle": "keepers_of_the_stones_2:item/earth_hammer"
+  }
+}

@@ -16,7 +16,7 @@ public class PowerLockMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.power_lock";
+		return "effect.keepers_of_the_stones_2.power_lock";
 	}
 
 	@Override

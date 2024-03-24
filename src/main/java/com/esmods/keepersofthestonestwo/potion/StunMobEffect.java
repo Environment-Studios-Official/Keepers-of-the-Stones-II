@@ -15,7 +15,7 @@ public class StunMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.stun";
+		return "effect.keepers_of_the_stones_2.stun";
 	}
 
 	@Override

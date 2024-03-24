@@ -25,14 +25,14 @@ import net.minecraft.network.protocol.Packet;
 import com.esmods.keepersofthestonestwo.procedures.BallLightningProjectileKoghdaSnariadPopadaietVSushchnostProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BallLightningProjectileKoghdaSnariadPopadaietVBlokProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BallLightningProjectileKazhdyiTikPriPoliotieSnariadaProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
 public class BallLightningProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.PURPLE_STAINED_GLASS);
 
 	public BallLightningProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), world);
+		super(KeepersOfTheStones2ModEntities.BALL_LIGHTNING_PROJECTILE.get(), world);
 	}
 
 	public BallLightningProjectileEntity(EntityType<? extends BallLightningProjectileEntity> type, Level world) {
@@ -94,7 +94,7 @@ public class BallLightningProjectileEntity extends AbstractArrow implements Item
 	}
 
 	public static BallLightningProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		BallLightningProjectileEntity entityarrow = new BallLightningProjectileEntity(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), entity, world);
+		BallLightningProjectileEntity entityarrow = new BallLightningProjectileEntity(KeepersOfTheStones2ModEntities.BALL_LIGHTNING_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
@@ -106,7 +106,7 @@ public class BallLightningProjectileEntity extends AbstractArrow implements Item
 	}
 
 	public static BallLightningProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		BallLightningProjectileEntity entityarrow = new BallLightningProjectileEntity(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), entity, entity.level());
+		BallLightningProjectileEntity entityarrow = new BallLightningProjectileEntity(KeepersOfTheStones2ModEntities.BALL_LIGHTNING_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();

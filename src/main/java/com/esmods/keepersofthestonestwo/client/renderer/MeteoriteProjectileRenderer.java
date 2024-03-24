@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.MeteoriteProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelmeteorite;
 
 public class MeteoriteProjectileRenderer extends EntityRenderer<MeteoriteProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/meteorite.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/meteorite.png");
 	private final Modelmeteorite model;
 
 	public MeteoriteProjectileRenderer(EntityRendererProvider.Context context) {

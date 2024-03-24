@@ -17,7 +17,7 @@ public class MoonMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.moon_master";
+		return "effect.keepers_of_the_stones_2.moon_master";
 	}
 
 	@Override

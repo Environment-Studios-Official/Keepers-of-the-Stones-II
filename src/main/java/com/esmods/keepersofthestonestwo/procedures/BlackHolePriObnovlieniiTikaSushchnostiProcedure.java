@@ -9,7 +9,7 @@ import net.minecraft.world.entity.Entity;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMobEffects;
 
 public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -34,7 +34,7 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 			final Vec3 _center = new Vec3(playerPosX, playerPosY, playerPosZ);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entityiterator instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PowerModMobEffects.SPACE_MASTER.get()))) {
+				if (!(entityiterator instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(KeepersOfTheStones2ModMobEffects.SPACE_MASTER.get()))) {
 					itemPosX = entityiterator.getX();
 					itemPosY = entityiterator.getY();
 					itemPosZ = entityiterator.getZ();

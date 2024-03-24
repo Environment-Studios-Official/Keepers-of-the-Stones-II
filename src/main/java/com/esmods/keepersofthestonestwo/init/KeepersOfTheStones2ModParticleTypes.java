@@ -1,0 +1,29 @@
+
+/*
+ *    MCreator note: This file will be REGENERATED on each build.
+ */
+package com.esmods.keepersofthestonestwo.init;
+
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.registries.DeferredRegister;
+
+import net.minecraft.core.particles.SimpleParticleType;
+import net.minecraft.core.particles.ParticleType;
+
+import com.esmods.keepersofthestonestwo.KeepersOfTheStones2Mod;
+
+public class KeepersOfTheStones2ModParticleTypes {
+	public static final DeferredRegister<ParticleType<?>> REGISTRY = DeferredRegister.create(ForgeRegistries.PARTICLE_TYPES, KeepersOfTheStones2Mod.MODID);
+	public static final RegistryObject<SimpleParticleType> BASS_BOOM = REGISTRY.register("bass_boom", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> INSECTS = REGISTRY.register("insects", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> LIGHT_SPARKLE = REGISTRY.register("light_sparkle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> VACUUM_PARTICLE = REGISTRY.register("vacuum_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> ENERGY_SPARK = REGISTRY.register("energy_spark", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> SUN_PARTICLES = REGISTRY.register("sun_particles", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> MOON_PARTICLE = REGISTRY.register("moon_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> STAR_PARTICLE = REGISTRY.register("star_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_SLOW = REGISTRY.register("time_slow", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_STOP = REGISTRY.register("time_stop", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TIME_FAST = REGISTRY.register("time_fast", () -> new SimpleParticleType(false));
+}

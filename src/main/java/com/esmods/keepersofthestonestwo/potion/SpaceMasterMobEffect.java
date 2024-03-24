@@ -17,7 +17,7 @@ public class SpaceMasterMobEffect extends MobEffect {
 
 	@Override
 	public String getDescriptionId() {
-		return "effect.power.space_master";
+		return "effect.keepers_of_the_stones_2.space_master";
 	}
 
 	@Override

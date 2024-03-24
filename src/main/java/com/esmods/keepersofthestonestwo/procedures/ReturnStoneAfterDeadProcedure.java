@@ -12,8 +12,8 @@ import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.network.KeepersOfTheStones2ModVariables;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModItems;
 
 @Mod.EventBusSubscriber
 public class ReturnStoneAfterDeadProcedure {
@@ -29,1004 +29,1004 @@ public class ReturnStoneAfterDeadProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
-			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("fire")) {
+		if (!(entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).active) {
+			if (!(entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).battery) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("fire")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.FIRE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("fire")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("fire")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.FIRE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("fire")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("fire")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.FIRE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("air")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("air")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.AIR_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("air")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("air")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.AIR_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("air")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("air")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.AIR_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("earth")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("earth")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.EARTH_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("earth")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("earth")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.EARTH_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("earth")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("earth")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.EARTH_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("water")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("water")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.WATER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("water")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("water")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.WATER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("water")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("water")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.WATER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ether")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ether")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ETHER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ether")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("ether")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ETHER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ether")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("ether")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ETHER_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ice")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ice")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ICE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ice")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("ice")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ICE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ice")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("ice")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ICE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lightning")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("lightning")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHTNING_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("lightning")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("lightning")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHTNING_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("lightning")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("lightning")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHTNING_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sound")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("sound")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SOUND_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("sound")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("sound")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SOUND_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sound")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("sound")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SOUND_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CRYSTAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("crystal")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("crystal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CRYSTAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("crystal")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("crystal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CRYSTAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lava")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("lava")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LAVA_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("lava")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("lava")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LAVA_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("lava")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("lava")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LAVA_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("rain")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("rain")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.RAIN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("rain")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("rain")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.RAIN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("rain")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("rain")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.RAIN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TORNADO_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("tornado")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("tornado")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TORNADO_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("tornado")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("tornado")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TORNADO_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ocean")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("ocean")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.OCEAN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ocean")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("ocean")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.OCEAN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ocean")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("ocean")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.OCEAN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("plants")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("plants")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.PLANTS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("plants")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("plants")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.PLANTS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("plants")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("plants")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.PLANTS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("animals")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("animals")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ANIMALS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("animals")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("animals")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ANIMALS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("animals")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("animals")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ANIMALS_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("metal")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("metal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.METAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("metal")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("metal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.METAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("metal")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("metal")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.METAL_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("light")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("light")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHT_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("light")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("light")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHT_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("light")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("light")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.LIGHT_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("shadow")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("shadow")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SHADOW_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("shadow")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("shadow")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SHADOW_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("shadow")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("shadow")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SHADOW_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("vacuum")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("vacuum")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.VACUUM_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("vacuum")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("vacuum")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.VACUUM_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("vacuum")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("vacuum")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.VACUUM_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("energy")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("energy")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ENERGY_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("energy")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("energy")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ENERGY_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("energy")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("energy")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.ENERGY_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sun")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("sun")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SUN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("sun")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("sun")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SUN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sun")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("sun")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SUN_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("moon")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("moon")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.MOON_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("moon")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("moon")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.MOON_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("moon")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("moon")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.MOON_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("space")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("space")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SPACE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("space")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("space")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SPACE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("space")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("space")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.SPACE_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("time")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("time")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TIME_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("time")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("time")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TIME_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("time")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("time")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.TIME_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("creation")) {
+				if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_first).equals("creation")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_first = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CREATION_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("creation")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_second).equals("creation")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_second = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CREATION_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("creation")) {
+				} else if (((entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new KeepersOfTheStones2ModVariables.PlayerVariables())).element_name_third).equals("creation")) {
 					{
 						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						entity.getCapability(KeepersOfTheStones2ModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.element_name_third = _setval;
 							capability.syncPlayerVariables(entity);
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(KeepersOfTheStones2ModItems.CREATION_STONE.get());
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

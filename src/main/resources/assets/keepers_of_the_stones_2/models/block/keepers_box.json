@@ -1,0 +1,9 @@
+{
+  "parent": "keepers_of_the_stones_2:custom/box",
+  "textures": {
+    "all": "keepers_of_the_stones_2:block/basic_box",
+    "particle": "keepers_of_the_stones_2:block/basic_box",
+    "0": "keepers_of_the_stones_2:block/basic_box"
+  },
+  "render_type": "solid"
+}

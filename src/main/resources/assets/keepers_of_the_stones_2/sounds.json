@@ -1,0 +1,38 @@
+{
+  "stone_activation": {
+    "subtitle": "subtitles.stone_activation",
+    "sounds": [
+      {
+        "name": "keepers_of_the_stones_2:stone_activation",
+        "stream": false
+      }
+    ]
+  },
+  "stone_deactivation": {
+    "subtitle": "subtitles.stone_deactivation",
+    "sounds": [
+      {
+        "name": "keepers_of_the_stones_2:stone_deactivation",
+        "stream": false
+      }
+    ]
+  },
+  "electric_spark": {
+    "subtitle": "subtitles.electric_spark",
+    "sounds": [
+      {
+        "name": "keepers_of_the_stones_2:electric_spark",
+        "stream": false
+      }
+    ]
+  },
+  "ear_ringing": {
+    "subtitle": "subtitles.ear_ringing",
+    "sounds": [
+      {
+        "name": "keepers_of_the_stones_2:ear_ringing",
+        "stream": false
+      }
+    ]
+  }
+}

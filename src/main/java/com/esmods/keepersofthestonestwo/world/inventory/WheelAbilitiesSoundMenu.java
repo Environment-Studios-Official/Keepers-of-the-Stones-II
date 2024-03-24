@@ -20,7 +20,7 @@ import java.util.function.Supplier;
 import java.util.Map;
 import java.util.HashMap;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMenus;
+import com.esmods.keepersofthestonestwo.init.KeepersOfTheStones2ModMenus;
 
 public class WheelAbilitiesSoundMenu extends AbstractContainerMenu implements Supplier<Map<Integer, Slot>> {
 	public final static HashMap<String, Object> guistate = new HashMap<>();
@@ -36,7 +36,7 @@ public class WheelAbilitiesSoundMenu extends AbstractContainerMenu implements Su
 	private BlockEntity boundBlockEntity = null;
 
 	public WheelAbilitiesSoundMenu(int id, Inventory inv, FriendlyByteBuf extraData) {
-		super(PowerModMenus.WHEEL_ABILITIES_SOUND.get(), id);
+		super(KeepersOfTheStones2ModMenus.WHEEL_ABILITIES_SOUND.get(), id);
 		this.entity = inv.player;
 		this.world = inv.player.level();
 		this.internal = new ItemStackHandler(0);

@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "minecraft:redstone"
+    },
+    "b": {
+      "item": "minecraft:glass_pane"
+    },
+    "c": {
+      "item": "keepers_of_the_stones_2:depleted_energium_ingot"
+    }
+  },
+  "result": {
+    "item": "keepers_of_the_stones_2:empty_battery",
+    "count": 1
+  }
+}

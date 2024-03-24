@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 
 public class PoisonousThornRenderer extends EntityRenderer<PoisonousThornEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/poisonous_thorn.png");
+	private static final ResourceLocation texture = new ResourceLocation("keepers_of_the_stones_2:textures/entities/poisonous_thorn.png");
 	private final Modelpoisonous_thorn model;
 
 	public PoisonousThornRenderer(EntityRendererProvider.Context context) {
