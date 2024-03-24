@@ -12673,7 +12673,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/KeepersBoxBlockEntity.java"
         ]
       },
-      "path": "~/Items/Blocks"
+      "path": "~/Items/KeepersBox"
     },
     {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka",
@@ -12706,7 +12706,7 @@
           }
         ]
       },
-      "path": "~/Items/Blocks"
+      "path": "~/Items/KeepersBox"
     },
     {
       "name": "ElementalPowers",
@@ -17302,7 +17302,7 @@
             "children": []
           },
           {
-            "name": "Blocks",
+            "name": "KeepersBox",
             "children": []
           }
         ]

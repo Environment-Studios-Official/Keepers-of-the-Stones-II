@@ -2,7 +2,7 @@
   "_fv": 57,
   "_type": "keybind",
   "definition": {
-    "triggerKey": "R",
+    "triggerKey": "V",
     "keyBindingName": "Ability using key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
