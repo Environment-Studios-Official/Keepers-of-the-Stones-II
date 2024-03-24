@@ -6,7 +6,7 @@
   "overrides": [
     {
       "predicate": {
-        "cooldown": 0.01
+        "power:mist_stone_recharge": 0.01
       },
       "model": "power:item/mist_stone_0"
     }
