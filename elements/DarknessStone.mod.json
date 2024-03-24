@@ -5,7 +5,11 @@
     "renderType": 0,
     "texture": "darkness_stone",
     "customModelName": "Normal",
-    "customProperties": {},
+    "customProperties": {
+      "recharge": {
+        "name": "StoneGetRechargeState"
+      }
+    },
     "states": [
       {
         "renderType": 0,
@@ -44,7 +48,8 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": []
+      "fixedValue": [],
+      "name": "GetRechargeInfo"
     },
     "glowCondition": {
       "fixedValue": false
@@ -54,6 +59,9 @@
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
       "name": "LavaStoneUse"
+    },
+    "onItemInInventoryTick": {
+      "name": "RechargeStoneTickEvent"
     },
     "enableRanged": false,
     "shootConstantly": false,

@@ -10,6 +10,9 @@ import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
 import net.minecraftforge.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.TimeStopParticle;
+import com.esmods.keepersofthestonestwo.client.particle.TimeSlowParticle;
+import com.esmods.keepersofthestonestwo.client.particle.TimeFastParticle;
 import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
@@ -30,5 +33,8 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.SUN_PARTICLES.get(), SunParticlesParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MOON_PARTICLE.get(), MoonParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.STAR_PARTICLE.get(), StarParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.TIME_SLOW.get(), TimeSlowParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.TIME_STOP.get(), TimeStopParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.TIME_FAST.get(), TimeFastParticle::provider);
 	}
 }

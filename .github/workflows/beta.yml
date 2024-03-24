@@ -10,8 +10,8 @@ on:
 env:                                              
   MINECRAFT_VERSION: 1.20.1                       
   JAVA_VERSION: 17      
-  VERSION: 1.0.0.14
-  RELEASE_NAME: Keepers of the Stones II 1.0.0.14 Beta
+  VERSION: 1.0.0.16
+  RELEASE_NAME: Keepers of the Stones II 1.0.0.16 Beta
 
 jobs:
   build:
@@ -67,7 +67,6 @@ jobs:
             geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             kleiders-custom-renderer-api(required){modrinth:oaG6aa1j}{curseforge:682065}#(ignore:github)
-
           modrinth-featured: false
           fail-mode: warn	
           

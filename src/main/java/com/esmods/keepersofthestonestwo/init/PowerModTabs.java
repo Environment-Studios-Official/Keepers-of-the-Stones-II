@@ -42,6 +42,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MOON_STONE.get());
 				tabData.accept(PowerModItems.SPACE_STONE.get());
 				tabData.accept(PowerModItems.TIME_STONE.get());
+				tabData.accept(PowerModItems.CREATION_STONE.get());
 			})
 
 					.build());
@@ -55,6 +56,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
 				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
@@ -95,6 +97,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MOON_BATTERY.get());
 				tabData.accept(PowerModItems.SPACE_BATTERY.get());
 				tabData.accept(PowerModItems.TIME_BATTERY.get());
+				tabData.accept(PowerModItems.CREATION_BATTERY.get());
 			})
 
 					.build());

@@ -14,6 +14,8 @@ import com.esmods.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import com.esmods.keepersofthestonestwo.potion.WaterMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TimeSlowingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
@@ -36,6 +38,7 @@ import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AirMasterMobEffect;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -70,4 +73,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> MOON_MASTER = REGISTRY.register("moon_master", () -> new MoonMasterMobEffect());
 	public static final RegistryObject<MobEffect> SPACE_MASTER = REGISTRY.register("space_master", () -> new SpaceMasterMobEffect());
 	public static final RegistryObject<MobEffect> TIME_MASTER = REGISTRY.register("time_master", () -> new TimeMasterMobEffect());
+	public static final RegistryObject<MobEffect> TIME_SLOWING = REGISTRY.register("time_slowing", () -> new TimeSlowingMobEffect());
+	public static final RegistryObject<MobEffect> TIME_STOPPED = REGISTRY.register("time_stopped", () -> new TimeStoppedMobEffect());
+	public static final RegistryObject<MobEffect> CREATION_MASTER = REGISTRY.register("creation_master", () -> new CreationMasterMobEffect());
 }

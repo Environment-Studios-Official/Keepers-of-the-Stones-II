@@ -1,0 +1,26 @@
+{
+  "_fv": 57,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Time Stopped",
+    "icon": "time_stopped.png",
+    "color": {
+      "value": -3407821,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "isBad": false,
+    "isBenefitical": true,
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "TimeStoppedPriNalozhieniiEffiekta"
+    },
+    "onActiveTick": {
+      "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta"
+    },
+    "onExpired": {
+      "name": "TimeStoppedPriIstiechieniiEffiekta"
+    }
+  }
+}

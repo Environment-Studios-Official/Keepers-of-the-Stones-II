@@ -50,6 +50,7 @@ public class ModVersionCheckerProcedure {
 		double v2 = 0;
 		double v3 = 0;
 		double v4 = 0;
+		PowerModVariables.dev_channel = 0;
 		if (PowerModVariables.dev_channel == 0) {
 			List<IModInfo> mods = ModList.get().getMods();
 			for (IModInfo mod : mods) {
@@ -118,9 +119,6 @@ public class ModVersionCheckerProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal((Component.translatable("power.modinfo.outdated_mod").getString() + "" + Math.round(jmain.get("ver1").getAsDouble()) + "." + Math.round(jmain.get("ver2").getAsDouble()) + "."
 									+ Math.round(jmain.get("ver3").getAsDouble()) + "." + Math.round(jmain.get("ver4").getAsDouble()) + ")")), false);
-					} else {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.actual_version").getString())), false);
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
@@ -184,9 +182,6 @@ public class ModVersionCheckerProcedure {
 						if (entity instanceof Player _player && !_player.level().isClientSide())
 							_player.displayClientMessage(Component.literal((Component.translatable("power.modinfo.outdated_mod").getString() + "" + Math.round(jmain.get("ver1").getAsDouble()) + "." + Math.round(jmain.get("ver2").getAsDouble()) + "."
 									+ Math.round(jmain.get("ver3").getAsDouble()) + ")")), false);
-					} else {
-						if (entity instanceof Player _player && !_player.level().isClientSide())
-							_player.displayClientMessage(Component.literal(("" + Component.translatable("power.modinfo.actual_version").getString())), false);
 					}
 				} catch (IOException e) {
 					e.printStackTrace();
