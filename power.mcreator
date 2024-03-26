@@ -15629,8 +15629,201 @@
       "registry_name": "keepers_box_gui_part_1",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart1ButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart1Screen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart1Menu.java"
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KeepersBoxGUIPart2",
+      "type": "gui",
+      "sortid": 733,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keepers_box_gui_part_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart2Screen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart2Menu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart2ButtonMessage.java"
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KeepersBoxGUIPart3",
+      "type": "gui",
+      "sortid": 734,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keepers_box_gui_part_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart3ButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart3Screen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart3Menu.java"
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KeepersBoxGUIPart4",
+      "type": "gui",
+      "sortid": 735,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keepers_box_gui_part_4",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart4ButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart4Screen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart4Menu.java"
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KBtoPart2",
+      "type": "procedure",
+      "sortid": 736,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k_bto_part_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/KBtoPart2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KBtoPart1",
+      "type": "procedure",
+      "sortid": 737,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k_bto_part_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/KBtoPart1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KBtoPart3",
+      "type": "procedure",
+      "sortid": 738,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k_bto_part_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/KBtoPart3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox"
+    },
+    {
+      "name": "KBtoPart4",
+      "type": "procedure",
+      "sortid": 739,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "k_bto_part_4",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/KBtoPart4Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
         ]
       },
       "path": "~/Items/KeepersBox"

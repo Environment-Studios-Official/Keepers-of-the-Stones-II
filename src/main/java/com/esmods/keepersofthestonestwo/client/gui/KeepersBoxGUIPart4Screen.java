@@ -13,19 +13,19 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
-import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart1ButtonMessage;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart4ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBoxGUIPart1Menu> {
-	private final static HashMap<String, Object> guistate = KeepersBoxGUIPart1Menu.guistate;
+public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBoxGUIPart4Menu> {
+	private final static HashMap<String, Object> guistate = KeepersBoxGUIPart4Menu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
-	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_keepers_box_button_up_locked;
+	ImageButton imagebutton_keepers_box_button_up;
+	ImageButton imagebutton_keepers_box_button_down_locked;
 
-	public KeepersBoxGUIPart1Screen(KeepersBoxGUIPart1Menu container, Inventory inventory, Component text) {
+	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -49,7 +49,7 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/keepers_box_gui_part_1.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
+		guiGraphics.blit(new ResourceLocation("power:textures/screens/keepers_box_gui_part_4.png"), this.leftPos + 5, this.topPos + -34, 0, 0, 240, 260, 240, 260);
 
 		RenderSystem.disableBlend();
 	}
@@ -80,17 +80,17 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_keepers_box_button_down = new ImageButton(this.leftPos + 209, this.topPos + 103, 18, 18, 0, 0, 18, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_button_down.png"), 18, 36, e -> {
+		imagebutton_keepers_box_button_up = new ImageButton(this.leftPos + 209, this.topPos + 70, 18, 18, 0, 0, 18, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_button_up.png"), 18, 36, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(0, x, y, z));
-				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 0, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(0, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_button_down", imagebutton_keepers_box_button_down);
-		this.addRenderableWidget(imagebutton_keepers_box_button_down);
-		imagebutton_keepers_box_button_up_locked = new ImageButton(this.leftPos + 209, this.topPos + 70, 18, 18, 0, 0, 18, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_button_up_locked.png"), 18, 36, e -> {
+		guistate.put("button:imagebutton_keepers_box_button_up", imagebutton_keepers_box_button_up);
+		this.addRenderableWidget(imagebutton_keepers_box_button_up);
+		imagebutton_keepers_box_button_down_locked = new ImageButton(this.leftPos + 209, this.topPos + 103, 18, 18, 0, 0, 18, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_button_down_locked.png"), 18, 36, e -> {
 		});
-		guistate.put("button:imagebutton_keepers_box_button_up_locked", imagebutton_keepers_box_button_up_locked);
-		this.addRenderableWidget(imagebutton_keepers_box_button_up_locked);
+		guistate.put("button:imagebutton_keepers_box_button_down_locked", imagebutton_keepers_box_button_down_locked);
+		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
 	}
 }
