@@ -36,6 +36,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
 import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -69,6 +70,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SPACE.get(), WheelAbilitiesSpaceScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TIME.get(), WheelAbilitiesTimeScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_CREATION.get(), WheelAbilitiesCreationScreen::new);
+			MenuScreens.register(PowerModMenus.KEEPERS_BOX_GUI_PART_1.get(), KeepersBoxGUIPart1Screen::new);
 		});
 	}
 }

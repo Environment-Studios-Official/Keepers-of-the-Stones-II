@@ -15619,6 +15619,21 @@
         ]
       },
       "path": "~/Elements/Creation"
+    },
+    {
+      "name": "KeepersBoxGUIPart1",
+      "type": "gui",
+      "sortid": 732,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keepers_box_gui_part_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart1Screen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart1Menu.java"
+        ]
+      },
+      "path": "~/Items/KeepersBox"
     }
   ],
   "variable_elements": [
@@ -16036,6 +16051,7 @@
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
+      "gui.power.keepers_box_gui_part_1.button_empty": "",
       "item.power.lightning_battery": "Батарея",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
@@ -16334,6 +16350,7 @@
       "item.power.lightning_stone": "Камень молнии",
       "item.power.blue_flame_stone": "Камень синего пламени",
       "item.power.mushrooms_stone": "Камень грибов",
+      "gui.power.keepers_box_gui_part_1.button_empty1": "",
       "item.power.energy_armor_leggings": "Поножи мастера энергии",
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
@@ -16443,6 +16460,7 @@
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
+      "gui.power.keepers_box_gui_part_1.button_empty": "",
       "item.power.lightning_battery": "Battery",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
@@ -16742,6 +16760,7 @@
       "item.power.water_armor_chestplate": "Water Chestplate",
       "item.power.blue_flame_stone": "Blue Flame Stone",
       "item.power.mushrooms_stone": "Mushrooms Stone",
+      "gui.power.keepers_box_gui_part_1.button_empty1": "",
       "item.power.energy_armor_leggings": "Energy Leggings",
       "item.power.air_armor_leggings": "Air Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Streamlining, uses 5",

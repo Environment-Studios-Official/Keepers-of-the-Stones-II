@@ -36,6 +36,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMen
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -67,4 +68,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesSpaceMenu>> WHEEL_ABILITIES_SPACE = REGISTRY.register("wheel_abilities_space", () -> IForgeMenuType.create(WheelAbilitiesSpaceMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesTimeMenu>> WHEEL_ABILITIES_TIME = REGISTRY.register("wheel_abilities_time", () -> IForgeMenuType.create(WheelAbilitiesTimeMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesCreationMenu>> WHEEL_ABILITIES_CREATION = REGISTRY.register("wheel_abilities_creation", () -> IForgeMenuType.create(WheelAbilitiesCreationMenu::new));
+	public static final RegistryObject<MenuType<KeepersBoxGUIPart1Menu>> KEEPERS_BOX_GUI_PART_1 = REGISTRY.register("keepers_box_gui_part_1", () -> IForgeMenuType.create(KeepersBoxGUIPart1Menu::new));
 }
