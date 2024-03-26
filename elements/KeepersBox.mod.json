@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "box:default",
+    "customModelName": "keepers_box:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
