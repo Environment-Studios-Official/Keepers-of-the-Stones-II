@@ -5,5 +5,5 @@
     "particle": "power:block/keepers_box",
     "4": "power:block/keepers_box"
   },
-  "render_type": "solid"
+  "render_type": "cutout_mipped"
 }
