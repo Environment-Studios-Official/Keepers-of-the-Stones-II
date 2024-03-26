@@ -1,8 +1,8 @@
 {
   "parent": "power:custom/box",
   "textures": {
-    "all": "power:block/basic_box",
-    "particle": "power:block/basic_box",
+    "all": "power:block/keepers_box",
+    "particle": "power:block/keepers_box",
     "0": "power:block/basic_box"
   },
   "render_type": "solid"
