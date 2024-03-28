@@ -41,6 +41,214 @@
           "x": 289,
           "y": 96
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "FireElementGet"
+          },
+          "x": 129,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_fire",
+          "text": {
+            "fixedValue": "Fire"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 125,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot1",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "LavaElementGet"
+          },
+          "x": 175,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lava",
+          "text": {
+            "fixedValue": "Lava"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 172,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot2",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "EnergyElementGet"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_energy",
+          "text": {
+            "fixedValue": "Energy"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot3",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "RainElementGet"
+          },
+          "x": 218,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_rain",
+          "text": {
+            "fixedValue": "Rain"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot4",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "LightningElementGet"
+          },
+          "x": 242,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lightning",
+          "text": {
+            "fixedValue": "Lightning"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 239,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot5",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "WaterElementGet"
+          },
+          "x": 129,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_water",
+          "text": {
+            "fixedValue": "Water"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 124,
+          "y": 127
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot6",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "OceanElementGet"
+          },
+          "x": 151,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ocean",
+          "text": {
+            "fixedValue": "Ocean"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot7",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "IceElementGet"
+          },
+          "x": 175,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ice",
+          "text": {
+            "fixedValue": "Ice"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 172,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

@@ -294,9 +294,9 @@
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
     },
     "isBonemealable": false,
-    "hasInventory": true,
-    "guiBoundTo": "KeepersBoxGUIPart1",
-    "openGUIOnRightClick": true,
+    "hasInventory": false,
+    "guiBoundTo": "<NONE>",
+    "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
@@ -311,6 +311,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "KeepersBoxPriShchielchkiePKMPoBloku"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

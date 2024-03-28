@@ -91,6 +91,7 @@ public class PowerModVariables {
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
+			clone.unlock_keepers_box = original.unlock_keepers_box;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -423,6 +424,7 @@ public class PowerModVariables {
 		public String element_name_first = "0";
 		public String element_name_second = "0";
 		public String element_name_third = "0";
+		public boolean unlock_keepers_box = true;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -443,6 +445,7 @@ public class PowerModVariables {
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
 			nbt.putString("element_name_third", element_name_third);
+			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
 			return nbt;
 		}
 
@@ -460,6 +463,7 @@ public class PowerModVariables {
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
 			element_name_third = nbt.getString("element_name_third");
+			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
 		}
 	}
 
@@ -505,6 +509,7 @@ public class PowerModVariables {
 					variables.element_name_first = message.data.element_name_first;
 					variables.element_name_second = message.data.element_name_second;
 					variables.element_name_third = message.data.element_name_third;
+					variables.unlock_keepers_box = message.data.unlock_keepers_box;
 				}
 			});
 			context.setPacketHandled(true);
