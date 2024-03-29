@@ -15,8 +15,13 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
+import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -70,6 +75,26 @@ public class KeepersBoxGUIPart2ButtonMessage {
 		if (buttonID == 1) {
 
 			KBtoPart3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			CreationElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			TimeElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 4) {
+
+			SoundElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 5) {
+
+			AirElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 6) {
+
+			TornadoElementGetProcedure.execute(world, entity);
 		}
 	}
 

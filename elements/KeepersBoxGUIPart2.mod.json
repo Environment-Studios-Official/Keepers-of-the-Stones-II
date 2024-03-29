@@ -44,6 +44,136 @@
           "x": 289,
           "y": 129
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "CreationElementGet"
+          },
+          "x": 129,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_creation",
+          "text": {
+            "fixedValue": "Creation"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 124,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot1",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "TimeElementGet"
+          },
+          "x": 175,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_time",
+          "text": {
+            "fixedValue": "Time"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot2",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "SoundElementGet"
+          },
+          "x": 218,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sound",
+          "text": {
+            "fixedValue": "Sound"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot3",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "AirElementGet"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_air",
+          "text": {
+            "fixedValue": "Air"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot4",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "TornadoElementGet"
+          },
+          "x": 264,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_tornado",
+          "text": {
+            "fixedValue": "Tornado"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 127
+        }
       }
     ],
     "gridSettings": {

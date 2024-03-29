@@ -15,6 +15,12 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
+import com.esmods.keepersofthestonestwo.procedures.VacuumElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SunElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpaceElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ShadowElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LightElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -70,6 +76,30 @@ public class KeepersBoxGUIPart3ButtonMessage {
 		if (buttonID == 1) {
 
 			KBtoPart4Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			LightElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			ShadowElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 4) {
+
+			SunElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 5) {
+
+			SpaceElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 6) {
+
+			MoonElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 7) {
+
+			VacuumElementGetProcedure.execute(world, entity);
 		}
 	}
 

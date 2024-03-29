@@ -15,7 +15,13 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
+import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EarthElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CrystalElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AnimalsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -65,6 +71,30 @@ public class KeepersBoxGUIPart4ButtonMessage {
 		if (buttonID == 0) {
 
 			KBtoPart3Procedure.execute(world, x, y, z, entity);
+		}
+		if (buttonID == 2) {
+
+			AnimalsElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 3) {
+
+			CrystalElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 4) {
+
+			EtherElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 5) {
+
+			MetalElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 6) {
+
+			EarthElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 7) {
+
+			PlantsElementGetProcedure.execute(world, entity);
 		}
 	}
 

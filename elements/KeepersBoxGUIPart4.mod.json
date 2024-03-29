@@ -41,6 +41,162 @@
           "x": 289,
           "y": 129
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "AnimalsElementGet"
+          },
+          "x": 129,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_animals",
+          "text": {
+            "fixedValue": "Animals"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 124,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot1",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "CrystalElementGet"
+          },
+          "x": 175,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_crystal",
+          "text": {
+            "fixedValue": "Crystal"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot2",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "EtherElementGet"
+          },
+          "x": 129,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_ether",
+          "text": {
+            "fixedValue": "Ether"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 122,
+          "y": 129
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot3",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "MetalElementGet"
+          },
+          "x": 218,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_metal",
+          "text": {
+            "fixedValue": "Metal"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 213,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot4",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "EarthElementGet"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_earth",
+          "text": {
+            "fixedValue": "Earth"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 237,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot5",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "PlantsElementGet"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_plants",
+          "text": {
+            "fixedValue": "Plants"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {

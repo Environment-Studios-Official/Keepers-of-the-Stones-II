@@ -44,6 +44,162 @@
           "x": 289,
           "y": 129
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "LightElementGet"
+          },
+          "x": 175,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_light",
+          "text": {
+            "fixedValue": "Light"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot1",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "ShadowElementGet"
+          },
+          "x": 218,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shadow",
+          "text": {
+            "fixedValue": "Shadow"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot2",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "SunElementGet"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun",
+          "text": {
+            "fixedValue": "Sun"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot3",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "SpaceElementGet"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_space",
+          "text": {
+            "fixedValue": "Space"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot4",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "MoonElementGet"
+          },
+          "x": 242,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon",
+          "text": {
+            "fixedValue": "Moon"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot5",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "VacuumElementGet"
+          },
+          "x": 264,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_vacuum",
+          "text": {
+            "fixedValue": "Vacuum"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {
