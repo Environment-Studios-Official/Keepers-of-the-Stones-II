@@ -1,0 +1,213 @@
+{
+  "_fv": 57,
+  "_type": "gui",
+  "definition": {
+    "type": 0,
+    "width": 267,
+    "height": 188,
+    "inventoryOffsetX": 0,
+    "inventoryOffsetY": 0,
+    "renderBgLayer": false,
+    "doesPauseGame": false,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "keepers_box_gui_part_3.png",
+          "use1Xscale": false,
+          "x": 85,
+          "y": -8
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_up",
+          "image": "keepers_box_button_up.png",
+          "hoveredImage": "keepers_box_button_up_active.png",
+          "onClick": {
+            "name": "KBtoPart2"
+          },
+          "x": 289,
+          "y": 96
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_button_down",
+          "image": "keepers_box_button_down.png",
+          "hoveredImage": "keepers_box_button_down_active.png",
+          "onClick": {
+            "name": "KBtoPart4"
+          },
+          "x": 289,
+          "y": 129
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "LightElementGet"
+          },
+          "x": 175,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_light",
+          "text": {
+            "fixedValue": "Light"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot1",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "ShadowElementGet"
+          },
+          "x": 218,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_shadow",
+          "text": {
+            "fixedValue": "Shadow"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot2",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "SunElementGet"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sun",
+          "text": {
+            "fixedValue": "Sun"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 90
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot3",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "SpaceElementGet"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_space",
+          "text": {
+            "fixedValue": "Space"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot4",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "MoonElementGet"
+          },
+          "x": 242,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_moon",
+          "text": {
+            "fixedValue": "Moon"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_keepers_box_slot5",
+          "image": "keepers_box_slot.png",
+          "hoveredImage": "keepers_box_slot.png",
+          "onClick": {
+            "name": "VacuumElementGet"
+          },
+          "x": 264,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_vacuum",
+          "text": {
+            "fixedValue": "Vacuum"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 128
+        }
+      }
+    ],
+    "gridSettings": {
+      "sx": 18,
+      "sy": 18,
+      "ox": 11,
+      "oy": 15,
+      "snapOnGrid": false
+    }
+  }
+}

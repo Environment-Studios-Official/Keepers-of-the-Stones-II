@@ -33,8 +33,13 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEtherScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEnergyScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart2Screen;
+import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
 import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -67,6 +72,11 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MOON.get(), WheelAbilitiesMoonScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SPACE.get(), WheelAbilitiesSpaceScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TIME.get(), WheelAbilitiesTimeScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_CREATION.get(), WheelAbilitiesCreationScreen::new);
+			MenuScreens.register(PowerModMenus.KEEPERS_BOX_GUI_PART_1.get(), KeepersBoxGUIPart1Screen::new);
+			MenuScreens.register(PowerModMenus.KEEPERS_BOX_GUI_PART_2.get(), KeepersBoxGUIPart2Screen::new);
+			MenuScreens.register(PowerModMenus.KEEPERS_BOX_GUI_PART_3.get(), KeepersBoxGUIPart3Screen::new);
+			MenuScreens.register(PowerModMenus.KEEPERS_BOX_GUI_PART_4.get(), KeepersBoxGUIPart4Screen::new);
 		});
 	}
 }

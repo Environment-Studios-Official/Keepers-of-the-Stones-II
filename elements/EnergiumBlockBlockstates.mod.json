@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "blockstates",
+  "definition": {
+    "block": "EnergiumController",
+    "blockstateList": [
+      {
+        "texture": "energium_block",
+        "textureTop": "energium_controller_on",
+        "textureLeft": "energium_block",
+        "textureFront": "energium_block",
+        "textureRight": "energium_block",
+        "textureBack": "energium_block",
+        "particleTexture": "",
+        "renderType": 0,
+        "customModelName": "Normal",
+        "luminance": 0,
+        "boundingBoxes": []
+      }
+    ]
+  }
+}

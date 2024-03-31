@@ -6,6 +6,7 @@
   "overrides": [
     {
       "predicate": {
+        "power:destruction_stone_recharge": 0.01,
         "cooldown": 0.01
       },
       "model": "power:item/destruction_stone_0"

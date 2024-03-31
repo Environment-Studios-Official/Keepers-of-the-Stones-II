@@ -33,8 +33,13 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -65,4 +70,9 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesMoonMenu>> WHEEL_ABILITIES_MOON = REGISTRY.register("wheel_abilities_moon", () -> IForgeMenuType.create(WheelAbilitiesMoonMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesSpaceMenu>> WHEEL_ABILITIES_SPACE = REGISTRY.register("wheel_abilities_space", () -> IForgeMenuType.create(WheelAbilitiesSpaceMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesTimeMenu>> WHEEL_ABILITIES_TIME = REGISTRY.register("wheel_abilities_time", () -> IForgeMenuType.create(WheelAbilitiesTimeMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesCreationMenu>> WHEEL_ABILITIES_CREATION = REGISTRY.register("wheel_abilities_creation", () -> IForgeMenuType.create(WheelAbilitiesCreationMenu::new));
+	public static final RegistryObject<MenuType<KeepersBoxGUIPart1Menu>> KEEPERS_BOX_GUI_PART_1 = REGISTRY.register("keepers_box_gui_part_1", () -> IForgeMenuType.create(KeepersBoxGUIPart1Menu::new));
+	public static final RegistryObject<MenuType<KeepersBoxGUIPart2Menu>> KEEPERS_BOX_GUI_PART_2 = REGISTRY.register("keepers_box_gui_part_2", () -> IForgeMenuType.create(KeepersBoxGUIPart2Menu::new));
+	public static final RegistryObject<MenuType<KeepersBoxGUIPart3Menu>> KEEPERS_BOX_GUI_PART_3 = REGISTRY.register("keepers_box_gui_part_3", () -> IForgeMenuType.create(KeepersBoxGUIPart3Menu::new));
+	public static final RegistryObject<MenuType<KeepersBoxGUIPart4Menu>> KEEPERS_BOX_GUI_PART_4 = REGISTRY.register("keepers_box_gui_part_4", () -> IForgeMenuType.create(KeepersBoxGUIPart4Menu::new));
 }

@@ -2,14 +2,14 @@
   "_fv": 57,
   "_type": "block",
   "definition": {
-    "texture": "basic_box",
+    "texture": "keepers_box",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "box:default",
+    "customModelName": "keepers_box:default",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -20,7 +20,7 @@
     "isItemTinted": false,
     "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT_MIPPED",
     "disableOffset": false,
     "boundingBoxes": [
       {
@@ -294,7 +294,7 @@
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
     },
     "isBonemealable": false,
-    "hasInventory": true,
+    "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
@@ -311,6 +311,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "KeepersBoxPriShchielchkiePKMPoBloku"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [],

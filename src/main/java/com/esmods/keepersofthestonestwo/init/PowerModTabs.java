@@ -47,14 +47,18 @@ public class PowerModTabs {
 					.build());
 	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModBlocks.AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModItems.RAW_AMPLIFIER.get());
+				tabData.accept(PowerModItems.AMPLIFIER_DROP.get());
+				tabData.accept(PowerModItems.STAR_POTION_25.get());
+				tabData.accept(PowerModItems.STAR_POTION_50.get());
 				tabData.accept(PowerModItems.STAR_POTION_100.get());
-				tabData.accept(PowerModItems.STAR_POTION_200.get());
-				tabData.accept(PowerModItems.STAR_POTION_500.get());
 				tabData.accept(PowerModItems.STAR_POTION_INFINITY.get());
 				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
 				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
