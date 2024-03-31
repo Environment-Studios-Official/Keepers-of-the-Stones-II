@@ -16554,6 +16554,48 @@
         ]
       },
       "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion25Recipe",
+      "type": "recipe",
+      "sortid": 772,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_25_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion25RecipeBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion50Recipe",
+      "type": "recipe",
+      "sortid": 773,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_50_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion50RecipeBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
+    },
+    {
+      "name": "StarPotion100Recipe",
+      "type": "recipe",
+      "sortid": 774,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_potion_100_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion100RecipeBrewingRecipe.java"
+        ]
+      },
+      "path": "~/Items/StarPotions"
     }
   ],
   "variable_elements": [

@@ -1,0 +1,25 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Brewing",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "brewingInputStack": {
+      "value": "CUSTOM:StarPotion25"
+    },
+    "brewingIngredientStack": {
+      "value": "CUSTOM:AmplifierDrop"
+    },
+    "brewingReturnStack": {
+      "value": "CUSTOM:StarPotion50"
+    },
+    "name": "star_potion_50_recipe",
+    "namespace": "mod"
+  }
+}
