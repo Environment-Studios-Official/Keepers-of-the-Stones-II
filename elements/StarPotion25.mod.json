@@ -28,7 +28,7 @@
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "StarPotion500DopolnitielnaiaInformatsiia"
+      "name": "StarPotion25DopolnitielnaiaInformatsiia"
     },
     "glowCondition": {
       "fixedValue": true
@@ -37,7 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onFinishUsingItem": {
-      "name": "StarPotion500PriShchielchkiePKM"
+      "name": "StarPotion25PriZaviershieniiIspolzovaniia"
     },
     "enableRanged": false,
     "shootConstantly": false,

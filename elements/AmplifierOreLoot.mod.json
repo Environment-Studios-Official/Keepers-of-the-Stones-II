@@ -14,7 +14,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:RawDepletedEnergium"
+              "value": "CUSTOM:RawAmplifier"
             },
             "weight": 1,
             "minCount": 1,
@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "name": "blocks/depleted_energium_ore",
+    "name": "blocks/amplifier_ore",
     "namespace": "mod"
   }
 }

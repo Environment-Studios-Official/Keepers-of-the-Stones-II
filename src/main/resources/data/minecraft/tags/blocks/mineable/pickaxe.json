@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:amplifier_ore",
     "power:keepers_box",
     "power:depleted_energium_ore",
     "power:depleted_energium_block",

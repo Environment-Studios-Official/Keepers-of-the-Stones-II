@@ -48,7 +48,7 @@ public class PowerModKeyMappings {
 			isDownOld = isDown;
 		}
 	};
-	public static final KeyMapping ABILITY_USING_KEY = new KeyMapping("key.power.ability_using_key", GLFW.GLFW_KEY_V, "key.categories.power2") {
+	public static final KeyMapping ABILITY_USING_KEY = new KeyMapping("key.power.ability_using_key", GLFW.GLFW_KEY_R, "key.categories.power2") {
 		private boolean isDownOld = false;
 
 		@Override

@@ -3,19 +3,19 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "star_potion",
+    "texture": "raw_amplifier",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "Star Potion",
-    "rarity": "RARE",
+    "name": "Raw Amplifier",
+    "rarity": "COMMON",
     "creativeTab": {
       "value": "CUSTOM:Items"
     },
-    "stackSize": 1,
+    "stackSize": 64,
     "enchantability": 0,
-    "useDuration": 32,
-    "toolType": 0.0,
+    "useDuration": 0,
+    "toolType": 1.0,
     "damageCount": 0,
     "recipeRemainder": {
       "value": ""
@@ -27,31 +27,27 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
-      "fixedValue": [],
-      "name": "StarPotion200DopolnitielnaiaInformatsiia"
+      "fixedValue": []
     },
     "glowCondition": {
-      "fixedValue": true
+      "fixedValue": false
     },
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "onFinishUsingItem": {
-      "name": "StarPotion200PriShchielchkiePKM"
-    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },
-    "isFood": true,
-    "nutritionalValue": 0,
-    "saturation": 0.0,
+    "isFood": false,
+    "nutritionalValue": 4,
+    "saturation": 0.3,
     "eatResultItem": {
-      "value": "Items.GLASS_BOTTLE"
+      "value": ""
     },
     "isMeat": false,
-    "isAlwaysEdible": true,
-    "animation": "drink"
+    "isAlwaysEdible": false,
+    "animation": "none"
   }
 }

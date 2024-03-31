@@ -20,11 +20,11 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.StarPotion500PriShchielchkiePKMProcedure;
-import com.esmods.keepersofthestonestwo.procedures.StarPotion500DopolnitielnaiaInformatsiiaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StarPotion50PriZaviershieniiIspolzovaniiaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StarPotion50DopolnitielnaiaInformatsiiaProcedure;
 
-public class StarPotion500Item extends Item {
-	public StarPotion500Item() {
+public class StarPotion50Item extends Item {
+	public StarPotion50Item() {
 		super(new Item.Properties().stacksTo(1).rarity(Rarity.RARE).food((new FoodProperties.Builder()).nutrition(0).saturationMod(0f).alwaysEat().build()));
 	}
 
@@ -51,7 +51,7 @@ public class StarPotion500Item extends Item {
 		double x = entity != null ? entity.getX() : 0.0;
 		double y = entity != null ? entity.getY() : 0.0;
 		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(StarPotion500DopolnitielnaiaInformatsiiaProcedure.execute()));
+		list.add(Component.literal(StarPotion50DopolnitielnaiaInformatsiiaProcedure.execute()));
 	}
 
 	@Override
@@ -61,7 +61,7 @@ public class StarPotion500Item extends Item {
 		double x = entity.getX();
 		double y = entity.getY();
 		double z = entity.getZ();
-		StarPotion500PriShchielchkiePKMProcedure.execute(entity);
+		StarPotion50PriZaviershieniiIspolzovaniiaProcedure.execute(entity);
 		if (itemstack.isEmpty()) {
 			return retval;
 		} else {
