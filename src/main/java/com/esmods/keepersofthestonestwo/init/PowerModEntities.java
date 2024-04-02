@@ -42,6 +42,7 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.AmplifierDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -120,6 +121,9 @@ public class PowerModEntities {
 			EntityType.Builder.<EnergyChargeEntity>of(EnergyChargeEntity::new, MobCategory.MISC).setCustomClientFactory(EnergyChargeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<MeteoriteProjectileEntity>> METEORITE_PROJECTILE = register("projectile_meteorite_projectile", EntityType.Builder.<MeteoriteProjectileEntity>of(MeteoriteProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(MeteoriteProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AmplifierDropProjectileEntity>> AMPLIFIER_DROP_PROJECTILE = register("projectile_amplifier_drop_projectile",
+			EntityType.Builder.<AmplifierDropProjectileEntity>of(AmplifierDropProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AmplifierDropProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
