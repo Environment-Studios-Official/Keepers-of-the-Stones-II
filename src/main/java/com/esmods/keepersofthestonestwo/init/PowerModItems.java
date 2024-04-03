@@ -146,9 +146,14 @@ import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
 import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CrystalArmorItem;
+import com.esmods.keepersofthestonestwo.item.CreationSwordItem;
 import com.esmods.keepersofthestonestwo.item.CreationStoneItem;
 import com.esmods.keepersofthestonestwo.item.CreationStaffItem;
+import com.esmods.keepersofthestonestwo.item.CreationShovelItem;
+import com.esmods.keepersofthestonestwo.item.CreationPickaxeItem;
+import com.esmods.keepersofthestonestwo.item.CreationHoeItem;
 import com.esmods.keepersofthestonestwo.item.CreationBatteryItem;
+import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
@@ -398,6 +403,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CREATION_ARMOR_LEGGINGS = REGISTRY.register("creation_armor_leggings", () -> new CreationArmorItem.Leggings());
 	public static final RegistryObject<Item> CREATION_ARMOR_BOOTS = REGISTRY.register("creation_armor_boots", () -> new CreationArmorItem.Boots());
 	public static final RegistryObject<Item> CREATION_STAFF = REGISTRY.register("creation_staff", () -> new CreationStaffItem());
+	public static final RegistryObject<Item> CREATION_SWORD = REGISTRY.register("creation_sword", () -> new CreationSwordItem());
+	public static final RegistryObject<Item> CREATION_PICKAXE = REGISTRY.register("creation_pickaxe", () -> new CreationPickaxeItem());
+	public static final RegistryObject<Item> CREATION_AXE = REGISTRY.register("creation_axe", () -> new CreationAxeItem());
+	public static final RegistryObject<Item> CREATION_HOE = REGISTRY.register("creation_hoe", () -> new CreationHoeItem());
+	public static final RegistryObject<Item> CREATION_SHOVEL = REGISTRY.register("creation_shovel", () -> new CreationShovelItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
