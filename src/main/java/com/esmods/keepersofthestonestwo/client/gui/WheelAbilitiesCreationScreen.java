@@ -27,10 +27,10 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 	private final Player entity;
 	Button button_1;
 	Button button_2;
-	Button button_3;
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_immortality_mark;
 
 	public WheelAbilitiesCreationScreen(WheelAbilitiesCreationMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -48,6 +48,8 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -103,18 +105,10 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		}).bounds(this.leftPos + 142, this.topPos + 86, 30, 20).build();
 		guistate.put("button:button_2", button_2);
 		this.addRenderableWidget(button_2);
-		button_3 = Button.builder(Component.translatable("gui.power.wheel_abilities_creation.button_3"), e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(2, x, y, z));
-				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}).bounds(this.leftPos + 80, this.topPos + 148, 30, 20).build();
-		guistate.put("button:button_3", button_3);
-		this.addRenderableWidget(button_3);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(3, x, y, z));
-				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 3, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(2, x, y, z));
+				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		}) {
 			@Override
@@ -127,8 +121,8 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
 			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(4, x, y, z));
-				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(3, x, y, z));
+				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}) {
 			@Override
@@ -141,8 +135,8 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
 			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(5, x, y, z));
-				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(4, x, y, z));
+				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		}) {
 			@Override
@@ -153,5 +147,13 @@ public class WheelAbilitiesCreationScreen extends AbstractContainerScreen<WheelA
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
+		imagebutton_immortality_mark = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_immortality_mark.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesCreationButtonMessage(5, x, y, z));
+				WheelAbilitiesCreationButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_immortality_mark", imagebutton_immortality_mark);
+		this.addRenderableWidget(imagebutton_immortality_mark);
 	}
 }

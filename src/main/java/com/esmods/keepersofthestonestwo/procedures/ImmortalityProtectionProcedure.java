@@ -37,7 +37,9 @@ public class ImmortalityProtectionProcedure {
 				event.setCanceled(true);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4));
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 4));
+			if (entity instanceof LivingEntity _entity)
+				_entity.removeEffect(PowerModMobEffects.IMMORTALITY.get());
 		}
 	}
 }
