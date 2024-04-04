@@ -69,27 +69,27 @@ public class WheelAbilitiesCreationButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack97Procedure.execute(entity);
+			Attack98Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			Attack98Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 2) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			Attack99Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			Attack99Procedure.execute(entity);
+			Attack97Procedure.execute(entity);
 		}
 	}
 

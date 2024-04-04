@@ -70,21 +70,6 @@
       {
         "type": "button",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack97"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 196,
-          "y": 48
-        }
-      },
-      {
-        "type": "button",
-        "data": {
           "name": "button_2",
           "text": "2",
           "isUndecorated": false,
@@ -121,6 +106,32 @@
           "height": 24,
           "x": 200,
           "y": 168
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_four_elements_attack",
+          "image": "four_elements_attack.png",
+          "hoveredImage": "four_elements_attack_highlight.png",
+          "onClick": {
+            "name": "Attack97"
+          },
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_four_elements_attack_uses_10",
+          "text": {
+            "fixedValue": "Four elements attack, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 48
         }
       }
     ],
