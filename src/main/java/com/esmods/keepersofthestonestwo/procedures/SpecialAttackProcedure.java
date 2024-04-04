@@ -4162,34 +4162,34 @@ public class SpecialAttackProcedure {
 						}
 						PowerMod.queueServerWork(1, () -> {
 							if (Mth.nextInt(RandomSource.create(), 1, 5) == 1) {
-								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CREATION_SWORD.get());
-									_setstack.setCount(1);
-									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SWORD.get()));
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
-								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CREATION_AXE.get());
-									_setstack.setCount(1);
-									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_AXE.get()));
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
-								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CREATION_PICKAXE.get());
-									_setstack.setCount(1);
-									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_PICKAXE.get()));
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
-								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CREATION_HOE.get());
-									_setstack.setCount(1);
-									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_HOE.get()));
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
-								if (entity instanceof Player _player) {
-									ItemStack _setstack = new ItemStack(PowerModItems.CREATION_SHOVEL.get());
-									_setstack.setCount(1);
-									ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+								if (world instanceof ServerLevel _level) {
+									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SHOVEL.get()));
+									entityToSpawn.setPickUpDelay(10);
+									_level.addFreshEntity(entityToSpawn);
 								}
 							}
 						});
