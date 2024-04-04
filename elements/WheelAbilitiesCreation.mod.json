@@ -68,21 +68,6 @@
         }
       },
       {
-        "type": "button",
-        "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack98"
-          },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
-        }
-      },
-      {
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_immortality_mark",
@@ -132,6 +117,32 @@
           "height": 24,
           "x": 200,
           "y": 48
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_supertool",
+          "image": "supertool.png",
+          "hoveredImage": "supertool_highlight.png",
+          "onClick": {
+            "name": "Attack98"
+          },
+          "x": 251,
+          "y": 97
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_supertool_uses_50",
+          "text": {
+            "fixedValue": "Supertool, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
         }
       }
     ],
