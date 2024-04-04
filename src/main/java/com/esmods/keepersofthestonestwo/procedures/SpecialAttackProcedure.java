@@ -44,6 +44,8 @@ import net.minecraft.commands.CommandSource;
 import java.util.List;
 import java.util.Comparator;
 
+import dev.kosmx.playerAnim.core.data.quarktool.Reset;
+
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
