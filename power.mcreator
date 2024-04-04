@@ -18591,9 +18591,11 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
+      "bettercombat",
       "geckolib",
       "allmods",
-      "jei"
+      "jei",
+      "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",

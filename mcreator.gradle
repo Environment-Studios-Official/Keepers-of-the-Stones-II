@@ -10,6 +10,20 @@ dependencies {
 
 
 repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
+   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
+}
+
+
+repositories {
   maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }
@@ -109,6 +123,20 @@ dependencies {
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-common-api:15.2.0.27"))
     compileOnly(fg.deobf("mezz.jei:jei-1.20.1-forge-api:15.2.0.27"))
     runtimeOnly(fg.deobf("mezz.jei:jei-1.20.1-forge:15.2.0.27"))
+}
+
+
+repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
+   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
 }
 
 
