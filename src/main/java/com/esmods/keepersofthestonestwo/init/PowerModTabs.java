@@ -43,6 +43,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SPACE_STONE.get());
 				tabData.accept(PowerModItems.TIME_STONE.get());
 				tabData.accept(PowerModItems.CREATION_STONE.get());
+				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
 			})
 
 					.build());
@@ -101,6 +102,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SPACE_BATTERY.get());
 				tabData.accept(PowerModItems.TIME_BATTERY.get());
 				tabData.accept(PowerModItems.CREATION_BATTERY.get());
+				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
 			})
 
 					.build());

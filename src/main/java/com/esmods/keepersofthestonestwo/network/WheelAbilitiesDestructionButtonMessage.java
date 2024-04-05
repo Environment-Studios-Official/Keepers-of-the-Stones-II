@@ -14,42 +14,41 @@ import net.minecraft.core.BlockPos;
 import java.util.function.Supplier;
 import java.util.HashMap;
 
-import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
-import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
-import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
-import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
-import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack103Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack102Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack101Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class KeepersBoxGUIPart2ButtonMessage {
+public class WheelAbilitiesDestructionButtonMessage {
 	private final int buttonID, x, y, z;
 
-	public KeepersBoxGUIPart2ButtonMessage(FriendlyByteBuf buffer) {
+	public WheelAbilitiesDestructionButtonMessage(FriendlyByteBuf buffer) {
 		this.buttonID = buffer.readInt();
 		this.x = buffer.readInt();
 		this.y = buffer.readInt();
 		this.z = buffer.readInt();
 	}
 
-	public KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z) {
+	public WheelAbilitiesDestructionButtonMessage(int buttonID, int x, int y, int z) {
 		this.buttonID = buttonID;
 		this.x = x;
 		this.y = y;
 		this.z = z;
 	}
 
-	public static void buffer(KeepersBoxGUIPart2ButtonMessage message, FriendlyByteBuf buffer) {
+	public static void buffer(WheelAbilitiesDestructionButtonMessage message, FriendlyByteBuf buffer) {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
 		buffer.writeInt(message.y);
 		buffer.writeInt(message.z);
 	}
 
-	public static void handler(KeepersBoxGUIPart2ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+	public static void handler(WheelAbilitiesDestructionButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 		NetworkEvent.Context context = contextSupplier.get();
 		context.enqueueWork(() -> {
 			Player entity = context.getSender();
@@ -64,46 +63,38 @@ public class KeepersBoxGUIPart2ButtonMessage {
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
-		HashMap guistate = KeepersBoxGUIPart2Menu.guistate;
+		HashMap guistate = WheelAbilitiesDestructionMenu.guistate;
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
 		if (buttonID == 0) {
 
-			KBtoPart1Procedure.execute(world, x, y, z, entity);
+			Attack101Procedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
-			KBtoPart3Procedure.execute(world, x, y, z, entity);
+			Attack102Procedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			CreationElementGetProcedure.execute(world, entity);
+			Attack103Procedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			TimeElementGetProcedure.execute(world, entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 4) {
 
-			SoundElementGetProcedure.execute(world, entity);
+			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 5) {
 
-			AirElementGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 6) {
-
-			TornadoElementGetProcedure.execute(world, entity);
-		}
-		if (buttonID == 7) {
-
-			CreationElementGetProcedure.execute(world, entity);
+			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
 		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(KeepersBoxGUIPart2ButtonMessage.class, KeepersBoxGUIPart2ButtonMessage::buffer, KeepersBoxGUIPart2ButtonMessage::new, KeepersBoxGUIPart2ButtonMessage::handler);
+		PowerMod.addNetworkMessage(WheelAbilitiesDestructionButtonMessage.class, WheelAbilitiesDestructionButtonMessage::buffer, WheelAbilitiesDestructionButtonMessage::new, WheelAbilitiesDestructionButtonMessage::handler);
 	}
 }

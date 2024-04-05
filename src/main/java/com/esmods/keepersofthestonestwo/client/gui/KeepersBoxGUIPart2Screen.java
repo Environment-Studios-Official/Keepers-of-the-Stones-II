@@ -29,6 +29,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_keepers_box_slot2;
 	ImageButton imagebutton_keepers_box_slot3;
 	ImageButton imagebutton_keepers_box_slot4;
+	ImageButton imagebutton_keepers_box_slot5;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -56,6 +57,8 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_air"), mouseX, mouseY);
 		if (mouseX > leftPos + 181 && mouseX < leftPos + 205 && mouseY > topPos + 101 && mouseY < topPos + 125)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_tornado"), mouseX, mouseY);
+		if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 101 && mouseY < topPos + 125)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation1"), mouseX, mouseY);
 	}
 
 	@Override
@@ -151,5 +154,13 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		});
 		guistate.put("button:imagebutton_keepers_box_slot4", imagebutton_keepers_box_slot4);
 		this.addRenderableWidget(imagebutton_keepers_box_slot4);
+		imagebutton_keepers_box_slot5 = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot5.png"), 16, 32, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(7, x, y, z));
+				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		});
+		guistate.put("button:imagebutton_keepers_box_slot5", imagebutton_keepers_box_slot5);
+		this.addRenderableWidget(imagebutton_keepers_box_slot5);
 	}
 }

@@ -15,13 +15,12 @@ import net.minecraft.network.chat.Component;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.DestructionStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionBatteryUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionBatteryDescProcedure;
 
-public class DestructionStoneItem extends Item {
-	public DestructionStoneItem() {
-		super(new Item.Properties().stacksTo(1).fireResistant().rarity(Rarity.COMMON));
+public class DestructionBatteryItem extends Item {
+	public DestructionBatteryItem() {
+		super(new Item.Properties().stacksTo(1).rarity(Rarity.COMMON));
 	}
 
 	@Override
@@ -36,19 +35,13 @@ public class DestructionStoneItem extends Item {
 		double x = entity != null ? entity.getX() : 0.0;
 		double y = entity != null ? entity.getY() : 0.0;
 		double z = entity != null ? entity.getZ() : 0.0;
-		list.add(Component.literal(GetRechargeInfoProcedure.execute(itemstack)));
+		list.add(Component.literal(DestructionBatteryDescProcedure.execute()));
 	}
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		DestructionStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		DestructionBatteryUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
-	}
-
-	@Override
-	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
-		super.inventoryTick(itemstack, world, entity, slot, selected);
-		RechargeStoneTickEventProcedure.execute(world, itemstack);
 	}
 }

@@ -16894,6 +16894,309 @@
         ]
       },
       "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionElementGet",
+      "type": "procedure",
+      "sortid": 793,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionStoneUse",
+      "type": "procedure",
+      "sortid": 794,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionMasterStart",
+      "type": "procedure",
+      "sortid": 795,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionMasterEnd",
+      "type": "procedure",
+      "sortid": 796,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "WheelAbilitiesDestruction",
+      "type": "gui",
+      "sortid": 797,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_destruction",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesDestructionScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesDestructionMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesDestructionButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Destruction"
+    },
+    {
+      "name": "Attack101",
+      "type": "procedure",
+      "sortid": 798,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_101",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack101Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Destruction"
+    },
+    {
+      "name": "Attack102",
+      "type": "procedure",
+      "sortid": 799,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_102",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack102Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Destruction"
+    },
+    {
+      "name": "Attack103",
+      "type": "procedure",
+      "sortid": 800,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_103",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack103Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Destruction"
+    },
+    {
+      "name": "Attack104",
+      "type": "procedure",
+      "sortid": 801,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_104",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack104Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/AbilityWheelModule/Destruction"
+    },
+    {
+      "name": "DestructionBattery",
+      "type": "item",
+      "sortid": 802,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionBatteryItem.java",
+          "src/main/resources/assets/power/models/item/destruction_battery.json"
+        ]
+      },
+      "path": "~/Items/Batteries/DestructionBattery"
+    },
+    {
+      "name": "DestructionBatteryDesc",
+      "type": "procedure",
+      "sortid": 803,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/DestructionBattery"
+    },
+    {
+      "name": "DestructionBatteryUse",
+      "type": "procedure",
+      "sortid": 804,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/DestructionBattery"
     }
   ],
   "variable_elements": [
@@ -17312,8 +17615,8 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -17326,14 +17629,14 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "item_group.power.items": "KotS: Предметы",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
+      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -17371,8 +17674,9 @@
       "item.power.light_battery": "Батарея",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
+      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Creation",
       "item.power.energy_staff": "Посох энергии",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Энерджиумный топор",
@@ -17382,9 +17686,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
-      "item.power.space_armor_leggings": "Поножи мастера космоса",
-      "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
+      "item.power.smithing_template.ingredients": "§7Материалы:",
+      "item.power.space_armor_leggings": "Поножи мастера космоса",
       "item.power.metal_armor_leggings": "Поножи мастера металла",
       "item.power.fire_stone": "Камень огня",
       "battery.desc.shadow": "Тень",
@@ -17396,8 +17700,8 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ocean_battery": "Батарея",
       "block.power.moon_block": "Лунный блок",
-      "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "power.modinfo.recharge_stone": "Перезарядка: ",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -17411,8 +17715,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item.power.metal_stone": "Камень металла",
+      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item_group.power.stones": "KotS: Камни",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
@@ -17431,8 +17735,8 @@
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
-      "item.power.magnet_stone": "Камень магнита",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
+      "item.power.magnet_stone": "Камень магнита",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
@@ -17440,8 +17744,8 @@
       "effect.power.water_master": "Мастер воды",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.smoke_stone": "Камень дыма",
-      "item.power.earth_stone": "Камень земли",
       "item.power.fire_armor_helmet": "Шлем мастера огня",
+      "item.power.earth_stone": "Камень земли",
       "item.power.rain_battery": "Батарея",
       "item.power.creation_sword": "Меч созидания",
       "effect.power.air_master": "Мастер воздуха",
@@ -17449,6 +17753,7 @@
       "battery.desc.sound": "Звук",
       "item.power.crystal_battery": "Батарея",
       "item.power.raw_depleted_energium": "Рудный обеднённый энерджиум",
+      "item.power.destruction_battery": "Батарея",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
       "item.power.ether_glaive": "Эфирная глефа",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
@@ -17468,8 +17773,11 @@
       "battery.desc.ocean": "Океан",
       "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
       "item.power.mind_stone": "Камень разума",
+      "gui.power.wheel_abilities_destruction.button_1": "1",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
+      "gui.power.wheel_abilities_destruction.button_2": "2",
       "item.power.light_armor_helmet": "Шлем мастера света",
+      "gui.power.wheel_abilities_destruction.button_3": "3",
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Зелень",
@@ -17584,7 +17892,7 @@
       "block.power.amplifier_ore": "Амплиферовая руда",
       "gui.power.wheel_abilities_space.tooltip_black_hole_uses_80": "Чёрная дыра, расходует 80",
       "item.power.poison_stone": "Камень яда",
-      "effect.power.destruction_master": "Master of Destruction",
+      "effect.power.destruction_master": "Мастер разрушения",
       "effect.power.immortality": "Бессмертие",
       "item.power.metal_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
@@ -17593,6 +17901,7 @@
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
+      "battery.desc.destruction": "Разрушение",
       "battery.desc.tornado": "Торнадо",
       "item.power.animals_battery": "Батарея",
       "item.power.energium_pickaxe": "Энерджиумная кирка",
@@ -17763,8 +18072,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Battery",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -17777,14 +18086,14 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "battery.desc.ice": "Ice",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
-      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_axe": "Creation Axe",
+      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -17822,8 +18131,9 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.ether_armor_boots": "Ether Boots",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Creation",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
@@ -17833,9 +18143,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
       "item.power.plants_armor_boots": "Plants Boots",
-      "item.power.space_armor_leggings": "Space Leggings",
-      "item.power.smithing_template.ingredients": "",
       "item.power.tornado_armor_boots": "Tornado Boots",
+      "item.power.smithing_template.ingredients": "",
+      "item.power.space_armor_leggings": "Space Leggings",
       "item.power.metal_armor_leggings": "Metal Leggings",
       "item.power.fire_stone": "Fire Stone",
       "battery.desc.shadow": "Shadow",
@@ -17847,8 +18157,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "power.modinfo.recharge_stone": "Recharge: ",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
+      "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -17862,8 +18172,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item.power.metal_stone": "Metal Stone",
+      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
       "item.power.light_armor_chestplate": "Light Chestplate",
@@ -17882,8 +18192,8 @@
       "item.power.energium_sword": "Energium Sword",
       "item.power.empty_battery": "Battery",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
-      "item.power.magnet_stone": "Magnet Stone",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Rain",
+      "item.power.magnet_stone": "Magnet Stone",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
@@ -17891,8 +18201,8 @@
       "effect.power.water_master": "Master of Water",
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.smoke_stone": "Smoke Stone",
-      "item.power.earth_stone": "Earth Stone",
       "item.power.fire_armor_helmet": "Fire Helmet",
+      "item.power.earth_stone": "Earth Stone",
       "item.power.rain_battery": "Battery",
       "item.power.creation_sword": "Creation Sword",
       "effect.power.air_master": "Master of the Air",
@@ -17900,6 +18210,7 @@
       "battery.desc.sound": "Sound",
       "item.power.crystal_battery": "Battery",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
+      "item.power.destruction_battery": "Battery",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
       "item.power.ether_glaive": "Ether Glaive",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
@@ -17919,8 +18230,11 @@
       "battery.desc.ocean": "Ocean",
       "item.power.energy_armor_chestplate": "Energy Chestplate",
       "item.power.mind_stone": "Mind Stone",
+      "gui.power.wheel_abilities_destruction.button_1": "1",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
+      "gui.power.wheel_abilities_destruction.button_2": "2",
       "item.power.light_armor_helmet": "Light Helmet",
+      "gui.power.wheel_abilities_destruction.button_3": "3",
       "item.power.vacuum_dagger": "Vacuum Dagger",
       "item.power.air_battery": "Battery",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Plants",
@@ -18045,6 +18359,7 @@
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
+      "battery.desc.destruction": "Destruction",
       "battery.desc.tornado": "Tornado",
       "item.power.animals_battery": "Battery",
       "item.power.energium_pickaxe": "Energium Pickaxe",
@@ -18529,6 +18844,10 @@
               {
                 "name": "Creation",
                 "children": []
+              },
+              {
+                "name": "Destruction",
+                "children": []
               }
             ]
           },
@@ -18658,6 +18977,10 @@
               },
               {
                 "name": "CreationBattery",
+                "children": []
+              },
+              {
+                "name": "DestructionBattery",
                 "children": []
               }
             ]

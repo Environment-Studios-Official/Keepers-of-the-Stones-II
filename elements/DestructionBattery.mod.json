@@ -3,35 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "destruction_stone",
+    "texture": "destruction_battery",
     "customModelName": "Normal",
-    "customProperties": {
-      "recharge": {
-        "name": "StoneGetRechargeState"
-      }
-    },
-    "states": [
-      {
-        "renderType": 0,
-        "texture": "recharging_stone",
-        "customModelName": "Normal",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:recharge",
-              "type": "number"
-            },
-            "value": 0.01
-          }
-        ]
-      }
-    ],
-    "name": "Destruction Stone",
+    "customProperties": {},
+    "states": [],
+    "name": "Battery",
     "rarity": "COMMON",
     "creativeTab": {
-      "value": "CUSTOM:Stones"
+      "value": "CUSTOM:Items"
     },
     "stackSize": 1,
     "enchantability": 0,
@@ -42,14 +21,14 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "GetRechargeInfo"
+      "name": "DestructionBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false
@@ -58,10 +37,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "DestructionStoneUse"
-    },
-    "onItemInInventoryTick": {
-      "name": "RechargeStoneTickEvent"
+      "name": "DestructionBatteryUse"
     },
     "enableRanged": false,
     "shootConstantly": false,
