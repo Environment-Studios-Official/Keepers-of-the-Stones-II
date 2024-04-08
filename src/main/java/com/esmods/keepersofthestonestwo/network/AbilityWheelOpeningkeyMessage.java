@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import java.util.function.Supplier;
 
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WheelOpenKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -52,7 +52,7 @@ public class AbilityWheelOpeningkeyMessage {
 			return;
 		if (type == 0) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			WheelOpenKeyPressedProcedure.execute(entity);
 		}
 	}
 

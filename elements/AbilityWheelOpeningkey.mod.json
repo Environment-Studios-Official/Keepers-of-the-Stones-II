@@ -6,7 +6,7 @@
     "keyBindingName": "Ability wheel opening key",
     "keyBindingCategoryKey": "power2",
     "onKeyPressed": {
-      "name": "OpenWheelOne"
+      "name": "WheelOpenKeyPressed"
     }
   }
 }

@@ -98,6 +98,9 @@ public class PowerModVariables {
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
 				clone.ability_block = original.ability_block;
+				clone.use_ability_key_var = original.use_ability_key_var;
+				clone.detransf_key_var = original.detransf_key_var;
+				clone.wheel_open_key_var = original.wheel_open_key_var;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -425,6 +428,9 @@ public class PowerModVariables {
 		public String element_name_second = "0";
 		public String element_name_third = "0";
 		public boolean unlock_keepers_box = true;
+		public boolean use_ability_key_var = false;
+		public boolean detransf_key_var = false;
+		public boolean wheel_open_key_var = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -446,6 +452,9 @@ public class PowerModVariables {
 			nbt.putString("element_name_second", element_name_second);
 			nbt.putString("element_name_third", element_name_third);
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
+			nbt.putBoolean("use_ability_key_var", use_ability_key_var);
+			nbt.putBoolean("detransf_key_var", detransf_key_var);
+			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
 			return nbt;
 		}
 
@@ -464,6 +473,9 @@ public class PowerModVariables {
 			element_name_second = nbt.getString("element_name_second");
 			element_name_third = nbt.getString("element_name_third");
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
+			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
+			detransf_key_var = nbt.getBoolean("detransf_key_var");
+			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
 		}
 	}
 
@@ -510,6 +522,9 @@ public class PowerModVariables {
 					variables.element_name_second = message.data.element_name_second;
 					variables.element_name_third = message.data.element_name_third;
 					variables.unlock_keepers_box = message.data.unlock_keepers_box;
+					variables.use_ability_key_var = message.data.use_ability_key_var;
+					variables.detransf_key_var = message.data.detransf_key_var;
+					variables.wheel_open_key_var = message.data.wheel_open_key_var;
 				}
 			});
 			context.setPacketHandled(true);

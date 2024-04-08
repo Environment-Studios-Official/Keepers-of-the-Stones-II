@@ -234,7 +234,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/network/DetransformationKeyMessage.java"
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     },
     {
       "name": "DetransformationKeyUse",
@@ -254,7 +254,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     },
     {
       "name": "FireMasterStart",
@@ -439,7 +439,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
     },
     {
       "name": "FirePassiveProtection",
@@ -912,7 +912,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/network/AbilityWheelOpeningkeyMessage.java"
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
     },
     {
       "name": "Attack1",
@@ -1411,7 +1411,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
     },
     {
       "name": "OpenWheelTwo",
@@ -1447,7 +1447,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
     },
     {
       "name": "OpenWheelThree",
@@ -1483,7 +1483,7 @@
           }
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
     },
     {
       "name": "GetWheelTwo",
@@ -2648,7 +2648,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/network/AbilityUsingKeyMessage.java"
         ]
       },
-      "path": "~/Modules/KeyBindsModule"
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
     },
     {
       "name": "EtherAttackKazhdyiTikPriPoliotieSnariada",
@@ -17247,6 +17247,170 @@
         ]
       },
       "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "AbilityUsingKeyPressed",
+      "type": "procedure",
+      "sortid": 808,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_using_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilityUsingKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "AbilityKeyPressedTick",
+      "type": "procedure",
+      "sortid": 809,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_key_pressed_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilityKeyPressedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
+    },
+    {
+      "name": "DetransformKeyPressed",
+      "type": "procedure",
+      "sortid": 810,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransform_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
+    },
+    {
+      "name": "DetransformKeyPressedTick",
+      "type": "procedure",
+      "sortid": 811,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransform_key_pressed_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformKeyPressedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
+    },
+    {
+      "name": "WheelOpenKeyPressed",
+      "type": "procedure",
+      "sortid": 812,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_open_key_pressed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WheelOpenKeyPressedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
+    },
+    {
+      "name": "WheelOpenKeyPressedTick",
+      "type": "procedure",
+      "sortid": 813,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_open_key_pressed_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WheelOpenKeyPressedTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey"
     }
   ],
   "variable_elements": [
@@ -17621,6 +17785,24 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "true"
+    },
+    {
+      "name": "use_ability_key_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "detransf_key_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "wheel_open_key_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -18788,7 +18970,20 @@
           },
           {
             "name": "KeyBindsModule",
-            "children": []
+            "children": [
+              {
+                "name": "AbilityUsingKey",
+                "children": []
+              },
+              {
+                "name": "DetransformationKey",
+                "children": []
+              },
+              {
+                "name": "WheelOpenKey",
+                "children": []
+              }
+            ]
           },
           {
             "name": "PowerScaleModule ",
