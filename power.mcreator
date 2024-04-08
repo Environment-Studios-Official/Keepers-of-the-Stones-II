@@ -13227,26 +13227,6 @@
       "path": "~/Elements/Sun"
     },
     {
-      "name": "FrozenEventRenderer",
-      "type": "procedure",
-      "sortid": 632,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_event_renderer",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FrozenEventRendererProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
       "name": "SunParticles",
       "type": "particle",
       "sortid": 633,
@@ -19277,7 +19257,6 @@
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
-      "kleiders_custom_renderer",
       "geckolib"
     ],
     "dependencies": [
@@ -19286,7 +19265,6 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "bettercombat",
       "geckolib",
       "playeranimator",
