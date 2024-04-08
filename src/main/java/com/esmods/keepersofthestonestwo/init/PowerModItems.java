@@ -140,6 +140,7 @@ import com.esmods.keepersofthestonestwo.item.EarthHammerItem;
 import com.esmods.keepersofthestonestwo.item.EarthBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthArmorItem;
 import com.esmods.keepersofthestonestwo.item.DestructionStoneItem;
+import com.esmods.keepersofthestonestwo.item.DestructionBroadswordItem;
 import com.esmods.keepersofthestonestwo.item.DestructionBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DestructionArmorItem;
 import com.esmods.keepersofthestonestwo.item.DepletedEnergiumIngotItem;
@@ -415,6 +416,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DESTRUCTION_ARMOR_LEGGINGS = REGISTRY.register("destruction_armor_leggings", () -> new DestructionArmorItem.Leggings());
 	public static final RegistryObject<Item> DESTRUCTION_ARMOR_BOOTS = REGISTRY.register("destruction_armor_boots", () -> new DestructionArmorItem.Boots());
 	public static final RegistryObject<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
+	public static final RegistryObject<Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", () -> new DestructionBroadswordItem());
 
 	private static RegistryObject<Item> block(RegistryObject<Block> block) {
 		return REGISTRY.register(block.getId().getPath(), () -> new BlockItem(block.get(), new Item.Properties()));
