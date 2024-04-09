@@ -48,7 +48,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
+          "name": "imagebutton_creation_element",
           "image": "creation_element.png",
           "hoveredImage": "creation_element_highlighted.png",
           "onClick": {
@@ -74,7 +74,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
+          "name": "imagebutton_time_element",
           "image": "time_element.png",
           "hoveredImage": "time_element_highlighted.png",
           "onClick": {
@@ -100,7 +100,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
+          "name": "imagebutton_sound_element",
           "image": "sound_element.png",
           "hoveredImage": "sound_element_highlighted.png",
           "onClick": {
@@ -126,7 +126,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
+          "name": "imagebutton_air_element",
           "image": "air_element.png",
           "hoveredImage": "air_element_highlighted.png",
           "onClick": {
@@ -152,7 +152,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
+          "name": "imagebutton_tornado_element",
           "image": "tornado_element.png",
           "hoveredImage": "tornado_element_highlighted.png",
           "onClick": {
@@ -178,7 +178,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
+          "name": "imagebutton_destruction_element",
           "image": "destruction_element.png",
           "hoveredImage": "destruction_element_highlighted.png",
           "onClick": {

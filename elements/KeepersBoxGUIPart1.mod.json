@@ -45,7 +45,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
+          "name": "imagebutton_fire_element",
           "image": "fire_element.png",
           "hoveredImage": "fire_element_highlighted.png",
           "onClick": {
@@ -71,7 +71,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
+          "name": "imagebutton_lava_element",
           "image": "lava_element.png",
           "hoveredImage": "lava_element_highlighted.png",
           "onClick": {
@@ -97,7 +97,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
+          "name": "imagebutton_energy_element",
           "image": "energy_element.png",
           "hoveredImage": "energy_element_highlighted.png",
           "onClick": {
@@ -123,7 +123,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
+          "name": "imagebutton_rain_element",
           "image": "rain_element.png",
           "hoveredImage": "rain_element_highlighted.png",
           "onClick": {
@@ -149,7 +149,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
+          "name": "imagebutton_lightning_element",
           "image": "lightning_element.png",
           "hoveredImage": "lightning_element_highlighted.png",
           "onClick": {
@@ -175,7 +175,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
+          "name": "imagebutton_water_element",
           "image": "water_element.png",
           "hoveredImage": "water_element_highlighted.png",
           "onClick": {
@@ -201,7 +201,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot6",
+          "name": "imagebutton_ocean_element",
           "image": "ocean_element.png",
           "hoveredImage": "ocean_element_highlighted.png",
           "onClick": {
@@ -227,7 +227,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot7",
+          "name": "imagebutton_ice_element",
           "image": "ice_element.png",
           "hoveredImage": "ice_element_highlighted.png",
           "onClick": {

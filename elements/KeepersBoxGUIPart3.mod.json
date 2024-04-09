@@ -48,7 +48,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
+          "name": "imagebutton_light_element",
           "image": "light_element.png",
           "hoveredImage": "light_element_highlighted.png",
           "onClick": {
@@ -74,7 +74,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
+          "name": "imagebutton_shadow_element",
           "image": "shadow_element.png",
           "hoveredImage": "shadow_element_highlighted.png",
           "onClick": {
@@ -100,7 +100,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
+          "name": "imagebutton_sun_element",
           "image": "sun_element.png",
           "hoveredImage": "sun_element_highlighted.png",
           "onClick": {
@@ -126,7 +126,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
+          "name": "imagebutton_space_element",
           "image": "space_element.png",
           "hoveredImage": "space_element_highlighted.png",
           "onClick": {
@@ -152,7 +152,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
+          "name": "imagebutton_moon_element",
           "image": "moon_element.png",
           "hoveredImage": "moon_element_highlighted.png",
           "onClick": {
@@ -178,7 +178,7 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
+          "name": "imagebutton_vacuum_element",
           "image": "vacuum_element.png",
           "hoveredImage": "vacuum_element_highlighted.png",
           "onClick": {

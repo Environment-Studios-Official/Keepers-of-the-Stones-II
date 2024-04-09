@@ -24,12 +24,12 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_keepers_box_slot;
-	ImageButton imagebutton_keepers_box_slot1;
-	ImageButton imagebutton_keepers_box_slot2;
-	ImageButton imagebutton_keepers_box_slot3;
-	ImageButton imagebutton_keepers_box_slot4;
-	ImageButton imagebutton_keepers_box_slot5;
+	ImageButton imagebutton_light_element;
+	ImageButton imagebutton_shadow_element;
+	ImageButton imagebutton_sun_element;
+	ImageButton imagebutton_space_element;
+	ImageButton imagebutton_moon_element;
+	ImageButton imagebutton_vacuum_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -114,53 +114,53 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		});
 		guistate.put("button:imagebutton_keepers_box_button_down", imagebutton_keepers_box_button_down);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down);
-		imagebutton_keepers_box_slot = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot.png"), 16, 32, e -> {
+		imagebutton_light_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_light_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(2, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot", imagebutton_keepers_box_slot);
-		this.addRenderableWidget(imagebutton_keepers_box_slot);
-		imagebutton_keepers_box_slot1 = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot1.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_light_element", imagebutton_light_element);
+		this.addRenderableWidget(imagebutton_light_element);
+		imagebutton_shadow_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_shadow_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(3, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot1", imagebutton_keepers_box_slot1);
-		this.addRenderableWidget(imagebutton_keepers_box_slot1);
-		imagebutton_keepers_box_slot2 = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot2.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_shadow_element", imagebutton_shadow_element);
+		this.addRenderableWidget(imagebutton_shadow_element);
+		imagebutton_sun_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_sun_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(4, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot2", imagebutton_keepers_box_slot2);
-		this.addRenderableWidget(imagebutton_keepers_box_slot2);
-		imagebutton_keepers_box_slot3 = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot3.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_sun_element", imagebutton_sun_element);
+		this.addRenderableWidget(imagebutton_sun_element);
+		imagebutton_space_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_space_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(5, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot3", imagebutton_keepers_box_slot3);
-		this.addRenderableWidget(imagebutton_keepers_box_slot3);
-		imagebutton_keepers_box_slot4 = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot4.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_space_element", imagebutton_space_element);
+		this.addRenderableWidget(imagebutton_space_element);
+		imagebutton_moon_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_moon_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(6, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot4", imagebutton_keepers_box_slot4);
-		this.addRenderableWidget(imagebutton_keepers_box_slot4);
-		imagebutton_keepers_box_slot5 = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot5.png"), 16, 32, e -> {
+		guistate.put("button:imagebutton_moon_element", imagebutton_moon_element);
+		this.addRenderableWidget(imagebutton_moon_element);
+		imagebutton_vacuum_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_vacuum_element.png"), 16, 32, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(7, x, y, z));
 				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_keepers_box_slot5", imagebutton_keepers_box_slot5);
-		this.addRenderableWidget(imagebutton_keepers_box_slot5);
+		guistate.put("button:imagebutton_vacuum_element", imagebutton_vacuum_element);
+		this.addRenderableWidget(imagebutton_vacuum_element);
 	}
 }
