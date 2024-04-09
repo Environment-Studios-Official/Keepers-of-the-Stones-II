@@ -51,6 +51,9 @@
           "onClick": {
             "name": "FireElementGet"
           },
+          "displayCondition": {
+            "name": "FireStoneCheck"
+          },
           "x": 129,
           "y": 95
         }
@@ -61,6 +64,9 @@
           "name": "tooltip_fire",
           "text": {
             "fixedValue": "Fire"
+          },
+          "displayCondition": {
+            "name": "FireStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -77,6 +83,9 @@
           "onClick": {
             "name": "LavaElementGet"
           },
+          "displayCondition": {
+            "name": "LavaStoneCheck"
+          },
           "x": 175,
           "y": 95
         }
@@ -87,6 +96,9 @@
           "name": "tooltip_lava",
           "text": {
             "fixedValue": "Lava"
+          },
+          "displayCondition": {
+            "name": "LavaStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -103,6 +115,9 @@
           "onClick": {
             "name": "EnergyElementGet"
           },
+          "displayCondition": {
+            "name": "EnergyStoneCheck"
+          },
           "x": 242,
           "y": 95
         }
@@ -113,6 +128,9 @@
           "name": "tooltip_energy",
           "text": {
             "fixedValue": "Energy"
+          },
+          "displayCondition": {
+            "name": "EnergyStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -129,6 +147,9 @@
           "onClick": {
             "name": "RainElementGet"
           },
+          "displayCondition": {
+            "name": "RainStoneCheck"
+          },
           "x": 218,
           "y": 132
         }
@@ -139,6 +160,9 @@
           "name": "tooltip_rain",
           "text": {
             "fixedValue": "Rain"
+          },
+          "displayCondition": {
+            "name": "RainStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -155,6 +179,9 @@
           "onClick": {
             "name": "LightningElementGet"
           },
+          "displayCondition": {
+            "name": "LightningStoneCheck"
+          },
           "x": 242,
           "y": 132
         }
@@ -165,6 +192,9 @@
           "name": "tooltip_lightning",
           "text": {
             "fixedValue": "Lightning"
+          },
+          "displayCondition": {
+            "name": "LightningStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -181,6 +211,9 @@
           "onClick": {
             "name": "WaterElementGet"
           },
+          "displayCondition": {
+            "name": "WaterStoneCheck"
+          },
           "x": 129,
           "y": 132
         }
@@ -191,6 +224,9 @@
           "name": "tooltip_water",
           "text": {
             "fixedValue": "Water"
+          },
+          "displayCondition": {
+            "name": "WaterStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -207,6 +243,9 @@
           "onClick": {
             "name": "OceanElementGet"
           },
+          "displayCondition": {
+            "name": "OceanStoneCheck"
+          },
           "x": 151,
           "y": 132
         }
@@ -217,6 +256,9 @@
           "name": "tooltip_ocean",
           "text": {
             "fixedValue": "Ocean"
+          },
+          "displayCondition": {
+            "name": "OceanStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -233,6 +275,9 @@
           "onClick": {
             "name": "IceElementGet"
           },
+          "displayCondition": {
+            "name": "IceStoneCheck"
+          },
           "x": 175,
           "y": 132
         }
@@ -243,6 +288,9 @@
           "name": "tooltip_ice",
           "text": {
             "fixedValue": "Ice"
+          },
+          "displayCondition": {
+            "name": "IceStoneCheck"
           },
           "width": 24,
           "height": 24,

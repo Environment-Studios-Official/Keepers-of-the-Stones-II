@@ -14,6 +14,14 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
+import com.esmods.keepersofthestonestwo.procedures.WaterStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.RainStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OceanStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LightningStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.LavaStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.IceStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FireStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EnergyStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart1ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -49,22 +57,30 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_fire"), mouseX, mouseY);
-		if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lava"), mouseX, mouseY);
-		if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_energy"), mouseX, mouseY);
-		if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_rain"), mouseX, mouseY);
-		if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lightning"), mouseX, mouseY);
-		if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 101 && mouseY < topPos + 125)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_water"), mouseX, mouseY);
-		if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ocean"), mouseX, mouseY);
-		if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 102 && mouseY < topPos + 126)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ice"), mouseX, mouseY);
+		if (FireStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_fire"), mouseX, mouseY);
+		if (LavaStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lava"), mouseX, mouseY);
+		if (EnergyStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_energy"), mouseX, mouseY);
+		if (RainStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_rain"), mouseX, mouseY);
+		if (LightningStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_lightning"), mouseX, mouseY);
+		if (WaterStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 101 && mouseY < topPos + 125)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_water"), mouseX, mouseY);
+		if (OceanStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ocean"), mouseX, mouseY);
+		if (IceStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_ice"), mouseX, mouseY);
 	}
 
 	@Override
@@ -117,67 +133,115 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		guistate.put("button:imagebutton_keepers_box_button_up_locked", imagebutton_keepers_box_button_up_locked);
 		this.addRenderableWidget(imagebutton_keepers_box_button_up_locked);
 		imagebutton_fire_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_fire_element.png"), 16, 32, e -> {
-			if (true) {
+			if (FireStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(2, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (FireStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_fire_element", imagebutton_fire_element);
 		this.addRenderableWidget(imagebutton_fire_element);
 		imagebutton_lava_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_lava_element.png"), 16, 32, e -> {
-			if (true) {
+			if (LavaStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(3, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (LavaStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_lava_element", imagebutton_lava_element);
 		this.addRenderableWidget(imagebutton_lava_element);
 		imagebutton_energy_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_energy_element.png"), 16, 32, e -> {
-			if (true) {
+			if (EnergyStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(4, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (EnergyStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_energy_element", imagebutton_energy_element);
 		this.addRenderableWidget(imagebutton_energy_element);
 		imagebutton_rain_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_rain_element.png"), 16, 32, e -> {
-			if (true) {
+			if (RainStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(5, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (RainStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_rain_element", imagebutton_rain_element);
 		this.addRenderableWidget(imagebutton_rain_element);
 		imagebutton_lightning_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_lightning_element.png"), 16, 32, e -> {
-			if (true) {
+			if (LightningStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(6, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (LightningStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_lightning_element", imagebutton_lightning_element);
 		this.addRenderableWidget(imagebutton_lightning_element);
 		imagebutton_water_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_water_element.png"), 16, 32, e -> {
-			if (true) {
+			if (WaterStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(7, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (WaterStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_water_element", imagebutton_water_element);
 		this.addRenderableWidget(imagebutton_water_element);
 		imagebutton_ocean_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_ocean_element.png"), 16, 32, e -> {
-			if (true) {
+			if (OceanStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(8, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (OceanStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_ocean_element", imagebutton_ocean_element);
 		this.addRenderableWidget(imagebutton_ocean_element);
 		imagebutton_ice_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_ice_element.png"), 16, 32, e -> {
-			if (true) {
+			if (IceStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(9, x, y, z));
 				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (IceStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_ice_element", imagebutton_ice_element);
 		this.addRenderableWidget(imagebutton_ice_element);
 	}

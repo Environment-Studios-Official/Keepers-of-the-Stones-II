@@ -17391,6 +17391,552 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey"
+    },
+    {
+      "name": "FireStoneCheck",
+      "type": "procedure",
+      "sortid": 814,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fire_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FireStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "AirStoneCheck",
+      "type": "procedure",
+      "sortid": 815,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "air_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AirStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "EarthStoneCheck",
+      "type": "procedure",
+      "sortid": 816,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "earth_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EarthStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "WaterStoneCheck",
+      "type": "procedure",
+      "sortid": 817,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "water_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/WaterStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "EtherStoneCheck",
+      "type": "procedure",
+      "sortid": 818,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ether_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EtherStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "IceStoneCheck",
+      "type": "procedure",
+      "sortid": 819,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ice_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/IceStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "LightningStoneCheck",
+      "type": "procedure",
+      "sortid": 820,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lightning_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LightningStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "SoundStoneCheck",
+      "type": "procedure",
+      "sortid": 821,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SoundStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "CrystalStoneCheck",
+      "type": "procedure",
+      "sortid": 822,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "crystal_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CrystalStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "LavaStoneCheck",
+      "type": "procedure",
+      "sortid": 823,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "lava_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LavaStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "RainStoneCheck",
+      "type": "procedure",
+      "sortid": 824,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "rain_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RainStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "TornadoStoneCheck",
+      "type": "procedure",
+      "sortid": 825,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "tornado_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TornadoStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "OceanStoneCheck",
+      "type": "procedure",
+      "sortid": 826,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ocean_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/OceanStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "PlantsStoneCheck",
+      "type": "procedure",
+      "sortid": 827,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "plants_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlantsStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "AnimalsStoneCheck",
+      "type": "procedure",
+      "sortid": 828,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animals_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimalsStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "MetalStoneCheck",
+      "type": "procedure",
+      "sortid": 829,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "metal_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MetalStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "LightStoneCheck",
+      "type": "procedure",
+      "sortid": 830,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "light_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LightStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "ShadowStoneCheck",
+      "type": "procedure",
+      "sortid": 831,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "shadow_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShadowStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "VacuumStoneCheck",
+      "type": "procedure",
+      "sortid": 832,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "vacuum_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/VacuumStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "EnergyStoneCheck",
+      "type": "procedure",
+      "sortid": 833,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energy_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergyStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "SunStoneCheck",
+      "type": "procedure",
+      "sortid": 834,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sun_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SunStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "MoonStoneCheck",
+      "type": "procedure",
+      "sortid": 835,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "moon_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MoonStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "SpaceStoneCheck",
+      "type": "procedure",
+      "sortid": 836,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "space_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpaceStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "TimeStoneCheck",
+      "type": "procedure",
+      "sortid": 837,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "time_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TimeStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "CreationStoneCheck",
+      "type": "procedure",
+      "sortid": 838,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "creation_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CreationStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "DestructionStoneCheck",
+      "type": "procedure",
+      "sortid": 839,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -17827,8 +18373,8 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -17841,14 +18387,14 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.creation_axe": "Топор созидания",
       "item.power.lava_hammer": "Лавовый молот",
+      "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -17886,9 +18432,9 @@
       "item.power.light_battery": "Батарея",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
-      "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
-      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Creation",
+      "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Разрушение",
       "item.power.energy_staff": "Посох энергии",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Энерджиумный топор",
@@ -17898,9 +18444,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
-      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
-      "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.space_armor_leggings": "Поножи мастера космоса",
+      "item.power.smithing_template.ingredients": "§7Материалы:",
+      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
       "item.power.metal_armor_leggings": "Поножи мастера металла",
       "item.power.fire_stone": "Камень огня",
       "battery.desc.shadow": "Тень",
@@ -17912,8 +18458,8 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ocean_battery": "Батарея",
       "block.power.moon_block": "Лунный блок",
-      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "power.modinfo.recharge_stone": "Перезарядка: ",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -17927,8 +18473,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.metal_stone": "Камень металла",
       "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
+      "item.power.metal_stone": "Камень металла",
       "item_group.power.stones": "KotS: Камни",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
@@ -17947,8 +18493,8 @@
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
-      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.magnet_stone": "Камень магнита",
+      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
@@ -18346,7 +18892,7 @@
       "effect.power.tornado_master": "Master of Tornado",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.ether_armor_boots": "Ether Boots",
-      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Creation",
+      "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",

@@ -51,6 +51,9 @@
           "onClick": {
             "name": "AnimalsElementGet"
           },
+          "displayCondition": {
+            "name": "AnimalsStoneCheck"
+          },
           "x": 129,
           "y": 95
         }
@@ -61,6 +64,9 @@
           "name": "tooltip_animals",
           "text": {
             "fixedValue": "Animals"
+          },
+          "displayCondition": {
+            "name": "AnimalsStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -77,6 +83,9 @@
           "onClick": {
             "name": "CrystalElementGet"
           },
+          "displayCondition": {
+            "name": "CrystalStoneCheck"
+          },
           "x": 175,
           "y": 95
         }
@@ -87,6 +96,9 @@
           "name": "tooltip_crystal",
           "text": {
             "fixedValue": "Crystal"
+          },
+          "displayCondition": {
+            "name": "CreationStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -103,6 +115,9 @@
           "onClick": {
             "name": "EtherElementGet"
           },
+          "displayCondition": {
+            "name": "EtherStoneCheck"
+          },
           "x": 129,
           "y": 132
         }
@@ -113,6 +128,9 @@
           "name": "tooltip_ether",
           "text": {
             "fixedValue": "Ether"
+          },
+          "displayCondition": {
+            "name": "EtherStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -129,6 +147,9 @@
           "onClick": {
             "name": "MetalElementGet"
           },
+          "displayCondition": {
+            "name": "MetalStoneCheck"
+          },
           "x": 218,
           "y": 95
         }
@@ -139,6 +160,9 @@
           "name": "tooltip_metal",
           "text": {
             "fixedValue": "Metal"
+          },
+          "displayCondition": {
+            "name": "MetalStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -155,6 +179,9 @@
           "onClick": {
             "name": "EarthElementGet"
           },
+          "displayCondition": {
+            "name": "EarthStoneCheck"
+          },
           "x": 242,
           "y": 95
         }
@@ -165,6 +192,9 @@
           "name": "tooltip_earth",
           "text": {
             "fixedValue": "Earth"
+          },
+          "displayCondition": {
+            "name": "EarthStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -181,6 +211,9 @@
           "onClick": {
             "name": "PlantsElementGet"
           },
+          "displayCondition": {
+            "name": "PlantsStoneCheck"
+          },
           "x": 264,
           "y": 95
         }
@@ -191,6 +224,9 @@
           "name": "tooltip_plants",
           "text": {
             "fixedValue": "Plants"
+          },
+          "displayCondition": {
+            "name": "PlantsStoneCheck"
           },
           "width": 24,
           "height": 24,

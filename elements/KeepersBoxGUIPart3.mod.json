@@ -54,6 +54,9 @@
           "onClick": {
             "name": "LightElementGet"
           },
+          "displayCondition": {
+            "name": "LightStoneCheck"
+          },
           "x": 175,
           "y": 95
         }
@@ -64,6 +67,9 @@
           "name": "tooltip_light",
           "text": {
             "fixedValue": "Light"
+          },
+          "displayCondition": {
+            "name": "LightStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -80,6 +86,9 @@
           "onClick": {
             "name": "ShadowElementGet"
           },
+          "displayCondition": {
+            "name": "ShadowStoneCheck"
+          },
           "x": 218,
           "y": 95
         }
@@ -90,6 +99,9 @@
           "name": "tooltip_shadow",
           "text": {
             "fixedValue": "Shadow"
+          },
+          "displayCondition": {
+            "name": "ShadowStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -106,6 +118,9 @@
           "onClick": {
             "name": "SunElementGet"
           },
+          "displayCondition": {
+            "name": "SunStoneCheck"
+          },
           "x": 242,
           "y": 95
         }
@@ -116,6 +131,9 @@
           "name": "tooltip_sun",
           "text": {
             "fixedValue": "Sun"
+          },
+          "displayCondition": {
+            "name": "SunStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -132,6 +150,9 @@
           "onClick": {
             "name": "SpaceElementGet"
           },
+          "displayCondition": {
+            "name": "SpaceStoneCheck"
+          },
           "x": 264,
           "y": 95
         }
@@ -142,6 +163,9 @@
           "name": "tooltip_space",
           "text": {
             "fixedValue": "Space"
+          },
+          "displayCondition": {
+            "name": "SpaceStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -158,6 +182,9 @@
           "onClick": {
             "name": "MoonElementGet"
           },
+          "displayCondition": {
+            "name": "MoonStoneCheck"
+          },
           "x": 242,
           "y": 132
         }
@@ -168,6 +195,9 @@
           "name": "tooltip_moon",
           "text": {
             "fixedValue": "Moon"
+          },
+          "displayCondition": {
+            "name": "MoonStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -184,6 +214,9 @@
           "onClick": {
             "name": "VacuumElementGet"
           },
+          "displayCondition": {
+            "name": "VacuumStoneCheck"
+          },
           "x": 264,
           "y": 132
         }
@@ -194,6 +227,9 @@
           "name": "tooltip_vacuum",
           "text": {
             "fixedValue": "Vacuum"
+          },
+          "displayCondition": {
+            "name": "VacuumStoneCheck"
           },
           "width": 24,
           "height": 24,

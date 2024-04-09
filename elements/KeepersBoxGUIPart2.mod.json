@@ -54,6 +54,9 @@
           "onClick": {
             "name": "CreationElementGet"
           },
+          "displayCondition": {
+            "name": "CreationStoneCheck"
+          },
           "x": 129,
           "y": 95
         }
@@ -64,6 +67,9 @@
           "name": "tooltip_creation",
           "text": {
             "fixedValue": "Creation"
+          },
+          "displayCondition": {
+            "name": "CreationStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -80,6 +86,9 @@
           "onClick": {
             "name": "TimeElementGet"
           },
+          "displayCondition": {
+            "name": "TimeStoneCheck"
+          },
           "x": 175,
           "y": 95
         }
@@ -90,6 +99,9 @@
           "name": "tooltip_time",
           "text": {
             "fixedValue": "Time"
+          },
+          "displayCondition": {
+            "name": "TimeStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -106,6 +118,9 @@
           "onClick": {
             "name": "SoundElementGet"
           },
+          "displayCondition": {
+            "name": "SoundStoneCheck"
+          },
           "x": 218,
           "y": 95
         }
@@ -116,6 +131,9 @@
           "name": "tooltip_sound",
           "text": {
             "fixedValue": "Sound"
+          },
+          "displayCondition": {
+            "name": "SoundStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -132,6 +150,9 @@
           "onClick": {
             "name": "AirElementGet"
           },
+          "displayCondition": {
+            "name": "AirStoneCheck"
+          },
           "x": 264,
           "y": 95
         }
@@ -142,6 +163,9 @@
           "name": "tooltip_air",
           "text": {
             "fixedValue": "Air"
+          },
+          "displayCondition": {
+            "name": "AirStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -158,6 +182,9 @@
           "onClick": {
             "name": "TornadoElementGet"
           },
+          "displayCondition": {
+            "name": "TornadoStoneCheck"
+          },
           "x": 264,
           "y": 132
         }
@@ -168,6 +195,9 @@
           "name": "tooltip_tornado",
           "text": {
             "fixedValue": "Tornado"
+          },
+          "displayCondition": {
+            "name": "TornadoStoneCheck"
           },
           "width": 24,
           "height": 24,
@@ -184,6 +214,9 @@
           "onClick": {
             "name": "CreationElementGet"
           },
+          "displayCondition": {
+            "name": "DestructionStoneCheck"
+          },
           "x": 129,
           "y": 132
         }
@@ -193,7 +226,10 @@
         "data": {
           "name": "tooltip_creation1",
           "text": {
-            "fixedValue": "Creation"
+            "fixedValue": "Destruction"
+          },
+          "displayCondition": {
+            "name": "DestructionStoneCheck"
           },
           "width": 24,
           "height": 24,
