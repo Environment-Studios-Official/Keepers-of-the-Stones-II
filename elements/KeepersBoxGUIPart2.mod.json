@@ -49,8 +49,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "creation_element.png",
+          "hoveredImage": "creation_element_highlighted.png",
           "onClick": {
             "name": "CreationElementGet"
           },
@@ -75,8 +75,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "time_element.png",
+          "hoveredImage": "time_element_highlighted.png",
           "onClick": {
             "name": "TimeElementGet"
           },
@@ -101,8 +101,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "sound_element.png",
+          "hoveredImage": "sound_element_highlighted.png",
           "onClick": {
             "name": "SoundElementGet"
           },
@@ -127,8 +127,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "air_element.png",
+          "hoveredImage": "air_element_highlighted.png",
           "onClick": {
             "name": "AirElementGet"
           },
@@ -153,8 +153,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "tornado_element.png",
+          "hoveredImage": "tornado_element_highlighted.png",
           "onClick": {
             "name": "TornadoElementGet"
           },
@@ -179,8 +179,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "destruction_element.png",
+          "hoveredImage": "destruction_element_highlighted.png",
           "onClick": {
             "name": "CreationElementGet"
           },

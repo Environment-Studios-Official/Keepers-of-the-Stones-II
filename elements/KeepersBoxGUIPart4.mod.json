@@ -46,8 +46,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "animals_element.png",
+          "hoveredImage": "animals_element_highlighted.png",
           "onClick": {
             "name": "AnimalsElementGet"
           },
@@ -72,8 +72,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "crystal_element.png",
+          "hoveredImage": "crystal_element_highlighted.png",
           "onClick": {
             "name": "CrystalElementGet"
           },
@@ -98,8 +98,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "ether_element.png",
+          "hoveredImage": "ether_element_highlighted.png",
           "onClick": {
             "name": "EtherElementGet"
           },
@@ -124,8 +124,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "metal_element.png",
+          "hoveredImage": "metal_element_highlighted.png",
           "onClick": {
             "name": "MetalElementGet"
           },
@@ -150,8 +150,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "earth_element.png",
+          "hoveredImage": "earth_element_highlighted.png",
           "onClick": {
             "name": "EarthElementGet"
           },
@@ -176,8 +176,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "plants_element.png",
+          "hoveredImage": "plants_element_highlighted.png",
           "onClick": {
             "name": "PlantsElementGet"
           },

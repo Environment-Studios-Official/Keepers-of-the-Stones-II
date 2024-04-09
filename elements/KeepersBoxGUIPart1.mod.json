@@ -46,8 +46,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "fire_element.png",
+          "hoveredImage": "fire_element_highlighted.png",
           "onClick": {
             "name": "FireElementGet"
           },
@@ -72,8 +72,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "lava_element.png",
+          "hoveredImage": "lava_element_highlighted.png",
           "onClick": {
             "name": "LavaElementGet"
           },
@@ -98,8 +98,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "energy_element.png",
+          "hoveredImage": "energy_element_highlighted.png",
           "onClick": {
             "name": "EnergyElementGet"
           },
@@ -124,8 +124,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "rain_element.png",
+          "hoveredImage": "rain_element_highlighted.png",
           "onClick": {
             "name": "RainElementGet"
           },
@@ -150,8 +150,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "lightning_element.png",
+          "hoveredImage": "lightning_element_highlighted.png",
           "onClick": {
             "name": "LightningElementGet"
           },
@@ -176,8 +176,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "water_element.png",
+          "hoveredImage": "water_element_highlighted.png",
           "onClick": {
             "name": "WaterElementGet"
           },
@@ -202,8 +202,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot6",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "ocean_element.png",
+          "hoveredImage": "ocean_element_highlighted.png",
           "onClick": {
             "name": "OceanElementGet"
           },
@@ -228,8 +228,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot7",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "ice_element.png",
+          "hoveredImage": "ice_element_highlighted.png",
           "onClick": {
             "name": "IceElementGet"
           },

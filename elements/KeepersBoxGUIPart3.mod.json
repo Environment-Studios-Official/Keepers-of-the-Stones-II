@@ -49,8 +49,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "light_element.png",
+          "hoveredImage": "light_element_highlighted.png",
           "onClick": {
             "name": "LightElementGet"
           },
@@ -75,8 +75,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "shadow_element.png",
+          "hoveredImage": "shadow_element_highlighted.png",
           "onClick": {
             "name": "ShadowElementGet"
           },
@@ -101,8 +101,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "sun_element.png",
+          "hoveredImage": "sun_element_highlighted.png",
           "onClick": {
             "name": "SunElementGet"
           },
@@ -127,8 +127,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "space_element.png",
+          "hoveredImage": "space_element_highlighted.png",
           "onClick": {
             "name": "SpaceElementGet"
           },
@@ -153,8 +153,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "moon_element.png",
+          "hoveredImage": "moon_element_highlighted.png",
           "onClick": {
             "name": "MoonElementGet"
           },
@@ -179,8 +179,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "image": "vacuum_element.png",
+          "hoveredImage": "vacuum_element_highlighted.png",
           "onClick": {
             "name": "VacuumElementGet"
           },
