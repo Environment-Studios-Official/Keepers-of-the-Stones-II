@@ -24,16 +24,16 @@ public class MoonElementGetProcedure {
 				}
 				if (entity instanceof Player _player)
 					_player.closeContainer();
-				PowerModVariables.MapVariables.get(world).moon_stone = true;
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = false;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.unlock_keepers_box = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			});
+			PowerModVariables.MapVariables.get(world).moon_stone = true;
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.unlock_keepers_box = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }

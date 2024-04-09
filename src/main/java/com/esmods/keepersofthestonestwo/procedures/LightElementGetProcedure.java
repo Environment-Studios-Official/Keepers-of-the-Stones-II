@@ -22,18 +22,18 @@ public class LightElementGetProcedure {
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				if (entity instanceof Player _player)
-					_player.closeContainer();
-				PowerModVariables.MapVariables.get(world).light_stone = true;
-				PowerModVariables.MapVariables.get(world).syncData(world);
-				{
-					boolean _setval = false;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.unlock_keepers_box = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
 			});
+			if (entity instanceof Player _player)
+				_player.closeContainer();
+			PowerModVariables.MapVariables.get(world).light_stone = true;
+			PowerModVariables.MapVariables.get(world).syncData(world);
+			{
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.unlock_keepers_box = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 		}
 	}
 }
