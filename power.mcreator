@@ -349,30 +349,6 @@
       "path": "~/Modules/BasicModule"
     },
     {
-      "name": "GettingStone",
-      "type": "procedure",
-      "sortid": 91,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "getting_stone",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GettingStoneProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "FireArmor",
       "type": "armor",
       "sortid": 92,
@@ -6048,19 +6024,6 @@
         ]
       },
       "path": "~/Elements/Crystal"
-    },
-    {
-      "name": "StoneDistribution",
-      "type": "gamerule",
-      "sortid": 341,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stone_distribution",
-      "metadata": {
-        "files": [],
-        "type": "logic"
-      },
-      "path": "~/Modules/Gamerules"
     },
     {
       "name": "FrozenDestructionArmor",
@@ -18543,7 +18506,6 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
-      "gamerule.stoneDistribution": "Раздача камней при входе на сервер",
       "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
       "subtitles.stone_deactivation": "Камень был деактивирован",
@@ -18787,7 +18749,6 @@
       "item.power.energium_upgrade_smithing_template.ingredients": " §9Редстоун",
       "gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80": "Метка бессмертия, расходует 80",
       "item.power.rain_bow": "Дождевой Лук",
-      "gamerule.stoneDistribution.description": "Раздача камней при входе игроков в игру. По умолчанию включена.",
       "gui.power.keepers_box_gui_part_1.tooltip_ocean": "Океан",
       "item.power.destruction_armor_helmet": "Шлем мастера разрушение",
       "block.power.keepers_box": "Шкатулка хранителя",
@@ -19001,7 +18962,6 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
-      "gamerule.stoneDistribution": "Distribution of stones at the entrance to the server",
       "item.power.sound_dagger": "Sound Dagger",
       "item.power.sun_armor_boots": "Sun Boots",
       "subtitles.bass_boom": "Bass",
@@ -19245,7 +19205,6 @@
       "item.power.energium_upgrade_smithing_template.ingredients": "§9Redstone",
       "gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80": "Immortality mark, uses 80",
       "item.power.rain_bow": "Rain Bow",
-      "gamerule.stoneDistribution.description": "Distribution of stones when players enter the game. Enabled by default.",
       "gui.power.keepers_box_gui_part_1.tooltip_ocean": "Ocean",
       "item.power.destruction_armor_helmet": "Destruction Helmet",
       "block.power.keepers_box": "Keeper\u0027s Box",

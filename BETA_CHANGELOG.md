@@ -3,6 +3,7 @@ What's new in Keepers of the Stones II version 1.0.0.17?<br />
 <br />- The amplifier drop can now be thrown
 <br />- When an amplifer drop hits a player, the player can get from 0 to 20 power points
 <br />- The buttons of the keeper's box interface have been improved
+<br />- Removed automatic issuing of stones to new players when they log into a world or server
 <br />- Kleiders Custom Renderer API is no longer a necessary dependency
 <br />- [API] Colorful Powers API has been updated to version 5
 <br />- [Bugfix] Added missing crafts for amplifier
