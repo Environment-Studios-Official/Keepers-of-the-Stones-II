@@ -17900,6 +17900,121 @@
         ]
       },
       "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "DestructionBallProjectile",
+      "type": "projectile",
+      "sortid": 841,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_ball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/DestructionBallProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/DestructionBallProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionBallProjectileKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 840,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_ball_projectile_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionBallProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionBallProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "sortid": 842,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_ball_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionBallProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
+    },
+    {
+      "name": "DestructionBallProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "sortid": 843,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "destruction_ball_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DestructionBallProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Destruction"
     }
   ],
   "variable_elements": [
