@@ -22,9 +22,9 @@ public class MoonElementGetProcedure {
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
-				if (entity instanceof Player _player)
-					_player.closeContainer();
 			});
+			if (entity instanceof Player _player)
+				_player.closeContainer();
 			PowerModVariables.MapVariables.get(world).moon_stone = true;
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
