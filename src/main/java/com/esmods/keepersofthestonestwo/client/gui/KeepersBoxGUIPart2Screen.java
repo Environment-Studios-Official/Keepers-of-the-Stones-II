@@ -14,6 +14,12 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
+import com.esmods.keepersofthestonestwo.procedures.TornadoStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TimeStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SoundStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AirStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart2ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -24,11 +30,12 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down;
-	ImageButton imagebutton_keepers_box_slot;
-	ImageButton imagebutton_keepers_box_slot1;
-	ImageButton imagebutton_keepers_box_slot2;
-	ImageButton imagebutton_keepers_box_slot3;
-	ImageButton imagebutton_keepers_box_slot4;
+	ImageButton imagebutton_creation_element;
+	ImageButton imagebutton_time_element;
+	ImageButton imagebutton_sound_element;
+	ImageButton imagebutton_air_element;
+	ImageButton imagebutton_tornado_element;
+	ImageButton imagebutton_destruction_element;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -46,16 +53,24 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 64 && mouseY < topPos + 88)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation"), mouseX, mouseY);
-		if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_time"), mouseX, mouseY);
-		if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_sound"), mouseX, mouseY);
-		if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 64 && mouseY < topPos + 88)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_air"), mouseX, mouseY);
-		if (mouseX > leftPos + 181 && mouseX < leftPos + 205 && mouseY > topPos + 101 && mouseY < topPos + 125)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_tornado"), mouseX, mouseY);
+		if (CreationStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation"), mouseX, mouseY);
+		if (TimeStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_time"), mouseX, mouseY);
+		if (SoundStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_sound"), mouseX, mouseY);
+		if (AirStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_air"), mouseX, mouseY);
+		if (TornadoStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 181 && mouseX < leftPos + 205 && mouseY > topPos + 101 && mouseY < topPos + 125)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_tornado"), mouseX, mouseY);
+		if (DestructionStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 43 && mouseX < leftPos + 67 && mouseY > topPos + 101 && mouseY < topPos + 125)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_creation1"), mouseX, mouseY);
 	}
 
 	@Override
@@ -111,45 +126,89 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		});
 		guistate.put("button:imagebutton_keepers_box_button_down", imagebutton_keepers_box_button_down);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down);
-		imagebutton_keepers_box_slot = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot.png"), 16, 32, e -> {
-			if (true) {
+		imagebutton_creation_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_creation_element.png"), 16, 32, e -> {
+			if (CreationStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(2, x, y, z));
 				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot", imagebutton_keepers_box_slot);
-		this.addRenderableWidget(imagebutton_keepers_box_slot);
-		imagebutton_keepers_box_slot1 = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot1.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (CreationStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_creation_element", imagebutton_creation_element);
+		this.addRenderableWidget(imagebutton_creation_element);
+		imagebutton_time_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_time_element.png"), 16, 32, e -> {
+			if (TimeStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(3, x, y, z));
 				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot1", imagebutton_keepers_box_slot1);
-		this.addRenderableWidget(imagebutton_keepers_box_slot1);
-		imagebutton_keepers_box_slot2 = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot2.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (TimeStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_time_element", imagebutton_time_element);
+		this.addRenderableWidget(imagebutton_time_element);
+		imagebutton_sound_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_element.png"), 16, 32, e -> {
+			if (SoundStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(4, x, y, z));
 				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot2", imagebutton_keepers_box_slot2);
-		this.addRenderableWidget(imagebutton_keepers_box_slot2);
-		imagebutton_keepers_box_slot3 = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot3.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (SoundStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_sound_element", imagebutton_sound_element);
+		this.addRenderableWidget(imagebutton_sound_element);
+		imagebutton_air_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_element.png"), 16, 32, e -> {
+			if (AirStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(5, x, y, z));
 				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot3", imagebutton_keepers_box_slot3);
-		this.addRenderableWidget(imagebutton_keepers_box_slot3);
-		imagebutton_keepers_box_slot4 = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot4.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (AirStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_air_element", imagebutton_air_element);
+		this.addRenderableWidget(imagebutton_air_element);
+		imagebutton_tornado_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_tornado_element.png"), 16, 32, e -> {
+			if (TornadoStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(6, x, y, z));
 				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot4", imagebutton_keepers_box_slot4);
-		this.addRenderableWidget(imagebutton_keepers_box_slot4);
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (TornadoStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_tornado_element", imagebutton_tornado_element);
+		this.addRenderableWidget(imagebutton_tornado_element);
+		imagebutton_destruction_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_destruction_element.png"), 16, 32, e -> {
+			if (DestructionStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(7, x, y, z));
+				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (DestructionStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_destruction_element", imagebutton_destruction_element);
+		this.addRenderableWidget(imagebutton_destruction_element);
 	}
 }

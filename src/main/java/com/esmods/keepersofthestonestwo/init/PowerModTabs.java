@@ -42,12 +42,15 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MOON_STONE.get());
 				tabData.accept(PowerModItems.SPACE_STONE.get());
 				tabData.accept(PowerModItems.TIME_STONE.get());
+				tabData.accept(PowerModItems.CREATION_STONE.get());
+				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
 			})
 
 					.build());
 	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModBlocks.AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModItems.RAW_AMPLIFIER.get());
 				tabData.accept(PowerModItems.AMPLIFIER_DROP.get());
 				tabData.accept(PowerModItems.STAR_POTION_25.get());
@@ -99,6 +102,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MOON_BATTERY.get());
 				tabData.accept(PowerModItems.SPACE_BATTERY.get());
 				tabData.accept(PowerModItems.TIME_BATTERY.get());
+				tabData.accept(PowerModItems.CREATION_BATTERY.get());
+				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
 			})
 
 					.build());

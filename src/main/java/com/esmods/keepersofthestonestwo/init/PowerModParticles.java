@@ -15,6 +15,8 @@ import com.esmods.keepersofthestonestwo.client.particle.TimeSlowParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeFastParticle;
 import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionParticle;
+import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
@@ -36,5 +38,7 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.TIME_SLOW.get(), TimeSlowParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TIME_STOP.get(), TimeStopParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TIME_FAST.get(), TimeFastParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.RUNES_OF_CREATION.get(), RunesOfCreationParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.RUNES_OF_DESTRUCTION.get(), RunesOfDestructionParticle::provider);
 	}
 }

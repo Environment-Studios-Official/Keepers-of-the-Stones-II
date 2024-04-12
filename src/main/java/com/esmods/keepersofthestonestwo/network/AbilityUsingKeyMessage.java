@@ -12,7 +12,7 @@ import net.minecraft.network.FriendlyByteBuf;
 
 import java.util.function.Supplier;
 
-import com.esmods.keepersofthestonestwo.procedures.SpecialAttackProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AbilityUsingKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -52,7 +52,7 @@ public class AbilityUsingKeyMessage {
 			return;
 		if (type == 0) {
 
-			SpecialAttackProcedure.execute(world, x, y, z, entity);
+			AbilityUsingKeyPressedProcedure.execute(entity);
 		}
 	}
 

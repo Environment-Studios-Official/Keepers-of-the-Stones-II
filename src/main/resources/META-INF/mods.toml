@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.16"
+version="1.0.0.17"
 displayName="Keepers of the Stones II"
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
 logoFile="logo.png"
@@ -21,24 +21,12 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 
 
 [[dependencies.power]]
-    modId="kleiders_custom_renderer"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
     modId="geckolib"
     mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="kleidersplayerrenderer"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
     mandatory=false
@@ -58,13 +46,13 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="allmods"
+    modId="playeranimator"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="jei"
+    modId="cloth-config"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

@@ -45,11 +45,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_fire_element",
+          "image": "fire_element.png",
+          "hoveredImage": "fire_element_highlighted.png",
           "onClick": {
             "name": "FireElementGet"
+          },
+          "displayCondition": {
+            "name": "FireStoneCheck"
           },
           "x": 129,
           "y": 95
@@ -62,6 +65,9 @@
           "text": {
             "fixedValue": "Fire"
           },
+          "displayCondition": {
+            "name": "FireStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 125,
@@ -71,11 +77,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_lava_element",
+          "image": "lava_element.png",
+          "hoveredImage": "lava_element_highlighted.png",
           "onClick": {
             "name": "LavaElementGet"
+          },
+          "displayCondition": {
+            "name": "LavaStoneCheck"
           },
           "x": 175,
           "y": 95
@@ -88,6 +97,9 @@
           "text": {
             "fixedValue": "Lava"
           },
+          "displayCondition": {
+            "name": "LavaStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 172,
@@ -97,11 +109,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_energy_element",
+          "image": "energy_element.png",
+          "hoveredImage": "energy_element_highlighted.png",
           "onClick": {
             "name": "EnergyElementGet"
+          },
+          "displayCondition": {
+            "name": "EnergyStoneCheck"
           },
           "x": 242,
           "y": 95
@@ -114,6 +129,9 @@
           "text": {
             "fixedValue": "Energy"
           },
+          "displayCondition": {
+            "name": "EnergyStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 238,
@@ -123,11 +141,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_rain_element",
+          "image": "rain_element.png",
+          "hoveredImage": "rain_element_highlighted.png",
           "onClick": {
             "name": "RainElementGet"
+          },
+          "displayCondition": {
+            "name": "RainStoneCheck"
           },
           "x": 218,
           "y": 132
@@ -140,6 +161,9 @@
           "text": {
             "fixedValue": "Rain"
           },
+          "displayCondition": {
+            "name": "RainStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 214,
@@ -149,11 +173,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_lightning_element",
+          "image": "lightning_element.png",
+          "hoveredImage": "lightning_element_highlighted.png",
           "onClick": {
             "name": "LightningElementGet"
+          },
+          "displayCondition": {
+            "name": "LightningStoneCheck"
           },
           "x": 242,
           "y": 132
@@ -166,6 +193,9 @@
           "text": {
             "fixedValue": "Lightning"
           },
+          "displayCondition": {
+            "name": "LightningStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 239,
@@ -175,11 +205,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_water_element",
+          "image": "water_element.png",
+          "hoveredImage": "water_element_highlighted.png",
           "onClick": {
             "name": "WaterElementGet"
+          },
+          "displayCondition": {
+            "name": "WaterStoneCheck"
           },
           "x": 129,
           "y": 132
@@ -192,6 +225,9 @@
           "text": {
             "fixedValue": "Water"
           },
+          "displayCondition": {
+            "name": "WaterStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 124,
@@ -201,11 +237,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot6",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_ocean_element",
+          "image": "ocean_element.png",
+          "hoveredImage": "ocean_element_highlighted.png",
           "onClick": {
             "name": "OceanElementGet"
+          },
+          "displayCondition": {
+            "name": "OceanStoneCheck"
           },
           "x": 151,
           "y": 132
@@ -218,6 +257,9 @@
           "text": {
             "fixedValue": "Ocean"
           },
+          "displayCondition": {
+            "name": "OceanStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 148,
@@ -227,11 +269,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot7",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_ice_element",
+          "image": "ice_element.png",
+          "hoveredImage": "ice_element_highlighted.png",
           "onClick": {
             "name": "IceElementGet"
+          },
+          "displayCondition": {
+            "name": "IceStoneCheck"
           },
           "x": 175,
           "y": 132
@@ -243,6 +288,9 @@
           "name": "tooltip_ice",
           "text": {
             "fixedValue": "Ice"
+          },
+          "displayCondition": {
+            "name": "IceStoneCheck"
           },
           "width": 24,
           "height": 24,

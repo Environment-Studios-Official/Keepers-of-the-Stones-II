@@ -30,13 +30,16 @@ import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightningMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.LethalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LavaMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
@@ -76,4 +79,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> TIME_SLOWING = REGISTRY.register("time_slowing", () -> new TimeSlowingMobEffect());
 	public static final RegistryObject<MobEffect> TIME_STOPPED = REGISTRY.register("time_stopped", () -> new TimeStoppedMobEffect());
 	public static final RegistryObject<MobEffect> CREATION_MASTER = REGISTRY.register("creation_master", () -> new CreationMasterMobEffect());
+	public static final RegistryObject<MobEffect> IMMORTALITY = REGISTRY.register("immortality", () -> new ImmortalityMobEffect());
+	public static final RegistryObject<MobEffect> DESTRUCTION_MASTER = REGISTRY.register("destruction_master", () -> new DestructionMasterMobEffect());
+	public static final RegistryObject<MobEffect> LETHALITY = REGISTRY.register("lethality", () -> new LethalityMobEffect());
 }

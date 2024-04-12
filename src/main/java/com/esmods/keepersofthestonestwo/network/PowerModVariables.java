@@ -31,7 +31,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -54,29 +53,20 @@ public class PowerModVariables {
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (!event.getEntity().level().isClientSide())
+				((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
@@ -98,11 +88,9 @@ public class PowerModVariables {
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
 				clone.ability_block = original.ability_block;
-			}
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
+				clone.use_ability_key_var = original.use_ability_key_var;
+				clone.detransf_key_var = original.detransf_key_var;
+				clone.wheel_open_key_var = original.wheel_open_key_var;
 			}
 		}
 
@@ -425,10 +413,13 @@ public class PowerModVariables {
 		public String element_name_second = "0";
 		public String element_name_third = "0";
 		public boolean unlock_keepers_box = true;
+		public boolean use_ability_key_var = false;
+		public boolean detransf_key_var = false;
+		public boolean wheel_open_key_var = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
+				PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> serverPlayer), new PlayerVariablesSyncMessage(this));
 		}
 
 		public Tag writeNBT() {
@@ -446,6 +437,9 @@ public class PowerModVariables {
 			nbt.putString("element_name_second", element_name_second);
 			nbt.putString("element_name_third", element_name_third);
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
+			nbt.putBoolean("use_ability_key_var", use_ability_key_var);
+			nbt.putBoolean("detransf_key_var", detransf_key_var);
+			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
 			return nbt;
 		}
 
@@ -464,39 +458,33 @@ public class PowerModVariables {
 			element_name_second = nbt.getString("element_name_second");
 			element_name_third = nbt.getString("element_name_third");
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
+			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
+			detransf_key_var = nbt.getBoolean("detransf_key_var");
+			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
 		}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
-	}
-
 	public static class PlayerVariablesSyncMessage {
-		private final int target;
 		private final PlayerVariables data;
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
 			this.data = new PlayerVariables();
 			this.data.readNBT(buffer.readNbt());
-			this.target = buffer.readInt();
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
+		public PlayerVariablesSyncMessage(PlayerVariables data) {
 			this.data = data;
-			this.target = entityid;
 		}
 
 		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
 			buffer.writeNbt((CompoundTag) message.data.writeNBT());
-			buffer.writeInt(message.target);
 		}
 
 		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
 			NetworkEvent.Context context = contextSupplier.get();
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 					variables.active = message.data.active;
 					variables.selected = message.data.selected;
 					variables.power = message.data.power;
@@ -510,6 +498,9 @@ public class PowerModVariables {
 					variables.element_name_second = message.data.element_name_second;
 					variables.element_name_third = message.data.element_name_third;
 					variables.unlock_keepers_box = message.data.unlock_keepers_box;
+					variables.use_ability_key_var = message.data.use_ability_key_var;
+					variables.detransf_key_var = message.data.detransf_key_var;
+					variables.wheel_open_key_var = message.data.wheel_open_key_var;
 				}
 			});
 			context.setPacketHandled(true);

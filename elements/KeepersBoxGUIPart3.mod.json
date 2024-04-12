@@ -48,11 +48,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_light_element",
+          "image": "light_element.png",
+          "hoveredImage": "light_element_highlighted.png",
           "onClick": {
             "name": "LightElementGet"
+          },
+          "displayCondition": {
+            "name": "LightStoneCheck"
           },
           "x": 175,
           "y": 95
@@ -65,6 +68,9 @@
           "text": {
             "fixedValue": "Light"
           },
+          "displayCondition": {
+            "name": "LightStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 171,
@@ -74,11 +80,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_shadow_element",
+          "image": "shadow_element.png",
+          "hoveredImage": "shadow_element_highlighted.png",
           "onClick": {
             "name": "ShadowElementGet"
+          },
+          "displayCondition": {
+            "name": "ShadowStoneCheck"
           },
           "x": 218,
           "y": 95
@@ -91,6 +100,9 @@
           "text": {
             "fixedValue": "Shadow"
           },
+          "displayCondition": {
+            "name": "ShadowStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 214,
@@ -100,11 +112,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_sun_element",
+          "image": "sun_element.png",
+          "hoveredImage": "sun_element_highlighted.png",
           "onClick": {
             "name": "SunElementGet"
+          },
+          "displayCondition": {
+            "name": "SunStoneCheck"
           },
           "x": 242,
           "y": 95
@@ -117,6 +132,9 @@
           "text": {
             "fixedValue": "Sun"
           },
+          "displayCondition": {
+            "name": "SunStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 238,
@@ -126,11 +144,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_space_element",
+          "image": "space_element.png",
+          "hoveredImage": "space_element_highlighted.png",
           "onClick": {
             "name": "SpaceElementGet"
+          },
+          "displayCondition": {
+            "name": "SpaceStoneCheck"
           },
           "x": 264,
           "y": 95
@@ -143,6 +164,9 @@
           "text": {
             "fixedValue": "Space"
           },
+          "displayCondition": {
+            "name": "SpaceStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 262,
@@ -152,11 +176,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_moon_element",
+          "image": "moon_element.png",
+          "hoveredImage": "moon_element_highlighted.png",
           "onClick": {
             "name": "MoonElementGet"
+          },
+          "displayCondition": {
+            "name": "MoonStoneCheck"
           },
           "x": 242,
           "y": 132
@@ -169,6 +196,9 @@
           "text": {
             "fixedValue": "Moon"
           },
+          "displayCondition": {
+            "name": "MoonStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 238,
@@ -178,11 +208,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_vacuum_element",
+          "image": "vacuum_element.png",
+          "hoveredImage": "vacuum_element_highlighted.png",
           "onClick": {
             "name": "VacuumElementGet"
+          },
+          "displayCondition": {
+            "name": "VacuumStoneCheck"
           },
           "x": 264,
           "y": 132
@@ -194,6 +227,9 @@
           "name": "tooltip_vacuum",
           "text": {
             "fixedValue": "Vacuum"
+          },
+          "displayCondition": {
+            "name": "VacuumStoneCheck"
           },
           "width": 24,
           "height": 24,

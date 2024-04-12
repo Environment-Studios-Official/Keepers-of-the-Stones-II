@@ -1,0 +1,22 @@
+{
+  "_fv": 57,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.575,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:RawAmplifier"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:AmplifierDrop"
+    },
+    "name": "raw_amplifier_blasting",
+    "namespace": "mod"
+  }
+}

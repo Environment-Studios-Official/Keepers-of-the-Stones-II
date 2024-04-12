@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_immortality_mark",
+          "image": "immortality_mark.png",
+          "hoveredImage": "immortality_mark_highlight.png",
+          "onClick": {
+            "name": "Attack99"
+          },
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_immortality_mark_uses_80",
+          "text": {
+            "fixedValue": "Immortality mark, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_four_elements_attack",
+          "image": "four_elements_attack.png",
+          "hoveredImage": "four_elements_attack_highlight.png",
           "onClick": {
             "name": "Attack97"
           },
-          "width": 30,
-          "height": 20,
-          "x": 196,
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_four_elements_attack_uses_10",
+          "text": {
+            "fixedValue": "Four elements attack, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
           "y": 48
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_supertool",
+          "image": "supertool.png",
+          "hoveredImage": "supertool_highlight.png",
           "onClick": {
             "name": "Attack98"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
-          "onClick": {
-            "name": "Attack99"
+          "name": "tooltip_supertool_uses_50",
+          "text": {
+            "fixedValue": "Supertool, uses 50"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
         }
       }
     ],

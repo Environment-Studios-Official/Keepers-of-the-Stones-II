@@ -96,6 +96,10 @@ public class KeepersBoxGUIPart2ButtonMessage {
 
 			TornadoElementGetProcedure.execute(world, entity);
 		}
+		if (buttonID == 7) {
+
+			CreationElementGetProcedure.execute(world, entity);
+		}
 	}
 
 	@SubscribeEvent

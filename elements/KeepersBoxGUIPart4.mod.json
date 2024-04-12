@@ -45,11 +45,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_animals_element",
+          "image": "animals_element.png",
+          "hoveredImage": "animals_element_highlighted.png",
           "onClick": {
             "name": "AnimalsElementGet"
+          },
+          "displayCondition": {
+            "name": "AnimalsStoneCheck"
           },
           "x": 129,
           "y": 95
@@ -62,6 +65,9 @@
           "text": {
             "fixedValue": "Animals"
           },
+          "displayCondition": {
+            "name": "AnimalsStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 124,
@@ -71,11 +77,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot1",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_crystal_element",
+          "image": "crystal_element.png",
+          "hoveredImage": "crystal_element_highlighted.png",
           "onClick": {
             "name": "CrystalElementGet"
+          },
+          "displayCondition": {
+            "name": "CrystalStoneCheck"
           },
           "x": 175,
           "y": 95
@@ -88,6 +97,9 @@
           "text": {
             "fixedValue": "Crystal"
           },
+          "displayCondition": {
+            "name": "CreationStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 171,
@@ -97,11 +109,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot2",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_ether_element",
+          "image": "ether_element.png",
+          "hoveredImage": "ether_element_highlighted.png",
           "onClick": {
             "name": "EtherElementGet"
+          },
+          "displayCondition": {
+            "name": "EtherStoneCheck"
           },
           "x": 129,
           "y": 132
@@ -114,6 +129,9 @@
           "text": {
             "fixedValue": "Ether"
           },
+          "displayCondition": {
+            "name": "EtherStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 122,
@@ -123,11 +141,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot3",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_metal_element",
+          "image": "metal_element.png",
+          "hoveredImage": "metal_element_highlighted.png",
           "onClick": {
             "name": "MetalElementGet"
+          },
+          "displayCondition": {
+            "name": "MetalStoneCheck"
           },
           "x": 218,
           "y": 95
@@ -140,6 +161,9 @@
           "text": {
             "fixedValue": "Metal"
           },
+          "displayCondition": {
+            "name": "MetalStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 213,
@@ -149,11 +173,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot4",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_earth_element",
+          "image": "earth_element.png",
+          "hoveredImage": "earth_element_highlighted.png",
           "onClick": {
             "name": "EarthElementGet"
+          },
+          "displayCondition": {
+            "name": "EarthStoneCheck"
           },
           "x": 242,
           "y": 95
@@ -166,6 +193,9 @@
           "text": {
             "fixedValue": "Earth"
           },
+          "displayCondition": {
+            "name": "EarthStoneCheck"
+          },
           "width": 24,
           "height": 24,
           "x": 237,
@@ -175,11 +205,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_keepers_box_slot5",
-          "image": "keepers_box_slot.png",
-          "hoveredImage": "keepers_box_slot.png",
+          "name": "imagebutton_plants_element",
+          "image": "plants_element.png",
+          "hoveredImage": "plants_element_highlighted.png",
           "onClick": {
             "name": "PlantsElementGet"
+          },
+          "displayCondition": {
+            "name": "PlantsStoneCheck"
           },
           "x": 264,
           "y": 95
@@ -191,6 +224,9 @@
           "name": "tooltip_plants",
           "text": {
             "fixedValue": "Plants"
+          },
+          "displayCondition": {
+            "name": "PlantsStoneCheck"
           },
           "width": 24,
           "height": 24,

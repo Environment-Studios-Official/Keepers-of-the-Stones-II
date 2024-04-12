@@ -122,7 +122,7 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#is_deep_ocean"
+        "value": "#is_ocean"
       }
     ],
     "blocksToReplace": [

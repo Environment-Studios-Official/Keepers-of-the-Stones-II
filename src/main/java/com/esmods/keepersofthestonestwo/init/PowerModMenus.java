@@ -32,6 +32,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
@@ -75,4 +76,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<KeepersBoxGUIPart2Menu>> KEEPERS_BOX_GUI_PART_2 = REGISTRY.register("keepers_box_gui_part_2", () -> IForgeMenuType.create(KeepersBoxGUIPart2Menu::new));
 	public static final RegistryObject<MenuType<KeepersBoxGUIPart3Menu>> KEEPERS_BOX_GUI_PART_3 = REGISTRY.register("keepers_box_gui_part_3", () -> IForgeMenuType.create(KeepersBoxGUIPart3Menu::new));
 	public static final RegistryObject<MenuType<KeepersBoxGUIPart4Menu>> KEEPERS_BOX_GUI_PART_4 = REGISTRY.register("keepers_box_gui_part_4", () -> IForgeMenuType.create(KeepersBoxGUIPart4Menu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesDestructionMenu>> WHEEL_ABILITIES_DESTRUCTION = REGISTRY.register("wheel_abilities_destruction", () -> IForgeMenuType.create(WheelAbilitiesDestructionMenu::new));
 }

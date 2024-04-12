@@ -14,6 +14,13 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CrystalStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AnimalsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart4ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -24,12 +31,12 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	private final Player entity;
 	ImageButton imagebutton_keepers_box_button_up;
 	ImageButton imagebutton_keepers_box_button_down_locked;
-	ImageButton imagebutton_keepers_box_slot;
-	ImageButton imagebutton_keepers_box_slot1;
-	ImageButton imagebutton_keepers_box_slot2;
-	ImageButton imagebutton_keepers_box_slot3;
-	ImageButton imagebutton_keepers_box_slot4;
-	ImageButton imagebutton_keepers_box_slot5;
+	ImageButton imagebutton_animals_element;
+	ImageButton imagebutton_crystal_element;
+	ImageButton imagebutton_ether_element;
+	ImageButton imagebutton_metal_element;
+	ImageButton imagebutton_earth_element;
+	ImageButton imagebutton_plants_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -47,18 +54,24 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 64 && mouseY < topPos + 88)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_animals"), mouseX, mouseY);
-		if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 64 && mouseY < topPos + 88)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_crystal"), mouseX, mouseY);
-		if (mouseX > leftPos + 42 && mouseX < leftPos + 66 && mouseY > topPos + 103 && mouseY < topPos + 127)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_ether"), mouseX, mouseY);
-		if (mouseX > leftPos + 133 && mouseX < leftPos + 157 && mouseY > topPos + 64 && mouseY < topPos + 88)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_metal"), mouseX, mouseY);
-		if (mouseX > leftPos + 157 && mouseX < leftPos + 181 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_earth"), mouseX, mouseY);
-		if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_plants"), mouseX, mouseY);
+		if (AnimalsStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 44 && mouseX < leftPos + 68 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_animals"), mouseX, mouseY);
+		if (CreationStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_crystal"), mouseX, mouseY);
+		if (EtherStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 42 && mouseX < leftPos + 66 && mouseY > topPos + 103 && mouseY < topPos + 127)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_ether"), mouseX, mouseY);
+		if (MetalStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 133 && mouseX < leftPos + 157 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_metal"), mouseX, mouseY);
+		if (EarthStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 157 && mouseX < leftPos + 181 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_earth"), mouseX, mouseY);
+		if (PlantsStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_plants"), mouseX, mouseY);
 	}
 
 	@Override
@@ -110,53 +123,89 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		});
 		guistate.put("button:imagebutton_keepers_box_button_down_locked", imagebutton_keepers_box_button_down_locked);
 		this.addRenderableWidget(imagebutton_keepers_box_button_down_locked);
-		imagebutton_keepers_box_slot = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot.png"), 16, 32, e -> {
-			if (true) {
+		imagebutton_animals_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_animals_element.png"), 16, 32, e -> {
+			if (AnimalsStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(2, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot", imagebutton_keepers_box_slot);
-		this.addRenderableWidget(imagebutton_keepers_box_slot);
-		imagebutton_keepers_box_slot1 = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot1.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (AnimalsStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_animals_element", imagebutton_animals_element);
+		this.addRenderableWidget(imagebutton_animals_element);
+		imagebutton_crystal_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_crystal_element.png"), 16, 32, e -> {
+			if (CrystalStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(3, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot1", imagebutton_keepers_box_slot1);
-		this.addRenderableWidget(imagebutton_keepers_box_slot1);
-		imagebutton_keepers_box_slot2 = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot2.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (CrystalStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_crystal_element", imagebutton_crystal_element);
+		this.addRenderableWidget(imagebutton_crystal_element);
+		imagebutton_ether_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_ether_element.png"), 16, 32, e -> {
+			if (EtherStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(4, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot2", imagebutton_keepers_box_slot2);
-		this.addRenderableWidget(imagebutton_keepers_box_slot2);
-		imagebutton_keepers_box_slot3 = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot3.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (EtherStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_ether_element", imagebutton_ether_element);
+		this.addRenderableWidget(imagebutton_ether_element);
+		imagebutton_metal_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_metal_element.png"), 16, 32, e -> {
+			if (MetalStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(5, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot3", imagebutton_keepers_box_slot3);
-		this.addRenderableWidget(imagebutton_keepers_box_slot3);
-		imagebutton_keepers_box_slot4 = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot4.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (MetalStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_metal_element", imagebutton_metal_element);
+		this.addRenderableWidget(imagebutton_metal_element);
+		imagebutton_earth_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_element.png"), 16, 32, e -> {
+			if (EarthStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(6, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot4", imagebutton_keepers_box_slot4);
-		this.addRenderableWidget(imagebutton_keepers_box_slot4);
-		imagebutton_keepers_box_slot5 = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_keepers_box_slot5.png"), 16, 32, e -> {
-			if (true) {
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (EarthStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_earth_element", imagebutton_earth_element);
+		this.addRenderableWidget(imagebutton_earth_element);
+		imagebutton_plants_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_plants_element.png"), 16, 32, e -> {
+			if (PlantsStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(7, x, y, z));
 				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
-		guistate.put("button:imagebutton_keepers_box_slot5", imagebutton_keepers_box_slot5);
-		this.addRenderableWidget(imagebutton_keepers_box_slot5);
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PlantsStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_plants_element", imagebutton_plants_element);
+		this.addRenderableWidget(imagebutton_plants_element);
 	}
 }
