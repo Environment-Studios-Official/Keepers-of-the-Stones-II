@@ -18,11 +18,13 @@ import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
+import com.esmods.keepersofthestonestwo.block.AmplifierBlockBlock;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModBlocks {
 	public static final DeferredRegister<Block> REGISTRY = DeferredRegister.create(ForgeRegistries.BLOCKS, PowerMod.MODID);
 	public static final RegistryObject<Block> AMPLIFIER_ORE = REGISTRY.register("amplifier_ore", () -> new AmplifierOreBlock());
+	public static final RegistryObject<Block> AMPLIFIER_BLOCK = REGISTRY.register("amplifier_block", () -> new AmplifierBlockBlock());
 	public static final RegistryObject<Block> KEEPERS_BOX = REGISTRY.register("keepers_box", () -> new KeepersBoxBlock());
 	public static final RegistryObject<Block> DEPLETED_ENERGIUM_ORE = REGISTRY.register("depleted_energium_ore", () -> new DepletedEnergiumOreBlock());
 	public static final RegistryObject<Block> DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("depleted_energium_block", () -> new DepletedEnergiumBlockBlock());
