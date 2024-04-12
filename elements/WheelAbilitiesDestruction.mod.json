@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_destruction_ray",
+          "image": "destruction_ray.png",
+          "hoveredImage": "destruction_ray_highlight.png",
           "onClick": {
             "name": "Attack101"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 50
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "tooltip_destruction_ray_uses_15",
+          "text": {
+            "fixedValue": "Destruction ray, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 46
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_destruction_ball",
+          "image": "destruction_ball.png",
+          "hoveredImage": "destruction_ball_highlight.png",
           "onClick": {
             "name": "Attack102"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 112
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "tooltip_destruction_ball_uses_45",
+          "text": {
+            "fixedValue": "Destruction ball, uses 45"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 106
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_lethal_result",
+          "image": "lethal_result.png",
+          "hoveredImage": "lethal_result_highlight.png",
           "onClick": {
             "name": "Attack103"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_lethal_result_uses_80",
+          "text": {
+            "fixedValue": "Lethal result, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
