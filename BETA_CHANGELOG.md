@@ -1,6 +1,7 @@
 What's new in Keepers of the Stones II version 1.0.0.17?<br />
 <br />- Added new elements - Creation and Destruction
 <br />- The amplifier drop can now be thrown
+<br />- Amplifier ore is now generated under all oceans
 <br />- When an amplifer drop hits a player, the player can get from 0 to 20 power points
 <br />- The buttons of the keeper's box interface have been improved
 <br />- Removed automatic issuing of stones to new players when they log into a world or server
