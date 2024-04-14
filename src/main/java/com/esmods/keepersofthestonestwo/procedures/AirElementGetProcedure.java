@@ -18,7 +18,7 @@ public class AirElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).air_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

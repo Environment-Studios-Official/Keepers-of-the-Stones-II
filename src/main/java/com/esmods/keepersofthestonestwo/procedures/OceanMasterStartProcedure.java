@@ -143,7 +143,7 @@ public class OceanMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.OCEANIC_TRIDENT.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.OCEANIC_TRIDENT.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

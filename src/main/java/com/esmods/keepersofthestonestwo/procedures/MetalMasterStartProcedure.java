@@ -143,7 +143,7 @@ public class MetalMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.RIGHT_METAL_GAUNTLET.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.RIGHT_METAL_GAUNTLET.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)
@@ -151,7 +151,7 @@ public class MetalMasterStartProcedure {
 		}
 		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.LEFT_METAL_GAUNTLET.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.LEFT_METAL_GAUNTLET.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.OFF_HAND, _setstack);
 			if (_entity instanceof Player _player)

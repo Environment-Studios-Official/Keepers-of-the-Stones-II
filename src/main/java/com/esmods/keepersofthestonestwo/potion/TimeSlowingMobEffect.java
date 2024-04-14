@@ -13,11 +13,6 @@ public class TimeSlowingMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.time_slowing";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		TimeSlowingKazhdyiTikVoVriemiaEffiektaProcedure.execute(entity);
 	}

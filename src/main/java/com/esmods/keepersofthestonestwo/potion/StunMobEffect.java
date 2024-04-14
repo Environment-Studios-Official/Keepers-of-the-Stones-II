@@ -14,11 +14,6 @@ public class StunMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.stun";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		StunPriNalozhieniiEffiektaProcedure.execute(entity);
 	}

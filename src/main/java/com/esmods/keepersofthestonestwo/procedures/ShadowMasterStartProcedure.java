@@ -143,7 +143,7 @@ public class ShadowMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_SCYTHE.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_SCYTHE.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

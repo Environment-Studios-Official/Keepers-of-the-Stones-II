@@ -88,11 +88,6 @@ public class BatteryChargerGUIScreen extends AbstractContainerScreen<BatteryChar
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 	}

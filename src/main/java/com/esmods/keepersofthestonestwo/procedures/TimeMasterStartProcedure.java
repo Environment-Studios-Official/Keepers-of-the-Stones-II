@@ -143,7 +143,7 @@ public class TimeMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.TIME_KHOPESH.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.TIME_KHOPESH.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

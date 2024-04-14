@@ -13,11 +13,6 @@ public class WhirlwindMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.whirlwind";
-	}
-
-	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		WhirlwindKazhdyiTikVoVriemiaEffiektaProcedure.execute(entity);
 	}

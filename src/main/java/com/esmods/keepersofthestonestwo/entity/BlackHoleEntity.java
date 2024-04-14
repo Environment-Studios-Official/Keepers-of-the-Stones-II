@@ -76,6 +76,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		super(type, world);
 		xpReward = 100000;
 		setNoAi(true);
+		setMaxUpStep(0.6f);
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 

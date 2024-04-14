@@ -143,7 +143,7 @@ public class TornadoMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_AXE.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_AXE.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

@@ -93,7 +93,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.FIRE_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.FIRE_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -187,7 +187,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.AIR_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.AIR_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -281,7 +281,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.EARTH_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.EARTH_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -375,7 +375,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.WATER_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.WATER_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -469,7 +469,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.ETHER_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.ETHER_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -563,7 +563,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.ICE_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.ICE_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -657,7 +657,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -751,7 +751,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.SOUND_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.SOUND_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -845,7 +845,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -939,7 +939,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.LAVA_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.LAVA_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1033,7 +1033,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.RAIN_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.RAIN_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1127,7 +1127,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1221,7 +1221,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1315,7 +1315,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1409,7 +1409,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1503,7 +1503,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.METAL_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.METAL_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1597,7 +1597,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1691,7 +1691,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1785,7 +1785,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1879,7 +1879,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -1973,7 +1973,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.SUN_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.SUN_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2067,7 +2067,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.MOON_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.MOON_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2161,7 +2161,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.SPACE_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.SPACE_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2255,7 +2255,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.TIME_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.TIME_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2349,7 +2349,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.CREATION_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.CREATION_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)
@@ -2443,7 +2443,7 @@ public class BatteryChargerTickProcedure {
 					BlockEntity _ent = world.getBlockEntity(BlockPos.containing(x, y, z));
 					if (_ent != null) {
 						final int _slotid = 2;
-						final ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_BATTERY.get());
+						final ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_BATTERY.get()).copy();
 						_setstack.setCount(1);
 						_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
 							if (capability instanceof IItemHandlerModifiable)

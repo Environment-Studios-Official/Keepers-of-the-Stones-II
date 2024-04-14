@@ -18,7 +18,7 @@ public class SoundElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).sound_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

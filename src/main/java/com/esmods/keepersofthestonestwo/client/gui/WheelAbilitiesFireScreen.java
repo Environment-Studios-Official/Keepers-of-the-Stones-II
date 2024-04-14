@@ -85,11 +85,6 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_flamethrower = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_flamethrower.png"), 46, 92, e -> {

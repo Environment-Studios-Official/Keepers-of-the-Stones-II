@@ -26,7 +26,7 @@ public class FireMasterEndProcedure {
 				_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1, false);
 			}
 		}
-		DetransformationKeyUseProcedure.execute(entity);
+		DetransformationKeyUseProcedure.execute(world, entity);
 		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("fire")) {
 			{
 				String _setval = "0";

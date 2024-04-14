@@ -143,7 +143,7 @@ public class EarthMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.EARTH_HAMMER.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.EARTH_HAMMER.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

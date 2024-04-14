@@ -40,7 +40,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -53,7 +53,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -66,7 +66,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -80,7 +80,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -93,7 +93,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -106,7 +106,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -120,7 +120,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -133,7 +133,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -146,7 +146,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -160,7 +160,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -173,7 +173,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -186,7 +186,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -200,7 +200,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -213,7 +213,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -226,7 +226,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -240,7 +240,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -253,7 +253,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -266,7 +266,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -280,7 +280,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -293,7 +293,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -306,7 +306,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -320,7 +320,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -333,7 +333,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -346,7 +346,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -360,7 +360,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -373,7 +373,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -386,7 +386,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -400,7 +400,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -413,7 +413,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -426,7 +426,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -440,7 +440,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -453,7 +453,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -466,7 +466,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -480,7 +480,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -493,7 +493,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -506,7 +506,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -520,7 +520,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -533,7 +533,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -546,7 +546,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -560,7 +560,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -573,7 +573,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -586,7 +586,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -600,7 +600,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -613,7 +613,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -626,7 +626,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -640,7 +640,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -653,7 +653,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -666,7 +666,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -680,7 +680,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -693,7 +693,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -706,7 +706,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -720,7 +720,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -733,7 +733,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -746,7 +746,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -760,7 +760,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -773,7 +773,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -786,7 +786,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -800,7 +800,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -813,7 +813,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -826,7 +826,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -840,7 +840,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -853,7 +853,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -866,7 +866,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -880,7 +880,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -893,7 +893,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -906,7 +906,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -920,7 +920,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -933,7 +933,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -946,7 +946,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -960,7 +960,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -973,7 +973,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -986,7 +986,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1000,7 +1000,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1013,7 +1013,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1026,7 +1026,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1040,7 +1040,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1053,7 +1053,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
@@ -1066,7 +1066,7 @@ public class ReturnStoneAfterDeadProcedure {
 						});
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

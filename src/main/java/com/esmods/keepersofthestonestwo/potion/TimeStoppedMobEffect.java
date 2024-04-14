@@ -16,11 +16,6 @@ public class TimeStoppedMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.time_stopped";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		TimeStoppedPriNalozhieniiEffiektaProcedure.execute(entity);
 	}
