@@ -18088,6 +18088,21 @@
         ]
       },
       "path": "~/Items/Amplifier"
+    },
+    {
+      "name": "CherryLeavesAttack",
+      "type": "particle",
+      "sortid": 846,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cherry_leaves_attack",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/cherry_leaves_attack.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/CherryLeavesAttackParticle.java"
+        ]
+      },
+      "path": "~/Elements/Plants"
     }
   ],
   "variable_elements": [
