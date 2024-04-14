@@ -15,11 +15,6 @@ public class IronSkinMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.iron_skin";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		IronSkinEffectStartProcedure.execute(entity);
 	}

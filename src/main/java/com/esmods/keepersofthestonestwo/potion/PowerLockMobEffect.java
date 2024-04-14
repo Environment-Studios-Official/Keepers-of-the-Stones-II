@@ -15,11 +15,6 @@ public class PowerLockMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.power_lock";
-	}
-
-	@Override
 	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		PowerLockStartProcedure.execute(entity);
 	}

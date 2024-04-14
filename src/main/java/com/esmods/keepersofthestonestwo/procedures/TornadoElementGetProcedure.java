@@ -18,7 +18,7 @@ public class TornadoElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).tornado_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

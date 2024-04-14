@@ -18,7 +18,7 @@ public class FireElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).fire_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

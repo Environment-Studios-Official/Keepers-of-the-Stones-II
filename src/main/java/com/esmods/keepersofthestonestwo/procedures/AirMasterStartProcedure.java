@@ -143,7 +143,7 @@ public class AirMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.AIR_RAPIER.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.AIR_RAPIER.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

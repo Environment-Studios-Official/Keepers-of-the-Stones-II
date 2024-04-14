@@ -3,16 +3,12 @@ package com.esmods.keepersofthestonestwo.item;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
-import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumRevengeAttackProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
@@ -52,11 +48,6 @@ public class EnergiumPickaxeItem extends PickaxeItem {
 		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
 		EnergiumRevengeAttackProcedure.execute(entity, itemstack);
 		return retval;
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

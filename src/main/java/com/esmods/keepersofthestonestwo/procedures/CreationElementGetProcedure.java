@@ -18,7 +18,7 @@ public class CreationElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).creation_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

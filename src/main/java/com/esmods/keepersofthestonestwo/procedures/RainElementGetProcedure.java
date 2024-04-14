@@ -18,7 +18,7 @@ public class RainElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).rain_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}

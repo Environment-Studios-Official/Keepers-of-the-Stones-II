@@ -85,11 +85,6 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 	}
 
 	@Override
-	public void onClose() {
-		super.onClose();
-	}
-
-	@Override
 	public void init() {
 		super.init();
 		imagebutton_air_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_air_flow.png"), 46, 92, e -> {

@@ -4504,20 +4504,6 @@
       "path": "~/Elements/Crystal"
     },
     {
-      "name": "ElementalStones",
-      "type": "tag",
-      "sortid": 273,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_stones",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/items/elemental_stones.json"
-        ]
-      },
-      "path": "~/Tags"
-    },
-    {
       "name": "RainStone",
       "type": "item",
       "sortid": 11,
@@ -10486,6 +10472,7 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/depleted_energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/depleted_energium_block.json",
           "src/main/resources/assets/power/models/block/depleted_energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumBlockBlock.java",
           "src/main/resources/assets/power/blockstates/depleted_energium_block.json"
@@ -10591,7 +10578,8 @@
           "src/main/resources/assets/power/blockstates/energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumBlockBlock.java",
           "src/main/resources/assets/power/models/block/energium_block.json",
-          "src/main/resources/assets/power/models/item/energium_block.json"
+          "src/main/resources/assets/power/models/item/energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/energium_block.json"
         ]
       },
       "path": "~/Items/Energium"
@@ -11079,6 +11067,7 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/BatteryChargerBlockEntity.java",
+          "src/main/resources/data/power/loot_tables/blocks/battery_charger.json",
           "src/main/resources/assets/power/blockstates/battery_charger.json",
           "src/main/resources/assets/power/models/block/battery_charger.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/BatteryChargerBlock.java",
@@ -11558,20 +11547,6 @@
         ]
       },
       "path": "~/Items/Energium"
-    },
-    {
-      "name": "ElementalBatteries",
-      "type": "tag",
-      "sortid": 562,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "elemental_batteries",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/forge/tags/items/elemental_batteries.json"
-        ]
-      },
-      "path": "~/Tags"
     },
     {
       "name": "VacuumDagger",
@@ -12530,7 +12505,8 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/KeepersBoxBlock.java",
           "src/main/resources/assets/power/models/item/keepers_box.json",
           "src/main/resources/assets/power/blockstates/keepers_box.json",
-          "src/main/resources/assets/power/models/block/keepers_box.json"
+          "src/main/resources/assets/power/models/block/keepers_box.json",
+          "src/main/resources/data/power/loot_tables/blocks/keepers_box.json"
         ]
       },
       "path": "~/Items/KeepersBox"
@@ -13657,7 +13633,8 @@
           "src/main/resources/assets/power/models/block/moon_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/MoonBlockBlock.java",
           "src/main/resources/assets/power/models/item/moon_block.json",
-          "src/main/resources/assets/power/blockstates/moon_block.json"
+          "src/main/resources/assets/power/blockstates/moon_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/moon_block.json"
         ]
       },
       "path": "~/Elements/Moon"
@@ -15296,7 +15273,8 @@
           "src/main/resources/assets/power/models/block/energium_controller.json",
           "src/main/resources/assets/power/blockstates/energium_controller.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumControllerBlock.java",
-          "src/main/resources/assets/power/models/item/energium_controller.json"
+          "src/main/resources/assets/power/models/item/energium_controller.json",
+          "src/main/resources/data/power/loot_tables/blocks/energium_controller.json"
         ]
       },
       "path": "~/Items/Energium"
@@ -18066,6 +18044,7 @@
           "src/main/resources/assets/power/blockstates/amplifier_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierBlockBlock.java",
           "src/main/resources/data/power/worldgen/configured_feature/amplifier_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/amplifier_block.json",
           "src/main/resources/assets/power/models/item/amplifier_block.json",
           "src/main/resources/data/power/forge/biome_modifier/amplifier_block_biome_modifier.json",
           "src/main/resources/assets/power/models/block/amplifier_block.json",
@@ -18529,6 +18508,91 @@
       "subtitle": "Ear ringing"
     }
   ],
+  "tag_elements": {
+    "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:MoonBlock",
+      "~CUSTOM:KeepersBox",
+      "~CUSTOM:BatteryCharger",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:forge:elemental_batteries": [
+      "CUSTOM:EmptyBattery",
+      "CUSTOM:FireBattery",
+      "CUSTOM:AirBattery",
+      "CUSTOM:EarthBattery",
+      "CUSTOM:WaterBattery",
+      "CUSTOM:EtherBattery",
+      "CUSTOM:IceBattery",
+      "CUSTOM:LightningBattery",
+      "CUSTOM:SoundBattery",
+      "CUSTOM:CrystalBattery",
+      "CUSTOM:LavaBattery",
+      "CUSTOM:RainBattery",
+      "CUSTOM:TornadoBattery",
+      "CUSTOM:OceanBattery",
+      "CUSTOM:PlantsBattery",
+      "CUSTOM:AnimalsBattery",
+      "CUSTOM:MetalBattery",
+      "CUSTOM:LightBattery",
+      "CUSTOM:ShadowBattery",
+      "CUSTOM:VacuumBattery"
+    ],
+    "ITEMS:forge:elemental_stones": [
+      "CUSTOM:FireStone",
+      "CUSTOM:AirStone",
+      "CUSTOM:EarthStone",
+      "CUSTOM:WaterStone",
+      "CUSTOM:EtherStone",
+      "CUSTOM:IceStone",
+      "CUSTOM:LightningStone",
+      "CUSTOM:SoundStone",
+      "CUSTOM:CrystalStone",
+      "CUSTOM:RainStone",
+      "CUSTOM:TornadoStone",
+      "CUSTOM:OceanStone",
+      "CUSTOM:PlantsStone",
+      "CUSTOM:AnimalsStone",
+      "CUSTOM:MetalStone",
+      "CUSTOM:LightStone",
+      "CUSTOM:ShadowStone",
+      "CUSTOM:VacuumStone",
+      "CUSTOM:SunStone",
+      "CUSTOM:MoonStone",
+      "CUSTOM:SpaceStone",
+      "CUSTOM:TimeStone",
+      "CUSTOM:BloodStone",
+      "CUSTOM:TechnologyStone",
+      "CUSTOM:TeleportationStone",
+      "CUSTOM:ExplosionStone",
+      "CUSTOM:AmberStone",
+      "CUSTOM:CreationStone",
+      "CUSTOM:DestructionStone",
+      "CUSTOM:MistStone",
+      "CUSTOM:SandStone",
+      "CUSTOM:SpeedStone",
+      "CUSTOM:PoisonStone",
+      "CUSTOM:MagnetStone",
+      "CUSTOM:MushroomsStone",
+      "CUSTOM:MercuryStone",
+      "CUSTOM:MusicStone",
+      "CUSTOM:PlagueStone",
+      "CUSTOM:BlueFlameStone",
+      "CUSTOM:GravityStone",
+      "CUSTOM:SmokeStone",
+      "CUSTOM:FormStone",
+      "CUSTOM:MindStone",
+      "CUSTOM:GoldenDustStone",
+      "CUSTOM:DarknessStone",
+      "CUSTOM:EnergyStone",
+      "CUSTOM:SpiritStone",
+      "CUSTOM:LavaStone"
+    ]
+  },
   "language_map": {
     "ru_ru": {
       "item.power.ether_battery": "Батарея",
@@ -18537,8 +18601,8 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -18551,8 +18615,8 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
@@ -18597,8 +18661,8 @@
       "item.power.light_battery": "Батарея",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
-      "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
+      "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Разрушение",
       "item.power.energy_staff": "Посох энергии",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
@@ -18609,9 +18673,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
-      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
-      "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.space_armor_leggings": "Поножи мастера космоса",
+      "item.power.smithing_template.ingredients": "§7Материалы:",
+      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
       "item.power.metal_armor_leggings": "Поножи мастера металла",
       "gui.power.wheel_abilities_destruction.tooltip_lethal_result_uses_80": "Летальный исход, расходует 80",
       "item.power.fire_stone": "Камень огня",
@@ -18624,8 +18688,8 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ocean_battery": "Батарея",
       "block.power.moon_block": "Лунный блок",
-      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "power.modinfo.recharge_stone": "Перезарядка: ",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -18639,8 +18703,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.metal_stone": "Камень металла",
       "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
+      "item.power.metal_stone": "Камень металла",
       "item_group.power.stones": "KotS: Камни",
       "effect.power.lethality": "Летальность",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
@@ -18660,8 +18724,8 @@
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
-      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.magnet_stone": "Камень магнита",
+      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
@@ -18995,8 +19059,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -19009,8 +19073,8 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "item_group.power.items": "KotS: Items",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "battery.desc.ice": "Ice",
@@ -19055,8 +19119,8 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
@@ -19067,9 +19131,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
       "item.power.plants_armor_boots": "Plants Boots",
-      "item.power.tornado_armor_boots": "Tornado Boots",
-      "item.power.smithing_template.ingredients": "",
       "item.power.space_armor_leggings": "Space Leggings",
+      "item.power.smithing_template.ingredients": "",
+      "item.power.tornado_armor_boots": "Tornado Boots",
       "item.power.metal_armor_leggings": "Metal Leggings",
       "gui.power.wheel_abilities_destruction.tooltip_lethal_result_uses_80": "Lethal result, uses 80",
       "item.power.fire_stone": "Fire Stone",
@@ -19082,8 +19146,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -19097,8 +19161,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.metal_stone": "Metal Stone",
       "item.power.sun_armor_chestplate": "Sun Chestplate",
+      "item.power.metal_stone": "Metal Stone",
       "item_group.power.stones": "KotS: Stones",
       "effect.power.lethality": "Lethality",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
@@ -19118,8 +19182,8 @@
       "item.power.energium_sword": "Energium Sword",
       "item.power.empty_battery": "Battery",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
-      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Rain",
       "item.power.magnet_stone": "Magnet Stone",
+      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Rain",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
@@ -19963,7 +20027,6 @@
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
     "license": "GNU General Public License version 3 (GPLv3)",
-    "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "modPicture": "logo",
     "requiredMods": [
@@ -19982,8 +20045,7 @@
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
-    "modElementsPackage": "com.esmods.keepersofthestonestwo",
-    "lockBaseModFiles": false
+    "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202300452316
+  "mcreatorVersion": 202400115821
 }

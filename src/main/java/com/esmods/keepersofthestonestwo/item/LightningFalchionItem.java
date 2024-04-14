@@ -6,15 +6,11 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.crafting.Ingredient;
-import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.network.chat.Component;
-
-import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.LightningFalchionKazhdyiTikVInvientarieProcedure;
 
@@ -30,7 +26,7 @@ public class LightningFalchionItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 4.3f;
+				return 2.3f;
 			}
 
 			public int getLevel() {
@@ -45,11 +41,6 @@ public class LightningFalchionItem extends SwordItem {
 				return Ingredient.of();
 			}
 		}, 3, -1.92f, new Item.Properties().fireResistant());
-	}
-
-	@Override
-	public void appendHoverText(ItemStack itemstack, Level world, List<Component> list, TooltipFlag flag) {
-		super.appendHoverText(itemstack, world, list, flag);
 	}
 
 	@Override

@@ -143,7 +143,7 @@ public class MoonMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.MOON_DOUBLE_SIDED_SPEAR.get());
+			ItemStack _setstack = new ItemStack(PowerModItems.MOON_DOUBLE_SIDED_SPEAR.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

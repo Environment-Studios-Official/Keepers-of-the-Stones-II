@@ -1,14 +1,14 @@
 {
   "replace": false,
   "values": [
-    "power:amplifier_ore",
     "power:amplifier_block",
-    "power:keepers_box",
-    "power:depleted_energium_ore",
-    "power:depleted_energium_block",
-    "power:energium_block",
+    "power:amplifier_ore",
     "power:energium_controller",
+    "power:moon_block",
+    "power:keepers_box",
     "power:battery_charger",
-    "power:moon_block"
+    "power:energium_block",
+    "power:depleted_energium_block",
+    "power:depleted_energium_ore"
   ]
 }

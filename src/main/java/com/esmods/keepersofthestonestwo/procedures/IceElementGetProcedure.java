@@ -18,7 +18,7 @@ public class IceElementGetProcedure {
 		if (!PowerModVariables.MapVariables.get(world).ice_stone) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
-					ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+					ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 					_setstack.setCount(1);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
