@@ -12,43 +12,33 @@ public class AmplifierDropProjectileKoghdaSnariadPopadaietVIghrokaProcedure {
 			return;
 		if (Mth.nextInt(RandomSource.create(), 1, 5) == 1) {
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 0;
+				_vars.syncPlayerVariables(entity);
 			}
 		} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 5;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
+				_vars.syncPlayerVariables(entity);
 			}
 		} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 10;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 10;
+				_vars.syncPlayerVariables(entity);
 			}
 		} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 15;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 15;
+				_vars.syncPlayerVariables(entity);
 			}
 		} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 20;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 20;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

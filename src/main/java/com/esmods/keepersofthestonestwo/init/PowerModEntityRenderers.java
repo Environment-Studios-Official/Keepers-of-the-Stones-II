@@ -4,10 +4,10 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
@@ -44,8 +44,6 @@ import com.esmods.keepersofthestonestwo.client.renderer.AmethystAttackProjectile
 public class PowerModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(PowerModEntities.SHADOW.get(), ShadowRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.STONE_ATTACK_PROJECTILE.get(), StoneAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GRASS_BLOCK_ATTACK_PROJECTILE.get(), GrassBlockAttackProjectileRenderer::new);
@@ -68,9 +66,11 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), IronAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), KnifeAttackProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.LIGHTBALL_PROJECTILE.get(), LightballProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SHADOW.get(), ShadowRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SHADOW_SPHERE.get(), ShadowSphereRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SPHERE_NOTHING_PROJECTILE.get(), SphereNothingProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.METEORITE_PROJECTILE.get(), MeteoriteProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMPLIFIER_DROP_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_BALL_PROJECTILE.get(), DestructionBallProjectileRenderer::new);

@@ -13,17 +13,12 @@ public class WhirlwindMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.whirlwind";
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+		return true;
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		WhirlwindKazhdyiTikVoVriemiaEffiektaProcedure.execute(entity);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
 	}
 }

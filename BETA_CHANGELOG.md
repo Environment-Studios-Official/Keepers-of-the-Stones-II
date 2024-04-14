@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.17?<br />
+<br />- Mod ported to NeoForge 1.20.4
 <br />- Added new elements - Creation and Destruction
 <br />- Added amplifier block
 <br />- Amplifier ore is now generated under all oceans

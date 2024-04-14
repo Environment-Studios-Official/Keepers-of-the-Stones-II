@@ -1,9 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
@@ -28,14 +28,12 @@ public class WheelOpenKeyPressedTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).wheel_open_key_var) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).wheel_open_key_var) {
 			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.wheel_open_key_var = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.wheel_open_key_var = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

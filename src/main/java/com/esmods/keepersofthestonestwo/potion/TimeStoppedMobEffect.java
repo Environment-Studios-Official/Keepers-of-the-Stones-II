@@ -1,13 +1,11 @@
 
 package com.esmods.keepersofthestonestwo.potion;
 
-import net.minecraft.world.entity.ai.attributes.AttributeMap;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriNalozhieniiEffiektaProcedure;
-import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedKazhdyiTikVoVriemiaEffiektaProcedure;
 
 public class TimeStoppedMobEffect extends MobEffect {
@@ -16,28 +14,17 @@ public class TimeStoppedMobEffect extends MobEffect {
 	}
 
 	@Override
-	public String getDescriptionId() {
-		return "effect.power.time_stopped";
+	public void onEffectStarted(LivingEntity entity, int amplifier) {
+		TimeStoppedPriNalozhieniiEffiektaProcedure.execute(entity);
 	}
 
 	@Override
-	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		TimeStoppedPriNalozhieniiEffiektaProcedure.execute(entity);
+	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
+		return true;
 	}
 
 	@Override
 	public void applyEffectTick(LivingEntity entity, int amplifier) {
 		TimeStoppedKazhdyiTikVoVriemiaEffiektaProcedure.execute(entity);
-	}
-
-	@Override
-	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		TimeStoppedPriIstiechieniiEffiektaProcedure.execute(entity);
-	}
-
-	@Override
-	public boolean isDurationEffectTick(int duration, int amplifier) {
-		return true;
 	}
 }

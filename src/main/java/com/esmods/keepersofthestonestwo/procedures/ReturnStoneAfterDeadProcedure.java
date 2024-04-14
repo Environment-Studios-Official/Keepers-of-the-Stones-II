@@ -1,10 +1,10 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
@@ -29,1044 +29,888 @@ public class ReturnStoneAfterDeadProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
-			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("fire")) {
+		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active) {
+			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).battery) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("fire")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("fire")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("fire")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("fire")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("air")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("air")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("air")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("air")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("air")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.AIR_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("earth")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("earth")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("earth")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("earth")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("earth")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("earth")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("water")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("water")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("water")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("water")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.WATER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ether")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ether")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ether")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ether")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ether")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ether")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ETHER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ice")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ice")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ice")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ice")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ice")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ice")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ICE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lightning")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("lightning")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("lightning")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("lightning")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("lightning")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("lightning")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHTNING_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sound")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sound")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("sound")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sound")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sound")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sound")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SOUND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("crystal")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("crystal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("crystal")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("crystal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("crystal")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("crystal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CRYSTAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("lava")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("lava")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("lava")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("lava")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("lava")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("lava")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LAVA_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("rain")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("rain")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("rain")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("rain")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("rain")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("rain")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("tornado")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("tornado")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("tornado")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("tornado")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("tornado")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("tornado")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TORNADO_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("ocean")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ocean")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ocean")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ocean")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("ocean")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ocean")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.OCEAN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("plants")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("plants")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("plants")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("plants")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("plants")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("plants")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.PLANTS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("animals")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("animals")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("animals")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("animals")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("animals")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("animals")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ANIMALS_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("metal")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("metal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("metal")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("metal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("metal")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("metal")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.METAL_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("light")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("light")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("light")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("light")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("light")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("light")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("shadow")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("shadow")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("shadow")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("shadow")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("shadow")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("shadow")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SHADOW_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("vacuum")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("vacuum")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("vacuum")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("vacuum")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("vacuum")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("vacuum")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("energy")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("energy")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("energy")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("energy")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("energy")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("energy")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.ENERGY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("sun")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sun")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("sun")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sun")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sun")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sun")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SUN_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("moon")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("moon")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("moon")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("moon")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("moon")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("moon")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.MOON_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("space")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("space")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("space")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.SPACE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("time")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("time")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("time")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("time")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("time")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("time")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.TIME_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("creation")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("creation")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("creation")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("creation")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("creation")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("creation")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("destruction")) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("destruction")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_first = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("destruction")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("destruction")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_second = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("destruction")) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("destruction")) {
 					{
-						String _setval = "0";
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.element_name_third = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
 					}
 					if (entity instanceof Player _player) {
-						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get());
+						ItemStack _setstack = new ItemStack(PowerModItems.DESTRUCTION_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

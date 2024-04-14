@@ -9,11 +9,9 @@ public class StarPotionInfinityPriZaviershieniiIspolzovaniiaProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = 300000000;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.power = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.power = 300000000;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

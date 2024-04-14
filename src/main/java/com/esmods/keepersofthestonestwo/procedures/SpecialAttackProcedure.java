@@ -1,7 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -34,6 +33,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.Direction;
@@ -43,8 +43,6 @@ import net.minecraft.commands.CommandSource;
 
 import java.util.List;
 import java.util.Comparator;
-
-import dev.kosmx.playerAnim.core.data.quarktool.Reset;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
@@ -93,12 +91,12 @@ public class SpecialAttackProcedure {
 		double zr = 0;
 		boolean success = false;
 		boolean Reset = false;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability_block == false) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block == false) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.swing(InteractionHand.MAIN_HAND, true);
 			if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index0 = 0; index0 < 15; index0++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -175,27 +173,25 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 25) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 						PowerMod.queueServerWork(10, () -> {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 							{
@@ -221,9 +217,9 @@ public class SpecialAttackProcedure {
 							PowerMod.queueServerWork(10, () -> {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1, false);
 									}
 								}
 								{
@@ -249,9 +245,9 @@ public class SpecialAttackProcedure {
 								PowerMod.queueServerWork(10, () -> {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 										}
 									}
 									{
@@ -278,20 +274,18 @@ public class SpecialAttackProcedure {
 							});
 						});
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 25;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 25;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("fire_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel _level)
@@ -301,18 +295,16 @@ public class SpecialAttackProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt51 && _livEnt51.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("air_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index1 = 0; index1 < 15; index1++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -398,21 +390,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("air_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						particleAmount = 25;
 						particleRadius = 2;
 						for (int index2 = 0; index2 < (int) particleAmount; index2++) {
@@ -433,28 +423,26 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("air_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("air_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
+						if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 							if (world instanceof ServerLevel _level)
@@ -464,19 +452,17 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+								_vars.syncPlayerVariables(entity);
 							}
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt120 && _livEnt120.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("earth_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.STONE.asItem()) {
 							{
 								Entity _shootFrom = entity;
@@ -504,17 +490,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.DIRT.asItem()) {
@@ -544,17 +528,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.gravel.break")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.gravel.break")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.gravel.break")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.gravel.break")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLESTONE.asItem()) {
@@ -584,17 +566,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.COBBLED_DEEPSLATE.asItem()) {
@@ -624,17 +604,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate_bricks.break")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.deepslate_bricks.break")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate_bricks.break")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.deepslate_bricks.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						} else {
@@ -664,23 +642,21 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.grass.break")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("earth_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 						for (int index3 = 0; index3 < 10; index3++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -713,9 +689,9 @@ public class SpecialAttackProcedure {
 													(float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
-													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
+													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
 												} else {
-													_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
 												}
 											}
 											success = true;
@@ -726,35 +702,31 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("earth_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("earth_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						if (entity instanceof Player _player) {
-							ItemStack _setstack = new ItemStack(PowerModItems.EARTH_SHIELD.get());
+							ItemStack _setstack = new ItemStack(PowerModItems.EARTH_SHIELD.get()).copy();
 							_setstack.setCount(1);
 							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt176 && _livEnt176.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("water_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index4 = 0; index4 < 15; index4++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -797,21 +769,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.dolphin.swim")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("water_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -834,21 +804,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("water_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("water_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -860,17 +828,15 @@ public class SpecialAttackProcedure {
 									particleRadius = 2;
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1);
 										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.fish.swim")), SoundSource.PLAYERS, 1, 1, false);
 										}
 									}
 									{
-										double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entity);
-										});
+										PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+										_vars.syncPlayerVariables(entity);
 									}
 								}
 							}
@@ -879,8 +845,8 @@ public class SpecialAttackProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt200 && _livEnt200.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index5 = 0; index5 < 15; index5++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -923,26 +889,24 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.NEUTRAL, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.NEUTRAL, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.power_select")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel projectileLevel) {
@@ -1066,15 +1030,13 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ether_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 3, false, false));
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -1083,9 +1045,9 @@ public class SpecialAttackProcedure {
 							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 3, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.beacon.activate")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -1099,18 +1061,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt253 && _livEnt253.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ice_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index8 = 0; index8 < 15; index8++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1207,21 +1167,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ice_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -1244,21 +1202,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ice_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ice_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (!world.getBlockState(new BlockPos(
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
 								entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY(),
@@ -1278,26 +1234,22 @@ public class SpecialAttackProcedure {
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
 									{
-										boolean _setval = true;
-										entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.ability_block = _setval;
-											capability.syncPlayerVariables(entityiterator);
-										});
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.ability_block = true;
+										_vars.syncPlayerVariables(entityiterator);
 									}
 									entityiterator.getPersistentData().putBoolean("frozenIceberg", true);
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);
 										} else {
-											_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1, false);
 										}
 									}
 									{
-										double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entity);
-										});
+										PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+										_vars.syncPlayerVariables(entity);
 									}
 								}
 							}
@@ -1306,8 +1258,8 @@ public class SpecialAttackProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt313 && _livEnt313.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lightning_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index9 = 0; index9 < 15; index9++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1350,21 +1302,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.NEUTRAL, (float) 0.1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lightning_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						for (int index10 = 0; index10 < 15; index10++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1419,17 +1369,15 @@ public class SpecialAttackProcedure {
 								_level.addFreshEntity(entityToSpawn);
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lightning_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lightning_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -1451,24 +1399,22 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt348 && _livEnt348.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sound_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index11 = 0; index11 < 15; index11++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1511,21 +1457,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sound_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -1547,21 +1491,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sound_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sound_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index12 = 0; index12 < (int) particleAmount; index12++) {
@@ -1572,9 +1514,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.warden.sonic_boom")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -1591,18 +1533,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt381 && _livEnt381.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -1624,21 +1564,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 						for (int index13 = 0; index13 < 10; index13++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1671,9 +1609,9 @@ public class SpecialAttackProcedure {
 													(float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
-													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
+													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
 												} else {
-													_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
 												}
 											}
 											success = true;
@@ -1684,22 +1622,20 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("crystal_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.amethyst_block.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel projectileLevel) {
@@ -1831,18 +1767,16 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt431 && _livEnt431.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lava_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index14 = 0; index14 < 15; index14++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -1919,21 +1853,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lava_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -1956,21 +1888,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("lava_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("lava_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 						for (int index15 = 0; index15 < 15; index15++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2011,17 +1941,15 @@ public class SpecialAttackProcedure {
 										Blocks.IRON_BLOCK.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							} else if ((world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2041,17 +1969,15 @@ public class SpecialAttackProcedure {
 										Blocks.GOLD_BLOCK.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							} else if ((world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2071,17 +1997,15 @@ public class SpecialAttackProcedure {
 										Blocks.COPPER_BLOCK.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							} else if ((world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2101,17 +2025,15 @@ public class SpecialAttackProcedure {
 										Blocks.STONE.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.NEUTRAL, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.NEUTRAL, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.NEUTRAL, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.NEUTRAL, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							} else if ((world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2120,7 +2042,7 @@ public class SpecialAttackProcedure {
 											.getY(),
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getZ())))
-									.getBlock() == ForgeRegistries.BLOCKS.getValue(new ResourceLocation("minecraft:dirt"))) {
+									.getBlock() == BuiltInRegistries.BLOCK.get(new ResourceLocation("minecraft:dirt"))) {
 								world.setBlock(new BlockPos(
 										entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX(),
@@ -2131,17 +2053,15 @@ public class SpecialAttackProcedure {
 										Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							} else if ((world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2161,17 +2081,15 @@ public class SpecialAttackProcedure {
 										Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
-									double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.power = _setval;
-										capability.syncPlayerVariables(entity);
-									});
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+									_vars.syncPlayerVariables(entity);
 								}
 							}
 						}
@@ -2179,8 +2097,8 @@ public class SpecialAttackProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt537 && _livEnt537.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("rain_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index16 = 0; index16 < 15; index16++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2223,21 +2141,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("rain_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(10 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -2258,27 +2174,25 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("rain_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("rain_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 						if (world.getLevelData().isRaining()) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 							if (world instanceof ServerLevel _level)
@@ -2288,18 +2202,16 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+								_vars.syncPlayerVariables(entity);
 							}
 						} else {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("weather.rain.above")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 							if (world instanceof ServerLevel _level)
@@ -2309,19 +2221,17 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+								_vars.syncPlayerVariables(entity);
 							}
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt575 && _livEnt575.hasEffect(PowerModMobEffects.TORNADO_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("tornado_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -2343,21 +2253,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("tornado_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						for (int index18 = 0; index18 < 15; index18++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2391,28 +2299,26 @@ public class SpecialAttackProcedure {
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("tornado_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("tornado_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
+						if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.attack.sweep")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 							if (world instanceof ServerLevel _level)
@@ -2422,19 +2328,17 @@ public class SpecialAttackProcedure {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+								_vars.syncPlayerVariables(entity);
 							}
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt595 && _livEnt595.hasEffect(PowerModMobEffects.OCEAN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ocean_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index19 = 0; index19 < 15; index19++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2477,21 +2381,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ocean_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						particleAmount = 25;
 						particleRadius = 2;
 						for (int index20 = 0; index20 < (int) particleAmount; index20++) {
@@ -2512,27 +2414,25 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bubble_column.whirlpool_inside")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("ocean_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 5) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ocean_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.splash")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.dolphin.splash")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.dolphin.splash")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.dolphin.splash")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel _level)
@@ -2542,18 +2442,16 @@ public class SpecialAttackProcedure {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DOLPHINS_GRACE, 100, 18, false, false));
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 5;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 5;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt628 && _livEnt628.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("plants_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index21 = 0; index21 < 15; index21++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2596,21 +2494,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.cherry_leaves.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.cherry_leaves.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.cherry_leaves.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.cherry_leaves.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("plants_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -2633,28 +2529,26 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.cave_vines.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.cave_vines.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.cave_vines.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.cave_vines.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("plants_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 65) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("plants_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 65) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 5, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.spore_blossom.fall")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -2668,18 +2562,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 65;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 65;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt657 && _livEnt657.hasEffect(PowerModMobEffects.ANIMALS_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("animals_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index24 = 0; index24 < 15; index24++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -2722,21 +2614,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.imitate.spider")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.parrot.imitate.spider")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.parrot.imitate.spider")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.parrot.imitate.spider")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("animals_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -2751,21 +2641,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.spider.step")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("animals_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 60) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("animals_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 60) {
 						for (int index25 = 0; index25 < 3; index25++) {
 							if (world instanceof ServerLevel _level) {
 								Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
@@ -2785,18 +2673,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 60;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 60;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt684 && _livEnt684.hasEffect(PowerModMobEffects.METAL_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.IRON_BLOCK.asItem()) {
 							{
 								Entity _shootFrom = entity;
@@ -2824,17 +2710,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.break")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.metal.break")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.break")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.metal.break")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.GOLD_BLOCK.asItem()) {
@@ -2864,17 +2748,15 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.break")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.metal.break")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.metal.break")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.metal.break")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						} else {
@@ -2904,28 +2786,26 @@ public class SpecialAttackProcedure {
 								}
 							}
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.break")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.break")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.break")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.break")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.trident.throw")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						if (world instanceof ServerLevel projectileLevel) {
@@ -3049,34 +2929,30 @@ public class SpecialAttackProcedure {
 							projectileLevel.addFreshEntity(_entityToSpawn);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("metal_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
-						if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
+						if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN.get(), 300, 0, false, false));
 							if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2, false, false));
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+								_vars.syncPlayerVariables(entity);
 							}
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt731 && _livEnt731.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("light_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index26 = 0; index26 < 15; index26++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3119,21 +2995,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("light_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -3155,21 +3029,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("light_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 75) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("light_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 						particleAmount = 50;
 						particleRadius = 3;
 						for (int index27 = 0; index27 < 60; index27++) {
@@ -3194,24 +3066,22 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.prepare_blindness")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.prepare_blindness")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.prepare_blindness")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.prepare_blindness")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 75;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt767 && _livEnt767.hasEffect(PowerModMobEffects.SHADOW_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index29 = 0; index29 < 15; index29++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3254,21 +3124,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -3290,21 +3158,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("shadow_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 75) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = PowerModEntities.SHADOW.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
@@ -3322,18 +3188,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 75;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt791 && _livEnt791.hasEffect(PowerModMobEffects.VACUUM_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("vacuum_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -3356,21 +3220,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("vacuum_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						particleAmount = 30;
 						particleRadius = 5;
 						for (int index30 = 0; index30 < (int) particleAmount; index30++) {
@@ -3381,9 +3243,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -3397,41 +3259,35 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 100) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("vacuum_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 100) {
 						if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY) == false) {
 							world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, world.getServer());
 							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
 							{
-								boolean _setval = true;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.zeroing = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.zeroing = true;
+								_vars.syncPlayerVariables(entity);
 							}
 						} else {
 							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 100;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 100;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt813 && _livEnt813.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("energy_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index31 = 0; index31 < 15; index31++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3476,21 +3332,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("energy_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -3512,28 +3366,26 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 35;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("energy_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 300, 4, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:electric_spark")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -3547,18 +3399,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt843 && _livEnt843.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sun_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						for (int index34 = 0; index34 < 15; index34++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3605,24 +3455,22 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sun_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						{
 							final Vec3 _center = new Vec3(x, y, z);
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -3650,15 +3498,13 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("sun_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index35 = 0; index35 < (int) particleAmount; index35++) {
@@ -3669,9 +3515,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -3685,18 +3531,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt881 && _livEnt881.hasEffect(PowerModMobEffects.MOON_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("moon_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						for (int index36 = 0; index36 < 15; index36++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3743,24 +3587,22 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("moon_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 						for (int index37 = 0; index37 < 10; index37++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3793,9 +3635,9 @@ public class SpecialAttackProcedure {
 													(float) 31.5);
 											if (world instanceof Level _level) {
 												if (!_level.isClientSide()) {
-													_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
+													_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
 												} else {
-													_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
+													_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1, false);
 												}
 											}
 											success = true;
@@ -3806,17 +3648,15 @@ public class SpecialAttackProcedure {
 						}
 						if (success == true) {
 							{
-								double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.power = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+								_vars.syncPlayerVariables(entity);
 							}
 							success = false;
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("moon_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
 						for (int index38 = 0; index38 < (int) particleAmount; index38++) {
@@ -3827,9 +3667,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -3843,18 +3683,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt930 && _livEnt930.hasEffect(PowerModMobEffects.SPACE_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("space_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index39 = 0; index39 < 15; index39++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3897,21 +3735,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("space_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -3934,21 +3770,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.deepslate.break")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("space_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (world instanceof ServerLevel _level) {
 							Entity entityToSpawn = PowerModEntities.BLACK_HOLE.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
 							if (entityToSpawn != null) {
@@ -3956,18 +3790,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt951 && _livEnt951.hasEffect(PowerModMobEffects.TIME_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("time_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						for (int index40 = 0; index40 < 15; index40++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4011,21 +3843,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("time_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						particleAmount = 125;
 						particleRadius = 4;
 						for (int index41 = 0; index41 < (int) particleAmount; index41++) {
@@ -4036,9 +3866,9 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -4054,22 +3884,20 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("time_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SPEED, 200, 4, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.bell.resonate")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -4083,18 +3911,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 30;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt991 && _livEnt991.hasEffect(PowerModMobEffects.CREATION_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 						for (int index44 = 0; index44 < 15; index44++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4164,21 +3990,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 10;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 10;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 						particleAmount = 4;
 						particleRadius = 1;
 						for (int index45 = 0; index45 < 20; index45++) {
@@ -4224,28 +4048,26 @@ public class SpecialAttackProcedure {
 						});
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IMMORTALITY.get(), 400, 0, false, false));
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 							}
 						}
 						particleAmount = 8;
@@ -4259,18 +4081,16 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt1048 && _livEnt1048.hasEffect(PowerModMobEffects.DESTRUCTION_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("destruction_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						for (int index49 = 0; index49 < 15; index49++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4315,21 +4135,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("destruction_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 45) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 						{
 							Entity _shootFrom = entity;
 							Level projectileLevel = _shootFrom.level();
@@ -4351,21 +4169,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 45;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("destruction_attack_3")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.RUNES_OF_DESTRUCTION.get()), x, y, z, 5, 1, 1, 1, 0.25);
 						{
@@ -4380,17 +4196,15 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}

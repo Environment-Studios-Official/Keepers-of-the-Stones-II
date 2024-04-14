@@ -1,7 +1,7 @@
 {
-  "type": "forge:add_spawns",
+  "type": "neoforge:add_spawns",
   "biomes": {
-    "type": "forge:any"
+    "type": "neoforge:any"
   },
   "spawners": {
     "type": "power:black_hole",
