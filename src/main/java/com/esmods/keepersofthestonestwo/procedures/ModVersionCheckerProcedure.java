@@ -97,7 +97,7 @@ public class ModVersionCheckerProcedure {
 			}
 			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/beta/latest_beta.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_latest_beta.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
@@ -161,7 +161,7 @@ public class ModVersionCheckerProcedure {
 			}
 			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/main/latest_release.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_latest_release.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
