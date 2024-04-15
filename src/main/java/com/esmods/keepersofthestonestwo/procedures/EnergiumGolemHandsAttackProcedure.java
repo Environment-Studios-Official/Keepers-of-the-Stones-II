@@ -59,6 +59,15 @@ public class EnergiumGolemHandsAttackProcedure {
 			}
 		}
 		if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 20) {
+			if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 9) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1, false);
+					}
+				}
+			}
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 2;
@@ -71,13 +80,6 @@ public class EnergiumGolemHandsAttackProcedure {
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 12);
 							entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.35), 0.25, (entity.getLookAngle().z * 0.35)));
 						}
-					}
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 				Range = Range + 1;

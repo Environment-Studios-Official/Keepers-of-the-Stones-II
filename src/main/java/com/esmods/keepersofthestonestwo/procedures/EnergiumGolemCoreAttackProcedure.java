@@ -61,6 +61,15 @@ public class EnergiumGolemCoreAttackProcedure {
 			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDouble("BreathRange") + 1));
 		}
 		if (entity.getPersistentData().getDouble("IA") > 24 && entity.getPersistentData().getDouble("IA") < 37) {
+			if (entity.getPersistentData().getDouble("IA") > 24 && entity.getPersistentData().getDouble("IA") < 26) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
+					}
+				}
+			}
 			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDouble("BreathRange"); index0++) {
 				for (int index1 = 0; index1 < (int) particles; index1++) {
 					XPar = x + Math.cos(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
@@ -78,13 +87,6 @@ public class EnergiumGolemCoreAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
 							}
-						}
-					}
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.HOSTILE, 1, 1, false);
 						}
 					}
 					loop = loop + 1;
