@@ -68,7 +68,7 @@ public class EnergiumGolemCoreAttackProcedure {
 								.toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO)), 32);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO)), 26);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
 							}
