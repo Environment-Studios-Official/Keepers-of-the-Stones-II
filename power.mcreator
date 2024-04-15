@@ -18088,6 +18088,187 @@
         ]
       },
       "path": "~/Items/Amplifier"
+    },
+    {
+      "name": "EnergiumGolem",
+      "type": "animatedentity",
+      "sortid": 846,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java",
+          "src/main/resources/assets/power/models/item/energium_golem_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergiumGolemEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/EnergiumGolemModel.java"
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemAttackDetection",
+      "type": "procedure",
+      "sortid": 847,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemPriObnovlieniiTikaSushchnosti",
+      "type": "procedure",
+      "sortid": 848,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_pri_obnovlienii_tika_sushchnosti",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemHandsAttack",
+      "type": "procedure",
+      "sortid": 849,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_hands_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemHandsAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemCoreAttack",
+      "type": "procedure",
+      "sortid": 850,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_core_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemCoreAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "EnergiumGolemAttackCancel",
+      "type": "procedure",
+      "sortid": 851,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_attack_cancel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemAttackCancelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
     }
   ],
   "variable_elements": [
@@ -18728,6 +18909,7 @@
       "subtitles.electric_spark": "Искра",
       "effect.power.creation_master": "Мастер творения",
       "battery.desc.water": "Вода",
+      "entity.power.energium_golem": "Энерджиумный голем",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
@@ -18998,6 +19180,7 @@
       "battery.desc.air": "Воздух",
       "battery.desc.animals": "Животные",
       "item.power.technology_stone": "Камень технологий",
+      "item.power.energium_golem_spawn_egg": "Energium Golem Spawn Egg",
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Созидание",
       "battery.desc.lava": "Лава",
       "key.power.detransformation_key": "Клавиша детрансформации",
@@ -19067,8 +19250,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Battery",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -19081,8 +19264,8 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "battery.desc.ice": "Ice",
@@ -19127,8 +19310,8 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.ether_armor_boots": "Ether Boots",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
@@ -19139,9 +19322,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
       "item.power.plants_armor_boots": "Plants Boots",
-      "item.power.space_armor_leggings": "Space Leggings",
-      "item.power.smithing_template.ingredients": "",
       "item.power.tornado_armor_boots": "Tornado Boots",
+      "item.power.smithing_template.ingredients": "",
+      "item.power.space_armor_leggings": "Space Leggings",
       "item.power.metal_armor_leggings": "Metal Leggings",
       "gui.power.wheel_abilities_destruction.tooltip_lethal_result_uses_80": "Lethal result, uses 80",
       "item.power.fire_stone": "Fire Stone",
@@ -19154,8 +19337,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "power.modinfo.recharge_stone": "Recharge: ",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
+      "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -19169,8 +19352,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item.power.metal_stone": "Metal Stone",
+      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
       "effect.power.lethality": "Lethality",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
@@ -19186,12 +19369,13 @@
       "subtitles.electric_spark": "Spark",
       "effect.power.creation_master": "Master of Creation",
       "battery.desc.water": "Water",
+      "entity.power.energium_golem": "Energium Golem",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "item.power.energium_sword": "Energium Sword",
       "item.power.empty_battery": "Battery",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
-      "item.power.magnet_stone": "Magnet Stone",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Rain",
+      "item.power.magnet_stone": "Magnet Stone",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
@@ -19456,6 +19640,7 @@
       "battery.desc.air": "Air",
       "battery.desc.animals": "Animals",
       "item.power.technology_stone": "Technology Stone",
+      "item.power.energium_golem_spawn_egg": "Energium Golem Spawn Egg",
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Creation",
       "battery.desc.lava": "Lava",
       "key.power.detransformation_key": "Detransformation key",
@@ -20024,13 +20209,22 @@
       {
         "name": "Dimensions",
         "children": []
+      },
+      {
+        "name": "Bosses",
+        "children": [
+          {
+            "name": "EnergiumGolem",
+            "children": []
+          }
+        ]
       }
     ]
   },
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.17",
+    "version": "1.0.0.18.1504241535",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "Environment Studios",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",

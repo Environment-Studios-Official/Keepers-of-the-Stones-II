@@ -30,6 +30,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.GrassBlockAttackProjecti
 import com.esmods.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.EnergiumGolemRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DestructionBallProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
@@ -74,5 +75,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.METEORITE_PROJECTILE.get(), MeteoriteProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.AMPLIFIER_DROP_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_BALL_PROJECTILE.get(), DestructionBallProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 	}
 }
