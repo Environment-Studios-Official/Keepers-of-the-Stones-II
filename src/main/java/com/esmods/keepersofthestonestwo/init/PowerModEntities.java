@@ -36,6 +36,7 @@ import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
+import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
@@ -111,6 +112,8 @@ public class PowerModEntities {
 			EntityType.Builder.<AmplifierDropProjectileEntity>of(AmplifierDropProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem",
+			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(3.25f, 3.25f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -121,6 +124,7 @@ public class PowerModEntities {
 		event.enqueueWork(() -> {
 			ShadowEntity.init();
 			BlackHoleEntity.init();
+			EnergiumGolemEntity.init();
 		});
 	}
 
@@ -128,5 +132,6 @@ public class PowerModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
+		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 	}
 }

@@ -6,6 +6,7 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.common.DeferredSpawnEggItem;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -419,6 +420,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
 	public static final DeferredHolder<Item, Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", () -> new DestructionBroadswordItem());
 	public static final DeferredHolder<Item, Item> AMPLIFIER_BLOCK = block(PowerModBlocks.AMPLIFIER_BLOCK);
+	public static final DeferredHolder<Item, Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -13261, -13382656, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
