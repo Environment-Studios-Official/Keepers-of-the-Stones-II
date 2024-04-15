@@ -15,7 +15,7 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 
 public class EnergiumGolemHandsAttackProcedure {
-	public static void execute(LevelAccessor world, double x, double z, Entity entity) {
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		double XPar = 0;
@@ -47,7 +47,7 @@ public class EnergiumGolemHandsAttackProcedure {
 			for (int index0 = 0; index0 < 4; index0++) {
 				Range = Range + 1;
 				XPar = x + entity.getLookAngle().x * Range;
-				YPar = entity.getLookAngle().y + 2;
+				YPar = y + 2;
 				ZPar = z + entity.getLookAngle().z * Range;
 				Range = Range + 1;
 			}
@@ -55,7 +55,7 @@ public class EnergiumGolemHandsAttackProcedure {
 		if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 20) {
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
-				YPar = entity.getLookAngle().y + 2;
+				YPar = y + 2;
 				ZPar = z + entity.getLookAngle().z * Range;
 				{
 					final Vec3 _center = new Vec3(XPar, YPar, ZPar);

@@ -30,7 +30,7 @@ public class EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure {
 				EnergiumGolemAttackDetectionProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getPersistentData().getString("State")).equals("Hands")) {
-				EnergiumGolemHandsAttackProcedure.execute(world, x, z, entity);
+				EnergiumGolemHandsAttackProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getPersistentData().getString("State")).equals("Core")) {
 				EnergiumGolemCoreAttackProcedure.execute(world, x, y, z, entity);
