@@ -56,7 +56,7 @@
     "attackStrength": 22,
     "attackKnockback": 1.25,
     "knockbackResistance": 1.0,
-    "movementSpeed": 0.15,
+    "movementSpeed": 0.25,
     "armorBaseValue": 16.0,
     "trackingRange": 128,
     "followRange": 32,

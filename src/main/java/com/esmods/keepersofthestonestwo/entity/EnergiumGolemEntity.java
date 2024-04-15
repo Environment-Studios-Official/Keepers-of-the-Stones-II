@@ -224,7 +224,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.15);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
 		builder = builder.add(Attributes.MAX_HEALTH, 500);
 		builder = builder.add(Attributes.ARMOR, 16);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
