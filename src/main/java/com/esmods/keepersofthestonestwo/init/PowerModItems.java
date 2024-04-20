@@ -163,6 +163,7 @@ import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodSickleItem;
+import com.esmods.keepersofthestonestwo.item.BloodBatteryItem;
 import com.esmods.keepersofthestonestwo.item.BloodArmorItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsStoneItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsHalberdItem;
@@ -427,6 +428,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BLOOD_ARMOR_LEGGINGS = REGISTRY.register("blood_armor_leggings", () -> new BloodArmorItem.Leggings());
 	public static final RegistryObject<Item> BLOOD_ARMOR_BOOTS = REGISTRY.register("blood_armor_boots", () -> new BloodArmorItem.Boots());
 	public static final RegistryObject<Item> BLOOD_SICKLE = REGISTRY.register("blood_sickle", () -> new BloodSickleItem());
+	public static final RegistryObject<Item> BLOOD_BATTERY = REGISTRY.register("blood_battery", () -> new BloodBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
