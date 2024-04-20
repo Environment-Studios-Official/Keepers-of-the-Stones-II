@@ -20,6 +20,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpaceStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart3ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -36,6 +37,7 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_space_element;
 	ImageButton imagebutton_moon_element;
 	ImageButton imagebutton_vacuum_element;
+	ImageButton imagebutton_blood_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -71,6 +73,8 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		if (VacuumStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_vacuum"), mouseX, mouseY);
+		if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_blood"), mouseX, mouseY);
 	}
 
 	@Override
@@ -205,5 +209,19 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_vacuum_element", imagebutton_vacuum_element);
 		this.addRenderableWidget(imagebutton_vacuum_element);
+		imagebutton_blood_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_blood_element.png"), 16, 32, e -> {
+			if (BloodStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(8, x, y, z));
+				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (BloodStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_blood_element", imagebutton_blood_element);
+		this.addRenderableWidget(imagebutton_blood_element);
 	}
 }

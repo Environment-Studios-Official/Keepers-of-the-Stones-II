@@ -109,6 +109,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TIME_STONE.get());
 				tabData.accept(PowerModItems.CREATION_STONE.get());
 				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
+				tabData.accept(PowerModItems.BLOOD_STONE.get());
 			})
 
 					.build());

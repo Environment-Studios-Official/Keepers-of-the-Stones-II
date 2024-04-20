@@ -162,6 +162,8 @@ import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
+import com.esmods.keepersofthestonestwo.item.BloodSickleItem;
+import com.esmods.keepersofthestonestwo.item.BloodArmorItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsStoneItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsHalberdItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsBatteryItem;
@@ -420,6 +422,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", () -> new DestructionBroadswordItem());
 	public static final RegistryObject<Item> AMPLIFIER_BLOCK = block(PowerModBlocks.AMPLIFIER_BLOCK);
 	public static final RegistryObject<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -13261, -13382656, new Item.Properties()));
+	public static final RegistryObject<Item> BLOOD_ARMOR_HELMET = REGISTRY.register("blood_armor_helmet", () -> new BloodArmorItem.Helmet());
+	public static final RegistryObject<Item> BLOOD_ARMOR_CHESTPLATE = REGISTRY.register("blood_armor_chestplate", () -> new BloodArmorItem.Chestplate());
+	public static final RegistryObject<Item> BLOOD_ARMOR_LEGGINGS = REGISTRY.register("blood_armor_leggings", () -> new BloodArmorItem.Leggings());
+	public static final RegistryObject<Item> BLOOD_ARMOR_BOOTS = REGISTRY.register("blood_armor_boots", () -> new BloodArmorItem.Boots());
+	public static final RegistryObject<Item> BLOOD_SICKLE = REGISTRY.register("blood_sickle", () -> new BloodSickleItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

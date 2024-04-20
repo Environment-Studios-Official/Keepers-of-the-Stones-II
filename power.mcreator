@@ -18269,6 +18269,270 @@
         ]
       },
       "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "BloodMaster",
+      "type": "potioneffect",
+      "sortid": 852,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/BloodMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodArmor",
+      "type": "armor",
+      "sortid": 853,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blood_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/blood_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/blood_armor_boots.json",
+          "src/main/resources/assets/power/models/item/blood_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 854,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 855,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 856,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 857,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodSickle",
+      "type": "tool",
+      "sortid": 858,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_sickle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blood_sickle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodSickleItem.java"
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodSickleKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 859,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_sickle_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodSickleKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodMasterStart",
+      "type": "procedure",
+      "sortid": 860,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodMasterEnd",
+      "type": "procedure",
+      "sortid": 861,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodElementGet",
+      "type": "procedure",
+      "sortid": 862,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
+    },
+    {
+      "name": "BloodStoneCheck",
+      "type": "procedure",
+      "sortid": 863,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -18790,8 +19054,8 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -18804,15 +19068,17 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
+      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.plants_stone": "Камень зелени",
@@ -18850,8 +19116,8 @@
       "item.power.light_battery": "Батарея",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
-      "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
+      "item.power.ether_armor_boots": "Ботинки мастера эфира",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Разрушение",
       "item.power.energy_staff": "Посох энергии",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
@@ -18862,9 +19128,9 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
-      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
-      "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.space_armor_leggings": "Поножи мастера космоса",
+      "item.power.smithing_template.ingredients": "§7Материалы:",
+      "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
       "item.power.metal_armor_leggings": "Поножи мастера металла",
       "gui.power.wheel_abilities_destruction.tooltip_lethal_result_uses_80": "Летальный исход, расходует 80",
       "item.power.fire_stone": "Камень огня",
@@ -18877,8 +19143,8 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ocean_battery": "Батарея",
       "block.power.moon_block": "Лунный блок",
-      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "power.modinfo.recharge_stone": "Перезарядка: ",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -18892,8 +19158,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.metal_stone": "Камень металла",
       "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
+      "item.power.metal_stone": "Камень металла",
       "item_group.power.stones": "KotS: Камни",
       "effect.power.lethality": "Летальность",
       "item.power.animals_armor_chestplate": "Нагрудник маастера животных",
@@ -18914,8 +19180,8 @@
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
-      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.magnet_stone": "Камень магнита",
+      "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
@@ -18952,6 +19218,7 @@
       "item.power.ice_stone": "Камень льда",
       "battery.desc.ocean": "Океан",
       "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
+      "item.power.blood_sickle": "Кровавый серп",
       "item.power.mind_stone": "Камень разума",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
       "item.power.light_armor_helmet": "Шлем мастера света",
@@ -19041,6 +19308,8 @@
       "item.power.raw_amplifier": "Рудный амплифер",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
+      "effect.power.blood_master": "Мастер крови",
+      "item.power.blood_armor_boots": "Ботинки мастера крови",
       "item.power.sun_armor_helmet": "Шлем мастера солнца",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
@@ -19163,6 +19432,7 @@
       "gui.power.wheel_abilities_sun.button_1": "1",
       "item.power.time_khopesh": "Хопеш времени",
       "item.power.energium_upgrade_smithing_template.upgrade": "§7Энерджиумное улучшение",
+      "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
@@ -19201,6 +19471,7 @@
       "item.power.shadow_armor_leggings": "Поножи мастера тени",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "item.power.moon_stone": "Камень луны",
+      "item.power.blood_armor_helmet": "Шлем мастера крови",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Лёд",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
@@ -19267,12 +19538,14 @@
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
       "battery.desc.ice": "Ice",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
+      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.plants_stone": "Plants Stone",
@@ -19412,6 +19685,7 @@
       "item.power.ice_stone": "Ice Stone",
       "battery.desc.ocean": "Ocean",
       "item.power.energy_armor_chestplate": "Energy Chestplate",
+      "item.power.blood_sickle": "Blood Sickle",
       "item.power.mind_stone": "Mind Stone",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
       "item.power.light_armor_helmet": "Light Helmet",
@@ -19502,6 +19776,8 @@
       "item.power.raw_amplifier": "Raw Amplifier",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
+      "effect.power.blood_master": "Master of Blood",
+      "item.power.blood_armor_boots": "Blood Boots",
       "item.power.sun_armor_helmet": "Sun Helmet",
       "effect.power.whirlwind": "Whirlwind",
       "effect.power.stun": "Stun",
@@ -19623,6 +19899,7 @@
       "gui.power.wheel_abilities_sun.button_3": "3",
       "gui.power.wheel_abilities_sun.button_1": "1",
       "item.power.time_khopesh": "Time Khopesh",
+      "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.air_armor_chestplate": "Air Chestplate",
@@ -19661,6 +19938,7 @@
       "item.power.shadow_armor_leggings": "Shadow Leggings",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "item.power.moon_stone": "Moon Stone",
+      "item.power.blood_armor_helmet": "Blood Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Ice",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
