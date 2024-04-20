@@ -6,7 +6,7 @@
     "renderType": 1,
     "blockingRenderType": 0,
     "texture": "blood_sickle",
-    "customModelName": "water_katana:default",
+    "customModelName": "blood_sickle:default",
     "blockingModelName": "Normal blocking",
     "name": "Blood Sickle",
     "specialInformation": {
