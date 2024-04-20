@@ -18533,6 +18533,46 @@
         ]
       },
       "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "BloodStoneUse",
+      "type": "procedure",
+      "sortid": 864,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BloodStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Blood"
     }
   ],
   "variable_elements": [
