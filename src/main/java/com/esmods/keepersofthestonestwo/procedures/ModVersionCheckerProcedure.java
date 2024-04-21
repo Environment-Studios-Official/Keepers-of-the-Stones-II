@@ -2,12 +2,12 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.forgespi.language.IModInfo;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.ModList;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforgespi.language.IModInfo;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.ModList;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;

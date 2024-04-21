@@ -84,11 +84,11 @@ public class UnlockRecipesProcedure {
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_depleted_energium_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_depleted_energium_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAW_DEPLETED_ENERGIUM.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_depleted_energium_block_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_depleted_energium_block_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.AMPLIFIER_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -100,11 +100,11 @@ public class UnlockRecipesProcedure {
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_amplifier_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_amplifier_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAW_AMPLIFIER.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_amplifier_block_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_amplifier_block_craft")));
 		}
 	}
 }

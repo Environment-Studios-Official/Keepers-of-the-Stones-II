@@ -4210,8 +4210,8 @@ public class SpecialAttackProcedure {
 				}
 			}
 			if (entity instanceof LivingEntity _livEnt1074 && _livEnt1074.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
-				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("blood_attack_1")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("blood_attack_1")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 						for (int index50 = 0; index50 < 15; index50++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4256,21 +4256,19 @@ public class SpecialAttackProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
-				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("blood_attack_2")) {
-					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("blood_attack_2")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 						if (world instanceof ServerLevel _level)
 							_level.sendParticles(ParticleTypes.CRIT, x, y, z, 5, 1, 1, 1, 0.25);
 						{
@@ -4288,11 +4286,9 @@ public class SpecialAttackProcedure {
 							}
 						}
 						{
-							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
-							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-								capability.power = _setval;
-								capability.syncPlayerVariables(entity);
-							});
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				}

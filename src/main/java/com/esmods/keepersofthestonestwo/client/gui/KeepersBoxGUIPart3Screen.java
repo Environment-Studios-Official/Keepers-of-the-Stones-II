@@ -224,16 +224,17 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_vacuum_element", imagebutton_vacuum_element);
 		this.addRenderableWidget(imagebutton_vacuum_element);
-		imagebutton_blood_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_blood_element.png"), 16, 32, e -> {
-			if (BloodStoneCheckProcedure.execute(world)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart3ButtonMessage(8, x, y, z));
-				KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 8, x, y, z);
-			}
-		}) {
+		imagebutton_blood_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/blood_element.png"), new ResourceLocation("power:textures/screens/blood_element_highlighted.png")), e -> {
+					if (BloodStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart3ButtonMessage(8, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (BloodStoneCheckProcedure.execute(world))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_blood_element", imagebutton_blood_element);
