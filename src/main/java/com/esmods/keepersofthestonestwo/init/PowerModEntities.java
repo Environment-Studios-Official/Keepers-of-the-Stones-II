@@ -44,7 +44,6 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
-import com.esmods.keepersofthestonestwo.entity.AmplifierDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -117,9 +116,6 @@ public class PowerModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(BlackHoleEntity::new).fireImmune().sized(0.2f, 0.2f));
 	public static final RegistryObject<EntityType<MeteoriteProjectileEntity>> METEORITE_PROJECTILE = register("meteorite_projectile", EntityType.Builder.<MeteoriteProjectileEntity>of(MeteoriteProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(MeteoriteProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<AmplifierDropProjectileEntity>> AMPLIFIER_DROP_PROJECTILE = register("amplifier_drop_projectile",
-			EntityType.Builder.<AmplifierDropProjectileEntity>of(AmplifierDropProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AmplifierDropProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(DestructionBallProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));

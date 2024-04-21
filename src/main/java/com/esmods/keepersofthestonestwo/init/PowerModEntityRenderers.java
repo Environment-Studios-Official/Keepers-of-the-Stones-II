@@ -73,7 +73,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ENERGY_CHARGE.get(), EnergyChargeRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BLACK_HOLE.get(), BlackHoleRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.METEORITE_PROJECTILE.get(), MeteoriteProjectileRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.AMPLIFIER_DROP_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_BALL_PROJECTILE.get(), DestructionBallProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 	}

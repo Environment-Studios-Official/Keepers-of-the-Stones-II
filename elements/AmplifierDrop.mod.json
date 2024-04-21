@@ -35,10 +35,10 @@
     "guiBoundTo": "<NONE>",
     "inventorySize": 9,
     "inventoryStackSize": 64,
-    "enableRanged": true,
+    "enableRanged": false,
     "shootConstantly": false,
     "projectile": {
-      "value": "CUSTOM:AmplifierDropProjectile"
+      "value": "CUSTOM:MagicFireballProjectile"
     },
     "isFood": false,
     "nutritionalValue": 4,

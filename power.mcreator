@@ -16551,40 +16551,6 @@
       "path": "~/Items/Amplifier"
     },
     {
-      "name": "AmplifierDropProjectileKoghdaSnariadPopadaietVIghroka",
-      "type": "procedure",
-      "sortid": 776,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_drop_projectile_koghda_snariad_popadaiet_v_ighroka",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmplifierDropProjectileKoghdaSnariadPopadaietVIghrokaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Items/Amplifier"
-    },
-    {
-      "name": "AmplifierDropProjectile",
-      "type": "projectile",
-      "sortid": 777,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amplifier_drop_projectile",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/AmplifierDropProjectileEntity.java"
-        ]
-      },
-      "path": "~/Items/Amplifier"
-    },
-    {
       "name": "RunesOfCreation",
       "type": "particle",
       "sortid": 778,
