@@ -429,6 +429,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> BLOOD_ARMOR_BOOTS = REGISTRY.register("blood_armor_boots", () -> new BloodArmorItem.Boots());
 	public static final RegistryObject<Item> BLOOD_SICKLE = REGISTRY.register("blood_sickle", () -> new BloodSickleItem());
 	public static final RegistryObject<Item> BLOOD_BATTERY = REGISTRY.register("blood_battery", () -> new BloodBatteryItem());
+	public static final RegistryObject<Item> RAW_DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK);
+	public static final RegistryObject<Item> RAW_AMPLIFIER_BLOCK = block(PowerModBlocks.RAW_AMPLIFIER_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

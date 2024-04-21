@@ -74,6 +74,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.CREATION_BATTERY.get());
 				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
 				tabData.accept(PowerModItems.BLOOD_BATTERY.get());
+				tabData.accept(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get().asItem());
 			})
 
 					.build());

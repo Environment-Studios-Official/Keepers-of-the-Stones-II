@@ -10,6 +10,8 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
@@ -32,6 +34,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> ENERGIUM_CONTROLLER = REGISTRY.register("energium_controller", () -> new EnergiumControllerBlock());
 	public static final RegistryObject<Block> AMPLIFIER_ORE = REGISTRY.register("amplifier_ore", () -> new AmplifierOreBlock());
 	public static final RegistryObject<Block> AMPLIFIER_BLOCK = REGISTRY.register("amplifier_block", () -> new AmplifierBlockBlock());
+	public static final RegistryObject<Block> RAW_DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("raw_depleted_energium_block", () -> new RawDepletedEnergiumBlockBlock());
+	public static final RegistryObject<Block> RAW_AMPLIFIER_BLOCK = REGISTRY.register("raw_amplifier_block", () -> new RawAmplifierBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
