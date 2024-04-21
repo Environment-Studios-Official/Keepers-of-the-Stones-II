@@ -4,26 +4,22 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.registries.RegistryObject;
+import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerMod.MODID);
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ITEMS = REGISTRY.register("items",
+	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModBlocks.AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModItems.RAW_AMPLIFIER.get());
 				tabData.accept(PowerModItems.AMPLIFIER_DROP.get());
@@ -33,6 +29,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_INFINITY.get());
 				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
@@ -78,10 +75,11 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TIME_BATTERY.get());
 				tabData.accept(PowerModItems.CREATION_BATTERY.get());
 				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
+				tabData.accept(PowerModItems.BLOOD_BATTERY.get());
 			})
 
 					.build());
-	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> STONES = REGISTRY.register("stones",
+	public static final RegistryObject<CreativeModeTab> STONES = REGISTRY.register("stones",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.stones")).icon(() -> new ItemStack(PowerModItems.FIRE_STONE.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.FIRE_STONE.get());
 				tabData.accept(PowerModItems.AIR_STONE.get());
@@ -109,14 +107,14 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TIME_STONE.get());
 				tabData.accept(PowerModItems.CREATION_STONE.get());
 				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
+				tabData.accept(PowerModItems.BLOOD_STONE.get());
 			})
 
 					.build());
+	public static final RegistryObject<CreativeModeTab> MOBS = REGISTRY.register("mobs",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
+			})
 
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-			tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
-		}
-	}
+					.build());
 }
