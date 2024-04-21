@@ -422,7 +422,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> DESTRUCTION_BATTERY = REGISTRY.register("destruction_battery", () -> new DestructionBatteryItem());
 	public static final RegistryObject<Item> DESTRUCTION_BROADSWORD = REGISTRY.register("destruction_broadsword", () -> new DestructionBroadswordItem());
 	public static final RegistryObject<Item> AMPLIFIER_BLOCK = block(PowerModBlocks.AMPLIFIER_BLOCK);
-	public static final RegistryObject<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -5543129, -8337805, new Item.Properties()));
+	public static final RegistryObject<Item> ENERGIUM_GOLEM_SPAWN_EGG = REGISTRY.register("energium_golem_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.ENERGIUM_GOLEM, -2242726, -8337805, new Item.Properties()));
 	public static final RegistryObject<Item> BLOOD_ARMOR_HELMET = REGISTRY.register("blood_armor_helmet", () -> new BloodArmorItem.Helmet());
 	public static final RegistryObject<Item> BLOOD_ARMOR_CHESTPLATE = REGISTRY.register("blood_armor_chestplate", () -> new BloodArmorItem.Chestplate());
 	public static final RegistryObject<Item> BLOOD_ARMOR_LEGGINGS = REGISTRY.register("blood_armor_leggings", () -> new BloodArmorItem.Leggings());
