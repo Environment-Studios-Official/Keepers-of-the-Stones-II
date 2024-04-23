@@ -4225,15 +4225,6 @@ public class SpecialAttackProcedure {
 							} else {
 								break;
 							}
-							if (world instanceof ServerLevel _level)
-								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.RUNES_OF_DESTRUCTION.get()),
-										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getX()),
-										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getY()),
-										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
-												.getZ()),
-										25, 1, 1, 1, 0.25);
 							{
 								final Vec3 _center = new Vec3(
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -4247,18 +4238,9 @@ public class SpecialAttackProcedure {
 									if (!(entityiterator == entity)) {
 										entityiterator.hurt(
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-												(float) 10.5);
-										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-											_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 60, 1));
+												(float) 13.5);
 									}
 								}
-							}
-						}
-						if (world instanceof Level _level) {
-							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1);
-							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.evoker.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 							}
 						}
 						{
@@ -4276,12 +4258,37 @@ public class SpecialAttackProcedure {
 							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 							for (Entity entityiterator : _entfound) {
 								if (!(entityiterator == entity)) {
-									if (entityiterator instanceof LivingEntity _entity)
-										_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.25));
 									if (entity instanceof LivingEntity _entity)
 										_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.25));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.25));
 									entityiterator.hurt(
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+								}
+							}
+						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+							_vars.syncPlayerVariables(entity);
+						}
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("blood_attack_3")) {
+					if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.CRIT, x, y, z, 5, 1, 1, 1, 0.25);
+						{
+							final Vec3 _center = new Vec3(x, y, z);
+							List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+							for (Entity entityiterator : _entfound) {
+								if (!(entityiterator == entity)) {
+									if (entity instanceof LivingEntity _entity)
+										_entity.setHealth((float) ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) + (entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.25));
+									if (entityiterator instanceof LivingEntity _entity)
+										_entity.setHealth((float) ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) - (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) * 0.25));
+									entity.hurt(
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entityiterator),
+											0);
 								}
 							}
 						}

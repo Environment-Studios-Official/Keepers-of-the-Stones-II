@@ -50,7 +50,6 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.procedures.BlackHolePriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BlackHolePriNachalnomPrizyvieSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(BlackHoleEntity.class, EntityDataSerializers.BOOLEAN);
