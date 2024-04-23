@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_bleeding",
+          "image": "bleeding.png",
+          "hoveredImage": "bleeding_highlight.png",
           "onClick": {
             "name": "Attack105"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 48
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "tooltip_bleeding_uses_15",
+          "text": {
+            "fixedValue": "Bleeding, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 199,
+          "y": 46
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_vampirism",
+          "image": "vampirism.png",
+          "hoveredImage": "vampirism_highlight.png",
           "onClick": {
             "name": "Attack106"
           },
-          "width": 30,
-          "height": 20,
-          "x": 259,
-          "y": 109
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "tooltip_vampirism_uses_40",
+          "text": {
+            "fixedValue": "Vampirism, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_transfusion",
+          "image": "transfusion.png",
+          "hoveredImage": "transfusion_highlight.png",
           "onClick": {
             "name": "Attack107"
           },
-          "width": 30,
-          "height": 20,
-          "x": 197,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_transfusion_uses_40",
+          "text": {
+            "fixedValue": "Transfusion, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
