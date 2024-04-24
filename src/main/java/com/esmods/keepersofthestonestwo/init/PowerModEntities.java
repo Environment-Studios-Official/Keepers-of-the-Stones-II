@@ -110,7 +110,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem",
-			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(3.25f, 3.25f));
+			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.5f, 3f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
