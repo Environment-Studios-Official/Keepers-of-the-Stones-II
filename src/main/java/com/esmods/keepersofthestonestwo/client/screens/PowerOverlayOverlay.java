@@ -46,12 +46,12 @@ public class PowerOverlayOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
 			if (GetActiveProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), 7, 28, 0, 0, 59, 20, 59, 20);
+				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
 			}
 			if (GetActiveProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-						GetPowerScaleProcedure.execute(entity), 36, 35, -1, false);
+						GetPowerScaleProcedure.execute(entity), 31, 35, -1, false);
 		}
 		RenderSystem.depthMask(true);
 		RenderSystem.defaultBlendFunc();
