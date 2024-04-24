@@ -19242,6 +19242,9 @@
   ],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:AmplifierBlock",
       "~CUSTOM:AmplifierOre",
       "~CUSTOM:EnergiumController",
       "~CUSTOM:MoonBlock",
