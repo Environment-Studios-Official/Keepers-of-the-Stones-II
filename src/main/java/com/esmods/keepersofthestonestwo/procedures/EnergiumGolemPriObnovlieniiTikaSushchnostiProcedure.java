@@ -7,8 +7,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.commands.arguments.EntityAnchorArgument;
 
 public class EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
+	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, Entity sourceentity) {
+		if (entity == null || sourceentity == null)
 			return;
 		if (!entity.getPersistentData().getBoolean("OnBattle")) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
@@ -30,10 +30,10 @@ public class EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure {
 				EnergiumGolemAttackDetectionProcedure.execute(world, x, y, z, entity);
 			}
 			if ((entity.getPersistentData().getString("State")).equals("Hands")) {
-				EnergiumGolemHandsAttackProcedure.execute(world, x, y, z, entity);
+				EnergiumGolemHandsAttackProcedure.execute(world, x, y, z, entity, sourceentity);
 			}
 			if ((entity.getPersistentData().getString("State")).equals("Core")) {
-				EnergiumGolemCoreAttackProcedure.execute(world, x, y, z, entity);
+				EnergiumGolemCoreAttackProcedure.execute(world, x, y, z, entity, sourceentity);
 			}
 		}
 		if (entity.getPersistentData().getDouble("Patience") == 100) {
