@@ -19,8 +19,8 @@
           "displayCondition": {
             "name": "GetActive"
           },
-          "anchorPoint": "TOP_RIGHT",
-          "x": 396,
+          "anchorPoint": "TOP_LEFT",
+          "x": 31,
           "y": 35
         }
       },
@@ -32,8 +32,8 @@
           "displayCondition": {
             "name": "GetActive"
           },
-          "anchorPoint": "TOP_RIGHT",
-          "x": 367,
+          "anchorPoint": "TOP_LEFT",
+          "x": 2,
           "y": 28
         }
       }
@@ -45,7 +45,7 @@
       "sy": 16,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

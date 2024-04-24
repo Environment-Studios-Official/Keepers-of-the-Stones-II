@@ -72,7 +72,7 @@ public class EnergiumGolemCoreAttackProcedure {
 			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDouble("BreathRange"); index0++) {
 				for (int index1 = 0; index1 < (int) particles; index1++) {
 					XPar = x + Math.cos(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
-					YPar = y + 2.2;
+					YPar = y + 1.75;
 					ZPar = z + Math.sin(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
@@ -82,7 +82,12 @@ public class EnergiumGolemCoreAttackProcedure {
 								.toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO)), 26);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO), ((Entity) world
+										.getEntitiesOfClass(EnergiumGolemEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), (0.125 + Range * 0.05), (0.125 + Range * 0.05), (0.125 + Range * 0.05)), e -> true).stream().sorted(new Object() {
+											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+												return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+											}
+										}.compareDistOf(XPar, YPar, ZPar)).findFirst().orElse(null))), 26);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
 							}

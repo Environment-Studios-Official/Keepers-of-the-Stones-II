@@ -5,10 +5,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 
-import java.util.Random;
 import java.util.List;
 import java.util.Comparator;
 
@@ -18,7 +15,6 @@ public class EnergiumGolemAttackDetectionProcedure {
 			return;
 		double Xpar = 0;
 		double Ypar = 0;
-		double Random = 0;
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.75;
@@ -33,11 +29,8 @@ public class EnergiumGolemAttackDetectionProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								Random = Mth.nextInt(RandomSource.create(), 0, 1);
 								if (Range < 5.5) {
-									if (Random == 0) {
-										entity.getPersistentData().putString("State", "Hands");
-									}
+									entity.getPersistentData().putString("State", "Hands");
 								} else {
 									entity.getPersistentData().putString("State", "Core");
 								}
