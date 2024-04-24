@@ -18058,7 +18058,7 @@
       "name": "EnergiumGolem",
       "type": "animatedentity",
       "sortid": 83,
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energium_golem",
       "metadata": {
@@ -18124,10 +18124,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -18164,10 +18160,6 @@
             "type": "entity"
           },
           {
-            "name": "sourceentity",
-            "type": "entity"
-          },
-          {
             "name": "x",
             "type": "number"
           },
@@ -18201,10 +18193,6 @@
         "dependencies": [
           {
             "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "sourceentity",
             "type": "entity"
           },
           {
