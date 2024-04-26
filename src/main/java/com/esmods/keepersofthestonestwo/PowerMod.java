@@ -43,6 +43,8 @@ public class PowerMod {
 	public static final String MODID = "power";
 
 	public PowerMod() {
+		// Start of user code block mod constructor
+		// End of user code block mod constructor
 		MinecraftForge.EVENT_BUS.register(this);
 		IEventBus bus = FMLJavaModLoadingContext.get().getModEventBus();
 		PowerModSounds.REGISTRY.register(bus);

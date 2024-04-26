@@ -19276,6 +19276,18 @@
       "CUSTOM:ShadowBattery",
       "CUSTOM:VacuumBattery"
     ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre"
+    ],
     "ITEMS:forge:elemental_stones": [
       "CUSTOM:FireStone",
       "CUSTOM:AirStone",
@@ -20826,5 +20838,5 @@
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202400115821
+  "mcreatorVersion": 202400117319
 }
