@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
@@ -35,23 +36,25 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entityiterator instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PowerModMobEffects.SPACE_MASTER.get()))) {
-					itemPosX = entityiterator.getX();
-					itemPosY = entityiterator.getY();
-					itemPosZ = entityiterator.getZ();
-					if (itemPosX < playerPosX) {
-						entityiterator.setDeltaMovement(new Vec3(0.25, (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
-					} else if (itemPosX > playerPosX) {
-						entityiterator.setDeltaMovement(new Vec3((-0.25), (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
-					}
-					if (itemPosY < playerPosY) {
-						entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), 0.25, (entityiterator.getDeltaMovement().z())));
-					} else if (itemPosY > playerPosY) {
-						entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (-0.25), (entityiterator.getDeltaMovement().z())));
-					}
-					if (itemPosZ < playerPosZ) {
-						entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), 0.25));
-					} else if (itemPosZ > playerPosZ) {
-						entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), (-0.25)));
+					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+						itemPosX = entityiterator.getX();
+						itemPosY = entityiterator.getY();
+						itemPosZ = entityiterator.getZ();
+						if (itemPosX < playerPosX) {
+							entityiterator.setDeltaMovement(new Vec3(0.25, (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
+						} else if (itemPosX > playerPosX) {
+							entityiterator.setDeltaMovement(new Vec3((-0.25), (entityiterator.getDeltaMovement().y()), (entityiterator.getDeltaMovement().z())));
+						}
+						if (itemPosY < playerPosY) {
+							entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), 0.25, (entityiterator.getDeltaMovement().z())));
+						} else if (itemPosY > playerPosY) {
+							entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (-0.25), (entityiterator.getDeltaMovement().z())));
+						}
+						if (itemPosZ < playerPosZ) {
+							entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), 0.25));
+						} else if (itemPosZ > playerPosZ) {
+							entityiterator.setDeltaMovement(new Vec3((entityiterator.getDeltaMovement().x()), (entityiterator.getDeltaMovement().y()), (-0.25)));
+						}
 					}
 				}
 			}
