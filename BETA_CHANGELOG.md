@@ -9,6 +9,7 @@ What's new in Keepers of the Stones II version 1.0.0.18?<br />
 <br />- Mod updates are now checked from the Environment Update Center repository
 <br />- Added the max_points argument for the pw command
 <br />- Added modification of the maximum number of points
+<br /> - [API] Colorful Powers API has been updated to version 6
 <br />- [Bugfix] Fixed a bug that could cause black holes to appear in the world
 <br />- [Bugfix] Fixed a bug where the second ability of the creation wizard might not work
 <br />- [Bugfix] Fixed a bug where the player's time did not stop completely
