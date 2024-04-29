@@ -1030,7 +1030,7 @@
           }
         ]
       },
-      "path": "~/Modules/Commands"
+      "path": "~/Commands"
     },
     {
       "name": "Pw",
@@ -1044,7 +1044,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/command/PwCommand.java"
         ]
       },
-      "path": "~/Modules/Commands"
+      "path": "~/Commands"
     },
     {
       "name": "EarthArmorKazhdyiTikDliaShliema",
@@ -19815,6 +19815,26 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "MaxPowerScaleSet",
+      "type": "procedure",
+      "sortid": 908,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_power_scale_set",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MaxPowerScaleSetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -21664,10 +21684,6 @@
             "children": []
           },
           {
-            "name": "Commands",
-            "children": []
-          },
-          {
             "name": "Gamerules",
             "children": []
           },
@@ -21843,6 +21859,10 @@
       },
       {
         "name": "Achievements",
+        "children": []
+      },
+      {
+        "name": "Commands",
         "children": []
       }
     ]
