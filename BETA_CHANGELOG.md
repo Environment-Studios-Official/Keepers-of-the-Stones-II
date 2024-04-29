@@ -7,4 +7,7 @@ What's new in Keepers of the Stones II version 1.0.0.18?<br />
 <br />- The star points overlay texture has been updated
 <br />- Mod updates are now checked from the Environment Update Center repository
 <br />- [Bugfix] Fixed a bug that could cause black holes to appear in the world
+<br />- [Bugfix] Fixed a bug where the second ability of the creation wizard might not work
+<br />- [Bugfix] Fixed a bug where the player's time did not stop completely
+<br />- [Bugfix] Fixed a bug with ether master particles
 <br />- [Bugfix] Fixed weapon damage to match the balance

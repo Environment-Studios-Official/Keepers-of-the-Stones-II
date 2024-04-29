@@ -9,7 +9,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.GameRules;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
@@ -30,6 +29,7 @@ import net.minecraft.world.InteractionHand;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
@@ -893,7 +893,7 @@ public class SpecialAttackProcedure {
 								break;
 							}
 							if (world instanceof ServerLevel _level)
-								_level.sendParticles(ParticleTypes.CRIT,
+								_level.sendParticles(ParticleTypes.ENCHANTED_HIT,
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 												.getX()),
 										(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
@@ -3404,18 +3404,47 @@ public class SpecialAttackProcedure {
 					}
 				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("vacuum_attack_3")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 100) {
-						if (world.getLevelData().getGameRules().getBoolean(GameRules.RULE_KEEPINVENTORY) == false) {
-							world.getLevelData().getGameRules().getRule(GameRules.RULE_KEEPINVENTORY).set(true, world.getServer());
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
-							{
-								boolean _setval = true;
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.zeroing = _setval;
-									capability.syncPlayerVariables(entity);
-								});
+						particleAmount = 8;
+						particleRadius = 2;
+						for (int index31 = 0; index31 < 60; index31++) {
+							for (int index32 = 0; index32 < (int) particleAmount; index32++) {
+								if (world instanceof ServerLevel _level)
+									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.VACUUM_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+											(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 							}
-						} else {
-							entity.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 1000000);
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1);
+							} else {
+								_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.sculk.spread")), SoundSource.PLAYERS, 1, 1, false);
+							}
+						}
+						{
+							Entity _ent = entity;
+							_ent.teleportTo(
+									((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+											? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
+											: 0),
+									((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+											? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
+											: 0),
+									((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+											? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
+											: 0));
+							if (_ent instanceof ServerPlayer _serverPlayer)
+								_serverPlayer.connection.teleport(
+										((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+												? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
+												: 0),
+										((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+												? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
+												: 0),
+										((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
+												? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
+												: 0),
+										_ent.getYRot(), _ent.getXRot());
 						}
 						{
 							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 100;
@@ -3427,10 +3456,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt813 && _livEnt813.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt819 && _livEnt819.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("energy_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
-						for (int index31 = 0; index31 < 15; index31++) {
+						for (int index33 = 0; index33 < 15; index33++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -3536,8 +3565,8 @@ public class SpecialAttackProcedure {
 						}
 						particleAmount = 8;
 						particleRadius = 2;
-						for (int index32 = 0; index32 < 60; index32++) {
-							for (int index33 = 0; index33 < (int) particleAmount; index33++) {
+						for (int index34 = 0; index34 < 60; index34++) {
+							for (int index35 = 0; index35 < (int) particleAmount; index35++) {
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -3554,10 +3583,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt843 && _livEnt843.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt849 && _livEnt849.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("sun_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
-						for (int index34 = 0; index34 < 15; index34++) {
+						for (int index36 = 0; index36 < 15; index36++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -3585,7 +3614,7 @@ public class SpecialAttackProcedure {
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 9);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 3));
-										if (world instanceof Level _lvl855 && _lvl855.isDay()) {
+										if (world instanceof Level _lvl861 && _lvl861.isDay()) {
 											entityiterator.setSecondsOnFire(5);
 										}
 										{
@@ -3659,7 +3688,7 @@ public class SpecialAttackProcedure {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
-						for (int index35 = 0; index35 < (int) particleAmount; index35++) {
+						for (int index37 = 0; index37 < (int) particleAmount; index37++) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.SUN_PARTICLES.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -3692,10 +3721,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt881 && _livEnt881.hasEffect(PowerModMobEffects.MOON_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt887 && _livEnt887.hasEffect(PowerModMobEffects.MOON_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
-						for (int index36 = 0; index36 < 15; index36++) {
+						for (int index38 = 0; index38 < 15; index38++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -3723,7 +3752,7 @@ public class SpecialAttackProcedure {
 												new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 9);
 										if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 											_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 300, 3));
-										if (!(world instanceof Level _lvl893 && _lvl893.isDay())) {
+										if (!(world instanceof Level _lvl899 && _lvl899.isDay())) {
 											entityiterator.setTicksFrozen(100);
 										}
 										{
@@ -3759,7 +3788,7 @@ public class SpecialAttackProcedure {
 					}
 				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("moon_attack_2")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
-						for (int index37 = 0; index37 < 10; index37++) {
+						for (int index39 = 0; index39 < 10; index39++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -3817,7 +3846,7 @@ public class SpecialAttackProcedure {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 						particleAmount = 125;
 						particleRadius = 5;
-						for (int index38 = 0; index38 < (int) particleAmount; index38++) {
+						for (int index40 = 0; index40 < (int) particleAmount; index40++) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.MOON_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -3850,10 +3879,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt930 && _livEnt930.hasEffect(PowerModMobEffects.SPACE_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt936 && _livEnt936.hasEffect(PowerModMobEffects.SPACE_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("space_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
-						for (int index39 = 0; index39 < 15; index39++) {
+						for (int index41 = 0; index41 < 15; index41++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -3963,10 +3992,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt951 && _livEnt951.hasEffect(PowerModMobEffects.TIME_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt957 && _livEnt957.hasEffect(PowerModMobEffects.TIME_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("time_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
-						for (int index40 = 0; index40 < 15; index40++) {
+						for (int index42 = 0; index42 < 15; index42++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -4026,7 +4055,7 @@ public class SpecialAttackProcedure {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 30) {
 						particleAmount = 125;
 						particleRadius = 4;
-						for (int index41 = 0; index41 < (int) particleAmount; index41++) {
+						for (int index43 = 0; index43 < (int) particleAmount; index43++) {
 							if (world instanceof ServerLevel _level)
 								_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_SLOW.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 2, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -4072,8 +4101,8 @@ public class SpecialAttackProcedure {
 						}
 						particleAmount = 8;
 						particleRadius = 1;
-						for (int index42 = 0; index42 < 60; index42++) {
-							for (int index43 = 0; index43 < (int) particleAmount; index43++) {
+						for (int index44 = 0; index44 < 60; index44++) {
+							for (int index45 = 0; index45 < (int) particleAmount; index45++) {
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TIME_FAST.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -4090,10 +4119,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt991 && _livEnt991.hasEffect(PowerModMobEffects.CREATION_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt997 && _livEnt997.hasEffect(PowerModMobEffects.CREATION_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 10) {
-						for (int index44 = 0; index44 < 15; index44++) {
+						for (int index46 = 0; index46 < 15; index46++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -4179,8 +4208,8 @@ public class SpecialAttackProcedure {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
 						particleAmount = 4;
 						particleRadius = 1;
-						for (int index45 = 0; index45 < 20; index45++) {
-							for (int index46 = 0; index46 < (int) particleAmount; index46++) {
+						for (int index47 = 0; index47 < 20; index47++) {
+							for (int index48 = 0; index48 < (int) particleAmount; index48++) {
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.RUNES_OF_CREATION.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -4191,31 +4220,36 @@ public class SpecialAttackProcedure {
 							if (Mth.nextInt(RandomSource.create(), 1, 5) == 1) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SWORD.get()));
-									entityToSpawn.setPickUpDelay(10);
+									entityToSpawn.setPickUpDelay(0);
+									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_AXE.get()));
-									entityToSpawn.setPickUpDelay(10);
+									entityToSpawn.setPickUpDelay(0);
+									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_PICKAXE.get()));
-									entityToSpawn.setPickUpDelay(10);
+									entityToSpawn.setPickUpDelay(0);
+									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_HOE.get()));
-									entityToSpawn.setPickUpDelay(10);
+									entityToSpawn.setPickUpDelay(0);
+									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
 							} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
 								if (world instanceof ServerLevel _level) {
 									ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SHOVEL.get()));
-									entityToSpawn.setPickUpDelay(10);
+									entityToSpawn.setPickUpDelay(0);
+									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
 							}
@@ -4248,8 +4282,8 @@ public class SpecialAttackProcedure {
 						}
 						particleAmount = 8;
 						particleRadius = 2;
-						for (int index47 = 0; index47 < 60; index47++) {
-							for (int index48 = 0; index48 < (int) particleAmount; index48++) {
+						for (int index49 = 0; index49 < 60; index49++) {
+							for (int index50 = 0; index50 < (int) particleAmount; index50++) {
 								if (world instanceof ServerLevel _level)
 									_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.RUNES_OF_CREATION.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 											(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
@@ -4266,10 +4300,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt1048 && _livEnt1048.hasEffect(PowerModMobEffects.DESTRUCTION_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt1054 && _livEnt1054.hasEffect(PowerModMobEffects.DESTRUCTION_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("destruction_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
-						for (int index49 = 0; index49 < 15; index49++) {
+						for (int index51 = 0; index51 < 15; index51++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
@@ -4393,10 +4427,10 @@ public class SpecialAttackProcedure {
 					}
 				}
 			}
-			if (entity instanceof LivingEntity _livEnt1074 && _livEnt1074.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
+			if (entity instanceof LivingEntity _livEnt1080 && _livEnt1080.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("blood_attack_1")) {
 					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
-						for (int index50 = 0; index50 < 15; index50++) {
+						for (int index52 = 0; index52 < 15; index52++) {
 							if (!world.getBlockState(new BlockPos(
 									entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos()
 											.getX(),
