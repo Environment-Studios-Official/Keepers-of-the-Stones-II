@@ -118,7 +118,7 @@ public class AbilityKeyPressedTickProcedure {
 				DestructionSpecialAttackProcedure.execute(world, x, y, z, entity);
 			}
 			if (entity instanceof LivingEntity _livEnt28 && _livEnt28.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
-				BloodSpecialAttackProcedure.execute(world, x, y, z, entity);
+				BloodSpecialAttackProcedure.execute(world, entity);
 			}
 			{
 				boolean _setval = false;
