@@ -1,4 +1,4 @@
-What's new in Keepers of the Stones II version 1.0.0.18?<br />
+What's new in Keepers of the Stones II version 1.0.0.19?<br />
 <br />- Added new element - blood
 <br />- Added 3 achievements
 <br />- Added new boss - energium golem
