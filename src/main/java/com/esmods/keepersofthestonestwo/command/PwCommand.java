@@ -18,6 +18,7 @@ import net.minecraft.commands.Commands;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
 
 @Mod.EventBusSubscriber
@@ -25,7 +26,7 @@ public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
+				.then(Commands.literal("points_set").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -39,7 +40,7 @@ public class PwCommand {
 
 					PowerScaleSetProcedure.execute(arguments);
 					return 0;
-				})))).then(Commands.literal("max_points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
+				})))).then(Commands.literal("set_max_points").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -53,6 +54,20 @@ public class PwCommand {
 
 					MaxPowerScaleSetProcedure.execute(arguments);
 					return 0;
-				}))))));
+				})))).then(Commands.literal("set_multiplier").then(Commands.argument("player", EntityArgument.player()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					PowerRecoveryMultiplierSetProcedure.execute(arguments);
+					return 0;
+				})))));
 	}
 }
