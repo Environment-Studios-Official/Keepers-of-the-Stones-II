@@ -13,8 +13,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 public class MaxPowerScaleSetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		{
-			double _setval = DoubleArgumentType.getDouble(arguments, "count");
-			(new Object() {
+			PowerModVariables.PlayerVariables _vars = (new Object() {
 				public Entity getEntity() {
 					try {
 						return EntityArgument.getEntity(arguments, "player");
@@ -23,19 +22,18 @@ public class MaxPowerScaleSetProcedure {
 						return null;
 					}
 				}
-			}.getEntity()).getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.max_power = _setval;
-				capability.syncPlayerVariables((new Object() {
-					public Entity getEntity() {
-						try {
-							return EntityArgument.getEntity(arguments, "player");
-						} catch (CommandSyntaxException e) {
-							e.printStackTrace();
-							return null;
-						}
+			}.getEntity()).getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.max_power = DoubleArgumentType.getDouble(arguments, "count");
+			_vars.syncPlayerVariables((new Object() {
+				public Entity getEntity() {
+					try {
+						return EntityArgument.getEntity(arguments, "player");
+					} catch (CommandSyntaxException e) {
+						e.printStackTrace();
+						return null;
 					}
-				}.getEntity()));
-			});
+				}
+			}.getEntity()));
 		}
 	}
 }
