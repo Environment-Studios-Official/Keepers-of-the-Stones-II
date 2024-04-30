@@ -19858,6 +19858,36 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "EnergiumTemple",
+      "type": "structure",
+      "sortid": 910,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_temple",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/structure/energium_temple.json",
+          "src/main/resources/data/power/worldgen/template_pool/energium_temple.json",
+          "src/main/resources/data/power/worldgen/structure_set/energium_temple.json"
+        ]
+      },
+      "path": "~/Structures"
+    },
+    {
+      "name": "EnergiumTempleLoot",
+      "type": "loottable",
+      "sortid": 911,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_temple_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/chests/energium_temple.json"
+        ]
+      },
+      "path": "~/Structures"
     }
   ],
   "variable_elements": [
