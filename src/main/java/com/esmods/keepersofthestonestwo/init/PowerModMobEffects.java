@@ -42,6 +42,7 @@ import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AirMasterMobEffect;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -82,4 +83,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> IMMORTALITY = REGISTRY.register("immortality", () -> new ImmortalityMobEffect());
 	public static final RegistryObject<MobEffect> DESTRUCTION_MASTER = REGISTRY.register("destruction_master", () -> new DestructionMasterMobEffect());
 	public static final RegistryObject<MobEffect> LETHALITY = REGISTRY.register("lethality", () -> new LethalityMobEffect());
+	public static final RegistryObject<MobEffect> BLOOD_MASTER = REGISTRY.register("blood_master", () -> new BloodMasterMobEffect());
 }

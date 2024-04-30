@@ -24,8 +24,6 @@ import java.io.FileReader;
 import java.io.File;
 import java.io.BufferedReader;
 
-import com.google.gson.Gson;
-
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 @Mod.EventBusSubscriber
@@ -97,7 +95,7 @@ public class ModVersionCheckerProcedure {
 			}
 			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/beta/latest_beta.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_latest_beta.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
@@ -112,7 +110,7 @@ public class ModVersionCheckerProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					jmain = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					jmain = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (jmain.get("ver1").getAsDouble() > v1 || jmain.get("ver2").getAsDouble() > v2 && jmain.get("ver1").getAsDouble() >= v1
 							|| jmain.get("ver3").getAsDouble() > v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1
 							|| jmain.get("ver4").getAsDouble() > v4 && jmain.get("ver3").getAsDouble() >= v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1) {
@@ -161,7 +159,7 @@ public class ModVersionCheckerProcedure {
 			}
 			testfile = new File(System.getProperty("java.io.tmpdir"), File.separator + "modcheck.json");
 			jmain = jmain;
-			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Keepers-of-the-Stones-2/main/latest_release.json";
+			url = "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_latest_release.json";
 			try {
 				org.apache.commons.io.FileUtils.copyURLToFile(new URL(url), testfile, 4000, 4000);
 			} catch (IOException e) {
@@ -176,7 +174,7 @@ public class ModVersionCheckerProcedure {
 						jsonstringbuilder.append(line);
 					}
 					bufferedReader.close();
-					jmain = new Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
+					jmain = new com.google.gson.Gson().fromJson(jsonstringbuilder.toString(), com.google.gson.JsonObject.class);
 					if (jmain.get("ver1").getAsDouble() > v1 || jmain.get("ver2").getAsDouble() > v2 && jmain.get("ver1").getAsDouble() >= v1
 							|| jmain.get("ver3").getAsDouble() > v3 && jmain.get("ver2").getAsDouble() >= v2 && jmain.get("ver1").getAsDouble() >= v1) {
 						if (entity instanceof Player _player && !_player.level().isClientSide())

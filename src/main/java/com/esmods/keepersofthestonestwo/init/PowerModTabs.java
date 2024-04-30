@@ -19,6 +19,7 @@ public class PowerModTabs {
 	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.EMPTY_BATTERY.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModBlocks.AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModItems.RAW_AMPLIFIER.get());
 				tabData.accept(PowerModItems.AMPLIFIER_DROP.get());
@@ -28,6 +29,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.STAR_POTION_INFINITY.get());
 				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
@@ -73,6 +75,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TIME_BATTERY.get());
 				tabData.accept(PowerModItems.CREATION_BATTERY.get());
 				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
+				tabData.accept(PowerModItems.BLOOD_BATTERY.get());
 			})
 
 					.build());
@@ -104,6 +107,13 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TIME_STONE.get());
 				tabData.accept(PowerModItems.CREATION_STONE.get());
 				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
+				tabData.accept(PowerModItems.BLOOD_STONE.get());
+			})
+
+					.build());
+	public static final RegistryObject<CreativeModeTab> MOBS = REGISTRY.register("mobs",
+			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
 			})
 
 					.build());

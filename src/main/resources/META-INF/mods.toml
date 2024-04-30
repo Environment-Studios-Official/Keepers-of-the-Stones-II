@@ -4,12 +4,12 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.18"
+version="1.0.0.19"
 displayName="Keepers of the Stones II"
 displayURL="https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html"
 logoFile="logo.png"
 credits="Created by Environment Studios"
-authors="Environment Studios"
+authors="MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others"
 description="Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character's skills and powers."
 
 # Start of user code block mod configuration
@@ -43,18 +43,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="epicfight"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="playeranimator"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="cloth-config"
     mandatory=false
     versionRange="[0,)"
     ordering="NONE"

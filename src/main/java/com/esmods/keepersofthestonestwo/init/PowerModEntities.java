@@ -36,6 +36,7 @@ import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
+import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
@@ -43,7 +44,6 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
-import com.esmods.keepersofthestonestwo.entity.AmplifierDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -116,12 +116,11 @@ public class PowerModEntities {
 			.setUpdateInterval(3).setCustomClientFactory(BlackHoleEntity::new).fireImmune().sized(0.2f, 0.2f));
 	public static final RegistryObject<EntityType<MeteoriteProjectileEntity>> METEORITE_PROJECTILE = register("meteorite_projectile", EntityType.Builder.<MeteoriteProjectileEntity>of(MeteoriteProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(MeteoriteProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<AmplifierDropProjectileEntity>> AMPLIFIER_DROP_PROJECTILE = register("amplifier_drop_projectile",
-			EntityType.Builder.<AmplifierDropProjectileEntity>of(AmplifierDropProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(AmplifierDropProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
-					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(DestructionBallProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem", EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(EnergiumGolemEntity::new).fireImmune().sized(2.5f, 3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -132,6 +131,7 @@ public class PowerModEntities {
 		event.enqueueWork(() -> {
 			ShadowEntity.init();
 			BlackHoleEntity.init();
+			EnergiumGolemEntity.init();
 		});
 	}
 
@@ -139,5 +139,6 @@ public class PowerModEntities {
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
+		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 	}
 }

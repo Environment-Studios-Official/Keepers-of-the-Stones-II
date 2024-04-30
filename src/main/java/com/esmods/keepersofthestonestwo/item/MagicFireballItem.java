@@ -39,27 +39,20 @@ public class MagicFireballItem extends Item {
 
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
-		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.success(entity.getItemInHand(hand));
-		entity.startUsingItem(hand);
+		InteractionResultHolder<ItemStack> ar = InteractionResultHolder.fail(entity.getItemInHand(hand));
+		if (entity.getAbilities().instabuild || findAmmo(entity) != ItemStack.EMPTY) {
+			ar = InteractionResultHolder.success(entity.getItemInHand(hand));
+			entity.startUsingItem(hand);
+		}
 		return ar;
 	}
 
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
-			ItemStack stack = ProjectileWeaponItem.getHeldProjectile(entity, e -> e.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem());
-			if (stack == ItemStack.EMPTY) {
-				for (int i = 0; i < player.getInventory().items.size(); i++) {
-					ItemStack teststack = player.getInventory().items.get(i);
-					if (teststack != null && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
-						stack = teststack;
-						break;
-					}
-				}
-			}
+			ItemStack stack = findAmmo(player);
 			if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
 				MagicFireballProjectileEntity projectile = MagicFireballProjectileEntity.shoot(world, entity, world.getRandom());
-				itemstack.hurtAndBreak(1, entity, e -> e.broadcastBreakEvent(entity.getUsedItemHand()));
 				if (player.getAbilities().instabuild) {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {
@@ -78,5 +71,19 @@ public class MagicFireballItem extends Item {
 				}
 			}
 		}
+	}
+
+	private ItemStack findAmmo(Player player) {
+		ItemStack stack = ProjectileWeaponItem.getHeldProjectile(player, e -> e.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem());
+		if (stack == ItemStack.EMPTY) {
+			for (int i = 0; i < player.getInventory().items.size(); i++) {
+				ItemStack teststack = player.getInventory().items.get(i);
+				if (teststack != null && teststack.getItem() == MagicFireballProjectileEntity.PROJECTILE_ITEM.getItem()) {
+					stack = teststack;
+					break;
+				}
+			}
+		}
+		return stack;
 	}
 }
