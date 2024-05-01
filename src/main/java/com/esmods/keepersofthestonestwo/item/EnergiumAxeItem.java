@@ -26,7 +26,7 @@ public class EnergiumAxeItem extends AxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 18f;
+				return 10f;
 			}
 
 			public int getLevel() {

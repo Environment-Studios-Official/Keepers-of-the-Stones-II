@@ -26,7 +26,7 @@ public class EnergiumSwordItem extends SwordItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 10f;
+				return 6f;
 			}
 
 			public int getLevel() {
