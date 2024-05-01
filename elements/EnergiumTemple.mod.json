@@ -22,7 +22,7 @@
         "value": "badlands"
       }
     ],
-    "surfaceDetectionType": "WORLD_SURFACE_WG",
+    "surfaceDetectionType": "WORLD_SURFACE",
     "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
     "size": 1,

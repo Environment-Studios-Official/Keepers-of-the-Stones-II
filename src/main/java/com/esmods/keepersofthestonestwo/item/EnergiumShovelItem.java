@@ -26,7 +26,7 @@ public class EnergiumShovelItem extends ShovelItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 3f;
+				return 3.25f;
 			}
 
 			public int getLevel() {
