@@ -126,12 +126,26 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_AXE.get()));
 							entityToSpawn.setPickUpDelay(0);
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
 						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
 						if (world instanceof ServerLevel _level) {
@@ -140,6 +154,13 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_HOE.get()));
@@ -147,12 +168,26 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SHOVEL.get()));
 							entityToSpawn.setPickUpDelay(0);
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
+						}
+						{
+							double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
 						}
 					}
 				});
@@ -162,13 +197,6 @@ public class CreationSpecialAttackProcedure {
 					} else {
 						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 					}
-				}
-				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
 				}
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("creation_attack_3")) {
