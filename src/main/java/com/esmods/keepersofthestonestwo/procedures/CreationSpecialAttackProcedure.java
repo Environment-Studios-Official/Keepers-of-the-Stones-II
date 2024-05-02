@@ -123,12 +123,22 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_AXE.get()));
 							entityToSpawn.setPickUpDelay(0);
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
+						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
 						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
 						if (world instanceof ServerLevel _level) {
@@ -137,6 +147,11 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_HOE.get()));
@@ -144,12 +159,22 @@ public class CreationSpecialAttackProcedure {
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
 						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
+						}
 					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
 						if (world instanceof ServerLevel _level) {
 							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SHOVEL.get()));
 							entityToSpawn.setPickUpDelay(0);
 							entityToSpawn.setUnlimitedLifetime();
 							_level.addFreshEntity(entityToSpawn);
+						}
+						{
+							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+							_vars.syncPlayerVariables(entity);
 						}
 					}
 				});
@@ -159,11 +184,6 @@ public class CreationSpecialAttackProcedure {
 					} else {
 						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1, false);
 					}
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-					_vars.syncPlayerVariables(entity);
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_3")) {
