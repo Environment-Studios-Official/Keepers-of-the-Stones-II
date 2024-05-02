@@ -225,16 +225,17 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_destruction_element", imagebutton_destruction_element);
 		this.addRenderableWidget(imagebutton_destruction_element);
-		imagebutton_technology_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_technology_element.png"), 16, 32, e -> {
-			if (TechnologyStoneCheckProcedure.execute(world)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(8, x, y, z));
-				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 8, x, y, z);
-			}
-		}) {
+		imagebutton_technology_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/technology_element.png"), new ResourceLocation("power:textures/screens/technology_element_highlighted.png")), e -> {
+					if (TechnologyStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart2ButtonMessage(8, x, y, z));
+						KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (TechnologyStoneCheckProcedure.execute(world))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_technology_element", imagebutton_technology_element);

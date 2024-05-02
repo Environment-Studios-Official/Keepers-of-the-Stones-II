@@ -40,6 +40,8 @@ import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
+import com.esmods.keepersofthestonestwo.item.TechnologyBatteryItem;
+import com.esmods.keepersofthestonestwo.item.TechnologyArmorItem;
 import com.esmods.keepersofthestonestwo.item.SunStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
@@ -432,6 +434,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> BLOOD_BATTERY = REGISTRY.register("blood_battery", () -> new BloodBatteryItem());
 	public static final DeferredHolder<Item, Item> RAW_DEPLETED_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK);
 	public static final DeferredHolder<Item, Item> RAW_AMPLIFIER_BLOCK = block(PowerModBlocks.RAW_AMPLIFIER_BLOCK);
+	public static final DeferredHolder<Item, Item> TECHNOLOGY_ARMOR_HELMET = REGISTRY.register("technology_armor_helmet", () -> new TechnologyArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> TECHNOLOGY_ARMOR_CHESTPLATE = REGISTRY.register("technology_armor_chestplate", () -> new TechnologyArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> TECHNOLOGY_ARMOR_LEGGINGS = REGISTRY.register("technology_armor_leggings", () -> new TechnologyArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> TECHNOLOGY_ARMOR_BOOTS = REGISTRY.register("technology_armor_boots", () -> new TechnologyArmorItem.Boots());
+	public static final DeferredHolder<Item, Item> TECHNOLOGY_BATTERY = REGISTRY.register("technology_battery", () -> new TechnologyBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
