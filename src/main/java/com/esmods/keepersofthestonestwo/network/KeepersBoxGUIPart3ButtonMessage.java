@@ -26,6 +26,7 @@ import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.BloodElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -102,6 +103,10 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 7) {
 
 			VacuumElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 8) {
+
+			BloodElementGetProcedure.execute(world, entity);
 		}
 	}
 

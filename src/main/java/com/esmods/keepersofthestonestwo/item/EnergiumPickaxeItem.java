@@ -26,7 +26,7 @@ public class EnergiumPickaxeItem extends PickaxeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 3f;
+				return 6f;
 			}
 
 			public int getLevel() {

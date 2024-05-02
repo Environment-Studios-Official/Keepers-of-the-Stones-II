@@ -43,6 +43,7 @@ import com.esmods.keepersofthestonestwo.procedures.EarthMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.potion.WhirlwindMobEffect;
@@ -77,6 +78,7 @@ import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AirMasterMobEffect;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -118,6 +120,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> IMMORTALITY = REGISTRY.register("immortality", () -> new ImmortalityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DESTRUCTION_MASTER = REGISTRY.register("destruction_master", () -> new DestructionMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LETHALITY = REGISTRY.register("lethality", () -> new LethalityMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BLOOD_MASTER = REGISTRY.register("blood_master", () -> new BloodMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -197,6 +200,8 @@ public class PowerModMobEffects {
 			DestructionMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == LETHALITY.get()) {
 			LethalityPriIstiechieniiEffiektaProcedure.execute(entity.level(), entity);
+		} else if (effect == BLOOD_MASTER.get()) {
+			BloodMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

@@ -35,6 +35,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBloodMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
@@ -77,4 +78,5 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<KeepersBoxGUIPart3Menu>> KEEPERS_BOX_GUI_PART_3 = REGISTRY.register("keepers_box_gui_part_3", () -> IMenuTypeExtension.create(KeepersBoxGUIPart3Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<KeepersBoxGUIPart4Menu>> KEEPERS_BOX_GUI_PART_4 = REGISTRY.register("keepers_box_gui_part_4", () -> IMenuTypeExtension.create(KeepersBoxGUIPart4Menu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesDestructionMenu>> WHEEL_ABILITIES_DESTRUCTION = REGISTRY.register("wheel_abilities_destruction", () -> IMenuTypeExtension.create(WheelAbilitiesDestructionMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesBloodMenu>> WHEEL_ABILITIES_BLOOD = REGISTRY.register("wheel_abilities_blood", () -> IMenuTypeExtension.create(WheelAbilitiesBloodMenu::new));
 }

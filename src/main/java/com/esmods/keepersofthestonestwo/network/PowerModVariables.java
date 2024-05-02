@@ -74,6 +74,8 @@ public class PowerModVariables {
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
+			clone.max_power = original.max_power;
+			clone.power_recovery_multiplier = original.power_recovery_multiplier;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -387,6 +389,8 @@ public class PowerModVariables {
 		public boolean use_ability_key_var = false;
 		public boolean detransf_key_var = false;
 		public boolean wheel_open_key_var = false;
+		public double max_power = 100.0;
+		public double power_recovery_multiplier = 1.0;
 
 		@Override
 		public CompoundTag serializeNBT() {
@@ -407,6 +411,8 @@ public class PowerModVariables {
 			nbt.putBoolean("use_ability_key_var", use_ability_key_var);
 			nbt.putBoolean("detransf_key_var", detransf_key_var);
 			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
+			nbt.putDouble("max_power", max_power);
+			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
 			return nbt;
 		}
 
@@ -428,6 +434,8 @@ public class PowerModVariables {
 			use_ability_key_var = nbt.getBoolean("use_ability_key_var");
 			detransf_key_var = nbt.getBoolean("detransf_key_var");
 			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
+			max_power = nbt.getDouble("max_power");
+			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

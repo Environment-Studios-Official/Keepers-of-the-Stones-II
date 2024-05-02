@@ -36,7 +36,7 @@ public class PlantsStoneUseProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = 100;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power;
 					_vars.syncPlayerVariables(entity);
 				}
 				if (world instanceof Level _level) {

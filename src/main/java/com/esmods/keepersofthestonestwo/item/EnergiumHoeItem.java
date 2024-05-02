@@ -26,7 +26,7 @@ public class EnergiumHoeItem extends HoeItem {
 			}
 
 			public float getAttackDamageBonus() {
-				return 4f;
+				return 0f;
 			}
 
 			public int getLevel() {

@@ -43,6 +43,8 @@ public class PowerMod {
 	public static final String MODID = "power";
 
 	public PowerMod(IEventBus modEventBus) {
+		// Start of user code block mod constructor
+		// End of user code block mod constructor
 		NeoForge.EVENT_BUS.register(this);
 		modEventBus.addListener(this::registerNetworking);
 		PowerModSounds.REGISTRY.register(modEventBus);

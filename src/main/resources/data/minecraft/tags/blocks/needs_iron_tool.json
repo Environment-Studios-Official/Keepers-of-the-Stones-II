@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "power:raw_amplifier_block",
+    "power:amplifier_block",
+    "power:amplifier_ore"
+  ]
+}

@@ -31,7 +31,7 @@ public class PowerScaleRegenProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - 1;
+					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier;
 					_vars.syncPlayerVariables(entity);
 				}
 			} else {
@@ -40,7 +40,7 @@ public class PowerScaleRegenProcedure {
 					_vars.powerTimer = 50;
 					_vars.syncPlayerVariables(entity);
 				}
-				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power < 100) {
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power < entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
