@@ -119,6 +119,9 @@ public class AbilityKeyPressedTickProcedure {
 				if (entity instanceof LivingEntity _livEnt28 && _livEnt28.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
 					BloodSpecialAttackProcedure.execute(world, entity);
 				}
+				if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get())) {
+					TechnologySpecialAttackProcedure.execute(world, entity);
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.use_ability_key_var = false;

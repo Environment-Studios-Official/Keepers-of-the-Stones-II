@@ -19888,6 +19888,466 @@
         ]
       },
       "path": "~/Structures"
+    },
+    {
+      "name": "TechnologyMaster",
+      "type": "potioneffect",
+      "sortid": 912,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/TechnologyMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyArmor",
+      "type": "armor",
+      "sortid": 913,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/technology_armor_boots.json",
+          "src/main/resources/assets/power/models/item/technology_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/technology_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnologyArmorItem.java",
+          "src/main/resources/assets/power/models/item/technology_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 914,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 915,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 916,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 917,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyStoneUse",
+      "type": "procedure",
+      "sortid": 918,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyMasterStart",
+      "type": "procedure",
+      "sortid": 919,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyMasterEnd",
+      "type": "procedure",
+      "sortid": 920,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologyElementGet",
+      "type": "procedure",
+      "sortid": 921,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnologySpecialAttack",
+      "type": "procedure",
+      "sortid": 922,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologySpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesTechnology",
+      "type": "gui",
+      "sortid": 923,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_technology",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTechnologyMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTechnologyScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTechnologyButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Technology"
+    },
+    {
+      "name": "Attack109",
+      "type": "procedure",
+      "sortid": 924,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_109",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack109Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Technology"
+    },
+    {
+      "name": "Attack110",
+      "type": "procedure",
+      "sortid": 925,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_110",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack110Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Technology"
+    },
+    {
+      "name": "Attack111",
+      "type": "procedure",
+      "sortid": 926,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_111",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack111Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Technology"
+    },
+    {
+      "name": "Attack112",
+      "type": "procedure",
+      "sortid": 927,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_112",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack112Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Technology"
+    },
+    {
+      "name": "TechnologyStoneCheck",
+      "type": "procedure",
+      "sortid": 928,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "TechnologyBattery",
+      "type": "item",
+      "sortid": 929,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/technology_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnologyBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/TechnologyBattery"
+    },
+    {
+      "name": "TechnologyBatteryDesc",
+      "type": "procedure",
+      "sortid": 930,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/TechnologyBattery"
+    },
+    {
+      "name": "TechnologyBatteryUse",
+      "type": "procedure",
+      "sortid": 931,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "technology_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnologyBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/TechnologyBattery"
     }
   ],
   "variable_elements": [
@@ -20461,6 +20921,7 @@
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.plants_stone": "Камень зелени",
@@ -20557,17 +21018,21 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "subtitles.electric_spark": "Искра",
       "effect.power.creation_master": "Мастер творения",
+      "gui.power.wheel_abilities_technology.button_2": "2",
       "battery.desc.water": "Вода",
       "battery.desc.blood": "Кровь",
+      "gui.power.wheel_abilities_technology.button_3": "3",
       "entity.power.energium_golem": "Энерджиумный голем",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "advancements.the_energium_age.descr": "Добудьте и переплавьте энерджиумную руду",
       "item.power.energium_sword": "Энерджиумный меч",
       "item.power.empty_battery": "Батарея",
+      "item.power.technology_armor_leggings": "Поножи мастера технологий",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
       "item.power.magnet_stone": "Камень магнита",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Дождь",
       "advancements.super_charge.title": "Супер Заряд!",
+      "gui.power.wheel_abilities_technology.button_1": "1",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
       "battery.desc.space": "Космос",
@@ -20674,6 +21139,7 @@
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
       "effect.power.time_slowing": "Замедление времени",
+      "item.power.technology_armor_helmet": "Шлем мастера технологий",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
       "item.power.destruction_armor_boots": "Ботинки мастера разрушение",
@@ -20709,6 +21175,7 @@
       "item.power.water_battery": "Батарея",
       "battery.desc.vacuum": "Пустота",
       "item.power.creation_battery": "Батарея",
+      "item.power.technology_battery": "Батарея",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энерджиума",
@@ -20765,6 +21232,7 @@
       "item.power.plague_stone": "Камень чумы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Пронзание кристаллом, расходует 40",
       "battery.desc.energy": "Энергия",
+      "item.power.technology_armor_chestplate": "Нагрудник мастера технологий",
       "effect.power.lightning_master": "Мастер молнии",
       "gui.power.wheel_abilities_time.button_1": "1",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
@@ -20836,6 +21304,7 @@
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "battery.desc.moon": "Луна",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
+      "battery.desc.technology": "Технологии",
       "item.power.left_metal_gauntlet": "Левая металлическая перчатка",
       "item.power.plants_armor_leggings": "Поножи мастера зелени",
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Обнуление, расходует 100",
@@ -20863,6 +21332,7 @@
       "battery.desc.time": "Время",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_ray_uses_10": "Теневой луч, расходует 10",
       "item.power.shadow_armor_leggings": "Поножи мастера тени",
+      "item.power.technology_armor_boots": "Ботинки мастера технологий",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "item.power.moon_stone": "Камень луны",
       "item.power.blood_armor_helmet": "Шлем мастера крови",
@@ -20887,6 +21357,7 @@
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Энергия",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Жало скорпиона, расходует 35",
+      "effect.power.technology_master": "Мастер технологий",
       "item.power.shadow_armor_boots": "Ботинки мастера тени",
       "battery.desc.metal": "Металл",
       "item.power.light_armor_boots": "Ботинки мастера света",
@@ -20896,7 +21367,7 @@
       "effect.power.metal_master": "Мастер металла",
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
-      "block.power.raw_amplifier_block": "Блок рудного энерджиума",
+      "block.power.raw_amplifier_block": "Блок рудного амплифера",
       "item.power.constellation_sword": "Меч созвездий",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
       "item.power.form_stone": "Камень формы",
@@ -20916,8 +21387,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -20930,8 +21401,8 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "item_group.power.items": "KotS: Items",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
@@ -20940,8 +21411,9 @@
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
+      "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.plants_stone": "Plants Stone",
@@ -20979,15 +21451,15 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
@@ -21007,8 +21479,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -21022,8 +21494,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.metal_stone": "Metal Stone",
       "item.power.sun_armor_chestplate": "Sun Chestplate",
+      "item.power.metal_stone": "Metal Stone",
       "item_group.power.stones": "KotS: Stones",
       "effect.power.lethality": "Lethality",
       "item.power.animals_armor_chestplate": "Animals Chestplate",
@@ -21038,17 +21510,21 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "subtitles.electric_spark": "Spark",
       "effect.power.creation_master": "Master of Creation",
+      "gui.power.wheel_abilities_technology.button_2": "2",
       "battery.desc.water": "Water",
       "battery.desc.blood": "Blood",
+      "gui.power.wheel_abilities_technology.button_3": "3",
       "entity.power.energium_golem": "Energium Golem",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "advancements.the_energium_age.descr": "Obtain and smelt the energium ore",
       "item.power.energium_sword": "Energium Sword",
       "item.power.empty_battery": "Battery",
+      "item.power.technology_armor_leggings": "Technology Leggings",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
       "item.power.magnet_stone": "Magnet Stone",
       "gui.power.keepers_box_gui_part_1.tooltip_rain": "Rain",
       "advancements.super_charge.title": "Super Charge!",
+      "gui.power.wheel_abilities_technology.button_1": "1",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "advancements.keepers_of_the_stones_2.title": "Keepers Of The Stones II",
       "battery.desc.space": "Space",
@@ -21156,6 +21632,7 @@
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "effect.power.time_slowing": "Time Slowing",
+      "item.power.technology_armor_helmet": "Technology Helmet",
       "item.power.animals_armor_boots": "Animals Boots",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 30",
       "item.power.destruction_armor_boots": "Destruction Boots",
@@ -21191,6 +21668,7 @@
       "item.power.water_battery": "Battery",
       "battery.desc.vacuum": "Vacuum",
       "item.power.creation_battery": "Battery",
+      "item.power.technology_battery": "Battery",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "block.power.raw_depleted_energium_block": "Raw Depleted Energium Block",
@@ -21247,6 +21725,7 @@
       "item.power.plague_stone": "Plague Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_piercing_uses_40": "Crystal piercing, uses 40",
       "battery.desc.energy": "Energy",
+      "item.power.technology_armor_chestplate": "Technology Chestplate",
       "effect.power.lightning_master": "Master of Lightning",
       "gui.power.wheel_abilities_time.button_1": "1",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
@@ -21317,6 +21796,7 @@
       "item.power.lava_armor_helmet": "Lava Helmet",
       "battery.desc.moon": "Moon",
       "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
+      "battery.desc.technology": "Technology",
       "item.power.left_metal_gauntlet": "Left Metal Gauntlet",
       "item.power.plants_armor_leggings": "Plants Leggings",
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Zeroing out, uses 100",
@@ -21344,6 +21824,7 @@
       "battery.desc.time": "Time",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_ray_uses_10": "Shadow ray, uses 10",
       "item.power.shadow_armor_leggings": "Shadow Leggings",
+      "item.power.technology_armor_boots": "Technology Boots",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "item.power.moon_stone": "Moon Stone",
       "item.power.blood_armor_helmet": "Blood Helmet",
@@ -21368,6 +21849,7 @@
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Energy",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
+      "effect.power.technology_master": "Master of Technologies",
       "item.power.shadow_armor_boots": "Shadow Boots",
       "battery.desc.metal": "Metal",
       "item.power.light_armor_boots": "Light Boots",
@@ -21731,6 +22213,10 @@
                       {
                         "name": "Blood",
                         "children": []
+                      },
+                      {
+                        "name": "Technology",
+                        "children": []
                       }
                     ]
                   }
@@ -21873,6 +22359,10 @@
               {
                 "name": "BloodBattery",
                 "children": []
+              },
+              {
+                "name": "TechnologyBattery",
+                "children": []
               }
             ]
           },
@@ -21900,10 +22390,6 @@
         ]
       },
       {
-        "name": "Dimensions",
-        "children": []
-      },
-      {
         "name": "Bosses",
         "children": [
           {
@@ -21929,7 +22415,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.20",
+    "version": "1.0.0.21",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",

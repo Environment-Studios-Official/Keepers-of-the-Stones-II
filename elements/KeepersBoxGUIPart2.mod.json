@@ -236,6 +236,38 @@
           "x": 123,
           "y": 127
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_technology_element",
+          "image": "technology_element.png",
+          "hoveredImage": "technology_element_highlighted.png",
+          "onClick": {
+            "name": "TechnologyElementGet"
+          },
+          "displayCondition": {
+            "name": "TechnologyStoneCheck"
+          },
+          "x": 151,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_technology",
+          "text": {
+            "fixedValue": "Technology"
+          },
+          "displayCondition": {
+            "name": "TechnologyStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {
