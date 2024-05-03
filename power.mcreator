@@ -19714,26 +19714,6 @@
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
     },
     {
-      "name": "NBTFIX",
-      "type": "procedure",
-      "sortid": 903,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "nbtfix",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/NBTFIXProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "KeepersOfTheStones2",
       "type": "achievement",
       "sortid": 904,
