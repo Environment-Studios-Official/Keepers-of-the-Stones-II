@@ -12370,30 +12370,6 @@
       "path": "~/Items/Batteries/EnergyBattery"
     },
     {
-      "name": "ZeroingUsing",
-      "type": "procedure",
-      "sortid": 601,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "zeroing_using",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ZeroingUsingProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Vacuum"
-    },
-    {
       "name": "EnergySpark",
       "type": "particle",
       "sortid": 602,
@@ -20689,12 +20665,6 @@
       "type": "number",
       "scope": "global",
       "value": "0.0"
-    },
-    {
-      "name": "zeroing",
-      "type": "logic",
-      "scope": "player_persistent",
-      "value": "false"
     },
     {
       "name": "element_name_first",

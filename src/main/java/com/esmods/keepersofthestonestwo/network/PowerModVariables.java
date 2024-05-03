@@ -87,7 +87,6 @@ public class PowerModVariables {
 			clone.selected = original.selected;
 			clone.attack = original.attack;
 			clone.battery = original.battery;
-			clone.zeroing = original.zeroing;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
@@ -425,7 +424,6 @@ public class PowerModVariables {
 		public double mergers = 0.0;
 		public boolean battery = false;
 		public boolean ability_block = false;
-		public boolean zeroing = false;
 		public String element_name_first = "0";
 		public String element_name_second = "0";
 		public String element_name_third = "0";
@@ -451,7 +449,6 @@ public class PowerModVariables {
 			nbt.putDouble("mergers", mergers);
 			nbt.putBoolean("battery", battery);
 			nbt.putBoolean("ability_block", ability_block);
-			nbt.putBoolean("zeroing", zeroing);
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
 			nbt.putString("element_name_third", element_name_third);
@@ -474,7 +471,6 @@ public class PowerModVariables {
 			mergers = nbt.getDouble("mergers");
 			battery = nbt.getBoolean("battery");
 			ability_block = nbt.getBoolean("ability_block");
-			zeroing = nbt.getBoolean("zeroing");
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
 			element_name_third = nbt.getString("element_name_third");
@@ -525,7 +521,6 @@ public class PowerModVariables {
 					variables.mergers = message.data.mergers;
 					variables.battery = message.data.battery;
 					variables.ability_block = message.data.ability_block;
-					variables.zeroing = message.data.zeroing;
 					variables.element_name_first = message.data.element_name_first;
 					variables.element_name_second = message.data.element_name_second;
 					variables.element_name_third = message.data.element_name_third;
