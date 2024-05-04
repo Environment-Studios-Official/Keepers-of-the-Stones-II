@@ -208,6 +208,7 @@
   "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
   "entity.power.turret": "Turret",
   "effect.power.fire_master": "Master of Fire",
+  "effect.power.technobarrier": "Technobarrier",
   "item.power.turret_spawn_egg": "Turret Spawn Egg",
   "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
   "item.power.ocean_stone": "Ocean Stone",
