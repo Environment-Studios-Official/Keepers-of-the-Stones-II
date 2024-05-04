@@ -120,7 +120,7 @@ public class AbilityKeyPressedTickProcedure {
 					BloodSpecialAttackProcedure.execute(world, entity);
 				}
 				if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get())) {
-					TechnologySpecialAttackProcedure.execute(world, entity);
+					TechnologySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				{
 					boolean _setval = false;
