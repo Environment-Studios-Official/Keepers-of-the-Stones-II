@@ -135,7 +135,7 @@
     "rangedAttackItem": {
       "value": ""
     },
-    "rangedItemType": "EnergyCharge",
+    "rangedItemType": "TurretProjectile",
     "rangedAttackInterval": 40,
     "rangedAttackRadius": 16.0,
     "height": 1.0,

@@ -318,7 +318,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 
 	@Override
 	public void performRangedAttack(LivingEntity target, float flval) {
-		EnergyChargeEntity.shoot(this, target);
+		TurretProjectileEntity.shoot(this, target);
 	}
 
 	@Override

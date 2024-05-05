@@ -20382,6 +20382,53 @@
         ]
       },
       "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TurretProjectileKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 935,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_projectile_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TurretProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TurretProjectile",
+      "type": "projectile",
+      "sortid": 936,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "turret_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TurretProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Technology"
     }
   ],
   "variable_elements": [

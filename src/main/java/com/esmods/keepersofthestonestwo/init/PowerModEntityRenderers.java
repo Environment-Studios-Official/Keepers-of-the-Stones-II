@@ -13,6 +13,7 @@ import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import com.esmods.keepersofthestonestwo.client.renderer.WaterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.TurretRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.TurretProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SphereNothingProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
@@ -77,5 +78,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.DESTRUCTION_BALL_PROJECTILE.get(), DestructionBallProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TURRET.get(), TurretRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.TURRET_PROJECTILE.get(), TurretProjectileRenderer::new);
 	}
 }
