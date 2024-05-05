@@ -9,10 +9,12 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 
 import java.util.List;
 import java.util.Comparator;
+
+import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 
 public class ActiveModeBarrierProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -38,8 +40,8 @@ public class ActiveModeBarrierProcedure {
 		for (int index0 = 0; index0 < 30; index0++) {
 			for (int index1 = 0; index1 < 16; index1++) {
 				if (world instanceof ServerLevel _level)
-					_level.sendParticles(ParticleTypes.ASH, (x - r * Math.cos(Math.toRadians(b)) * Math.sin(Math.toRadians(a))), ((y + 1) - r * Math.sin(Math.toRadians(b))), (z + r * Math.cos(Math.toRadians(b)) * Math.cos(Math.toRadians(a))), 1, 0,
-							0, 0, 1);
+					_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.TECHNOBARRIER_PARTICLE.get()), (x - r * Math.cos(Math.toRadians(b)) * Math.sin(Math.toRadians(a))), ((y + 1) - r * Math.sin(Math.toRadians(b))),
+							(z + r * Math.cos(Math.toRadians(b)) * Math.cos(Math.toRadians(a))), 1, 0, 0, 0, 0);
 				b = b + 12;
 			}
 			b = 90;

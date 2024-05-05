@@ -28,4 +28,5 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> TIME_FAST = REGISTRY.register("time_fast", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> RUNES_OF_CREATION = REGISTRY.register("runes_of_creation", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> RUNES_OF_DESTRUCTION = REGISTRY.register("runes_of_destruction", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> TECHNOBARRIER_PARTICLE = REGISTRY.register("technobarrier_particle", () -> new SimpleParticleType(false));
 }
