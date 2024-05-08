@@ -261,6 +261,7 @@
   "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
   "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
   "item.power.space_armor_helmet": "Шлем мастера космоса",
+  "item.power.techno_crossbow": "Rain Bow",
   "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
   "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
   "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",

@@ -40,6 +40,7 @@ import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyArmorItem;
+import com.esmods.keepersofthestonestwo.item.TechnoCrossbowItem;
 import com.esmods.keepersofthestonestwo.item.SunStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
@@ -438,6 +439,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TECHNOLOGY_ARMOR_LEGGINGS = REGISTRY.register("technology_armor_leggings", () -> new TechnologyArmorItem.Leggings());
 	public static final RegistryObject<Item> TECHNOLOGY_ARMOR_BOOTS = REGISTRY.register("technology_armor_boots", () -> new TechnologyArmorItem.Boots());
 	public static final RegistryObject<Item> TECHNOLOGY_BATTERY = REGISTRY.register("technology_battery", () -> new TechnologyBatteryItem());
+	public static final RegistryObject<Item> TECHNO_CROSSBOW = REGISTRY.register("techno_crossbow", () -> new TechnoCrossbowItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

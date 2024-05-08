@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/techno-crossbow",
+  "textures": {
+    "0": "power:block/techno-crossbow",
+    "particle": "power:item/techno-crossbow"
+  }
+}

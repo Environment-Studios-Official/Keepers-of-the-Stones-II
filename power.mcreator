@@ -20444,6 +20444,61 @@
         ]
       },
       "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnoCrossbow",
+      "type": "item",
+      "sortid": 938,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_crossbow",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoCrossbowItem.java",
+          "src/main/resources/assets/power/models/item/techno_crossbow.json"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnoCrossbowPriVystrielieSnariadomIzPriedmieta",
+      "type": "procedure",
+      "sortid": 939,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_crossbow_pri_vystrielie_snariadom_iz_priedmieta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowPriVystrielieSnariadomIzPriedmietaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnoCrossbowKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 940,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_crossbow_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
     }
   ],
   "variable_elements": [
@@ -21241,6 +21296,7 @@
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "item.power.space_armor_helmet": "Шлем мастера космоса",
+      "item.power.techno_crossbow": "Rain Bow",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
@@ -21737,6 +21793,7 @@
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Destruction ball, uses 45",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "item.power.space_armor_helmet": "Space Helmet",
+      "item.power.techno_crossbow": "Techno Crossbow",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
