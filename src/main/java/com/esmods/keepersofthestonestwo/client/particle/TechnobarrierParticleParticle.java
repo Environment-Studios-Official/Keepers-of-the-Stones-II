@@ -55,7 +55,7 @@ public class TechnobarrierParticleParticle extends TextureSheetParticle {
 	public void tick() {
 		super.tick();
 		if (!this.removed) {
-			this.setSprite(this.spriteSet.get((this.age / 2) % 1 + 1, 1));
+			this.setSprite(this.spriteSet.get((this.age / 2) % 4 + 1, 4));
 		}
 	}
 }
