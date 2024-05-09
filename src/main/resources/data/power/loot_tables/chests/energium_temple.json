@@ -10,7 +10,7 @@
         {
           "type": "minecraft:item",
           "name": "power:energium_upgrade_smithing_template",
-          "weight": 1,
+          "weight": 2,
           "functions": [
             {
               "function": "set_count",
@@ -94,7 +94,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:diamond",
-          "weight": 3,
+          "weight": 2,
           "functions": [
             {
               "function": "set_count",
@@ -121,58 +121,14 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:energium_sword",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              }
-            },
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 1,
-                "max": 3
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "power:energium_axe",
-          "weight": 1,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 1
-              }
-            },
-            {
-              "function": "enchant_with_levels",
-              "treasure": true,
-              "levels": {
-                "min": 0,
-                "max": 3
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
           "name": "minecraft:sweet_berries",
-          "weight": 4,
+          "weight": 5,
           "functions": [
             {
               "function": "set_count",
               "count": {
-                "min": 3,
-                "max": 5
+                "min": 2,
+                "max": 3
               }
             }
           ]
@@ -186,7 +142,7 @@
               "function": "set_count",
               "count": {
                 "min": 1,
-                "max": 2
+                "max": 3
               }
             }
           ]
@@ -201,20 +157,6 @@
               "count": {
                 "min": 3,
                 "max": 5
-              }
-            }
-          ]
-        },
-        {
-          "type": "minecraft:item",
-          "name": "minecraft:flowering_azalea",
-          "weight": 5,
-          "functions": [
-            {
-              "function": "set_count",
-              "count": {
-                "min": 0,
-                "max": 1
               }
             }
           ]
