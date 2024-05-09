@@ -68,48 +68,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_red_plasma_ball",
+          "image": "red_plasma_ball.png",
+          "hoveredImage": "red_plasma_ball_highlight.png",
           "onClick": {
             "name": "Attack109"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_red_plasma_ball_uses_15",
+          "text": {
+            "fixedValue": "Red plasma ball, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
           "y": 48
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_technobarrier",
+          "image": "technobarrier.png",
+          "hoveredImage": "technobarrier_highlight.png",
           "onClick": {
             "name": "Attack110"
           },
-          "width": 30,
-          "height": 20,
-          "x": 260,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "tooltip",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "tooltip_technobarrier_uses_60",
+          "text": {
+            "fixedValue": "Technobarrier, uses 60"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 108
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_turret",
+          "image": "turret.png",
+          "hoveredImage": "turret_highlight.png",
           "onClick": {
             "name": "Attack111"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_turret_uses_80",
+          "text": {
+            "fixedValue": "Turret, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 168
         }
       }
     ],
@@ -118,7 +151,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }
