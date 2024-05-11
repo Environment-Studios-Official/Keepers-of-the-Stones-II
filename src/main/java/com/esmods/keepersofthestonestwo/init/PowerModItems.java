@@ -37,6 +37,7 @@ import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
+import com.esmods.keepersofthestonestwo.item.TeleportationArmorItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyArmorItem;
@@ -440,6 +441,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TECHNOLOGY_ARMOR_BOOTS = REGISTRY.register("technology_armor_boots", () -> new TechnologyArmorItem.Boots());
 	public static final RegistryObject<Item> TECHNOLOGY_BATTERY = REGISTRY.register("technology_battery", () -> new TechnologyBatteryItem());
 	public static final RegistryObject<Item> TECHNO_CROSSBOW = REGISTRY.register("techno_crossbow", () -> new TechnoCrossbowItem());
+	public static final RegistryObject<Item> TELEPORTATION_ARMOR_HELMET = REGISTRY.register("teleportation_armor_helmet", () -> new TeleportationArmorItem.Helmet());
+	public static final RegistryObject<Item> TELEPORTATION_ARMOR_CHESTPLATE = REGISTRY.register("teleportation_armor_chestplate", () -> new TeleportationArmorItem.Chestplate());
+	public static final RegistryObject<Item> TELEPORTATION_ARMOR_LEGGINGS = REGISTRY.register("teleportation_armor_leggings", () -> new TeleportationArmorItem.Leggings());
+	public static final RegistryObject<Item> TELEPORTATION_ARMOR_BOOTS = REGISTRY.register("teleportation_armor_boots", () -> new TeleportationArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

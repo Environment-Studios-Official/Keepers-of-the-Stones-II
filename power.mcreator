@@ -20499,6 +20499,118 @@
         ]
       },
       "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TeleportationMaster",
+      "type": "potioneffect",
+      "sortid": 941,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/TeleportationMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmor",
+      "type": "armor",
+      "sortid": 942,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/teleportation_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationArmorItem.java",
+          "src/main/resources/assets/power/models/item/teleportation_armor_boots.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_helmet.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 943,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 944,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 945,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 946,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
     }
   ],
   "variable_elements": [
@@ -21059,8 +21171,8 @@
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
-      "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
+      "battery.desc.ice": "Лёд",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
@@ -21080,6 +21192,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
+      "item.power.teleportation_armor_chestplate": "Technology Chestplate",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "battery.desc.plants": "Зелень",
@@ -21095,6 +21208,7 @@
       "item.power.explosion_stone": "Камень взрыва",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
+      "item.power.teleportation_armor_leggings": "Technology Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
@@ -21147,8 +21261,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item.power.metal_stone": "Камень металла",
+      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item_group.power.stones": "KotS: Камни",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Красный плазменный шар, расходует 15",
       "effect.power.lethality": "Летальность",
@@ -21282,6 +21396,7 @@
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
+      "item.power.teleportation_armor_helmet": "Technology Helmet",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
       "effect.power.time_slowing": "Замедление времени",
@@ -21395,6 +21510,7 @@
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Вода",
       "key.categories.power2": "Хранители Камней II",
+      "item.power.teleportation_armor_boots": "Technology Boots",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Тень",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "item.power.tornado_armor_leggings": "Поножи мастера торнадо",
@@ -21421,6 +21537,7 @@
       "item.power.sound_battery": "Батарея",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Вакуум",
+      "effect.power.teleportation_master": "Master of Teleportation",
       "item.power.lava_stone": "Камень лавы",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Турель, расходует 80",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10",
@@ -21555,8 +21672,8 @@
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
-      "battery.desc.ice": "Ice",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
+      "battery.desc.ice": "Ice",
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
@@ -21576,6 +21693,7 @@
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
+      "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "battery.desc.plants": "Plants",
@@ -21591,6 +21709,7 @@
       "item.power.explosion_stone": "Explosion Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
+      "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
@@ -21643,8 +21762,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item.power.metal_stone": "Metal Stone",
+      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Red plasma ball, uses 15",
       "effect.power.lethality": "Lethality",
@@ -21779,6 +21898,7 @@
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
+      "item.power.teleportation_armor_helmet": "Teleportation Helmet",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "effect.power.time_slowing": "Time Slowing",
@@ -21892,6 +22012,7 @@
       "item.power.sound_armor_chestplate": "Sound Chestplate",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Water",
       "key.categories.power2": "Keepers of the Stones II",
+      "item.power.teleportation_armor_boots": "Teleportation Boots",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Shadow",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Destruction ray, uses 15",
       "item.power.tornado_armor_leggings": "Tornado Leggings",
@@ -21918,6 +22039,7 @@
       "item.power.sound_battery": "Battery",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Vacuum",
+      "effect.power.teleportation_master": "Master of Teleportation",
       "item.power.lava_stone": "Lava Stone",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Turret, uses 80",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
@@ -22561,6 +22683,10 @@
       },
       {
         "name": "Commands",
+        "children": []
+      },
+      {
+        "name": "Enchantments",
         "children": []
       }
     ]
