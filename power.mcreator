@@ -11861,7 +11861,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/enchantment/RevengeEnchantment.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "EnergiumRevengeAttack",
@@ -11880,12 +11880,12 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "sourceentity",
+            "type": "entity"
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "Isolation",
@@ -11899,7 +11899,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/enchantment/IsolationEnchantment.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "SphereNothingProjectileKazhdyiTikPriPoliotieSnariada",
@@ -21058,6 +21058,18 @@
       "~CUSTOM:EnergiumBlock",
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:minecraft:tools": [
+      "CUSTOM:EnergiumPickaxe",
+      "CUSTOM:EnergiumAxe",
+      "CUSTOM:EnergiumSword",
+      "CUSTOM:EnergiumShovel",
+      "CUSTOM:EnergiumHoe",
+      "CUSTOM:CreationSword",
+      "CUSTOM:CreationPickaxe",
+      "CUSTOM:CreationAxe",
+      "CUSTOM:CreationHoe",
+      "CUSTOM:CreationShovel"
     ],
     "ITEMS:forge:elemental_batteries": [
       "CUSTOM:EmptyBattery",
