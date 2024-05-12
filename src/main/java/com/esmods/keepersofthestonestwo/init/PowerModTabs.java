@@ -77,6 +77,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.DESTRUCTION_BATTERY.get());
 				tabData.accept(PowerModItems.BLOOD_BATTERY.get());
 				tabData.accept(PowerModItems.TECHNOLOGY_BATTERY.get());
+				tabData.accept(PowerModItems.TELEPORTATION_BATTERY.get());
 			})
 
 					.build());

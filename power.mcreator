@@ -20636,6 +20636,321 @@
         ]
       },
       "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TeleportationMasterStart",
+      "type": "procedure",
+      "sortid": 951,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationMasterEnd",
+      "type": "procedure",
+      "sortid": 952,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationStoneUse",
+      "type": "procedure",
+      "sortid": 953,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationSpecialAttack",
+      "type": "procedure",
+      "sortid": 954,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesTeleportation",
+      "type": "gui",
+      "sortid": 955,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_teleportation",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTeleportationScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTeleportationMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTeleportationButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack113",
+      "type": "procedure",
+      "sortid": 956,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_113",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack113Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack114",
+      "type": "procedure",
+      "sortid": 957,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_114",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack114Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack115",
+      "type": "procedure",
+      "sortid": 958,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_115",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack115Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack116",
+      "type": "procedure",
+      "sortid": 959,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_116",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack116Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "TeleportationBattery",
+      "type": "item",
+      "sortid": 960,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/teleportation_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationBatteryItem.java"
+        ]
+      },
+      "path": "~/Items/Batteries/TeleportationBattery"
+    },
+    {
+      "name": "TeleportationBatteryDesc",
+      "type": "procedure",
+      "sortid": 961,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/TeleportationBattery"
+    },
+    {
+      "name": "TeleportationBatteryUse",
+      "type": "procedure",
+      "sortid": 962,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/TeleportationBattery"
     }
   ],
   "variable_elements": [
@@ -21238,6 +21553,7 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
+      "gui.power.wheel_abilities_teleportation.tooltip_technobarrier_uses_60": "Technobarrier, uses 60",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
       "entity.power.black_hole": "Black Hole",
@@ -21276,6 +21592,7 @@
       "item.power.fire_stone": "Камень огня",
       "battery.desc.shadow": "Тень",
       "item.power.blood_stone": "Камень крови",
+      "gui.power.wheel_abilities_teleportation.tooltip_red_plasma_ball_uses_15": "Red plasma ball, uses 15",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Природное исцеление, расходует 65",
       "item.power.ice_spear": "Копьё льда",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40",
@@ -21378,6 +21695,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
+      "gui.power.wheel_abilities_teleportation.tooltip_turret_uses_80": "Turret, uses 80",
       "subtitles.stone_deactivation": "Камень был деактивирован",
       "subtitles.bass_boom": "Бас",
       "item.power.sun_armor_leggings": "Поножи мастера солнца",
@@ -21503,6 +21821,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
+      "gui.power.wheel_abilities_teleportation.button_1": "1",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
       "item.power.water_armor_leggings": "Поножи мастера воды",
       "item.power.amber_stone": "Камень янтаря",
@@ -21515,6 +21834,9 @@
       "item.power.time_battery": "Батарея",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "advancements.the_energium_age.title": "Энерджиумный век",
+      "gui.power.wheel_abilities_teleportation.button_3": "3",
+      "gui.power.wheel_abilities_teleportation.button_2": "2",
+      "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.creation_stone": "Камень творения",
@@ -21672,6 +21994,7 @@
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
       "block.power.raw_amplifier_block": "Блок рудного амплифера",
+      "battery.desc.teleportation": "Телепортациия",
       "item.power.constellation_sword": "Меч созвездий",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
       "item.power.form_stone": "Камень формы",
@@ -21691,8 +22014,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Battery",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -21705,18 +22028,18 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
-      "battery.desc.ice": "Ice",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
+      "battery.desc.ice": "Ice",
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
+      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -21740,6 +22063,7 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
+      "gui.power.wheel_abilities_teleportation.tooltip_technobarrier_uses_60": "Technobarrier, uses 60",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
       "entity.power.black_hole": "Black Hole",
@@ -21757,15 +22081,15 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "item.power.ether_armor_boots": "Ether Boots",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
+      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
@@ -21778,6 +22102,7 @@
       "item.power.fire_stone": "Fire Stone",
       "battery.desc.shadow": "Shadow",
       "item.power.blood_stone": "Blood Stone",
+      "gui.power.wheel_abilities_teleportation.tooltip_red_plasma_ball_uses_15": "Red plasma ball, uses 15",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Natural healing, uses 65",
       "item.power.ice_spear": "Ice Spear",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40",
@@ -21785,8 +22110,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "power.modinfo.recharge_stone": "Recharge: ",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
+      "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -21880,6 +22205,7 @@
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
       "item.power.sound_dagger": "Sound Dagger",
       "item.power.sun_armor_boots": "Sun Boots",
+      "gui.power.wheel_abilities_teleportation.tooltip_turret_uses_80": "Turret, uses 80",
       "subtitles.bass_boom": "Bass",
       "subtitles.stone_deactivation": "The stone has been deactivated",
       "item.power.sun_armor_leggings": "Sun Leggings",
@@ -22006,6 +22332,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Earth",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
+      "gui.power.wheel_abilities_teleportation.button_1": "1",
       "item.power.ice_armor_boots": "Ice Boots",
       "item.power.water_armor_leggings": "Water Leggings",
       "item.power.amber_stone": "Amber Stone",
@@ -22018,6 +22345,9 @@
       "item.power.time_battery": "Battery",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "advancements.the_energium_age.title": "The Energium Age",
+      "gui.power.wheel_abilities_teleportation.button_3": "3",
+      "gui.power.wheel_abilities_teleportation.button_2": "2",
+      "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Energium Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.creation_stone": "Creation Stone",
@@ -22174,6 +22504,7 @@
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "item.power.basic_box.tooltip": "Basic",
       "block.power.raw_amplifier_block": "Raw Amplifier Block",
+      "battery.desc.teleportation": "Teleportation",
       "item.power.constellation_sword": "Constellation Sword",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Air",
       "item.power.form_stone": "Form Stone",
@@ -22531,6 +22862,10 @@
                       {
                         "name": "Technology",
                         "children": []
+                      },
+                      {
+                        "name": "Teleportation",
+                        "children": []
                       }
                     ]
                   }
@@ -22676,6 +23011,10 @@
               },
               {
                 "name": "TechnologyBattery",
+                "children": []
+              },
+              {
+                "name": "TeleportationBattery",
                 "children": []
               }
             ]
