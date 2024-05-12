@@ -20446,61 +20446,6 @@
       "path": "~/Elements/Technology"
     },
     {
-      "name": "TechnoCrossbow",
-      "type": "item",
-      "sortid": 938,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "techno_crossbow",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoCrossbowItem.java",
-          "src/main/resources/assets/power/models/item/techno_crossbow.json"
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
-      "name": "TechnoCrossbowPriVystrielieSnariadomIzPriedmieta",
-      "type": "procedure",
-      "sortid": 939,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "techno_crossbow_pri_vystrielie_snariadom_iz_priedmieta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowPriVystrielieSnariadomIzPriedmietaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
-      "name": "TechnoCrossbowKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "sortid": 940,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "techno_crossbow_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
       "name": "TeleportationMaster",
       "type": "potioneffect",
       "sortid": 941,
@@ -20611,6 +20556,86 @@
         ]
       },
       "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationElementGet",
+      "type": "procedure",
+      "sortid": 947,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationStoneCheck",
+      "type": "procedure",
+      "sortid": 948,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "TechnoPickaxe",
+      "type": "tool",
+      "sortid": 949,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/techno_pickaxe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoPickaxeItem.java"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnoPickaxeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 950,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_pickaxe_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoPickaxeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
     }
   ],
   "variable_elements": [
@@ -21164,8 +21189,8 @@
       "item.power.ether_stone": "Камень эфира",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -21178,18 +21203,18 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "item_group.power.items": "KotS: Предметы",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
-      "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
       "battery.desc.ice": "Лёд",
+      "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
-      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
+      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -21230,15 +21255,15 @@
       "item.power.light_battery": "Батарея",
       "item.power.oceanic_trident": "Океанический трезубец",
       "effect.power.tornado_master": "Мастер торнадо",
-      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "item.power.ether_armor_boots": "Ботинки мастера эфира",
+      "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Разрушение",
       "item.power.energy_staff": "Посох энергии",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Энерджиумный топор",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
-      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
+      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
@@ -21258,8 +21283,8 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "item.power.ocean_battery": "Батарея",
       "block.power.moon_block": "Лунный блок",
-      "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "power.modinfo.recharge_stone": "Перезарядка: ",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -21390,6 +21415,7 @@
       "effect.power.sound_master": "Мастер звука",
       "subtitles.ear_ringing": "Звон в ушах",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Эфир",
+      "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
@@ -21421,7 +21447,6 @@
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "item.power.space_armor_helmet": "Шлем мастера космоса",
-      "item.power.techno_crossbow": "Rain Bow",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
@@ -21436,6 +21461,7 @@
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
       "item.power.raw_amplifier": "Рудный амплифер",
+      "item.power.techno_pickaxe": "Fire Sword",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "effect.power.blood_master": "Мастер крови",
@@ -21665,8 +21691,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -21679,18 +21705,18 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "item_group.power.items": "KotS: Items",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
-      "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
+      "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -21731,15 +21757,15 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
@@ -21759,8 +21785,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -21892,6 +21918,7 @@
       "effect.power.sound_master": "Master of Sound",
       "subtitles.ear_ringing": "Ear ringing",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Ether",
+      "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
@@ -21923,7 +21950,6 @@
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Destruction ball, uses 45",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "item.power.space_armor_helmet": "Space Helmet",
-      "item.power.techno_crossbow": "Techno Crossbow",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
@@ -21938,6 +21964,7 @@
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
       "item.power.raw_amplifier": "Raw Amplifier",
+      "item.power.techno_pickaxe": "Techno Pickaxe",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",

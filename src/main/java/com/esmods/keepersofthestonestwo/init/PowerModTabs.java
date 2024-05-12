@@ -110,6 +110,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
 				tabData.accept(PowerModItems.BLOOD_STONE.get());
 				tabData.accept(PowerModItems.TECHNOLOGY_STONE.get());
+				tabData.accept(PowerModItems.TELEPORTATION_STONE.get());
 			})
 
 					.build());
