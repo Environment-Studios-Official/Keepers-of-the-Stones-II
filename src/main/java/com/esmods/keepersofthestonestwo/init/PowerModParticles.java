@@ -13,6 +13,7 @@ import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeStopParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeSlowParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeFastParticle;
+import com.esmods.keepersofthestonestwo.client.particle.TeleportationParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TechnobarrierParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
@@ -42,5 +43,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.RUNES_OF_CREATION.get(), RunesOfCreationParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.RUNES_OF_DESTRUCTION.get(), RunesOfDestructionParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TECHNOBARRIER_PARTICLE.get(), TechnobarrierParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
 	}
 }

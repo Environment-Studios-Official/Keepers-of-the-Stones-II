@@ -102,6 +102,7 @@ public class PowerModVariables {
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
+				clone.teleporting_effect = original.teleporting_effect;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -433,6 +434,7 @@ public class PowerModVariables {
 		public boolean wheel_open_key_var = false;
 		public double max_power = 100.0;
 		public double power_recovery_multiplier = 1.0;
+		public double teleporting_effect = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -458,6 +460,7 @@ public class PowerModVariables {
 			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
 			nbt.putDouble("max_power", max_power);
 			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
+			nbt.putDouble("teleporting_effect", teleporting_effect);
 			return nbt;
 		}
 
@@ -480,6 +483,7 @@ public class PowerModVariables {
 			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
 			max_power = nbt.getDouble("max_power");
 			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
+			teleporting_effect = nbt.getDouble("teleporting_effect");
 		}
 	}
 
@@ -530,6 +534,7 @@ public class PowerModVariables {
 					variables.wheel_open_key_var = message.data.wheel_open_key_var;
 					variables.max_power = message.data.max_power;
 					variables.power_recovery_multiplier = message.data.power_recovery_multiplier;
+					variables.teleporting_effect = message.data.teleporting_effect;
 				}
 			});
 			context.setPacketHandled(true);
