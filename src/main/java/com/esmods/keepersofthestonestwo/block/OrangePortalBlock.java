@@ -36,11 +36,11 @@ import net.minecraft.core.BlockPos;
 import com.esmods.keepersofthestonestwo.procedures.OrangePortalTeleportingProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OrangePortalDestroyedProcedure;
 
-public class OrangePortaBlock extends Block implements SimpleWaterloggedBlock {
+public class OrangePortalBlock extends Block implements SimpleWaterloggedBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 	public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
 
-	public OrangePortaBlock() {
+	public OrangePortalBlock() {
 		super(BlockBehaviour.Properties.of().sound(SoundType.GLASS).strength(3.25f, 10000f).lightLevel(s -> 10).requiresCorrectToolForDrops().noCollission().noOcclusion().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true)
 				.isRedstoneConductor((bs, br, bp) -> false));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH).setValue(WATERLOGGED, false));

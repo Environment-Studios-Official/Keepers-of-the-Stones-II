@@ -12,7 +12,7 @@ import net.minecraft.world.level.block.Block;
 
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
-import com.esmods.keepersofthestonestwo.block.OrangePortaBlock;
+import com.esmods.keepersofthestonestwo.block.OrangePortalBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
@@ -39,7 +39,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> RAW_DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("raw_depleted_energium_block", () -> new RawDepletedEnergiumBlockBlock());
 	public static final RegistryObject<Block> RAW_AMPLIFIER_BLOCK = REGISTRY.register("raw_amplifier_block", () -> new RawAmplifierBlockBlock());
 	public static final RegistryObject<Block> BLUE_PORTAL = REGISTRY.register("blue_portal", () -> new BluePortalBlock());
-	public static final RegistryObject<Block> ORANGE_PORTA = REGISTRY.register("orange_porta", () -> new OrangePortaBlock());
+	public static final RegistryObject<Block> ORANGE_PORTAL = REGISTRY.register("orange_portal", () -> new OrangePortalBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

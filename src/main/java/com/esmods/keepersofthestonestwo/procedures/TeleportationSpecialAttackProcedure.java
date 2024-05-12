@@ -103,7 +103,7 @@ public class TeleportationSpecialAttackProcedure {
 					PowerModVariables.MapVariables.get(world).bpZ = entity.getZ();
 					PowerModVariables.MapVariables.get(world).syncData(world);
 				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && !PowerModVariables.MapVariables.get(world).orange_portal_placed) {
-					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTA.get().defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTAL.get().defaultBlockState(), 3);
 					PowerModVariables.MapVariables.get(world).orange_portal_placed = true;
 					PowerModVariables.MapVariables.get(world).syncData(world);
 					PowerModVariables.MapVariables.get(world).opX = entity.getX();

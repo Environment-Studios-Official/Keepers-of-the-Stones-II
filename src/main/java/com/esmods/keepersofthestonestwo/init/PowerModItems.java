@@ -450,7 +450,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_BATTERY = REGISTRY.register("teleportation_battery", () -> new TeleportationBatteryItem());
 	public static final RegistryObject<Item> TELEPORTATION_GUN = REGISTRY.register("teleportation_gun", () -> new TeleportationGunItem());
 	public static final RegistryObject<Item> BLUE_PORTAL = block(PowerModBlocks.BLUE_PORTAL);
-	public static final RegistryObject<Item> ORANGE_PORTA = block(PowerModBlocks.ORANGE_PORTA);
+	public static final RegistryObject<Item> ORANGE_PORTAL = block(PowerModBlocks.ORANGE_PORTAL);
 
 	// Start of user code block custom items
 	// End of user code block custom items
