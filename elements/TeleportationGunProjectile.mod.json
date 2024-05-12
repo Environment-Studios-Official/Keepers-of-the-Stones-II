@@ -3,17 +3,17 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.TNT"
+      "value": "Blocks.CHORUS_PLANT"
     },
     "showParticles": false,
     "actionSound": {
-      "value": "entity.firework.shoot"
+      "value": "entity.arrow.shoot"
     },
     "igniteFire": false,
-    "power": 1.1,
-    "damage": 12.0,
-    "knockback": 2,
+    "power": 1.0,
+    "damage": 8.5,
+    "knockback": 1,
     "entityModel": "Modelturret_projectile",
-    "customModelTexture": "turret_projectile.png"
+    "customModelTexture": "tp_gun_projectile.png"
   }
 }

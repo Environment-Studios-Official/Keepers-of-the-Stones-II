@@ -23,22 +23,22 @@ import net.minecraft.network.protocol.Packet;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 @OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
-public class TurretProjectileEntity extends AbstractArrow implements ItemSupplier {
-	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.TNT);
+public class TeleportationGunProjectileEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.CHORUS_PLANT);
 
-	public TurretProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.TURRET_PROJECTILE.get(), world);
+	public TeleportationGunProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), world);
 	}
 
-	public TurretProjectileEntity(EntityType<? extends TurretProjectileEntity> type, Level world) {
+	public TeleportationGunProjectileEntity(EntityType<? extends TeleportationGunProjectileEntity> type, Level world) {
 		super(type, world);
 	}
 
-	public TurretProjectileEntity(EntityType<? extends TurretProjectileEntity> type, double x, double y, double z, Level world) {
+	public TeleportationGunProjectileEntity(EntityType<? extends TeleportationGunProjectileEntity> type, double x, double y, double z, Level world) {
 		super(type, x, y, z, world);
 	}
 
-	public TurretProjectileEntity(EntityType<? extends TurretProjectileEntity> type, LivingEntity entity, Level world) {
+	public TeleportationGunProjectileEntity(EntityType<? extends TeleportationGunProjectileEntity> type, LivingEntity entity, Level world) {
 		super(type, entity, world);
 	}
 
@@ -71,35 +71,34 @@ public class TurretProjectileEntity extends AbstractArrow implements ItemSupplie
 			this.discard();
 	}
 
-	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1.1f, 12, 2);
+	public static TeleportationGunProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 1f, 8.5, 1);
 	}
 
-	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
-		TurretProjectileEntity entityarrow = new TurretProjectileEntity(PowerModEntities.TURRET_PROJECTILE.get(), entity, world);
+	public static TeleportationGunProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		TeleportationGunProjectileEntity entityarrow = new TeleportationGunProjectileEntity(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
 		entityarrow.setSilent(true);
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
-	public static TurretProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
-		TurretProjectileEntity entityarrow = new TurretProjectileEntity(PowerModEntities.TURRET_PROJECTILE.get(), entity, entity.level());
+	public static TeleportationGunProjectileEntity shoot(LivingEntity entity, LivingEntity target) {
+		TeleportationGunProjectileEntity entityarrow = new TeleportationGunProjectileEntity(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), entity, entity.level());
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1.1f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(12);
-		entityarrow.setKnockback(2);
+		entityarrow.setBaseDamage(8.5);
+		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1,
-				1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

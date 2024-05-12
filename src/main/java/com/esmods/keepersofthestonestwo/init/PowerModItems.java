@@ -37,6 +37,7 @@ import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
+import com.esmods.keepersofthestonestwo.item.TeleportationGunItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationArmorItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
@@ -447,6 +448,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_ARMOR_BOOTS = REGISTRY.register("teleportation_armor_boots", () -> new TeleportationArmorItem.Boots());
 	public static final RegistryObject<Item> TECHNO_PICKAXE = REGISTRY.register("techno_pickaxe", () -> new TechnoPickaxeItem());
 	public static final RegistryObject<Item> TELEPORTATION_BATTERY = REGISTRY.register("teleportation_battery", () -> new TeleportationBatteryItem());
+	public static final RegistryObject<Item> TELEPORTATION_GUN = REGISTRY.register("teleportation_gun", () -> new TeleportationGunItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

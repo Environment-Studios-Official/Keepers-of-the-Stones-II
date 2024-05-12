@@ -20384,38 +20384,6 @@
       "path": "~/Elements/Technology"
     },
     {
-      "name": "TurretProjectileKazhdyiTikPriPoliotieSnariada",
-      "type": "procedure",
-      "sortid": 935,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turret_projectile_kazhdyi_tik_pri_poliotie_snariada",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TurretProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
       "name": "TurretProjectile",
       "type": "projectile",
       "sortid": 936,
@@ -20951,6 +20919,76 @@
         ]
       },
       "path": "~/Items/Batteries/TeleportationBattery"
+    },
+    {
+      "name": "TeleportationGun",
+      "type": "item",
+      "sortid": 963,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/teleportation_gun.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationGunItem.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationGunPriVystrielieSnariadomIzPriedmieta",
+      "type": "procedure",
+      "sortid": 964,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun_pri_vystrielie_snariadom_iz_priedmieta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationGunPriVystrielieSnariadomIzPriedmietaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationGunKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 965,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationGunKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationGunProjectile",
+      "type": "projectile",
+      "sortid": 966,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TeleportationGunProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/TeleportationGunProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
     }
   ],
   "variable_elements": [
@@ -21655,6 +21693,7 @@
       "item.power.earth_stone": "Камень земли",
       "item.power.rain_battery": "Батарея",
       "item.power.creation_sword": "Меч созидания",
+      "item.power.teleportation_gun": "Rain Bow",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
       "battery.desc.sound": "Звук",
@@ -22162,6 +22201,7 @@
       "item.power.earth_stone": "Earth Stone",
       "item.power.rain_battery": "Battery",
       "item.power.creation_sword": "Creation Sword",
+      "item.power.teleportation_gun": "Teleportation Gun",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
       "battery.desc.sound": "Sound",
@@ -23082,7 +23122,10 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "geckolib"
+      "bettercombat",
+      "geckolib",
+      "playeranimator",
+      "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
