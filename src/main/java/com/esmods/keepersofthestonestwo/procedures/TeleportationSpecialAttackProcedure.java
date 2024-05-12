@@ -2,6 +2,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
@@ -14,6 +15,7 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
 public class TeleportationSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -89,9 +91,37 @@ public class TeleportationSpecialAttackProcedure {
 				}
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("teleportation_attack_3")) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
+				if (!PowerModVariables.MapVariables.get(world).blue_portal_placed) {
+					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.BLUE_PORTAL.get().defaultBlockState(), 3);
+					PowerModVariables.MapVariables.get(world).blue_portal_placed = true;
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).bpX = entity.getX();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).bpY = entity.getY();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).bpZ = entity.getZ();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && !PowerModVariables.MapVariables.get(world).orange_portal_placed) {
+					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTA.get().defaultBlockState(), 3);
+					PowerModVariables.MapVariables.get(world).orange_portal_placed = true;
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).opX = entity.getX();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).opY = entity.getY();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).opZ = entity.getZ();
+					PowerModVariables.MapVariables.get(world).syncData(world);
+				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && PowerModVariables.MapVariables.get(world).orange_portal_placed) {
+					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ), Blocks.AIR.defaultBlockState(), 3);
+					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).opX, PowerModVariables.MapVariables.get(world).opY, PowerModVariables.MapVariables.get(world).opZ), Blocks.AIR.defaultBlockState(), 3);
+					PowerModVariables.MapVariables.get(world).blue_portal_placed = false;
+					PowerModVariables.MapVariables.get(world).syncData(world);
+					PowerModVariables.MapVariables.get(world).orange_portal_placed = false;
+					PowerModVariables.MapVariables.get(world).syncData(world);
+				}
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 80;
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.power = _setval;
 						capability.syncPlayerVariables(entity);

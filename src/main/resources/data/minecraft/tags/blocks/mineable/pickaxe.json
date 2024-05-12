@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:orange_porta",
+    "power:blue_portal",
     "power:raw_amplifier_block",
     "power:raw_depleted_energium_block",
     "power:amplifier_block",

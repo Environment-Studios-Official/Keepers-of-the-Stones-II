@@ -217,6 +217,14 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
+		public boolean blue_portal_placed = false;
+		public boolean orange_portal_placed = false;
+		public double opX = 0;
+		public double opY = 0;
+		public double opZ = 0;
+		public double bpX = 0;
+		public double bpY = 0;
+		public double bpZ = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -273,6 +281,14 @@ public class PowerModVariables {
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 			darkness_stone = nbt.getBoolean("darkness_stone");
+			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
+			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
+			opX = nbt.getDouble("opX");
+			opY = nbt.getDouble("opY");
+			opZ = nbt.getDouble("opZ");
+			bpX = nbt.getDouble("bpX");
+			bpY = nbt.getDouble("bpY");
+			bpZ = nbt.getDouble("bpZ");
 		}
 
 		@Override
@@ -325,6 +341,14 @@ public class PowerModVariables {
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			nbt.putBoolean("darkness_stone", darkness_stone);
+			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
+			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
+			nbt.putDouble("opX", opX);
+			nbt.putDouble("opY", opY);
+			nbt.putDouble("opZ", opZ);
+			nbt.putDouble("bpX", bpX);
+			nbt.putDouble("bpY", bpY);
+			nbt.putDouble("bpZ", bpZ);
 			return nbt;
 		}
 
