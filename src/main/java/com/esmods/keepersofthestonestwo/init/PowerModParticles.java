@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
+import com.esmods.keepersofthestonestwo.client.particle.EnergiumGolemCoreAttackParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -44,5 +45,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.RUNES_OF_DESTRUCTION.get(), RunesOfDestructionParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TECHNOBARRIER_PARTICLE.get(), TechnobarrierParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get(), EnergiumGolemCoreAttackParticleParticle::provider);
 	}
 }
