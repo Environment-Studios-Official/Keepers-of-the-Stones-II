@@ -53,7 +53,7 @@ public class EnergiumGolemHandsAttackProcedure {
 			for (int index0 = 0; index0 < 4; index0++) {
 				Range = Range + 1;
 				XPar = x + entity.getLookAngle().x * Range;
-				YPar = y + 2;
+				YPar = y + 1.75;
 				ZPar = z + entity.getLookAngle().z * Range;
 				Range = Range + 1;
 			}
@@ -70,11 +70,11 @@ public class EnergiumGolemHandsAttackProcedure {
 			}
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
-				YPar = y + 2;
+				YPar = y + 1.75;
 				ZPar = z + entity.getLookAngle().z * Range;
 				{
 					final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK),

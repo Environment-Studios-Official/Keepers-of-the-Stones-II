@@ -6,10 +6,11 @@ import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.tags.ItemTags;
+import net.minecraft.resources.ResourceLocation;
 
 import java.util.List;
 
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 
 public class RevengeEnchantment extends Enchantment {
@@ -29,7 +30,6 @@ public class RevengeEnchantment extends Enchantment {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
-		return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_PICKAXE.get()), new ItemStack(PowerModItems.ENERGIUM_AXE.get()), new ItemStack(PowerModItems.ENERGIUM_SWORD.get()), new ItemStack(PowerModItems.ENERGIUM_SHOVEL.get()),
-				new ItemStack(PowerModItems.ENERGIUM_HOE.get())).test(itemstack);
+		return Ingredient.of(ItemTags.create(new ResourceLocation("minecraft:tools"))).test(itemstack);
 	}
 }

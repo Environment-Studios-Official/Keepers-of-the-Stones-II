@@ -17,6 +17,9 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.TurretEntity;
+import com.esmods.keepersofthestonestwo.entity.TeleportationGunProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
@@ -121,6 +124,13 @@ public class PowerModEntities {
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem", EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(EnergiumGolemEntity::new).fireImmune().sized(2.5f, 3f));
+	public static final RegistryObject<EntityType<TurretEntity>> TURRET = register("turret",
+			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).setCustomClientFactory(TurretEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile", EntityType.Builder.<TurretProjectileEntity>of(TurretProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(TurretProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<TeleportationGunProjectileEntity>> TELEPORTATION_GUN_PROJECTILE = register("teleportation_gun_projectile",
+			EntityType.Builder.<TeleportationGunProjectileEntity>of(TeleportationGunProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(TeleportationGunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
+					.setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -132,6 +142,7 @@ public class PowerModEntities {
 			ShadowEntity.init();
 			BlackHoleEntity.init();
 			EnergiumGolemEntity.init();
+			TurretEntity.init();
 		});
 	}
 
@@ -140,5 +151,6 @@ public class PowerModEntities {
 		event.put(SHADOW.get(), ShadowEntity.createAttributes().build());
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
+		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 	}
 }

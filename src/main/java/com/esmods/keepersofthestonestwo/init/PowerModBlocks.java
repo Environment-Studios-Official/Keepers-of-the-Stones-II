@@ -12,12 +12,14 @@ import net.minecraft.world.level.block.Block;
 
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
+import com.esmods.keepersofthestonestwo.block.OrangePortalBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierBlockBlock;
@@ -36,6 +38,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> AMPLIFIER_BLOCK = REGISTRY.register("amplifier_block", () -> new AmplifierBlockBlock());
 	public static final RegistryObject<Block> RAW_DEPLETED_ENERGIUM_BLOCK = REGISTRY.register("raw_depleted_energium_block", () -> new RawDepletedEnergiumBlockBlock());
 	public static final RegistryObject<Block> RAW_AMPLIFIER_BLOCK = REGISTRY.register("raw_amplifier_block", () -> new RawAmplifierBlockBlock());
+	public static final RegistryObject<Block> BLUE_PORTAL = REGISTRY.register("blue_portal", () -> new BluePortalBlock());
+	public static final RegistryObject<Block> ORANGE_PORTAL = REGISTRY.register("orange_portal", () -> new OrangePortalBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

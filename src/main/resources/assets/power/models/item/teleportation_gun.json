@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/teleportation_gun",
+  "textures": {
+    "1": "power:block/teleportation_gun",
+    "particle": "power:item/teleportation_gun"
+  }
+}

@@ -16,7 +16,7 @@
             "item": {
               "value": "CUSTOM:EnergiumUpgradeSmithingTemplate"
             },
-            "weight": 1,
+            "weight": 2,
             "minCount": 0,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -100,7 +100,7 @@
             "item": {
               "value": "Items.DIAMOND"
             },
-            "weight": 3,
+            "weight": 2,
             "minCount": 0,
             "maxCount": 2,
             "minEnchantmentLevel": 0,
@@ -126,39 +126,11 @@
           {
             "type": "item",
             "item": {
-              "value": "PowerModItems.ENERGIUM_SWORD"
-            },
-            "weight": 1,
-            "minCount": 0,
-            "maxCount": 1,
-            "minEnchantmentLevel": 1,
-            "maxEnchantmentLevel": 3,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "CUSTOM:EnergiumAxe"
-            },
-            "weight": 1,
-            "minCount": 0,
-            "maxCount": 1,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 3,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
               "value": "Items.SWEET_BERRIES"
             },
-            "weight": 4,
-            "minCount": 3,
-            "maxCount": 5,
+            "weight": 5,
+            "minCount": 2,
+            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -172,7 +144,7 @@
             },
             "weight": 5,
             "minCount": 1,
-            "maxCount": 2,
+            "maxCount": 3,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,
@@ -187,20 +159,6 @@
             "weight": 4,
             "minCount": 3,
             "maxCount": 5,
-            "minEnchantmentLevel": 0,
-            "maxEnchantmentLevel": 0,
-            "affectedByFortune": false,
-            "explosionDecay": false,
-            "silkTouchMode": 0
-          },
-          {
-            "type": "item",
-            "item": {
-              "value": "Blocks.FLOWERING_AZALEA"
-            },
-            "weight": 5,
-            "minCount": 0,
-            "maxCount": 1,
             "minEnchantmentLevel": 0,
             "maxEnchantmentLevel": 0,
             "affectedByFortune": false,

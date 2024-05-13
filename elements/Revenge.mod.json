@@ -16,19 +16,7 @@
     "excludeEnchantments": true,
     "compatibleItems": [
       {
-        "value": "CUSTOM:EnergiumPickaxe"
-      },
-      {
-        "value": "CUSTOM:EnergiumAxe"
-      },
-      {
-        "value": "CUSTOM:EnergiumSword"
-      },
-      {
-        "value": "CUSTOM:EnergiumShovel"
-      },
-      {
-        "value": "CUSTOM:EnergiumHoe"
+        "value": "TAG:minecraft:tools"
       }
     ],
     "excludeItems": false,

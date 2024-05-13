@@ -33,9 +33,6 @@
     "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
-    "onEntityHitWith": {
-      "name": "EnergiumRevengeAttack"
-    },
     "onItemInInventoryTick": {
       "name": "EnergiumItemsPowerLocked"
     }
