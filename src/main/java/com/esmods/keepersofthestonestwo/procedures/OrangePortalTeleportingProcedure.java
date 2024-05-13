@@ -10,11 +10,13 @@ public class OrangePortalTeleportingProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		{
-			Entity _ent = entity;
-			_ent.teleportTo(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ);
-			if (_ent instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.connection.teleport(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ, _ent.getYRot(), _ent.getXRot());
+		if (PowerModVariables.MapVariables.get(world).blue_portal_placed) {
+			{
+				Entity _ent = entity;
+				_ent.teleportTo(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ);
+				if (_ent instanceof ServerPlayer _serverPlayer)
+					_serverPlayer.connection.teleport(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ, _ent.getYRot(), _ent.getXRot());
+			}
 		}
 	}
 }
