@@ -11611,26 +11611,6 @@
       "path": "~/Items/Energium"
     },
     {
-      "name": "ModVersionChecker",
-      "type": "procedure",
-      "sortid": 569,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mod_version_checker",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ModVersionCheckerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "EnergiumPickaxe",
       "type": "tool",
       "sortid": 48,
