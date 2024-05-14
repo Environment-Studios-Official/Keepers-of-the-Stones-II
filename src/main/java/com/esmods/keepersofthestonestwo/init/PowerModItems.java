@@ -123,6 +123,7 @@ import com.esmods.keepersofthestonestwo.item.FireStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireBatteryItem;
 import com.esmods.keepersofthestonestwo.item.FireArmorItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionStoneItem;
+import com.esmods.keepersofthestonestwo.item.ExplosionBatteryItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionArmorItem;
 import com.esmods.keepersofthestonestwo.item.EtherStoneItem;
 import com.esmods.keepersofthestonestwo.item.EtherGlaiveItem;
@@ -456,6 +457,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_CHESTPLATE = REGISTRY.register("explosion_armor_chestplate", () -> new ExplosionArmorItem.Chestplate());
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_LEGGINGS = REGISTRY.register("explosion_armor_leggings", () -> new ExplosionArmorItem.Leggings());
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_BOOTS = REGISTRY.register("explosion_armor_boots", () -> new ExplosionArmorItem.Boots());
+	public static final RegistryObject<Item> EXPLOSION_BATTERY = REGISTRY.register("explosion_battery", () -> new ExplosionBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
