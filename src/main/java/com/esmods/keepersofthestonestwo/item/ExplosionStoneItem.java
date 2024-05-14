@@ -16,8 +16,8 @@ import net.minecraft.network.chat.Component;
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaStoneUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ExplosionStoneUseProcedure;
 
 public class ExplosionStoneItem extends Item {
 	public ExplosionStoneItem() {
@@ -39,7 +39,7 @@ public class ExplosionStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LavaStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		ExplosionStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 

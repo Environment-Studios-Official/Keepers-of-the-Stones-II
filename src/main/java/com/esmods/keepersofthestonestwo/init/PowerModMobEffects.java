@@ -39,6 +39,7 @@ import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
@@ -90,4 +91,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> TECHNOLOGY_MASTER = REGISTRY.register("technology_master", () -> new TechnologyMasterMobEffect());
 	public static final RegistryObject<MobEffect> TECHNOBARRIER = REGISTRY.register("technobarrier", () -> new TechnobarrierMobEffect());
 	public static final RegistryObject<MobEffect> TELEPORTATION_MASTER = REGISTRY.register("teleportation_master", () -> new TeleportationMasterMobEffect());
+	public static final RegistryObject<MobEffect> EXPLOSION_MASTER = REGISTRY.register("explosion_master", () -> new ExplosionMasterMobEffect());
 }
