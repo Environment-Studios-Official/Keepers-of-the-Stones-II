@@ -1,12 +1,14 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.items.ItemHandlerHelper;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -39,6 +41,7 @@ public class CreationSpecialAttackProcedure {
 		double particleRadius = 0;
 		double Scaling = 0;
 		double particleAmount = 0;
+		double random = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {
@@ -115,69 +118,73 @@ public class CreationSpecialAttackProcedure {
 									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
-				PowerMod.queueServerWork(1, () -> {
-					if (Mth.nextInt(RandomSource.create(), 1, 5) == 1) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SWORD.get()));
-							entityToSpawn.setPickUpDelay(0);
-							entityToSpawn.setUnlimitedLifetime();
-							_level.addFreshEntity(entityToSpawn);
+				random = Mth.nextInt(RandomSource.create(), 1, 5);
+				if (random == 1) {
+					PowerMod.queueServerWork(1, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.CREATION_SWORD.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 						}
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-							_vars.syncPlayerVariables(entity);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 2) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_AXE.get()));
-							entityToSpawn.setPickUpDelay(0);
-							entityToSpawn.setUnlimitedLifetime();
-							_level.addFreshEntity(entityToSpawn);
-						}
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-							_vars.syncPlayerVariables(entity);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 3) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_PICKAXE.get()));
-							entityToSpawn.setPickUpDelay(0);
-							entityToSpawn.setUnlimitedLifetime();
-							_level.addFreshEntity(entityToSpawn);
-						}
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-							_vars.syncPlayerVariables(entity);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 4) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_HOE.get()));
-							entityToSpawn.setPickUpDelay(0);
-							entityToSpawn.setUnlimitedLifetime();
-							_level.addFreshEntity(entityToSpawn);
-						}
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-							_vars.syncPlayerVariables(entity);
-						}
-					} else if (Mth.nextInt(RandomSource.create(), 1, 5) == 5) {
-						if (world instanceof ServerLevel _level) {
-							ItemEntity entityToSpawn = new ItemEntity(_level, x, y, z, new ItemStack(PowerModItems.CREATION_SHOVEL.get()));
-							entityToSpawn.setPickUpDelay(0);
-							entityToSpawn.setUnlimitedLifetime();
-							_level.addFreshEntity(entityToSpawn);
-						}
-						{
-							PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-							_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
-							_vars.syncPlayerVariables(entity);
-						}
+					});
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+						_vars.syncPlayerVariables(entity);
 					}
-				});
+				} else if (random == 2) {
+					PowerMod.queueServerWork(1, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.CREATION_AXE.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					});
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+						_vars.syncPlayerVariables(entity);
+					}
+				} else if (random == 3) {
+					PowerMod.queueServerWork(1, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.CREATION_PICKAXE.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					});
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+						_vars.syncPlayerVariables(entity);
+					}
+				} else if (random == 4) {
+					PowerMod.queueServerWork(1, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.CREATION_HOE.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					});
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+						_vars.syncPlayerVariables(entity);
+					}
+				} else if (random == 5) {
+					PowerMod.queueServerWork(1, () -> {
+						if (entity instanceof Player _player) {
+							ItemStack _setstack = new ItemStack(PowerModItems.CREATION_SHOVEL.get()).copy();
+							_setstack.setCount(1);
+							ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+						}
+					});
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 50;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);

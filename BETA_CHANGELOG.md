@@ -1,8 +1,8 @@
-What's new in Keepers of the Stones II version 1.0.0.20?<br />
-<br />- The loot in the Energium Temple has been changed
-<br />- Removed the energium smithing template from the ancient city
-<br />- The radius of the near special abilities has been slightly increased
-<br />- [Bugfix] Fixed damage to energium tools
+What's new in Keepers of the Stones II version 1.0.0.21?<br />
+<br />- Added new elements - technology and teleportation
+<br />- The loot in the energium temple has been changed again
+<br />- Now the enchantment of Revenge works on all tools
+<br />- Improved the melee attack of the energium golem
+<br />- The particles of the energium golem's core have been changed to match the color of the core
+<br />- Minor improvements in the system for receiving updates
 <br />- [Bugfix] Fixed the second ability of the Creation master
-<br />- [Bugfix] Fixed bugs related to the appearance of the energy temple
-<br />- [Bugfix] The Blood Master's abilities no longer work for players in creative modes

@@ -1,0 +1,19 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.TNT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.firework.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.1,
+    "damage": 12.0,
+    "knockback": 2,
+    "entityModel": "Modelturret_projectile",
+    "customModelTexture": "turret_projectile.png"
+  }
+}

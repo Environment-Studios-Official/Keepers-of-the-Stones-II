@@ -236,6 +236,70 @@
           "x": 123,
           "y": 127
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_technology_element",
+          "image": "technology_element.png",
+          "hoveredImage": "technology_element_highlighted.png",
+          "onClick": {
+            "name": "TechnologyElementGet"
+          },
+          "displayCondition": {
+            "name": "TechnologyStoneCheck"
+          },
+          "x": 151,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_technology",
+          "text": {
+            "fixedValue": "Technology"
+          },
+          "displayCondition": {
+            "name": "TechnologyStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_teleportation_element",
+          "image": "teleportation_element.png",
+          "hoveredImage": "teleportation_element_highlighted.png",
+          "onClick": {
+            "name": "TeleportationElementGet"
+          },
+          "displayCondition": {
+            "name": "TeleportationStoneCheck"
+          },
+          "x": 151,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleportation",
+          "text": {
+            "fixedValue": "Teleportation"
+          },
+          "displayCondition": {
+            "name": "TeleportationStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 147,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "techno_pickaxe"
+      },
+      "name": "default"
+    }
+  }
+}

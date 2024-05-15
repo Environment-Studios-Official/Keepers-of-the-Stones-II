@@ -20,6 +20,8 @@ import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
@@ -53,6 +55,9 @@ import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeSlowingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TeleportationMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TechnologyMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
@@ -121,6 +126,9 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> DESTRUCTION_MASTER = REGISTRY.register("destruction_master", () -> new DestructionMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LETHALITY = REGISTRY.register("lethality", () -> new LethalityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BLOOD_MASTER = REGISTRY.register("blood_master", () -> new BloodMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> TECHNOLOGY_MASTER = REGISTRY.register("technology_master", () -> new TechnologyMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> TECHNOBARRIER = REGISTRY.register("technobarrier", () -> new TechnobarrierMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> TELEPORTATION_MASTER = REGISTRY.register("teleportation_master", () -> new TeleportationMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -202,6 +210,10 @@ public class PowerModMobEffects {
 			LethalityPriIstiechieniiEffiektaProcedure.execute(entity.level(), entity);
 		} else if (effect == BLOOD_MASTER.get()) {
 			BloodMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == TECHNOLOGY_MASTER.get()) {
+			TechnologyMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == TELEPORTATION_MASTER.get()) {
+			TeleportationMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

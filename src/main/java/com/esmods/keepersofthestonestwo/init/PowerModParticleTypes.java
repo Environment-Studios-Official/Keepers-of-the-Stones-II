@@ -28,4 +28,7 @@ public class PowerModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> TIME_FAST = REGISTRY.register("time_fast", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> RUNES_OF_CREATION = REGISTRY.register("runes_of_creation", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> RUNES_OF_DESTRUCTION = REGISTRY.register("runes_of_destruction", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> TECHNOBARRIER_PARTICLE = REGISTRY.register("technobarrier_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> TELEPORTATION_PARTICLE = REGISTRY.register("teleportation_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE = REGISTRY.register("energium_golem_core_attack_particle", () -> new SimpleParticleType(false));
 }
