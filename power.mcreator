@@ -10422,8 +10422,8 @@
           "src/main/resources/data/power/worldgen/placed_feature/depleted_energium_ore.json",
           "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
-          "src/main/resources/data/power/forge/biome_modifier/depleted_energium_ore_biome_modifier.json",
           "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/item/depleted_energium_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json"
         ]
@@ -16215,10 +16215,10 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierOreBlock.java",
-          "src/main/resources/data/power/forge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/item/amplifier_ore.json",
           "src/main/resources/assets/power/blockstates/amplifier_ore.json",
           "src/main/resources/assets/power/models/block/amplifier_ore.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/amplifier_ore.json",
           "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json"
         ]
@@ -17934,7 +17934,7 @@
       "registry_name": "amplifier_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/forge/biome_modifier/amplifier_block_biome_modifier.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_block_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/amplifier_block.json",
           "src/main/resources/assets/power/blockstates/amplifier_block.json",
           "src/main/resources/data/power/worldgen/configured_feature/amplifier_block.json",
@@ -18697,8 +18697,8 @@
           "src/main/resources/assets/power/models/item/raw_amplifier_block.json",
           "src/main/resources/assets/power/blockstates/raw_amplifier_block.json",
           "src/main/resources/assets/power/models/block/raw_amplifier_block.json",
-          "src/main/resources/data/power/forge/biome_modifier/raw_amplifier_block_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawAmplifierBlockBlock.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/raw_amplifier_block_biome_modifier.json",
           "src/main/resources/data/power/loot_tables/blocks/raw_amplifier_block.json",
           "src/main/resources/data/power/worldgen/configured_feature/raw_amplifier_block.json"
         ]
@@ -23347,12 +23347,9 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "bettercombat",
-      "geckolib",
-      "playeranimator",
-      "cloth-config"
+      "geckolib"
     ],
-    "currentGenerator": "forge-1.20.1",
+    "currentGenerator": "neoforge-1.20.4",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
