@@ -17,6 +17,7 @@ import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeSlowingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.TeleportationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TechnologyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
@@ -88,4 +89,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> BLOOD_MASTER = REGISTRY.register("blood_master", () -> new BloodMasterMobEffect());
 	public static final RegistryObject<MobEffect> TECHNOLOGY_MASTER = REGISTRY.register("technology_master", () -> new TechnologyMasterMobEffect());
 	public static final RegistryObject<MobEffect> TECHNOBARRIER = REGISTRY.register("technobarrier", () -> new TechnobarrierMobEffect());
+	public static final RegistryObject<MobEffect> TELEPORTATION_MASTER = REGISTRY.register("teleportation_master", () -> new TeleportationMasterMobEffect());
 }

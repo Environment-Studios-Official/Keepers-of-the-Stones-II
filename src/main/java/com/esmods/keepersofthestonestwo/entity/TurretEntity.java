@@ -117,7 +117,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		this.targetSelector.addGoal(5, new OwnerHurtTargetGoal(this));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
 		this.goalSelector.addGoal(7, new FloatGoal(this));
-		this.goalSelector.addGoal(1, new TurretEntity.RangedAttackGoal(this, 1.25, 40, 16f) {
+		this.goalSelector.addGoal(1, new TurretEntity.RangedAttackGoal(this, 1.25, 40, 32f) {
 			@Override
 			public boolean canContinueToUse() {
 				return this.canUse();

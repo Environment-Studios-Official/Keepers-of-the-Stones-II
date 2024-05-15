@@ -135,7 +135,7 @@ public class TechnologyMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.TECHNO_CROSSBOW.get()).copy();
+			ItemStack _setstack = new ItemStack(PowerModItems.TECHNO_PICKAXE.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

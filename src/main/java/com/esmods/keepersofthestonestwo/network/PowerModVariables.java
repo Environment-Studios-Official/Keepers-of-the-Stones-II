@@ -37,8 +37,6 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
-	public static double dev_channel = 0.0;
-
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		PowerMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
@@ -102,6 +100,7 @@ public class PowerModVariables {
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
+				clone.teleporting_effect = original.teleporting_effect;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -216,6 +215,14 @@ public class PowerModVariables {
 		public boolean mind_stone = false;
 		public boolean golden_dust_stone = false;
 		public boolean darkness_stone = false;
+		public boolean blue_portal_placed = false;
+		public boolean orange_portal_placed = false;
+		public double opX = 0;
+		public double opY = 0;
+		public double opZ = 0;
+		public double bpX = 0;
+		public double bpY = 0;
+		public double bpZ = 0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -272,6 +279,14 @@ public class PowerModVariables {
 			mind_stone = nbt.getBoolean("mind_stone");
 			golden_dust_stone = nbt.getBoolean("golden_dust_stone");
 			darkness_stone = nbt.getBoolean("darkness_stone");
+			blue_portal_placed = nbt.getBoolean("blue_portal_placed");
+			orange_portal_placed = nbt.getBoolean("orange_portal_placed");
+			opX = nbt.getDouble("opX");
+			opY = nbt.getDouble("opY");
+			opZ = nbt.getDouble("opZ");
+			bpX = nbt.getDouble("bpX");
+			bpY = nbt.getDouble("bpY");
+			bpZ = nbt.getDouble("bpZ");
 		}
 
 		@Override
@@ -324,6 +339,14 @@ public class PowerModVariables {
 			nbt.putBoolean("mind_stone", mind_stone);
 			nbt.putBoolean("golden_dust_stone", golden_dust_stone);
 			nbt.putBoolean("darkness_stone", darkness_stone);
+			nbt.putBoolean("blue_portal_placed", blue_portal_placed);
+			nbt.putBoolean("orange_portal_placed", orange_portal_placed);
+			nbt.putDouble("opX", opX);
+			nbt.putDouble("opY", opY);
+			nbt.putDouble("opZ", opZ);
+			nbt.putDouble("bpX", bpX);
+			nbt.putDouble("bpY", bpY);
+			nbt.putDouble("bpZ", bpZ);
 			return nbt;
 		}
 
@@ -433,6 +456,7 @@ public class PowerModVariables {
 		public boolean wheel_open_key_var = false;
 		public double max_power = 100.0;
 		public double power_recovery_multiplier = 1.0;
+		public double teleporting_effect = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -458,6 +482,7 @@ public class PowerModVariables {
 			nbt.putBoolean("wheel_open_key_var", wheel_open_key_var);
 			nbt.putDouble("max_power", max_power);
 			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
+			nbt.putDouble("teleporting_effect", teleporting_effect);
 			return nbt;
 		}
 
@@ -480,6 +505,7 @@ public class PowerModVariables {
 			wheel_open_key_var = nbt.getBoolean("wheel_open_key_var");
 			max_power = nbt.getDouble("max_power");
 			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
+			teleporting_effect = nbt.getDouble("teleporting_effect");
 		}
 	}
 
@@ -530,6 +556,7 @@ public class PowerModVariables {
 					variables.wheel_open_key_var = message.data.wheel_open_key_var;
 					variables.max_power = message.data.max_power;
 					variables.power_recovery_multiplier = message.data.power_recovery_multiplier;
+					variables.teleporting_effect = message.data.teleporting_effect;
 				}
 			});
 			context.setPacketHandled(true);

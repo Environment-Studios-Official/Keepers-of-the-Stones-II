@@ -11611,26 +11611,6 @@
       "path": "~/Items/Energium"
     },
     {
-      "name": "ModVersionChecker",
-      "type": "procedure",
-      "sortid": 569,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "mod_version_checker",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ModVersionCheckerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/BasicModule"
-    },
-    {
       "name": "EnergiumPickaxe",
       "type": "tool",
       "sortid": 48,
@@ -11861,7 +11841,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/enchantment/RevengeEnchantment.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "EnergiumRevengeAttack",
@@ -11880,12 +11860,12 @@
             "type": "entity"
           },
           {
-            "name": "itemstack",
-            "type": "itemstack"
+            "name": "sourceentity",
+            "type": "entity"
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "Isolation",
@@ -11899,7 +11879,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/enchantment/IsolationEnchantment.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/Enchantments"
     },
     {
       "name": "SphereNothingProjectileKazhdyiTikPriPoliotieSnariada",
@@ -20384,38 +20364,6 @@
       "path": "~/Elements/Technology"
     },
     {
-      "name": "TurretProjectileKazhdyiTikPriPoliotieSnariada",
-      "type": "procedure",
-      "sortid": 935,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "turret_projectile_kazhdyi_tik_pri_poliotie_snariada",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TurretProjectileKazhdyiTikPriPoliotieSnariadaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Technology"
-    },
-    {
       "name": "TurretProjectile",
       "type": "projectile",
       "sortid": 936,
@@ -20446,30 +20394,537 @@
       "path": "~/Elements/Technology"
     },
     {
-      "name": "TechnoCrossbow",
+      "name": "TeleportationMaster",
+      "type": "potioneffect",
+      "sortid": 941,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/TeleportationMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmor",
+      "type": "armor",
+      "sortid": 942,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/teleportation_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationArmorItem.java",
+          "src/main/resources/assets/power/models/item/teleportation_armor_boots.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_helmet.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 943,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 944,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 945,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 946,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationElementGet",
+      "type": "procedure",
+      "sortid": 947,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationStoneCheck",
+      "type": "procedure",
+      "sortid": 948,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/KeepersBox/GUI"
+    },
+    {
+      "name": "TechnoPickaxe",
+      "type": "tool",
+      "sortid": 949,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_pickaxe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/techno_pickaxe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoPickaxeItem.java"
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TechnoPickaxeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 950,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "techno_pickaxe_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoPickaxeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Technology"
+    },
+    {
+      "name": "TeleportationMasterStart",
+      "type": "procedure",
+      "sortid": 951,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationMasterEnd",
+      "type": "procedure",
+      "sortid": 952,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationStoneUse",
+      "type": "procedure",
+      "sortid": 953,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationSpecialAttack",
+      "type": "procedure",
+      "sortid": 954,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesTeleportation",
+      "type": "gui",
+      "sortid": 955,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_teleportation",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTeleportationScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTeleportationMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTeleportationButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack113",
+      "type": "procedure",
+      "sortid": 956,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_113",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack113Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack114",
+      "type": "procedure",
+      "sortid": 957,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_114",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack114Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack115",
+      "type": "procedure",
+      "sortid": 958,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_115",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack115Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "Attack116",
+      "type": "procedure",
+      "sortid": 959,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_116",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack116Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "TeleportationBattery",
       "type": "item",
-      "sortid": 938,
+      "sortid": 960,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "techno_crossbow",
+      "registry_name": "teleportation_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoCrossbowItem.java",
-          "src/main/resources/assets/power/models/item/techno_crossbow.json"
+          "src/main/resources/assets/power/models/item/teleportation_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationBatteryItem.java"
         ]
       },
-      "path": "~/Elements/Technology"
+      "path": "~/Items/Batteries/TeleportationBattery"
     },
     {
-      "name": "TechnoCrossbowPriVystrielieSnariadomIzPriedmieta",
+      "name": "TeleportationBatteryDesc",
       "type": "procedure",
-      "sortid": 939,
+      "sortid": 961,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "techno_crossbow_pri_vystrielie_snariadom_iz_priedmieta",
+      "registry_name": "teleportation_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Items/Batteries/TeleportationBattery"
+    },
+    {
+      "name": "TeleportationBatteryUse",
+      "type": "procedure",
+      "sortid": 962,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_battery_use",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowPriVystrielieSnariadomIzPriedmietaProcedure.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Items/Batteries/TeleportationBattery"
+    },
+    {
+      "name": "TeleportationGun",
+      "type": "item",
+      "sortid": 963,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/teleportation_gun.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationGunItem.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationGunPriVystrielieSnariadomIzPriedmieta",
+      "type": "procedure",
+      "sortid": 964,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun_pri_vystrielie_snariadom_iz_priedmieta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationGunPriVystrielieSnariadomIzPriedmietaProcedure.java"
         ],
         "dependencies": [
           {
@@ -20478,18 +20933,18 @@
           }
         ]
       },
-      "path": "~/Elements/Technology"
+      "path": "~/Elements/Teleportation"
     },
     {
-      "name": "TechnoCrossbowKazhdyiTikVInvientarie",
+      "name": "TeleportationGunKazhdyiTikVInvientarie",
       "type": "procedure",
-      "sortid": 940,
+      "sortid": 965,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "techno_crossbow_kazhdyi_tik_v_invientarie",
+      "registry_name": "teleportation_gun_kazhdyi_tik_v_invientarie",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TechnoCrossbowKazhdyiTikVInvientarieProcedure.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportationGunKazhdyiTikVInvientarieProcedure.java"
         ],
         "dependencies": [
           {
@@ -20498,7 +20953,212 @@
           }
         ]
       },
-      "path": "~/Elements/Technology"
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationGunProjectile",
+      "type": "projectile",
+      "sortid": 966,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_gun_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TeleportationGunProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/TeleportationGunProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportationParticle",
+      "type": "particle",
+      "sortid": 967,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleportation_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TeleportationParticleParticle.java",
+          "src/main/resources/assets/power/particles/teleportation_particle.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "TeleportingVisualEffect",
+      "type": "procedure",
+      "sortid": 968,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "teleporting_visual_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/TeleportingVisualEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "BluePortal",
+      "type": "block",
+      "sortid": 969,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_portal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/blue_portal.json",
+          "src/main/resources/assets/power/models/item/blue_portal.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/BluePortalBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/blue_portal.json",
+          "src/main/resources/assets/power/blockstates/blue_portal.json"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "BluePortalDestroyed",
+      "type": "procedure",
+      "sortid": 971,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_portal_destroyed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BluePortalDestroyedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "OrangePortalDestroyed",
+      "type": "procedure",
+      "sortid": 972,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_portal_destroyed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/OrangePortalDestroyedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "BluePortalTeleporting",
+      "type": "procedure",
+      "sortid": 973,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_portal_teleporting",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BluePortalTeleportingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "OrangePortalTeleporting",
+      "type": "procedure",
+      "sortid": 974,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_portal_teleporting",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/OrangePortalTeleportingProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "OrangePortal",
+      "type": "block",
+      "sortid": 975,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "orange_portal",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/blockstates/orange_portal.json",
+          "src/main/resources/assets/power/models/block/orange_portal.json",
+          "src/main/resources/data/power/loot_tables/blocks/orange_portal.json",
+          "src/main/resources/assets/power/models/item/orange_portal.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/OrangePortalBlock.java"
+        ]
+      },
+      "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "EnergiumGolemCoreAttackParticle",
+      "type": "particle",
+      "sortid": 976,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_core_attack_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/energium_golem_core_attack_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/EnergiumGolemCoreAttackParticleParticle.java"
+        ]
+      },
+      "path": "~/Bosses/EnergiumGolem"
     }
   ],
   "variable_elements": [
@@ -20839,12 +21499,6 @@
       "value": "false"
     },
     {
-      "name": "dev_channel",
-      "type": "number",
-      "scope": "global",
-      "value": "0.0"
-    },
-    {
       "name": "element_name_first",
       "type": "string",
       "scope": "player_persistent",
@@ -20897,6 +21551,60 @@
       "type": "number",
       "scope": "player_persistent",
       "value": "1.0"
+    },
+    {
+      "name": "teleporting_effect",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "blue_portal_placed",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "orange_portal_placed",
+      "type": "logic",
+      "scope": "map",
+      "value": "false"
+    },
+    {
+      "name": "opX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "opY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "opZ",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bpX",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bpY",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
+    },
+    {
+      "name": "bpZ",
+      "type": "number",
+      "scope": "map",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -20935,6 +21643,8 @@
   ],
   "tag_elements": {
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:OrangePortal",
+      "~CUSTOM:BluePortal",
       "~CUSTOM:RawAmplifierBlock",
       "~CUSTOM:RawDepletedEnergiumBlock",
       "~CUSTOM:AmplifierBlock",
@@ -20946,6 +21656,18 @@
       "~CUSTOM:EnergiumBlock",
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "ITEMS:minecraft:tools": [
+      "CUSTOM:EnergiumPickaxe",
+      "CUSTOM:EnergiumAxe",
+      "CUSTOM:EnergiumSword",
+      "CUSTOM:EnergiumShovel",
+      "CUSTOM:EnergiumHoe",
+      "CUSTOM:CreationSword",
+      "CUSTOM:CreationPickaxe",
+      "CUSTOM:CreationAxe",
+      "CUSTOM:CreationHoe",
+      "CUSTOM:CreationShovel"
     ],
     "ITEMS:forge:elemental_batteries": [
       "CUSTOM:EmptyBattery",
@@ -21059,8 +21781,8 @@
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
-      "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
+      "battery.desc.ice": "Лёд",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
@@ -21080,6 +21802,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
+      "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "battery.desc.plants": "Зелень",
@@ -21095,6 +21818,7 @@
       "item.power.explosion_stone": "Камень взрыва",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
+      "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
@@ -21147,8 +21871,8 @@
       "item.power.teleportation_stone": "Камень телепортации",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
-      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item.power.metal_stone": "Камень металла",
+      "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item_group.power.stones": "KotS: Камни",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Красный плазменный шар, расходует 15",
       "effect.power.lethality": "Летальность",
@@ -21162,6 +21886,7 @@
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "gui.power.wheel_abilities_moon.button_3": "3",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
+      "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Вернуться на чекпоинт, расходует 40",
       "subtitles.electric_spark": "Искра",
       "effect.power.creation_master": "Мастер творения",
       "battery.desc.water": "Вода",
@@ -21189,6 +21914,8 @@
       "item.power.earth_stone": "Камень земли",
       "item.power.rain_battery": "Батарея",
       "item.power.creation_sword": "Меч созидания",
+      "item.power.teleportation_gun": "Телепортационная пушка",
+      "gui.power.wheel_abilities_teleportation.tooltip_creating_checkpoint_uses_40": "Создание чекпоинта, расходует 40",
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
       "battery.desc.sound": "Звук",
@@ -21246,6 +21973,7 @@
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
       "item.power.ocean_stone": "Камень океана",
       "effect.power.animals_master": "Мастер животных",
+      "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "item.power.time_armor_boots": "Ботинки мастера времени",
       "item.power.star_potion_25": "Звёздное зелье",
@@ -21264,6 +21992,7 @@
       "effect.power.sound_master": "Мастер звука",
       "subtitles.ear_ringing": "Звон в ушах",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Эфир",
+      "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
       "item.power.sound_armor_leggings": "Поножи мастера звука",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Порыв ветра, расходует 35",
@@ -21282,19 +22011,19 @@
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
+      "item.power.teleportation_armor_helmet": "Шлем мастера телепортации",
       "item.power.water_katana": "Водная катана",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
       "effect.power.time_slowing": "Замедление времени",
       "item.power.technology_armor_helmet": "Шлем мастера технологий",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 30",
-      "item.power.destruction_armor_boots": "Ботинки мастера разрушение",
+      "item.power.destruction_armor_boots": "Ботинки мастера разрушениеt",
       "effect.power.rain_master": "Мастер дождя",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Космос",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "item.power.space_armor_helmet": "Шлем мастера космоса",
-      "item.power.techno_crossbow": "Rain Bow",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
@@ -21309,6 +22038,7 @@
       "item.power.rain_armor_boots": "Ботинки мастера дождя",
       "battery.desc.lightning": "Молния",
       "item.power.raw_amplifier": "Рудный амплифер",
+      "item.power.techno_pickaxe": "Технокирка",
       "effect.power.lava_master": "Мастер лавы",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Ядовитый шип, расходует 35",
       "effect.power.blood_master": "Мастер крови",
@@ -21322,6 +22052,7 @@
       "item.power.water_battery": "Батарея",
       "battery.desc.vacuum": "Пустота",
       "item.power.creation_battery": "Батарея",
+      "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Создание/разрушение порталов, расходует 20",
       "item.power.technology_battery": "Батарея",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
@@ -21362,6 +22093,7 @@
       "item.power.time_battery": "Батарея",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "advancements.the_energium_age.title": "Энерджиумный век",
+      "item.power.teleportation_battery": "Батарея",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.creation_stone": "Камень творения",
@@ -21395,6 +22127,7 @@
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Вода",
       "key.categories.power2": "Хранители Камней II",
+      "item.power.teleportation_armor_boots": "Ботинки мастера телепортации",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Тень",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "item.power.tornado_armor_leggings": "Поножи мастера торнадо",
@@ -21421,8 +22154,10 @@
       "item.power.sound_battery": "Батарея",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Вакуум",
+      "effect.power.teleportation_master": "Мастер телепортации",
       "item.power.lava_stone": "Камень лавы",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Турель, расходует 80",
+      "block.power.orange_portal": "Оранжевый портал",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10",
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
       "item.power.lightning_falchion": "Молниеносный фальшион",
@@ -21517,6 +22252,7 @@
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "item.power.basic_box.tooltip": "Базовая",
       "block.power.raw_amplifier_block": "Блок рудного амплифера",
+      "battery.desc.teleportation": "Телепортациия",
       "item.power.constellation_sword": "Меч созвездий",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
       "item.power.form_stone": "Камень формы",
@@ -21536,8 +22272,8 @@
       "item.power.ether_stone": "Ether Stone",
       "item.power.tornado_armor_helmet": "Tornado Helmet",
       "item.power.moon_battery": "Battery",
-      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
+      "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
@@ -21550,8 +22286,8 @@
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
-      "item_group.power.items": "KotS: Items",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
@@ -21560,8 +22296,8 @@
       "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -21576,6 +22312,7 @@
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
+      "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "battery.desc.plants": "Plants",
@@ -21591,6 +22328,7 @@
       "item.power.explosion_stone": "Explosion Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
+      "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
@@ -21600,15 +22338,15 @@
       "item.power.light_battery": "Battery",
       "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
-      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Moon withering, uses 80",
+      "item.power.ether_armor_boots": "Ether Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.energy_staff": "Energy Staff",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
@@ -21628,8 +22366,8 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
-      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -21643,8 +22381,8 @@
       "item.power.teleportation_stone": "Teleportation Stone",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
-      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item.power.metal_stone": "Metal Stone",
+      "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
       "gui.power.wheel_abilities_technology.tooltip_red_plasma_ball_uses_15": "Red plasma ball, uses 15",
       "effect.power.lethality": "Lethality",
@@ -21658,6 +22396,7 @@
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "gui.power.wheel_abilities_moon.button_3": "3",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
+      "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Return to checkpoint, uses 40",
       "subtitles.electric_spark": "Spark",
       "effect.power.creation_master": "Master of Creation",
       "battery.desc.water": "Water",
@@ -21685,6 +22424,8 @@
       "item.power.earth_stone": "Earth Stone",
       "item.power.rain_battery": "Battery",
       "item.power.creation_sword": "Creation Sword",
+      "item.power.teleportation_gun": "Teleportation Gun",
+      "gui.power.wheel_abilities_teleportation.tooltip_creating_checkpoint_uses_40": "Creating checkpoint, uses 40",
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
       "battery.desc.sound": "Sound",
@@ -21742,6 +22483,7 @@
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
       "item.power.ocean_stone": "Ocean Stone",
       "effect.power.animals_master": "Master of Animals",
+      "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "item.power.time_armor_boots": "Time Boots",
       "item.power.star_potion_25": "Star Potion",
@@ -21761,6 +22503,7 @@
       "effect.power.sound_master": "Master of Sound",
       "subtitles.ear_ringing": "Ear ringing",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Ether",
+      "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
       "item.power.sound_armor_leggings": "Sound Leggings",
       "item.power.moon_armor_chestplate": "Moon Chestplate",
       "gui.power.wheel_abilities_air.tooltip_wind_gust_uses_25_power_points": "Wind gust, uses 35",
@@ -21779,6 +22522,7 @@
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
+      "item.power.teleportation_armor_helmet": "Teleportation Helmet",
       "item.power.water_katana": "Water Katana",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
       "effect.power.time_slowing": "Time Slowing",
@@ -21791,7 +22535,6 @@
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Destruction ball, uses 45",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "item.power.space_armor_helmet": "Space Helmet",
-      "item.power.techno_crossbow": "Techno Crossbow",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
@@ -21806,6 +22549,7 @@
       "item.power.rain_armor_boots": "Rain Boots",
       "battery.desc.lightning": "Lightning",
       "item.power.raw_amplifier": "Raw Amplifier",
+      "item.power.techno_pickaxe": "Techno Pickaxe",
       "effect.power.lava_master": "Master of Lava",
       "gui.power.wheel_abilities_plants.tooltip_poisonous_thorn_uses_35": "Poisonous thorn, uses 35",
       "effect.power.blood_master": "Master of Blood",
@@ -21819,6 +22563,7 @@
       "item.power.water_battery": "Battery",
       "battery.desc.vacuum": "Vacuum",
       "item.power.creation_battery": "Battery",
+      "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Creating/Destructing portals, uses 20",
       "item.power.technology_battery": "Battery",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
@@ -21859,6 +22604,7 @@
       "item.power.time_battery": "Battery",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "advancements.the_energium_age.title": "The Energium Age",
+      "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Energium Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.creation_stone": "Creation Stone",
@@ -21892,6 +22638,7 @@
       "item.power.sound_armor_chestplate": "Sound Chestplate",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Water",
       "key.categories.power2": "Keepers of the Stones II",
+      "item.power.teleportation_armor_boots": "Teleportation Boots",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Shadow",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Destruction ray, uses 15",
       "item.power.tornado_armor_leggings": "Tornado Leggings",
@@ -21918,8 +22665,10 @@
       "item.power.sound_battery": "Battery",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Vacuum",
+      "effect.power.teleportation_master": "Master of Teleportation",
       "item.power.lava_stone": "Lava Stone",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Turret, uses 80",
+      "block.power.orange_portal": "Orange Portal",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
       "item.power.ocean_armor_leggings": "Ocean Leggings",
       "item.power.lightning_falchion": "Lightning Falchion",
@@ -22013,6 +22762,7 @@
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "item.power.basic_box.tooltip": "Basic",
       "block.power.raw_amplifier_block": "Raw Amplifier Block",
+      "battery.desc.teleportation": "Teleportation",
       "item.power.constellation_sword": "Constellation Sword",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Air",
       "item.power.form_stone": "Form Stone",
@@ -22370,6 +23120,10 @@
                       {
                         "name": "Technology",
                         "children": []
+                      },
+                      {
+                        "name": "Teleportation",
+                        "children": []
                       }
                     ]
                   }
@@ -22516,6 +23270,10 @@
               {
                 "name": "TechnologyBattery",
                 "children": []
+              },
+              {
+                "name": "TeleportationBattery",
+                "children": []
               }
             ]
           },
@@ -22562,6 +23320,10 @@
       {
         "name": "Commands",
         "children": []
+      },
+      {
+        "name": "Enchantments",
+        "children": []
       }
     ]
   },
@@ -22571,9 +23333,10 @@
     "version": "1.0.0.21",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
-    "websiteURL": "https://power-umc.ru/minecraft-java-edition/mods/6-keepers-of-the-stones.html",
+    "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
+    "updateURL": "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json",
     "modPicture": "logo",
     "requiredMods": [
       "geckolib"
@@ -22584,7 +23347,10 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
-      "geckolib"
+      "bettercombat",
+      "geckolib",
+      "playeranimator",
+      "cloth-config"
     ],
     "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",

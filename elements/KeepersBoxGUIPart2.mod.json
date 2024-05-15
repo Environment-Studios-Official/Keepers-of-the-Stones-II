@@ -268,6 +268,38 @@
           "x": 148,
           "y": 91
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_teleportation_element",
+          "image": "teleportation_element.png",
+          "hoveredImage": "teleportation_element_highlighted.png",
+          "onClick": {
+            "name": "TeleportationElementGet"
+          },
+          "displayCondition": {
+            "name": "TeleportationStoneCheck"
+          },
+          "x": 151,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleportation",
+          "text": {
+            "fixedValue": "Teleportation"
+          },
+          "displayCondition": {
+            "name": "TeleportationStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 147,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

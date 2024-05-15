@@ -7,10 +7,8 @@ import net.minecraft.world.item.Tier;
 import net.minecraft.world.item.PickaxeItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
-import com.esmods.keepersofthestonestwo.procedures.EnergiumRevengeAttackProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumItemsPowerLockedProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
@@ -41,13 +39,6 @@ public class EnergiumPickaxeItem extends PickaxeItem {
 				return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get()));
 			}
 		}, 1, -2.8f, new Item.Properties());
-	}
-
-	@Override
-	public boolean hurtEnemy(ItemStack itemstack, LivingEntity entity, LivingEntity sourceentity) {
-		boolean retval = super.hurtEnemy(itemstack, entity, sourceentity);
-		EnergiumRevengeAttackProcedure.execute(entity, itemstack);
-		return retval;
 	}
 
 	@Override

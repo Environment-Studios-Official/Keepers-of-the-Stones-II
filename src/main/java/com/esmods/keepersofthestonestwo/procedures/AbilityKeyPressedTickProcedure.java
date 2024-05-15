@@ -122,6 +122,9 @@ public class AbilityKeyPressedTickProcedure {
 				if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get())) {
 					TechnologySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if (entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(PowerModMobEffects.TELEPORTATION_MASTER.get())) {
+					TeleportationSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.use_ability_key_var = false;

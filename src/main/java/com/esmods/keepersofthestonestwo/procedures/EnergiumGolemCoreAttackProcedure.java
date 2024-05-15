@@ -75,7 +75,7 @@ public class EnergiumGolemCoreAttackProcedure {
 					YPar = y + 1.75;
 					ZPar = z + Math.sin(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
+						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
 					{
 						final Vec3 _center = new Vec3(XPar, YPar, ZPar);
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate((0.125 + Range * 0.05) / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center)))
