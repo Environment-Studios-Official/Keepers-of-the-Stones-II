@@ -2,20 +2,25 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraftforge.registries.ForgeRegistries;
 
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.commands.CommandSourceStack;
 import net.minecraft.commands.CommandSource;
 
+import java.util.List;
+import java.util.Comparator;
+
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
 public class ExplosionSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -61,48 +66,20 @@ public class ExplosionSpecialAttackProcedure {
 				}
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("explosion_attack_2")) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 40) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
 				{
-					double _setval = 40;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.teleporting_effect = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					Entity _ent = entity;
-					_ent.teleportTo(
-							((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
-									: 0),
-							((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
-									: 0),
-							((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-									? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
-									: 0));
-					if (_ent instanceof ServerPlayer _serverPlayer)
-						_serverPlayer.connection.teleport(
-								((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getX() : _player.level().getLevelData().getXSpawn())
-										: 0),
-								((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getY() : _player.level().getLevelData().getYSpawn())
-										: 0),
-								((entity instanceof ServerPlayer _player && !_player.level().isClientSide())
-										? ((_player.getRespawnDimension().equals(_player.level().dimension()) && _player.getRespawnPosition() != null) ? _player.getRespawnPosition().getZ() : _player.level().getLevelData().getZSpawn())
-										: 0),
-								_ent.getYRot(), _ent.getXRot());
-				}
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (!(entityiterator == entity)) {
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+							if (world instanceof Level _level && !_level.isClientSide())
+								_level.explode(null, x, y, z, 5, true, Level.ExplosionInteraction.MOB);
+						}
 					}
 				}
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 40;
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 50;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.power = _setval;
 						capability.syncPlayerVariables(entity);
@@ -111,55 +88,6 @@ public class ExplosionSpecialAttackProcedure {
 			}
 		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("explosion_attack_3")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
-				if (!PowerModVariables.MapVariables.get(world).blue_portal_placed) {
-					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.BLUE_PORTAL.get().defaultBlockState(), 3);
-					PowerModVariables.MapVariables.get(world).blue_portal_placed = true;
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).bpX = entity.getX();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).bpY = entity.getY();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).bpZ = entity.getZ();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && !PowerModVariables.MapVariables.get(world).orange_portal_placed) {
-					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.ORANGE_PORTAL.get().defaultBlockState(), 3);
-					PowerModVariables.MapVariables.get(world).orange_portal_placed = true;
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).opX = entity.getX();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).opY = entity.getY();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).opZ = entity.getZ();
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-				} else if (PowerModVariables.MapVariables.get(world).blue_portal_placed && PowerModVariables.MapVariables.get(world).orange_portal_placed) {
-					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).bpX, PowerModVariables.MapVariables.get(world).bpY, PowerModVariables.MapVariables.get(world).bpZ), Blocks.AIR.defaultBlockState(), 3);
-					world.setBlock(BlockPos.containing(PowerModVariables.MapVariables.get(world).opX, PowerModVariables.MapVariables.get(world).opY, PowerModVariables.MapVariables.get(world).opZ), Blocks.AIR.defaultBlockState(), 3);
-					PowerModVariables.MapVariables.get(world).blue_portal_placed = false;
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					PowerModVariables.MapVariables.get(world).orange_portal_placed = false;
-					PowerModVariables.MapVariables.get(world).syncData(world);
-					if (world instanceof Level _level) {
-						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1);
-						} else {
-							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.chorus_fruit.teleport")), SoundSource.NEUTRAL, 1, 1, false);
-						}
-					}
-				}
 				{
 					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 20;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
