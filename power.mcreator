@@ -8120,7 +8120,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/EmptyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
     },
     {
       "name": "EmptyBattery",
@@ -8135,7 +8135,7 @@
           "src/main/resources/assets/power/models/item/empty_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/EmptyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
     },
     {
       "name": "Items",
@@ -8163,7 +8163,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/FireBattery"
+      "path": "~/ItemsAndBlocks/Batteries/FireBattery"
     },
     {
       "name": "FireBattery",
@@ -8178,7 +8178,7 @@
           "src/main/resources/assets/power/models/item/fire_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/FireBattery"
+      "path": "~/ItemsAndBlocks/Batteries/FireBattery"
     },
     {
       "name": "FireBatteryUse",
@@ -8218,7 +8218,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/FireBattery"
+      "path": "~/ItemsAndBlocks/Batteries/FireBattery"
     },
     {
       "name": "AirBatteryDesc",
@@ -8234,7 +8234,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/AirBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AirBattery"
     },
     {
       "name": "AirBattery",
@@ -8249,7 +8249,7 @@
           "src/main/resources/assets/power/models/item/air_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/AirBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AirBattery"
     },
     {
       "name": "AirBatteryUse",
@@ -8289,7 +8289,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/AirBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AirBattery"
     },
     {
       "name": "EarthBattery",
@@ -8304,7 +8304,7 @@
           "src/main/resources/assets/power/models/item/earth_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/EarthBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EarthBattery"
     },
     {
       "name": "EarthBatteryDesc",
@@ -8320,7 +8320,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/EarthBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EarthBattery"
     },
     {
       "name": "EarthBatteryUse",
@@ -8360,7 +8360,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/EarthBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EarthBattery"
     },
     {
       "name": "WaterBattery",
@@ -8375,7 +8375,7 @@
           "src/main/resources/assets/power/models/item/water_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/WaterBattery"
+      "path": "~/ItemsAndBlocks/Batteries/WaterBattery"
     },
     {
       "name": "WaterBatteryDesc",
@@ -8391,7 +8391,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/WaterBattery"
+      "path": "~/ItemsAndBlocks/Batteries/WaterBattery"
     },
     {
       "name": "WaterBatteryUse",
@@ -8431,7 +8431,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/WaterBattery"
+      "path": "~/ItemsAndBlocks/Batteries/WaterBattery"
     },
     {
       "name": "EtherBattery",
@@ -8446,7 +8446,7 @@
           "src/main/resources/assets/power/models/item/ether_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/EtherBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EtherBattery"
     },
     {
       "name": "EtherBatteryDesc",
@@ -8462,7 +8462,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/EtherBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EtherBattery"
     },
     {
       "name": "EtherBatteryUse",
@@ -8502,7 +8502,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/EtherBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EtherBattery"
     },
     {
       "name": "IceBattery",
@@ -8517,7 +8517,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/IceBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/IceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/IceBattery"
     },
     {
       "name": "IceBatteryDesc",
@@ -8533,7 +8533,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/IceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/IceBattery"
     },
     {
       "name": "IceBatteryUse",
@@ -8573,7 +8573,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/IceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/IceBattery"
     },
     {
       "name": "LightningBattery",
@@ -8588,7 +8588,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/LightningBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/LightningBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightningBattery"
     },
     {
       "name": "LightningBatteryDesc",
@@ -8604,7 +8604,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/LightningBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightningBattery"
     },
     {
       "name": "LightningBatteryUse",
@@ -8644,7 +8644,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/LightningBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightningBattery"
     },
     {
       "name": "IronSkin",
@@ -8678,7 +8678,7 @@
           }
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion100",
@@ -8693,7 +8693,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotion100Item.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion100DopolnitielnaiaInformatsiia",
@@ -8709,7 +8709,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "RightMetalGauntlet",
@@ -8794,7 +8794,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SoundBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/SoundBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SoundBattery"
     },
     {
       "name": "SoundBatteryDesc",
@@ -8810,7 +8810,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/SoundBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SoundBattery"
     },
     {
       "name": "SoundBatteryUse",
@@ -8850,7 +8850,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/SoundBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SoundBattery"
     },
     {
       "name": "CrystalBattery",
@@ -8865,7 +8865,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/CrystalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CrystalBattery"
     },
     {
       "name": "CrystalBatteryDesc",
@@ -8881,7 +8881,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/CrystalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CrystalBattery"
     },
     {
       "name": "CrystalBatteryUse",
@@ -8921,7 +8921,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/CrystalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CrystalBattery"
     },
     {
       "name": "LavaBattery",
@@ -8936,7 +8936,7 @@
           "src/main/resources/assets/power/models/item/lava_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/LavaBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LavaBattery"
     },
     {
       "name": "LavaBatteryDesc",
@@ -8952,7 +8952,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/LavaBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LavaBattery"
     },
     {
       "name": "LavaBatteryUse",
@@ -8992,7 +8992,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/LavaBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LavaBattery"
     },
     {
       "name": "RainBattery",
@@ -9007,7 +9007,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/RainBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/RainBattery"
+      "path": "~/ItemsAndBlocks/Batteries/RainBattery"
     },
     {
       "name": "RainBatteryDesc",
@@ -9023,7 +9023,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/RainBattery"
+      "path": "~/ItemsAndBlocks/Batteries/RainBattery"
     },
     {
       "name": "RainBatteryUse",
@@ -9063,7 +9063,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/RainBattery"
+      "path": "~/ItemsAndBlocks/Batteries/RainBattery"
     },
     {
       "name": "TornadoBattery",
@@ -9078,7 +9078,7 @@
           "src/main/resources/assets/power/models/item/tornado_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/TornadoBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TornadoBattery"
     },
     {
       "name": "TornadoBatteryDesc",
@@ -9094,7 +9094,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/TornadoBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TornadoBattery"
     },
     {
       "name": "TornadoBatteryUse",
@@ -9134,7 +9134,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/TornadoBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TornadoBattery"
     },
     {
       "name": "OceanBattery",
@@ -9149,7 +9149,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/OceanBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/OceanBattery"
+      "path": "~/ItemsAndBlocks/Batteries/OceanBattery"
     },
     {
       "name": "OceanBatteryDesc",
@@ -9165,7 +9165,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/OceanBattery"
+      "path": "~/ItemsAndBlocks/Batteries/OceanBattery"
     },
     {
       "name": "OceanBatteryUse",
@@ -9205,7 +9205,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/OceanBattery"
+      "path": "~/ItemsAndBlocks/Batteries/OceanBattery"
     },
     {
       "name": "PlantsBattery",
@@ -9220,7 +9220,7 @@
           "src/main/resources/assets/power/models/item/plants_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/PlantsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/PlantsBattery"
     },
     {
       "name": "PlantsBatteryDesc",
@@ -9236,7 +9236,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/PlantsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/PlantsBattery"
     },
     {
       "name": "PlantsBatteryUse",
@@ -9276,7 +9276,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/PlantsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/PlantsBattery"
     },
     {
       "name": "AnimalsBattery",
@@ -9291,7 +9291,7 @@
           "src/main/resources/assets/power/models/item/animals_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/AnimalsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AnimalsBattery"
     },
     {
       "name": "AnimalsBatteryDesc",
@@ -9307,7 +9307,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/AnimalsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AnimalsBattery"
     },
     {
       "name": "AnimalsBatteryUse",
@@ -9347,7 +9347,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/AnimalsBattery"
+      "path": "~/ItemsAndBlocks/Batteries/AnimalsBattery"
     },
     {
       "name": "MetalBattery",
@@ -9362,7 +9362,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MetalBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/MetalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MetalBattery"
     },
     {
       "name": "MetalBatteryDesc",
@@ -9378,7 +9378,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/MetalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MetalBattery"
     },
     {
       "name": "MetalBatteryUse",
@@ -9418,7 +9418,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/MetalBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MetalBattery"
     },
     {
       "name": "LightMaster",
@@ -9753,7 +9753,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/LightBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/LightBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightBattery"
     },
     {
       "name": "LightBatteryDesc",
@@ -9769,7 +9769,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/LightBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightBattery"
     },
     {
       "name": "LightBatteryUse",
@@ -9809,7 +9809,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/LightBattery"
+      "path": "~/ItemsAndBlocks/Batteries/LightBattery"
     },
     {
       "name": "KnifeAttackProjectile",
@@ -10276,7 +10276,7 @@
           "src/main/resources/assets/power/models/item/shadow_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/ShadowBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ShadowBattery"
     },
     {
       "name": "ShadowBatteryDesc",
@@ -10292,7 +10292,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/ShadowBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ShadowBattery"
     },
     {
       "name": "ShadowBatteryUse",
@@ -10332,7 +10332,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/ShadowBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ShadowBattery"
     },
     {
       "name": "Shadow",
@@ -10361,7 +10361,7 @@
           "src/main/resources/data/power/loot_tables/blocks/depleted_energium_ore.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumIngot",
@@ -10376,7 +10376,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/DepletedEnergiumIngotItem.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumOre",
@@ -10396,7 +10396,7 @@
           "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumBlock",
@@ -10414,7 +10414,7 @@
           "src/main/resources/assets/power/models/block/depleted_energium_block.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumOreBlockRecipe",
@@ -10428,7 +10428,7 @@
           "src/main/resources/data/power/recipes/depleted_energium_ore_block_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumBlockOreRecipe",
@@ -10442,7 +10442,7 @@
           "src/main/resources/data/power/recipes/depleted_energium_block_ore_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumOreSmelting",
@@ -10456,7 +10456,7 @@
           "src/main/resources/data/power/recipes/depleted_energium_ore_smelting.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawDepletedEnergium",
@@ -10471,7 +10471,7 @@
           "src/main/resources/assets/power/models/item/raw_depleted_energium.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawDepletedEnergiumRecipe",
@@ -10485,7 +10485,7 @@
           "src/main/resources/data/power/recipes/raw_depleted_energium_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumIngot",
@@ -10500,7 +10500,7 @@
           "src/main/resources/assets/power/models/item/energium_ingot.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumBlock",
@@ -10518,7 +10518,7 @@
           "src/main/resources/assets/power/blockstates/energium_block.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "ShadowSphere",
@@ -10935,7 +10935,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/VacuumBattery"
+      "path": "~/ItemsAndBlocks/Batteries/VacuumBattery"
     },
     {
       "name": "VacuumBatteryDesc",
@@ -10951,7 +10951,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/VacuumBattery"
+      "path": "~/ItemsAndBlocks/Batteries/VacuumBattery"
     },
     {
       "name": "VacuumBatteryUse",
@@ -10991,7 +10991,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/VacuumBattery"
+      "path": "~/ItemsAndBlocks/Batteries/VacuumBattery"
     },
     {
       "name": "BatteryCharger",
@@ -11010,7 +11010,7 @@
           "src/main/resources/assets/power/models/item/battery_charger.json"
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerRecipe",
@@ -11024,7 +11024,7 @@
           "src/main/resources/data/power/recipes/battery_charger_recipe.json"
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerGUI",
@@ -11039,7 +11039,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/BatteryChargerGUIMenu.java"
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "EmptyBatteryRecipe",
@@ -11053,7 +11053,7 @@
           "src/main/resources/data/power/recipes/empty_battery_recipe.json"
         ]
       },
-      "path": "~/Items/Batteries/EmptyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
     },
     {
       "name": "UnlockRecipes",
@@ -11105,7 +11105,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerProgress1",
@@ -11138,7 +11138,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerProgress2",
@@ -11171,7 +11171,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerProgress3",
@@ -11204,7 +11204,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerProgress4",
@@ -11237,7 +11237,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerProgress5",
@@ -11270,7 +11270,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "BatteryChargerClientTick",
@@ -11302,7 +11302,7 @@
           }
         ]
       },
-      "path": "~/Items/BatteryCharger"
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
       "name": "PowerLockStart",
@@ -11322,7 +11322,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "PowerLockEnd",
@@ -11342,7 +11342,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "PowerLock",
@@ -11356,7 +11356,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/PowerLockMobEffect.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumBlockPowerLock",
@@ -11388,7 +11388,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumItemsPowerLocked",
@@ -11412,7 +11412,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumBlockOreRecipe",
@@ -11426,7 +11426,7 @@
           "src/main/resources/data/power/recipes/energium_block_ore_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumOreBlockRecipe",
@@ -11440,7 +11440,7 @@
           "src/main/resources/data/power/recipes/energium_ore_block_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DepletedEnergiumOreBlastingRecipe",
@@ -11454,7 +11454,7 @@
           "src/main/resources/data/power/recipes/depleted_energium_ore_blasting_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawDepletedEnergiumBlastingRecipe",
@@ -11468,7 +11468,7 @@
           "src/main/resources/data/power/recipes/raw_depleted_energium_blasting_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumIngotCleaningRecipe",
@@ -11482,7 +11482,7 @@
           "src/main/resources/data/power/recipes/energium_ingot_cleaning_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "VacuumDagger",
@@ -11562,7 +11562,7 @@
           "src/main/resources/assets/power/models/item/energium_upgrade_smithing_template.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "DuplicateEnergiumUpgradeSmithingTemplate",
@@ -11576,7 +11576,7 @@
           "src/main/resources/data/power/recipes/duplicate_energium_upgrade_smithing_template.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumPickaxe",
@@ -11591,7 +11591,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumPickaxeItem.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumAxe",
@@ -11606,7 +11606,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumAxeItem.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumSword",
@@ -11621,7 +11621,7 @@
           "src/main/resources/assets/power/models/item/energium_sword.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumShovel",
@@ -11636,7 +11636,7 @@
           "src/main/resources/assets/power/models/item/energium_shovel.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumHoe",
@@ -11651,7 +11651,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumHoeItem.java"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumPickaxeRecipe",
@@ -11665,7 +11665,7 @@
           "src/main/resources/data/power/recipes/energium_pickaxe_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumAxeRecipe",
@@ -11679,7 +11679,7 @@
           "src/main/resources/data/power/recipes/energium_axe_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumSwordRecipe",
@@ -11693,7 +11693,7 @@
           "src/main/resources/data/power/recipes/energium_sword_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumShovelRecipe",
@@ -11707,7 +11707,7 @@
           "src/main/resources/data/power/recipes/energium_shovel_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumHoeRecipe",
@@ -11721,7 +11721,7 @@
           "src/main/resources/data/power/recipes/energium_hoe_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumArmor",
@@ -11739,7 +11739,7 @@
           "src/main/resources/assets/power/models/item/energium_armor_leggings.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumArmorHelmetRecipe",
@@ -11753,7 +11753,7 @@
           "src/main/resources/data/power/recipes/energium_armor_helmet_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumArmorChestplateRecipe",
@@ -11767,7 +11767,7 @@
           "src/main/resources/data/power/recipes/energium_armor_chestplate_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumArmorLeggingsRecipe",
@@ -11781,7 +11781,7 @@
           "src/main/resources/data/power/recipes/energium_armor_leggings_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumArmorBootsRecipe",
@@ -11795,7 +11795,7 @@
           "src/main/resources/data/power/recipes/energium_armor_boots_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "Revenge",
@@ -12278,7 +12278,7 @@
           "src/main/resources/assets/power/models/item/energy_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/EnergyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EnergyBattery"
     },
     {
       "name": "EnergyBatteryUse",
@@ -12318,7 +12318,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/EnergyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EnergyBattery"
     },
     {
       "name": "EnergySpark",
@@ -12348,7 +12348,7 @@
           "src/main/resources/assets/power/models/item/energium_core.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergyStaff",
@@ -12401,7 +12401,7 @@
           "src/main/resources/assets/power/models/block/keepers_box.json"
         ]
       },
-      "path": "~/Items/KeepersBox"
+      "path": "~/ItemsAndBlocks/KeepersBox"
     },
     {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka",
@@ -12434,7 +12434,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox"
+      "path": "~/ItemsAndBlocks/KeepersBox"
     },
     {
       "name": "ElementalPowers",
@@ -12928,7 +12928,7 @@
           "src/main/resources/assets/power/models/item/sun_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/SunBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SunBattery"
     },
     {
       "name": "SunBatteryUse",
@@ -12968,7 +12968,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/SunBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SunBattery"
     },
     {
       "name": "SunBatteryDesc",
@@ -12984,7 +12984,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/SunBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SunBattery"
     },
     {
       "name": "EnergyBatteryDesc",
@@ -13000,7 +13000,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/EnergyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/EnergyBattery"
     },
     {
       "name": "SolarBlade",
@@ -13405,7 +13405,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MoonBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/MoonBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MoonBattery"
     },
     {
       "name": "MoonBatteryDesc",
@@ -13421,7 +13421,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/MoonBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MoonBattery"
     },
     {
       "name": "MoonBatteryUse",
@@ -13461,7 +13461,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/MoonBattery"
+      "path": "~/ItemsAndBlocks/Batteries/MoonBattery"
     },
     {
       "name": "MoonDoubleSidedSpear",
@@ -13549,7 +13549,7 @@
           }
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotionInfinityDopolnitielnaiaInformatsiia",
@@ -13580,7 +13580,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotionInfinityItem.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "SpaceMaster",
@@ -13915,7 +13915,7 @@
           "src/main/resources/assets/power/models/item/space_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/SpaceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SpaceBattery"
     },
     {
       "name": "SpaceBatteryDesc",
@@ -13931,7 +13931,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/SpaceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SpaceBattery"
     },
     {
       "name": "SpaceBatteryUse",
@@ -13971,7 +13971,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/SpaceBattery"
+      "path": "~/ItemsAndBlocks/Batteries/SpaceBattery"
     },
     {
       "name": "BlackHolePriObnovlieniiTikaSushchnosti",
@@ -14515,7 +14515,7 @@
           "src/main/resources/assets/power/models/item/time_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/TimeBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TimeBattery"
     },
     {
       "name": "TimeBatteryDesc",
@@ -14531,7 +14531,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/TimeBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TimeBattery"
     },
     {
       "name": "TimeBatteryUse",
@@ -14571,7 +14571,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/TimeBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TimeBattery"
     },
     {
       "name": "TimeSlow",
@@ -15094,7 +15094,7 @@
           "src/main/resources/assets/power/models/item/creation_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/CreationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CreationBattery"
     },
     {
       "name": "CreationBatteryDesc",
@@ -15110,7 +15110,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/CreationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CreationBattery"
     },
     {
       "name": "CreationBatteryUse",
@@ -15150,7 +15150,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/CreationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/CreationBattery"
     },
     {
       "name": "EnergiumController",
@@ -15168,7 +15168,7 @@
           "src/main/resources/data/power/loot_tables/blocks/energium_controller.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumControllerObnovlieniieTika",
@@ -15200,7 +15200,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumControllerRecipe",
@@ -15214,7 +15214,7 @@
           "src/main/resources/data/power/recipes/energium_controller_recipe.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumBlockBlockstates",
@@ -15228,7 +15228,7 @@
           "src/main/resources/assets/power/models/block/energium_block_blockstates_blockstate_0.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumControllerRiedstounVkliuchion",
@@ -15260,7 +15260,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "EnergiumControllerRiedstounVykliuchien",
@@ -15292,7 +15292,7 @@
           }
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "CreationStaff",
@@ -15343,7 +15343,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart1Menu.java"
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KeepersBoxGUIPart2",
@@ -15359,7 +15359,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart2Menu.java"
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KeepersBoxGUIPart3",
@@ -15375,7 +15375,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart3ButtonMessage.java"
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KeepersBoxGUIPart4",
@@ -15391,7 +15391,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart4Menu.java"
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KBtoPart2",
@@ -15427,7 +15427,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KBtoPart1",
@@ -15463,7 +15463,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KBtoPart3",
@@ -15499,7 +15499,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "KBtoPart4",
@@ -15535,7 +15535,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "FireElementGet",
@@ -15883,7 +15883,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox"
+      "path": "~/ItemsAndBlocks/KeepersBox"
     },
     {
       "name": "PlantsElementGet",
@@ -16191,7 +16191,7 @@
           "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "AmplifierOreSmelting",
@@ -16205,7 +16205,7 @@
           "src/main/resources/data/power/recipes/amplifier_ore_smelting.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "AmplifierDrop",
@@ -16220,7 +16220,7 @@
           "src/main/resources/assets/power/models/item/amplifier_drop.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RawAmplifier",
@@ -16235,7 +16235,7 @@
           "src/main/resources/assets/power/models/item/raw_amplifier.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "AmplifierOreLoot",
@@ -16249,7 +16249,7 @@
           "src/main/resources/data/power/loot_tables/blocks/amplifier_ore.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RawAmplifierToDropRecipe",
@@ -16263,7 +16263,7 @@
           "src/main/resources/data/power/recipes/raw_amplifier_to_drop_recipe.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "StarPotion50",
@@ -16278,7 +16278,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotion50Item.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion50DopolnitielnaiaInformatsiia",
@@ -16294,7 +16294,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion50PriZaviershieniiIspolzovaniia",
@@ -16314,7 +16314,7 @@
           }
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion25",
@@ -16329,7 +16329,7 @@
           "src/main/resources/assets/power/models/item/star_potion_25.json"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion25DopolnitielnaiaInformatsiia",
@@ -16345,7 +16345,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion25PriZaviershieniiIspolzovaniia",
@@ -16365,7 +16365,7 @@
           }
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion25Recipe",
@@ -16379,7 +16379,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion25RecipeBrewingRecipe.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion50Recipe",
@@ -16393,7 +16393,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion50RecipeBrewingRecipe.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "StarPotion100Recipe",
@@ -16407,7 +16407,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion100RecipeBrewingRecipe.java"
         ]
       },
-      "path": "~/Items/StarPotions"
+      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "AmplifierOreBlasting",
@@ -16421,7 +16421,7 @@
           "src/main/resources/data/power/recipes/amplifier_ore_blasting.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RawAmplifierBlasting",
@@ -16435,7 +16435,7 @@
           "src/main/resources/data/power/recipes/raw_amplifier_blasting.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RunesOfCreation",
@@ -16918,7 +16918,7 @@
           "src/main/resources/assets/power/models/item/destruction_battery.json"
         ]
       },
-      "path": "~/Items/Batteries/DestructionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/DestructionBattery"
     },
     {
       "name": "DestructionBatteryDesc",
@@ -16934,7 +16934,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/DestructionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/DestructionBattery"
     },
     {
       "name": "DestructionBatteryUse",
@@ -16974,7 +16974,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/DestructionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/DestructionBattery"
     },
     {
       "name": "DestructionBroadsword",
@@ -17213,7 +17213,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "AirStoneCheck",
@@ -17234,7 +17234,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "EarthStoneCheck",
@@ -17255,7 +17255,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "WaterStoneCheck",
@@ -17276,7 +17276,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "EtherStoneCheck",
@@ -17297,7 +17297,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "IceStoneCheck",
@@ -17318,7 +17318,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "LightningStoneCheck",
@@ -17339,7 +17339,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "SoundStoneCheck",
@@ -17360,7 +17360,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "CrystalStoneCheck",
@@ -17381,7 +17381,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "LavaStoneCheck",
@@ -17402,7 +17402,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "RainStoneCheck",
@@ -17423,7 +17423,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "TornadoStoneCheck",
@@ -17444,7 +17444,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "OceanStoneCheck",
@@ -17465,7 +17465,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "PlantsStoneCheck",
@@ -17486,7 +17486,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "AnimalsStoneCheck",
@@ -17507,7 +17507,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "MetalStoneCheck",
@@ -17528,7 +17528,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "LightStoneCheck",
@@ -17549,7 +17549,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "ShadowStoneCheck",
@@ -17570,7 +17570,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "VacuumStoneCheck",
@@ -17591,7 +17591,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "EnergyStoneCheck",
@@ -17612,7 +17612,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "SunStoneCheck",
@@ -17633,7 +17633,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "MoonStoneCheck",
@@ -17654,7 +17654,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "SpaceStoneCheck",
@@ -17675,7 +17675,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "TimeStoneCheck",
@@ -17696,7 +17696,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "CreationStoneCheck",
@@ -17717,7 +17717,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "DestructionStoneCheck",
@@ -17738,7 +17738,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "DestructionBallProjectile",
@@ -17912,7 +17912,7 @@
           "src/main/resources/assets/power/models/block/amplifier_block.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "AmplifierBlockRecipe",
@@ -17926,7 +17926,7 @@
           "src/main/resources/data/power/recipes/amplifier_block_recipe.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "AmplifierDropFromBlock",
@@ -17940,7 +17940,7 @@
           "src/main/resources/data/power/recipes/amplifier_drop_from_block.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "EnergiumGolem",
@@ -18385,7 +18385,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "BloodStoneUse",
@@ -18536,7 +18536,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/BloodBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/BloodBattery"
+      "path": "~/ItemsAndBlocks/Batteries/BloodBattery"
     },
     {
       "name": "BloodBatteryDesc",
@@ -18552,7 +18552,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/BloodBattery"
+      "path": "~/ItemsAndBlocks/Batteries/BloodBattery"
     },
     {
       "name": "BloodBatteryUse",
@@ -18592,7 +18592,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/BloodBattery"
+      "path": "~/ItemsAndBlocks/Batteries/BloodBattery"
     },
     {
       "name": "Mobs",
@@ -18622,7 +18622,7 @@
           "src/main/resources/assets/power/models/item/raw_depleted_energium_block.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawDepletedEnergiumBlockCraft",
@@ -18636,7 +18636,7 @@
           "src/main/resources/data/power/recipes/raw_depleted_energium_block_craft.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawDepletedEnergiumCraft",
@@ -18650,7 +18650,7 @@
           "src/main/resources/data/power/recipes/raw_depleted_energium_craft.json"
         ]
       },
-      "path": "~/Items/Energium"
+      "path": "~/ItemsAndBlocks/Energium"
     },
     {
       "name": "RawAmplifierBlock",
@@ -18671,7 +18671,7 @@
           "src/main/resources/data/power/worldgen/configured_feature/raw_amplifier_block.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RawAmplifierBlockCraft",
@@ -18685,7 +18685,7 @@
           "src/main/resources/data/power/recipes/raw_amplifier_block_craft.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "RawAmplifierCraft",
@@ -18699,7 +18699,7 @@
           "src/main/resources/data/power/recipes/raw_amplifier_craft.json"
         ]
       },
-      "path": "~/Items/Amplifier"
+      "path": "~/ItemsAndBlocks/Amplifier"
     },
     {
       "name": "FireSpecialAttack",
@@ -20178,7 +20178,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "TechnologyBattery",
@@ -20193,7 +20193,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TechnologyBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/TechnologyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TechnologyBattery"
     },
     {
       "name": "TechnologyBatteryDesc",
@@ -20209,7 +20209,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/TechnologyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TechnologyBattery"
     },
     {
       "name": "TechnologyBatteryUse",
@@ -20249,7 +20249,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/TechnologyBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TechnologyBattery"
     },
     {
       "name": "Turret",
@@ -20502,7 +20502,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "TechnoPickaxe",
@@ -20796,7 +20796,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/TeleportationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TeleportationBattery"
     },
     {
       "name": "TeleportationBatteryDesc",
@@ -20812,7 +20812,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/TeleportationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TeleportationBattery"
     },
     {
       "name": "TeleportationBatteryUse",
@@ -20852,7 +20852,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/TeleportationBattery"
+      "path": "~/ItemsAndBlocks/Batteries/TeleportationBattery"
     },
     {
       "name": "TeleportationGun",
@@ -21269,7 +21269,7 @@
           }
         ]
       },
-      "path": "~/Items/KeepersBox/GUI"
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
       "name": "ExplosionStoneUse",
@@ -21528,7 +21528,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/ExplosionBatteryItem.java"
         ]
       },
-      "path": "~/Items/Batteries/ExplosionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ExplosionBattery"
     },
     {
       "name": "ExplosionBatteryDesc",
@@ -21544,7 +21544,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Items/Batteries/ExplosionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ExplosionBattery"
     },
     {
       "name": "ExplosionBatteryUse",
@@ -21584,7 +21584,7 @@
           }
         ]
       },
-      "path": "~/Items/Batteries/ExplosionBattery"
+      "path": "~/ItemsAndBlocks/Batteries/ExplosionBattery"
     },
     {
       "name": "ExplosionMace",
@@ -23915,7 +23915,7 @@
         ]
       },
       {
-        "name": "Items",
+        "name": "ItemsAndBlocks",
         "children": [
           {
             "name": "Energium",
