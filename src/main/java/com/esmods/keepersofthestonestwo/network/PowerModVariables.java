@@ -101,6 +101,8 @@ public class PowerModVariables {
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
 				clone.teleporting_effect = original.teleporting_effect;
+				clone.second_wheel_open_var = original.second_wheel_open_var;
+				clone.third_wheel_open_var = original.third_wheel_open_var;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -457,6 +459,8 @@ public class PowerModVariables {
 		public double max_power = 100.0;
 		public double power_recovery_multiplier = 1.0;
 		public double teleporting_effect = 0;
+		public boolean second_wheel_open_var = false;
+		public boolean third_wheel_open_var = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -483,6 +487,8 @@ public class PowerModVariables {
 			nbt.putDouble("max_power", max_power);
 			nbt.putDouble("power_recovery_multiplier", power_recovery_multiplier);
 			nbt.putDouble("teleporting_effect", teleporting_effect);
+			nbt.putBoolean("second_wheel_open_var", second_wheel_open_var);
+			nbt.putBoolean("third_wheel_open_var", third_wheel_open_var);
 			return nbt;
 		}
 
@@ -506,6 +512,8 @@ public class PowerModVariables {
 			max_power = nbt.getDouble("max_power");
 			power_recovery_multiplier = nbt.getDouble("power_recovery_multiplier");
 			teleporting_effect = nbt.getDouble("teleporting_effect");
+			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
+			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
 		}
 	}
 
@@ -557,6 +565,8 @@ public class PowerModVariables {
 					variables.max_power = message.data.max_power;
 					variables.power_recovery_multiplier = message.data.power_recovery_multiplier;
 					variables.teleporting_effect = message.data.teleporting_effect;
+					variables.second_wheel_open_var = message.data.second_wheel_open_var;
+					variables.third_wheel_open_var = message.data.third_wheel_open_var;
 				}
 			});
 			context.setPacketHandled(true);
