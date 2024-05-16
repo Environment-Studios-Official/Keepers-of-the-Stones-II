@@ -2,10 +2,10 @@
   "_fv": 60,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Super Charge!",
-    "achievementDescription": "Create and charge the battery",
+    "achievementName": "Full Power of Energium",
+    "achievementDescription": "Wear a full set of energium armor",
     "achievementIcon": {
-      "value": "CUSTOM:EmptyBattery"
+      "value": "CUSTOM:EnergiumArmor.body"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -16,9 +16,9 @@
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 0,
-    "achievementType": "goal",
+    "achievementType": "challenge",
     "parent": {
-      "value": "CUSTOM:BecomeAMaster"
+      "value": "CUSTOM:EnergizedGold"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
   }

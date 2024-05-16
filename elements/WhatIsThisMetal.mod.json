@@ -2,7 +2,7 @@
   "_fv": 60,
   "_type": "achievement",
   "definition": {
-    "achievementName": "The Energium Age",
+    "achievementName": "What is this metal?",
     "achievementDescription": "Obtain and smelt the energium ore",
     "achievementIcon": {
       "value": "CUSTOM:DepletedEnergiumIngot"

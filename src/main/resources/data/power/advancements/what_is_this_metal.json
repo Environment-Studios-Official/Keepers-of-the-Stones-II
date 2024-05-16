@@ -4,10 +4,10 @@
       "item": "power:depleted_energium_ingot"
     },
     "title": {
-      "translate": "advancements.the_energium_age.title"
+      "translate": "advancements.what_is_this_metal.title"
     },
     "description": {
-      "translate": "advancements.the_energium_age.descr"
+      "translate": "advancements.what_is_this_metal.descr"
     },
     "frame": "task",
     "show_toast": true,
@@ -15,7 +15,7 @@
     "hidden": false
   },
   "criteria": {
-    "the_energium_age_0": {
+    "what_is_this_metal_0": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
