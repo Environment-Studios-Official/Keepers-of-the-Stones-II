@@ -21862,6 +21862,21 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "RegistryBatteryChargerRecipes",
+      "type": "procedure",
+      "sortid": 1010,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "registry_battery_charger_recipes",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RegistryBatteryChargerRecipesProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     }
   ],
   "variable_elements": [
@@ -22320,6 +22335,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "file",
+      "type": "file",
+      "scope": "global",
+      "value": "new File(\"\")"
     }
   ],
   "sound_elements": [
