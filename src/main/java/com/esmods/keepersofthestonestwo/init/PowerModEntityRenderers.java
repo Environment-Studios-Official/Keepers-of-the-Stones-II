@@ -29,6 +29,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.LavaAttackProjectileRend
 import com.esmods.keepersofthestonestwo.client.renderer.KnifeAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.IronAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.IceAttackProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.GrenadeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
@@ -41,6 +42,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.CobblestoneAttackProject
 import com.esmods.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BlackHoleRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.AtomicRocketRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
@@ -81,5 +83,7 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.TURRET.get(), TurretRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TURRET_PROJECTILE.get(), TurretProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), TeleportationGunProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ATOMIC_ROCKET.get(), AtomicRocketRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.GRENADE.get(), GrenadeRenderer::new);
 	}
 }

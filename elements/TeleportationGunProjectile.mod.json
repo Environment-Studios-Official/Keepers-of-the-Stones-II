@@ -3,7 +3,7 @@
   "_type": "projectile",
   "definition": {
     "projectileItem": {
-      "value": "Blocks.CHORUS_PLANT"
+      "value": "CUSTOM:TeleportationGun"
     },
     "showParticles": false,
     "actionSound": {

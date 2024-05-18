@@ -72,6 +72,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.TELEPORTATION_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER.get());
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active = false;

@@ -87,11 +87,11 @@ public record WheelAbilitiesAirButtonMessage(int buttonID, int x, int y, int z) 
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			OpenWheelThreeProcedure.execute(entity);
 		}
 	}
 

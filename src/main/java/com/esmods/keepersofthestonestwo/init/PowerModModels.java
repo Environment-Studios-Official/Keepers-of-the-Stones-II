@@ -18,8 +18,10 @@ import com.esmods.keepersofthestonestwo.client.model.Modelmeteorite;
 import com.esmods.keepersofthestonestwo.client.model.Modellightball;
 import com.esmods.keepersofthestonestwo.client.model.Modelknife;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
+import com.esmods.keepersofthestonestwo.client.model.Modelgrenade;
 import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
+import com.esmods.keepersofthestonestwo.client.model.Modelatomic_rocket;
 import com.esmods.keepersofthestonestwo.client.model.ModelCrossed;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
@@ -29,7 +31,9 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelmini_tornado.LAYER_LOCATION, Modelmini_tornado::createBodyLayer);
 		event.registerLayerDefinition(Modelmeteorite.LAYER_LOCATION, Modelmeteorite::createBodyLayer);
 		event.registerLayerDefinition(Modelblock_attack.LAYER_LOCATION, Modelblock_attack::createBodyLayer);
+		event.registerLayerDefinition(Modelatomic_rocket.LAYER_LOCATION, Modelatomic_rocket::createBodyLayer);
 		event.registerLayerDefinition(Modelether_bullet.LAYER_LOCATION, Modelether_bullet::createBodyLayer);
+		event.registerLayerDefinition(Modelgrenade.LAYER_LOCATION, Modelgrenade::createBodyLayer);
 		event.registerLayerDefinition(Modelturret_projectile.LAYER_LOCATION, Modelturret_projectile::createBodyLayer);
 		event.registerLayerDefinition(Modelsolar_salvo.LAYER_LOCATION, Modelsolar_salvo::createBodyLayer);
 		event.registerLayerDefinition(Modeliceberg.LAYER_LOCATION, Modeliceberg::createBodyLayer);
