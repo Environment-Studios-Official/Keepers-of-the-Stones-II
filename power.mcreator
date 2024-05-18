@@ -21856,6 +21856,132 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "AtomicRocketKazhdyiTikPriPoliotieSnariada",
+      "type": "procedure",
+      "sortid": 1010,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_rocket_kazhdyi_tik_pri_poliotie_snariada",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AtomicRocketKazhdyiTikPriPoliotieSnariadaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "AtomicRocket",
+      "type": "projectile",
+      "sortid": 1011,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_rocket",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/AtomicRocketEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/AtomicRocketRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "AtomicRocketExplosion",
+      "type": "procedure",
+      "sortid": 1012,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "atomic_rocket_explosion",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AtomicRocketExplosionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "Grenade",
+      "type": "projectile",
+      "sortid": 1013,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "grenade",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/GrenadeRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/GrenadeEntity.java"
+        ]
+      },
+      "path": "~/Elements/Explosion"
+    },
+    {
+      "name": "LiitleExplosion",
+      "type": "procedure",
+      "sortid": 1014,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "liitle_explosion",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LiitleExplosionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Explosion"
     }
   ],
   "variable_elements": [

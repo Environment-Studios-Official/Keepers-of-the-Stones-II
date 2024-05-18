@@ -35,6 +35,7 @@ import com.esmods.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.KnifeAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.IronAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.GrenadeEntity;
 import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.EtherAttackProjectileEntity;
@@ -47,6 +48,7 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.AtomicRocketEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -131,6 +133,10 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<TeleportationGunProjectileEntity>> TELEPORTATION_GUN_PROJECTILE = register("teleportation_gun_projectile",
 			EntityType.Builder.<TeleportationGunProjectileEntity>of(TeleportationGunProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(TeleportationGunProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<AtomicRocketEntity>> ATOMIC_ROCKET = register("atomic_rocket",
+			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setCustomClientFactory(AtomicRocketEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<GrenadeEntity>> GRENADE = register("grenade",
+			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setCustomClientFactory(GrenadeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
