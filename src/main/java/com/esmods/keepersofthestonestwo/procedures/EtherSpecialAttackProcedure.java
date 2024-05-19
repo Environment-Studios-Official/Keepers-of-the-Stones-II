@@ -106,8 +106,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot((-1), 0, (-1), 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -121,8 +121,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot(1, 0, 1, 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -136,8 +136,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot((-1), 0, 1, 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -151,8 +151,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot(1, 0, (-1), 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -166,8 +166,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot(0, 0, (-1), 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -181,8 +181,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot(0, 0, 1, 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -196,8 +196,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot((-1), 0, 0, 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				if (world instanceof ServerLevel projectileLevel) {
@@ -211,8 +211,8 @@ public class EtherSpecialAttackProcedure {
 							return entityToSpawn;
 						}
 					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 2), z);
-					_entityToSpawn.shoot(1, 0, 0, 1, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
 					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				{

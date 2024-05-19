@@ -73,11 +73,11 @@ public class WheelAbilitiesRainButtonMessage {
 		}
 		if (buttonID == 1) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			OpenWheelThreeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 

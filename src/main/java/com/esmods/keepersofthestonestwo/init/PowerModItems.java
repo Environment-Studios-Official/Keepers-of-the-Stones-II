@@ -123,6 +123,9 @@ import com.esmods.keepersofthestonestwo.item.FireStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireBatteryItem;
 import com.esmods.keepersofthestonestwo.item.FireArmorItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionStoneItem;
+import com.esmods.keepersofthestonestwo.item.ExplosionMaceItem;
+import com.esmods.keepersofthestonestwo.item.ExplosionBatteryItem;
+import com.esmods.keepersofthestonestwo.item.ExplosionArmorItem;
 import com.esmods.keepersofthestonestwo.item.EtherStoneItem;
 import com.esmods.keepersofthestonestwo.item.EtherGlaiveItem;
 import com.esmods.keepersofthestonestwo.item.EtherBatteryItem;
@@ -451,6 +454,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_GUN = REGISTRY.register("teleportation_gun", () -> new TeleportationGunItem());
 	public static final RegistryObject<Item> BLUE_PORTAL = block(PowerModBlocks.BLUE_PORTAL);
 	public static final RegistryObject<Item> ORANGE_PORTAL = block(PowerModBlocks.ORANGE_PORTAL);
+	public static final RegistryObject<Item> EXPLOSION_ARMOR_HELMET = REGISTRY.register("explosion_armor_helmet", () -> new ExplosionArmorItem.Helmet());
+	public static final RegistryObject<Item> EXPLOSION_ARMOR_CHESTPLATE = REGISTRY.register("explosion_armor_chestplate", () -> new ExplosionArmorItem.Chestplate());
+	public static final RegistryObject<Item> EXPLOSION_ARMOR_LEGGINGS = REGISTRY.register("explosion_armor_leggings", () -> new ExplosionArmorItem.Leggings());
+	public static final RegistryObject<Item> EXPLOSION_ARMOR_BOOTS = REGISTRY.register("explosion_armor_boots", () -> new ExplosionArmorItem.Boots());
+	public static final RegistryObject<Item> EXPLOSION_BATTERY = REGISTRY.register("explosion_battery", () -> new ExplosionBatteryItem());
+	public static final RegistryObject<Item> EXPLOSION_MACE = REGISTRY.register("explosion_mace", () -> new ExplosionMaceItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

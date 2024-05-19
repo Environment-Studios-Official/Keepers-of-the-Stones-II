@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.procedures.LavaElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.IceElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ExplosionElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -105,6 +106,10 @@ public class KeepersBoxGUIPart1ButtonMessage {
 		if (buttonID == 9) {
 
 			IceElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			ExplosionElementGetProcedure.execute(world, entity);
 		}
 	}
 

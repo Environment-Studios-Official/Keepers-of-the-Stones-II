@@ -125,6 +125,9 @@ public class AbilityKeyPressedTickProcedure {
 				if (entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(PowerModMobEffects.TELEPORTATION_MASTER.get())) {
 					TeleportationSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if (entity instanceof LivingEntity _livEnt31 && _livEnt31.hasEffect(PowerModMobEffects.EXPLOSION_MASTER.get())) {
+					ExplosionSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 				{
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

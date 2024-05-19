@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFireScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesExplosionScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEtherScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEnergyScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
@@ -85,6 +86,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_BLOOD.get(), WheelAbilitiesBloodScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TECHNOLOGY.get(), WheelAbilitiesTechnologyScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TELEPORTATION.get(), WheelAbilitiesTeleportationScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_EXPLOSION.get(), WheelAbilitiesExplosionScreen::new);
 		});
 	}
 }

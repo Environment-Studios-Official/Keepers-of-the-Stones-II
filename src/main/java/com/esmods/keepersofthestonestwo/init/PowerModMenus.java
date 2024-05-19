@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesExplosionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
@@ -83,4 +84,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesBloodMenu>> WHEEL_ABILITIES_BLOOD = REGISTRY.register("wheel_abilities_blood", () -> IForgeMenuType.create(WheelAbilitiesBloodMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesTechnologyMenu>> WHEEL_ABILITIES_TECHNOLOGY = REGISTRY.register("wheel_abilities_technology", () -> IForgeMenuType.create(WheelAbilitiesTechnologyMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesTeleportationMenu>> WHEEL_ABILITIES_TELEPORTATION = REGISTRY.register("wheel_abilities_teleportation", () -> IForgeMenuType.create(WheelAbilitiesTeleportationMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesExplosionMenu>> WHEEL_ABILITIES_EXPLOSION = REGISTRY.register("wheel_abilities_explosion", () -> IForgeMenuType.create(WheelAbilitiesExplosionMenu::new));
 }

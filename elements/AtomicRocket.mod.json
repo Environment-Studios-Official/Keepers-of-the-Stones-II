@@ -1,0 +1,28 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.TNT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.firework.shoot"
+    },
+    "igniteFire": false,
+    "power": 3.0,
+    "damage": 42.0,
+    "knockback": 10,
+    "entityModel": "Modelatomic_rocket",
+    "customModelTexture": "atomic_rocket.png",
+    "onHitsBlock": {
+      "name": "AtomicRocketExplosion"
+    },
+    "onHitsEntity": {
+      "name": "AtomicRocketExplosion"
+    },
+    "onFlyingTick": {
+      "name": "AtomicRocketKazhdyiTikPriPoliotieSnariada"
+    }
+  }
+}

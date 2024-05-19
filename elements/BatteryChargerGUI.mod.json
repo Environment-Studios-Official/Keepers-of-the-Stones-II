@@ -41,7 +41,7 @@
         "type": "inputslot",
         "data": {
           "inputLimit": {
-            "value": "TAG:forge:elemental_stones"
+            "value": "TAG:mod:elemental_stones"
           },
           "disablePlacement": {
             "fixedValue": false

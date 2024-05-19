@@ -1,8 +1,9 @@
-What's new in Keepers of the Stones II version 1.0.0.21?<br />
-<br />- Added new elements - technology and teleportation
-<br />- The loot in the energium temple has been changed again
-<br />- Now the enchantment of Revenge works on all tools
-<br />- Improved the melee attack of the energium golem
-<br />- The particles of the energium golem's core have been changed to match the color of the core
-<br />- Minor improvements in the system for receiving updates
-<br />- [Bugfix] Fixed the second ability of the Creation master
+What's new in Keepers of the Stones II version 1.0.0.22?<br />
+<br />- Added new element - explosion
+<br />- Added new achievements
+<br />- Changed the sound of the Ice Master's first attack
+<br />- Increased the speed and height of projectiles for abilities that strike at a radius
+<br />- [API] Colorful Powers API has been updated to version 7
+<br />- [Bugfix] Fixed a bug that caused the teleportation cannon to not fire in survival
+<br />- [Bugfix] Fixed a bug that caused the Blood Stone to not recharge in survival
+<br />- [Bugfix] Fixed a bug that caused some amplifier blocks to be generated in the world
