@@ -69,27 +69,27 @@ public class WheelAbilitiesExplosionButtonMessage {
 			return;
 		if (buttonID == 0) {
 
-			Attack117Procedure.execute(entity);
+			OpenWheelOneProcedure.execute(world, x, y, z, entity);
 		}
 		if (buttonID == 1) {
 
-			Attack118Procedure.execute(entity);
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 2) {
 
-			Attack119Procedure.execute(entity);
+			OpenWheelThreeProcedure.execute(entity);
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			Attack117Procedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(entity);
+			Attack118Procedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(entity);
+			Attack119Procedure.execute(entity);
 		}
 	}
 
