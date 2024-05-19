@@ -33,14 +33,10 @@ import net.minecraft.client.Minecraft;
 import java.util.function.Supplier;
 import java.util.ArrayList;
 
-import java.io.File;
-
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
-	public static File file = new File("");
-
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
 		PowerMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);

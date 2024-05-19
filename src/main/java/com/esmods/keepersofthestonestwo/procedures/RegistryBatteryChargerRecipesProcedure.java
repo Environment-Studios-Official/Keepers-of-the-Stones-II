@@ -30,7 +30,7 @@ public class RegistryBatteryChargerRecipesProcedure {
 		com.google.gson.JsonObject mainJsonObject = new com.google.gson.JsonObject();
 		com.google.gson.JsonObject subJsonObject = new com.google.gson.JsonObject();
 		File file = new File("");
-		file = new File((FMLPaths.GAMEDIR.get().toString() + "/config/power/custom_data/recipes/"), File.separator + ("recipes_registry" + ".json"));
+		file = new File((FMLPaths.GAMEDIR.get().toString() + "/config/power/custom_data/recipes/"), File.separator + ("battery_charger_recipes" + ".json"));
 		if (!file.exists()) {
 			try {
 				file.getParentFile().mkdirs();
@@ -42,20 +42,6 @@ public class RegistryBatteryChargerRecipesProcedure {
 			subJsonObject.addProperty("stone_input_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.FIRE_STONE.get()).toString()));
 			subJsonObject.addProperty("empty_battery_input_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.EMPTY_BATTERY.get()).toString()));
 			subJsonObject.addProperty("battery_output_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.FIRE_BATTERY.get()).toString()));
-			{
-				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
-				try {
-					FileWriter fileWriter = new FileWriter(file);
-					fileWriter.write(mainGSONBuilderVariable.toJson(mainJsonObject));
-					fileWriter.close();
-				} catch (IOException exception) {
-					exception.printStackTrace();
-				}
-			}
-			mainJsonObject.add((ForgeRegistries.ITEMS.getKey(PowerModItems.AIR_STONE.get()).toString() + "_battery_charge"), subJsonObject);
-			subJsonObject.addProperty("stone_input_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.AIR_STONE.get()).toString()));
-			subJsonObject.addProperty("empty_battery_input_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.EMPTY_BATTERY.get()).toString()));
-			subJsonObject.addProperty("battery_output_slot", (ForgeRegistries.ITEMS.getKey(PowerModItems.AIR_BATTERY.get()).toString()));
 			{
 				com.google.gson.Gson mainGSONBuilderVariable = new com.google.gson.GsonBuilder().setPrettyPrinting().create();
 				try {

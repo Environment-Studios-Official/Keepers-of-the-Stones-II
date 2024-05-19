@@ -22335,12 +22335,6 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
-    },
-    {
-      "name": "file",
-      "type": "file",
-      "scope": "global",
-      "value": "new File(\"\")"
     }
   ],
   "sound_elements": [
