@@ -13,7 +13,7 @@ import net.minecraft.core.BlockPos;
 
 public class DepletedEnergiumOreBlock extends Block {
 	public DepletedEnergiumOreBlock() {
-		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.75f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM).sound(SoundType.STONE).strength(6.75f, 5f).requiresCorrectToolForDrops());
 	}
 
 	@Override

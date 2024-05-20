@@ -81,7 +81,7 @@ public class WheelAbilitiesFireButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
