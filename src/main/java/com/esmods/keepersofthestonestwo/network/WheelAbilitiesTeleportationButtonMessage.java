@@ -71,7 +71,7 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 			return;
 		if (buttonID == 0) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 

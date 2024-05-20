@@ -83,7 +83,7 @@ public record WheelAbilitiesAirButtonMessage(int buttonID, int x, int y, int z) 
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 

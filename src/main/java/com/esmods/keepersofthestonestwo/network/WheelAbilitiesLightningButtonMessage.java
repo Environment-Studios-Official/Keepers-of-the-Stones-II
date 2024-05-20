@@ -71,7 +71,7 @@ public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, i
 			return;
 		if (buttonID == 0) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
