@@ -114,6 +114,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TECHNOLOGY_STONE.get());
 				tabData.accept(PowerModItems.TELEPORTATION_STONE.get());
 				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
+				tabData.accept(PowerModItems.AMBER_STONE.get());
 			})
 
 					.build());

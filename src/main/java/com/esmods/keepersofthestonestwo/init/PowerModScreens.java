@@ -40,6 +40,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAmberScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAirScreen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
@@ -87,6 +88,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TECHNOLOGY.get(), WheelAbilitiesTechnologyScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TELEPORTATION.get(), WheelAbilitiesTeleportationScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_EXPLOSION.get(), WheelAbilitiesExplosionScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_AMBER.get(), WheelAbilitiesAmberScreen::new);
 		});
 	}
 }

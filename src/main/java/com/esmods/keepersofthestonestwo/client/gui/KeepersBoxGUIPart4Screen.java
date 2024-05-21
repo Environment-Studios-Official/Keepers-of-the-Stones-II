@@ -21,6 +21,7 @@ import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AmberStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart4ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -37,6 +38,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_metal_element;
 	ImageButton imagebutton_earth_element;
 	ImageButton imagebutton_plants_element;
+	ImageButton imagebutton_amber_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -72,6 +74,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (PlantsStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_plants"), mouseX, mouseY);
+		if (AmberStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_amber"), mouseX, mouseY);
 	}
 
 	@Override
@@ -202,5 +207,19 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_plants_element", imagebutton_plants_element);
 		this.addRenderableWidget(imagebutton_plants_element);
+		imagebutton_amber_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_amber_element.png"), 16, 32, e -> {
+			if (AmberStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(8, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (AmberStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_amber_element", imagebutton_amber_element);
+		this.addRenderableWidget(imagebutton_amber_element);
 	}
 }
