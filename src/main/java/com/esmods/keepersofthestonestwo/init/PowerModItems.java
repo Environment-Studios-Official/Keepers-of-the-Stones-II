@@ -180,6 +180,7 @@ import com.esmods.keepersofthestonestwo.item.AnimalsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsArmorItem;
 import com.esmods.keepersofthestonestwo.item.AmplifierDropItem;
 import com.esmods.keepersofthestonestwo.item.AmberStoneItem;
+import com.esmods.keepersofthestonestwo.item.AmberBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AmberArmorItem;
 import com.esmods.keepersofthestonestwo.item.AirStoneItem;
 import com.esmods.keepersofthestonestwo.item.AirRapierItem;
@@ -465,6 +466,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMBER_ARMOR_CHESTPLATE = REGISTRY.register("amber_armor_chestplate", () -> new AmberArmorItem.Chestplate());
 	public static final RegistryObject<Item> AMBER_ARMOR_LEGGINGS = REGISTRY.register("amber_armor_leggings", () -> new AmberArmorItem.Leggings());
 	public static final RegistryObject<Item> AMBER_ARMOR_BOOTS = REGISTRY.register("amber_armor_boots", () -> new AmberArmorItem.Boots());
+	public static final RegistryObject<Item> AMBER_BATTERY = REGISTRY.register("amber_battery", () -> new AmberBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
