@@ -18,6 +18,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAmberMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack123Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack122Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack121Procedure;
@@ -81,13 +84,25 @@ public class WheelAbilitiesAmberButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			Attack121Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack122Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack121Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack122Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack123Procedure.execute(entity);
 		}

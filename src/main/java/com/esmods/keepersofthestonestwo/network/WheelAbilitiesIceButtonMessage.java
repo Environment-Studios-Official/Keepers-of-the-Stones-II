@@ -18,6 +18,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack23Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack22Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack21Procedure;
@@ -81,13 +84,25 @@ public class WheelAbilitiesIceButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			Attack21Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack22Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack21Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack22Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack23Procedure.execute(entity);
 		}

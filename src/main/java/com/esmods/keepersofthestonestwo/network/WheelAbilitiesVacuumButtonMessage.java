@@ -18,6 +18,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Atttack73Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack75Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack74Procedure;
@@ -81,13 +84,25 @@ public class WheelAbilitiesVacuumButtonMessage {
 		}
 		if (buttonID == 3) {
 
-			Atttack73Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack74Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Atttack73Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack74Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack75Procedure.execute(entity);
 		}
