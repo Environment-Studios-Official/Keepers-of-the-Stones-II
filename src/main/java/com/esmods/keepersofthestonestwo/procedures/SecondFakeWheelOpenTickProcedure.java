@@ -86,7 +86,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("air")) {
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_second).equals("air")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -101,7 +101,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("earth")) {
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_second).equals("earth")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -116,7 +116,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("water")) {
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_second).equals("water")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
@@ -131,7 +131,7 @@ public class SecondFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("ether")) {
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_second).equals("ether")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {

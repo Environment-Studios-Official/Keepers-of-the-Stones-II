@@ -15,6 +15,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAmberMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
@@ -88,14 +89,14 @@ public class WheelAbilitiesAmberScreen extends AbstractContainerScreen<WheelAbil
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAmberButtonMessage(0, x, y, z));
 				WheelAbilitiesAmberButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};

@@ -20,7 +20,7 @@
             "name": "OpenWheelOne"
           },
           "displayCondition": {
-            "name": "GetWheelTwo"
+            "name": "GetWheelTwoOrFirstFake"
           },
           "x": 258,
           "y": 178

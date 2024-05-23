@@ -15,6 +15,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
@@ -118,14 +119,14 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		guistate.put("button:imagebutton_jet_fire", imagebutton_jet_fire);
 		this.addRenderableWidget(imagebutton_jet_fire);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesFireButtonMessage(3, x, y, z));
 				WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 3, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
