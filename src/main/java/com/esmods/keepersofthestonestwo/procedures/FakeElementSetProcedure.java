@@ -7,6 +7,7 @@ import net.minecraft.commands.CommandSourceStack;
 import com.mojang.brigadier.exceptions.CommandSyntaxException;
 import com.mojang.brigadier.context.CommandContext;
 import com.mojang.brigadier.arguments.StringArgumentType;
+import com.mojang.brigadier.arguments.DoubleArgumentType;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
@@ -14,7 +15,7 @@ public class FakeElementSetProcedure {
 	public static void execute(CommandContext<CommandSourceStack> arguments) {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
-				if ((StringArgumentType.getString(arguments, "element_order")).equals("first")) {
+				if (DoubleArgumentType.getDouble(arguments, "element_order") == 1) {
 					{
 						String _setval = StringArgumentType.getString(arguments, "element_name");
 						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -22,7 +23,7 @@ public class FakeElementSetProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
-				} else if ((StringArgumentType.getString(arguments, "element_order")).equals("second")) {
+				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 2) {
 					{
 						String _setval = StringArgumentType.getString(arguments, "element_name");
 						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -30,7 +31,7 @@ public class FakeElementSetProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
-				} else if ((StringArgumentType.getString(arguments, "element_order")).equals("third")) {
+				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 3) {
 					{
 						String _setval = StringArgumentType.getString(arguments, "element_name");
 						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {

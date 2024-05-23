@@ -71,7 +71,7 @@ public class PwCommand {
 					PowerRecoveryMultiplierSetProcedure.execute(arguments);
 					return 0;
 				})))).then(Commands.literal("fake_element")
-						.then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("element_order", StringArgumentType.word()).then(Commands.argument("element_name", StringArgumentType.word()).executes(arguments -> {
+						.then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("element_order", DoubleArgumentType.doubleArg(1, 3)).then(Commands.argument("element_name", StringArgumentType.word()).executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
 							double x = arguments.getSource().getPosition().x();
 							double y = arguments.getSource().getPosition().y();
