@@ -136,6 +136,7 @@
   "gui.power.wheel_abilities_moon.button_3": "3",
   "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
   "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Return to checkpoint, uses 40",
+  "item.power.amber_staff": "Amber Staff",
   "subtitles.electric_spark": "Spark",
   "effect.power.creation_master": "Master of Creation",
   "battery.desc.water": "Water",

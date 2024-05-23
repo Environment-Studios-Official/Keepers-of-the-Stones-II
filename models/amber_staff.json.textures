@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "amber_staff"
+      },
+      "name": "default"
+    }
+  }
+}
