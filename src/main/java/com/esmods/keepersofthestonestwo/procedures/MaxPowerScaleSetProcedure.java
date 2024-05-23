@@ -1,6 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -11,7 +13,9 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class MaxPowerScaleSetProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
+	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
@@ -21,6 +25,8 @@ public class MaxPowerScaleSetProcedure {
 						capability.syncPlayerVariables(entityiterator);
 					});
 				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("Set maximum star points to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();

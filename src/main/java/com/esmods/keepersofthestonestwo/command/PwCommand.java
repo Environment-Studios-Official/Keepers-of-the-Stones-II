@@ -40,7 +40,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					PowerScaleSetProcedure.execute(arguments);
+					PowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
 				})))).then(Commands.literal("max_points").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -54,7 +54,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					MaxPowerScaleSetProcedure.execute(arguments);
+					MaxPowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
 				})))).then(Commands.literal("multiplier").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
@@ -68,7 +68,7 @@ public class PwCommand {
 					if (entity != null)
 						direction = entity.getDirection();
 
-					PowerRecoveryMultiplierSetProcedure.execute(arguments);
+					PowerRecoveryMultiplierSetProcedure.execute(arguments, entity);
 					return 0;
 				})))).then(Commands.literal("fake_element")
 						.then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("element_order", DoubleArgumentType.doubleArg(1, 3)).then(Commands.argument("element_name", StringArgumentType.word()).executes(arguments -> {
@@ -83,7 +83,7 @@ public class PwCommand {
 							if (entity != null)
 								direction = entity.getDirection();
 
-							FakeElementSetProcedure.execute(arguments);
+							FakeElementSetProcedure.execute(arguments, entity);
 							return 0;
 						})))))));
 	}

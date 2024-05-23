@@ -1,6 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -12,7 +14,9 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class FakeElementSetProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
+	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				if (DoubleArgumentType.getDouble(arguments, "element_order") == 1) {
@@ -40,6 +44,9 @@ public class FakeElementSetProcedure {
 						});
 					}
 				}
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("Fake element has been set under the wheel number " + Math.round(DoubleArgumentType.getDouble(arguments, "element_order")) + " with parameter "
+							+ StringArgumentType.getString(arguments, "element_name") + " for " + entityiterator.getDisplayName().getString())), false);
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();

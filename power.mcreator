@@ -1027,6 +1027,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -19702,6 +19706,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -19722,6 +19730,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
@@ -22685,6 +22697,10 @@
           {
             "name": "arguments",
             "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
           }
         ]
       },
