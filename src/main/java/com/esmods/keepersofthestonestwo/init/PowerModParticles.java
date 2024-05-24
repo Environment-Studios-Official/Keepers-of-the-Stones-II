@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergiumGolemCoreAttackParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
+import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModParticles {
@@ -46,5 +47,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.TECHNOBARRIER_PARTICLE.get(), TechnobarrierParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get(), EnergiumGolemCoreAttackParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.AMBER_POWER.get(), AmberPowerParticle::provider);
 	}
 }
