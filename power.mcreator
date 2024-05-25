@@ -22846,6 +22846,26 @@
         ]
       },
       "path": "~/Elements/Amber"
+    },
+    {
+      "name": "RenderItemOnBatteryCharger",
+      "type": "procedure",
+      "sortid": 1053,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "render_item_on_battery_charger",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RenderItemOnBatteryChargerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     }
   ],
   "variable_elements": [
