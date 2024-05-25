@@ -90,27 +90,27 @@ public class DetransformationKeyUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				{
-					String _setval = "0";
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.fake_element_name_first = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					String _setval = "0";
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.fake_element_name_second = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
-				{
-					String _setval = "0";
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.fake_element_name_third = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_first = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_second = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		});
 	}
