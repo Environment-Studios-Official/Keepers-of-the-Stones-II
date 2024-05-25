@@ -469,6 +469,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMBER_ARMOR_BOOTS = REGISTRY.register("amber_armor_boots", () -> new AmberArmorItem.Boots());
 	public static final RegistryObject<Item> AMBER_BATTERY = REGISTRY.register("amber_battery", () -> new AmberBatteryItem());
 	public static final RegistryObject<Item> AMBER_STAFF = REGISTRY.register("amber_staff", () -> new AmberStaffItem());
+	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -22772,6 +22772,80 @@
         ]
       },
       "path": "~/Elements/Amber"
+    },
+    {
+      "name": "AmberBlock",
+      "type": "block",
+      "sortid": 1050,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/amber_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/amber_block.json",
+          "src/main/resources/assets/power/blockstates/amber_block.json",
+          "src/main/resources/assets/power/models/block/amber_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/AmberBlockBlock.java"
+        ]
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "AmberDestructionArmor",
+      "type": "procedure",
+      "sortid": 1051,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_destruction_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberDestructionArmorProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "AmberLayerOnEntity",
+      "type": "procedure",
+      "sortid": 1052,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_layer_on_entity",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberLayerOnEntityProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Amber"
     }
   ],
   "variable_elements": [
@@ -23336,6 +23410,7 @@
       "CUSTOM:ExplosionBattery"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:AmberBlock",
       "~CUSTOM:OrangePortal",
       "~CUSTOM:BluePortal",
       "~CUSTOM:RawAmplifierBlock",
@@ -23649,6 +23724,7 @@
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "entity.power.turret": "Turret",
+      "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Мастер огня",
       "effect.power.technobarrier": "Технобарьер",
       "item.power.turret_spawn_egg": "Turret Spawn Egg",
@@ -24191,6 +24267,7 @@
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "entity.power.turret": "Turret",
+      "block.power.amber_block": "Amber Block",
       "effect.power.fire_master": "Master of Fire",
       "effect.power.technobarrier": "Technobarrier",
       "item.power.turret_spawn_egg": "Turret Spawn Egg",
