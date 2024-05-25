@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_liquid_amber_flow",
+          "image": "liquid_amber_flow.png",
+          "hoveredImage": "liquid_amber_flow_highlight.png",
           "onClick": {
             "name": "Attack121"
           },
@@ -129,11 +129,24 @@
         }
       },
       {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_liquid_amber_flow_uses_15",
+          "text": {
+            "fixedValue": "Liquid amber flow, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 48
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_copying_power",
+          "image": "copying_power.png",
+          "hoveredImage": "copying_power_highlight.png",
           "onClick": {
             "name": "Attack122"
           },
@@ -142,16 +155,42 @@
         }
       },
       {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_copying_power_uses_50",
+          "text": {
+            "fixedValue": "Copying power, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_sealing_in_amber",
+          "image": "sealing_in_amber.png",
+          "hoveredImage": "sealing_in_amber_highlight.png",
           "onClick": {
             "name": "Attack123"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sealing_in_amber_uses_80",
+          "text": {
+            "fixedValue": "Sealing in amber, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 199,
+          "y": 169
         }
       }
     ],

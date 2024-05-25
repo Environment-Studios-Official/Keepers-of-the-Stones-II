@@ -34,9 +34,9 @@ public class WheelAbilitiesAmberScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_liquid_amber_flow;
+	ImageButton imagebutton_copying_power;
+	ImageButton imagebutton_sealing_in_amber;
 
 	public WheelAbilitiesAmberScreen(WheelAbilitiesAmberMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +54,12 @@ public class WheelAbilitiesAmberScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 24 && mouseY < topPos + 48)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_amber.tooltip_liquid_amber_flow_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50"), mouseX, mouseY);
+		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 145 && mouseY < topPos + 169)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -172,29 +178,29 @@ public class WheelAbilitiesAmberScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_1.png"), 46, 92, e -> {
+		imagebutton_liquid_amber_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_liquid_amber_flow.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAmberButtonMessage(6, x, y, z));
 				WheelAbilitiesAmberButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_2.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_liquid_amber_flow", imagebutton_liquid_amber_flow);
+		this.addRenderableWidget(imagebutton_liquid_amber_flow);
+		imagebutton_copying_power = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_copying_power.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAmberButtonMessage(7, x, y, z));
 				WheelAbilitiesAmberButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_3.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_copying_power", imagebutton_copying_power);
+		this.addRenderableWidget(imagebutton_copying_power);
+		imagebutton_sealing_in_amber = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sealing_in_amber.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAmberButtonMessage(8, x, y, z));
 				WheelAbilitiesAmberButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_sealing_in_amber", imagebutton_sealing_in_amber);
+		this.addRenderableWidget(imagebutton_sealing_in_amber);
 	}
 }
