@@ -6,5 +6,6 @@ What's new in Keepers of the Stones II version 1.0.0.24?<br />
 <br />- Nuclear rocket's blast radius has been reduced
 <br />- The reloading time of the teleportation gun has been reduced
 <br />- The explosion power of the master of the sun has been reduced
+<br />- [Bugfix] Fixed a bug that caused players to lose items from their inventory when they died from a shot from the core of an energium golem
 <br />- [Bugfix] Fixed explosion resistance for some blocks
 <br />- [Bugfix] Fixed a bug related to CompoundTag that caused a crash when connecting to a server with a mod
