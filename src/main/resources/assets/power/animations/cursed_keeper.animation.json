@@ -1058,7 +1058,6 @@
 			}
 		},
 		"animation.cursed_keeper.attack": {
-			"loop": true,
 			"animation_length": 1.25,
 			"bones": {
 				"bone6": {
@@ -1850,6 +1849,5 @@
 				}
 			}
 		}
-	},
-	"geckolib_format_version": 2
+	}
 }

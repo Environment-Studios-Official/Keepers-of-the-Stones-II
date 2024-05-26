@@ -22886,6 +22886,134 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "CursedKeeperAttackDetection",
+      "type": "procedure",
+      "sortid": 1042,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperTicks",
+      "type": "procedure",
+      "sortid": 1043,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_ticks",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperTicksProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperHandsAttack",
+      "type": "procedure",
+      "sortid": 1044,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_hands_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperHandsAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "CursedKeeperAttackCancel",
+      "type": "procedure",
+      "sortid": 1045,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_cancel",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttackCancelProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
     }
   ],
   "variable_elements": [
@@ -23555,10 +23683,10 @@
       "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_explosion.button_2": "2",
-      "gui.power.wheel_abilities_explosion.button_3": "3",
+      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
+      "gui.power.wheel_abilities_explosion.button_3": "3",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -23570,19 +23698,19 @@
       "item.power.earth_battery": "Батарея",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
+      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -23633,8 +23761,8 @@
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Энерджиумный топор",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
@@ -24107,8 +24235,8 @@
       "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
+      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
@@ -24122,19 +24250,19 @@
       "item.power.earth_battery": "Battery",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "enchantment.power.revenge": "Revenge",
-      "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_axe": "Creation Axe",
+      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
+      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -24185,8 +24313,8 @@
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
+      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",

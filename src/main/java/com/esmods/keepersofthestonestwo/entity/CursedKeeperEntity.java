@@ -45,6 +45,7 @@ import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperTicksProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class CursedKeeperEntity extends Monster implements GeoEntity {
@@ -171,6 +172,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		CursedKeeperTicksProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -219,6 +221,11 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
+			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
+
+			) {
+				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.walk"));
+			}
 			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle"));
 		}
 		return PlayState.STOP;
