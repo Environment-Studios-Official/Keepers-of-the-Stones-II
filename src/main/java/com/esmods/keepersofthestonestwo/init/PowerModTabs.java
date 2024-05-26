@@ -45,6 +45,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
+				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());

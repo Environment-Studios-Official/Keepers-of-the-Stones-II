@@ -19,6 +19,8 @@ import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneBricksBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
@@ -42,6 +44,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> BLUE_PORTAL = REGISTRY.register("blue_portal", () -> new BluePortalBlock());
 	public static final RegistryObject<Block> ORANGE_PORTAL = REGISTRY.register("orange_portal", () -> new OrangePortalBlock());
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
+	public static final RegistryObject<Block> CURSED_STONE = REGISTRY.register("cursed_stone", () -> new CursedStoneBlock());
+	public static final RegistryObject<Block> CURSED_STONE_BRICKS = REGISTRY.register("cursed_stone_bricks", () -> new CursedStoneBricksBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

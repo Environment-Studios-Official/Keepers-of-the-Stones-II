@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 public class CursedKeeperRenderer extends GeoEntityRenderer<CursedKeeperEntity> {
 	public CursedKeeperRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new CursedKeeperModel());
-		this.shadowRadius = 0.5f;
+		this.shadowRadius = 1.5f;
 	}
 
 	@Override

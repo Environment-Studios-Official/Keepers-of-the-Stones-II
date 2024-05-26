@@ -139,7 +139,7 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setCustomClientFactory(GrenadeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper", EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(112).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(0.6f, 1.8f));
+			.setTrackingRange(112).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(2.5f, 3f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
