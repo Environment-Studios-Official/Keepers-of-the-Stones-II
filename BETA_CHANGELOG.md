@@ -5,6 +5,8 @@ What's new in Keepers of the Stones II version 1.0.0.24?<br />
 <br />- The pw command now displays a message in chat when executed
 <br />- Removed the star potions with the addition of star points
 <br />- Added star regeneration potion
+<br />- Added amplifer ring
+<br />- The amplifer Ring removes 30 sec of recharge from the stone when used in a second hand 
 <br />- Nuclear rocket's blast radius has been reduced
 <br />- The reloading time of the teleportation gun has been reduced
 <br />- The explosion power of the master of the sun has been reduced

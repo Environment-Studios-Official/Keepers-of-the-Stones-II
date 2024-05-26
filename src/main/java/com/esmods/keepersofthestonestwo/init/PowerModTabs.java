@@ -23,6 +23,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModItems.RAW_AMPLIFIER.get());
 				tabData.accept(PowerModItems.AMPLIFIER_DROP.get());
+				tabData.accept(PowerModItems.AMPLIFIER_RING.get());
 				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get().asItem());
