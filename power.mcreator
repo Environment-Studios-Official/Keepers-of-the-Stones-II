@@ -8649,57 +8649,6 @@
       "path": "~/Elements/Metal"
     },
     {
-      "name": "StarPotion100PriShchielchkiePKM",
-      "type": "procedure",
-      "sortid": 454,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_100_pri_shchielchkie_pkm",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion100PriShchielchkiePKMProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion100",
-      "type": "item",
-      "sortid": 35,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_100",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/star_potion_100.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotion100Item.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion100DopolnitielnaiaInformatsiia",
-      "type": "procedure",
-      "sortid": 455,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_100_dopolnitielnaia_informatsiia",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion100DopolnitielnaiaInformatsiiaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
       "name": "RightMetalGauntlet",
       "type": "tool",
       "sortid": 456,
@@ -13516,26 +13465,6 @@
       "path": "~/Elements/Moon"
     },
     {
-      "name": "StarPotionInfinityPriZaviershieniiIspolzovaniia",
-      "type": "procedure",
-      "sortid": 654,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_infinity_pri_zaviershienii_ispolzovaniia",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotionInfinityPriZaviershieniiIspolzovaniiaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
       "name": "StarPotionInfinityDopolnitielnaiaInformatsiia",
       "type": "procedure",
       "sortid": 655,
@@ -13550,21 +13479,6 @@
         "dependencies": []
       },
       "path": "~/Modules/PowerScaleModule "
-    },
-    {
-      "name": "StarPotionInfinity",
-      "type": "item",
-      "sortid": 36,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_infinity",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotionInfinityItem.java",
-          "src/main/resources/assets/power/models/item/star_potion_infinity.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "SpaceMaster",
@@ -16248,150 +16162,6 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
-    },
-    {
-      "name": "StarPotion50",
-      "type": "item",
-      "sortid": 34,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_50",
-      "metadata": {
-        "files": [
-          "src/main/resources/assets/power/models/item/star_potion_50.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotion50Item.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion50DopolnitielnaiaInformatsiia",
-      "type": "procedure",
-      "sortid": 769,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_50_dopolnitielnaia_informatsiia",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion50DopolnitielnaiaInformatsiiaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion50PriZaviershieniiIspolzovaniia",
-      "type": "procedure",
-      "sortid": 770,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_50_pri_zaviershienii_ispolzovaniia",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion50PriZaviershieniiIspolzovaniiaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion25",
-      "type": "item",
-      "sortid": 33,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_25",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/StarPotion25Item.java",
-          "src/main/resources/assets/power/models/item/star_potion_25.json"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion25DopolnitielnaiaInformatsiia",
-      "type": "procedure",
-      "sortid": 771,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_25_dopolnitielnaia_informatsiia",
-      "metadata": {
-        "return_type": "string",
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion25DopolnitielnaiaInformatsiiaProcedure.java"
-        ],
-        "dependencies": []
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion25PriZaviershieniiIspolzovaniia",
-      "type": "procedure",
-      "sortid": 772,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_25_pri_zaviershienii_ispolzovaniia",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPotion25PriZaviershieniiIspolzovaniiaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion25Recipe",
-      "type": "recipe",
-      "sortid": 773,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_25_recipe",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion25RecipeBrewingRecipe.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion50Recipe",
-      "type": "recipe",
-      "sortid": 774,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_50_recipe",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion50RecipeBrewingRecipe.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
-    },
-    {
-      "name": "StarPotion100Recipe",
-      "type": "recipe",
-      "sortid": 775,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "star_potion_100_recipe",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarPotion100RecipeBrewingRecipe.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/StarPotions"
     },
     {
       "name": "AmplifierOreBlasting",
@@ -22866,6 +22636,81 @@
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
+    },
+    {
+      "name": "StarRegeneration",
+      "type": "potioneffect",
+      "sortid": 1054,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_regeneration",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/StarRegenerationMobEffect.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "StarRegenerationStart",
+      "type": "procedure",
+      "sortid": 1055,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_regeneration_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarRegenerationStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "StarRegenerationEnd",
+      "type": "procedure",
+      "sortid": 1056,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_regeneration_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarRegenerationEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "StarRegenerationPotion",
+      "type": "potion",
+      "sortid": 1057,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_regeneration_potion",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "StarRegenerationPotionRecipe",
+      "type": "recipe",
+      "sortid": 1058,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_regeneration_potion_recipe",
+      "path": "~/ItemsAndBlocks/Amplifier"
     }
   ],
   "variable_elements": [
@@ -23535,10 +23380,11 @@
       "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_explosion.button_2": "2",
-      "gui.power.wheel_abilities_explosion.button_3": "3",
+      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
+      "gui.power.wheel_abilities_explosion.button_3": "3",
+      "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "gui.power.keepers_box_gui_part_1.button_empty": "",
@@ -23548,25 +23394,25 @@
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
-      "item.power.star_potion_50": "Звёздное зелье",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
+      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.plants_stone": "Камень зелени",
+      "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "item.power.creation_staff": "Посох творения",
       "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
@@ -23597,7 +23443,6 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
-      "item.power.star_potion_infinity": "Звёздное зелье",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
       "item.power.mercury_stone": "Камень ртути",
       "item.power.light_battery": "Батарея",
@@ -23611,8 +23456,8 @@
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "item.power.energium_axe": "Энерджиумный топор",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "battery.desc.rain": "Дождь",
@@ -23632,9 +23477,10 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "advancements.the_end_of_tyranny.descr": "Победите энерджиумного голема",
       "item.power.ocean_battery": "Батарея",
+      "effect.power.star_regeneration": "Звёздная регенерация",
       "block.power.moon_block": "Лунный блок",
-      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "power.modinfo.recharge_stone": "Перезарядка: ",
+      "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
@@ -23643,6 +23489,7 @@
       "effect.power.power_lock": "Блокировка силы",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "block.power.energium_controller": "Энерджиумный контроллер",
+      "item.minecraft.splash_potion.effect.star_regeneration_potion": "Взрывное зелье звёздной регенерации",
       "item.power.fire_battery": "Батарея",
       "item.power.plants_battery": "Батарея",
       "item.power.space_stone": "Камень космоса",
@@ -23711,6 +23558,7 @@
       "gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30": "Остановка времени, расходует 30",
       "item.power.creation_shovel": "Лопата созидания",
       "death.attack.elemental_powers.player": "%1$s погиб от силы стихий при попытке к бегству %2$s",
+      "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Стрела звёздной регенерации",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Дождевой полёт, расходует 5",
       "item.power.crystal_knife": "Кристальный нож",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Полёт торнадо, расходует 5",
@@ -23757,7 +23605,6 @@
       "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "item.power.time_armor_boots": "Ботинки мастера времени",
-      "item.power.star_potion_25": "Звёздное зелье",
       "battery.desc.empty": "Пустая",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Разломы, расходует 45",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Аура эфира, расходует 80",
@@ -23888,7 +23735,6 @@
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.creation_stone": "Камень творения",
-      "item.power.star_potion_100": "Звёздное зелье",
       "effect.power.earth_master": "Мастер земли",
       "item.power.amber_armor_chestplate": "Нагрудник мастера янтаря",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
@@ -24085,6 +23931,7 @@
       "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
+      "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "gui.power.keepers_box_gui_part_1.button_empty": "",
@@ -24094,7 +23941,6 @@
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
-      "item.power.star_potion_50": "Star Potion",
       "enchantment.power.revenge": "Revenge",
       "item_group.power.items": "KotS: Items",
       "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
@@ -24113,6 +23959,7 @@
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.plants_stone": "Plants Stone",
+      "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
       "item.power.creation_staff": "Creation Staff",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
@@ -24143,7 +23990,6 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
-      "item.power.star_potion_infinity": "Star Potion",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
       "item.power.light_battery": "Battery",
@@ -24179,6 +24025,7 @@
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
       "block.power.moon_block": "Moon Block",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
@@ -24189,6 +24036,7 @@
       "effect.power.power_lock": "Power lock",
       "item.power.metal_armor_helmet": "Metal Helmet",
       "block.power.energium_controller": "Energium Controller",
+      "item.minecraft.splash_potion.effect.star_regeneration_potion": "Splash Potion of Star Regeneration",
       "item.power.fire_battery": "Battery",
       "item.power.plants_battery": "Battery",
       "item.power.space_stone": "Space Stone",
@@ -24257,6 +24105,7 @@
       "gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30": "Stopping time, uses 30",
       "item.power.creation_shovel": "Creation Shovel",
       "death.attack.elemental_powers.player": "%1$s died by elemental power whilst trying to escape %2$s",
+      "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Arrow of Star Regeneration",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Rain flying, uses 5",
       "item.power.crystal_knife": "Crystal Knife",
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Tornado flight, uses 5",
@@ -24303,7 +24152,6 @@
       "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "item.power.time_armor_boots": "Time Boots",
-      "item.power.star_potion_25": "Star Potion",
       "battery.desc.empty": "Empty",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Rifts, uses 45",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_aura_uses_80_power_poi": "Ethereal aura, uses 80",
@@ -24435,7 +24283,6 @@
       "item.power.energium_armor_helmet": "Energium Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.creation_stone": "Creation Stone",
-      "item.power.star_potion_100": "Star Potion",
       "effect.power.earth_master": "Master of the Earth",
       "item.power.amber_armor_chestplate": "Amber Chestplate",
       "item.power.ether_armor_helmet": "Ether Helmet",
@@ -25137,10 +24984,6 @@
                 "children": []
               }
             ]
-          },
-          {
-            "name": "StarPotions",
-            "children": []
           },
           {
             "name": "BatteryCharger",

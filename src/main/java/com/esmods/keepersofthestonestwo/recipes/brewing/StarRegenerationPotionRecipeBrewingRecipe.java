@@ -8,20 +8,26 @@ import net.minecraftforge.common.brewing.IBrewingRecipe;
 import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
 
 import net.minecraft.world.item.crafting.Ingredient;
+import net.minecraft.world.item.alchemy.Potions;
+import net.minecraft.world.item.alchemy.PotionUtils;
+import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Item;
 
+import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public class StarPotion100RecipeBrewingRecipe implements IBrewingRecipe {
+public class StarRegenerationPotionRecipeBrewingRecipe implements IBrewingRecipe {
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(new StarPotion100RecipeBrewingRecipe()));
+		event.enqueueWork(() -> BrewingRecipeRegistry.addRecipe(new StarRegenerationPotionRecipeBrewingRecipe()));
 	}
 
 	@Override
 	public boolean isInput(ItemStack input) {
-		return Ingredient.of(new ItemStack(PowerModItems.STAR_POTION_50.get())).test(input);
+		Item inputItem = input.getItem();
+		return (inputItem == Items.POTION || inputItem == Items.SPLASH_POTION || inputItem == Items.LINGERING_POTION) && PotionUtils.getPotion(input) == Potions.AWKWARD;
 	}
 
 	@Override
@@ -32,7 +38,7 @@ public class StarPotion100RecipeBrewingRecipe implements IBrewingRecipe {
 	@Override
 	public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
 		if (isInput(input) && isIngredient(ingredient)) {
-			return new ItemStack(PowerModItems.STAR_POTION_100.get());
+			return PotionUtils.setPotion(new ItemStack(input.getItem()), PowerModPotions.STAR_REGENERATION_POTION.get());
 		}
 		return ItemStack.EMPTY;
 	}

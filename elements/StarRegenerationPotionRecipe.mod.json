@@ -11,15 +11,15 @@
     "craftingBookCategory": "MISC",
     "recipeShapeless": false,
     "brewingInputStack": {
-      "value": "Items.GLASS_BOTTLE"
+      "value": "POTION:AWKWARD"
     },
     "brewingIngredientStack": {
-      "value": "CUSTOM:AmplifierDrop"
+      "value": "PowerModItems.AMPLIFIER_DROP"
     },
     "brewingReturnStack": {
-      "value": "CUSTOM:StarPotion25"
+      "value": "POTION:CUSTOM:StarRegenerationPotion"
     },
-    "name": "star_potion_25_recipe",
+    "name": "star_regeneration_potion_recipe",
     "namespace": "mod"
   }
 }
