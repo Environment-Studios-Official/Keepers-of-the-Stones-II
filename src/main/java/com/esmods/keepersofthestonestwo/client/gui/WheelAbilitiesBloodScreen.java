@@ -15,7 +15,11 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBloodMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesBloodButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -27,6 +31,9 @@ public class WheelAbilitiesBloodScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_fake_wheel_button_1;
+	ImageButton imagebutton_fake_wheel_button_2;
+	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_bleeding;
 	ImageButton imagebutton_vampirism;
 	ImageButton imagebutton_transfusion;
@@ -88,14 +95,14 @@ public class WheelAbilitiesBloodScreen extends AbstractContainerScreen<WheelAbil
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(0, x, y, z));
 				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
@@ -129,26 +136,68 @@ public class WheelAbilitiesBloodScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_bleeding = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_bleeding.png"), 46, 92, e -> {
-			if (true) {
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_1.png"), 10, 14, e -> {
+			if (GetFakeWheelOneProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(3, x, y, z));
 				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelOneProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_2.png"), 10, 14, e -> {
+			if (GetFakeWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(4, x, y, z));
+				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelTwoProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_3.png"), 10, 14, e -> {
+			if (GetFakeWheelThirdProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(5, x, y, z));
+				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelThirdProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
+		imagebutton_bleeding = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_bleeding.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(6, x, y, z));
+				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_bleeding", imagebutton_bleeding);
 		this.addRenderableWidget(imagebutton_bleeding);
 		imagebutton_vampirism = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_vampirism.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(4, x, y, z));
-				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(7, x, y, z));
+				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_vampirism", imagebutton_vampirism);
 		this.addRenderableWidget(imagebutton_vampirism);
 		imagebutton_transfusion = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_transfusion.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(5, x, y, z));
-				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesBloodButtonMessage(8, x, y, z));
+				WheelAbilitiesBloodButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_transfusion", imagebutton_transfusion);

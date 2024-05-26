@@ -47,7 +47,7 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public BatteryChargerBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f));
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 5f));
 		this.registerDefaultState(this.stateDefinition.any().setValue(FACING, Direction.NORTH));
 	}
 

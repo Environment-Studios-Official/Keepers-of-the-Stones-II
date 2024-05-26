@@ -6,6 +6,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -83,14 +84,16 @@ public class EnergiumGolemCoreAttackProcedure {
 								.toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO), ((Entity) world
-										.getEntitiesOfClass(EnergiumGolemEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), (0.125 + Range * 0.05), (0.125 + Range * 0.05), (0.125 + Range * 0.05)), e -> true).stream().sorted(new Object() {
-											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-												return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-											}
-										}.compareDistOf(XPar, YPar, ZPar)).findFirst().orElse(null))), 26);
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
+								if (!(entityiterator instanceof ItemEntity)) {
+									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK_NO_AGGRO), ((Entity) world
+											.getEntitiesOfClass(EnergiumGolemEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), (0.125 + Range * 0.05), (0.125 + Range * 0.05), (0.125 + Range * 0.05)), e -> true).stream().sorted(new Object() {
+												Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+													return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+												}
+											}.compareDistOf(XPar, YPar, ZPar)).findFirst().orElse(null))), 26);
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
+								}
 							}
 						}
 					}

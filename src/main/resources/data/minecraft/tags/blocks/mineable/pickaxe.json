@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:amber_block",
     "power:orange_portal",
     "power:blue_portal",
     "power:raw_amplifier_block",

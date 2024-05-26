@@ -30,6 +30,27 @@ public class ReturnStoneAfterDeadProcedure {
 		if (entity == null)
 			return;
 		if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active) {
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_first = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_second = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
 			if (!(entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery) {
 				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("fire")) {
 					{
@@ -1227,6 +1248,46 @@ public class ReturnStoneAfterDeadProcedure {
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.EXPLOSION_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("amber")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_first = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("amber")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_second = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("amber")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_third = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.AMBER_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

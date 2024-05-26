@@ -74,6 +74,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.TELEPORTATION_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.AMBER_MASTER.get());
 				{
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -88,6 +90,27 @@ public class DetransformationKeyUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_first = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_second = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		});
 	}

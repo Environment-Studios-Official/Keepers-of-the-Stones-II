@@ -15,7 +15,11 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesTornadoButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -27,6 +31,9 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_fake_wheel_button_1;
+	ImageButton imagebutton_fake_wheel_button_2;
+	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_mini_tornado_attack;
 	ImageButton imagebutton_tornado_capture;
 	ImageButton imagebutton_tornado_flight;
@@ -88,14 +95,14 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(0, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
@@ -129,26 +136,68 @@ public class WheelAbilitiesTornadoScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_mini_tornado_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mini_tornado_attack.png"), 46, 92, e -> {
-			if (true) {
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_1.png"), 10, 14, e -> {
+			if (GetFakeWheelOneProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(3, x, y, z));
 				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelOneProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_2.png"), 10, 14, e -> {
+			if (GetFakeWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(4, x, y, z));
+				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelTwoProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_3.png"), 10, 14, e -> {
+			if (GetFakeWheelThirdProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(5, x, y, z));
+				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelThirdProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
+		imagebutton_mini_tornado_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mini_tornado_attack.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(6, x, y, z));
+				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_mini_tornado_attack", imagebutton_mini_tornado_attack);
 		this.addRenderableWidget(imagebutton_mini_tornado_attack);
 		imagebutton_tornado_capture = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_tornado_capture.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(4, x, y, z));
-				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(7, x, y, z));
+				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_tornado_capture", imagebutton_tornado_capture);
 		this.addRenderableWidget(imagebutton_tornado_capture);
 		imagebutton_tornado_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_tornado_flight.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(5, x, y, z));
-				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTornadoButtonMessage(8, x, y, z));
+				WheelAbilitiesTornadoButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_tornado_flight", imagebutton_tornado_flight);

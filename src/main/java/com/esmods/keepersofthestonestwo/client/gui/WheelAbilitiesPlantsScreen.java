@@ -15,7 +15,11 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesPlantsButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -27,6 +31,9 @@ public class WheelAbilitiesPlantsScreen extends AbstractContainerScreen<WheelAbi
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_fake_wheel_button_1;
+	ImageButton imagebutton_fake_wheel_button_2;
+	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_cherry_wind;
 	ImageButton imagebutton_poisonous_thorn;
 	ImageButton imagebutton_natural_healing;
@@ -88,14 +95,14 @@ public class WheelAbilitiesPlantsScreen extends AbstractContainerScreen<WheelAbi
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(0, x, y, z));
 				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
@@ -129,26 +136,68 @@ public class WheelAbilitiesPlantsScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_cherry_wind = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_cherry_wind.png"), 46, 92, e -> {
-			if (true) {
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_1.png"), 10, 14, e -> {
+			if (GetFakeWheelOneProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(3, x, y, z));
 				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelOneProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_2.png"), 10, 14, e -> {
+			if (GetFakeWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(4, x, y, z));
+				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelTwoProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_3.png"), 10, 14, e -> {
+			if (GetFakeWheelThirdProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(5, x, y, z));
+				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GetFakeWheelThirdProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
+		imagebutton_cherry_wind = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_cherry_wind.png"), 46, 92, e -> {
+			if (true) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(6, x, y, z));
+				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_cherry_wind", imagebutton_cherry_wind);
 		this.addRenderableWidget(imagebutton_cherry_wind);
 		imagebutton_poisonous_thorn = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_poisonous_thorn.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(4, x, y, z));
-				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 4, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(7, x, y, z));
+				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_poisonous_thorn", imagebutton_poisonous_thorn);
 		this.addRenderableWidget(imagebutton_poisonous_thorn);
 		imagebutton_natural_healing = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_natural_healing.png"), 46, 92, e -> {
 			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(5, x, y, z));
-				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 5, x, y, z);
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPlantsButtonMessage(8, x, y, z));
+				WheelAbilitiesPlantsButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
 		guistate.put("button:imagebutton_natural_healing", imagebutton_natural_healing);

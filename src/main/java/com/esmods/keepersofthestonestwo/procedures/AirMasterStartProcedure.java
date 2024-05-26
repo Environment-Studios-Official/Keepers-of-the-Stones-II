@@ -137,7 +137,7 @@ public class AirMasterStartProcedure {
 			{
 				String _setval = "air";
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.element_name_second = _setval;
+					capability.element_name_third = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

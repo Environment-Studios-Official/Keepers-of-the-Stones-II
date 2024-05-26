@@ -91,6 +91,9 @@ public class PowerModVariables {
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.max_power = original.max_power;
 			clone.power_recovery_multiplier = original.power_recovery_multiplier;
+			clone.fake_element_name_first = original.fake_element_name_first;
+			clone.fake_element_name_second = original.fake_element_name_second;
+			clone.fake_element_name_third = original.fake_element_name_third;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -103,6 +106,9 @@ public class PowerModVariables {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.second_wheel_open_var = original.second_wheel_open_var;
 				clone.third_wheel_open_var = original.third_wheel_open_var;
+				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
+				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
+				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -461,6 +467,12 @@ public class PowerModVariables {
 		public double teleporting_effect = 0;
 		public boolean second_wheel_open_var = false;
 		public boolean third_wheel_open_var = false;
+		public String fake_element_name_first = "0";
+		public String fake_element_name_second = "0";
+		public String fake_element_name_third = "0";
+		public boolean first_fake_wheel_open_var = false;
+		public boolean second_fake_wheel_open_var = false;
+		public boolean third_fake_wheel_open_var = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -489,6 +501,12 @@ public class PowerModVariables {
 			nbt.putDouble("teleporting_effect", teleporting_effect);
 			nbt.putBoolean("second_wheel_open_var", second_wheel_open_var);
 			nbt.putBoolean("third_wheel_open_var", third_wheel_open_var);
+			nbt.putString("fake_element_name_first", fake_element_name_first);
+			nbt.putString("fake_element_name_second", fake_element_name_second);
+			nbt.putString("fake_element_name_third", fake_element_name_third);
+			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
+			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
+			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
 			return nbt;
 		}
 
@@ -514,6 +532,12 @@ public class PowerModVariables {
 			teleporting_effect = nbt.getDouble("teleporting_effect");
 			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
 			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
+			fake_element_name_first = nbt.getString("fake_element_name_first");
+			fake_element_name_second = nbt.getString("fake_element_name_second");
+			fake_element_name_third = nbt.getString("fake_element_name_third");
+			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
+			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
+			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
 		}
 	}
 
@@ -567,6 +591,12 @@ public class PowerModVariables {
 					variables.teleporting_effect = message.data.teleporting_effect;
 					variables.second_wheel_open_var = message.data.second_wheel_open_var;
 					variables.third_wheel_open_var = message.data.third_wheel_open_var;
+					variables.fake_element_name_first = message.data.fake_element_name_first;
+					variables.fake_element_name_second = message.data.fake_element_name_second;
+					variables.fake_element_name_third = message.data.fake_element_name_third;
+					variables.first_fake_wheel_open_var = message.data.first_fake_wheel_open_var;
+					variables.second_fake_wheel_open_var = message.data.second_fake_wheel_open_var;
+					variables.third_fake_wheel_open_var = message.data.third_fake_wheel_open_var;
 				}
 			});
 			context.setPacketHandled(true);

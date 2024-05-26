@@ -28,6 +28,7 @@ import java.util.AbstractMap;
 
 import com.esmods.keepersofthestonestwo.init.PowerModTabs;
 import com.esmods.keepersofthestonestwo.init.PowerModSounds;
+import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
@@ -56,6 +57,7 @@ public class PowerMod {
 		PowerModTabs.REGISTRY.register(bus);
 
 		PowerModMobEffects.REGISTRY.register(bus);
+		PowerModPotions.REGISTRY.register(bus);
 
 		PowerModParticleTypes.REGISTRY.register(bus);
 
