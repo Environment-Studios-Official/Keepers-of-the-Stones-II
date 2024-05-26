@@ -22710,6 +22710,11 @@
       "compiles": true,
       "locked_code": false,
       "registry_name": "star_regeneration_potion_recipe",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/recipes/brewing/StarRegenerationPotionRecipeBrewingRecipe.java"
+        ]
+      },
       "path": "~/ItemsAndBlocks/Amplifier"
     }
   ],
