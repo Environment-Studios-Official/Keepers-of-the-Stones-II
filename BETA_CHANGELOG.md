@@ -8,7 +8,7 @@ What's new in Keepers of the Stones II version 1.0.0.24?<br />
 <br />- The explosion power of the master of the sun has been reduced
 <br />- Battery charging particles in the battery charger have been updated
 <br />- The batteries are now visually displayed on the battery charger
-<br />- Removed the star potion with the addition of star points
+<br />- Removed the star potions with the addition of star points
 <br />- Added star regeneration potion
 <br />- [Bugfix] Fixed a bug that caused players to lose items from their inventory when they died from a shot from the core of an energium golem
 <br />- [Bugfix] Fixed a bug with combining stones with an air stone
