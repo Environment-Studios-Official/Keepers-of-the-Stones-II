@@ -464,6 +464,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMBER_STAFF = REGISTRY.register("amber_staff", () -> new AmberStaffItem());
 	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK);
 	public static final RegistryObject<Item> AMPLIFIER_RING = REGISTRY.register("amplifier_ring", () -> new AmplifierRingItem());
+	public static final RegistryObject<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.CURSED_KEEPER, -13886146, -885031, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items

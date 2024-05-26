@@ -43,6 +43,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
@@ -137,6 +138,8 @@ public class PowerModEntities {
 			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setCustomClientFactory(AtomicRocketEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setCustomClientFactory(GrenadeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final RegistryObject<EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper", EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+			.setTrackingRange(112).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -149,6 +152,7 @@ public class PowerModEntities {
 			BlackHoleEntity.init();
 			EnergiumGolemEntity.init();
 			TurretEntity.init();
+			CursedKeeperEntity.init();
 		});
 	}
 
@@ -158,5 +162,6 @@ public class PowerModEntities {
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
+		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 	}
 }

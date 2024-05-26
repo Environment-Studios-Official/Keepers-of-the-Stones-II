@@ -14,11 +14,8 @@ import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.network.PlayMessages;
 import net.minecraftforge.network.NetworkHooks;
 
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.ThrownPotion;
-import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.goal.target.NearestAttackableTargetGoal;
@@ -47,33 +44,29 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.protocol.game.ClientGamePacketListener;
 import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.BlockPos;
 
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class EnergiumGolemEntity extends Monster implements GeoEntity {
-	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.BOOLEAN);
-	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.STRING);
-	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.STRING);
+public class CursedKeeperEntity extends Monster implements GeoEntity {
+	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.BOOLEAN);
+	public static final EntityDataAccessor<String> ANIMATION = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.STRING);
+	public static final EntityDataAccessor<String> TEXTURE = SynchedEntityData.defineId(CursedKeeperEntity.class, EntityDataSerializers.STRING);
 	private final AnimatableInstanceCache cache = GeckoLibUtil.createInstanceCache(this);
 	private boolean swinging;
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.YELLOW, ServerBossEvent.BossBarOverlay.NOTCHED_10);
+	private final ServerBossEvent bossInfo = new ServerBossEvent(this.getDisplayName(), ServerBossEvent.BossBarColor.PURPLE, ServerBossEvent.BossBarOverlay.NOTCHED_10);
 
-	public EnergiumGolemEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.ENERGIUM_GOLEM.get(), world);
+	public CursedKeeperEntity(PlayMessages.SpawnEntity packet, Level world) {
+		this(PowerModEntities.CURSED_KEEPER.get(), world);
 	}
 
-	public EnergiumGolemEntity(EntityType<EnergiumGolemEntity> type, Level world) {
+	public CursedKeeperEntity(EntityType<CursedKeeperEntity> type, Level world) {
 		super(type, world);
 		xpReward = 1000;
 		setNoAi(false);
-		setMaxUpStep(1f);
+		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 	}
 
@@ -82,7 +75,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		super.defineSynchedData();
 		this.entityData.define(SHOOT, false);
 		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "energium_golem");
+		this.entityData.define(TEXTURE, "cursed_keeper");
 	}
 
 	public void setTexture(String texture) {
@@ -123,31 +116,19 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		return false;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
-	}
-
-	@Override
-	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.step")), 0.15f, 1);
-	}
-
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.hurt"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.death"));
+		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.generic.death"));
 	}
 
 	@Override
 	public boolean hurt(DamageSource source, float amount) {
 		if (source.is(DamageTypes.IN_FIRE))
-			return false;
-		if (source.getDirectEntity() instanceof AbstractArrow)
 			return false;
 		if (source.getDirectEntity() instanceof ThrownPotion || source.getDirectEntity() instanceof AreaEffectCloud)
 			return false;
@@ -161,6 +142,8 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 			return false;
 		if (source.is(DamageTypes.EXPLOSION))
 			return false;
+		if (source.is(DamageTypes.TRIDENT))
+			return false;
 		if (source.is(DamageTypes.FALLING_ANVIL))
 			return false;
 		if (source.is(DamageTypes.DRAGON_BREATH))
@@ -170,12 +153,6 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		if (source.is(DamageTypes.WITHER_SKULL))
 			return false;
 		return super.hurt(source, amount);
-	}
-
-	@Override
-	public void die(DamageSource source) {
-		super.die(source);
-		EnergiumGolemPriGibieliSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
@@ -194,7 +171,6 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
-		EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -231,27 +207,19 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.25);
-		builder = builder.add(Attributes.MAX_HEALTH, 500);
-		builder = builder.add(Attributes.ARMOR, 16);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
+		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
+		builder = builder.add(Attributes.MAX_HEALTH, 250);
+		builder = builder.add(Attributes.ARMOR, 21);
+		builder = builder.add(Attributes.ATTACK_DAMAGE, 32);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
-		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.25);
+		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.5);
 		return builder;
 	}
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
-
-			) {
-				return event.setAndContinue(RawAnimation.begin().thenLoop("energium_golem.animation.walk"));
-			}
-			if (this.isDeadOrDying()) {
-				return event.setAndContinue(RawAnimation.begin().thenPlay("energium_golem.animation.death"));
-			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("energium_golem.animation.idle"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle"));
 		}
 		return PlayState.STOP;
 	}
@@ -273,7 +241,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 	protected void tickDeath() {
 		++this.deathTime;
 		if (this.deathTime == 20) {
-			this.remove(EnergiumGolemEntity.RemovalReason.KILLED);
+			this.remove(CursedKeeperEntity.RemovalReason.KILLED);
 			this.dropExperience();
 		}
 	}

@@ -2,9 +2,9 @@
   "_fv": 60,
   "_type": "animatedentity",
   "definition": {
-    "mobName": "Energium Golem",
+    "mobName": "Cursed Keeper",
     "mobLabel": "",
-    "mobModelTexture": "energium_golem.png",
+    "mobModelTexture": "cursed_keeper.png",
     "mobModelGlowTexture": "",
     "visualScale": {
       "fixedValue": 1.0
@@ -13,25 +13,25 @@
       "fixedValue": 1.0
     },
     "entityDataEntries": [],
-    "modelWidth": 2.5,
-    "modelHeight": 3.0,
-    "modelShadowSize": 1.5,
+    "modelWidth": 0.6,
+    "modelHeight": 1.8,
+    "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
-    "stepHeight": 1.0,
+    "stepHeight": 0.6,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
-      "value": -2242726,
+      "value": -13886146,
       "falpha": 0.0
     },
     "spawnEggDotColor": {
-      "value": -8337805,
+      "value": -885031,
       "falpha": 0.0
     },
     "creativeTab": {
       "value": "CUSTOM:Mobs"
     },
     "isBoss": true,
-    "bossBarColor": "YELLOW",
+    "bossBarColor": "PURPLE",
     "bossBarType": "NOTCHED_10",
     "equipmentMainHand": {
       "value": ""
@@ -53,14 +53,14 @@
     },
     "mobBehaviourType": "Mob",
     "mobCreatureType": "UNDEFINED",
-    "attackStrength": 22,
-    "attackKnockback": 1.25,
+    "attackStrength": 32,
+    "attackKnockback": 1.5,
     "knockbackResistance": 1.0,
-    "movementSpeed": 0.25,
-    "armorBaseValue": 16.0,
-    "trackingRange": 128,
+    "movementSpeed": 0.3,
+    "armorBaseValue": 21.0,
+    "trackingRange": 112,
     "followRange": 32,
-    "health": 500,
+    "health": 250,
     "xpAmount": 1000,
     "waterMob": false,
     "flyingMob": false,
@@ -74,7 +74,7 @@
     "canControlForward": false,
     "canControlStrafe": false,
     "immuneToFire": true,
-    "immuneToArrows": true,
+    "immuneToArrows": false,
     "immuneToFallDamage": true,
     "immuneToCactus": true,
     "immuneToDrowning": true,
@@ -82,39 +82,33 @@
     "immuneToPotions": true,
     "immuneToPlayer": false,
     "immuneToExplosion": true,
-    "immuneToTrident": false,
+    "immuneToTrident": true,
     "immuneToAnvil": true,
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "CUSTOM:EnergiumCore"
+      "value": ""
     },
     "livingSound": {
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.irongolem.hurt"
+      "value": "entity.generic.hurt"
     },
     "deathSound": {
-      "value": "entity.irongolem.death"
+      "value": "entity.generic.death"
     },
     "stepSound": {
-      "value": "entity.irongolem.step"
-    },
-    "whenMobDies": {
-      "name": "EnergiumGolemPriGibieliSushchnosti"
-    },
-    "onMobTickUpdate": {
-      "name": "EnergiumGolemPriObnovlieniiTikaSushchnosti"
+      "value": ""
     },
     "hasAI": true,
     "aiBase": "(none)",
     "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"attack_entity\"><field name=\"insight\">FALSE</field><field name=\"nearby\">FALSE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "model": "energium_golem.geo.json",
+    "model": "cursed_keeper.geo.json",
     "groupName": "head",
-    "animation1": "energium_golem.animation.idle",
-    "animation2": "energium_golem.animation.walk",
-    "animation3": "energium_golem.animation.death",
+    "animation1": "animation.cursed_keeper.idle",
+    "animation2": "",
+    "animation3": "",
     "animation4": "",
     "animation5": "",
     "animation6": "",
@@ -122,8 +116,8 @@
     "animation8": "",
     "animation9": "",
     "animation10": "",
-    "enable2": true,
-    "enable3": true,
+    "enable2": false,
+    "enable3": false,
     "enable4": false,
     "enable5": false,
     "enable6": false,
@@ -133,7 +127,7 @@
     "enable10": false,
     "breedable": false,
     "tameable": false,
-    "disableDeathRotation": true,
+    "disableDeathRotation": false,
     "headMovement": true,
     "eyeHeight": false,
     "breedTriggerItems": [],

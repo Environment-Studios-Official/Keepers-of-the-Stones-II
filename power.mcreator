@@ -22759,6 +22759,23 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "CursedKeeper",
+      "type": "animatedentity",
+      "sortid": 1036,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
+          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
     }
   ],
   "variable_elements": [
@@ -23459,6 +23476,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
+      "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "item.power.creation_staff": "Посох творения",
@@ -23628,6 +23646,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Зелень",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
+      "entity.power.cursed_keeper": "Cursed Keeper",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
@@ -24007,6 +24026,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
+      "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
       "item.power.creation_staff": "Creation Staff",
@@ -24176,6 +24196,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Plants",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
+      "entity.power.cursed_keeper": "Cursed Keeper",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
       "item.power.sound_dagger": "Sound Dagger",
       "item.power.sun_armor_boots": "Sun Boots",
@@ -25059,6 +25080,10 @@
         "children": [
           {
             "name": "EnergiumGolem",
+            "children": []
+          },
+          {
+            "name": "CursedKeeper",
             "children": []
           }
         ]
