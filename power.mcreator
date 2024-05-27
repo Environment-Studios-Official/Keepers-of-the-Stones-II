@@ -23220,6 +23220,20 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "AmplifierRingCraft",
+      "type": "recipe",
+      "sortid": 1058,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amplifier_ring_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/amplifier_ring_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
     }
   ],
   "variable_elements": [
