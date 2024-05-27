@@ -1,0 +1,9 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "power:block/polished_cursed_stone",
+    "top": "power:block/polished_cursed_stone",
+    "side": "power:block/polished_cursed_stone"
+  },
+  "render_type": "solid"
+}

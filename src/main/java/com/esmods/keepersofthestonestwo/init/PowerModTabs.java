@@ -85,6 +85,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TELEPORTATION_BATTERY.get());
 				tabData.accept(PowerModItems.EXPLOSION_BATTERY.get());
 				tabData.accept(PowerModItems.AMBER_BATTERY.get());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_WALL.get().asItem());
 			})
 
 					.build());

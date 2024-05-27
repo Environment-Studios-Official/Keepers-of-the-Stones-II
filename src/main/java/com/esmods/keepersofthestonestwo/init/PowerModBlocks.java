@@ -12,6 +12,10 @@ import net.minecraft.world.level.block.Block;
 
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
+import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneWallBlock;
+import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneStairsBlock;
+import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneSlabBlock;
+import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.OrangePortalBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
@@ -58,6 +62,10 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> CURSED_STONE_BRICKS_SLAB = REGISTRY.register("cursed_stone_bricks_slab", () -> new CursedStoneBricksSlabBlock());
 	public static final RegistryObject<Block> CURSED_STONE_WALL = REGISTRY.register("cursed_stone_wall", () -> new CursedStoneWallBlock());
 	public static final RegistryObject<Block> CURSED_STONE_BRICKS_WALL = REGISTRY.register("cursed_stone_bricks_wall", () -> new CursedStoneBricksWallBlock());
+	public static final RegistryObject<Block> POLISHED_CURSED_STONE = REGISTRY.register("polished_cursed_stone", () -> new PolishedCursedStoneBlock());
+	public static final RegistryObject<Block> POLISHED_CURSED_STONE_STAIRS = REGISTRY.register("polished_cursed_stone_stairs", () -> new PolishedCursedStoneStairsBlock());
+	public static final RegistryObject<Block> POLISHED_CURSED_STONE_SLAB = REGISTRY.register("polished_cursed_stone_slab", () -> new PolishedCursedStoneSlabBlock());
+	public static final RegistryObject<Block> POLISHED_CURSED_STONE_WALL = REGISTRY.register("polished_cursed_stone_wall", () -> new PolishedCursedStoneWallBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

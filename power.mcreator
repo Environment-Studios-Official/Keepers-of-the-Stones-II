@@ -23234,6 +23234,141 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "PolishedCursedStone",
+      "type": "block",
+      "sortid": 1059,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/polished_cursed_stone.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone.json",
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneBlock.java",
+          "src/main/resources/assets/power/models/item/polished_cursed_stone.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneStairs",
+      "type": "block",
+      "sortid": 1060,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_stairs",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneStairsBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_stairs.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_inner.json",
+          "src/main/resources/assets/power/models/item/polished_cursed_stone_stairs.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_outer.json",
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone_stairs.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneSlab",
+      "type": "block",
+      "sortid": 1061,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_slab",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_top.json",
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone_slab.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_slab.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_full.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_slab.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneSlabBlock.java",
+          "src/main/resources/assets/power/models/item/polished_cursed_stone_slab.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneWall",
+      "type": "block",
+      "sortid": 1062,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/polished_cursed_stone_wall.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_wall.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneWallBlock.java",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_post.json",
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone_wall.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_inventory.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_side_tall.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneCraft",
+      "type": "recipe",
+      "sortid": 1063,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/polished_cursed_stone_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneStairsCraft",
+      "type": "recipe",
+      "sortid": 1064,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_stairs_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/polished_cursed_stone_stairs_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneSlabCraft",
+      "type": "recipe",
+      "sortid": 1065,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_slab_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/polished_cursed_stone_slab_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PolishedCursedStoneWallCraft",
+      "type": "recipe",
+      "sortid": 1066,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "polished_cursed_stone_wall_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/polished_cursed_stone_wall_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -23798,6 +23933,7 @@
       "CUSTOM:ExplosionBattery"
     ],
     "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:PolishedCursedStoneSlab",
       "~CUSTOM:CursedStoneBricksSlab",
       "~CUSTOM:CursedStoneSlab"
     ],
@@ -23842,6 +23978,7 @@
       "~CUSTOM:AmplifierOre"
     ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
@@ -23849,6 +23986,7 @@
       "CUSTOM:KeepersBox"
     ],
     "BLOCKS:minecraft:walls": [
+      "~CUSTOM:PolishedCursedStoneWall",
       "~CUSTOM:CursedStoneBricksWall",
       "~CUSTOM:CursedStoneWall"
     ],
@@ -23915,8 +24053,8 @@
       "gui.power.wheel_abilities_space.button_2": "2",
       "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
+      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "gui.power.wheel_abilities_explosion.button_3": "3",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
@@ -23928,6 +24066,7 @@
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
+      "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "enchantment.power.revenge": "Возмездие",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
@@ -23978,6 +24117,7 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
       "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
+      "block.power.polished_cursed_stone": "Полированный проклятый камень",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
@@ -24250,6 +24390,7 @@
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Ядерная бомба, расходует 100",
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень пустоты",
+      "block.power.polished_cursed_stone_wall": "Ограда из полированного проклятого камня",
       "item.power.energium_armor_boots": "Энерджиумные ботинки",
       "block.power.amplifier_ore": "Амплиферовая руда",
       "gui.power.wheel_abilities_blood.tooltip_vampirism_uses_40": "Вампиризм, расходует 40",
@@ -24435,6 +24576,7 @@
       "item.power.space_armor_chestplate": "Нагрудник мастера космоса",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Энергия",
+      "block.power.polished_cursed_stone_stairs": "Ступеньки из полированного проклятого камня",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Жало скорпиона, расходует 35",
       "effect.power.technology_master": "Мастер технологий",
       "advancements.become_a_master.title": "Становясь Мастером",
@@ -24473,8 +24615,8 @@
       "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
+      "gui.power.wheel_abilities_explosion.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
@@ -24486,22 +24628,23 @@
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
+      "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "enchantment.power.revenge": "Revenge",
-      "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
-      "item_group.power.items": "KotS: Items",
       "block.power.cursed_stone_slab": "Cursed Stone Slab",
+      "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_axe": "Creation Axe",
+      "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_armor_helmet": "Creation Helmet",
-      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
+      "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -24537,6 +24680,7 @@
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.moon_armor_boots": "Moon Boots",
+      "block.power.polished_cursed_stone": "Polished Cursed Stone",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -24553,8 +24697,8 @@
       "block.power.cursed_stone_bricks_stairs": "Cursed Stone Bricks Stairs",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
+      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "battery.desc.rain": "Rain",
@@ -24809,6 +24953,7 @@
       "gui.power.wheel_abilities_explosion.tooltip_atomic_bomb_uses_100": "Atomic bomb, uses 100",
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
+      "block.power.polished_cursed_stone_wall": "Polished Cursed Stone Wall",
       "item.power.energium_armor_boots": "Energium Boots",
       "block.power.amplifier_ore": "Amplifier Ore",
       "gui.power.wheel_abilities_blood.tooltip_vampirism_uses_40": "Vampirism, uses 40",
@@ -24993,6 +25138,7 @@
       "item.power.space_armor_chestplate": "Space Chestplate",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Energy",
+      "block.power.polished_cursed_stone_stairs": "Polished Cursed Stone Stairs",
       "gui.power.wheel_abilities_animals.tooltip_scorpion_sting_uses_35": "Scorpion sting, uses 35",
       "effect.power.technology_master": "Master of Technologies",
       "advancements.become_a_master.title": "Become a Master",
@@ -25599,7 +25745,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.25",
+    "version": "1.0.0.25.2705241140",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
