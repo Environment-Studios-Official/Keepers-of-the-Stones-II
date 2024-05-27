@@ -96,7 +96,7 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_block_recipe")});
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_ring_recipe")});
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_ring_craft")});
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
