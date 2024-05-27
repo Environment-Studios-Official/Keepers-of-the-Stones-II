@@ -467,6 +467,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.CURSED_KEEPER, -13886146, -885031, new Item.Properties()));
 	public static final RegistryObject<Item> CURSED_STONE = block(PowerModBlocks.CURSED_STONE);
 	public static final RegistryObject<Item> CURSED_STONE_BRICKS = block(PowerModBlocks.CURSED_STONE_BRICKS);
+	public static final RegistryObject<Item> CURSED_STONE_STAIRS = block(PowerModBlocks.CURSED_STONE_STAIRS);
+	public static final RegistryObject<Item> CURSED_STONE_SLAB = block(PowerModBlocks.CURSED_STONE_SLAB);
+	public static final RegistryObject<Item> CURSED_STONE_BRICKS_STAIRS = block(PowerModBlocks.CURSED_STONE_BRICKS_STAIRS);
+	public static final RegistryObject<Item> CURSED_STONE_BRICKS_SLAB = block(PowerModBlocks.CURSED_STONE_BRICKS_SLAB);
+	public static final RegistryObject<Item> CURSED_STONE_WALL = block(PowerModBlocks.CURSED_STONE_WALL);
+	public static final RegistryObject<Item> CURSED_STONE_BRICKS_WALL = block(PowerModBlocks.CURSED_STONE_BRICKS_WALL);
 
 	// Start of user code block custom items
 	// End of user code block custom items

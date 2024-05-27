@@ -47,6 +47,12 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_WALL.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_WALL.get().asItem());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());

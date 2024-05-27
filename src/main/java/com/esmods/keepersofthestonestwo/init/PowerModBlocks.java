@@ -19,6 +19,12 @@ import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneSlabBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneBricksWallBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneBricksStairsBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneBricksSlabBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
@@ -46,6 +52,12 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	public static final RegistryObject<Block> CURSED_STONE = REGISTRY.register("cursed_stone", () -> new CursedStoneBlock());
 	public static final RegistryObject<Block> CURSED_STONE_BRICKS = REGISTRY.register("cursed_stone_bricks", () -> new CursedStoneBricksBlock());
+	public static final RegistryObject<Block> CURSED_STONE_STAIRS = REGISTRY.register("cursed_stone_stairs", () -> new CursedStoneStairsBlock());
+	public static final RegistryObject<Block> CURSED_STONE_SLAB = REGISTRY.register("cursed_stone_slab", () -> new CursedStoneSlabBlock());
+	public static final RegistryObject<Block> CURSED_STONE_BRICKS_STAIRS = REGISTRY.register("cursed_stone_bricks_stairs", () -> new CursedStoneBricksStairsBlock());
+	public static final RegistryObject<Block> CURSED_STONE_BRICKS_SLAB = REGISTRY.register("cursed_stone_bricks_slab", () -> new CursedStoneBricksSlabBlock());
+	public static final RegistryObject<Block> CURSED_STONE_WALL = REGISTRY.register("cursed_stone_wall", () -> new CursedStoneWallBlock());
+	public static final RegistryObject<Block> CURSED_STONE_BRICKS_WALL = REGISTRY.register("cursed_stone_bricks_wall", () -> new CursedStoneBricksWallBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
