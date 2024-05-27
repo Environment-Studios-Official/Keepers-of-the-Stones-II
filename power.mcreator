@@ -23206,6 +23206,20 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneBricksWallRecipe",
+      "type": "recipe",
+      "sortid": 1057,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_bricks_wall_recipe",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_bricks_wall_recipe.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
