@@ -2,21 +2,20 @@
   "_fv": 60,
   "_type": "block",
   "definition": {
-    "texture": "cursed_stone_bricks",
-    "textureTop": "",
-    "textureLeft": "",
-    "textureFront": "",
-    "textureRight": "",
-    "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
-    "rotationMode": 0,
+    "texture": "cursed_stone_pillar_top",
+    "textureTop": "cursed_stone_pillar_top",
+    "textureLeft": "cursed_stone_pillar_side",
+    "textureFront": "cursed_stone_pillar_side",
+    "textureRight": "cursed_stone_pillar_side",
+    "textureBack": "cursed_stone_pillar_side",
+    "renderType": 10,
+    "customModelName": "Normal",
+    "rotationMode": 5,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
     "itemTexture": "",
     "particleTexture": "",
-    "blockBase": "Wall",
     "tintType": "No tint",
     "isItemTinted": false,
     "hasTransparency": false,
@@ -34,14 +33,14 @@
         "subtract": false
       }
     ],
-    "name": "Cursed Stone Bricks Wall",
+    "name": "Cursed Stone Pillar",
     "specialInformation": {
       "fixedValue": []
     },
     "hardness": 2.5,
     "resistance": 3.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:Items"
     },

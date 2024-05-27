@@ -26,11 +26,13 @@ import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneSlabBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStonePillarBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksStairsBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksSlabBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBlock;
+import com.esmods.keepersofthestonestwo.block.CursedLanternBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
@@ -66,6 +68,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> POLISHED_CURSED_STONE_STAIRS = REGISTRY.register("polished_cursed_stone_stairs", () -> new PolishedCursedStoneStairsBlock());
 	public static final RegistryObject<Block> POLISHED_CURSED_STONE_SLAB = REGISTRY.register("polished_cursed_stone_slab", () -> new PolishedCursedStoneSlabBlock());
 	public static final RegistryObject<Block> POLISHED_CURSED_STONE_WALL = REGISTRY.register("polished_cursed_stone_wall", () -> new PolishedCursedStoneWallBlock());
+	public static final RegistryObject<Block> CURSED_STONE_PILLAR = REGISTRY.register("cursed_stone_pillar", () -> new CursedStonePillarBlock());
+	public static final RegistryObject<Block> CURSED_LANTERN = REGISTRY.register("cursed_lantern", () -> new CursedLanternBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

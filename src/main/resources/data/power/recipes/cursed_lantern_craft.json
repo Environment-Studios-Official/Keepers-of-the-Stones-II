@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "a",
+    "b",
+    "c"
+  ],
+  "key": {
+    "a": {
+      "item": "power:cursed_stone"
+    },
+    "b": {
+      "item": "power:amplifier_drop"
+    },
+    "c": {
+      "item": "minecraft:torch"
+    }
+  },
+  "result": {
+    "item": "power:cursed_lantern",
+    "count": 1
+  }
+}

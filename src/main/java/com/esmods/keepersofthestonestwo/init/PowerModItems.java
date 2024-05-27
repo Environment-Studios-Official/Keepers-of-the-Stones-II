@@ -477,6 +477,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POLISHED_CURSED_STONE_STAIRS = block(PowerModBlocks.POLISHED_CURSED_STONE_STAIRS);
 	public static final RegistryObject<Item> POLISHED_CURSED_STONE_SLAB = block(PowerModBlocks.POLISHED_CURSED_STONE_SLAB);
 	public static final RegistryObject<Item> POLISHED_CURSED_STONE_WALL = block(PowerModBlocks.POLISHED_CURSED_STONE_WALL);
+	public static final RegistryObject<Item> CURSED_STONE_PILLAR = block(PowerModBlocks.CURSED_STONE_PILLAR);
+	public static final RegistryObject<Item> CURSED_LANTERN = block(PowerModBlocks.CURSED_LANTERN);
 
 	// Start of user code block custom items
 	// End of user code block custom items
