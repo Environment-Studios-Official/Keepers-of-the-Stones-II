@@ -73,9 +73,9 @@ public class EnergiumGolemCoreAttackProcedure {
 			}
 			for (int index0 = 0; index0 < (int) entity.getPersistentData().getDouble("BreathRange"); index0++) {
 				for (int index1 = 0; index1 < (int) particles; index1++) {
-					XPar = x + Math.cos(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
-					YPar = y + 1.75;
-					ZPar = z + Math.sin(((Math.PI * 0.25) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
+					XPar = x + Math.cos(((Math.PI * 0.5) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
+					YPar = y + 1.5;
+					ZPar = z + Math.sin(((Math.PI * 0.5) / particles) * loop + Math.toRadians(entity.getYRot() + 75)) * Range;
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get()), XPar, YPar, ZPar, 5, (0.075 + Range * 0.05), (0.075 + Range * 0.05), (0.075 + Range * 0.05), 0);
 					{

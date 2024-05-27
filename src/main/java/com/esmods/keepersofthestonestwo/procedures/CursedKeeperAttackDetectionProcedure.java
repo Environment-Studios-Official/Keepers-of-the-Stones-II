@@ -29,7 +29,7 @@ public class CursedKeeperAttackDetectionProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								if (Range < 5.5) {
+								if (Range < 2.5) {
 									entity.getPersistentData().putString("State", "Hands");
 								}
 								entity.getPersistentData().putDouble("IA", 0);

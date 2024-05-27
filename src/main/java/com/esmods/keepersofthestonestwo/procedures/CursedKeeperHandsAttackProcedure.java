@@ -19,7 +19,6 @@ import net.minecraft.core.BlockPos;
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 
 public class CursedKeeperHandsAttackProcedure {
@@ -76,12 +75,12 @@ public class CursedKeeperHandsAttackProcedure {
 				ZPar = z + entity.getLookAngle().z * Range;
 				{
 					final Vec3 _center = new Vec3(XPar, YPar, ZPar);
-					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2.5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							if (!(entityiterator instanceof ItemEntity)) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK),
-										((Entity) world.getEntitiesOfClass(EnergiumGolemEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), 1, 1, 1), e -> true).stream().sorted(new Object() {
+										((Entity) world.getEntitiesOfClass(CursedKeeperEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), 3, 3, 3), e -> true).stream().sorted(new Object() {
 											Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
 												return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
 											}
