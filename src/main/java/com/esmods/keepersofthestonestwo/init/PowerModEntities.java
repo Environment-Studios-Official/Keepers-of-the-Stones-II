@@ -126,7 +126,7 @@ public class PowerModEntities {
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(DestructionBallProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem", EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(EnergiumGolemEntity::new).fireImmune().sized(2.5f, 3f));
+			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(EnergiumGolemEntity::new).fireImmune().sized(2.25f, 3f));
 	public static final RegistryObject<EntityType<TurretEntity>> TURRET = register("turret",
 			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).setCustomClientFactory(TurretEntity::new).fireImmune().sized(0.6f, 1.8f));
 	public static final RegistryObject<EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile", EntityType.Builder.<TurretProjectileEntity>of(TurretProjectileEntity::new, MobCategory.MISC)
@@ -139,7 +139,7 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setCustomClientFactory(GrenadeEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final RegistryObject<EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper", EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
-			.setTrackingRange(112).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(2.5f, 3f));
+			.setTrackingRange(112).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(2f, 3.25f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
