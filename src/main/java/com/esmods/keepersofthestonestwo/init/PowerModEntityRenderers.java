@@ -37,7 +37,6 @@ import com.esmods.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergiumGolemRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DestructionBallProjectileRenderer;
-import com.esmods.keepersofthestonestwo.client.renderer.CursedKeeperRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
@@ -86,6 +85,5 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), TeleportationGunProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ATOMIC_ROCKET.get(), AtomicRocketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GRENADE.get(), GrenadeRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
 	}
 }

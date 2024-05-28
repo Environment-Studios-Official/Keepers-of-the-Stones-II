@@ -133,7 +133,6 @@ public class PowerModTabs {
 	public static final RegistryObject<CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
-				tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
 			})
 
 					.build());
