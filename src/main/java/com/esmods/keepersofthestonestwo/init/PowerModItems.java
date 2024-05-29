@@ -65,6 +65,7 @@ import com.esmods.keepersofthestonestwo.item.ShadowArmorItem;
 import com.esmods.keepersofthestonestwo.item.SandStoneItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
+import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
 import com.esmods.keepersofthestonestwo.item.RawAmplifierItem;
 import com.esmods.keepersofthestonestwo.item.RainStoneItem;
 import com.esmods.keepersofthestonestwo.item.RainBowItem;
@@ -164,6 +165,7 @@ import com.esmods.keepersofthestonestwo.item.CreationHoeItem;
 import com.esmods.keepersofthestonestwo.item.CreationBatteryItem;
 import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
+import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
@@ -478,6 +480,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POLISHED_CURSED_STONE_WALL = block(PowerModBlocks.POLISHED_CURSED_STONE_WALL);
 	public static final RegistryObject<Item> CURSED_STONE_PILLAR = block(PowerModBlocks.CURSED_STONE_PILLAR);
 	public static final RegistryObject<Item> CURSED_LANTERN = block(PowerModBlocks.CURSED_LANTERN);
+	public static final RegistryObject<Item> COPYRIUM_INGOT = REGISTRY.register("copyrium_ingot", () -> new CopyriumIngotItem());
+	public static final RegistryObject<Item> COPYRIUM_ORE = block(PowerModBlocks.COPYRIUM_ORE);
+	public static final RegistryObject<Item> COPYRIUM_BLOCK = block(PowerModBlocks.COPYRIUM_BLOCK);
+	public static final RegistryObject<Item> RAW_COPYRIUM = REGISTRY.register("raw_copyrium", () -> new RawCopyriumItem());
+	public static final RegistryObject<Item> RAW_COPYRIUM_BLOCK = block(PowerModBlocks.RAW_COPYRIUM_BLOCK);
+	public static final RegistryObject<Item> ELEMENTAL_POWER_GENERATOR = block(PowerModBlocks.ELEMENTAL_POWER_GENERATOR);
 
 	// Start of user code block custom items
 	// End of user code block custom items

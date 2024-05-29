@@ -1,0 +1,13 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "power:block/elemental _power_generator_side",
+    "up": "power:block/elemental _power_generator_up",
+    "north": "power:block/elemental _power_generator_side",
+    "east": "power:block/elemental _power_generator_side",
+    "south": "power:block/elemental _power_generator_side",
+    "west": "power:block/elemental _power_generator_side",
+    "particle": "power:block/elemental _power_generator_side"
+  },
+  "render_type": "solid"
+}

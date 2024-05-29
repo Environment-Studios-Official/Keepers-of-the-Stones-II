@@ -199,6 +199,7 @@ public class RenderItemOnBatteryChargerProcedure {
 			RenderSystem.enableCull();
 			RenderSystem.enableDepthTest();
 			RenderSystem.depthMask(true);
+			RenderSystem.colorMask(true, true, true, true);
 		}
 	}
 
@@ -210,7 +211,7 @@ public class RenderItemOnBatteryChargerProcedure {
 		double xpos = 0;
 		double ypos = 0;
 		double zpos = 0;
-		for (BlockEntity blockentityiterator : (new Object() {
+		for (BlockEntity _blockentityiterator : (new Object() {
 			public List<BlockEntity> get(LevelAccessor levelAccessor) {
 				if (levelAccessor instanceof ClientLevel clientLevel) {
 					List<BlockEntity> list = new ArrayList<>();
@@ -231,8 +232,8 @@ public class RenderItemOnBatteryChargerProcedure {
 				}
 			}
 		}).get(world)) {
-			BlockState blockstateiterator = blockentityiterator.getBlockState();
-			Vector3i positioniterator = new Vector3i(blockentityiterator.getBlockPos().getX(), blockentityiterator.getBlockPos().getY(), blockentityiterator.getBlockPos().getZ());
+			BlockState blockstateiterator = _blockentityiterator.getBlockState();
+			Vector3i positioniterator = new Vector3i(_blockentityiterator.getBlockPos().getX(), _blockentityiterator.getBlockPos().getY(), _blockentityiterator.getBlockPos().getZ());
 			if ((new Object() {
 				public Direction getDirection(BlockPos pos) {
 					BlockState _bs = world.getBlockState(pos);

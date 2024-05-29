@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "power:block/elemental_power_generator"
+    }
+  }
+}
