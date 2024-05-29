@@ -23312,6 +23312,52 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedLanternBlockstates",
+      "type": "blockstates",
+      "sortid": 1072,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_lantern_blockstates",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/cursed_lantern_blockstates_blockstate_0.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedLanternAfterAdded",
+      "type": "procedure",
+      "sortid": 1073,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_lantern_after_added",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedLanternAfterAddedProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -25664,6 +25710,10 @@
           },
           {
             "name": "CursedBlocks",
+            "children": []
+          },
+          {
+            "name": "Copyrium",
             "children": []
           }
         ]
