@@ -23518,6 +23518,48 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "RawCopyriumSmelting",
+      "type": "recipe",
+      "sortid": 1079,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_smelting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_smelting.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "CopyriumOreBlasting",
+      "type": "recipe",
+      "sortid": 1080,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "copyrium_ore_blasting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/copyrium_ore_blasting.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "RawCopyriumBlasting",
+      "type": "recipe",
+      "sortid": 1081,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_blasting",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_blasting.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
