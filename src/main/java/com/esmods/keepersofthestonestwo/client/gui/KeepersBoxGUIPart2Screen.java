@@ -19,6 +19,7 @@ import com.esmods.keepersofthestonestwo.procedures.TimeStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirStoneCheckProcedure;
@@ -40,6 +41,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_destruction_element;
 	ImageButton imagebutton_technology_element;
 	ImageButton imagebutton_teleportation_element;
+	ImageButton imagebutton_mist_element;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -81,6 +83,9 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		if (TeleportationStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 67 && mouseX < leftPos + 91 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_teleportation"), mouseX, mouseY);
+		if (MistStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_mist"), mouseX, mouseY);
 	}
 
 	@Override
@@ -243,5 +248,19 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_teleportation_element", imagebutton_teleportation_element);
 		this.addRenderableWidget(imagebutton_teleportation_element);
+		imagebutton_mist_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_mist_element.png"), 16, 32, e -> {
+			if (MistStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(10, x, y, z));
+				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (MistStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_mist_element", imagebutton_mist_element);
+		this.addRenderableWidget(imagebutton_mist_element);
 	}
 }

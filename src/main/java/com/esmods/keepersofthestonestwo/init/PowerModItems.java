@@ -86,7 +86,10 @@ import com.esmods.keepersofthestonestwo.item.MoonStoneItem;
 import com.esmods.keepersofthestonestwo.item.MoonDoubleSidedSpearItem;
 import com.esmods.keepersofthestonestwo.item.MoonBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MoonArmorItem;
+import com.esmods.keepersofthestonestwo.item.MistyFanItem;
 import com.esmods.keepersofthestonestwo.item.MistStoneItem;
+import com.esmods.keepersofthestonestwo.item.MistBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MistArmorItem;
 import com.esmods.keepersofthestonestwo.item.MindStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
@@ -486,6 +489,12 @@ public class PowerModItems {
 	public static final RegistryObject<Item> RAW_COPYRIUM = REGISTRY.register("raw_copyrium", () -> new RawCopyriumItem());
 	public static final RegistryObject<Item> RAW_COPYRIUM_BLOCK = block(PowerModBlocks.RAW_COPYRIUM_BLOCK);
 	public static final RegistryObject<Item> ELEMENTAL_POWER_GENERATOR = block(PowerModBlocks.ELEMENTAL_POWER_GENERATOR);
+	public static final RegistryObject<Item> MIST_ARMOR_HELMET = REGISTRY.register("mist_armor_helmet", () -> new MistArmorItem.Helmet());
+	public static final RegistryObject<Item> MIST_ARMOR_CHESTPLATE = REGISTRY.register("mist_armor_chestplate", () -> new MistArmorItem.Chestplate());
+	public static final RegistryObject<Item> MIST_ARMOR_LEGGINGS = REGISTRY.register("mist_armor_leggings", () -> new MistArmorItem.Leggings());
+	public static final RegistryObject<Item> MIST_ARMOR_BOOTS = REGISTRY.register("mist_armor_boots", () -> new MistArmorItem.Boots());
+	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
+	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -300,6 +300,38 @@
           "x": 147,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mist_element",
+          "image": "mist_element.png",
+          "hoveredImage": "mist_element_highlighted.png",
+          "onClick": {
+            "name": "MistElementGet"
+          },
+          "displayCondition": {
+            "name": "MistStoneCheck"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mist",
+          "text": {
+            "fixedValue": "Mist"
+          },
+          "displayCondition": {
+            "name": "MistStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {

@@ -23560,6 +23560,513 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "MistMaster",
+      "type": "potioneffect",
+      "sortid": 1082,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/MistMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistArmor",
+      "type": "armor",
+      "sortid": 1083,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mist_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MistArmorItem.java",
+          "src/main/resources/assets/power/models/item/mist_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/mist_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mist_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 1084,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 1085,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 1086,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 1087,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistStoneUse",
+      "type": "procedure",
+      "sortid": 1088,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistMasterStart",
+      "type": "procedure",
+      "sortid": 1089,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MasterMasterEnd",
+      "type": "procedure",
+      "sortid": 1090,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "master_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MasterMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistElementGet",
+      "type": "procedure",
+      "sortid": 1091,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistStoneCheck",
+      "type": "procedure",
+      "sortid": 1092,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MistSpecialAttack",
+      "type": "procedure",
+      "sortid": 1093,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesMist",
+      "type": "gui",
+      "sortid": 1094,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_mist",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMistButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMistScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMistMenu.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mist"
+    },
+    {
+      "name": "Attack125",
+      "type": "procedure",
+      "sortid": 1095,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_125",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack125Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mist"
+    },
+    {
+      "name": "Attack126",
+      "type": "procedure",
+      "sortid": 1096,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_126",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack126Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mist"
+    },
+    {
+      "name": "Attack127",
+      "type": "procedure",
+      "sortid": 1097,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_127",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack127Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mist"
+    },
+    {
+      "name": "Attack128",
+      "type": "procedure",
+      "sortid": 1098,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_128",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack128Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mist"
+    },
+    {
+      "name": "MistBattery",
+      "type": "item",
+      "sortid": 1099,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MistBatteryItem.java",
+          "src/main/resources/assets/power/models/item/mist_battery.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MistBattery"
+    },
+    {
+      "name": "MistBatteryDesc",
+      "type": "procedure",
+      "sortid": 1100,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MistBattery"
+    },
+    {
+      "name": "MistBatteryUse",
+      "type": "procedure",
+      "sortid": 1101,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MistBattery"
+    },
+    {
+      "name": "MistyFan",
+      "type": "tool",
+      "sortid": 1102,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "misty_fan",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MistyFanItem.java",
+          "src/main/resources/assets/power/models/item/misty_fan.json"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistyFanKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 1103,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "misty_fan_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistyFanKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
     }
   ],
   "variable_elements": [
@@ -24263,13 +24770,13 @@
       "advancements.what_is_this_metal.descr": "Добудьте и переплавьте энерджиумную руду",
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
-      "gui.power.wheel_abilities_space.button_2": "2",
-      "item.power.sun_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.button_1": "1",
+      "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_explosion.button_2": "2",
-      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "gui.power.wheel_abilities_explosion.button_3": "3",
+      "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -24282,21 +24789,21 @@
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "enchantment.power.revenge": "Возмездие",
-      "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
-      "item_group.power.items": "KotS: Предметы",
       "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "item_group.power.items": "KotS: Предметы",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "block.power.cursed_stone_slab": "Плита из проклятого камня",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.creation_axe": "Топор созидания",
       "item.power.lava_hammer": "Лавовый молот",
+      "item.power.creation_axe": "Топор созидания",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "block.power.cursed_lantern": "Проклятый фонарь",
-      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
+      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -24321,6 +24828,7 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
       "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
+      "gui.power.keepers_box_gui_part_2.tooltip_mist": "Туман",
       "block.power.copyrium_ore": "Копириумная руда",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
@@ -24331,8 +24839,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
       "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
-      "block.power.polished_cursed_stone": "Полированный проклятый камень",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
+      "block.power.polished_cursed_stone": "Полированный проклятый камень",
       "item.power.animals_stone": "Камень животных",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
       "item.power.mercury_stone": "Камень ртути",
@@ -24345,12 +24853,13 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Разрушение",
       "item.power.amplifier_ring": "Амплиферовое кольцо",
       "item.power.energy_staff": "Посох энергии",
+      "item.power.mist_armor_leggings": "Поножи мастера тумана",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "block.power.cursed_stone_bricks_stairs": "Ступеньки из проклятых каменных кирпичей",
       "item.power.energium_axe": "Энерджиумный топор",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
-      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
+      "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "item.power.copyrium_ingot": "Копириумный слиток",
@@ -24373,9 +24882,11 @@
       "item.power.ocean_battery": "Батарея",
       "effect.power.star_regeneration": "Звёздная регенерация",
       "block.power.moon_block": "Лунный блок",
+      "item.power.mist_battery": "Батарея",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
+      "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -24399,6 +24910,7 @@
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
       "gui.power.wheel_abilities_moon.button_2": "2",
       "gui.power.wheel_abilities_moon.button_1": "1",
+      "item.power.mist_armor_chestplate": "Нагрудник мастера тумана",
       "item.power.energium_hoe": "Энерджиумная мотыга",
       "item.power.sun_stone": "Камень солнца",
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
@@ -24422,6 +24934,7 @@
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
+      "battery.desc.mist": "Туман",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
       "item.power.creation_hoe": "Мотыга созидания",
@@ -24475,6 +24988,7 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
+      "effect.power.mist_master": "Мастер тумана",
       "item.power.sound_dagger": "Звуковой кинжал",
       "item.power.sun_armor_boots": "Ботинки мастера солнца",
       "subtitles.stone_deactivation": "Камень был деактивирован",
@@ -24718,6 +25232,7 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
+      "item.power.mist_armor_helmet": "Шлем мастера тумана",
       "power.modinfo.cpapi_check": "§9[CPAPI]§r Текущая версия Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Эфирный луч, расходует 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Лавовый всплеск, uses 10",
@@ -24751,6 +25266,7 @@
       "battery.desc.animals": "Животные",
       "item.power.technology_stone": "Камень технологий",
       "item.power.energium_golem_spawn_egg": "Яйцо призыва энерджиумного голема",
+      "item.power.misty_fan": "Туманный веер",
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Созидание",
       "battery.desc.lava": "Лава",
       "key.power.detransformation_key": "Клавиша детрансформации",
@@ -24850,21 +25366,21 @@
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.creation_axe": "Creation Axe",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -24888,6 +25404,7 @@
       "item.power.earth_shield": "Earth Shield",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
+      "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
@@ -24899,8 +25416,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -24913,12 +25430,13 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation1": "Destruction",
       "item.power.amplifier_ring": "Amplifier Ring",
       "item.power.energy_staff": "Energy Staff",
+      "item.power.mist_armor_leggings": "Mist Leggings",
       "item.power.black_hole_spawn_egg": "Black Hole Spawn Egg",
       "block.power.cursed_stone_bricks_stairs": "Cursed Stone Bricks Stairs",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "item.power.copyrium_ingot": "Copyrium Ingot",
@@ -24941,9 +25459,11 @@
       "item.power.ocean_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
       "block.power.moon_block": "Moon Block",
+      "item.power.mist_battery": "Battery",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
+      "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -24967,6 +25487,7 @@
       "item.power.light_armor_chestplate": "Light Chestplate",
       "gui.power.wheel_abilities_moon.button_2": "2",
       "gui.power.wheel_abilities_moon.button_1": "1",
+      "item.power.mist_armor_chestplate": "Mist Chestplate",
       "item.power.energium_hoe": "Energium Hoe",
       "item.power.sun_stone": "Sun Stone",
       "item.power.lava_armor_chestplate": "Lava Chestplate",
@@ -24990,6 +25511,7 @@
       "advancements.super_charge.title": "Super Charge!",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "advancements.keepers_of_the_stones_2.title": "Keepers Of The Stones II",
+      "battery.desc.mist": "Mist",
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
       "item.power.creation_hoe": "Creation Hoe",
@@ -25043,6 +25565,7 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
+      "effect.power.mist_master": "Master of the Mist",
       "item.power.sound_dagger": "Sound Dagger",
       "item.power.sun_armor_boots": "Sun Boots",
       "subtitles.bass_boom": "Bass",
@@ -25287,6 +25810,7 @@
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
+      "item.power.mist_armor_helmet": "Mist Helmet",
       "power.modinfo.cpapi_check": "§9[CPAPI]§r The current version of the Colorful Powers API: v",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_ray_uses_10_power_poin": "Ethereal ray, uses 10",
       "gui.power.wheel_abilities_lava.tooltip_lava_outburst_uses_10": "Lava outburst, uses 10",
@@ -25319,6 +25843,7 @@
       "battery.desc.animals": "Animals",
       "item.power.technology_stone": "Technology Stone",
       "item.power.energium_golem_spawn_egg": "Energium Golem Spawn Egg",
+      "item.power.misty_fan": "Misty Fan",
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Creation",
       "battery.desc.lava": "Lava",
       "key.power.detransformation_key": "Detransformation key",
@@ -25748,6 +26273,10 @@
                       {
                         "name": "Amber",
                         "children": []
+                      },
+                      {
+                        "name": "Mist",
+                        "children": []
                       }
                     ]
                   }
@@ -25910,6 +26439,10 @@
               {
                 "name": "AmberBattery",
                 "children": []
+              },
+              {
+                "name": "MistBattery",
+                "children": []
               }
             ]
           },
@@ -25974,7 +26507,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.25",
+    "version": "1.0.0.25.3005241130",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
