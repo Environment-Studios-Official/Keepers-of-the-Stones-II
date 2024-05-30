@@ -1,14 +1,11 @@
 repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
+  maven {
+    url = "https://cursemaven.com"
+  }
 }
+
 dependencies {
-   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
+  implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:5083323")
 }
 
 
@@ -40,30 +37,6 @@ minecraft {
 }
 
 
-minecraft {
-  runs {
-   client {    
-      property 'mixin.env.remapRefMap', 'true'
-      property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-        server {
-         property 'mixin.env.remapRefMap', 'true'
-         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-      }
-     }
-
-repositories {
- maven {
-     url = 'https://maven.kosmx.dev/'
- }
-}
-
- dependencies {
-   implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
- }
-
-
 repositories {
     maven {
         url "https://www.cursemaven.com"
@@ -73,8 +46,8 @@ repositories {
     }
 }
 dependencies {
-   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
-   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
+   compileOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+   runtimeOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
 }
 
 
