@@ -32,4 +32,5 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> TELEPORTATION_PARTICLE = REGISTRY.register("teleportation_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE = REGISTRY.register("energium_golem_core_attack_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> AMBER_POWER = REGISTRY.register("amber_power", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> BLOOD_SPLASH = REGISTRY.register("blood_splash", () -> new SimpleParticleType(false));
 }

@@ -24067,6 +24067,21 @@
         ]
       },
       "path": "~/Elements/Mist"
+    },
+    {
+      "name": "BloodSplash",
+      "type": "particle",
+      "sortid": 1104,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blood_splash",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BloodSplashParticle.java",
+          "src/main/resources/assets/power/particles/blood_splash.json"
+        ]
+      },
+      "path": "~/Elements/Blood"
     }
   ],
   "variable_elements": [
