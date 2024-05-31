@@ -24080,6 +24080,55 @@
         "files": []
       },
       "path": "~/Elements/Amber"
+    },
+    {
+      "name": "MistParticle",
+      "type": "particle",
+      "sortid": 1111,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/mist_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MistParticleParticle.java"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "Mist",
+      "type": "potioneffect",
+      "sortid": 1112,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/MistMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistEffectRenderTick",
+      "type": "procedure",
+      "sortid": 1113,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_effect_render_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistEffectRenderTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
     }
   ],
   "variable_elements": [
@@ -24574,12 +24623,6 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
-    },
-    {
-      "name": "frozenIceberg",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
     }
   ],
   "sound_elements": [
@@ -25068,6 +25111,7 @@
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "effect.power.vacuum_master": "Мастер пустоты",
       "gui.power.keepers_box_gui_part_1.tooltip_fire": "Огонь",
+      "effect.power.mist": "Mist",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
@@ -25647,6 +25691,7 @@
       "item.power.crystal_armor_boots": "Crystal Boots",
       "effect.power.vacuum_master": "Master of Vacuum",
       "gui.power.keepers_box_gui_part_1.tooltip_fire": "Fire",
+      "effect.power.mist": "Mist",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",

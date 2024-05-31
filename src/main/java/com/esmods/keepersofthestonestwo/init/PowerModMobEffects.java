@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightningMasterMobEffect;
@@ -98,4 +99,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> AMBER_MASTER = REGISTRY.register("amber_master", () -> new AmberMasterMobEffect());
 	public static final RegistryObject<MobEffect> STAR_REGENERATION = REGISTRY.register("star_regeneration", () -> new StarRegenerationMobEffect());
 	public static final RegistryObject<MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
+	public static final RegistryObject<MobEffect> MIST = REGISTRY.register("mist", () -> new MistMobEffect());
 }
