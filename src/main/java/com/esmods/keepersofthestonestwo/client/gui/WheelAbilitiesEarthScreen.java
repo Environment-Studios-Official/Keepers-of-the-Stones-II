@@ -36,7 +36,7 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_earth_block_attack;
 	ImageButton imagebutton_stalagmite_piercing;
-	ImageButton imagebutton_earth_shield;
+	ImageButton imagebutton_earthquake;
 
 	public WheelAbilitiesEarthScreen(WheelAbilitiesEarthMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -58,8 +58,8 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe"), mouseX, mouseY);
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 147 && mouseY < topPos + 171)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70"), mouseX, mouseY);
 	}
 
 	@Override
@@ -194,13 +194,13 @@ public class WheelAbilitiesEarthScreen extends AbstractContainerScreen<WheelAbil
 		});
 		guistate.put("button:imagebutton_stalagmite_piercing", imagebutton_stalagmite_piercing);
 		this.addRenderableWidget(imagebutton_stalagmite_piercing);
-		imagebutton_earth_shield = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earth_shield.png"), 46, 92, e -> {
+		imagebutton_earthquake = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_earthquake.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEarthButtonMessage(8, x, y, z));
 				WheelAbilitiesEarthButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_earth_shield", imagebutton_earth_shield);
-		this.addRenderableWidget(imagebutton_earth_shield);
+		guistate.put("button:imagebutton_earthquake", imagebutton_earthquake);
+		this.addRenderableWidget(imagebutton_earthquake);
 	}
 }

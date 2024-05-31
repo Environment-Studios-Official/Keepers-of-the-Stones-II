@@ -4,10 +4,8 @@ import net.minecraft.world.item.ItemStack;
 
 public class RechargeStoneTickEventProcedure {
 	public static void execute(ItemStack itemstack) {
-		if (itemstack.getOrCreateTag().contains("rechargeStone")) {
-			if (itemstack.getOrCreateTag().getDouble("rechargeStone") > 0) {
-				itemstack.getOrCreateTag().putDouble("rechargeStone", (itemstack.getOrCreateTag().getDouble("rechargeStone") - 1));
-			}
+		if (itemstack.getOrCreateTag().getDouble("rechargeStone") > 0) {
+			itemstack.getOrCreateTag().putDouble("rechargeStone", (itemstack.getOrCreateTag().getDouble("rechargeStone") - 1));
 		}
 	}
 }

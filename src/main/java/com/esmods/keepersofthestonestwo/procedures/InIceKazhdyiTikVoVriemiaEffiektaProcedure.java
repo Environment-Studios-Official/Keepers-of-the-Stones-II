@@ -12,8 +12,10 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
+
 @Mod.EventBusSubscriber
-public class FrozenLayerOnEntityProcedure {
+public class InIceKazhdyiTikVoVriemiaEffiektaProcedure {
 	@SubscribeEvent
 	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
 		execute(event, event.getEntity());
@@ -26,7 +28,7 @@ public class FrozenLayerOnEntityProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getPersistentData().getBoolean("frozenIceberg")) {
+		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).getValue() == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

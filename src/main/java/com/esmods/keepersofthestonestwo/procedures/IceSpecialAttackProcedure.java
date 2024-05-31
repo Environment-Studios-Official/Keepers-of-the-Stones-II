@@ -10,6 +10,7 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
@@ -25,6 +26,7 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 import com.esmods.keepersofthestonestwo.entity.IceAttackProjectileEntity;
 
 public class IceSpecialAttackProcedure {
@@ -189,7 +191,7 @@ public class IceSpecialAttackProcedure {
 									capability.syncPlayerVariables(entityiterator);
 								});
 							}
-							entityiterator.getPersistentData().putBoolean("frozenIceberg", true);
+							((LivingEntity) entityiterator).getAttribute(PowerModAttributes.FROZENINICE.get()).setBaseValue(1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);

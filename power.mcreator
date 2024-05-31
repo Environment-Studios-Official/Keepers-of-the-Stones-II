@@ -2458,85 +2458,6 @@
       "path": "~/Elements/Water"
     },
     {
-      "name": "ShieldInHands",
-      "type": "procedure",
-      "sortid": 214,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shield_in_hands",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShieldInHandsProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "ShieldProtectionTick",
-      "type": "procedure",
-      "sortid": 215,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "shield_protection_tick",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ShieldProtectionTickProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "EarthShield",
-      "type": "tool",
-      "sortid": 216,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "earth_shield",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthShieldItem.java",
-          "src/main/resources/assets/power/models/item/earth_shield.json"
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
-      "name": "EarthShieldKazhdyiTikVInvientarie",
-      "type": "procedure",
-      "sortid": 217,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "earth_shield_kazhdyi_tik_v_invientarie",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EarthShieldKazhdyiTikVInvientarieProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
-      },
-      "path": "~/Elements/Earth"
-    },
-    {
       "name": "AbilityUsingKey",
       "type": "keybind",
       "sortid": 218,
@@ -5966,26 +5887,6 @@
           {
             "name": "world",
             "type": "world"
-          }
-        ]
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
-      "name": "FrozenLayerOnEntity",
-      "type": "procedure",
-      "sortid": 364,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_layer_on_entity",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FrozenLayerOnEntityProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
           }
         ]
       },
@@ -12434,7 +12335,7 @@
       "type": "procedure",
       "sortid": 625,
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "recharge_stone_tick_event",
       "metadata": {
         "files": [
@@ -24095,6 +23996,90 @@
         ]
       },
       "path": "~/Elements/Blood"
+    },
+    {
+      "name": "FrozenLayerRenderEvent",
+      "type": "procedure",
+      "sortid": 1105,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_layer_render_event",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FrozenLayerRenderEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "InIceKazhdyiTikVoVriemiaEffiekta",
+      "type": "procedure",
+      "sortid": 1106,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "in_ice_kazhdyi_tik_vo_vriemia_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/InIceKazhdyiTikVoVriemiaEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "FrozenInIce",
+      "type": "attribute",
+      "sortid": 1107,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "frozen_in_ice",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Elements/Ice"
+    },
+    {
+      "name": "AmberLayerRenderEvent",
+      "type": "procedure",
+      "sortid": 1108,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "amber_layer_render_event",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberLayerRenderEventProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Amber"
+    },
+    {
+      "name": "SealedInAmber",
+      "type": "attribute",
+      "sortid": 1109,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sealed_in_amber",
+      "metadata": {
+        "files": []
+      },
+      "path": "~/Elements/Amber"
     }
   ],
   "variable_elements": [
@@ -24589,6 +24574,12 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "frozenIceberg",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -24809,6 +24800,7 @@
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
       "gui.power.keepers_box_gui_part_1.button_empty": "",
+      "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
@@ -24852,7 +24844,6 @@
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "battery.desc.plants": "Зелень",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
-      "item.power.earth_shield": "Щит земли",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Туман",
@@ -24913,6 +24904,7 @@
       "item.power.mist_battery": "Батарея",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
@@ -25091,6 +25083,7 @@
       "effect.power.rain_master": "Мастер дождя",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Космос",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
+      "attribute.power.sealed_in_amber": "Sealed In Amber",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "item.power.space_armor_helmet": "Шлем мастера космоса",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
@@ -25282,7 +25275,6 @@
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Взрыв",
       "battery.desc.moon": "Луна",
-      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Земляной щит, расходует 45",
       "battery.desc.technology": "Технологии",
       "block.power.cursed_stone": "Проклятый камень",
       "item.power.left_metal_gauntlet": "Левая металлическая перчатка",
@@ -25378,14 +25370,15 @@
       "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_space.button_2": "2",
       "gui.power.wheel_abilities_explosion.button_1": "1",
-      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_explosion.button_2": "2",
+      "gui.power.wheel_abilities_space.button_3": "3",
       "gui.power.wheel_abilities_explosion.button_3": "3",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
       "gui.power.wheel_abilities_space.button_1": "1",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "gui.power.keepers_box_gui_part_1.button_empty": "",
+      "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
@@ -25394,21 +25387,21 @@
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.creation_axe": "Creation Axe",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
@@ -25429,11 +25422,10 @@
       "item.power.rain_armor_leggings": "Rain Leggings",
       "battery.desc.plants": "Plants",
       "item.power.ocean_armor_boots": "Ocean Boots",
-      "item.power.earth_shield": "Earth Shield",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
-      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
+      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -25444,8 +25436,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -25463,8 +25455,8 @@
       "block.power.cursed_stone_bricks_stairs": "Cursed Stone Bricks Stairs",
       "item.power.energium_axe": "Energium Axe",
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
-      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
+      "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "item.power.copyrium_ingot": "Copyrium Ingot",
@@ -25480,7 +25472,7 @@
       "item.power.blood_stone": "Blood Stone",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Natural healing, uses 65",
       "item.power.ice_spear": "Ice Spear",
-      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing.uses, 40",
+      "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing, uses 40",
       "subtitles.stone_activation": "The stone has been activated",
       "item.power.earth_armor_leggings": "Earth Leggings",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
@@ -25490,6 +25482,7 @@
       "item.power.mist_battery": "Battery",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
@@ -25669,6 +25662,7 @@
       "effect.power.rain_master": "Master of the Rain",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Space",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Destruction ball, uses 45",
+      "attribute.power.sealed_in_amber": "Sealed In Amber",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "item.power.space_armor_helmet": "Space Helmet",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
@@ -25859,7 +25853,6 @@
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Explosion",
       "battery.desc.moon": "Moon",
-      "gui.power.wheel_abilities_earth.tooltip_earth_shielduses_45power_point": "Earth shield.uses, 45",
       "battery.desc.technology": "Technology",
       "block.power.cursed_stone": "Cursed Stone",
       "item.power.left_metal_gauntlet": "Left Metal Gauntlet",
@@ -26535,7 +26528,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.25.3105240355",
+    "version": "1.0.0.25.3105241735",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -26554,6 +26547,7 @@
     ],
     "dependants": [],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "geckolib",
       "particlepresets"
     ],

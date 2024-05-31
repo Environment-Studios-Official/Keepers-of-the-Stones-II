@@ -109,6 +109,7 @@ public class PowerModVariables {
 				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
 				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
+				clone.frozenIceberg = original.frozenIceberg;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -473,6 +474,7 @@ public class PowerModVariables {
 		public boolean first_fake_wheel_open_var = false;
 		public boolean second_fake_wheel_open_var = false;
 		public boolean third_fake_wheel_open_var = false;
+		public boolean frozenIceberg = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -507,6 +509,7 @@ public class PowerModVariables {
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
+			nbt.putBoolean("frozenIceberg", frozenIceberg);
 			return nbt;
 		}
 
@@ -538,6 +541,7 @@ public class PowerModVariables {
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
+			frozenIceberg = nbt.getBoolean("frozenIceberg");
 		}
 	}
 
@@ -597,6 +601,7 @@ public class PowerModVariables {
 					variables.first_fake_wheel_open_var = message.data.first_fake_wheel_open_var;
 					variables.second_fake_wheel_open_var = message.data.second_fake_wheel_open_var;
 					variables.third_fake_wheel_open_var = message.data.third_fake_wheel_open_var;
+					variables.frozenIceberg = message.data.frozenIceberg;
 				}
 			});
 			context.setPacketHandled(true);

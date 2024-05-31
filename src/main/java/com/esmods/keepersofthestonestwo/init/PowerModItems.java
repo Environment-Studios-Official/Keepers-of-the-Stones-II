@@ -145,7 +145,6 @@ import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
 import com.esmods.keepersofthestonestwo.item.EmptyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthStoneItem;
-import com.esmods.keepersofthestonestwo.item.EarthShieldItem;
 import com.esmods.keepersofthestonestwo.item.EarthHammerItem;
 import com.esmods.keepersofthestonestwo.item.EarthBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EarthArmorItem;
@@ -224,7 +223,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ETHER_ARMOR_CHESTPLATE = REGISTRY.register("ether_armor_chestplate", () -> new EtherArmorItem.Chestplate());
 	public static final RegistryObject<Item> ETHER_ARMOR_LEGGINGS = REGISTRY.register("ether_armor_leggings", () -> new EtherArmorItem.Leggings());
 	public static final RegistryObject<Item> ETHER_ARMOR_BOOTS = REGISTRY.register("ether_armor_boots", () -> new EtherArmorItem.Boots());
-	public static final RegistryObject<Item> EARTH_SHIELD = REGISTRY.register("earth_shield", () -> new EarthShieldItem());
 	public static final RegistryObject<Item> ICE_STONE = REGISTRY.register("ice_stone", () -> new IceStoneItem());
 	public static final RegistryObject<Item> ICE_ARMOR_HELMET = REGISTRY.register("ice_armor_helmet", () -> new IceArmorItem.Helmet());
 	public static final RegistryObject<Item> ICE_ARMOR_CHESTPLATE = REGISTRY.register("ice_armor_chestplate", () -> new IceArmorItem.Chestplate());
