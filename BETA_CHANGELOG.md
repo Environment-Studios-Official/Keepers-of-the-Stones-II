@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.25?<br />
+<br />- Added new element - mist
 <br />- Added cursed stone and more blocks from it
 <br />- Added copyrium ore
 <br />- Added particles for Blood master abilities

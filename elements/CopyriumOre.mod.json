@@ -122,7 +122,7 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#is_overworld"
+        "value": "#minecraft:is_cold"
       }
     ],
     "blocksToReplace": [
