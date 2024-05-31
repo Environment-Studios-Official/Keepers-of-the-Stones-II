@@ -36,9 +36,9 @@ public class MistParticleParticle extends TextureSheetParticle {
 	protected MistParticleParticle(ClientLevel world, double x, double y, double z, double vx, double vy, double vz, SpriteSet spriteSet) {
 		super(world, x, y, z);
 		this.spriteSet = spriteSet;
-		this.setSize(1f, 1f);
+		this.setSize(3f, 3f);
 		this.quadSize *= 3f;
-		this.lifetime = (int) Math.max(1, 20 + (this.random.nextInt(2) - 1));
+		this.lifetime = (int) Math.max(1, 40 + (this.random.nextInt(40) - 20));
 		this.gravity = 0f;
 		this.hasPhysics = false;
 		this.xd = vx * 0.1;
