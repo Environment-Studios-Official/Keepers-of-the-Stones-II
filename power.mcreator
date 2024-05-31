@@ -12434,7 +12434,7 @@
       "type": "procedure",
       "sortid": 625,
       "compiles": true,
-      "locked_code": false,
+      "locked_code": true,
       "registry_name": "recharge_stone_tick_event",
       "metadata": {
         "files": [
@@ -26535,7 +26535,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.25.3005241130",
+    "version": "1.0.0.25.3105240355",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
