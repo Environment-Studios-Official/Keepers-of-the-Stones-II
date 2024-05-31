@@ -24129,6 +24129,26 @@
         ]
       },
       "path": "~/Elements/Mist"
+    },
+    {
+      "name": "MistInvisibleTick",
+      "type": "procedure",
+      "sortid": 1114,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mist_invisible_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MistInvisibleTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mist"
     }
   ],
   "variable_elements": [
@@ -24620,6 +24640,42 @@
     },
     {
       "name": "third_fake_wheel_open_var",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "helmet",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "chestplate",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "leggings",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "boots",
+      "type": "string",
+      "scope": "player_lifetime",
+      "value": "\"\""
+    },
+    {
+      "name": "abilities_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "ability_using",
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
