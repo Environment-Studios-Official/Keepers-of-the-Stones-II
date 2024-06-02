@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:cursed_vault",
     "power:elemental_power_generator",
     "power:raw_copyrium_block",
     "power:copyrium_block",

@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "cursed_vault_front_off",
+        "2": "cursed_vault_side_off",
+        "3": "cursed_vault_top",
+        "4": "cursed_vault_bottom"
+      },
+      "name": "default"
+    }
+  }
+}

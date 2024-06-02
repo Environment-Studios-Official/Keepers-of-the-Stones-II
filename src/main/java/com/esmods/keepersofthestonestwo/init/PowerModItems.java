@@ -493,6 +493,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIST_ARMOR_BOOTS = REGISTRY.register("mist_armor_boots", () -> new MistArmorItem.Boots());
 	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
+	public static final RegistryObject<Item> CURSED_VAULT = block(PowerModBlocks.CURSED_VAULT);
 
 	// Start of user code block custom items
 	// End of user code block custom items

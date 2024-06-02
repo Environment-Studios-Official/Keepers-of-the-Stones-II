@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.ElementalPowerGeneratorBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.CursedVaultBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneSlabBlock;
@@ -78,6 +79,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> COPYRIUM_BLOCK = REGISTRY.register("copyrium_block", () -> new CopyriumBlockBlock());
 	public static final RegistryObject<Block> RAW_COPYRIUM_BLOCK = REGISTRY.register("raw_copyrium_block", () -> new RawCopyriumBlockBlock());
 	public static final RegistryObject<Block> ELEMENTAL_POWER_GENERATOR = REGISTRY.register("elemental_power_generator", () -> new ElementalPowerGeneratorBlock());
+	public static final RegistryObject<Block> CURSED_VAULT = REGISTRY.register("cursed_vault", () -> new CursedVaultBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

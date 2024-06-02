@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "power:block/cursed_vault"
+    },
+    "facing=east": {
+      "model": "power:block/cursed_vault",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "power:block/cursed_vault",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "power:block/cursed_vault",
+      "y": 270
+    }
+  }
+}
