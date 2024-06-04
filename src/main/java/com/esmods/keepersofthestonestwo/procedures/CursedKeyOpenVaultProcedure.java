@@ -29,14 +29,14 @@ public class CursedKeyOpenVaultProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.CURSED_VAULT.get()) == (new Object() {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.CURSED_VAULT.get() && new Object() {
 			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 				BlockEntity blockEntity = world.getBlockEntity(pos);
 				if (blockEntity != null)
 					return blockEntity.getPersistentData().getBoolean(tag);
 				return false;
 			}
-		}.getValue(world, BlockPos.containing(x, y, z), "isPlayer"))) {
+		}.getValue(world, BlockPos.containing(x, y, z), "isPlayer")) {
 			if ((new Object() {
 				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
