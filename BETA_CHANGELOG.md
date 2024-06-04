@@ -11,5 +11,6 @@ What's new in Keepers of the Stones II version 1.0.0.25?<br />
 <br />- The amplifier ring now completely resets the recharge of the stone
 <br />- Visualization for the third ability of amber and ice has been returned
 <br />- [Bugfix] Fixed a crash when an item is rendered on the battery charger
+<br />- [Bugfix] Fixed a bug where the amplifier ring was spent just like that
 <br />- [Bugfix] Fixed a bug that caused the star points to go down when using the first amber ability
 <br />- [Bugfix] Fixed a bug with items disappearing from inventory after death from a blow from the hands of an energium golem
