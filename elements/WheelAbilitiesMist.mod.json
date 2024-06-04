@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_stream_of_mist",
+          "image": "stream_of_mist.png",
+          "hoveredImage": "stream_of_mist_highlight.png",
           "onClick": {
             "name": "Attack125"
           },
@@ -131,9 +131,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_mist_lifting",
+          "image": "mist_lifting.png",
+          "hoveredImage": "mist_lifting_highlight.png",
           "onClick": {
             "name": "Attack126"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_misty_invisibility",
+          "image": "misty_invisibility.png",
+          "hoveredImage": "misty_invisibility_highlight.png",
           "onClick": {
             "name": "Attack127"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_stream_of_mist_uses_10",
+          "text": {
+            "fixedValue": "Stream of mist, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 48
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mist_lifting_uses_50",
+          "text": {
+            "fixedValue": "Mist lifting, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_misty_invisibility_uses_70",
+          "text": {
+            "fixedValue": "Misty invisibility, uses 70"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],
@@ -160,7 +199,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }
