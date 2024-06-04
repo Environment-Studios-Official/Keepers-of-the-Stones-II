@@ -25,8 +25,7 @@ public class AmplifierRingUseProcedure {
 				}
 			}
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("power:elemental_stones")))) {
-				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("rechargeStone",
-						((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().getDouble("rechargeStone") - 600));
+				(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getOrCreateTag().putDouble("rechargeStone", 0);
 				if (world.isClientSide())
 					Minecraft.getInstance().gameRenderer.displayItemActivation(itemstack);
 			}

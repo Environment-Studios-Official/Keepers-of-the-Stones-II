@@ -154,6 +154,7 @@ import com.esmods.keepersofthestonestwo.item.DestructionBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DestructionArmorItem;
 import com.esmods.keepersofthestonestwo.item.DepletedEnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.DarknessStoneItem;
+import com.esmods.keepersofthestonestwo.item.CursedKeyItem;
 import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
 import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
 import com.esmods.keepersofthestonestwo.item.CrystalBatteryItem;
@@ -494,6 +495,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MIST_BATTERY = REGISTRY.register("mist_battery", () -> new MistBatteryItem());
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 	public static final RegistryObject<Item> CURSED_VAULT = block(PowerModBlocks.CURSED_VAULT);
+	public static final RegistryObject<Item> CURSED_KEY = REGISTRY.register("cursed_key", () -> new CursedKeyItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

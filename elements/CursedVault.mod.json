@@ -79,24 +79,24 @@
     "jumpFactor": 1.0,
     "reactionToPushing": "IGNORE",
     "isNotColidable": false,
-    "isCustomSoundType": false,
+    "isCustomSoundType": true,
     "soundOnStep": {
       "value": "NETHERITE"
     },
     "breakSound": {
-      "value": ""
+      "value": "CUSTOM:backport.block.vault.break"
     },
     "fallSound": {
-      "value": ""
+      "value": "block.netherite_block.fall"
     },
     "hitSound": {
-      "value": ""
+      "value": "block.netherite_block.hit"
     },
     "placeSound": {
-      "value": ""
+      "value": "CUSTOM:backport.block.vault.place"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:backport.block.vault.step"
     },
     "luminance": 6,
     "unbreakable": false,
@@ -119,6 +119,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "CursedVaultTickUpdate"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
