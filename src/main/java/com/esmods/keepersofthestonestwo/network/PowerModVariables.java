@@ -115,6 +115,10 @@ public class PowerModVariables {
 				clone.boots = original.boots;
 				clone.abilities_timer = original.abilities_timer;
 				clone.ability_using = original.ability_using;
+				clone.power_recorded = original.power_recorded;
+				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
+				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
+				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -485,6 +489,10 @@ public class PowerModVariables {
 		public String boots = "\"\"";
 		public double abilities_timer = 0;
 		public boolean ability_using = false;
+		public boolean power_recorded = false;
+		public double fake_element_name_first_timer = 0;
+		public double fake_element_name_second_timer = 0;
+		public double fake_element_name_third_timer = 0;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -525,6 +533,10 @@ public class PowerModVariables {
 			nbt.putString("boots", boots);
 			nbt.putDouble("abilities_timer", abilities_timer);
 			nbt.putBoolean("ability_using", ability_using);
+			nbt.putBoolean("power_recorded", power_recorded);
+			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
+			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
+			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			return nbt;
 		}
 
@@ -562,6 +574,10 @@ public class PowerModVariables {
 			boots = nbt.getString("boots");
 			abilities_timer = nbt.getDouble("abilities_timer");
 			ability_using = nbt.getBoolean("ability_using");
+			power_recorded = nbt.getBoolean("power_recorded");
+			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
+			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
+			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 		}
 	}
 
@@ -627,6 +643,10 @@ public class PowerModVariables {
 					variables.boots = message.data.boots;
 					variables.abilities_timer = message.data.abilities_timer;
 					variables.ability_using = message.data.ability_using;
+					variables.power_recorded = message.data.power_recorded;
+					variables.fake_element_name_first_timer = message.data.fake_element_name_first_timer;
+					variables.fake_element_name_second_timer = message.data.fake_element_name_second_timer;
+					variables.fake_element_name_third_timer = message.data.fake_element_name_third_timer;
 				}
 			});
 			context.setPacketHandled(true);

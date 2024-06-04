@@ -24294,6 +24294,94 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "PlayerCheckFakeElement",
+      "type": "procedure",
+      "sortid": 1117,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_check_fake_element",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerCheckFakeElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/CopyPowersModule"
+    },
+    {
+      "name": "ElementalPowerGeneratorSaveElementalPower",
+      "type": "procedure",
+      "sortid": 1118,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_power_generator_save_elemental_power",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ElementalPowerGeneratorSaveElementalPowerProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "ElementalPowerGeneratorBuild",
+      "type": "procedure",
+      "sortid": 1119,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elemental_power_generator_build",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ElementalPowerGeneratorBuildProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
@@ -24824,6 +24912,30 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "power_recorded",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "fake_element_name_first_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_second_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
+    },
+    {
+      "name": "fake_element_name_third_timer",
+      "type": "number",
+      "scope": "player_lifetime",
+      "value": "0"
     }
   ],
   "sound_elements": [

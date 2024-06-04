@@ -53,6 +53,8 @@ import java.util.ArrayList;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
 
+import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
+
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class RenderItemOnBatteryChargerProcedure {
 	private static RenderLevelStageEvent provider = null;
@@ -234,29 +236,21 @@ public class RenderItemOnBatteryChargerProcedure {
 		}).get(world)) {
 			BlockState blockstateiterator = _blockentityiterator.getBlockState();
 			Vector3i positioniterator = new Vector3i(_blockentityiterator.getBlockPos().getX(), _blockentityiterator.getBlockPos().getY(), _blockentityiterator.getBlockPos().getZ());
-			if ((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property) instanceof Direction _dir)
-						return _dir;
-					else if (_bs.hasProperty(BlockStateProperties.AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
-				}
-			}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.NORTH) {
-				if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
+			if ((world.getBlockState(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))).getBlock() == PowerModBlocks.BATTERY_CHARGER.get()) {
+				if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
 					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.NORTH) {
+					if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -264,18 +258,18 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5, true,
-							false);
-				} else if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
-					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5,
+								true, false);
+					} else if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -283,32 +277,32 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5, true,
-							false);
-				}
-			} else if ((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property) instanceof Direction _dir)
-						return _dir;
-					else if (_bs.hasProperty(BlockStateProperties.AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
-				}
-			}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.SOUTH) {
-				if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5,
+								true, false);
 					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+				} else if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.SOUTH) {
+					if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -316,18 +310,18 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
-							true, false);
-				} else if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
-					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
+								true, false);
+					} else if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -335,32 +329,32 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
-							true, false);
-				}
-			} else if ((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property) instanceof Direction _dir)
-						return _dir;
-					else if (_bs.hasProperty(BlockStateProperties.AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
-				}
-			}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.WEST) {
-				if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
+								true, false);
 					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+				} else if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.WEST) {
+					if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -368,18 +362,18 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
-							true, false);
-				} else if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
-					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
+								true, false);
+					} else if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -387,32 +381,32 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
-							true, false);
-				}
-			} else if ((new Object() {
-				public Direction getDirection(BlockPos pos) {
-					BlockState _bs = world.getBlockState(pos);
-					Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-					if (property != null && _bs.getValue(property) instanceof Direction _dir)
-						return _dir;
-					else if (_bs.hasProperty(BlockStateProperties.AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-					else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-						return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-					return Direction.NORTH;
-				}
-			}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.EAST) {
-				if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
+								true, false);
 					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+				} else if ((new Object() {
+					public Direction getDirection(BlockPos pos) {
+						BlockState _bs = world.getBlockState(pos);
+						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+						if (property != null && _bs.getValue(property) instanceof Direction _dir)
+							return _dir;
+						else if (_bs.hasProperty(BlockStateProperties.AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+						return Direction.NORTH;
+					}
+				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.EAST) {
+					if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -420,18 +414,18 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
-							true, false);
-				} else if (!((new Object() {
-					public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-						AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-						BlockEntity _ent = world.getBlockEntity(pos);
-						if (_ent != null)
-							_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-						return _retval.get();
-					}
-				}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-					renderItem((new Object() {
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
+								true, false);
+					} else if (!((new Object() {
 						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 							AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
 							BlockEntity _ent = world.getBlockEntity(pos);
@@ -439,8 +433,18 @@ public class RenderItemOnBatteryChargerProcedure {
 								_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
 							return _retval.get();
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
-							true, false);
+					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+						renderItem((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
+								BlockEntity _ent = world.getBlockEntity(pos);
+								if (_ent != null)
+									_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
+								return _retval.get();
+							}
+						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
+								true, false);
+					}
 				}
 			}
 		}

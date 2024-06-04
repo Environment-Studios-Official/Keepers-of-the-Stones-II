@@ -119,6 +119,12 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onRightClicked": {
+      "name": "ElementalPowerGeneratorSaveElementalPower"
+    },
+    "onBlockAdded": {
+      "name": "ElementalPowerGeneratorBuild"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [
