@@ -146,7 +146,7 @@
         "data": {
           "name": "imagebutton_ability_3",
           "image": "ability_3.png",
-          "hoveredImage": "ability_3.png",
+          "hoveredImage": "ability_3_highlight.png",
           "onClick": {
             "name": "Attack131"
           },
