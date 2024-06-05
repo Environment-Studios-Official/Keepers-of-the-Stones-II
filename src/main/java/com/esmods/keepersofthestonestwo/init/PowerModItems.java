@@ -63,6 +63,7 @@ import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
 import com.esmods.keepersofthestonestwo.item.ShadowArmorItem;
 import com.esmods.keepersofthestonestwo.item.SandStoneItem;
+import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
@@ -496,6 +497,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 	public static final RegistryObject<Item> CURSED_VAULT = block(PowerModBlocks.CURSED_VAULT);
 	public static final RegistryObject<Item> CURSED_KEY = REGISTRY.register("cursed_key", () -> new CursedKeyItem());
+	public static final RegistryObject<Item> SAND_ARMOR_HELMET = REGISTRY.register("sand_armor_helmet", () -> new SandArmorItem.Helmet());
+	public static final RegistryObject<Item> SAND_ARMOR_CHESTPLATE = REGISTRY.register("sand_armor_chestplate", () -> new SandArmorItem.Chestplate());
+	public static final RegistryObject<Item> SAND_ARMOR_LEGGINGS = REGISTRY.register("sand_armor_leggings", () -> new SandArmorItem.Leggings());
+	public static final RegistryObject<Item> SAND_ARMOR_BOOTS = REGISTRY.register("sand_armor_boots", () -> new SandArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

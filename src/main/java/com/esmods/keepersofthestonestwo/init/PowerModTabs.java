@@ -137,6 +137,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
 				tabData.accept(PowerModItems.AMBER_STONE.get());
 				tabData.accept(PowerModItems.MIST_STONE.get());
+				tabData.accept(PowerModItems.SAND_STONE.get());
 			})
 
 					.build());

@@ -15,6 +15,7 @@ import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.SandElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
@@ -100,6 +101,10 @@ public class KeepersBoxGUIPart4ButtonMessage {
 		if (buttonID == 8) {
 
 			AmberElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 9) {
+
+			SandElementGetProcedure.execute(world, entity);
 		}
 	}
 
