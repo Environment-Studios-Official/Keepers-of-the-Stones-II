@@ -57,7 +57,7 @@ public class SandSpecialAttackProcedure {
 						break;
 					}
 					if (world instanceof ServerLevel)
-						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(191 / 255.0F, 187 / 255.0F, 154 / 255.0F), 1)),
+						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(191 / 255.0F, 187 / 255.0F, 154 / 255.0F), 5)),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
