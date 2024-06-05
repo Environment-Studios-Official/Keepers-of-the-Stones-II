@@ -24783,6 +24783,77 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Sand"
+    },
+    {
+      "name": "SandBattery",
+      "type": "item",
+      "sortid": 1137,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SandBatteryItem.java",
+          "src/main/resources/assets/power/models/item/sand_battery.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/SandBattery"
+    },
+    {
+      "name": "SandBatteryDesc",
+      "type": "procedure",
+      "sortid": 1138,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SandBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/SandBattery"
+    },
+    {
+      "name": "SandBatteryUse",
+      "type": "procedure",
+      "sortid": 1139,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sand_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SandBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/SandBattery"
     }
   ],
   "variable_elements": [
@@ -25655,7 +25726,6 @@
       "item.power.lightning_battery": "Батарея",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
-      "gui.power.wheel_abilities_sand.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
@@ -25739,6 +25809,7 @@
       "item.power.copyrium_ingot": "Копириумный слиток",
       "battery.desc.rain": "Дождь",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
+      "item.power.sand_battery": "Батарея",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
       "item.power.smithing_template.ingredients": "§7Материалы:",
       "item.power.space_armor_leggings": "Поножи мастера космоса",
@@ -25760,7 +25831,7 @@
       "item.power.mist_battery": "Батарея",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
-      "gui.power.keepers_box_gui_part_4.tooltip_sand": "Sand",
+      "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
@@ -25842,7 +25913,7 @@
       "battery.desc.creation": "Творение",
       "gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30": "Остановка времени, расходует 30",
       "item.power.creation_shovel": "Лопата созидания",
-      "item.power.sand_armor_chestplate": "Mist Chestplate",
+      "item.power.sand_armor_chestplate": "Нагрудник мастера песка",
       "death.attack.elemental_powers.player": "%1$s погиб от силы стихий при попытке к бегству %2$s",
       "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Стрела звёздной регенерации",
       "gui.power.wheel_abilities_rain.tooltip_rain_flying_uses_5": "Дождевой полёт, расходует 5",
@@ -25873,12 +25944,13 @@
       "subtitles.bass_boom": "Бас",
       "block.power.elemental_power_generator": "Генератор силы стихии",
       "item.power.sun_armor_leggings": "Поножи мастера солнца",
-      "item.power.sand_armor_leggings": "Mist Leggings",
+      "item.power.sand_armor_leggings": "Поножи мастера песка",
       "effect.power.plants_master": "Мастер зелени",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
       "block.power.energium_block": "Блок энерджиума",
       "death.attack.elemental_powers.item": "%1$s был убит %2$s используя силу стихии",
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Замедление времени, расходует 30",
+      "battery.desc.sand": "Песок",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
       "battery.desc.light": "Свет",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
@@ -25932,7 +26004,6 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Шлем мастера телепортации",
-      "gui.power.wheel_abilities_sand.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.water_katana": "Водная катана",
       "advancements.energized_gold.title": "Золото с энергией",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Волчья стая, расходует 60",
@@ -26062,7 +26133,7 @@
       "item.power.explosion_armor_boots": "Ботинки мастера взрыва",
       "item.power.sound_armor_chestplate": "Нагрудник мастера звука",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Вода",
-      "item.power.sand_armor_boots": "Mist Boots",
+      "item.power.sand_armor_boots": "Ботинки мастера песка",
       "key.categories.power2": "Хранители Камней II",
       "item.power.teleportation_armor_boots": "Ботинки мастера телепортации",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Тень",
@@ -26088,7 +26159,7 @@
       "effect.power.moon_master": "Мастер луны",
       "item.power.energy_stone": "Камень энергии",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
-      "item.power.sand_armor_helmet": "Mist Helmet",
+      "item.power.sand_armor_helmet": "Шлем мастера песка",
       "battery.desc.crystal": "Кристалл",
       "battery.desc.ether": "Эфир",
       "item.power.sound_battery": "Батарея",
@@ -26149,7 +26220,6 @@
       "battery.desc.lava": "Лава",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.energium_core": "Энерджиумное ядро",
-      "gui.power.wheel_abilities_sand.tooltip_stream_of_mist_uses_10": "Stream of mist, uses 10",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
       "item.power.ether_armor_chestplate": "Нагрудник мастера эфира",
       "item.power.speed_stone": "Камень скорости",
@@ -26175,7 +26245,7 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "item.power.energium_upgrade_smithing_template.ingredients": " §9Редстоун",
       "gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80": "Метка бессмертия, расходует 80",
-      "effect.power.sand_master": "Master of Sand",
+      "effect.power.sand_master": "Мастер песка",
       "item.power.rain_bow": "Дождевой Лук",
       "gui.power.keepers_box_gui_part_1.tooltip_ocean": "Океан",
       "item.power.destruction_armor_helmet": "Шлем мастера разрушение",
@@ -26240,24 +26310,23 @@
       "item.power.lightning_battery": "Battery",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
-      "gui.power.wheel_abilities_sand.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.creation_axe": "Creation Axe",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
@@ -26286,8 +26355,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
-      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
+      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -26298,8 +26367,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -26324,6 +26393,7 @@
       "item.power.copyrium_ingot": "Copyrium Ingot",
       "battery.desc.rain": "Rain",
       "item.power.plants_armor_boots": "Plants Boots",
+      "item.power.sand_battery": "Battery",
       "item.power.tornado_armor_boots": "Tornado Boots",
       "item.power.smithing_template.ingredients": "",
       "item.power.space_armor_leggings": "Space Leggings",
@@ -26464,6 +26534,7 @@
       "block.power.energium_block": "Block of Energium",
       "death.attack.elemental_powers.item": "%1$s was killed by %2$s using elemental power",
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Time dilation, uses 30",
+      "battery.desc.sand": "Sand",
       "item.power.sound_armor_helmet": "Sound Helmet",
       "battery.desc.light": "Light",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
@@ -26518,7 +26589,6 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Teleportation Helmet",
-      "gui.power.wheel_abilities_sand.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
       "item.power.water_katana": "Water Katana",
       "advancements.energized_gold.title": "Energized Gold",
       "gui.power.wheel_abilities_animals.tooltip_wolf_pack_uses_60": "Wolf pack, uses 60",
@@ -26734,7 +26804,6 @@
       "battery.desc.lava": "Lava",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.energium_core": "Energium Core",
-      "gui.power.wheel_abilities_sand.tooltip_stream_of_mist_uses_10": "Stream of mist, uses 10",
       "item.power.air_armor_helmet": "Air Helmet",
       "item.power.ether_armor_chestplate": "Ether Chestplate",
       "item.power.speed_stone": "Speed Stone",
@@ -27339,6 +27408,10 @@
               },
               {
                 "name": "MistBattery",
+                "children": []
+              },
+              {
+                "name": "SandBattery",
                 "children": []
               }
             ]
