@@ -9,10 +9,16 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.GameType;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
+import net.minecraft.client.Minecraft;
+
+import java.util.Comparator;
 
 public class CursedVaultTickUpdateProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -24,7 +30,21 @@ public class CursedVaultTickUpdateProcedure {
 				return false;
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "isBlocked")) == false) {
-			if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true).isEmpty()) {
+			if (!world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true).isEmpty() && !(new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayer _serverPlayer) {
+						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+					}
+					return false;
+				}
+			}.checkGamemode(((Entity) world.getEntitiesOfClass(Player.class, AABB.ofSize(new Vec3(x, y, z), 6, 6, 6), e -> true).stream().sorted(new Object() {
+				Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
+					return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
+				}
+			}.compareDistOf(x, y, z)).findFirst().orElse(null))))) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -60,8 +80,8 @@ public class CursedVaultTickUpdateProcedure {
 					return false;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "isOpen")) == false) {
-				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip7
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip7)
+				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip9
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip9)
 						: -1) != 1) {
 					{
 						int _value = 1;
@@ -93,8 +113,8 @@ public class CursedVaultTickUpdateProcedure {
 					return false;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "isOpen")) == false) {
-				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip13
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip13)
+				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip15
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip15)
 						: -1) != 0) {
 					{
 						int _value = 0;
@@ -119,8 +139,8 @@ public class CursedVaultTickUpdateProcedure {
 					return false;
 				}
 			}.getValue(world, BlockPos.containing(x, y, z), "isOpen")) == true) {
-				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip18
-						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip18)
+				if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip20
+						? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip20)
 						: -1) != 2) {
 					{
 						int _value = 2;
@@ -171,8 +191,8 @@ public class CursedVaultTickUpdateProcedure {
 							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 					}
 				} else {
-					if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip26
-							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip26)
+					if (((world.getBlockState(BlockPos.containing(x, y, z))).getBlock().getStateDefinition().getProperty("blockstate") instanceof IntegerProperty _getip28
+							? (world.getBlockState(BlockPos.containing(x, y, z))).getValue(_getip28)
 							: -1) != 0) {
 						if (!world.isClientSide()) {
 							BlockPos _bp = BlockPos.containing(x, y, z);
