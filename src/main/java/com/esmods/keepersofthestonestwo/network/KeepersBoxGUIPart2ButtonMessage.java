@@ -19,6 +19,7 @@ import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
@@ -114,6 +115,10 @@ public class KeepersBoxGUIPart2ButtonMessage {
 		if (buttonID == 10) {
 
 			MistElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			SpeedElementGetProcedure.execute(world, entity);
 		}
 	}
 

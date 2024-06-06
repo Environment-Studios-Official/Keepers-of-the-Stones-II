@@ -25113,6 +25113,183 @@
         ]
       },
       "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedSpecialAttack",
+      "type": "procedure",
+      "sortid": 1150,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesSpeed",
+      "type": "gui",
+      "sortid": 1151,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_speed",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSpeedScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSpeedMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSpeedButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
+    },
+    {
+      "name": "Attack133",
+      "type": "procedure",
+      "sortid": 1152,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_133",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack133Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
+    },
+    {
+      "name": "Attack134",
+      "type": "procedure",
+      "sortid": 1153,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_134",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack134Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
+    },
+    {
+      "name": "Attack135",
+      "type": "procedure",
+      "sortid": 1154,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_135",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack135Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
+    },
+    {
+      "name": "Attack136",
+      "type": "procedure",
+      "sortid": 1155,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_136",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack136Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
+    },
+    {
+      "name": "SpeedElementGet",
+      "type": "procedure",
+      "sortid": 1156,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedStoneCheck",
+      "type": "procedure",
+      "sortid": 1157,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -26024,6 +26201,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
+      "gui.power.wheel_abilities_speed.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
@@ -26375,6 +26553,7 @@
       "item.power.blood_battery": "Батарея",
       "block.power.copyrium_block": "Блок копириума",
       "item.power.time_stone": "Камень времени",
+      "gui.power.wheel_abilities_speed.tooltip_sandstorm_uses_80": "Sandstorm, uses 80",
       "effect.power.sun_master": "Мастер солнца",
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
@@ -26414,6 +26593,7 @@
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Ускорение времени, расходует 30",
+      "gui.power.wheel_abilities_speed.tooltip_burial_uses_30": "Burial, uses 30",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
       "item.power.lightning_stone": "Камень молнии",
       "item.power.blue_flame_stone": "Камень синего пламени",
@@ -26449,6 +26629,7 @@
       "advancements.become_a_master.descr": "Получите камень стихии из волшебной шкатулки",
       "item.power.animals_armor_helmet": "Шлем мастера животных",
       "item.power.shadow_armor_helmet": "Шлем мастера тени",
+      "gui.power.keepers_box_gui_part_2.tooltip_speed": "Speed",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
@@ -26617,6 +26798,7 @@
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
+      "gui.power.wheel_abilities_speed.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
       "item.power.rain_armor_leggings": "Rain Leggings",
@@ -26969,6 +27151,7 @@
       "item.power.blood_battery": "Battery",
       "block.power.copyrium_block": "Block of Copyrium",
       "item.power.time_stone": "Time Stone",
+      "gui.power.wheel_abilities_speed.tooltip_sandstorm_uses_80": "Sandstorm, uses 80",
       "effect.power.sun_master": "Master of the Sun",
       "item.power.lava_armor_leggings": "Lava Leggings",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Mini tornado attack, uses 15",
@@ -27008,6 +27191,7 @@
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Acceleration of time, uses 30",
+      "gui.power.wheel_abilities_speed.tooltip_burial_uses_30": "Burial, uses 30",
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
       "item.power.blue_flame_stone": "Blue Flame Stone",
@@ -27043,6 +27227,7 @@
       "advancements.become_a_master.descr": "Get the elemental stone from the magic box",
       "item.power.animals_armor_helmet": "Animals Helmet",
       "item.power.shadow_armor_helmet": "Shadow Helmet",
+      "gui.power.keepers_box_gui_part_2.tooltip_speed": "Speed",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
@@ -27519,6 +27704,10 @@
                       },
                       {
                         "name": "Sand",
+                        "children": []
+                      },
+                      {
+                        "name": "Speed",
                         "children": []
                       }
                     ]
