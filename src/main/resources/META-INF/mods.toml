@@ -61,12 +61,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="epicfight"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
     modId="particlepresets"
     mandatory=false
     versionRange="[0,)"

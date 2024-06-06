@@ -28030,8 +28030,7 @@
       "particlepresets"
     ],
     "dependencies": [
-      "bettercombat",
-      "epicfight"
+      "bettercombat"
     ],
     "dependants": [],
     "mcreatorDependencies": [

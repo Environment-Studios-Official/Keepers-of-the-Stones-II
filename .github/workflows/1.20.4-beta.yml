@@ -66,7 +66,6 @@ jobs:
             incompatible-dependency(incompatible)
             geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
-            epic-fight(recommended){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
           fail-mode: warn	
           
