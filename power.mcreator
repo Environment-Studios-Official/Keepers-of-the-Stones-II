@@ -24889,6 +24889,230 @@
         ]
       },
       "path": "~/Elements/Sand"
+    },
+    {
+      "name": "SpeedMaster",
+      "type": "potioneffect",
+      "sortid": 1141,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/SpeedMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedArmor",
+      "type": "armor",
+      "sortid": 1142,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/speed_armor_boots.json",
+          "src/main/resources/assets/power/models/item/speed_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpeedArmorItem.java",
+          "src/main/resources/assets/power/models/item/speed_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/speed_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 1143,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 1144,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 1145,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 1146,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedStoneUse",
+      "type": "procedure",
+      "sortid": 1147,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedMasterStart",
+      "type": "procedure",
+      "sortid": 1148,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
+    },
+    {
+      "name": "SpeedMasterEnd",
+      "type": "procedure",
+      "sortid": 1149,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "speed_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpeedMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Speed"
     }
   ],
   "variable_elements": [
@@ -25279,7 +25503,7 @@
     {
       "name": "power_recovery_multiplier",
       "type": "number",
-      "scope": "player_persistent",
+      "scope": "player_lifetime",
       "value": "1.0"
     },
     {
@@ -25779,6 +26003,7 @@
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
+      "item.power.speed_armor_helmet": "Sand Helmet",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "block.power.cursed_lantern": "Проклятый фонарь",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
@@ -25936,6 +26161,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
       "battery.desc.sound": "Звук",
       "item.power.crystal_battery": "Батарея",
+      "item.power.speed_armor_leggings": "Sand Leggings",
       "item.power.raw_depleted_energium": "Рудный обеднённый энерджиум",
       "item.power.destruction_battery": "Батарея",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
@@ -26029,6 +26255,7 @@
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
       "effect.power.ocean_master": "Мастер океана",
       "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
+      "effect.power.speed_master": "Master of Speed",
       "key.power.ability_using_key": "Клавиша использования способности",
       "battery.desc.fire": "Огонь",
       "power.modinfo.recharge_stone.seconds": " секунд",
@@ -26208,6 +26435,7 @@
       "item.power.lava_stone": "Камень лавы",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Турель, расходует 80",
       "block.power.orange_portal": "Оранжевый портал",
+      "item.power.speed_armor_boots": "Sand Boots",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10",
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
       "item.power.lightning_falchion": "Молниеносный фальшион",
@@ -26306,6 +26534,7 @@
       "advancements.become_a_master.title": "Становясь Мастером",
       "item.power.shadow_armor_boots": "Ботинки мастера тени",
       "subtitles.backport.block.vault.open_shutter": "",
+      "item.power.speed_armor_chestplate": "Sand Chestplate",
       "battery.desc.metal": "Металл",
       "item.power.light_armor_boots": "Ботинки мастера света",
       "subtitles.backport.block.vault.deactivate": "",
@@ -26367,6 +26596,7 @@
       "battery.desc.ice": "Ice",
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_axe": "Creation Axe",
+      "item.power.speed_armor_helmet": "Speed Helmet",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
@@ -26524,6 +26754,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
       "battery.desc.sound": "Sound",
       "item.power.crystal_battery": "Battery",
+      "item.power.speed_armor_leggings": "Speed Leggings",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.power.destruction_battery": "Battery",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
@@ -26618,6 +26849,7 @@
       "effect.power.ocean_master": "Master of the Ocean",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
+      "effect.power.speed_master": "Master of Speed",
       "key.power.ability_using_key": "Ability using key",
       "battery.desc.fire": "Fire",
       "power.modinfo.recharge_stone.seconds": " seconds",
@@ -26797,6 +27029,7 @@
       "item.power.lava_stone": "Lava Stone",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Turret, uses 80",
       "block.power.orange_portal": "Orange Portal",
+      "item.power.speed_armor_boots": "Speed Boots",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
       "item.power.ocean_armor_leggings": "Ocean Leggings",
       "item.power.lightning_falchion": "Lightning Falchion",
@@ -26894,6 +27127,7 @@
       "advancements.become_a_master.title": "Become a Master",
       "item.power.shadow_armor_boots": "Shadow Boots",
       "subtitles.backport.block.vault.open_shutter": "",
+      "item.power.speed_armor_chestplate": "Speed Chestplate",
       "battery.desc.metal": "Metal",
       "item.power.light_armor_boots": "Light Boots",
       "subtitles.backport.block.vault.deactivate": "",
@@ -27520,7 +27754,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.26",
+    "version": "1.0.0.26.0606241440",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

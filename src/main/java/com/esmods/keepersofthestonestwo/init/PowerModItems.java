@@ -49,6 +49,7 @@ import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpaceArmorItem;
@@ -505,6 +506,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SAND_ARMOR_BOOTS = REGISTRY.register("sand_armor_boots", () -> new SandArmorItem.Boots());
 	public static final RegistryObject<Item> SAND_BATTERY = REGISTRY.register("sand_battery", () -> new SandBatteryItem());
 	public static final RegistryObject<Item> SAND_SABER = REGISTRY.register("sand_saber", () -> new SandSaberItem());
+	public static final RegistryObject<Item> SPEED_ARMOR_HELMET = REGISTRY.register("speed_armor_helmet", () -> new SpeedArmorItem.Helmet());
+	public static final RegistryObject<Item> SPEED_ARMOR_CHESTPLATE = REGISTRY.register("speed_armor_chestplate", () -> new SpeedArmorItem.Chestplate());
+	public static final RegistryObject<Item> SPEED_ARMOR_LEGGINGS = REGISTRY.register("speed_armor_leggings", () -> new SpeedArmorItem.Leggings());
+	public static final RegistryObject<Item> SPEED_ARMOR_BOOTS = REGISTRY.register("speed_armor_boots", () -> new SpeedArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items
