@@ -49,6 +49,7 @@ import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
@@ -510,6 +511,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_ARMOR_CHESTPLATE = REGISTRY.register("speed_armor_chestplate", () -> new SpeedArmorItem.Chestplate());
 	public static final RegistryObject<Item> SPEED_ARMOR_LEGGINGS = REGISTRY.register("speed_armor_leggings", () -> new SpeedArmorItem.Leggings());
 	public static final RegistryObject<Item> SPEED_ARMOR_BOOTS = REGISTRY.register("speed_armor_boots", () -> new SpeedArmorItem.Boots());
+	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
