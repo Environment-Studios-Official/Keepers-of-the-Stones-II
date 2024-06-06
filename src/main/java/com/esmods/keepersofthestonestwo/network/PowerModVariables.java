@@ -90,7 +90,6 @@ public class PowerModVariables {
 			clone.element_name_third = original.element_name_third;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.max_power = original.max_power;
-			clone.power_recovery_multiplier = original.power_recovery_multiplier;
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
@@ -103,6 +102,7 @@ public class PowerModVariables {
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
+				clone.power_recovery_multiplier = original.power_recovery_multiplier;
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.second_wheel_open_var = original.second_wheel_open_var;
 				clone.third_wheel_open_var = original.third_wheel_open_var;
