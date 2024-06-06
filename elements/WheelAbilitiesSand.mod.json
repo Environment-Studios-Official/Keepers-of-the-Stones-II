@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_sand_jet",
+          "image": "sand_jet.png",
+          "hoveredImage": "sand_jet_highlight.png",
           "onClick": {
             "name": "Attack129"
           },
@@ -131,9 +131,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_burial",
+          "image": "burial.png",
+          "hoveredImage": "burial_highlight.png",
           "onClick": {
             "name": "Attack130"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_sandstorm",
+          "image": "sandstorm.png",
+          "hoveredImage": "sandstorm_highlight.png",
           "onClick": {
             "name": "Attack131"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sand_jet_uses_15",
+          "text": {
+            "fixedValue": "Sand jet, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_burial_uses_30",
+          "text": {
+            "fixedValue": "Burial, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sandstorm_uses_80",
+          "text": {
+            "fixedValue": "Sandstorm, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],

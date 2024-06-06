@@ -34,9 +34,9 @@ public class WheelAbilitiesSandScreen extends AbstractContainerScreen<WheelAbili
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_sand_jet;
+	ImageButton imagebutton_burial;
+	ImageButton imagebutton_sandstorm;
 
 	public WheelAbilitiesSandScreen(WheelAbilitiesSandMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +54,12 @@ public class WheelAbilitiesSandScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 23 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sand.tooltip_burial_uses_30"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_sand.tooltip_sandstorm_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -172,29 +178,29 @@ public class WheelAbilitiesSandScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_1.png"), 46, 92, e -> {
+		imagebutton_sand_jet = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sand_jet.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSandButtonMessage(6, x, y, z));
 				WheelAbilitiesSandButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_2.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_sand_jet", imagebutton_sand_jet);
+		this.addRenderableWidget(imagebutton_sand_jet);
+		imagebutton_burial = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_burial.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSandButtonMessage(7, x, y, z));
 				WheelAbilitiesSandButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_3.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_burial", imagebutton_burial);
+		this.addRenderableWidget(imagebutton_burial);
+		imagebutton_sandstorm = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sandstorm.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSandButtonMessage(8, x, y, z));
 				WheelAbilitiesSandButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_sandstorm", imagebutton_sandstorm);
+		this.addRenderableWidget(imagebutton_sandstorm);
 	}
 }
