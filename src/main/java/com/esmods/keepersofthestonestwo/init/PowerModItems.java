@@ -119,6 +119,7 @@ import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
+import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
@@ -512,6 +513,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> SPEED_ARMOR_LEGGINGS = REGISTRY.register("speed_armor_leggings", () -> new SpeedArmorItem.Leggings());
 	public static final RegistryObject<Item> SPEED_ARMOR_BOOTS = REGISTRY.register("speed_armor_boots", () -> new SpeedArmorItem.Boots());
 	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
+	public static final RegistryObject<Item> HIGHSPEED_DAGGER = REGISTRY.register("highspeed_dagger", () -> new HighspeedDaggerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
