@@ -102,6 +102,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MIST_BATTERY.get());
 				tabData.accept(PowerModItems.SAND_BATTERY.get());
 				tabData.accept(PowerModItems.SPEED_BATTERY.get());
+				tabData.accept(PowerModItems.POISON_BATTERY.get());
 			})
 
 					.build());

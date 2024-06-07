@@ -25817,6 +25817,77 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
+    },
+    {
+      "name": "PoisonBattery",
+      "type": "item",
+      "sortid": 1181,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/poison_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/PoisonBattery"
+    },
+    {
+      "name": "PoisonBatteryDesc",
+      "type": "procedure",
+      "sortid": 1182,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/PoisonBattery"
+    },
+    {
+      "name": "PoisonBatteryUse",
+      "type": "procedure",
+      "sortid": 1183,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/PoisonBattery"
     }
   ],
   "variable_elements": [
@@ -26703,6 +26774,7 @@
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.time_armor_helmet": "Шлем мастера времени",
+      "item.power.poison_battery": "Батарея",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
@@ -26729,7 +26801,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
-      "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
+      "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
@@ -26771,7 +26843,7 @@
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
-      "effect.power.poison_master": " Master of Poison",
+      "effect.power.poison_master": "Мастер яда",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
@@ -26801,13 +26873,14 @@
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
-      "item.power.poison_armor_chestplate": "Speed Chestplate",
+      "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
+      "battery.desc.poison": "Яд",
       "item.power.tornado_battery": "Батарея",
       "effect.power.power_lock": "Блокировка силы",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
@@ -26831,7 +26904,7 @@
       "item.power.energium_hoe": "Энерджиумная мотыга",
       "item.power.sun_stone": "Камень солнца",
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
-      "item.power.poison_armor_helmet": "Speed Helmet",
+      "item.power.poison_armor_helmet": "Шлем мастера яда",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Вернуться на чекпоинт, расходует 40",
@@ -27058,7 +27131,7 @@
       "gui.power.wheel_abilities_space.tooltip_black_hole_uses_80": "Чёрная дыра, расходует 80",
       "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
-      "item.power.poison_armor_boots": "Speed Boots",
+      "item.power.poison_armor_boots": "Ботинки мастера яда",
       "item.power.explosion_armor_helmet": "Шлем мастера взрыва",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
@@ -27137,7 +27210,7 @@
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
       "effect.power.moon_master": "Мастер луны",
-      "item.power.poison_armor_leggings": "Speed Leggings",
+      "item.power.poison_armor_leggings": "Поножи мастера яда",
       "item.power.energy_stone": "Камень энергии",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
@@ -27294,20 +27367,21 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "item.power.poison_battery": "Battery",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
@@ -27344,8 +27418,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
-      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
+      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -27356,8 +27430,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -27414,6 +27488,7 @@
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "item.power.creation_armor_boots": "Creation Boots",
+      "battery.desc.poison": "Poison",
       "item.power.tornado_battery": "Battery",
       "effect.power.power_lock": "Power lock",
       "item.power.metal_armor_helmet": "Metal Helmet",
@@ -28431,6 +28506,10 @@
               },
               {
                 "name": "SpeedBattery",
+                "children": []
+              },
+              {
+                "name": "PoisonBattery",
                 "children": []
               }
             ]
