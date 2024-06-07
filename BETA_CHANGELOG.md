@@ -1,7 +1,10 @@
 What's new in Keepers of the Stones II version 1.0.0.26?<br />
 <br />- Added new element - mist, sand and speed
 <br />- Added cursed stone and more blocks from it
+<br />- Added cursed vault and cursed key
 <br />- Added copyrium ore
+<br />- Elemental power generator can save powers and distribute for another players (players can save elemental energy for 2.5 minutes)
+<br />- Added a new option for the fake_element argument - timer
 <br />- Added particles for Blood master abilities
 <br />- Added new achievements
 <br />- A full set of Energy Armor now gives a power lock effect to entities in a 3 block radius
