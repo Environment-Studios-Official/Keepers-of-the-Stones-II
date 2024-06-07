@@ -15,6 +15,7 @@ What's new in Keepers of the Stones II version 1.0.0.26?<br />
 <br />- The amplifier ring now completely resets the recharge of the stone
 <br />- Visualization for the third ability of amber and ice has been returned
 <br />- Epic Fight support has been removed due to conflicts with other mods
+<br />- [Bugfix] Fixed a bug that caused a destruction stone to be given out when selecting a destruction stone from a casket.
 <br />- [Bugfix] Fixed a crash when an item is rendered on the battery charger
 <br />- [Bugfix] Fixed a bug where the amplifier ring was spent just like that
 <br />- [Bugfix] Fixed a bug that caused the star points to go down when using the first amber ability

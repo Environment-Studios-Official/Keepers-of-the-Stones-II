@@ -212,7 +212,7 @@
           "image": "destruction_element.png",
           "hoveredImage": "destruction_element_highlighted.png",
           "onClick": {
-            "name": "CreationElementGet"
+            "name": "DestructionElementGet"
           },
           "displayCondition": {
             "name": "DestructionStoneCheck"
