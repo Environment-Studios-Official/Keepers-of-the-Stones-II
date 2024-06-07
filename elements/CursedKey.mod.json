@@ -38,6 +38,9 @@
     "onRightClickedOnBlock": {
       "name": "CursedKeyOpenVault"
     },
+    "onItemInInventoryTick": {
+      "name": "CursedKeyKazhdyiTikVInvientarie"
+    },
     "enableRanged": false,
     "shootConstantly": false,
     "projectile": {

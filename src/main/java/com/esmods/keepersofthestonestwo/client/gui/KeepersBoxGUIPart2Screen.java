@@ -18,6 +18,7 @@ import com.esmods.keepersofthestonestwo.procedures.TornadoStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionStoneCheckProcedure;
@@ -42,6 +43,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_technology_element;
 	ImageButton imagebutton_teleportation_element;
 	ImageButton imagebutton_mist_element;
+	ImageButton imagebutton_speed_element_highlighted;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -86,6 +88,9 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		if (MistStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 158 && mouseX < leftPos + 182 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_mist"), mouseX, mouseY);
+		if (SpeedStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_speed"), mouseX, mouseY);
 	}
 
 	@Override
@@ -262,5 +267,19 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_mist_element", imagebutton_mist_element);
 		this.addRenderableWidget(imagebutton_mist_element);
+		imagebutton_speed_element_highlighted = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_speed_element_highlighted.png"), 16, 32, e -> {
+			if (SpeedStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(11, x, y, z));
+				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (SpeedStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_speed_element_highlighted", imagebutton_speed_element_highlighted);
+		this.addRenderableWidget(imagebutton_speed_element_highlighted);
 	}
 }

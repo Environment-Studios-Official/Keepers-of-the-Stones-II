@@ -28,9 +28,11 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTeleportationMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTechnologyMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSunMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpeedMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpaceMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
@@ -549,6 +551,36 @@ public class OpenWheelThreeTickProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesMistMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("sand")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesSand");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesSandMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("speed")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesSpeed");
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesSpeedMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

@@ -100,6 +100,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.EXPLOSION_BATTERY.get());
 				tabData.accept(PowerModItems.AMBER_BATTERY.get());
 				tabData.accept(PowerModItems.MIST_BATTERY.get());
+				tabData.accept(PowerModItems.SAND_BATTERY.get());
+				tabData.accept(PowerModItems.SPEED_BATTERY.get());
 			})
 
 					.build());
@@ -137,6 +139,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
 				tabData.accept(PowerModItems.AMBER_STONE.get());
 				tabData.accept(PowerModItems.MIST_STONE.get());
+				tabData.accept(PowerModItems.SAND_STONE.get());
+				tabData.accept(PowerModItems.SPEED_STONE.get());
 			})
 
 					.build());

@@ -49,6 +49,8 @@ import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
+import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpaceArmorItem;
@@ -63,6 +65,9 @@ import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
 import com.esmods.keepersofthestonestwo.item.ShadowArmorItem;
 import com.esmods.keepersofthestonestwo.item.SandStoneItem;
+import com.esmods.keepersofthestonestwo.item.SandSaberItem;
+import com.esmods.keepersofthestonestwo.item.SandBatteryItem;
+import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
@@ -114,6 +119,7 @@ import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
+import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
@@ -496,6 +502,18 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MISTY_FAN = REGISTRY.register("misty_fan", () -> new MistyFanItem());
 	public static final RegistryObject<Item> CURSED_VAULT = block(PowerModBlocks.CURSED_VAULT);
 	public static final RegistryObject<Item> CURSED_KEY = REGISTRY.register("cursed_key", () -> new CursedKeyItem());
+	public static final RegistryObject<Item> SAND_ARMOR_HELMET = REGISTRY.register("sand_armor_helmet", () -> new SandArmorItem.Helmet());
+	public static final RegistryObject<Item> SAND_ARMOR_CHESTPLATE = REGISTRY.register("sand_armor_chestplate", () -> new SandArmorItem.Chestplate());
+	public static final RegistryObject<Item> SAND_ARMOR_LEGGINGS = REGISTRY.register("sand_armor_leggings", () -> new SandArmorItem.Leggings());
+	public static final RegistryObject<Item> SAND_ARMOR_BOOTS = REGISTRY.register("sand_armor_boots", () -> new SandArmorItem.Boots());
+	public static final RegistryObject<Item> SAND_BATTERY = REGISTRY.register("sand_battery", () -> new SandBatteryItem());
+	public static final RegistryObject<Item> SAND_SABER = REGISTRY.register("sand_saber", () -> new SandSaberItem());
+	public static final RegistryObject<Item> SPEED_ARMOR_HELMET = REGISTRY.register("speed_armor_helmet", () -> new SpeedArmorItem.Helmet());
+	public static final RegistryObject<Item> SPEED_ARMOR_CHESTPLATE = REGISTRY.register("speed_armor_chestplate", () -> new SpeedArmorItem.Chestplate());
+	public static final RegistryObject<Item> SPEED_ARMOR_LEGGINGS = REGISTRY.register("speed_armor_leggings", () -> new SpeedArmorItem.Leggings());
+	public static final RegistryObject<Item> SPEED_ARMOR_BOOTS = REGISTRY.register("speed_armor_boots", () -> new SpeedArmorItem.Boots());
+	public static final RegistryObject<Item> SPEED_BATTERY = REGISTRY.register("speed_battery", () -> new SpeedBatteryItem());
+	public static final RegistryObject<Item> HIGHSPEED_DAGGER = REGISTRY.register("highspeed_dagger", () -> new HighspeedDaggerItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

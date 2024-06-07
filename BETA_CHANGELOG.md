@@ -1,5 +1,5 @@
-What's new in Keepers of the Stones II version 1.0.0.25?<br />
-<br />- Added new element - mist
+What's new in Keepers of the Stones II version 1.0.0.26?<br />
+<br />- Added new element - mist, sand and speed
 <br />- Added cursed stone and more blocks from it
 <br />- Added copyrium ore
 <br />- Added particles for Blood master abilities
@@ -11,6 +11,7 @@ What's new in Keepers of the Stones II version 1.0.0.25?<br />
 <br />- Added a recipe for an amplifier ring
 <br />- The amplifier ring now completely resets the recharge of the stone
 <br />- Visualization for the third ability of amber and ice has been returned
+<br />- Epic Fight support has been removed due to conflicts with other mods
 <br />- [Bugfix] Fixed a crash when an item is rendered on the battery charger
 <br />- [Bugfix] Fixed a bug where the amplifier ring was spent just like that
 <br />- [Bugfix] Fixed a bug that caused the star points to go down when using the first amber ability

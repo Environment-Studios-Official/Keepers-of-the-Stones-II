@@ -332,6 +332,38 @@
           "x": 238,
           "y": 91
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speed_element_highlighted",
+          "image": "speed_element.png",
+          "hoveredImage": "speed_element_highlighted.png",
+          "onClick": {
+            "name": "SpeedElementGet"
+          },
+          "displayCondition": {
+            "name": "SpeedStoneCheck"
+          },
+          "x": 175,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_speed",
+          "text": {
+            "fixedValue": "Speed"
+          },
+          "displayCondition": {
+            "name": "SpeedStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

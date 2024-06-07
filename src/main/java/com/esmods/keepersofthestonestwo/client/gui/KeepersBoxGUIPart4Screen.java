@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
@@ -39,6 +40,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_earth_element;
 	ImageButton imagebutton_plants_element;
 	ImageButton imagebutton_amber_element;
+	ImageButton imagebutton_sand_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -77,6 +79,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (AmberStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_amber"), mouseX, mouseY);
+		if (SandStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_sand"), mouseX, mouseY);
 	}
 
 	@Override
@@ -221,5 +226,19 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_amber_element", imagebutton_amber_element);
 		this.addRenderableWidget(imagebutton_amber_element);
+		imagebutton_sand_element = new ImageButton(this.leftPos + 163, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_sand_element.png"), 16, 32, e -> {
+			if (SandStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(9, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 9, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (SandStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_sand_element", imagebutton_sand_element);
+		this.addRenderableWidget(imagebutton_sand_element);
 	}
 }

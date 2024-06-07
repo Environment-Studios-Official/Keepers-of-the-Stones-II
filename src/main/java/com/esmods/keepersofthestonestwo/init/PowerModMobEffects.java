@@ -23,9 +23,11 @@ import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
@@ -100,4 +102,6 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> STAR_REGENERATION = REGISTRY.register("star_regeneration", () -> new StarRegenerationMobEffect());
 	public static final RegistryObject<MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
 	public static final RegistryObject<MobEffect> MIST = REGISTRY.register("mist", () -> new MistMobEffect());
+	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
+	public static final RegistryObject<MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
 }
