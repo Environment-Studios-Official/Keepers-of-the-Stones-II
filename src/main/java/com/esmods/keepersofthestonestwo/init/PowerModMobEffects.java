@@ -30,6 +30,7 @@ import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
@@ -104,4 +105,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> MIST = REGISTRY.register("mist", () -> new MistMobEffect());
 	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
 	public static final RegistryObject<MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
+	public static final RegistryObject<MobEffect> POISON_MASTER = REGISTRY.register("poison_master", () -> new PoisonMasterMobEffect());
 }

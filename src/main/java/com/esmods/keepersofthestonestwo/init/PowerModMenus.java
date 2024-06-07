@@ -24,6 +24,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPoisonMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMoonMenu;
@@ -93,4 +94,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesMistMenu>> WHEEL_ABILITIES_MIST = REGISTRY.register("wheel_abilities_mist", () -> IForgeMenuType.create(WheelAbilitiesMistMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesSandMenu>> WHEEL_ABILITIES_SAND = REGISTRY.register("wheel_abilities_sand", () -> IForgeMenuType.create(WheelAbilitiesSandMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesSpeedMenu>> WHEEL_ABILITIES_SPEED = REGISTRY.register("wheel_abilities_speed", () -> IForgeMenuType.create(WheelAbilitiesSpeedMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesPoisonMenu>> WHEEL_ABILITIES_POISON = REGISTRY.register("wheel_abilities_poison", () -> IForgeMenuType.create(WheelAbilitiesPoisonMenu::new));
 }

@@ -15,6 +15,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
@@ -41,6 +42,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_plants_element;
 	ImageButton imagebutton_amber_element;
 	ImageButton imagebutton_sand_element;
+	ImageButton imagebutton_poison_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -82,6 +84,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (SandStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_sand"), mouseX, mouseY);
+		if (PoisonStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_poison"), mouseX, mouseY);
 	}
 
 	@Override
@@ -240,5 +245,19 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_sand_element", imagebutton_sand_element);
 		this.addRenderableWidget(imagebutton_sand_element);
+		imagebutton_poison_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_poison_element.png"), 16, 32, e -> {
+			if (PoisonStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(10, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PoisonStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_poison_element", imagebutton_poison_element);
+		this.addRenderableWidget(imagebutton_poison_element);
 	}
 }

@@ -25416,6 +25416,407 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PoisonMaster",
+      "type": "potioneffect",
+      "sortid": 1164,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/PoisonMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonArmor",
+      "type": "armor",
+      "sortid": 1165,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonArmorItem.java",
+          "src/main/resources/assets/power/models/item/poison_armor_boots.json",
+          "src/main/resources/assets/power/models/item/poison_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/poison_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/poison_armor_chestplate.json"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 1166,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 1167,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 1168,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 1169,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonStoneUse",
+      "type": "procedure",
+      "sortid": 1170,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonMasterStart",
+      "type": "procedure",
+      "sortid": 1171,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonMasterEnd",
+      "type": "procedure",
+      "sortid": 1172,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonSpecialAttack",
+      "type": "procedure",
+      "sortid": 1173,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "PoisonElementGet",
+      "type": "procedure",
+      "sortid": 1174,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonStoneCheck",
+      "type": "procedure",
+      "sortid": 1175,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "WheelAbilitiesPoison",
+      "type": "gui",
+      "sortid": 1176,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_poison",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesPoisonButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesPoisonMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesPoisonScreen.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
+    },
+    {
+      "name": "Attack137",
+      "type": "procedure",
+      "sortid": 1177,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_137",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack137Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
+    },
+    {
+      "name": "Attack138",
+      "type": "procedure",
+      "sortid": 1178,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_138",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack138Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
+    },
+    {
+      "name": "Attack139",
+      "type": "procedure",
+      "sortid": 1179,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_139",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack139Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
+    },
+    {
+      "name": "Attack140",
+      "type": "procedure",
+      "sortid": 1180,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_140",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack140Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Poison"
     }
   ],
   "variable_elements": [
@@ -26305,8 +26706,8 @@
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
-      "item.power.lava_hammer": "Лавовый молот",
       "item.power.creation_axe": "Топор созидания",
+      "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "block.power.cursed_lantern": "Проклятый фонарь",
@@ -26328,6 +26729,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
+      "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
@@ -26369,6 +26771,7 @@
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Сфера небытия, сфера 20",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Теневая сфера, расходует 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Кровотечение, расходует 15",
+      "effect.power.poison_master": " Master of Poison",
       "item.power.fire_armor_boots": "Ботинки мастера огня",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "item.power.copyrium_ingot": "Копириумный слиток",
@@ -26397,6 +26800,7 @@
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
+      "item.power.poison_armor_chestplate": "Speed Chestplate",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
@@ -26426,6 +26830,7 @@
       "item.power.energium_hoe": "Энерджиумная мотыга",
       "item.power.sun_stone": "Камень солнца",
       "item.power.lava_armor_chestplate": "Нагрудник мастера лавы",
+      "item.power.poison_armor_helmet": "Speed Helmet",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
       "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Вернуться на чекпоинт, расходует 40",
@@ -26652,6 +27057,7 @@
       "gui.power.wheel_abilities_space.tooltip_black_hole_uses_80": "Чёрная дыра, расходует 80",
       "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
+      "item.power.poison_armor_boots": "Speed Boots",
       "item.power.explosion_armor_helmet": "Шлем мастера взрыва",
       "effect.power.immortality": "Бессмертие",
       "item.power.metal_battery": "Батарея",
@@ -26729,6 +27135,7 @@
       "item.power.air_armor_leggings": "Поножи мастера воздуха",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Обтекаемость, расходует 5",
       "effect.power.moon_master": "Мастер луны",
+      "item.power.poison_armor_leggings": "Speed Leggings",
       "item.power.energy_stone": "Камень энергии",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
@@ -26736,7 +27143,7 @@
       "battery.desc.ether": "Эфир",
       "item.power.sound_battery": "Батарея",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
-      "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Вакуум",
+      "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Пустота",
       "effect.power.teleportation_master": "Мастер телепортации",
       "item.power.lava_stone": "Камень лавы",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Турель, расходует 80",
@@ -26884,26 +27291,26 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.creation_axe": "Creation Axe",
       "item.power.speed_armor_helmet": "Speed Helmet",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
@@ -26925,6 +27332,7 @@
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
+      "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
       "item.power.rain_armor_leggings": "Rain Leggings",
@@ -26933,8 +27341,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
-      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
+      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -26945,8 +27353,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -26966,6 +27374,7 @@
       "gui.power.wheel_abilities_vacuum.tooltip_sphere_of_nothing_uses_20": "Sphere of nothing, uses 20",
       "gui.power.wheel_abilities_shadow.tooltip_shadow_sphere_uses_35": "Shadow sphere, uses 35",
       "gui.power.wheel_abilities_blood.tooltip_bleeding_uses_15": "Bleeding, uses 15",
+      "effect.power.poison_master": " Master of Poison",
       "item.power.fire_armor_boots": "Fire Boots",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "item.power.copyrium_ingot": "Copyrium Ingot",
@@ -26994,6 +27403,7 @@
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Sand",
+      "item.power.poison_armor_chestplate": "Poison Chestplate",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
@@ -27023,6 +27433,7 @@
       "item.power.energium_hoe": "Energium Hoe",
       "item.power.sun_stone": "Sun Stone",
       "item.power.lava_armor_chestplate": "Lava Chestplate",
+      "item.power.poison_armor_helmet": "Poison Helmet",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
       "gui.power.wheel_abilities_teleportation.tooltip_return_to_checkpoint_uses_40": "Return to checkpoint, uses 40",
@@ -27250,6 +27661,7 @@
       "gui.power.wheel_abilities_space.tooltip_black_hole_uses_80": "Black hole, uses 80",
       "item.power.poison_stone": "Poison Stone",
       "effect.power.destruction_master": "Master of Destruction",
+      "item.power.poison_armor_boots": "Poison Boots",
       "item.power.explosion_armor_helmet": "Explosion Helmet",
       "effect.power.immortality": "Immortality",
       "item.power.metal_battery": "Battery",
@@ -27327,6 +27739,7 @@
       "item.power.air_armor_leggings": "Air Leggings",
       "gui.power.wheel_abilities_ocean.tooltip_streamlining_uses_5": "Streamlining, uses 5",
       "effect.power.moon_master": "Master of the Moon",
+      "item.power.poison_armor_leggings": "Poison Leggings",
       "item.power.energy_stone": "Energy Stone",
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.sand_armor_helmet": "Sand Helmet",
@@ -27834,6 +28247,10 @@
                       },
                       {
                         "name": "Speed",
+                        "children": []
+                      },
+                      {
+                        "name": "Poison",
                         "children": []
                       }
                     ]
