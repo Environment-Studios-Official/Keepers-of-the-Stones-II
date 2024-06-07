@@ -172,6 +172,15 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 							}
 						}
 					}
+					if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power < 100) {
+						{
+							double _setval = 100;
+							entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+								capability.power = _setval;
+								capability.syncPlayerVariables(entity);
+							});
+						}
+					}
 				}
 			}
 		}
