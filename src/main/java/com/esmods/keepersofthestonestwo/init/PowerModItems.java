@@ -77,6 +77,7 @@ import com.esmods.keepersofthestonestwo.item.RainBowItem;
 import com.esmods.keepersofthestonestwo.item.RainBatteryItem;
 import com.esmods.keepersofthestonestwo.item.RainArmorItem;
 import com.esmods.keepersofthestonestwo.item.PoisonStoneItem;
+import com.esmods.keepersofthestonestwo.item.PoisonBowItem;
 import com.esmods.keepersofthestonestwo.item.PoisonBatteryItem;
 import com.esmods.keepersofthestonestwo.item.PoisonArmorItem;
 import com.esmods.keepersofthestonestwo.item.PlantsStoneItem;
@@ -521,6 +522,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_ARMOR_LEGGINGS = REGISTRY.register("poison_armor_leggings", () -> new PoisonArmorItem.Leggings());
 	public static final RegistryObject<Item> POISON_ARMOR_BOOTS = REGISTRY.register("poison_armor_boots", () -> new PoisonArmorItem.Boots());
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
+	public static final RegistryObject<Item> POISON_BOW = REGISTRY.register("poison_bow", () -> new PoisonBowItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

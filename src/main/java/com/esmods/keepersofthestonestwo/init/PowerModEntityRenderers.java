@@ -22,6 +22,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.PoisonDropProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MeteoriteProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.LightballProjectileRenderer;
@@ -85,5 +86,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), TeleportationGunProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.ATOMIC_ROCKET.get(), AtomicRocketRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.GRENADE.get(), GrenadeRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISON_DROP_PROJECTILE.get(), PoisonDropProjectileRenderer::new);
 	}
 }
