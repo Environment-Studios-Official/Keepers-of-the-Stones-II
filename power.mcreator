@@ -25958,6 +25958,21 @@
         ]
       },
       "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonParticle",
+      "type": "particle",
+      "sortid": 1188,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/PoisonParticleParticle.java",
+          "src/main/resources/assets/power/particles/poison_particle.json"
+        ]
+      },
+      "path": "~/Elements/Poison"
     }
   ],
   "variable_elements": [
