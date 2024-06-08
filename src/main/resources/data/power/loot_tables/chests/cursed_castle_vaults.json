@@ -49,7 +49,7 @@
         {
           "type": "minecraft:item",
           "name": "power:depleted_energium_ingot",
-          "weight": 4,
+          "weight": 2,
           "functions": [
             {
               "function": "set_count",
@@ -91,7 +91,7 @@
         {
           "type": "minecraft:item",
           "name": "power:cursed_stone",
-          "weight": 5,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -171,7 +171,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:wheat",
-          "weight": 5,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",
@@ -185,7 +185,7 @@
         {
           "type": "minecraft:item",
           "name": "minecraft:cod",
-          "weight": 5,
+          "weight": 3,
           "functions": [
             {
               "function": "set_count",

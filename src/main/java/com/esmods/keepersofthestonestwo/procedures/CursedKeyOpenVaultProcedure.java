@@ -29,35 +29,37 @@ public class CursedKeyOpenVaultProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.CURSED_VAULT.get() && new Object() {
-			public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-				BlockEntity blockEntity = world.getBlockEntity(pos);
-				if (blockEntity != null)
-					return blockEntity.getPersistentData().getBoolean(tag);
-				return false;
-			}
-		}.getValue(world, BlockPos.containing(x, y, z), "isPlayer")) {
-			if ((new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+		if ((world.getBlockState(BlockPos.containing(x, y, z))).getBlock() == PowerModBlocks.CURSED_VAULT.get()) {
+			if (new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "isBlocked")) == false && (new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
+			}.getValue(world, BlockPos.containing(x, y, z), (entity.getStringUUID())) == 0 && new Object() {
+				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
 					BlockEntity blockEntity = world.getBlockEntity(pos);
 					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
+						return blockEntity.getPersistentData().getDouble(tag);
+					return -1;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "isOpen")) == false) {
+			}.getValue(world, BlockPos.containing(x, y, z), "Opened") == 0) {
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
-						_blockEntity.getPersistentData().putBoolean("isOpen", true);
+						_blockEntity.getPersistentData().putDouble((entity.getStringUUID()), 24000);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("Opened", 60);
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -90,13 +92,13 @@ public class CursedKeyOpenVaultProcedure {
 									entityToSpawn.setUnlimitedLifetime();
 									_level.addFreshEntity(entityToSpawn);
 								}
-								if (world instanceof Level _level) {
-									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
-									} else {
-										_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
-									}
-								}
+							}
+						}
+						if (world instanceof Level _level) {
+							if (!_level.isClientSide()) {
+								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
+							} else {
+								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 						final int tick2 = ticks;
@@ -107,21 +109,7 @@ public class CursedKeyOpenVaultProcedure {
 						});
 					}
 				}.timedLoop(0, 5, 10);
-			} else if (new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "isBlocked") || new Object() {
-				public boolean getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getBoolean(tag);
-					return false;
-				}
-			}.getValue(world, BlockPos.containing(x, y, z), "isOpen")) {
+			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);

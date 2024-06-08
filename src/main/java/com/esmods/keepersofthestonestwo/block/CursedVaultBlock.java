@@ -121,7 +121,7 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 		int x = pos.getX();
 		int y = pos.getY();
 		int z = pos.getZ();
-		CursedVaultTickUpdateProcedure.execute(world, x, y, z);
+		CursedVaultTickUpdateProcedure.execute(world, x, y, z, blockstate);
 		world.scheduleTick(pos, this, 1);
 	}
 
