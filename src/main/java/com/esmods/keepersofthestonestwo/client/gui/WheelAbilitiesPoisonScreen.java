@@ -34,9 +34,9 @@ public class WheelAbilitiesPoisonScreen extends AbstractContainerScreen<WheelAbi
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_toxic_acid_flow;
+	ImageButton imagebutton_poison_bomb;
+	ImageButton imagebutton_cleaning;
 
 	public WheelAbilitiesPoisonScreen(WheelAbilitiesPoisonMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +54,12 @@ public class WheelAbilitiesPoisonScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 24 && mouseY < topPos + 48)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70"), mouseX, mouseY);
 	}
 
 	@Override
@@ -172,29 +178,29 @@ public class WheelAbilitiesPoisonScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_1.png"), 46, 92, e -> {
+		imagebutton_toxic_acid_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_toxic_acid_flow.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPoisonButtonMessage(6, x, y, z));
 				WheelAbilitiesPoisonButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_2.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_toxic_acid_flow", imagebutton_toxic_acid_flow);
+		this.addRenderableWidget(imagebutton_toxic_acid_flow);
+		imagebutton_poison_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_poison_bomb.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPoisonButtonMessage(7, x, y, z));
 				WheelAbilitiesPoisonButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_3.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_poison_bomb", imagebutton_poison_bomb);
+		this.addRenderableWidget(imagebutton_poison_bomb);
+		imagebutton_cleaning = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_cleaning.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesPoisonButtonMessage(8, x, y, z));
 				WheelAbilitiesPoisonButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_cleaning", imagebutton_cleaning);
+		this.addRenderableWidget(imagebutton_cleaning);
 	}
 }

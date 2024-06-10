@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_toxic_acid_flow",
+          "image": "toxic_acid_flow.png",
+          "hoveredImage": "toxic_acid_flow_highlight.png",
           "onClick": {
             "name": "Attack137"
           },
@@ -131,9 +131,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_poison_bomb",
+          "image": "poison_bomb.png",
+          "hoveredImage": "poison_bomb_highlight.png",
           "onClick": {
             "name": "Attack138"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_cleaning",
+          "image": "cleaning.png",
+          "hoveredImage": "cleaning_highlight.png",
           "onClick": {
             "name": "Attack139"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_toxic_acid_flow_uses_15",
+          "text": {
+            "fixedValue": "Toxic acid flow, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 48
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_poison_bomb_uses_40",
+          "text": {
+            "fixedValue": "Poison bomb, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_cleaning_uses_70",
+          "text": {
+            "fixedValue": "Cleaning, uses 70"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
         }
       }
     ],

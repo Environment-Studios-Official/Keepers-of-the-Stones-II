@@ -26013,6 +26013,125 @@
         ]
       },
       "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonBomb",
+      "type": "projectile",
+      "sortid": 1190,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_bomb",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonBombRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonBombEntity.java"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "HitboxScale",
+      "type": "procedure",
+      "sortid": 1191,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "hitbox_scale",
+      "metadata": {
+        "return_type": "number",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/HitboxScaleProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonPit",
+      "type": "livingentity",
+      "sortid": 1192,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_pit",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonPitRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonPitEntity.java"
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "PoisonPitTick",
+      "type": "procedure",
+      "sortid": 1193,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "poison_pit_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PoisonPitTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
+    },
+    {
+      "name": "SpawnPoisonPit",
+      "type": "procedure",
+      "sortid": 1194,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spawn_poison_pit",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpawnPoisonPitProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Poison"
     }
   ],
   "variable_elements": [
@@ -27078,6 +27197,7 @@
       "item.power.destruction_broadsword": "Широкий меч разрушения",
       "item.power.explosion_mace": "Взрывная булава",
       "block.power.cursed_stone_bricks": "Проклятые каменные кирпичи",
+      "entity.power.poison_pit": "Ядовитая яма",
       "subtitles.backport.block.vault.insert": "",
       "death.attack.elemental_powers": "%1$s был убит силой стихии",
       "item.power.music_stone": "Камень музыки",
@@ -27155,6 +27275,7 @@
       "item.power.smithing_template.applies_to": "§7Применяется к:",
       "item.power.earth_hammer": "Земляной молот",
       "effect.power.sound_master": "Мастер звука",
+      "gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40": "Ядовитая бомба, расходует 40",
       "subtitles.ear_ringing": "Звон в ушах",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Эфир",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
@@ -27357,6 +27478,7 @@
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Взрыв гранаты, расходует 20",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Янтарь",
+      "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Очищение, расходует 70",
       "gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50": "Самоподрыв, расходует 50",
       "enchantment.power.isolation": "Изоляция",
       "item.power.fire_sword": "Меч огня",
@@ -27433,6 +27555,7 @@
       "gui.power.keepers_box_gui_part_1.tooltip_ocean": "Океан",
       "item.power.destruction_armor_helmet": "Шлем мастера разрушение",
       "block.power.keepers_box": "Шкатулка хранителя",
+      "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Поток токсичной кислоты, расходует 15",
       "power.modinfo.recharge_stone.done": "Готов к использованию",
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
@@ -27493,22 +27616,22 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
-      "item.power.time_armor_helmet": "Time Helmet",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.poison_battery": "Battery",
+      "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
@@ -27544,8 +27667,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
-      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
+      "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -27556,8 +27679,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
-      "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "item.power.moon_armor_boots": "Moon Boots",
       "item.power.animals_stone": "Animals Stone",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
@@ -27687,6 +27810,7 @@
       "item.power.destruction_broadsword": "Destruction Broadsword",
       "item.power.explosion_mace": "Explosion Mace",
       "block.power.cursed_stone_bricks": "Cursed Stone Bricks",
+      "entity.power.poison_pit": "Poison Pit",
       "subtitles.backport.block.vault.insert": "",
       "death.attack.elemental_powers": "%1$s died by elemental power",
       "item.power.music_stone": "Music Stone",
@@ -27765,6 +27889,7 @@
       "item.power.earth_hammer": "Earth Hammer",
       "item.power.energium_upgrade_smithing_template.name_upgrade": "§7Energium Upgrade",
       "effect.power.sound_master": "Master of Sound",
+      "gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40": "Poison bomb, uses 40",
       "subtitles.ear_ringing": "Ear ringing",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Ether",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
@@ -27967,6 +28092,7 @@
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Amber",
+      "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Cleaning, uses 70",
       "gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50": "Self-detonation, uses 50",
       "enchantment.power.isolation": "Isolation",
       "item.power.fire_sword": "Fire Sword",
@@ -28042,6 +28168,7 @@
       "gui.power.keepers_box_gui_part_1.tooltip_ocean": "Ocean",
       "item.power.destruction_armor_helmet": "Destruction Helmet",
       "block.power.keepers_box": "Keeper\u0027s Box",
+      "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Toxic acid flow, uses 15",
       "power.modinfo.recharge_stone.done": "Ready to use",
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
@@ -28702,7 +28829,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.26.1006241315",
+    "version": "1.0.0.26",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
