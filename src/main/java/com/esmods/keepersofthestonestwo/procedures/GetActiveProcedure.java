@@ -8,6 +8,6 @@ public class GetActiveProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true;
+		return entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true || !(entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("0");
 	}
 }

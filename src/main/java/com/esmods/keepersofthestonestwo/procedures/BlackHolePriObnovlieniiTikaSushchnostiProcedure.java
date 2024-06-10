@@ -4,13 +4,12 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import java.util.List;
 import java.util.Comparator;
 
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -35,7 +34,9 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 			final Vec3 _center = new Vec3(playerPosX, playerPosY, playerPosZ);
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
-				if (!(entityiterator instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PowerModMobEffects.SPACE_MASTER.get()))) {
+				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
+						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space"))) {
 					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 						itemPosX = entityiterator.getX();
 						itemPosY = entityiterator.getY();

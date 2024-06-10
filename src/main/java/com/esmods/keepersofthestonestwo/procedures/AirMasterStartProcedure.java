@@ -130,7 +130,7 @@ public class AirMasterStartProcedure {
 			(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.element_name_second = "air";
+				_vars.element_name_third = "air";
 				_vars.syncPlayerVariables(entity);
 			}
 		}

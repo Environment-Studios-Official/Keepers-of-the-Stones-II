@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack1Procedure;
@@ -83,15 +86,27 @@ public record WheelAbilitiesFireButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 3) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			OpenWheelTwoProcedure.execute(world, x, y, z, entity);
+			OpenWheelTwoProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
 
-			OpenWheelThreeProcedure.execute(world, x, y, z, entity);
+			OpenWheelThreeProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			OpenFakeWheelOneProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			OpenFakeWheelSecondProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
 		}
 	}
 

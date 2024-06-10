@@ -297,6 +297,38 @@
           "x": 172,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_explosion_element",
+          "image": "explosion_element.png",
+          "hoveredImage": "explosion_element_highlighted.png",
+          "onClick": {
+            "name": "ExplosionElementGet"
+          },
+          "displayCondition": {
+            "name": "ExplosionStoneCheck"
+          },
+          "x": 218,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_explosion",
+          "text": {
+            "fixedValue": "Explosion"
+          },
+          "displayCondition": {
+            "name": "ExplosionStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {

@@ -101,6 +101,9 @@
     "stepSound": {
       "value": "entity.irongolem.step"
     },
+    "whenMobDies": {
+      "name": "EnergiumGolemPriGibieliSushchnosti"
+    },
     "onMobTickUpdate": {
       "name": "EnergiumGolemPriObnovlieniiTikaSushchnosti"
     },

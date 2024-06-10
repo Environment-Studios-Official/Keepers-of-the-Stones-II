@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierBlockBlock;
+import com.esmods.keepersofthestonestwo.block.AmberBlockBlock;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModBlocks {
@@ -40,6 +41,7 @@ public class PowerModBlocks {
 	public static final DeferredHolder<Block, Block> RAW_AMPLIFIER_BLOCK = REGISTRY.register("raw_amplifier_block", () -> new RawAmplifierBlockBlock());
 	public static final DeferredHolder<Block, Block> BLUE_PORTAL = REGISTRY.register("blue_portal", () -> new BluePortalBlock());
 	public static final DeferredHolder<Block, Block> ORANGE_PORTAL = REGISTRY.register("orange_portal", () -> new OrangePortalBlock());
+	public static final DeferredHolder<Block, Block> AMBER_BLOCK = REGISTRY.register("amber_block", () -> new AmberBlockBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -233,6 +233,38 @@
           "x": 262,
           "y": 91
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_amber_element",
+          "image": "amber_element.png",
+          "hoveredImage": "amber_element_highlighted.png",
+          "onClick": {
+            "name": "AmberElementGet"
+          },
+          "displayCondition": {
+            "name": "AmberStoneCheck"
+          },
+          "x": 175,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_amber",
+          "text": {
+            "fixedValue": "Amber"
+          },
+          "displayCondition": {
+            "name": "AmberStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

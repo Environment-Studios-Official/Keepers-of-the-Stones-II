@@ -17,7 +17,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumBlockPowerLockProcedu
 
 public class EnergiumBlockBlock extends Block {
 	public EnergiumBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 5f).requiresCorrectToolForDrops());
 	}
 
 	@Override

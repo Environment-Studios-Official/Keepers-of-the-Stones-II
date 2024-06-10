@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AmberElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -97,6 +98,10 @@ public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 7) {
 
 			PlantsElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 8) {
+
+			AmberElementGetProcedure.execute(world, entity);
 		}
 	}
 

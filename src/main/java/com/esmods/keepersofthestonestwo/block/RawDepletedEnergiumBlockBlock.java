@@ -12,7 +12,7 @@ import net.minecraft.core.BlockPos;
 
 public class RawDepletedEnergiumBlockBlock extends Block {
 	public RawDepletedEnergiumBlockBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 250f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(6.75f, 5f).requiresCorrectToolForDrops());
 	}
 
 	@Override

@@ -28,6 +28,7 @@ import java.util.ArrayList;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModTabs;
 import com.esmods.keepersofthestonestwo.init.PowerModSounds;
+import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
@@ -55,6 +56,7 @@ public class PowerMod {
 		PowerModTabs.REGISTRY.register(modEventBus);
 		PowerModVariables.ATTACHMENT_TYPES.register(modEventBus);
 
+		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
 		PowerModEnchantments.REGISTRY.register(modEventBus);
 		PowerModMenus.REGISTRY.register(modEventBus);
