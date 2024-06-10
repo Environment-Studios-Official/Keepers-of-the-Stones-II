@@ -4,7 +4,7 @@ plugins {
     id 'net.neoforged.gradle.userdev' version '7.0.105'
 }
 
-version = '1.0.0.24'
+version = '1.0.0.25'
 group = 'com.yourname.modid'
 base.archivesName = "Keepers-of-the-Stones-II"
 
