@@ -261,16 +261,17 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_ice_element", imagebutton_ice_element);
 		this.addRenderableWidget(imagebutton_ice_element);
-		imagebutton_explosion_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_explosion_element.png"), 16, 32, e -> {
-			if (ExplosionStoneCheckProcedure.execute(world)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(10, x, y, z));
-				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 10, x, y, z);
-			}
-		}) {
+		imagebutton_explosion_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/explosion_element.png"), new ResourceLocation("power:textures/screens/explosion_element_highlighted.png")), e -> {
+					if (ExplosionStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart1ButtonMessage(10, x, y, z));
+						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (ExplosionStoneCheckProcedure.execute(world))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_explosion_element", imagebutton_explosion_element);

@@ -88,25 +88,19 @@ public class DetransformationKeyUseProcedure {
 				}
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_first = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_first = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_second = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_second = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_third = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_third = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 		});
 	}
