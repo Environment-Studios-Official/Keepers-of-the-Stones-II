@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructio
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack103Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack102Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack101Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesDestructionButtonMessage(int buttonID, int x, int y,
 		}
 		if (buttonID == 3) {
 
-			Attack101Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack102Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack101Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack102Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack103Procedure.execute(entity);
 		}

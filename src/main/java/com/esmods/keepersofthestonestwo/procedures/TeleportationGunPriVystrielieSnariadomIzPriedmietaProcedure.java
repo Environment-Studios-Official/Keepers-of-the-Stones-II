@@ -24,6 +24,6 @@ public class TeleportationGunPriVystrielieSnariadomIzPriedmietaProcedure {
 			(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 		}
 		if (entity instanceof Player _player)
-			_player.getCooldowns().addCooldown(PowerModItems.TELEPORTATION_GUN.get(), 45);
+			_player.getCooldowns().addCooldown(PowerModItems.TELEPORTATION_GUN.get(), 30);
 	}
 }

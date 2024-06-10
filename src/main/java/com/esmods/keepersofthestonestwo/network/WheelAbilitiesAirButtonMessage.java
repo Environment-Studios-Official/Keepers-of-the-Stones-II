@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack7Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack6Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack5Procedure;
@@ -92,6 +95,18 @@ public record WheelAbilitiesAirButtonMessage(int buttonID, int x, int y, int z) 
 		if (buttonID == 5) {
 
 			OpenWheelThreeProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			OpenFakeWheelOneProcedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			OpenFakeWheelSecondProcedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
 		}
 	}
 

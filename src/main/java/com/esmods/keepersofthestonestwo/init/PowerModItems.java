@@ -47,10 +47,6 @@ import com.esmods.keepersofthestonestwo.item.TechnoPickaxeItem;
 import com.esmods.keepersofthestonestwo.item.SunStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
-import com.esmods.keepersofthestonestwo.item.StarPotionInfinityItem;
-import com.esmods.keepersofthestonestwo.item.StarPotion50Item;
-import com.esmods.keepersofthestonestwo.item.StarPotion25Item;
-import com.esmods.keepersofthestonestwo.item.StarPotion100Item;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpaceStoneItem;
@@ -178,8 +174,12 @@ import com.esmods.keepersofthestonestwo.item.AnimalsStoneItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsHalberdItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.AnimalsArmorItem;
+import com.esmods.keepersofthestonestwo.item.AmplifierRingItem;
 import com.esmods.keepersofthestonestwo.item.AmplifierDropItem;
 import com.esmods.keepersofthestonestwo.item.AmberStoneItem;
+import com.esmods.keepersofthestonestwo.item.AmberStaffItem;
+import com.esmods.keepersofthestonestwo.item.AmberBatteryItem;
+import com.esmods.keepersofthestonestwo.item.AmberArmorItem;
 import com.esmods.keepersofthestonestwo.item.AirStoneItem;
 import com.esmods.keepersofthestonestwo.item.AirRapierItem;
 import com.esmods.keepersofthestonestwo.item.AirBatteryItem;
@@ -326,7 +326,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> ETHER_BATTERY = REGISTRY.register("ether_battery", () -> new EtherBatteryItem());
 	public static final RegistryObject<Item> ICE_BATTERY = REGISTRY.register("ice_battery", () -> new IceBatteryItem());
 	public static final RegistryObject<Item> LIGHTNING_BATTERY = REGISTRY.register("lightning_battery", () -> new LightningBatteryItem());
-	public static final RegistryObject<Item> STAR_POTION_100 = REGISTRY.register("star_potion_100", () -> new StarPotion100Item());
 	public static final RegistryObject<Item> RIGHT_METAL_GAUNTLET = REGISTRY.register("right_metal_gauntlet", () -> new RightMetalGauntletItem());
 	public static final RegistryObject<Item> LEFT_METAL_GAUNTLET = REGISTRY.register("left_metal_gauntlet", () -> new LeftMetalGauntletItem());
 	public static final RegistryObject<Item> SOUND_BATTERY = REGISTRY.register("sound_battery", () -> new SoundBatteryItem());
@@ -394,7 +393,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MOON_BATTERY = REGISTRY.register("moon_battery", () -> new MoonBatteryItem());
 	public static final RegistryObject<Item> MOON_DOUBLE_SIDED_SPEAR = REGISTRY.register("moon_double_sided_spear", () -> new MoonDoubleSidedSpearItem());
 	public static final RegistryObject<Item> MOON_BLOCK = block(PowerModBlocks.MOON_BLOCK);
-	public static final RegistryObject<Item> STAR_POTION_INFINITY = REGISTRY.register("star_potion_infinity", () -> new StarPotionInfinityItem());
 	public static final RegistryObject<Item> SPACE_ARMOR_HELMET = REGISTRY.register("space_armor_helmet", () -> new SpaceArmorItem.Helmet());
 	public static final RegistryObject<Item> SPACE_ARMOR_CHESTPLATE = REGISTRY.register("space_armor_chestplate", () -> new SpaceArmorItem.Chestplate());
 	public static final RegistryObject<Item> SPACE_ARMOR_LEGGINGS = REGISTRY.register("space_armor_leggings", () -> new SpaceArmorItem.Leggings());
@@ -417,8 +415,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> AMPLIFIER_ORE = block(PowerModBlocks.AMPLIFIER_ORE);
 	public static final RegistryObject<Item> AMPLIFIER_DROP = REGISTRY.register("amplifier_drop", () -> new AmplifierDropItem());
 	public static final RegistryObject<Item> RAW_AMPLIFIER = REGISTRY.register("raw_amplifier", () -> new RawAmplifierItem());
-	public static final RegistryObject<Item> STAR_POTION_50 = REGISTRY.register("star_potion_50", () -> new StarPotion50Item());
-	public static final RegistryObject<Item> STAR_POTION_25 = REGISTRY.register("star_potion_25", () -> new StarPotion25Item());
 	public static final RegistryObject<Item> CREATION_SWORD = REGISTRY.register("creation_sword", () -> new CreationSwordItem());
 	public static final RegistryObject<Item> CREATION_PICKAXE = REGISTRY.register("creation_pickaxe", () -> new CreationPickaxeItem());
 	public static final RegistryObject<Item> CREATION_AXE = REGISTRY.register("creation_axe", () -> new CreationAxeItem());
@@ -460,6 +456,14 @@ public class PowerModItems {
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_BOOTS = REGISTRY.register("explosion_armor_boots", () -> new ExplosionArmorItem.Boots());
 	public static final RegistryObject<Item> EXPLOSION_BATTERY = REGISTRY.register("explosion_battery", () -> new ExplosionBatteryItem());
 	public static final RegistryObject<Item> EXPLOSION_MACE = REGISTRY.register("explosion_mace", () -> new ExplosionMaceItem());
+	public static final RegistryObject<Item> AMBER_ARMOR_HELMET = REGISTRY.register("amber_armor_helmet", () -> new AmberArmorItem.Helmet());
+	public static final RegistryObject<Item> AMBER_ARMOR_CHESTPLATE = REGISTRY.register("amber_armor_chestplate", () -> new AmberArmorItem.Chestplate());
+	public static final RegistryObject<Item> AMBER_ARMOR_LEGGINGS = REGISTRY.register("amber_armor_leggings", () -> new AmberArmorItem.Leggings());
+	public static final RegistryObject<Item> AMBER_ARMOR_BOOTS = REGISTRY.register("amber_armor_boots", () -> new AmberArmorItem.Boots());
+	public static final RegistryObject<Item> AMBER_BATTERY = REGISTRY.register("amber_battery", () -> new AmberBatteryItem());
+	public static final RegistryObject<Item> AMBER_STAFF = REGISTRY.register("amber_staff", () -> new AmberStaffItem());
+	public static final RegistryObject<Item> AMBER_BLOCK = block(PowerModBlocks.AMBER_BLOCK);
+	public static final RegistryObject<Item> AMPLIFIER_RING = REGISTRY.register("amplifier_ring", () -> new AmplifierRingItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

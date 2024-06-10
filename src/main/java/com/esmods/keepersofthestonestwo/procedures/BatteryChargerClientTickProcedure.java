@@ -2,8 +2,10 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.BlockPos;
+
+import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 
 public class BatteryChargerClientTickProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -17,10 +19,10 @@ public class BatteryChargerClientTickProcedure {
 			}
 		}.getValue(world, BlockPos.containing(x, y, z), "craftingProgress") > 0) {
 			if (Math.random() < 0.2) {
-				world.addParticle(ParticleTypes.ELECTRIC_SPARK, (x + 0.5), (y + 1), (z + 0.5), 0.5, 0.1, 0.5);
-				world.addParticle(ParticleTypes.ELECTRIC_SPARK, (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, 0.5);
-				world.addParticle(ParticleTypes.ELECTRIC_SPARK, (x + 0.5), (y + 1), (z + 0.5), 0.5, 0.1, (-0.5));
-				world.addParticle(ParticleTypes.ELECTRIC_SPARK, (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, (-0.5));
+				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), 0.5, 0.1, 0.5);
+				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, 0.5);
+				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), 0.5, 0.1, (-0.5));
+				world.addParticle((SimpleParticleType) (PowerModParticleTypes.ENERGY_SPARK.get()), (x + 0.5), (y + 1), (z + 0.5), (-0.5), 0.1, (-0.5));
 			}
 		}
 	}

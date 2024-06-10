@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack51Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack50Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack49Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesOceanButtonMessage(int buttonID, int x, int y, int z
 		}
 		if (buttonID == 3) {
 
-			Attack49Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack50Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack49Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack50Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack51Procedure.execute(entity);
 		}

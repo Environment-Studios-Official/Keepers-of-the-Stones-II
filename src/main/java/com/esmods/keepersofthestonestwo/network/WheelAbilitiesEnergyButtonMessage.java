@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEnergyMenu
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack79Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack78Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack77Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesEnergyButtonMessage(int buttonID, int x, int y, int 
 		}
 		if (buttonID == 3) {
 
-			Attack77Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack79Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack77Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack79Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack78Procedure.execute(entity);
 		}

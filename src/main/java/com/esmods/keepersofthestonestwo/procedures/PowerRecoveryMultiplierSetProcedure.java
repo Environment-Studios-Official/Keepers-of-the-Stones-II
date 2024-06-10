@@ -1,6 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.network.chat.Component;
 import net.minecraft.commands.arguments.EntityArgument;
 import net.minecraft.commands.CommandSourceStack;
 
@@ -11,29 +13,23 @@ import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class PowerRecoveryMultiplierSetProcedure {
-	public static void execute(CommandContext<CommandSourceStack> arguments) {
-		{
-			PowerModVariables.PlayerVariables _vars = (new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "player");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
+	public static void execute(CommandContext<CommandSourceStack> arguments, Entity entity) {
+		if (entity == null)
+			return;
+		try {
+			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
+				{
+					double _setval = DoubleArgumentType.getDouble(arguments, "count");
+					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.power_recovery_multiplier = _setval;
+						capability.syncPlayerVariables(entityiterator);
+					});
 				}
-			}.getEntity()).getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.power_recovery_multiplier = DoubleArgumentType.getDouble(arguments, "count");
-			_vars.syncPlayerVariables((new Object() {
-				public Entity getEntity() {
-					try {
-						return EntityArgument.getEntity(arguments, "player");
-					} catch (CommandSyntaxException e) {
-						e.printStackTrace();
-						return null;
-					}
-				}
-			}.getEntity()));
+				if (entity instanceof Player _player && !_player.level().isClientSide())
+					_player.displayClientMessage(Component.literal(("The star points recovery multiplier is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);
+			}
+		} catch (CommandSyntaxException e) {
+			e.printStackTrace();
 		}
 	}
 }

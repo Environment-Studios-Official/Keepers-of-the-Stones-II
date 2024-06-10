@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningM
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack27Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack26Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack25Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, i
 		}
 		if (buttonID == 3) {
 
-			Attack25Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack26Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack25Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack26Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack27Procedure.execute(entity);
 		}

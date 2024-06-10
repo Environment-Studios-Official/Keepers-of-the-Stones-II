@@ -1,0 +1,21 @@
+{
+  "_fv": 60,
+  "_type": "potion",
+  "definition": {
+    "potionName": "Potion of Star Regeneration",
+    "splashName": "Splash Potion of Star Regeneration",
+    "lingeringName": "Lingering Potion of Star Regeneration",
+    "arrowName": "Arrow of Star Regeneration",
+    "effects": [
+      {
+        "effect": {
+          "value": "CUSTOM:StarRegeneration"
+        },
+        "duration": 900,
+        "amplifier": 0,
+        "ambient": false,
+        "showParticles": true
+      }
+    ]
+  }
+}

@@ -46,6 +46,6 @@ public class CrystalStoneItem extends Item {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		RechargeStoneTickEventProcedure.execute(world, itemstack);
+		RechargeStoneTickEventProcedure.execute(itemstack);
 	}
 }

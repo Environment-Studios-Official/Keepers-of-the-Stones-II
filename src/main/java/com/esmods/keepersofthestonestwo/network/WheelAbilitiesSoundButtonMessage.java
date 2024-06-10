@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack31Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack30Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack29Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesSoundButtonMessage(int buttonID, int x, int y, int z
 		}
 		if (buttonID == 3) {
 
-			Attack29Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack30Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack29Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack30Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack31Procedure.execute(entity);
 		}

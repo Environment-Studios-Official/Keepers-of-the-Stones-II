@@ -21,6 +21,9 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack43Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack42Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack41Procedure;
@@ -83,13 +86,25 @@ public record WheelAbilitiesRainButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 3) {
 
-			Attack41Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack42Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack41Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack42Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack43Procedure.execute(entity);
 		}
