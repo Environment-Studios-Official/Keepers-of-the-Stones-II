@@ -12,6 +12,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -98,6 +100,53 @@ public class PoisonSpecialAttackProcedure {
 				}
 				{
 					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.power = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
+		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("poison_attack_3")) {
+			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 70) {
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.bubble_pop")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.bubble_pop")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+				particleAmount = 8;
+				particleRadius = 2;
+				for (int index1 = 0; index1 < 60; index1++) {
+					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.POISON_PARTICLE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+					}
+				}
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.BAD_OMEN);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.BLINDNESS);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.HUNGER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.CONFUSION);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.WEAKNESS);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.WITHER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.UNLUCK);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.WHIRLWIND.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.LETHALITY.get());
+				{
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 70;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 						capability.power = _setval;
 						capability.syncPlayerVariables(entity);
