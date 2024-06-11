@@ -104,6 +104,7 @@ import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
+import com.esmods.keepersofthestonestwo.item.MagnetArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagicFireballItem;
 import com.esmods.keepersofthestonestwo.item.LightningStoneItem;
 import com.esmods.keepersofthestonestwo.item.LightningFalchionItem;
@@ -523,6 +524,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_ARMOR_BOOTS = REGISTRY.register("poison_armor_boots", () -> new PoisonArmorItem.Boots());
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 	public static final RegistryObject<Item> POISON_BOW = REGISTRY.register("poison_bow", () -> new PoisonBowItem());
+	public static final RegistryObject<Item> MAGNET_ARMOR_HELMET = REGISTRY.register("magnet_armor_helmet", () -> new MagnetArmorItem.Helmet());
+	public static final RegistryObject<Item> MAGNET_ARMOR_CHESTPLATE = REGISTRY.register("magnet_armor_chestplate", () -> new MagnetArmorItem.Chestplate());
+	public static final RegistryObject<Item> MAGNET_ARMOR_LEGGINGS = REGISTRY.register("magnet_armor_leggings", () -> new MagnetArmorItem.Leggings());
+	public static final RegistryObject<Item> MAGNET_ARMOR_BOOTS = REGISTRY.register("magnet_armor_boots", () -> new MagnetArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items
