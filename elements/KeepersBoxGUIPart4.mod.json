@@ -265,6 +265,70 @@
           "x": 171,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_sand_element",
+          "image": "sand_element.png",
+          "hoveredImage": "sand_element_highlighted.png",
+          "onClick": {
+            "name": "SandElementGet"
+          },
+          "displayCondition": {
+            "name": "SandStoneCheck"
+          },
+          "x": 243,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sand",
+          "text": {
+            "fixedValue": "Sand"
+          },
+          "displayCondition": {
+            "name": "SandStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 239,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_poison_element",
+          "image": "poison_element.png",
+          "hoveredImage": "poison_element_highlighted.png",
+          "onClick": {
+            "name": "PoisonElementGet"
+          },
+          "displayCondition": {
+            "name": "PoisonStoneCheck"
+          },
+          "x": 151,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_poison",
+          "text": {
+            "fixedValue": "Poison"
+          },
+          "displayCondition": {
+            "name": "PoisonStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

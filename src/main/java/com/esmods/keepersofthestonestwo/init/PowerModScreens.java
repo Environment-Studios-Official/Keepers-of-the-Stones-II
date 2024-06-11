@@ -18,13 +18,17 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTimeScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTeleportationScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTechnologyScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSunScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpeedScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSpaceScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSoundScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesShadowScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSandScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPoisonScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMistScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
@@ -89,6 +93,10 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_TELEPORTATION.get(), WheelAbilitiesTeleportationScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_EXPLOSION.get(), WheelAbilitiesExplosionScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_AMBER.get(), WheelAbilitiesAmberScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MIST.get(), WheelAbilitiesMistScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SAND.get(), WheelAbilitiesSandScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SPEED.get(), WheelAbilitiesSpeedScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_POISON.get(), WheelAbilitiesPoisonScreen::new);
 		});
 	}
 }

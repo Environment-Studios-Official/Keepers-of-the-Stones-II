@@ -1,0 +1,9 @@
+{
+  "parent": "power:custom/cursed_lantern",
+  "textures": {
+    "all": "power:block/cursed_lantern",
+    "particle": "power:block/cursed_lantern",
+    "0": "power:block/cursed_lantern"
+  },
+  "render_type": "cutout_mipped"
+}

@@ -45,6 +45,28 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
+				tabData.accept(PowerModBlocks.COPYRIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_COPYRIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.COPYRIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.ELEMENTAL_POWER_GENERATOR.get().asItem());
+				tabData.accept(PowerModItems.RAW_COPYRIUM.get());
+				tabData.accept(PowerModItems.COPYRIUM_INGOT.get());
+				tabData.accept(PowerModBlocks.CURSED_STONE.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_PILLAR.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_STAIRS.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_SLAB.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_WALL.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_STONE_BRICKS_WALL.get().asItem());
+				tabData.accept(PowerModBlocks.POLISHED_CURSED_STONE_WALL.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_LANTERN.get().asItem());
+				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
+				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.EMPTY_BATTERY.get());
 				tabData.accept(PowerModItems.FIRE_BATTERY.get());
 				tabData.accept(PowerModItems.AIR_BATTERY.get());
@@ -77,6 +99,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TELEPORTATION_BATTERY.get());
 				tabData.accept(PowerModItems.EXPLOSION_BATTERY.get());
 				tabData.accept(PowerModItems.AMBER_BATTERY.get());
+				tabData.accept(PowerModItems.MIST_BATTERY.get());
+				tabData.accept(PowerModItems.SAND_BATTERY.get());
+				tabData.accept(PowerModItems.SPEED_BATTERY.get());
+				tabData.accept(PowerModItems.POISON_BATTERY.get());
 			})
 
 					.build());
@@ -113,6 +139,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.TELEPORTATION_STONE.get());
 				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
 				tabData.accept(PowerModItems.AMBER_STONE.get());
+				tabData.accept(PowerModItems.MIST_STONE.get());
+				tabData.accept(PowerModItems.SAND_STONE.get());
+				tabData.accept(PowerModItems.SPEED_STONE.get());
+				tabData.accept(PowerModItems.POISON_STONE.get());
 			})
 
 					.build());

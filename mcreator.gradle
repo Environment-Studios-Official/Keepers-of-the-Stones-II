@@ -1,4 +1,15 @@
 repositories {
+  maven {
+    url = "https://cursemaven.com"
+  }
+}
+
+dependencies {
+  implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:5083323")
+}
+
+
+repositories {
     maven {
         url "https://www.cursemaven.com"
         content {
@@ -62,6 +73,20 @@ repositories {
  dependencies {
    implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
  }
+
+
+repositories {
+    maven {
+        url "https://www.cursemaven.com"
+        content {
+            includeGroup "curse.maven"
+        }
+    }
+}
+dependencies {
+   compileOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+   runtimeOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+}
 
 
 repositories {

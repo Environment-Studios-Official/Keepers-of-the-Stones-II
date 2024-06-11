@@ -1,17 +1,23 @@
-What's new in Keepers of the Stones II version 1.0.0.24?<br />
-<br />- Added new element - amber
-<br />- Added a new argument for the pw command - fake_element
-<br />- All arguments to the pw command can now use multiple targets for application
-<br />- The pw command now displays a message in chat when executed
-<br />- Removed the star potions with the addition of star points
-<br />- Added star regeneration potion
-<br />- Added amplifer ring
-<br />- The amplifer Ring removes 30 sec of recharge from the stone when used in a second hand 
-<br />- Nuclear rocket's blast radius has been reduced
-<br />- The reloading time of the teleportation gun has been reduced
-<br />- The explosion power of the master of the sun has been reduced
-<br />- Battery charging particles in the battery charger have been updated
-<br />- The batteries are now visually displayed on the battery charger
-<br />- [Bugfix] Fixed a bug that caused players to lose items from their inventory when they died from a shot from the core of an energium golem
-<br />- [Bugfix] Fixed a bug with combining stones with an air stone
-<br />- [Bugfix] Fixed explosion resistance for some blocks
+What's new in Keepers of the Stones II version 1.0.0.26?<br />
+<br />- Added new element - mist, sand and speed
+<br />- Added cursed stone and more blocks from it
+<br />- Added cursed lantern
+<br />- Added cursed vault and cursed key (Many thanks to Hrumer for the help)
+<br />- Added copyrium ore
+<br />- Elemental power generator can save powers and distribute for another players (players can save elemental energy for 2.5 minutes)
+<br />- Added a new option for the fake_element argument - timer
+<br />- Added particles for Blood master abilities
+<br />- Added new achievements
+<br />- A full set of Energy Armor now gives a power lock effect to entities in a 3 block radius
+<br />- The Energium golem now throws up during a close-range attack
+<br />- The radius along the X and Y axes has been increased and the offset along the Y axis by 0.25 for the shot from the core of the Energium Golem
+<br />- Reduced the hitbox of the energium golem
+<br />- Added a recipe for an amplifier ring
+<br />- The amplifier ring now completely resets the recharge of the stone
+<br />- Visualization for the third ability of amber and ice has been returned
+<br />- Epic Fight support has been removed due to conflicts with other mods
+<br />- [Bugfix] Fixed a bug that caused a destruction stone to be given out when selecting a destruction stone from a casket.
+<br />- [Bugfix] Fixed a crash when an item is rendered on the battery charger
+<br />- [Bugfix] Fixed a bug where the amplifier ring was spent just like that
+<br />- [Bugfix] Fixed a bug that caused star points to decrease to negative values when using the first amber ability
+<br />- [Bugfix] Fixed a bug with items disappearing from inventory after death from a blow from the hands of an energium golem

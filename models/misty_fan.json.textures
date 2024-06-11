@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "misty_fan"
+      },
+      "name": "default"
+    }
+  }
+}

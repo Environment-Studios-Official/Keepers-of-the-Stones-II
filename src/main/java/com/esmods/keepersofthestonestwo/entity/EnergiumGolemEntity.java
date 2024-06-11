@@ -73,7 +73,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 1000;
 		setNoAi(false);
-		setMaxUpStep(0.6f);
+		setMaxUpStep(1f);
 		setPersistenceRequired();
 	}
 

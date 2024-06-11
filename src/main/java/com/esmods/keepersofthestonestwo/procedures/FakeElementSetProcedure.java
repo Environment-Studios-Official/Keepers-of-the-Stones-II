@@ -27,6 +27,20 @@ public class FakeElementSetProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
+					{
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					{
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_first_timer = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
 				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 2) {
 					{
 						String _setval = StringArgumentType.getString(arguments, "element_name");
@@ -35,11 +49,39 @@ public class FakeElementSetProcedure {
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}
+					{
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					{
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_second_timer = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
 				} else if (DoubleArgumentType.getDouble(arguments, "element_order") == 3) {
 					{
 						String _setval = StringArgumentType.getString(arguments, "element_name");
 						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 							capability.fake_element_name_third = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					{
+						boolean _setval = true;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.power_recorded = _setval;
+							capability.syncPlayerVariables(entityiterator);
+						});
+					}
+					{
+						double _setval = DoubleArgumentType.getDouble(arguments, "time") * 20;
+						entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.fake_element_name_third_timer = _setval;
 							capability.syncPlayerVariables(entityiterator);
 						});
 					}

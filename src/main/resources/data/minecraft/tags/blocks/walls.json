@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "power:polished_cursed_stone_wall",
+    "power:cursed_stone_bricks_wall",
+    "power:cursed_stone_wall"
+  ]
+}
