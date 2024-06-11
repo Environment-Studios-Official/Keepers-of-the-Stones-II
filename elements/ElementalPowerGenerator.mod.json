@@ -58,12 +58,13 @@
     "material": {
       "value": "IRON"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
-    "canProvidePower": false,
+    "canProvidePower": true,
     "emittedRedstonePower": {
-      "fixedValue": 15.0
+      "fixedValue": 15.0,
+      "name": "ElementalPowerGeneratorRedstoneSignal"
     },
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
@@ -124,6 +125,9 @@
     },
     "onBlockAdded": {
       "name": "ElementalPowerGeneratorBuild"
+    },
+    "onTickUpdate": {
+      "name": "ElementalPowerGeneratorRegenerationStarsTick"
     },
     "generateFeature": false,
     "restrictionBiomes": [],

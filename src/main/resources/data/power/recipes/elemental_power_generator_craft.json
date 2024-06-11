@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "abc",
+    "bbb",
+    "cbc"
+  ],
+  "key": {
+    "a": {
+      "item": "power:amplifier_drop"
+    },
+    "b": {
+      "item": "power:copyrium_ingot"
+    },
+    "c": {
+      "item": "power:amplifier_drop"
+    }
+  },
+  "result": {
+    "item": "power:elemental_power_generator",
+    "count": 1
+  }
+}

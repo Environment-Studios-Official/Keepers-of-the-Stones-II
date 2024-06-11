@@ -1,7 +1,13 @@
 
 package com.esmods.keepersofthestonestwo.block;
 
+import org.checkerframework.checker.units.qual.s;
+
+import net.minecraft.world.phys.shapes.VoxelShape;
+import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.state.properties.IntegerProperty;
+import net.minecraft.world.level.block.state.StateDefinition;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.entity.BlockEntity;
@@ -16,21 +22,57 @@ import net.minecraft.world.MenuProvider;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.Containers;
+import net.minecraft.util.RandomSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorSaveElementalPowerProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorRegenerationStarsTickProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorRedstoneSignalProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ElementalPowerGeneratorBuildProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBlockEntity;
 
 public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
+	public static final IntegerProperty BLOCKSTATE = IntegerProperty.create("blockstate", 0, 1);
+
 	public ElementalPowerGeneratorBlock() {
-		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f).requiresCorrectToolForDrops());
+		super(BlockBehaviour.Properties.of().sound(SoundType.METAL).strength(5f).lightLevel(s -> (new Object() {
+			public int getLightLevel() {
+				if (s.getValue(BLOCKSTATE) == 1)
+					return 7;
+				return 0;
+			}
+		}.getLightLevel())).requiresCorrectToolForDrops());
 	}
 
 	@Override
 	public int getLightBlock(BlockState state, BlockGetter worldIn, BlockPos pos) {
 		return 15;
+	}
+
+	@Override
+	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
+		return box(0, 0, 0, 16, 16, 16);
+	}
+
+	@Override
+	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		builder.add(BLOCKSTATE);
+	}
+
+	@Override
+	public boolean isSignalSource(BlockState state) {
+		return true;
+	}
+
+	@Override
+	public int getSignal(BlockState blockstate, BlockGetter blockAccess, BlockPos pos, Direction direction) {
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		Level world = (Level) blockAccess;
+		return (int) ElementalPowerGeneratorRedstoneSignalProcedure.execute(world, x, y, z);
 	}
 
 	@Override
@@ -43,7 +85,18 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 	@Override
 	public void onPlace(BlockState blockstate, Level world, BlockPos pos, BlockState oldState, boolean moving) {
 		super.onPlace(blockstate, world, pos, oldState, moving);
+		world.scheduleTick(pos, this, 1);
 		ElementalPowerGeneratorBuildProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
+	}
+
+	@Override
+	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
+		super.tick(blockstate, world, pos, random);
+		int x = pos.getX();
+		int y = pos.getY();
+		int z = pos.getZ();
+		ElementalPowerGeneratorRegenerationStarsTickProcedure.execute(world, x, y, z);
+		world.scheduleTick(pos, this, 1);
 	}
 
 	@Override
