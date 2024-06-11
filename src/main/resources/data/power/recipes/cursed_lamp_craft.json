@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "aaa",
+    "aba",
+    "aaa"
+  ],
+  "key": {
+    "a": {
+      "item": "power:cursed_stone_bricks"
+    },
+    "b": {
+      "item": "power:amplifier_block"
+    }
+  },
+  "result": {
+    "item": "power:cursed_lamp",
+    "count": 3
+  }
+}

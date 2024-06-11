@@ -532,6 +532,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MAGNET_ARMOR_BOOTS = REGISTRY.register("magnet_armor_boots", () -> new MagnetArmorItem.Boots());
 	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
 	public static final RegistryObject<Item> MAGNET_CLAWS = REGISTRY.register("magnet_claws", () -> new MagnetClawsItem());
+	public static final RegistryObject<Item> CURSED_LADDER = block(PowerModBlocks.CURSED_LADDER);
+	public static final RegistryObject<Item> CURSED_LAMP = block(PowerModBlocks.CURSED_LAMP);
 
 	// Start of user code block custom items
 	// End of user code block custom items

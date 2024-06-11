@@ -2,45 +2,45 @@
   "_fv": 60,
   "_type": "block",
   "definition": {
-    "texture": "raw_amplifier_block",
+    "texture": "cursed_ladder",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
-    "rotationMode": 0,
+    "renderType": 2,
+    "customModelName": "vine:default",
+    "rotationMode": 3,
     "enablePitch": false,
     "emissiveRendering": false,
     "displayFluidOverlay": false,
-    "itemTexture": "",
+    "itemTexture": "cursed_ladder",
     "particleTexture": "",
     "tintType": "No tint",
     "isItemTinted": false,
-    "hasTransparency": false,
+    "hasTransparency": true,
     "connectedSides": false,
-    "transparencyType": "SOLID",
+    "transparencyType": "CUTOUT",
     "disableOffset": false,
     "boundingBoxes": [
       {
         "mx": 0.0,
         "my": 0.0,
-        "mz": 0.0,
+        "mz": 15.4,
         "Mx": 16.0,
         "My": 16.0,
-        "Mz": 16.0,
+        "Mz": 15.8,
         "subtract": false
       }
     ],
-    "name": "Raw Amplifier Block",
+    "name": "Cursed Ladder",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 6.75,
-    "resistance": 5.0,
+    "hardness": 2.5,
+    "resistance": 3.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:Items"
     },
@@ -54,7 +54,7 @@
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 15,
+    "lightOpacity": 0,
     "material": {
       "value": "ROCK"
     },
@@ -73,15 +73,15 @@
     "aiPathNodeType": "DEFAULT",
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "isLadder": false,
+    "isLadder": true,
     "slipperiness": 0.6,
     "speedFactor": 1.0,
     "jumpFactor": 1.0,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": false,
+    "isNotColidable": true,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "TUFF"
     },
     "breakSound": {
       "value": ""
@@ -98,9 +98,12 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 4,
+    "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 0,
+    "placingCondition": {
+      "name": "CursedLadderRotation"
+    },
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -120,20 +123,16 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "generateFeature": false,
-    "restrictionBiomes": [
-      {
-        "value": "#is_ocean"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "TAG:stone_ore_replaceables"
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 11,
-    "frequencyOnChunk": 7,
-    "minGenerateHeight": 32,
-    "maxGenerateHeight": 128
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
   }
 }

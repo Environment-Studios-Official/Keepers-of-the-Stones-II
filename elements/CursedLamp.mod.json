@@ -2,14 +2,14 @@
   "_fv": 60,
   "_type": "block",
   "definition": {
-    "texture": "raw_amplifier_block",
+    "texture": "cursed_lamp",
     "textureTop": "",
     "textureLeft": "",
     "textureFront": "",
     "textureRight": "",
     "textureBack": "",
-    "renderType": 11,
-    "customModelName": "Single texture",
+    "renderType": 10,
+    "customModelName": "Normal",
     "rotationMode": 0,
     "enablePitch": false,
     "emissiveRendering": false,
@@ -33,14 +33,14 @@
         "subtract": false
       }
     ],
-    "name": "Raw Amplifier Block",
+    "name": "Cursed Lamp",
     "specialInformation": {
       "fixedValue": []
     },
-    "hardness": 6.75,
-    "resistance": 5.0,
+    "hardness": 2.5,
+    "resistance": 3.0,
     "hasGravity": false,
-    "isWaterloggable": false,
+    "isWaterloggable": true,
     "creativeTab": {
       "value": "CUSTOM:Items"
     },
@@ -50,13 +50,13 @@
     },
     "dropAmount": 1,
     "useLootTableForDrops": false,
-    "requiresCorrectTool": true,
+    "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canRedstoneConnect": false,
-    "lightOpacity": 15,
+    "lightOpacity": 0,
     "material": {
-      "value": "ROCK"
+      "value": "BUILDABLE_GLASS"
     },
     "tickRate": 0,
     "tickRandomly": false,
@@ -81,7 +81,7 @@
     "isNotColidable": false,
     "isCustomSoundType": false,
     "soundOnStep": {
-      "value": "STONE"
+      "value": "TUFF"
     },
     "breakSound": {
       "value": ""
@@ -98,9 +98,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 4,
+    "luminance": 15,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "breakHarvestLevel": 0,
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -120,20 +120,16 @@
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
     "generateFeature": false,
-    "restrictionBiomes": [
-      {
-        "value": "#is_ocean"
-      }
-    ],
+    "restrictionBiomes": [],
     "blocksToReplace": [
       {
         "value": "TAG:stone_ore_replaceables"
       }
     ],
     "generationShape": "UNIFORM",
-    "frequencyPerChunks": 11,
-    "frequencyOnChunk": 7,
-    "minGenerateHeight": 32,
-    "maxGenerateHeight": 128
+    "frequencyPerChunks": 10,
+    "frequencyOnChunk": 16,
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
   }
 }

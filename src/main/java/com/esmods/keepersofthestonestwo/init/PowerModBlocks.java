@@ -36,6 +36,8 @@ import com.esmods.keepersofthestonestwo.block.CursedStoneBricksSlabBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.CursedLanternBlock;
+import com.esmods.keepersofthestonestwo.block.CursedLampBlock;
+import com.esmods.keepersofthestonestwo.block.CursedLadderBlock;
 import com.esmods.keepersofthestonestwo.block.CopyriumOreBlock;
 import com.esmods.keepersofthestonestwo.block.CopyriumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
@@ -80,6 +82,8 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> RAW_COPYRIUM_BLOCK = REGISTRY.register("raw_copyrium_block", () -> new RawCopyriumBlockBlock());
 	public static final RegistryObject<Block> ELEMENTAL_POWER_GENERATOR = REGISTRY.register("elemental_power_generator", () -> new ElementalPowerGeneratorBlock());
 	public static final RegistryObject<Block> CURSED_VAULT = REGISTRY.register("cursed_vault", () -> new CursedVaultBlock());
+	public static final RegistryObject<Block> CURSED_LADDER = REGISTRY.register("cursed_ladder", () -> new CursedLadderBlock());
+	public static final RegistryObject<Block> CURSED_LAMP = REGISTRY.register("cursed_lamp", () -> new CursedLampBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
