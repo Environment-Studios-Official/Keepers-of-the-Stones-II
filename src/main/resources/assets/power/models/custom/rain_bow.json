@@ -1175,11 +1175,35 @@
         1.25
       ]
     },
+    "thirdperson_lefthand": {
+      "rotation": [
+        -19.16,
+        -62.79,
+        -16.01
+      ],
+      "translation": [
+        0,
+        3.75,
+        1.25
+      ]
+    },
     "firstperson_righthand": {
       "rotation": [
         4,
         115,
         0
+      ],
+      "translation": [
+        0,
+        3.75,
+        1.25
+      ]
+    },
+    "firstperson_lefthand": {
+      "rotation": [
+        -19.16,
+        -62.79,
+        -16.01
       ],
       "translation": [
         0,
