@@ -104,6 +104,7 @@ import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
+import com.esmods.keepersofthestonestwo.item.MagnetBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MagnetArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagicFireballItem;
 import com.esmods.keepersofthestonestwo.item.LightningStoneItem;
@@ -528,6 +529,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MAGNET_ARMOR_CHESTPLATE = REGISTRY.register("magnet_armor_chestplate", () -> new MagnetArmorItem.Chestplate());
 	public static final RegistryObject<Item> MAGNET_ARMOR_LEGGINGS = REGISTRY.register("magnet_armor_leggings", () -> new MagnetArmorItem.Leggings());
 	public static final RegistryObject<Item> MAGNET_ARMOR_BOOTS = REGISTRY.register("magnet_armor_boots", () -> new MagnetArmorItem.Boots());
+	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

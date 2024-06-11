@@ -103,6 +103,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SAND_BATTERY.get());
 				tabData.accept(PowerModItems.SPEED_BATTERY.get());
 				tabData.accept(PowerModItems.POISON_BATTERY.get());
+				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 			})
 
 					.build());
@@ -143,6 +144,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SAND_STONE.get());
 				tabData.accept(PowerModItems.SPEED_STONE.get());
 				tabData.accept(PowerModItems.POISON_STONE.get());
+				tabData.accept(PowerModItems.MAGNET_STONE.get());
 			})
 
 					.build());

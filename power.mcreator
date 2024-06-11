@@ -26244,6 +26244,366 @@
         ]
       },
       "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MagnetStoneUse",
+      "type": "procedure",
+      "sortid": 1201,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MagnetMasterStart",
+      "type": "procedure",
+      "sortid": 1202,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MagnetMasterEnd",
+      "type": "procedure",
+      "sortid": 1203,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MagnetElementGet",
+      "type": "procedure",
+      "sortid": 1204,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "MagnetStoneCheck",
+      "type": "procedure",
+      "sortid": 1205,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MagnetSpecialAttack",
+      "type": "procedure",
+      "sortid": 1206,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesMagnet",
+      "type": "gui",
+      "sortid": 1207,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_magnet",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMagnetMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMagnetScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMagnetButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
+    },
+    {
+      "name": "Attack141",
+      "type": "procedure",
+      "sortid": 1208,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_141",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack141Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
+    },
+    {
+      "name": "Attack142",
+      "type": "procedure",
+      "sortid": 1209,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_142",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack142Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
+    },
+    {
+      "name": "Attack143",
+      "type": "procedure",
+      "sortid": 1210,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_143",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack143Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
+    },
+    {
+      "name": "Attack144",
+      "type": "procedure",
+      "sortid": 1211,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_144",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack144Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
+    },
+    {
+      "name": "MagnetBattery",
+      "type": "item",
+      "sortid": 1212,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetBatteryItem.java",
+          "src/main/resources/assets/power/models/item/magnet_battery.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MagnetBattery"
+    },
+    {
+      "name": "MagnetBatteryDesc",
+      "type": "procedure",
+      "sortid": 1213,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MagnetBattery"
+    },
+    {
+      "name": "MagnetBatteryUse",
+      "type": "procedure",
+      "sortid": 1214,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "magnet_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MagnetBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MagnetBattery"
     }
   ],
   "variable_elements": [
@@ -27137,6 +27497,7 @@
       "item.power.creation_axe": "Топор созидания",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
+      "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "block.power.cursed_lantern": "Проклятый фонарь",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
@@ -27178,6 +27539,7 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
       "item.power.teleportation_armor_leggings": "Поножи мастера телепортации",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
+      "gui.power.wheel_abilities_magnet.tooltip_poison_bomb_uses_40": "Poison bomb, uses 40",
       "block.power.polished_cursed_stone": "Полированный проклятый камень",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "item.power.animals_stone": "Камень животных",
@@ -27268,6 +27630,7 @@
       "subtitles.electric_spark": "Искра",
       "effect.power.creation_master": "Мастер творения",
       "block.power.cursed_vault": "Проклятое хранилище",
+      "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Magnet",
       "battery.desc.water": "Вода",
       "battery.desc.blood": "Кровь",
       "entity.power.energium_golem": "Энерджиумный голем",
@@ -27339,6 +27702,7 @@
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Зелень",
+      "gui.power.wheel_abilities_magnet.tooltip_toxic_acid_flow_uses_15": "Toxic acid flow, uses 15",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
@@ -27514,6 +27878,7 @@
       "item.power.teleportation_battery": "Батарея",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
+      "gui.power.wheel_abilities_magnet.tooltip_cleaning_uses_70": "Cleaning, uses 70",
       "item.power.creation_stone": "Камень творения",
       "item.power.magnet_armor_boots": "Poison Boots",
       "effect.power.earth_master": "Мастер земли",
@@ -27755,6 +28120,7 @@
       "item.power.lava_hammer": "Lava Hammer",
       "item.power.creation_axe": "Creation Axe",
       "item.power.speed_armor_helmet": "Speed Helmet",
+      "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
@@ -27796,6 +28162,7 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
       "item.power.teleportation_armor_leggings": "Teleportation Leggings",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
+      "gui.power.wheel_abilities_magnet.tooltip_poison_bomb_uses_40": "Poison bomb, uses 40",
       "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
       "item.power.animals_stone": "Animals Stone",
@@ -27886,6 +28253,7 @@
       "subtitles.electric_spark": "Spark",
       "effect.power.creation_master": "Master of Creation",
       "block.power.cursed_vault": "Cursed Vault",
+      "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Magnet",
       "battery.desc.water": "Water",
       "battery.desc.blood": "Blood",
       "entity.power.energium_golem": "Energium Golem",
@@ -27957,6 +28325,7 @@
       "item.power.vacuum_dagger": "Vacuum Dagger",
       "item.power.air_battery": "Battery",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Plants",
+      "gui.power.wheel_abilities_magnet.tooltip_toxic_acid_flow_uses_15": "Toxic acid flow, uses 15",
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.energy_armor_helmet": "Energy Helmet",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
@@ -28133,6 +28502,7 @@
       "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Energium Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
+      "gui.power.wheel_abilities_magnet.tooltip_cleaning_uses_70": "Cleaning, uses 70",
       "item.power.creation_stone": "Creation Stone",
       "item.power.magnet_armor_boots": "Magnet Boots",
       "effect.power.earth_master": "Master of the Earth",
@@ -28709,6 +29079,10 @@
                       {
                         "name": "Poison",
                         "children": []
+                      },
+                      {
+                        "name": "Magnet",
+                        "children": []
                       }
                     ]
                   }
@@ -28886,6 +29260,10 @@
               },
               {
                 "name": "PoisonBattery",
+                "children": []
+              },
+              {
+                "name": "MagnetBattery",
                 "children": []
               }
             ]

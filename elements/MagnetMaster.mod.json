@@ -5,13 +5,22 @@
     "effectName": "Magnet Master",
     "icon": "magnet_master.png",
     "color": {
-      "value": -52225,
+      "value": -39169,
       "falpha": 0.0
     },
     "isInstant": false,
     "isBad": false,
     "isBenefitical": true,
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MagnetMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "MagnetMasterEnd"
+    }
   }
 }
