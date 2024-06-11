@@ -112,14 +112,12 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										capability.syncPlayerVariables(entity);
 									});
 								}
-								if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power == 0) {
-									{
-										double _setval = 100;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entity);
-										});
-									}
+								{
+									double _setval = 100;
+									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.power = _setval;
+										capability.syncPlayerVariables(entity);
+									});
 								}
 							}
 						}
@@ -157,14 +155,12 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										capability.syncPlayerVariables(entity);
 									});
 								}
-								if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power == 0) {
-									{
-										double _setval = 100;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entity);
-										});
-									}
+								{
+									double _setval = 100;
+									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.power = _setval;
+										capability.syncPlayerVariables(entity);
+									});
 								}
 							}
 						}
@@ -217,14 +213,12 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										capability.syncPlayerVariables(entity);
 									});
 								}
-								if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power == 0) {
-									{
-										double _setval = 100;
-										entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entity);
-										});
-									}
+								{
+									double _setval = 100;
+									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.power = _setval;
+										capability.syncPlayerVariables(entity);
+									});
 								}
 							}
 						}
