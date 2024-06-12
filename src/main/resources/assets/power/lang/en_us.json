@@ -188,6 +188,7 @@
   "battery.desc.mist": "Mist",
   "battery.desc.space": "Space",
   "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
+  "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
   "item.power.creation_hoe": "Creation Hoe",
   "effect.power.water_master": "Master of Water",
   "subtitles.backport.block.vault.insert_fail": "",

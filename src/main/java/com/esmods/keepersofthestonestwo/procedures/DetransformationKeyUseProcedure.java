@@ -100,13 +100,13 @@ public class DetransformationKeyUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				{
-					double _setval = 0;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.power = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			{
 				double _setval = 0;
@@ -147,6 +147,13 @@ public class DetransformationKeyUseProcedure {
 				String _setval = "0";
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.fake_element_name_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attack = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

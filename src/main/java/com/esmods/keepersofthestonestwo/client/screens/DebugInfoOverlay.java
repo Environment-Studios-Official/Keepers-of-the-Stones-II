@@ -11,9 +11,12 @@ import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.network.chat.Component;
 import net.minecraft.client.Minecraft;
 
 import com.esmods.keepersofthestonestwo.procedures.StarPointsRecoveryMultiplierDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StarPointsDebugProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SelectedAttackDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecordedDubugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ModVersionDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MergersNumberDebugProcedure;
@@ -22,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.FakeElementsTimerDebugProcedu
 import com.esmods.keepersofthestonestwo.procedures.FakeElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ElementsActiveDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CPAPIVersionDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActivePowerDebugProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ActiveBatteryDebugProcedure;
 
@@ -45,34 +49,44 @@ public class DebugInfoOverlay {
 		if (DebugCheckProcedure.execute(entity)) {
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					StarPointsRecoveryMultiplierDebugProcedure.execute(entity), 6, 62, -1, false);
+					StarPointsRecoveryMultiplierDebugProcedure.execute(entity), 6, 89, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					MaxStarPointsDebugProcedure.execute(entity), 6, 71, -1, false);
+					MaxStarPointsDebugProcedure.execute(entity), 6, 98, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					FakeElementsTimerDebugProcedure.execute(entity), 6, 125, -1, false);
+					FakeElementsTimerDebugProcedure.execute(entity), 6, 161, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					PowerRecordedDubugProcedure.execute(entity), 6, 134, -1, false);
+					PowerRecordedDubugProcedure.execute(entity), 6, 170, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					FakeElementsActiveDebugProcedure.execute(entity), 6, 116, -1, false);
+					FakeElementsActiveDebugProcedure.execute(entity), 6, 152, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ElementsActiveDebugProcedure.execute(entity), 6, 107, -1, false);
+					ElementsActiveDebugProcedure.execute(entity), 6, 143, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ActivePowerDebugProcedure.execute(entity), 6, 80, -1, false);
+					ActivePowerDebugProcedure.execute(entity), 6, 107, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ActiveBatteryDebugProcedure.execute(entity), 6, 89, -1, false);
+					ActiveBatteryDebugProcedure.execute(entity), 6, 116, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					MergersNumberDebugProcedure.execute(entity), 6, 98, -1, false);
+					MergersNumberDebugProcedure.execute(entity), 6, 134, -1, false);
 			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
 
-					ModVersionDebugProcedure.execute(), 6, 53, -1, false);
+					ModVersionDebugProcedure.execute(), 6, 62, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font, Component.translatable("gui.power.debug_info.label_debug_mode"), 6, 53, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					StarPointsDebugProcedure.execute(entity), 6, 80, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					SelectedAttackDebugProcedure.execute(entity), 6, 125, -1, false);
+			event.getGuiGraphics().drawString(Minecraft.getInstance().font,
+
+					CPAPIVersionDebugProcedure.execute(), 6, 71, -1, false);
 		}
 	}
 }

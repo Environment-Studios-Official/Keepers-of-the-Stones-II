@@ -1,6 +1,7 @@
 What's new in Keepers of the Stones II version 1.0.0.27?<br />
 <br />- Added new element - magnet
 <br />- Added cursed ladder and cursed lamp
+<br />- Added new argument for pw command - debug
 <br />- Removed the slow-motion drop when using the third speed ability
 <br />- Amplifer blocks now emit some light
 <br />- The elemental power generator has been updated

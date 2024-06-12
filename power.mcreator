@@ -27133,6 +27133,64 @@
         "dependencies": []
       },
       "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "StarPointsDebug",
+      "type": "procedure",
+      "sortid": 1242,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_points_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPointsDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "SelectedAttackDebug",
+      "type": "procedure",
+      "sortid": 1243,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selected_attack_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SelectedAttackDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "CPAPIVersionDebug",
+      "type": "procedure",
+      "sortid": 1244,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cpapi_version_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CPAPIVersionDebugProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/DebugModule"
     }
   ],
   "variable_elements": [
@@ -28187,6 +28245,7 @@
       "battery.desc.mist": "Туман",
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
+      "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
       "item.power.creation_hoe": "Мотыга созидания",
       "effect.power.water_master": "Мастер воды",
       "subtitles.backport.block.vault.insert_fail": "",
@@ -28815,6 +28874,7 @@
       "battery.desc.mist": "Mist",
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
+      "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
       "item.power.creation_hoe": "Creation Hoe",
       "effect.power.water_master": "Master of Water",
       "subtitles.backport.block.vault.insert_fail": "",

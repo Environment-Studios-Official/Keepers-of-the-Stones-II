@@ -188,6 +188,7 @@
   "battery.desc.mist": "Туман",
   "battery.desc.space": "Космос",
   "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
+  "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
   "item.power.creation_hoe": "Мотыга созидания",
   "effect.power.water_master": "Мастер воды",
   "subtitles.backport.block.vault.insert_fail": "",

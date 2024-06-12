@@ -18,7 +18,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 62
+          "y": 89
         }
       },
       {
@@ -35,7 +35,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 71
+          "y": 98
         }
       },
       {
@@ -52,7 +52,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 125
+          "y": 161
         }
       },
       {
@@ -69,7 +69,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 134
+          "y": 170
         }
       },
       {
@@ -86,7 +86,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 116
+          "y": 152
         }
       },
       {
@@ -103,7 +103,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 107
+          "y": 143
         }
       },
       {
@@ -120,7 +120,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 80
+          "y": 107
         }
       },
       {
@@ -137,7 +137,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 89
+          "y": 116
         }
       },
       {
@@ -154,7 +154,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 98
+          "y": 134
         }
       },
       {
@@ -171,7 +171,74 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
+          "y": 62
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_debug_mode",
+          "text": {
+            "fixedValue": "DEBUG_MODE"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
           "y": 53
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_star_points_debug",
+          "text": {
+            "fixedValue": "star_points: 0",
+            "name": "StarPointsDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 80
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_selected_attack_debug",
+          "text": {
+            "fixedValue": "selected_attack: 0",
+            "name": "SelectedAttackDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 125
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_cpapi_version_debug",
+          "text": {
+            "fixedValue": "cpapi_version: v1",
+            "name": "CPAPIVersionDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 71
         }
       }
     ],
