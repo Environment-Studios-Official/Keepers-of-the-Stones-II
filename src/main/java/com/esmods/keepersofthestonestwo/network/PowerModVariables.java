@@ -93,6 +93,7 @@ public class PowerModVariables {
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.debug = original.debug;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -493,6 +494,7 @@ public class PowerModVariables {
 		public double fake_element_name_first_timer = 0;
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
+		public boolean debug = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -537,6 +539,7 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
+			nbt.putBoolean("debug", debug);
 			return nbt;
 		}
 
@@ -578,6 +581,7 @@ public class PowerModVariables {
 			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
+			debug = nbt.getBoolean("debug");
 		}
 	}
 
@@ -647,6 +651,7 @@ public class PowerModVariables {
 					variables.fake_element_name_first_timer = message.data.fake_element_name_first_timer;
 					variables.fake_element_name_second_timer = message.data.fake_element_name_second_timer;
 					variables.fake_element_name_third_timer = message.data.fake_element_name_third_timer;
+					variables.debug = message.data.debug;
 				}
 			});
 			context.setPacketHandled(true);

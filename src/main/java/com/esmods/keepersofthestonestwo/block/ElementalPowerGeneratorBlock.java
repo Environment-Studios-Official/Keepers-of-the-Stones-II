@@ -43,7 +43,7 @@ public class ElementalPowerGeneratorBlock extends Block implements EntityBlock {
 					return 7;
 				return 0;
 			}
-		}.getLightLevel())).requiresCorrectToolForDrops());
+		}.getLightLevel())).requiresCorrectToolForDrops().hasPostProcess((bs, br, bp) -> true).emissiveRendering((bs, br, bp) -> true));
 	}
 
 	@Override

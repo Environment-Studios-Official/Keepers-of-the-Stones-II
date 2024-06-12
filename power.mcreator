@@ -24300,26 +24300,6 @@
       "path": "~/Achievements"
     },
     {
-      "name": "PlayerCheckFakeElement",
-      "type": "procedure",
-      "sortid": 1122,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "player_check_fake_element",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerCheckFakeElementProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/CopyPowersModule"
-    },
-    {
       "name": "ElementalPowerGeneratorSaveElementalPower",
       "type": "procedure",
       "sortid": 1123,
@@ -26829,6 +26809,330 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "DebugInfo",
+      "type": "overlay",
+      "sortid": 1226,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_info",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/screens/DebugInfoOverlay.java"
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "DebugCheck",
+      "type": "procedure",
+      "sortid": 1227,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DebugCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "DebugControl",
+      "type": "procedure",
+      "sortid": 1228,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "debug_control",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DebugControlProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Commands"
+    },
+    {
+      "name": "StarPointsRecoveryMultiplierDebug",
+      "type": "procedure",
+      "sortid": 1229,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_points_recovery_multiplier_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPointsRecoveryMultiplierDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "MaxStarPointsDebug",
+      "type": "procedure",
+      "sortid": 1230,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "max_star_points_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MaxStarPointsDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "PowerRecordedDubug",
+      "type": "procedure",
+      "sortid": 1231,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_recorded_dubug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PowerRecordedDubugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "FakeElementsTimerDebug",
+      "type": "procedure",
+      "sortid": 1232,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fake_elements_timer_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FakeElementsTimerDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "PlayerTimingFistFakeElement",
+      "type": "procedure",
+      "sortid": 1233,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_timing_fist_fake_element",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerTimingFistFakeElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/CopyPowersModule"
+    },
+    {
+      "name": "PlayerTimingSecondFakeElement",
+      "type": "procedure",
+      "sortid": 1234,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_timing_second_fake_element",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerTimingSecondFakeElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/CopyPowersModule"
+    },
+    {
+      "name": "PlayerTimingThirdFakeElement",
+      "type": "procedure",
+      "sortid": 1235,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_timing_third_fake_element",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerTimingThirdFakeElementProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/CopyPowersModule"
+    },
+    {
+      "name": "FakeElementsActiveDebug",
+      "type": "procedure",
+      "sortid": 1236,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "fake_elements_active_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FakeElementsActiveDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "ElementsActiveDebug",
+      "type": "procedure",
+      "sortid": 1237,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "elements_active_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ElementsActiveDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "ActivePowerDebug",
+      "type": "procedure",
+      "sortid": 1238,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_power_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ActivePowerDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "ActiveBatteryDebug",
+      "type": "procedure",
+      "sortid": 1239,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "active_battery_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ActiveBatteryDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "MergersNumberDebug",
+      "type": "procedure",
+      "sortid": 1240,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mergers_number_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MergersNumberDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "ModVersionDebug",
+      "type": "procedure",
+      "sortid": 1241,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mod_version_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ModVersionDebugProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/DebugModule"
     }
   ],
   "variable_elements": [
@@ -27383,6 +27687,12 @@
       "type": "number",
       "scope": "player_lifetime",
       "value": "0"
+    },
+    {
+      "name": "debug",
+      "type": "logic",
+      "scope": "player_persistent",
+      "value": "false"
     }
   ],
   "sound_elements": [
@@ -27699,25 +28009,26 @@
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
+      "gui.power.debug_info.label_max_star_points_0": "max_star_points: 0",
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
-      "item.power.time_armor_helmet": "Шлем мастера времени",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
+      "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
       "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
@@ -27727,8 +28038,8 @@
       "item.power.magnet_battery": "Батарея",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "block.power.cursed_lantern": "Проклятый фонарь",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -27740,6 +28051,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
+      "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Остановка времени",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
       "battery.desc.sun": "Солнце",
@@ -27754,8 +28066,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Кристалл",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Туманная невидимость, расходует 70",
-      "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
       "gui.power.keepers_box_gui_part_2.tooltip_mist": "Туман",
+      "item.power.depleted_energium_ingot": "Слиток обеднённого энерджиума",
       "block.power.copyrium_ore": "Копириумная руда",
       "item.power.water_armor_boots": "Ботинки мастера воды",
       "item.power.golden_dust_stone": "Камннь золотой пыли",
@@ -28258,6 +28570,7 @@
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "item.power.energium_upgrade_smithing_template.ingredients": " §9Редстоун",
+      "gui.power.debug_info.label_star_points_recovery_multiplier": "star_points_recovery_multiplier: 0",
       "gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80": "Метка бессмертия, расходует 80",
       "effect.power.sand_master": "Мастер песка",
       "item.power.rain_bow": "Дождевой Лук",
@@ -28309,7 +28622,8 @@
       "subtitles.backport.block.vault.ambient": "",
       "item.power.energium_upgrade_smithing_template": "Кузнечный шаблон",
       "item.power.creation_pickaxe": "Кирка созидания",
-      "gui.power.keepers_box_gui_part_3.tooltip_moon": "Луна"
+      "gui.power.keepers_box_gui_part_3.tooltip_moon": "Луна",
+      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -28323,25 +28637,26 @@
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
+      "gui.power.debug_info.label_max_star_points_0": "max_star_points: 0",
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
-      "item_group.power.items": "KotS: Items",
       "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
-      "item.power.poison_battery": "Battery",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
+      "item.power.poison_battery": "Battery",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
@@ -28351,8 +28666,8 @@
       "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "block.power.cursed_lantern": "Cursed Lantern",
-      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
+      "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
@@ -28364,6 +28679,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
+      "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Time Stopped",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
       "battery.desc.sun": "Sun",
@@ -28378,8 +28694,8 @@
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "gui.power.keepers_box_gui_part_4.tooltip_crystal": "Crystal",
       "gui.power.wheel_abilities_mist.tooltip_misty_invisibility_uses_70": "Misty invisibility, uses 70",
-      "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
       "item.power.depleted_energium_ingot": "Depleted Energium Ingot",
+      "gui.power.keepers_box_gui_part_2.tooltip_mist": "Mist",
       "block.power.copyrium_ore": "Copyrium Ore",
       "item.power.water_armor_boots": "Water Boots",
       "item.power.golden_dust_stone": "Golden Dust Stone",
@@ -28882,6 +29198,7 @@
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
       "item.power.energium_upgrade_smithing_template.ingredients": "§9Redstone",
+      "gui.power.debug_info.label_star_points_recovery_multiplier": "star_points_recovery_multiplier: 0",
       "gui.power.wheel_abilities_creation.tooltip_immortality_mark_uses_80": "Immortality mark, uses 80",
       "effect.power.sand_master": "Master of Sand",
       "item.power.rain_bow": "Rain Bow",
@@ -28933,7 +29250,8 @@
       "subtitles.backport.block.vault.ambient": "",
       "item.power.energium_upgrade_smithing_template": "Smithing Template",
       "item.power.creation_pickaxe": "Creation Pickaxe",
-      "gui.power.keepers_box_gui_part_3.tooltip_moon": "Moon"
+      "gui.power.keepers_box_gui_part_3.tooltip_moon": "Moon",
+      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false"
     }
   },
   "foldersRoot": {
@@ -29333,6 +29651,10 @@
           },
           {
             "name": "CopyPowersModule",
+            "children": []
+          },
+          {
+            "name": "DebugModule",
             "children": []
           }
         ]

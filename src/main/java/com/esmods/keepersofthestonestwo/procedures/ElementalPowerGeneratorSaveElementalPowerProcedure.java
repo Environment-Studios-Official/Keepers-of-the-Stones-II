@@ -82,22 +82,22 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										return "";
 									}
 								}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
-							{
-								String _setval = new Object() {
-									public String getValue(LevelAccessor world, BlockPos pos, String tag) {
-										BlockEntity blockEntity = world.getBlockEntity(pos);
-										if (blockEntity != null)
-											return blockEntity.getPersistentData().getString(tag);
-										return "";
-									}
-								}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
-								entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-									capability.fake_element_name_first = _setval;
-									capability.syncPlayerVariables(entity);
-								});
-							}
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false
 									&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first_timer == 0) {
+								{
+									String _setval = new Object() {
+										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+											BlockEntity blockEntity = world.getBlockEntity(pos);
+											if (blockEntity != null)
+												return blockEntity.getPersistentData().getString(tag);
+											return "";
+										}
+									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
+									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.fake_element_name_first = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
 								{
 									double _setval = 3000;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -141,6 +141,20 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
 							if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false
 									&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_second_timer == 0) {
+								{
+									String _setval = new Object() {
+										public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+											BlockEntity blockEntity = world.getBlockEntity(pos);
+											if (blockEntity != null)
+												return blockEntity.getPersistentData().getString(tag);
+											return "";
+										}
+									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
+									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+										capability.fake_element_name_second = _setval;
+										capability.syncPlayerVariables(entity);
+									});
+								}
 								{
 									double _setval = 3000;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
