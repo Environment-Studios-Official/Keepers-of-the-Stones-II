@@ -12338,10 +12338,12 @@
       "locked_code": false,
       "registry_name": "recharge_stone_tick_event",
       "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RechargeStoneTickEventProcedure.java"
-        ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          }
+        ]
       },
       "path": "~/Modules/RechargeStoneModule"
     },
@@ -27151,6 +27153,26 @@
         ]
       },
       "path": "~/Elements/Teleportation"
+    },
+    {
+      "name": "CancelEnchantCursedKey",
+      "type": "procedure",
+      "sortid": 1247,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_enchant_cursed_key",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CancelEnchantCursedKeyProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "leftItem",
+            "type": "itemstack"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
