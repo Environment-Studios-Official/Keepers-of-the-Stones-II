@@ -12341,12 +12341,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/RechargeStoneTickEventProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "itemstack",
-            "type": "itemstack"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Modules/RechargeStoneModule"
     },
