@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "1": "teleportation_gun"
+        "0": "teleportation_blade"
       },
       "name": "default"
     }

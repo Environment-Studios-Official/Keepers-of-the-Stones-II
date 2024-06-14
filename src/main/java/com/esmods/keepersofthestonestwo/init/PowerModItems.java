@@ -37,7 +37,7 @@ import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
-import com.esmods.keepersofthestonestwo.item.TeleportationGunItem;
+import com.esmods.keepersofthestonestwo.item.TeleportationBladeItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationArmorItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
@@ -463,7 +463,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_ARMOR_BOOTS = REGISTRY.register("teleportation_armor_boots", () -> new TeleportationArmorItem.Boots());
 	public static final RegistryObject<Item> TECHNO_PICKAXE = REGISTRY.register("techno_pickaxe", () -> new TechnoPickaxeItem());
 	public static final RegistryObject<Item> TELEPORTATION_BATTERY = REGISTRY.register("teleportation_battery", () -> new TeleportationBatteryItem());
-	public static final RegistryObject<Item> TELEPORTATION_GUN = REGISTRY.register("teleportation_gun", () -> new TeleportationGunItem());
 	public static final RegistryObject<Item> BLUE_PORTAL = block(PowerModBlocks.BLUE_PORTAL);
 	public static final RegistryObject<Item> ORANGE_PORTAL = block(PowerModBlocks.ORANGE_PORTAL);
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_HELMET = REGISTRY.register("explosion_armor_helmet", () -> new ExplosionArmorItem.Helmet());
@@ -534,6 +533,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MAGNET_CLAWS = REGISTRY.register("magnet_claws", () -> new MagnetClawsItem());
 	public static final RegistryObject<Item> CURSED_LADDER = block(PowerModBlocks.CURSED_LADDER);
 	public static final RegistryObject<Item> CURSED_LAMP = block(PowerModBlocks.CURSED_LAMP);
+	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

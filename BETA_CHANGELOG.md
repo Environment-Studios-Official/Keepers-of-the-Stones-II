@@ -6,5 +6,6 @@ What's new in Keepers of the Stones II version 1.0.0.27?<br />
 <br />- Amplifer blocks now emit some light
 <br />- The elemental power generator has been updated
 <br />- Copyrium ore now appears in snowy biomes
+<br />- Changed the weapon for the teleportation master
 <br />- [Bugfix] Fixed a bug where the Amber Master's poison abilities were replaced with speed abilities
 <br />- [Bugfix] Fixed display of rain bow in second hand
