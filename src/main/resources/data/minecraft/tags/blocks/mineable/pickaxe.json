@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:energium_vault",
     "power:cursed_lamp",
     "power:cursed_ladder",
     "power:cursed_vault",

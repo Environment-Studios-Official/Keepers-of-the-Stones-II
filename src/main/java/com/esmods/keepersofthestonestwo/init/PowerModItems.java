@@ -150,6 +150,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem
 import com.esmods.keepersofthestonestwo.item.EnergiumSwordItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumShovelItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumHoeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
@@ -534,6 +535,8 @@ public class PowerModItems {
 	public static final RegistryObject<Item> CURSED_LADDER = block(PowerModBlocks.CURSED_LADDER);
 	public static final RegistryObject<Item> CURSED_LAMP = block(PowerModBlocks.CURSED_LAMP);
 	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
+	public static final RegistryObject<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
+	public static final RegistryObject<Item> ENERGIUM_KEY = REGISTRY.register("energium_key", () -> new EnergiumKeyItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

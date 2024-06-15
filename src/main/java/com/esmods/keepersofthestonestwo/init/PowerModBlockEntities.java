@@ -11,6 +11,7 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraft.world.level.block.Block;
 
+import com.esmods.keepersofthestonestwo.block.entity.EnergiumVaultBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.ElementalPowerGeneratorBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.CursedVaultBlockEntity;
 import com.esmods.keepersofthestonestwo.block.entity.BatteryChargerBlockEntity;
@@ -21,6 +22,7 @@ public class PowerModBlockEntities {
 	public static final RegistryObject<BlockEntityType<?>> BATTERY_CHARGER = register("battery_charger", PowerModBlocks.BATTERY_CHARGER, BatteryChargerBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> ELEMENTAL_POWER_GENERATOR = register("elemental_power_generator", PowerModBlocks.ELEMENTAL_POWER_GENERATOR, ElementalPowerGeneratorBlockEntity::new);
 	public static final RegistryObject<BlockEntityType<?>> CURSED_VAULT = register("cursed_vault", PowerModBlocks.CURSED_VAULT, CursedVaultBlockEntity::new);
+	public static final RegistryObject<BlockEntityType<?>> ENERGIUM_VAULT = register("energium_vault", PowerModBlocks.ENERGIUM_VAULT, EnergiumVaultBlockEntity::new);
 
 	private static RegistryObject<BlockEntityType<?>> register(String registryname, RegistryObject<Block> block, BlockEntityType.BlockEntitySupplier<?> supplier) {
 		return REGISTRY.register(registryname, () -> BlockEntityType.Builder.of(supplier, block.get()).build(null));
