@@ -28067,42 +28067,8 @@
     }
   ],
   "tag_elements": {
-    "ITEMS:mod:elemental_batteries": [
-      "CUSTOM:FireBattery",
-      "CUSTOM:AirBattery",
-      "CUSTOM:EarthBattery",
-      "CUSTOM:WaterBattery",
-      "CUSTOM:EtherBattery",
-      "CUSTOM:IceBattery",
-      "CUSTOM:LightningBattery",
-      "CUSTOM:SoundBattery",
-      "CUSTOM:CrystalBattery",
-      "CUSTOM:LavaBattery",
-      "CUSTOM:RainBattery",
-      "CUSTOM:TornadoBattery",
-      "CUSTOM:OceanBattery",
-      "CUSTOM:PlantsBattery",
-      "CUSTOM:AnimalsBattery",
-      "CUSTOM:MetalBattery",
-      "CUSTOM:LightBattery",
-      "CUSTOM:ShadowBattery",
-      "CUSTOM:VacuumBattery",
-      "CUSTOM:EnergyBattery",
-      "CUSTOM:SunBattery",
-      "CUSTOM:MoonBattery",
-      "CUSTOM:SpaceBattery",
-      "CUSTOM:TimeBattery",
-      "CUSTOM:CreationBattery",
-      "CUSTOM:DestructionBattery",
-      "CUSTOM:BloodBattery",
-      "CUSTOM:TechnologyBattery",
-      "CUSTOM:TeleportationBattery",
-      "CUSTOM:ExplosionBattery"
-    ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:PolishedCursedStoneSlab",
-      "~CUSTOM:CursedStoneBricksSlab",
-      "~CUSTOM:CursedStoneSlab"
+    "ENTITIES:minecraft:bosses": [
+      "CUSTOM:EnergiumGolem"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
       "~CUSTOM:EnergiumVault",
@@ -28142,6 +28108,9 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
+    "ENTITIES:minecraft:fall_damage_immune": [
+      "CUSTOM:EnergiumGolem"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -28153,17 +28122,6 @@
       "CUSTOM:CreationAxe",
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
-    ],
-    "BLOCKS:forge:needs_netherite_tool": [
-      "~CUSTOM:EnergiumVault",
-      "~CUSTOM:CursedVault"
-    ],
-    "BLOCKS:minecraft:needs_diamond_tool": [
-      "~CUSTOM:RawDepletedEnergiumBlock",
-      "~CUSTOM:EnergiumController",
-      "~CUSTOM:EnergiumBlock",
-      "~CUSTOM:DepletedEnergiumBlock",
-      "~CUSTOM:DepletedEnergiumOre"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
       "~CUSTOM:ElementalPowerGenerator",
@@ -28181,11 +28139,6 @@
     ],
     "BLOCKS:mod:keepers_boxes": [
       "CUSTOM:KeepersBox"
-    ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall"
     ],
     "ITEMS:mod:elemental_stones": [
       "CUSTOM:FireStone",
@@ -28236,6 +28189,59 @@
       "CUSTOM:DarknessStone",
       "CUSTOM:EnergyStone",
       "CUSTOM:SpiritStone"
+    ],
+    "ITEMS:mod:elemental_batteries": [
+      "CUSTOM:FireBattery",
+      "CUSTOM:AirBattery",
+      "CUSTOM:EarthBattery",
+      "CUSTOM:WaterBattery",
+      "CUSTOM:EtherBattery",
+      "CUSTOM:IceBattery",
+      "CUSTOM:LightningBattery",
+      "CUSTOM:SoundBattery",
+      "CUSTOM:CrystalBattery",
+      "CUSTOM:LavaBattery",
+      "CUSTOM:RainBattery",
+      "CUSTOM:TornadoBattery",
+      "CUSTOM:OceanBattery",
+      "CUSTOM:PlantsBattery",
+      "CUSTOM:AnimalsBattery",
+      "CUSTOM:MetalBattery",
+      "CUSTOM:LightBattery",
+      "CUSTOM:ShadowBattery",
+      "CUSTOM:VacuumBattery",
+      "CUSTOM:EnergyBattery",
+      "CUSTOM:SunBattery",
+      "CUSTOM:MoonBattery",
+      "CUSTOM:SpaceBattery",
+      "CUSTOM:TimeBattery",
+      "CUSTOM:CreationBattery",
+      "CUSTOM:DestructionBattery",
+      "CUSTOM:BloodBattery",
+      "CUSTOM:TechnologyBattery",
+      "CUSTOM:TeleportationBattery",
+      "CUSTOM:ExplosionBattery"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:PolishedCursedStoneSlab",
+      "~CUSTOM:CursedStoneBricksSlab",
+      "~CUSTOM:CursedStoneSlab"
+    ],
+    "BLOCKS:forge:needs_netherite_tool": [
+      "~CUSTOM:EnergiumVault",
+      "~CUSTOM:CursedVault"
+    ],
+    "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:RawDepletedEnergiumBlock",
+      "~CUSTOM:EnergiumController",
+      "~CUSTOM:EnergiumBlock",
+      "~CUSTOM:DepletedEnergiumBlock",
+      "~CUSTOM:DepletedEnergiumOre"
+    ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall"
     ]
   },
   "language_map": {
