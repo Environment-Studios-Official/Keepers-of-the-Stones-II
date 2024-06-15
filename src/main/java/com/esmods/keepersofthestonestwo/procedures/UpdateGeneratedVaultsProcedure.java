@@ -5,14 +5,16 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.event.TickEvent;
 
+import net.minecraft.world.level.block.state.properties.Property;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
+
+import java.util.Map;
 
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
@@ -48,8 +50,20 @@ public class UpdateGeneratedVaultsProcedure {
 									return false;
 								}
 							}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "updated"))) {
-								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
-								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PowerModBlocks.ENERGIUM_VAULT.get().defaultBlockState(), 3);
+								{
+									BlockPos _bp = BlockPos.containing(x, y, z);
+									BlockState _bs = PowerModBlocks.ENERGIUM_VAULT.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);
@@ -69,8 +83,20 @@ public class UpdateGeneratedVaultsProcedure {
 									return false;
 								}
 							}.getValue(world, BlockPos.containing(x + xi, y + i, z + zi), "updated"))) {
-								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), Blocks.AIR.defaultBlockState(), 3);
-								world.setBlock(BlockPos.containing(x + xi, y + i, z + zi), PowerModBlocks.CURSED_VAULT.get().defaultBlockState(), 3);
+								{
+									BlockPos _bp = BlockPos.containing(x, y, z);
+									BlockState _bs = PowerModBlocks.CURSED_VAULT.get().defaultBlockState();
+									BlockState _bso = world.getBlockState(_bp);
+									for (Map.Entry<Property<?>, Comparable<?>> entry : _bso.getValues().entrySet()) {
+										Property _property = _bs.getBlock().getStateDefinition().getProperty(entry.getKey().getName());
+										if (_property != null && _bs.getValue(_property) != null)
+											try {
+												_bs = _bs.setValue(_property, (Comparable) entry.getValue());
+											} catch (Exception e) {
+											}
+									}
+									world.setBlock(_bp, _bs, 3);
+								}
 								if (!world.isClientSide()) {
 									BlockPos _bp = BlockPos.containing(x + xi, y + i, z + zi);
 									BlockEntity _blockEntity = world.getBlockEntity(_bp);

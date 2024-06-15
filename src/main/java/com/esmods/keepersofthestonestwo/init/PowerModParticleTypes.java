@@ -35,4 +35,5 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> BLOOD_SPLASH = REGISTRY.register("blood_splash", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> MIST_PARTICLE = REGISTRY.register("mist_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> POISON_PARTICLE = REGISTRY.register("poison_particle", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> BLUE_MAGNET_PARTICLE = REGISTRY.register("blue_magnet_particle", () -> new SimpleParticleType(false));
 }
