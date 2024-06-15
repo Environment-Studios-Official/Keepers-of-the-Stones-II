@@ -27324,9 +27324,6 @@
       "locked_code": false,
       "registry_name": "update_generated_vaults",
       "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/UpdateGeneratedVaultsProcedure.java"
-        ],
         "dependencies": [
           {
             "name": "x",
@@ -27362,6 +27359,20 @@
         ]
       },
       "path": "~/Elements/Poison"
+    },
+    {
+      "name": "EnergiumKeyReward",
+      "type": "loottable",
+      "sortid": 1251,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_key_reward",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/energium_key_reward.json"
+        ]
+      },
+      "path": "~/Achievements"
     }
   ],
   "variable_elements": [
