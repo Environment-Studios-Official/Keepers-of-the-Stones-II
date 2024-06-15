@@ -8,6 +8,7 @@ What's new in Keepers of the Stones II version 1.0.0.27?<br />
 <br />- The elemental power generator has been updated
 <br />- Copyrium ore now appears in snowy biomes
 <br />- The structure of the Energium Temple has been updated
+<br />- Now the star regeneration effect level doubles the recovery rate of star points
 <br />- Changed the weapon for the teleportation master
 <br />- The stone recharge system is temporarily disabled due to problems on the servers
 <br />- [Bugfix] Fixed a bug that incorrectly displayed the cause of death from an Energium Golem
