@@ -18,7 +18,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 89
+          "y": 98
         }
       },
       {
@@ -35,7 +35,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 98
+          "y": 107
         }
       },
       {
@@ -52,7 +52,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 161
+          "y": 170
         }
       },
       {
@@ -69,7 +69,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 170
+          "y": 179
         }
       },
       {
@@ -86,7 +86,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 152
+          "y": 161
         }
       },
       {
@@ -103,7 +103,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 143
+          "y": 152
         }
       },
       {
@@ -120,7 +120,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 107
+          "y": 116
         }
       },
       {
@@ -137,7 +137,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 116
+          "y": 125
         }
       },
       {
@@ -154,7 +154,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 134
+          "y": 143
         }
       },
       {
@@ -221,7 +221,7 @@
           },
           "anchorPoint": "TOP_LEFT",
           "x": 6,
-          "y": 125
+          "y": 134
         }
       },
       {
@@ -239,6 +239,40 @@
           "anchorPoint": "TOP_LEFT",
           "x": 6,
           "y": 71
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_star_points_reg_timer_0",
+          "text": {
+            "fixedValue": "star_points_reg_timer: 0",
+            "name": "StarPointsRegTimerDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 89
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "name": "label_proc_ability_blocked_debug",
+          "text": {
+            "fixedValue": "",
+            "name": "AbilityBlockedDebug"
+          },
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "anchorPoint": "TOP_LEFT",
+          "x": 6,
+          "y": 188
         }
       }
     ],

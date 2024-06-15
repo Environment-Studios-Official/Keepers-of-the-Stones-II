@@ -27324,6 +27324,9 @@
       "locked_code": false,
       "registry_name": "update_generated_vaults",
       "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/UpdateGeneratedVaultsProcedure.java"
+        ],
         "dependencies": [
           {
             "name": "x",
@@ -27387,6 +27390,48 @@
         ]
       },
       "path": "~/DamageSources"
+    },
+    {
+      "name": "StarPointsRegTimerDebug",
+      "type": "procedure",
+      "sortid": 1253,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "star_points_reg_timer_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StarPointsRegTimerDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
+    },
+    {
+      "name": "AbilityBlockedDebug",
+      "type": "procedure",
+      "sortid": 1254,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "ability_blocked_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AbilityBlockedDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/DebugModule"
     }
   ],
   "variable_elements": [
