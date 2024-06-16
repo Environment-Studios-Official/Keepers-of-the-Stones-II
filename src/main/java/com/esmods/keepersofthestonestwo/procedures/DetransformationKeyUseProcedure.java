@@ -84,6 +84,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.SPEED_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.POISON_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
 				{
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -98,13 +100,34 @@ public class DetransformationKeyUseProcedure {
 						capability.syncPlayerVariables(entity);
 					});
 				}
-				{
-					double _setval = 0;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.power = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_first_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_second_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				double _setval = 0;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.fake_element_name_third_timer = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 			{
 				String _setval = "0";
@@ -124,6 +147,13 @@ public class DetransformationKeyUseProcedure {
 				String _setval = "0";
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 					capability.fake_element_name_third = _setval;
+					capability.syncPlayerVariables(entity);
+				});
+			}
+			{
+				String _setval = "0";
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.attack = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

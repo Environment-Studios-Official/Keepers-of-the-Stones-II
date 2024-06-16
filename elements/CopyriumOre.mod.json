@@ -122,7 +122,19 @@
     "generateFeature": true,
     "restrictionBiomes": [
       {
-        "value": "#minecraft:is_cold"
+        "value": "mutated_ice_flats"
+      },
+      {
+        "value": "snowy_slopes"
+      },
+      {
+        "value": "cold_beach"
+      },
+      {
+        "value": "snowy_tundra"
+      },
+      {
+        "value": "taiga_cold"
       }
     ],
     "blocksToReplace": [

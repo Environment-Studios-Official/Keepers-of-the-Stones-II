@@ -19,6 +19,7 @@ import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
+import com.esmods.keepersofthestonestwo.client.particle.RedMagnetParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
@@ -26,6 +27,7 @@ import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergiumGolemCoreAttackParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.BlueMagnetParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BloodSplashParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
 import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
@@ -54,5 +56,7 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.BLOOD_SPLASH.get(), BloodSplashParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MIST_PARTICLE.get(), MistParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.POISON_PARTICLE.get(), PoisonParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.BLUE_MAGNET_PARTICLE.get(), BlueMagnetParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.RED_MAGNET_PARTICLE.get(), RedMagnetParticleParticle::provider);
 	}
 }

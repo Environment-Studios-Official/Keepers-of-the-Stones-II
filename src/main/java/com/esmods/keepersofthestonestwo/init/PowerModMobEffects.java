@@ -37,6 +37,7 @@ import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MagnetMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightningMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LethalityMobEffect;
@@ -106,4 +107,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
 	public static final RegistryObject<MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
 	public static final RegistryObject<MobEffect> POISON_MASTER = REGISTRY.register("poison_master", () -> new PoisonMasterMobEffect());
+	public static final RegistryObject<MobEffect> MAGNET_MASTER = REGISTRY.register("magnet_master", () -> new MagnetMasterMobEffect());
 }

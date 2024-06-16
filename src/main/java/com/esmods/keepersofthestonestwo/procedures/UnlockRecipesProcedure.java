@@ -91,12 +91,18 @@ public class UnlockRecipesProcedure {
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.AMPLIFIER_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_drop_from_block")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_lamp_craft")});
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.AMPLIFIER_DROP.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_block_recipe")});
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:amplifier_ring_craft")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:elemental_power_generator_craft")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_lantern_craft")});
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
@@ -109,10 +115,20 @@ public class UnlockRecipesProcedure {
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.COPYRIUM_INGOT.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:copyrium_ore_block_recipe")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:elemental_power_generator_craft")});
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.COPYRIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:copyrium_block_ore_recipe")});
+		}
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.CURSED_STONE.get())) : false) {
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_lamp_craft")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_ladder_craft")});
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_lantern_craft")});
 		}
 	}
 }

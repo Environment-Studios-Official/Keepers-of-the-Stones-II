@@ -30,6 +30,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMistScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMagnetScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightningScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
@@ -97,6 +98,7 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SAND.get(), WheelAbilitiesSandScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_SPEED.get(), WheelAbilitiesSpeedScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_POISON.get(), WheelAbilitiesPoisonScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MAGNET.get(), WheelAbilitiesMagnetScreen::new);
 		});
 	}
 }

@@ -153,8 +153,6 @@ public class SpeedSpecialAttackProcedure {
 									18);
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 3));
-							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 300, 9));
 						}
 					}
 				}

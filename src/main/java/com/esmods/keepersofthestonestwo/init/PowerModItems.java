@@ -37,7 +37,7 @@ import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
-import com.esmods.keepersofthestonestwo.item.TeleportationGunItem;
+import com.esmods.keepersofthestonestwo.item.TeleportationBladeItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationArmorItem;
 import com.esmods.keepersofthestonestwo.item.TechnologyStoneItem;
@@ -104,6 +104,9 @@ import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
+import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
+import com.esmods.keepersofthestonestwo.item.MagnetBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MagnetArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagicFireballItem;
 import com.esmods.keepersofthestonestwo.item.LightningStoneItem;
 import com.esmods.keepersofthestonestwo.item.LightningFalchionItem;
@@ -147,6 +150,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem
 import com.esmods.keepersofthestonestwo.item.EnergiumSwordItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumShovelItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumHoeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
@@ -460,7 +464,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_ARMOR_BOOTS = REGISTRY.register("teleportation_armor_boots", () -> new TeleportationArmorItem.Boots());
 	public static final RegistryObject<Item> TECHNO_PICKAXE = REGISTRY.register("techno_pickaxe", () -> new TechnoPickaxeItem());
 	public static final RegistryObject<Item> TELEPORTATION_BATTERY = REGISTRY.register("teleportation_battery", () -> new TeleportationBatteryItem());
-	public static final RegistryObject<Item> TELEPORTATION_GUN = REGISTRY.register("teleportation_gun", () -> new TeleportationGunItem());
 	public static final RegistryObject<Item> BLUE_PORTAL = block(PowerModBlocks.BLUE_PORTAL);
 	public static final RegistryObject<Item> ORANGE_PORTAL = block(PowerModBlocks.ORANGE_PORTAL);
 	public static final RegistryObject<Item> EXPLOSION_ARMOR_HELMET = REGISTRY.register("explosion_armor_helmet", () -> new ExplosionArmorItem.Helmet());
@@ -523,6 +526,17 @@ public class PowerModItems {
 	public static final RegistryObject<Item> POISON_ARMOR_BOOTS = REGISTRY.register("poison_armor_boots", () -> new PoisonArmorItem.Boots());
 	public static final RegistryObject<Item> POISON_BATTERY = REGISTRY.register("poison_battery", () -> new PoisonBatteryItem());
 	public static final RegistryObject<Item> POISON_BOW = REGISTRY.register("poison_bow", () -> new PoisonBowItem());
+	public static final RegistryObject<Item> MAGNET_ARMOR_HELMET = REGISTRY.register("magnet_armor_helmet", () -> new MagnetArmorItem.Helmet());
+	public static final RegistryObject<Item> MAGNET_ARMOR_CHESTPLATE = REGISTRY.register("magnet_armor_chestplate", () -> new MagnetArmorItem.Chestplate());
+	public static final RegistryObject<Item> MAGNET_ARMOR_LEGGINGS = REGISTRY.register("magnet_armor_leggings", () -> new MagnetArmorItem.Leggings());
+	public static final RegistryObject<Item> MAGNET_ARMOR_BOOTS = REGISTRY.register("magnet_armor_boots", () -> new MagnetArmorItem.Boots());
+	public static final RegistryObject<Item> MAGNET_BATTERY = REGISTRY.register("magnet_battery", () -> new MagnetBatteryItem());
+	public static final RegistryObject<Item> MAGNET_CLAWS = REGISTRY.register("magnet_claws", () -> new MagnetClawsItem());
+	public static final RegistryObject<Item> CURSED_LADDER = block(PowerModBlocks.CURSED_LADDER);
+	public static final RegistryObject<Item> CURSED_LAMP = block(PowerModBlocks.CURSED_LAMP);
+	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
+	public static final RegistryObject<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
+	public static final RegistryObject<Item> ENERGIUM_KEY = REGISTRY.register("energium_key", () -> new EnergiumKeyItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

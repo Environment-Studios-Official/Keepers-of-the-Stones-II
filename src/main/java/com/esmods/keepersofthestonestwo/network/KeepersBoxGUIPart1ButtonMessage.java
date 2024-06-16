@@ -18,6 +18,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.procedures.WaterElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MagnetElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LavaElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
@@ -110,6 +111,10 @@ public class KeepersBoxGUIPart1ButtonMessage {
 		if (buttonID == 10) {
 
 			ExplosionElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			MagnetElementGetProcedure.execute(world, entity);
 		}
 	}
 

@@ -143,7 +143,7 @@ public class TeleportationMasterStartProcedure {
 			}
 		}
 		if (entity instanceof LivingEntity _entity) {
-			ItemStack _setstack = new ItemStack(PowerModItems.TELEPORTATION_GUN.get()).copy();
+			ItemStack _setstack = new ItemStack(PowerModItems.TELEPORTATION_BLADE.get()).copy();
 			_setstack.setCount(1);
 			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
 			if (_entity instanceof Player _player)

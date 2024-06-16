@@ -17,6 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
 import com.esmods.keepersofthestonestwo.procedures.WaterStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MagnetStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LavaStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceStoneCheckProcedure;
@@ -42,6 +43,7 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_ocean_element;
 	ImageButton imagebutton_ice_element;
 	ImageButton imagebutton_explosion_element;
+	ImageButton imagebutton_magnet_element;
 
 	public KeepersBoxGUIPart1Screen(KeepersBoxGUIPart1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -86,6 +88,9 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		if (ExplosionStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_explosion"), mouseX, mouseY);
+		if (MagnetStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 103 && mouseY < topPos + 127)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_magnet"), mouseX, mouseY);
 	}
 
 	@Override
@@ -258,5 +263,19 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_explosion_element", imagebutton_explosion_element);
 		this.addRenderableWidget(imagebutton_explosion_element);
+		imagebutton_magnet_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_magnet_element.png"), 16, 32, e -> {
+			if (MagnetStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(11, x, y, z));
+				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (MagnetStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_magnet_element", imagebutton_magnet_element);
+		this.addRenderableWidget(imagebutton_magnet_element);
 	}
 }

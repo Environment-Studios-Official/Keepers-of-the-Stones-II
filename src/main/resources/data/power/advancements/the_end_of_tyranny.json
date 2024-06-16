@@ -19,5 +19,11 @@
       "trigger": "minecraft:impossible"
     }
   },
+  "rewards": {
+    "experience": 0,
+    "loot": [
+      "power:energium_key_reward"
+    ]
+  },
   "parent": "power:what_is_this_metal"
 }
