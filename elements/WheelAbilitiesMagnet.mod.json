@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_magnetic_field_wave",
+          "image": "magnetic_field_wave.png",
+          "hoveredImage": "magnetic_field_wave_highlight.png",
           "onClick": {
             "name": "Attack141"
           },
@@ -129,11 +129,24 @@
         }
       },
       {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_magnetic_field_wave_uses_10",
+          "text": {
+            "fixedValue": "Magnetic field wave, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 45
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_negative_charge",
+          "image": "negative_charge.png",
+          "hoveredImage": "negative_charge_highlight.png",
           "onClick": {
             "name": "Attack142"
           },
@@ -144,14 +157,40 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_positive_charge",
+          "image": "positive_charge.png",
+          "hoveredImage": "positive_charge_highlight.png",
           "onClick": {
             "name": "Attack143"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_negative_charge_uses_30",
+          "text": {
+            "fixedValue": "Negative charge, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_positive_charge_uses_30",
+          "text": {
+            "fixedValue": "Positive charge, uses 30"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 169
         }
       }
     ],
