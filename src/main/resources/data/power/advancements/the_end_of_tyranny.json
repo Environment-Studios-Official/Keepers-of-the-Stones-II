@@ -22,7 +22,7 @@
   "rewards": {
     "experience": 0,
     "loot": [
-      "power:energium_key_reward"
+      "power:deleted_mod_element"
     ]
   },
   "parent": "power:what_is_this_metal"

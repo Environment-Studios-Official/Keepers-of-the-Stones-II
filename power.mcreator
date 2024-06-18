@@ -22608,9 +22608,12 @@
       "registry_name": "cursed_stone",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
           "src/main/resources/assets/power/models/item/cursed_stone.json",
           "src/main/resources/assets/power/models/block/cursed_stone.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone.json",
+          "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
+          "src/main/resources/data/power/forge/biome_modifier/cursed_stone_biome_modifier.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java"
         ]
@@ -27364,20 +27367,6 @@
       "path": "~/Elements/Magnet"
     },
     {
-      "name": "EnergiumKeyReward",
-      "type": "loottable",
-      "sortid": 1251,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "energium_key_reward",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/loot_tables/energium_key_reward.json"
-        ]
-      },
-      "path": "~/Achievements"
-    },
-    {
       "name": "EnergiumGolemDS",
       "type": "damagetype",
       "sortid": 1252,
@@ -27447,6 +27436,58 @@
         ]
       },
       "path": "~/Elements/Magnet"
+    },
+    {
+      "name": "CursedForest",
+      "type": "biome",
+      "sortid": 1256,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_forest",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/placed_feature/cursed_forest_tree.json",
+          "src/main/resources/data/power/worldgen/configured_feature/cursed_forest_tree.json",
+          "src/main/resources/data/power/worldgen/biome/cursed_forest.json"
+        ]
+      },
+      "path": "~/Biomes"
+    },
+    {
+      "name": "PlayerWitheringInCursedForest",
+      "type": "procedure",
+      "sortid": 1257,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "player_withering_in_cursed_forest",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/PlayerWitheringInCursedForestProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Biomes"
     }
   ],
   "variable_elements": [
@@ -28368,6 +28409,7 @@
       "item.power.space_armor_boots": "Ботинки мастера космоса",
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
+      "subtitles.strange_sound": "",
       "item.power.creation_staff": "Посох творения",
       "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
@@ -28474,6 +28516,7 @@
       "gui.power.wheel_abilities_sand.tooltip_burial_uses_30": "Погребение, расходует 30",
       "item.power.air_rapier": "Воздушная рапира",
       "item.power.shadow_scythe": "Теневая коса",
+      "biome.power.cursed_forest": "Cursed Forest",
       "item.power.metal_stone": "Камень металла",
       "item.power.sun_armor_chestplate": "Нагрудник мастера солнца",
       "item_group.power.stones": "KotS: Камни",
@@ -29005,6 +29048,7 @@
       "item.power.space_armor_boots": "Space Boots",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
+      "subtitles.strange_sound": "",
       "item.power.creation_staff": "Creation Staff",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
@@ -29111,6 +29155,7 @@
       "gui.power.wheel_abilities_sand.tooltip_burial_uses_30": "Burial, uses 30",
       "item.power.air_rapier": "Air Rapier",
       "item.power.shadow_scythe": "Shadow Scythe",
+      "biome.power.cursed_forest": "Cursed Forest",
       "item.power.metal_stone": "Metal Stone",
       "item.power.sun_armor_chestplate": "Sun Chestplate",
       "item_group.power.stones": "KotS: Stones",
@@ -30217,6 +30262,10 @@
       },
       {
         "name": "DamageSources",
+        "children": []
+      },
+      {
+        "name": "Biomes",
         "children": []
       }
     ]
