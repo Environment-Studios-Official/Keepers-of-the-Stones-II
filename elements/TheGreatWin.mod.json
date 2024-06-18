@@ -2,10 +2,10 @@
   "_fv": 60,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Become a Master",
-    "achievementDescription": "Get the elemental stone from the magic box",
+    "achievementName": "Great victory!",
+    "achievementDescription": "Defeat the cursed keeper and free him from the curse",
     "achievementIcon": {
-      "value": "CUSTOM:FireArmor.body"
+      "value": "CUSTOM:CursedKey"
     },
     "background": "Default",
     "disableDisplay": false,
@@ -18,7 +18,7 @@
     "rewardXP": 0,
     "achievementType": "challenge",
     "parent": {
-      "value": "CUSTOM:TheGreatWin"
+      "value": "CUSTOM:LetsBailThisPlaceIsdead"
     },
     "triggerxml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"advancement_trigger\" deletable=\"false\" x=\"40\" y=\"80\"><next><block type=\"custom_trigger\"></block></next></block></xml>"
   }

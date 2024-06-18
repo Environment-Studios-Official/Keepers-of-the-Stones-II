@@ -1,13 +1,13 @@
 {
   "display": {
     "icon": {
-      "item": "power:fire_armor_chestplate"
+      "item": "power:cursed_key"
     },
     "title": {
-      "translate": "advancements.become_a_master.title"
+      "translate": "advancements.the_great_win.title"
     },
     "description": {
-      "translate": "advancements.become_a_master.descr"
+      "translate": "advancements.the_great_win.descr"
     },
     "frame": "challenge",
     "show_toast": true,
@@ -15,9 +15,9 @@
     "hidden": false
   },
   "criteria": {
-    "become_a_master_0": {
+    "the_great_win_0": {
       "trigger": "minecraft:impossible"
     }
   },
-  "parent": "power:the_great_win"
+  "parent": "power:lets_bail_this_place_isdead"
 }

@@ -2,7 +2,7 @@
   "_fv": 60,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Getting Married",
+    "achievementName": "Getting married",
     "achievementDescription": "Create an amplifier ring to reset the stone's recharge",
     "achievementIcon": {
       "value": "CUSTOM:AmplifierRing"
