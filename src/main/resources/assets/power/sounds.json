@@ -182,5 +182,14 @@
         "stream": false
       }
     ]
+  },
+  "magnetic_waves": {
+    "subtitle": "subtitles.magnetic_waves",
+    "sounds": [
+      {
+        "name": "power:magnetic_waves",
+        "stream": false
+      }
+    ]
   }
 }
