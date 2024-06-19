@@ -27658,6 +27658,21 @@
         ]
       },
       "path": "~/Achievements"
+    },
+    {
+      "name": "KeeperBook",
+      "type": "item",
+      "sortid": 1267,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "keeper_book",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/keeper_book.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/KeeperBookItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeeperBook"
     }
   ],
   "variable_elements": [
@@ -28739,6 +28754,7 @@
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
       "battery.desc.mist": "Туман",
       "battery.desc.space": "Космос",
+      "item.power.keeper_book": "The Keeper\u0027s Book",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
       "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
       "item.power.creation_hoe": "Мотыга созидания",
@@ -29387,6 +29403,7 @@
       "advancements.keepers_of_the_stones_2.title": "Keepers Of The Stones II",
       "battery.desc.mist": "Mist",
       "battery.desc.space": "Space",
+      "item.power.keeper_book": "The Keeper\u0027s Book",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
       "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
       "item.power.creation_hoe": "Creation Hoe",
@@ -30428,6 +30445,10 @@
           },
           {
             "name": "Copyrium",
+            "children": []
+          },
+          {
+            "name": "KeeperBook",
             "children": []
           }
         ]

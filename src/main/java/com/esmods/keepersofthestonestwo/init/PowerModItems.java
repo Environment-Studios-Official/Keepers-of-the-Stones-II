@@ -121,6 +121,7 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
+import com.esmods.keepersofthestonestwo.item.KeeperBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -537,6 +538,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
 	public static final RegistryObject<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
 	public static final RegistryObject<Item> ENERGIUM_KEY = REGISTRY.register("energium_key", () -> new EnergiumKeyItem());
+	public static final RegistryObject<Item> KEEPER_BOOK = REGISTRY.register("keeper_book", () -> new KeeperBookItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
