@@ -2,6 +2,7 @@
     "name": "Earth",
     "icon": "power:textures/mob_effect/earth_master.png",
     "category": "power:stones",
+    "sortnum": 3,
     "pages": [
         {
             "type": "patchouli:text",

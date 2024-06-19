@@ -1,6 +1,6 @@
 {
-    "name": "The Keeper's Book",
-    "landing_text": "A book for mastering the power of the elements",
+    "name": "item.keeper_book.name",
+    "landing_text": "item.keeper_book.desc",
     "version": 1, 
     "creative_tab": "power:items",
     "model": "power:keeper_book",

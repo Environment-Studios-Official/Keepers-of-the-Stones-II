@@ -2,6 +2,7 @@
     "name": "Огонь",
     "icon": "power:textures/mob_effect/fire_master.png",
     "category": "power:stones",
+    "sortnum": 1,
     "pages": [
         {
             "type": "patchouli:text",

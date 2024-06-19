@@ -2,6 +2,7 @@
     "name": "Воздух",
     "icon": "power:textures/mob_effect/air_master.png",
     "category": "power:stones",
+    "sortnum": 2,
     "pages": [
         {
             "type": "patchouli:text",
