@@ -11,13 +11,13 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
 import net.minecraft.world.entity.ai.navigation.WaterBoundPathNavigation;
 import net.minecraft.world.entity.ai.navigation.PathNavigation;
 import net.minecraft.world.entity.ai.control.MoveControl;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
+import net.minecraft.world.entity.PathfinderMob;
 import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -34,7 +34,7 @@ import com.esmods.keepersofthestonestwo.procedures.PoisonPitTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HitboxScaleProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class PoisonPitEntity extends Monster {
+public class PoisonPitEntity extends PathfinderMob {
 	public PoisonPitEntity(PlayMessages.SpawnEntity packet, Level world) {
 		this(PowerModEntities.POISON_PIT.get(), world);
 	}
@@ -207,7 +207,7 @@ public class PoisonPitEntity extends Monster {
 	public static AttributeSupplier.Builder createAttributes() {
 		AttributeSupplier.Builder builder = Mob.createMobAttributes();
 		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 1);
+		builder = builder.add(Attributes.MAX_HEALTH, 2);
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
