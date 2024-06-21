@@ -17,6 +17,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MushroomsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
@@ -43,6 +44,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_amber_element;
 	ImageButton imagebutton_sand_element;
 	ImageButton imagebutton_poison_element;
+	ImageButton imagebutton_mushrooms_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -87,6 +89,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (PoisonStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_poison"), mouseX, mouseY);
+		if (MushroomsStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mushrooms"), mouseX, mouseY);
 	}
 
 	@Override
@@ -259,5 +264,19 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_poison_element", imagebutton_poison_element);
 		this.addRenderableWidget(imagebutton_poison_element);
+		imagebutton_mushrooms_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_mushrooms_element.png"), 16, 32, e -> {
+			if (MushroomsStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(11, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (MushroomsStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_mushrooms_element", imagebutton_mushrooms_element);
+		this.addRenderableWidget(imagebutton_mushrooms_element);
 	}
 }

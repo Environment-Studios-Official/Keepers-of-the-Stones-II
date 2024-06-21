@@ -329,6 +329,38 @@
           "x": 148,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mushrooms_element",
+          "image": "mushrooms_element.png",
+          "hoveredImage": "mushrooms_element_highlighted.png",
+          "onClick": {
+            "name": "MushrooomsElementGet"
+          },
+          "displayCondition": {
+            "name": "MushroomsStoneCheck"
+          },
+          "x": 264,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mushrooms",
+          "text": {
+            "fixedValue": "Mushrooms"
+          },
+          "displayCondition": {
+            "name": "MushroomsStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

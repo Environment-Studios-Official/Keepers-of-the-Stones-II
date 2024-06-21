@@ -90,6 +90,7 @@ import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
 import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsStoneItem;
+import com.esmods.keepersofthestonestwo.item.MushroomsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsArmorItem;
 import com.esmods.keepersofthestonestwo.item.MoonStoneItem;
 import com.esmods.keepersofthestonestwo.item.MoonDoubleSidedSpearItem;
@@ -544,6 +545,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_CHESTPLATE = REGISTRY.register("mushrooms_armor_chestplate", () -> new MushroomsArmorItem.Chestplate());
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_LEGGINGS = REGISTRY.register("mushrooms_armor_leggings", () -> new MushroomsArmorItem.Leggings());
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_BOOTS = REGISTRY.register("mushrooms_armor_boots", () -> new MushroomsArmorItem.Boots());
+	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

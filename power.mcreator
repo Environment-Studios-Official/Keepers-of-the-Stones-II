@@ -27825,6 +27825,326 @@
         ]
       },
       "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MushroomsMasterStart",
+      "type": "procedure",
+      "sortid": 1275,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MushroomsMasterEnd",
+      "type": "procedure",
+      "sortid": 1276,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MushrooomsElementGet",
+      "type": "procedure",
+      "sortid": 1277,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushroooms_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushrooomsElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mushrooms"
+    },
+    {
+      "name": "MushroomsStoneCheck",
+      "type": "procedure",
+      "sortid": 1278,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MushroomsSpecialAttack",
+      "type": "procedure",
+      "sortid": 1279,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesMushrooms",
+      "type": "gui",
+      "sortid": 1280,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_mushrooms",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMushroomsButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMushroomsScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMushroomsMenu.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mushrooms"
+    },
+    {
+      "name": "Attack145",
+      "type": "procedure",
+      "sortid": 1281,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_145",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack145Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mushrooms"
+    },
+    {
+      "name": "Attack146",
+      "type": "procedure",
+      "sortid": 1282,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_146",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack146Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mushrooms"
+    },
+    {
+      "name": "Attack147",
+      "type": "procedure",
+      "sortid": 1283,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_147",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack147Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mushrooms"
+    },
+    {
+      "name": "Attack148",
+      "type": "procedure",
+      "sortid": 1284,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_148",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack148Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mushrooms"
+    },
+    {
+      "name": "MushroomsBattery",
+      "type": "item",
+      "sortid": 1285,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mushrooms_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MushroomsBattery"
+    },
+    {
+      "name": "MushroomsBatteryDesc",
+      "type": "procedure",
+      "sortid": 1286,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MushroomsBattery"
+    },
+    {
+      "name": "MushroomsBatteryUse",
+      "type": "procedure",
+      "sortid": 1287,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mushrooms_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MushroomsBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MushroomsBattery"
     }
   ],
   "variable_elements": [
@@ -28719,6 +29039,7 @@
       "item.power.tornado_armor_helmet": "Шлем мастера торнадо",
       "item.power.moon_battery": "Батарея",
       "item.power.sun_battery": "Батарея",
+      "gui.power.wheel_abilities_mushrooms.tooltip_negative_charge_uses_30": "Negative charge, uses 30",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Копирование силы, расходует 50",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
@@ -28726,20 +29047,21 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_mushrooms.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
-      "item_group.power.items": "KotS: Предметы",
       "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "item_group.power.items": "KotS: Предметы",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "block.power.cursed_stone_slab": "Плита из проклятого камня",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -28750,12 +29072,12 @@
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
       "item.power.magnet_battery": "Батарея",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
-      "effect.power.mushrooms_master": "Master of Mushrooms",
+      "effect.power.mushrooms_master": "Мастер грибов",
       "block.power.cursed_lantern": "Проклятый фонарь",
-      "item.power.mushrooms_armor_leggings": "Magnet Leggings",
-      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
+      "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
+      "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
-      "item.power.mushrooms_armor_boots": "Magnet Boots",
+      "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
@@ -28791,6 +29113,7 @@
       "entity.power.black_hole": "Black Hole",
       "item.power.energium_armor_leggings": "Энерджиумные поножи",
       "item.keeper_book.desc": "Книга для овладения силой стихий",
+      "battery.desc.mushrooms": "Грибы",
       "item.power.explosion_stone": "Камень взрыва",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
@@ -28858,7 +29181,7 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
       "death.attack.energium_golem_ds.item": "%1$s был убит Энерджиумный голем",
-      "item.power.mushrooms_armor_chestplate": "Magnet Chestplate",
+      "item.power.mushrooms_armor_chestplate": "Нагрудник мастера грибов",
       "battery.desc.poison": "Яд",
       "item.power.tornado_battery": "Батарея",
       "effect.power.power_lock": "Блокировка силы",
@@ -28957,13 +29280,14 @@
       "advancements.the_end_of_tyranny.title": "Конец Тирании",
       "item.power.metal_armor_boots": "Ботинки мастера металла",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25",
+      "item.power.mushrooms_battery": "Battery",
       "item.power.ice_stone": "Камень льда",
       "battery.desc.ocean": "Океан",
       "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
       "item.power.blood_sickle": "Кровавый серп",
       "item.power.mind_stone": "Камень разума",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
-      "item.power.mushrooms_armor_helmet": "Magnet Helmet",
+      "item.power.mushrooms_armor_helmet": "Шлем мастера грибов",
       "item.power.light_armor_helmet": "Шлем мастера света",
       "item.power.vacuum_dagger": "Пустотный кинжал",
       "item.power.air_battery": "Батарея",
@@ -29063,6 +29387,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
       "effect.power.crystal_master": "Мастер кристалла",
+      "gui.power.wheel_abilities_mushrooms.tooltip_magnetic_field_wave_uses_10": "Magnetic field wave, uses 10",
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Атака четырёх стихий, расходует 10",
       "battery.desc.amber": "Янтарь",
       "item.power.shadow_armor_chestplate": "Нагрудник мастера тени",
@@ -29304,6 +29629,7 @@
       "item.power.moon_stone": "Камень луны",
       "item.power.blood_armor_helmet": "Шлем мастера крови",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Лёд",
+      "gui.power.keepers_box_gui_part_4.tooltip_mushrooms": "Грибы",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
       "item.power.energium_upgrade_smithing_template.ingredients": " §9Редстоун",
@@ -29374,12 +29700,14 @@
       "item.power.moon_battery": "Battery",
       "item.power.sun_battery": "Battery",
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
+      "gui.power.wheel_abilities_mushrooms.tooltip_negative_charge_uses_30": "Negative charge, uses 30",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
       "gui.power.debug_info.label_max_star_points_0": "max_star_points: 0",
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
+      "gui.power.wheel_abilities_mushrooms.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.energium_shovel": "Energium Shovel",
@@ -29415,8 +29743,8 @@
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.plants_stone": "Plants Stone",
-      "subtitles.strange_sound": "",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
+      "subtitles.strange_sound": "",
       "item.power.creation_staff": "Creation Staff",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
@@ -29445,6 +29773,7 @@
       "entity.power.black_hole": "Black Hole",
       "item.power.energium_armor_leggings": "Energium Leggings",
       "item.keeper_book.desc": "A book for mastering the power of the elements",
+      "battery.desc.mushrooms": "Mushrooms",
       "item.power.explosion_stone": "Explosion Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
@@ -29611,6 +29940,7 @@
       "advancements.the_end_of_tyranny.title": "The End of Tyranny",
       "item.power.metal_armor_boots": "Metal Boots",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Air flow, uses 10",
+      "item.power.mushrooms_battery": "Battery",
       "item.power.ice_stone": "Ice Stone",
       "battery.desc.ocean": "Ocean",
       "item.power.energy_armor_chestplate": "Energy Chestplate",
@@ -29718,6 +30048,7 @@
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
       "effect.power.crystal_master": "Master of the Crystal",
+      "gui.power.wheel_abilities_mushrooms.tooltip_magnetic_field_wave_uses_10": "Magnetic field wave, uses 10",
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Four elements attack, uses 10",
       "battery.desc.amber": "Amber",
       "item.power.shadow_armor_chestplate": "Shadow Chestplate",
@@ -29958,6 +30289,7 @@
       "item.power.moon_stone": "Moon Stone",
       "item.power.blood_armor_helmet": "Blood Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Ice",
+      "gui.power.keepers_box_gui_part_4.tooltip_mushrooms": "Mushrooms",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
       "item.power.energium_upgrade_smithing_template.ingredients": "§9Redstone",
@@ -30395,6 +30727,10 @@
                       {
                         "name": "Magnet",
                         "children": []
+                      },
+                      {
+                        "name": "Mushrooms",
+                        "children": []
                       }
                     ]
                   }
@@ -30580,6 +30916,10 @@
               },
               {
                 "name": "MagnetBattery",
+                "children": []
+              },
+              {
+                "name": "MushroomsBattery",
                 "children": []
               }
             ]
