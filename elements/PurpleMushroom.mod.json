@@ -38,17 +38,17 @@
       "fixedValue": []
     },
     "hardness": 1.0,
-    "resistance": 10.0,
+    "resistance": 1.0,
     "hasGravity": false,
     "isWaterloggable": true,
     "creativeTab": {
-      "value": "CUSTOM:Items"
+      "value": "No creative tab entry"
     },
     "destroyTool": "Not specified",
     "customDrop": {
       "value": ""
     },
-    "dropAmount": 1,
+    "dropAmount": 0,
     "useLootTableForDrops": false,
     "requiresCorrectTool": false,
     "enchantPowerBonus": 0.0,
@@ -58,7 +58,7 @@
     "material": {
       "value": "PLANTS"
     },
-    "tickRate": 0,
+    "tickRate": 3,
     "tickRandomly": false,
     "isReplaceable": true,
     "canProvidePower": false,
@@ -101,6 +101,9 @@
     "luminance": 0,
     "unbreakable": false,
     "breakHarvestLevel": 1,
+    "placingCondition": {
+      "name": "PurpleMushroomUsloviieRazmieshchieniiaBloka"
+    },
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",
@@ -119,6 +122,9 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
+    "onTickUpdate": {
+      "name": "PurpleMushroomSpontannoNaStoronieKliienta"
+    },
     "generateFeature": false,
     "restrictionBiomes": [],
     "blocksToReplace": [

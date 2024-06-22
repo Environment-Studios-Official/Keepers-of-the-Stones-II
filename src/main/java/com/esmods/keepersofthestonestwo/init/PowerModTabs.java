@@ -109,7 +109,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_BATTERY.get());
 				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 				tabData.accept(PowerModItems.MUSHROOMS_BATTERY.get());
-				tabData.accept(PowerModBlocks.PURPLE_MUSHROOM.get().asItem());
 			})
 
 					.build());
