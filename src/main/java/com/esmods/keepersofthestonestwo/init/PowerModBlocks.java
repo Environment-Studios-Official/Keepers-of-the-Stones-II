@@ -13,6 +13,7 @@ import net.minecraft.world.level.block.Block;
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawCopyriumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
+import com.esmods.keepersofthestonestwo.block.PurpleMushroomBlock;
 import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneStairsBlock;
 import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneSlabBlock;
@@ -86,6 +87,7 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> CURSED_LADDER = REGISTRY.register("cursed_ladder", () -> new CursedLadderBlock());
 	public static final RegistryObject<Block> CURSED_LAMP = REGISTRY.register("cursed_lamp", () -> new CursedLampBlock());
 	public static final RegistryObject<Block> ENERGIUM_VAULT = REGISTRY.register("energium_vault", () -> new EnergiumVaultBlock());
+	public static final RegistryObject<Block> PURPLE_MUSHROOM = REGISTRY.register("purple_mushroom", () -> new PurpleMushroomBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

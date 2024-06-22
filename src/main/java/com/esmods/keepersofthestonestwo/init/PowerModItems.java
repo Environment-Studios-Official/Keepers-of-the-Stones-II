@@ -548,6 +548,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_BOOTS = REGISTRY.register("mushrooms_armor_boots", () -> new MushroomsArmorItem.Boots());
 	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 	public static final RegistryObject<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", () -> new MushroomsHammerItem());
+	public static final RegistryObject<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
 
 	// Start of user code block custom items
 	// End of user code block custom items
