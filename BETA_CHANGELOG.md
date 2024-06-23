@@ -1,6 +1,7 @@
 What's new in Keepers of the Stones II version 1.0.0.28?<br />
 <br />- Added new element - mushrooms
 <br />- Added new biome - cursed forest
+<br />- Added new record - call of the past
 <br />- Added a keeper's book
 <br />- The book is in development, there are some chapters not there yet
 <br />- Added new achievements

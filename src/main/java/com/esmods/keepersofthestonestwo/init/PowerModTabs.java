@@ -47,6 +47,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
+				tabData.accept(PowerModItems.CALL_OF_THE_PAST_RECORD.get());
 				tabData.accept(PowerModBlocks.COPYRIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.RAW_COPYRIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.COPYRIUM_BLOCK.get().asItem());

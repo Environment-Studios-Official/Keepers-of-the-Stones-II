@@ -31,4 +31,5 @@ public class PowerModSounds {
 	public static final RegistryObject<SoundEvent> BACKPORT_BLOCK_VAULT_OPEN_SHUTTER = REGISTRY.register("backport.block.vault.open_shutter",
 			() -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "backport.block.vault.open_shutter")));
 	public static final RegistryObject<SoundEvent> MAGNETIC_WAVES = REGISTRY.register("magnetic_waves", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "magnetic_waves")));
+	public static final RegistryObject<SoundEvent> RECORD_CALL_OF_THE_PAST = REGISTRY.register("record.call_of_the_past", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "record.call_of_the_past")));
 }

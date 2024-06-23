@@ -187,6 +187,7 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.CallOfThePastRecordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodSickleItem;
@@ -549,6 +550,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
 	public static final RegistryObject<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", () -> new MushroomsHammerItem());
 	public static final RegistryObject<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
+	public static final RegistryObject<Item> CALL_OF_THE_PAST_RECORD = REGISTRY.register("call_of_the_past_record", () -> new CallOfThePastRecordItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
