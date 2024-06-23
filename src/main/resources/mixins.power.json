@@ -1,9 +1,0 @@
-{
-  "required": true,
-  "package": "com.esmods.keepersofthestonestwo.mixins",
-  "compatibilityLevel": "JAVA_17",
-  "refmap": "mixins.power.refmap.json",
-  "mixins": [],
-  "client": [],
-  "minVersion": "0.8"
-}
