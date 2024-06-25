@@ -28293,6 +28293,21 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "EnergiumGolemBreaksBlocks",
+      "type": "procedure",
+      "sortid": 1294,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "energium_golem_breaks_blocks",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumGolemBreaksBlocksProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Bosses/EnergiumGolem"
     }
   ],
   "variable_elements": [

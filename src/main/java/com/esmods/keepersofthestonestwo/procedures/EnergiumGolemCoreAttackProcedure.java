@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -92,6 +93,9 @@ public class EnergiumGolemCoreAttackProcedure {
 								}
 							}
 						}
+					}
+					if (!(world.getBlockState(BlockPos.containing(XPar, YPar, ZPar))).is(BlockTags.create(new ResourceLocation("forge:monster_motion_stop")))) {
+						world.destroyBlock(BlockPos.containing(XPar, YPar, ZPar), false);
 					}
 					loop = loop + 1;
 				}
