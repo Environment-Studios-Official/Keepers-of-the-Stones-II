@@ -119,8 +119,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "image": "flying_spores.png",
+          "hoveredImage": "flying_spores_highlight.png",
           "onClick": {
             "name": "Attack145"
           },
@@ -132,8 +132,8 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "image": "planting_mushrooms.png",
+          "hoveredImage": "planting_mushrooms_highlight.png",
           "onClick": {
             "name": "Attack146"
           },
@@ -145,13 +145,52 @@
         "type": "imagebutton",
         "data": {
           "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "image": "mushroom_saturation.png",
+          "hoveredImage": "mushroom_saturation_highlight.png",
           "onClick": {
             "name": "Attack147"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_planting_mushrooms_uses_35",
+          "text": {
+            "fixedValue": "Planting mushrooms, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_flying_spores_uses_15",
+          "text": {
+            "fixedValue": "Flying spores, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 45
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mushroom_saturation_uses_50",
+          "text": {
+            "fixedValue": "Mushroom saturation, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 168
         }
       }
     ],
