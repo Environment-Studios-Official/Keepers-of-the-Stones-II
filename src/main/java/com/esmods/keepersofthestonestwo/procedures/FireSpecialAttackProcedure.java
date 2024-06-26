@@ -222,7 +222,7 @@ public class FireSpecialAttackProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.FLAME, x, y, z, 30, 0, (-1), 0, 1);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 4, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 				{
