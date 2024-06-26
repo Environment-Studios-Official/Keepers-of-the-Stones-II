@@ -13,6 +13,7 @@ import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.Difficulty;
 import net.minecraft.tags.TagKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
@@ -41,7 +42,8 @@ public class PlayerWitheringInCursedForestProcedure {
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_BOOTS.get())
-				&& !entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("power:cursed_mobs"))) && !(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+				&& !entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("power:cursed_mobs"))) && !(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)
+				&& !(world.getDifficulty() == Difficulty.PEACEFUL)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, 0));
 		}

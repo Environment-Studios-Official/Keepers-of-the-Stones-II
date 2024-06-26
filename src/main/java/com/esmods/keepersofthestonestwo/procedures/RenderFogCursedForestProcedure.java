@@ -62,7 +62,7 @@ public class RenderFogCursedForestProcedure {
 		if (entity == null)
 			return;
 		if (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PowerModMobEffects.MIST.get()))) {
-			setDistance(30, 45);
+			setDistance(0, 30);
 			setShape(FogShape.SPHERE);
 		}
 	}

@@ -28308,6 +28308,22 @@
         "dependencies": []
       },
       "path": "~/Bosses/EnergiumGolem"
+    },
+    {
+      "name": "BasicCursedTrees",
+      "type": "feature",
+      "sortid": 1295,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "basic_cursed_trees",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/forge/biome_modifier/basic_cursed_trees_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json",
+          "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
+        ]
+      },
+      "path": "~/Biomes"
     }
   ],
   "variable_elements": [
@@ -30924,10 +30940,6 @@
             "children": []
           },
           {
-            "name": "Gamerules",
-            "children": []
-          },
-          {
             "name": "RechargeStoneModule",
             "children": []
           },
@@ -31178,7 +31190,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.28",
+    "version": "1.0.0.28.260620241435",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
