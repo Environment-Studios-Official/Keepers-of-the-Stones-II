@@ -31206,7 +31206,6 @@
     "modPicture": "logo",
     "requiredMods": [
       "kleiders_custom_renderer",
-      "patchouli",
       "geckolib",
       "particlepresets"
     ],
