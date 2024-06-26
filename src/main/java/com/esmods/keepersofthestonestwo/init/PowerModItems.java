@@ -90,6 +90,9 @@ import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
 import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsStoneItem;
+import com.esmods.keepersofthestonestwo.item.MushroomsHammerItem;
+import com.esmods.keepersofthestonestwo.item.MushroomsBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MushroomsArmorItem;
 import com.esmods.keepersofthestonestwo.item.MoonStoneItem;
 import com.esmods.keepersofthestonestwo.item.MoonDoubleSidedSpearItem;
 import com.esmods.keepersofthestonestwo.item.MoonBatteryItem;
@@ -121,6 +124,7 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
+import com.esmods.keepersofthestonestwo.item.KeeperBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -183,6 +187,7 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.CallOfThePastRecordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodSickleItem;
@@ -537,6 +542,15 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
 	public static final RegistryObject<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
 	public static final RegistryObject<Item> ENERGIUM_KEY = REGISTRY.register("energium_key", () -> new EnergiumKeyItem());
+	public static final RegistryObject<Item> KEEPER_BOOK = REGISTRY.register("keeper_book", () -> new KeeperBookItem());
+	public static final RegistryObject<Item> MUSHROOMS_ARMOR_HELMET = REGISTRY.register("mushrooms_armor_helmet", () -> new MushroomsArmorItem.Helmet());
+	public static final RegistryObject<Item> MUSHROOMS_ARMOR_CHESTPLATE = REGISTRY.register("mushrooms_armor_chestplate", () -> new MushroomsArmorItem.Chestplate());
+	public static final RegistryObject<Item> MUSHROOMS_ARMOR_LEGGINGS = REGISTRY.register("mushrooms_armor_leggings", () -> new MushroomsArmorItem.Leggings());
+	public static final RegistryObject<Item> MUSHROOMS_ARMOR_BOOTS = REGISTRY.register("mushrooms_armor_boots", () -> new MushroomsArmorItem.Boots());
+	public static final RegistryObject<Item> MUSHROOMS_BATTERY = REGISTRY.register("mushrooms_battery", () -> new MushroomsBatteryItem());
+	public static final RegistryObject<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", () -> new MushroomsHammerItem());
+	public static final RegistryObject<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
+	public static final RegistryObject<Item> CALL_OF_THE_PAST_RECORD = REGISTRY.register("call_of_the_past_record", () -> new CallOfThePastRecordItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

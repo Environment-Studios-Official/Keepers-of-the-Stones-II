@@ -182,5 +182,23 @@
         "stream": false
       }
     ]
+  },
+  "magnetic_waves": {
+    "subtitle": "subtitles.magnetic_waves",
+    "sounds": [
+      {
+        "name": "power:magnetic_waves",
+        "stream": false
+      }
+    ]
+  },
+  "record.call_of_the_past": {
+    "subtitle": "subtitles.record.call_of_the_past",
+    "sounds": [
+      {
+        "name": "power:call_of_the_past_record",
+        "stream": true
+      }
+    ]
   }
 }

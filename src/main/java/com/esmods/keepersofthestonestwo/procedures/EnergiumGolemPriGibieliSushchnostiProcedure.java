@@ -1,8 +1,12 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraftforge.items.ItemHandlerHelper;
+
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
@@ -11,6 +15,8 @@ import net.minecraft.advancements.Advancement;
 
 import java.util.List;
 import java.util.Comparator;
+
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumGolemPriGibieliSushchnostiProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {
@@ -25,6 +31,11 @@ public class EnergiumGolemPriGibieliSushchnostiProcedure {
 						for (String criteria : _ap.getRemainingCriteria())
 							_player.getAdvancements().award(_adv, criteria);
 					}
+				}
+				if (entityiterator instanceof Player _player) {
+					ItemStack _setstack = new ItemStack(PowerModItems.ENERGIUM_KEY.get()).copy();
+					_setstack.setCount(1);
+					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}
 		}
