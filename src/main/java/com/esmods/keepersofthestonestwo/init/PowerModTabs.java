@@ -47,7 +47,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
-				tabData.accept(PowerModItems.CALL_OF_THE_PAST_RECORD.get());
 				tabData.accept(PowerModBlocks.COPYRIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.RAW_COPYRIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.COPYRIUM_BLOCK.get().asItem());
@@ -110,6 +109,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_BATTERY.get());
 				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 				tabData.accept(PowerModItems.MUSHROOMS_BATTERY.get());
+				tabData.accept(PowerModItems.MUSIC_DISC_CALL_OF_THE_PAST.get());
 			})
 
 					.build());
