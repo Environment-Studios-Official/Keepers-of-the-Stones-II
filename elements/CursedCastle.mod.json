@@ -1,0 +1,29 @@
+{
+  "_fv": 60,
+  "_type": "structure",
+  "definition": {
+    "structure": "cursed_castle",
+    "projection": "rigid",
+    "ignoredBlocks": [
+      {
+        "value": "Blocks.STRUCTURE_BLOCK"
+      },
+      {
+        "value": "Blocks.AIR"
+      }
+    ],
+    "spacing": 32,
+    "separation": 24,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:CursedForest"
+      }
+    ],
+    "surfaceDetectionType": "WORLD_SURFACE",
+    "terrainAdaptation": "beard_thin",
+    "generationStep": "SURFACE_STRUCTURES",
+    "size": 1,
+    "maxDistanceFromCenter": 64,
+    "jigsawPools": []
+  }
+}
