@@ -2,9 +2,9 @@
   "_fv": 60,
   "_type": "tab",
   "definition": {
-    "name": "KotS: Items",
+    "name": "KotS: Batteries",
     "icon": {
-      "value": "CUSTOM:AmplifierRing"
+      "value": "CUSTOM:EmptyBattery"
     },
     "showSearch": false
   }
