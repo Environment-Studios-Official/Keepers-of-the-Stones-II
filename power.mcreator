@@ -28366,6 +28366,230 @@
         "files": []
       },
       "path": "~/Tabs"
+    },
+    {
+      "name": "MercuryMaster",
+      "type": "potioneffect",
+      "sortid": 1299,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/MercuryMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryArmor",
+      "type": "armor",
+      "sortid": 1300,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/mercury_armor_boots.json",
+          "src/main/resources/assets/power/models/item/mercury_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mercury_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "sortid": 1301,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "sortid": 1302,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "sortid": 1303,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "sortid": 1304,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryStoneUse",
+      "type": "procedure",
+      "sortid": 1305,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryMasterStart",
+      "type": "procedure",
+      "sortid": 1306,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryMasterEnd",
+      "type": "procedure",
+      "sortid": 1307,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
     }
   ],
   "variable_elements": [
@@ -29541,6 +29765,7 @@
       "subtitles.bass_boom": "Бас",
       "block.power.elemental_power_generator": "Генератор силы стихии",
       "item.power.sun_armor_leggings": "Поножи мастера солнца",
+      "item.power.mercury_armor_helmet": "Mushrooms Helmet",
       "item.power.sand_armor_leggings": "Поножи мастера песка",
       "effect.power.plants_master": "Мастер зелени",
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
@@ -29605,6 +29830,7 @@
       "effect.power.mist": "Mist",
       "item.power.lightning_armor_chestplate": "Нагрудник мастера молнии",
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
+      "item.power.mercury_armor_chestplate": "Mushrooms Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Шлем мастера телепортации",
@@ -29767,6 +29993,7 @@
       "entity.power.shadow": "Тень",
       "item.power.green_staff": "Зелёный посох",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Ускорение времени, расходует 30",
+      "item.power.mercury_armor_leggings": "Mushrooms Leggings",
       "item.power.water_armor_chestplate": "Нагрудник мастера воды",
       "item.power.lightning_stone": "Камень молнии",
       "item.power.blue_flame_stone": "Камень синего пламени",
@@ -29817,6 +30044,7 @@
       "item.power.energium_upgrade_smithing_template.upgrade": "§7Энерджиумное улучшение",
       "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.explosion_armor_leggings": "Поножи мастера взрыва",
+      "item.power.mercury_armor_boots": "Mushrooms Boots",
       "item.power.earth_armor_helmet": "Шлем мастера земли",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.air_armor_chestplate": "Нагрудник мастера воздуха",
@@ -29918,6 +30146,7 @@
       "item.power.constellation_sword": "Меч созвездий",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
       "item.power.form_stone": "Камень формы",
+      "effect.power.mercury_master": "Mercury Master",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.energium_armor_chestplate": "Энерджиумный нагрудник",
       "item.power.magnet_armor_helmet": "Шлем мастера магнита",
@@ -30207,6 +30436,7 @@
       "subtitles.stone_deactivation": "The stone has been deactivated",
       "block.power.elemental_power_generator": "Elemental Power Generator",
       "item.power.sun_armor_leggings": "Sun Leggings",
+      "item.power.mercury_armor_helmet": "Mercury Helmet",
       "item.power.sand_armor_leggings": "Sand Leggings",
       "effect.power.plants_master": "Master of Plants",
       "item.power.plants_armor_helmet": "Plants Helmet",
@@ -30272,6 +30502,7 @@
       "effect.power.mist": "Mist",
       "item.power.lightning_armor_chestplate": "Lightning Chestplate",
       "item.power.lightning_armor_helmet": "Lightning Helmet",
+      "item.power.mercury_armor_chestplate": "Mercury Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Teleportation Helmet",
@@ -30434,6 +30665,7 @@
       "entity.power.shadow": "Shadow",
       "item.power.green_staff": "Green Staff",
       "gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30": "Acceleration of time, uses 30",
+      "item.power.mercury_armor_leggings": "Mercury Leggings",
       "item.power.lightning_stone": "Lightning Stone",
       "item.power.water_armor_chestplate": "Water Chestplate",
       "item.power.blue_flame_stone": "Blue Flame Stone",
@@ -30483,6 +30715,7 @@
       "item.power.time_khopesh": "Time Khopesh",
       "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.explosion_armor_leggings": "Explosion Leggings",
+      "item.power.mercury_armor_boots": "Mercury Boots",
       "item.power.earth_armor_helmet": "Earth Helmet",
       "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.air_armor_chestplate": "Air Chestplate",
@@ -30584,6 +30817,7 @@
       "item.power.constellation_sword": "Constellation Sword",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Air",
       "item.power.form_stone": "Form Stone",
+      "effect.power.mercury_master": "Master of Mercury",
       "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.energium_armor_chestplate": "Energium Chestplate",
       "item.power.magnet_armor_helmet": "Magnet Helmet",

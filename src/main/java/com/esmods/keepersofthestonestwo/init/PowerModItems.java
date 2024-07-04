@@ -107,6 +107,7 @@ import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
+import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
 import com.esmods.keepersofthestonestwo.item.MagnetBatteryItem;
@@ -551,6 +552,10 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MUSHROOMS_HAMMER = REGISTRY.register("mushrooms_hammer", () -> new MushroomsHammerItem());
 	public static final RegistryObject<Item> PURPLE_MUSHROOM = block(PowerModBlocks.PURPLE_MUSHROOM);
 	public static final RegistryObject<Item> MUSIC_DISC_CALL_OF_THE_PAST = REGISTRY.register("music_disc_call_of_the_past", () -> new MusicDiscCallOfThePastItem());
+	public static final RegistryObject<Item> MERCURY_ARMOR_HELMET = REGISTRY.register("mercury_armor_helmet", () -> new MercuryArmorItem.Helmet());
+	public static final RegistryObject<Item> MERCURY_ARMOR_CHESTPLATE = REGISTRY.register("mercury_armor_chestplate", () -> new MercuryArmorItem.Chestplate());
+	public static final RegistryObject<Item> MERCURY_ARMOR_LEGGINGS = REGISTRY.register("mercury_armor_leggings", () -> new MercuryArmorItem.Leggings());
+	public static final RegistryObject<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

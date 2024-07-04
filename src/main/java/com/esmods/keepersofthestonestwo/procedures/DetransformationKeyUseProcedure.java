@@ -88,6 +88,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER.get());
 				{
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
