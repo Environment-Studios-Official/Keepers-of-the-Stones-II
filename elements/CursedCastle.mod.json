@@ -20,7 +20,7 @@
       }
     ],
     "surfaceDetectionType": "WORLD_SURFACE",
-    "terrainAdaptation": "beard_thin",
+    "terrainAdaptation": "beard_box",
     "generationStep": "SURFACE_STRUCTURES",
     "size": 1,
     "maxDistanceFromCenter": 64,

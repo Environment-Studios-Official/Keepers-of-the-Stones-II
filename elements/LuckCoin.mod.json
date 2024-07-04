@@ -3,14 +3,14 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "keeper_book",
+    "texture": "luck_coin",
     "customModelName": "Normal",
     "customProperties": {},
     "states": [],
-    "name": "The Keeper's Book",
-    "rarity": "COMMON",
+    "name": "Luck Coin",
+    "rarity": "EPIC",
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "CUSTOM:Items"
     },
     "stackSize": 1,
     "enchantability": 0,

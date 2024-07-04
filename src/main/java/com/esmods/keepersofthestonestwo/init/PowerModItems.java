@@ -113,6 +113,7 @@ import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
 import com.esmods.keepersofthestonestwo.item.MagnetBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MagnetArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagicFireballItem;
+import com.esmods.keepersofthestonestwo.item.LuckCoinItem;
 import com.esmods.keepersofthestonestwo.item.LightningStoneItem;
 import com.esmods.keepersofthestonestwo.item.LightningFalchionItem;
 import com.esmods.keepersofthestonestwo.item.LightningBatteryItem;
@@ -126,7 +127,6 @@ import com.esmods.keepersofthestonestwo.item.LavaStoneItem;
 import com.esmods.keepersofthestonestwo.item.LavaHammerItem;
 import com.esmods.keepersofthestonestwo.item.LavaBatteryItem;
 import com.esmods.keepersofthestonestwo.item.LavaArmorItem;
-import com.esmods.keepersofthestonestwo.item.KeeperBookItem;
 import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
@@ -543,7 +543,6 @@ public class PowerModItems {
 	public static final RegistryObject<Item> TELEPORTATION_BLADE = REGISTRY.register("teleportation_blade", () -> new TeleportationBladeItem());
 	public static final RegistryObject<Item> ENERGIUM_VAULT = block(PowerModBlocks.ENERGIUM_VAULT);
 	public static final RegistryObject<Item> ENERGIUM_KEY = REGISTRY.register("energium_key", () -> new EnergiumKeyItem());
-	public static final RegistryObject<Item> KEEPER_BOOK = REGISTRY.register("keeper_book", () -> new KeeperBookItem());
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_HELMET = REGISTRY.register("mushrooms_armor_helmet", () -> new MushroomsArmorItem.Helmet());
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_CHESTPLATE = REGISTRY.register("mushrooms_armor_chestplate", () -> new MushroomsArmorItem.Chestplate());
 	public static final RegistryObject<Item> MUSHROOMS_ARMOR_LEGGINGS = REGISTRY.register("mushrooms_armor_leggings", () -> new MushroomsArmorItem.Leggings());
@@ -556,6 +555,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MERCURY_ARMOR_CHESTPLATE = REGISTRY.register("mercury_armor_chestplate", () -> new MercuryArmorItem.Chestplate());
 	public static final RegistryObject<Item> MERCURY_ARMOR_LEGGINGS = REGISTRY.register("mercury_armor_leggings", () -> new MercuryArmorItem.Leggings());
 	public static final RegistryObject<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
+	public static final RegistryObject<Item> LUCK_COIN = REGISTRY.register("luck_coin", () -> new LuckCoinItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

@@ -45,6 +45,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
+				tabData.accept(PowerModItems.LUCK_COIN.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_CALL_OF_THE_PAST.get());
