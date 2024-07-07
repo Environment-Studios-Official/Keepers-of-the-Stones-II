@@ -73,6 +73,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_LANTERN.get().asItem());
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
+				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
 			})
 
 					.build());

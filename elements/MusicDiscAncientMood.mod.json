@@ -4,8 +4,8 @@
   "definition": {
     "name": "Music Disc",
     "rarity": "RARE",
-    "texture": "call_of_the_past_music_disc",
-    "description": "bxkqq - Call of the Past",
+    "texture": "ancient_mood_music_disc",
+    "description": "bxkqq - Ancient Mood",
     "creativeTab": {
       "value": "CUSTOM:Items"
     },
@@ -16,9 +16,9 @@
       "fixedValue": false
     },
     "music": {
-      "value": "CUSTOM:record.call_of_the_past"
+      "value": "CUSTOM:record.ancient_mood"
     },
-    "lengthInTicks": 2960,
-    "analogOutput": 8
+    "lengthInTicks": 4060,
+    "analogOutput": 9
   }
 }

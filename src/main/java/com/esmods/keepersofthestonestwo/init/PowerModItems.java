@@ -90,6 +90,7 @@ import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
 import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscCallOfThePastItem;
+import com.esmods.keepersofthestonestwo.item.MusicDiscAncientMoodItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsStoneItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsHammerItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsBatteryItem;
@@ -556,6 +557,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MERCURY_ARMOR_LEGGINGS = REGISTRY.register("mercury_armor_leggings", () -> new MercuryArmorItem.Leggings());
 	public static final RegistryObject<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
 	public static final RegistryObject<Item> LUCK_COIN = REGISTRY.register("luck_coin", () -> new LuckCoinItem());
+	public static final RegistryObject<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", () -> new MusicDiscAncientMoodItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
