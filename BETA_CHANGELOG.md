@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.29?<br />
+<br />- Added new music disc - Ancient Mood
 <br />- The generation of the cursed forest biome has been temporarily removed, as the location is not in use and needs to be improved
 <br />- The batteries have been moved to a separate creative mode tab
 <br />- Added sounds when charging the battery in the battery charger
