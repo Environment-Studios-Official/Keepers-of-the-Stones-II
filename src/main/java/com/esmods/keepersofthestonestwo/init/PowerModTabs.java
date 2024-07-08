@@ -18,6 +18,7 @@ public class PowerModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerMod.MODID);
 	public static final RegistryObject<CreativeModeTab> ITEMS = REGISTRY.register("items",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.items")).icon(() -> new ItemStack(PowerModItems.AMPLIFIER_RING.get())).displayItems((parameters, tabData) -> {
+				tabData.accept(PowerModItems.LUCK_COIN.get());
 				tabData.accept(PowerModBlocks.AMPLIFIER_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.RAW_AMPLIFIER_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.AMPLIFIER_BLOCK.get().asItem());
@@ -45,7 +46,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get());
 				tabData.accept(PowerModItems.ENERGIUM_ARMOR_BOOTS.get());
 				tabData.accept(PowerModItems.ENERGIUM_CORE.get());
-				tabData.accept(PowerModItems.LUCK_COIN.get());
 				tabData.accept(PowerModBlocks.ENERGIUM_VAULT.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_CALL_OF_THE_PAST.get());
