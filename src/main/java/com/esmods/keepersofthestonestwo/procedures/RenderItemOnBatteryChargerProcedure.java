@@ -1,5 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import org.joml.Matrix4f;
+
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
@@ -16,7 +18,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -37,7 +38,9 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
@@ -55,12 +58,28 @@ import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 public class RenderItemOnBatteryChargerProcedure {
 	private static RenderLevelStageEvent provider = null;
 	private static Map<EntityType, Entity> data = new HashMap<>();
+	private static float textWidth = 1.0F;
+	private static float textHeight = 1.0F;
+	private static int textColor = -1;
+	private static int backColor = 0;
+
+	public static void setBackColor(int color) {
+		RenderItemOnBatteryChargerProcedure.backColor = color;
+	}
+
+	public static void setTextColor(int color) {
+		RenderItemOnBatteryChargerProcedure.textColor = color;
+	}
+
+	public static void setScale(float width, float height) {
+		RenderItemOnBatteryChargerProcedure.textWidth = width;
+		RenderItemOnBatteryChargerProcedure.textHeight = height;
+	}
 
 	public static void renderBlock(BlockState blockState, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		ClientLevel level = Minecraft.getInstance().level;
-		Vec3 pos = provider.getCamera().getPosition();
 		BlockPos blockPos = BlockPos.containing(x, y, z);
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
+		Vec3 pos = provider.getCamera().getPosition();
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(Minecraft.getInstance().level, blockPos);
 		PoseStack poseStack = provider.getPoseStack();
 		poseStack.pushPose();
 		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
@@ -106,7 +125,7 @@ public class RenderItemOnBatteryChargerProcedure {
 			float red = (color >> 16 & 255) / 255.0F;
 			float green = (color >> 8 & 255) / 255.0F;
 			float blue = (color & 255) / 255.0F;
-			for (RenderType renderType : bakedModel.getRenderTypes(blockState, RandomSource.create(42), modelData)) {
+			for (RenderType renderType : bakedModel.getRenderTypes(blockState, RandomSource.create(42L), modelData)) {
 				renderer.renderModel(pose, bufferSource.getBuffer(Sheets.translucentCullBlockSheet()), blockState, bakedModel, red, green, blue, packedLight, OverlayTexture.NO_OVERLAY, modelData, renderType);
 			}
 		}
@@ -116,22 +135,23 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (type == null)
 			return;
 		Entity entity;
+		ClientLevel level = Minecraft.getInstance().level;
 		if (data.containsKey(type)) {
 			entity = data.get(type);
+			if (entity.level() != level) {
+				entity = type.create(level);
+				data.put(type, entity);
+			}
 		} else {
-			entity = type.create(Minecraft.getInstance().level);
+			entity = type.create(level);
 			data.put(type, entity);
 		}
-		ClientLevel level = Minecraft.getInstance().level;
-		BlockPos blockPos = BlockPos.containing(x, y, z);
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
-		renderEntity(entity, 0.0F, x, y, z, yaw, pitch, roll, scale, packedLight);
+		renderEntity(entity, 0.0F, x, y, z, yaw, pitch, roll, scale, glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(level, BlockPos.containing(x, y, z)));
 	}
 
 	public static void renderEntity(Entity entity, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		EntityRenderer renderer = Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(entity);
 		float partialTick = provider.getPartialTick();
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : renderer.getPackedLightCoords(entity, partialTick);
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : Minecraft.getInstance().getEntityRenderDispatcher().getPackedLightCoords(entity, partialTick);
 		renderEntity(entity, partialTick, x, y, z, yaw, pitch, roll, scale, packedLight);
 	}
 
@@ -159,17 +179,10 @@ public class RenderItemOnBatteryChargerProcedure {
 
 	public static void renderItem(ItemStack itemStack, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean flipping, boolean glowing) {
 		Minecraft minecraft = Minecraft.getInstance();
-		ClientLevel level = minecraft.level;
 		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 		ItemRenderer renderer = minecraft.getItemRenderer();
 		Vec3 pos = provider.getCamera().getPosition();
-		int packedLight;
-		if (glowing) {
-			packedLight = LightTexture.FULL_BRIGHT;
-		} else {
-			BlockPos blockPos = BlockPos.containing(x, y, z);
-			packedLight = LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
-		}
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(minecraft.level, BlockPos.containing(x, y, z));
 		PoseStack poseStack = provider.getPoseStack();
 		poseStack.pushPose();
 		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
@@ -178,7 +191,30 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
 		poseStack.scale(scale, scale, scale);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, flipping, poseStack, bufferSource, level, packedLight, OverlayTexture.NO_OVERLAY, 0);
+		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, flipping, poseStack, bufferSource, minecraft.level, packedLight, OverlayTexture.NO_OVERLAY, 0);
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		poseStack.popPose();
+	}
+
+	public static void renderTexts(String texts, double x, double y, double z, float yaw, float pitch, float roll, boolean glowing) {
+		Minecraft minecraft = Minecraft.getInstance();
+		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
+		Font font = minecraft.font;
+		Vec3 pos = provider.getCamera().getPosition();
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(minecraft.level, BlockPos.containing(x, y, z));
+		PoseStack poseStack = provider.getPoseStack();
+		poseStack.pushPose();
+		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
+		poseStack.mulPose(com.mojang.math.Axis.YN.rotationDegrees(yaw));
+		poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(pitch));
+		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
+		poseStack.scale(textWidth, -textHeight, 1.0F);
+		poseStack.translate((font.width(texts) - 1) * -0.5F, (font.lineHeight - 1) * -0.5F, 0.0F);
+		Matrix4f matrix4f = poseStack.last().pose();
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		if (backColor != 0)
+			font.drawInBatch(texts, 0.0F, 0.0F, 0, false, matrix4f, bufferSource, Font.DisplayMode.SEE_THROUGH, backColor, packedLight);
+		font.drawInBatch(texts, 0.0F, 0.0F, textColor, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, packedLight);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		poseStack.popPose();
 	}
@@ -189,7 +225,7 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (provider.getStage() == RenderLevelStageEvent.Stage.AFTER_ENTITIES) {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
-			Vec3 pos = entity.getPosition((float) provider.getPartialTick());
+			Vec3 pos = entity.getPosition(provider.getPartialTick());
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			execute(provider, level);
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
@@ -198,7 +234,6 @@ public class RenderItemOnBatteryChargerProcedure {
 			RenderSystem.enableCull();
 			RenderSystem.enableDepthTest();
 			RenderSystem.depthMask(true);
-			RenderSystem.colorMask(true, true, true, true);
 		}
 	}
 

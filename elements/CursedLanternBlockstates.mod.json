@@ -5,13 +5,13 @@
     "block": "CursedLantern",
     "blockstateList": [
       {
-        "texture": "cursed_lantern",
+        "texture": "cursed_lantern_on_block",
         "textureTop": "",
         "textureLeft": "",
         "textureFront": "",
         "textureRight": "",
         "textureBack": "",
-        "particleTexture": "cursed_lantern",
+        "particleTexture": "",
         "renderType": 2,
         "customModelName": "cursed_lantern_on_block:default",
         "luminance": 13,

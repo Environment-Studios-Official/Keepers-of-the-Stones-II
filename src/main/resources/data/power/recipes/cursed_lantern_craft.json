@@ -2,18 +2,21 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "a",
-    "b",
-    "c"
+    " a ",
+    "bcb",
+    " d "
   ],
   "key": {
     "a": {
       "item": "power:cursed_stone"
     },
     "b": {
-      "item": "power:amplifier_drop"
+      "item": "minecraft:white_stained_glass_pane"
     },
     "c": {
+      "item": "power:amplifier_drop"
+    },
+    "d": {
       "item": "minecraft:torch"
     }
   },
