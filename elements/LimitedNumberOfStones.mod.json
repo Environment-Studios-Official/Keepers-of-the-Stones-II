@@ -1,0 +1,12 @@
+{
+  "_fv": 60,
+  "_type": "gamerule",
+  "definition": {
+    "type": "Logic",
+    "displayName": "Limited number of stones",
+    "description": "Limits the number of stones to receive and includes their uniqueness",
+    "category": "DROPS",
+    "defaultValueLogic": true,
+    "defaultValueNumber": 0
+  }
+}
