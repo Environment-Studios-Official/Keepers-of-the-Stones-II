@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    " a ",
-    "bcb",
-    " d "
+    "a",
+    "b",
+    "c"
   ],
   "key": {
     "a": {
@@ -15,9 +15,6 @@
     },
     "c": {
       "item": "power:amplifier_drop"
-    },
-    "d": {
-      "item": "minecraft:torch"
     }
   },
   "result": {
