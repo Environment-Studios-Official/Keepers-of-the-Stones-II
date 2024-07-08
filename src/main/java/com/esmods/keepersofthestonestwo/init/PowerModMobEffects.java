@@ -37,6 +37,7 @@ import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MasterMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningMasterEndProcedure;
@@ -86,6 +87,7 @@ import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MercuryMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MagnetMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightningMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightMasterMobEffect;
@@ -162,6 +164,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> RED_MAGNET_POWER = REGISTRY.register("red_magnet_power", () -> new RedMagnetPowerMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BLUE_MAGNET_POWER = REGISTRY.register("blue_magnet_power", () -> new BlueMagnetPowerMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -265,6 +268,8 @@ public class PowerModMobEffects {
 			MagnetMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == MUSHROOMS_MASTER.get()) {
 			MushroomsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == MERCURY_MASTER.get()) {
+			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

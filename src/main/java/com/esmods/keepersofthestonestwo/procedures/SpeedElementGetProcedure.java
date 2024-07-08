@@ -30,11 +30,9 @@ public class SpeedElementGetProcedure {
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
 				{
-					boolean _setval = true;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.selected = true;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 			{
