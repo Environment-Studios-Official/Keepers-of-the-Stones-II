@@ -12,7 +12,7 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "PowerModItems.AMPLIFIER_DROP"
+        "value": "CUSTOM:AmplifierDrop"
       },
       {
         "value": "CUSTOM:CopyriumIngot"

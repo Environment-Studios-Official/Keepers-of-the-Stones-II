@@ -2,9 +2,9 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "abc",
+    "aba",
     "bbb",
-    "cbc"
+    "aba"
   ],
   "key": {
     "a": {
@@ -12,9 +12,6 @@
     },
     "b": {
       "item": "power:copyrium_ingot"
-    },
-    "c": {
-      "item": "power:amplifier_drop"
     }
   },
   "result": {
