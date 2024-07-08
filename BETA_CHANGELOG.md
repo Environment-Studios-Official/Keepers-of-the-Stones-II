@@ -5,6 +5,7 @@ What's new in Keepers of the Stones II version 1.0.0.29?<br />
 <br />- The batteries have been moved to a separate creative mode tab
 <br />- Added sounds when charging the battery in the battery charger
 <br />- Added sounds for the elemental power generator from the beacon
+<br />- Cursed and energy vaults are no longer restored after taking loot from them
 <br />- Some textures have been updated
 <br />- Changed the crafting of the cursed lantern and cursed lamp
 <br />- [Bugfix] Fixed the id and name of the music disc
