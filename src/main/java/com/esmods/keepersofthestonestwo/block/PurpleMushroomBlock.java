@@ -100,10 +100,7 @@ public class PurpleMushroomBlock extends Block implements SimpleWaterloggedBlock
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		PurpleMushroomSpontannoNaStoronieKliientaProcedure.execute(world, x, y, z);
+		PurpleMushroomSpontannoNaStoronieKliientaProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ());
 		world.scheduleTick(pos, this, 3);
 	}
 }

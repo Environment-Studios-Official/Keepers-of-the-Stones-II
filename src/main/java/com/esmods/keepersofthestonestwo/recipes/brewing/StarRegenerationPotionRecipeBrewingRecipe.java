@@ -1,12 +1,13 @@
 
 package com.esmods.keepersofthestonestwo.recipes.brewing;
 
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.common.brewing.IBrewingRecipe;
-import net.minecraftforge.common.brewing.BrewingRecipeRegistry;
+import net.neoforged.neoforge.common.brewing.IBrewingRecipe;
+import net.neoforged.neoforge.common.brewing.BrewingRecipeRegistry;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
 
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.alchemy.Potions;
 import net.minecraft.world.item.alchemy.PotionUtils;
@@ -15,7 +16,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
 
 import com.esmods.keepersofthestonestwo.init.PowerModPotions;
-import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class StarRegenerationPotionRecipeBrewingRecipe implements IBrewingRecipe {
@@ -32,7 +32,7 @@ public class StarRegenerationPotionRecipeBrewingRecipe implements IBrewingRecipe
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return Ingredient.of(new ItemStack(PowerModItems.AMPLIFIER_DROP.get())).test(ingredient);
+		return Ingredient.of(new ItemStack(Blocks.AIR)).test(ingredient);
 	}
 
 	@Override

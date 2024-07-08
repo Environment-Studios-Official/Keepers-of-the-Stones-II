@@ -1,10 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -76,11 +75,11 @@ public class FakeWheelOpenTickProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).first_fake_wheel_open_var) {
-			if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("fire")) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).first_fake_wheel_open_var) {
+			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesFire");
@@ -92,10 +91,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("air")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesAir");
@@ -107,10 +106,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("earth")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("earth")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesEarth");
@@ -122,10 +121,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("water")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesWater");
@@ -137,10 +136,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("ether")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ether")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesEther");
@@ -152,10 +151,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("ice")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ice")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesIce");
@@ -167,10 +166,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("lightning")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lightning")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesLightning");
@@ -182,10 +181,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("sound")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSound");
@@ -197,10 +196,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("crystal")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("crystal")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesCrystal");
@@ -212,10 +211,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("lava")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lava")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesLava");
@@ -227,10 +226,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("rain")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("rain")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesRain");
@@ -242,10 +241,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("tornado")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("tornado")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTornado");
@@ -257,10 +256,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("ocean")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ocean")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesOcean");
@@ -272,10 +271,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("plants")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plants")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesPlants");
@@ -287,10 +286,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("animals")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("animals")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesAnimals");
@@ -302,10 +301,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("metal")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("metal")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMetal");
@@ -317,10 +316,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("light")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("light")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesLight");
@@ -332,10 +331,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("shadow")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("shadow")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesShadow");
@@ -347,10 +346,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("vacuum")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("vacuum")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesVacuum");
@@ -362,10 +361,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("energy")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("energy")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesEnergy");
@@ -377,10 +376,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("sun")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sun")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSun");
@@ -392,10 +391,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("moon")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("moon")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMoon");
@@ -407,10 +406,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("space")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSpace");
@@ -422,10 +421,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("time")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("time")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTime");
@@ -437,10 +436,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("creation")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("creation")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesCreation");
@@ -452,10 +451,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("destruction")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("destruction")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesDestruction");
@@ -467,10 +466,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("blood")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blood")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesBlood");
@@ -482,10 +481,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("technology")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("technology")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTechnology");
@@ -497,10 +496,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("teleportation")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("teleportation")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTeleportation");
@@ -512,10 +511,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("explosion")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesExplosion");
@@ -527,10 +526,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("amber")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("amber")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesAmber");
@@ -542,10 +541,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("mist")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mist")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMist");
@@ -557,10 +556,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("sand")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sand")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSand");
@@ -572,10 +571,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("speed")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("speed")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSpeed");
@@ -587,10 +586,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("poison")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesPoison");
@@ -602,10 +601,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("magnet")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("magnet")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMagnet");
@@ -617,10 +616,10 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("mushrooms")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
-					NetworkHooks.openScreen((ServerPlayer) _ent, new MenuProvider() {
+					_ent.openMenu(new MenuProvider() {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMushrooms");
@@ -634,11 +633,9 @@ public class FakeWheelOpenTickProcedure {
 				}
 			}
 			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.first_fake_wheel_open_var = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.first_fake_wheel_open_var = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

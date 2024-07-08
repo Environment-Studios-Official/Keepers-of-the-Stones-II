@@ -19,11 +19,9 @@ public class PowerRecoveryMultiplierSetProcedure {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
-					double _setval = DoubleArgumentType.getDouble(arguments, "count");
-					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power_recovery_multiplier = _setval;
-						capability.syncPlayerVariables(entityiterator);
-					});
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power_recovery_multiplier = DoubleArgumentType.getDouble(arguments, "count");
+					_vars.syncPlayerVariables(entityiterator);
 				}
 				if (entity instanceof Player _player && !_player.level().isClientSide())
 					_player.displayClientMessage(Component.literal(("The star points recovery multiplier is set to " + Math.round(DoubleArgumentType.getDouble(arguments, "count")) + " for " + entityiterator.getDisplayName().getString())), false);

@@ -5,41 +5,18 @@ repositories {
 }
 
 dependencies {
-  implementation fg.deobf("curse.maven:kleidersplayerrenderer-682065:5083323")
+  implementation 'curse.maven:kleidersplayerrenderer-682065:5265399'
 }
 
 
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-}
-
-
-minecraft {
-  runs {
-      client {
-          property 'mixin.env.remapRefMap', 'true'
-          property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-      }
-  }
-}
 repositories {
   maven {
-    url = "https://maven.blamejared.com"
+      url = 'https://maven.blamejared.com'
   }
 }
 
 dependencies {
-  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE:api")
-  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE")
+  implementation 'vazkii.patchouli:Patchouli:1.20.4-85-NEOFORGE'
 }
 
 
@@ -50,62 +27,7 @@ repositories {
 }
 
 dependencies {
-  implementation fg.deobf('software.bernie.geckolib:geckolib-forge-1.20.1:4.4.2')
-}
-
-minecraft {
-  runs {
-     client {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
-      server {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
-      data {
-        property 'mixin.env.remapRefMap', 'true'
-        property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-    }
-  }
-}
-
-
-minecraft {
-  runs {
-   client {    
-      property 'mixin.env.remapRefMap', 'true'
-      property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-        server {
-         property 'mixin.env.remapRefMap', 'true'
-         property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-       }
-      }
-     }
-
-repositories {
- maven {
-     url = 'https://maven.kosmx.dev/'
- }
-}
-
- dependencies {
-   implementation fg.deobf("dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20")
- }
-
-
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
-   runtimeOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
+  implementation 'software.bernie.geckolib:geckolib-neoforge-1.20.4:4.4.4'
 }
 
 
@@ -118,8 +40,7 @@ repositories {
     }
 }
 dependencies {
-   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
-   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
+   implementation 'curse.maven:mpp-forge-986014:5381050'
 }
 
 

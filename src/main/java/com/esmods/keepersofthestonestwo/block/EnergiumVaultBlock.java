@@ -3,8 +3,7 @@ package com.esmods.keepersofthestonestwo.block;
 
 import org.checkerframework.checker.units.qual.s;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.common.util.ForgeSoundType;
+import net.neoforged.neoforge.common.util.DeferredSoundType;
 
 import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
@@ -32,6 +31,7 @@ import net.minecraft.world.Containers;
 import net.minecraft.util.RandomSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -44,9 +44,9 @@ public class EnergiumVaultBlock extends Block implements EntityBlock {
 
 	public EnergiumVaultBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(new ForgeSoundType(1.0f, 1.0f, () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.break")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.step")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.place")),
-						() -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.hit")), () -> ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.netherite_block.fall"))))
+				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.break")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.step")), () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.place")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.netherite_block.hit")), () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.netherite_block.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
@@ -118,10 +118,7 @@ public class EnergiumVaultBlock extends Block implements EntityBlock {
 	@Override
 	public void tick(BlockState blockstate, ServerLevel world, BlockPos pos, RandomSource random) {
 		super.tick(blockstate, world, pos, random);
-		int x = pos.getX();
-		int y = pos.getY();
-		int z = pos.getZ();
-		EnergiumVaultTickUpdateProcedure.execute(world, x, y, z, blockstate);
+		EnergiumVaultTickUpdateProcedure.execute(world, pos.getX(), pos.getY(), pos.getZ(), blockstate);
 		world.scheduleTick(pos, this, 1);
 	}
 

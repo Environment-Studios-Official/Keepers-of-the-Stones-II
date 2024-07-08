@@ -13,7 +13,7 @@ public class DetransformationKeyUseProcedure {
 		if (entity == null)
 			return;
 		PowerMod.queueServerWork(1, () -> {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == true) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.FIRE_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
@@ -89,75 +89,55 @@ public class DetransformationKeyUseProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
 				{
-					boolean _setval = false;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.active = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.active = false;
+					_vars.syncPlayerVariables(entity);
 				}
 				{
-					double _setval = 0;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.mergers = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.mergers = 0;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.power = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_first_timer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_first_timer = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_second_timer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_second_timer = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				double _setval = 0;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_third_timer = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_third_timer = 0;
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_first = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_first = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_second = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_second = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.fake_element_name_third = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_third = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 			{
-				String _setval = "0";
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.attack = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.attack = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 		});
 	}

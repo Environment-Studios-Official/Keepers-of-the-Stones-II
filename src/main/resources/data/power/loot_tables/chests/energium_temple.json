@@ -23,7 +23,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:depleted_energium_block",
+          "name": "minecraft:air",
           "weight": 1,
           "functions": [
             {
@@ -37,7 +37,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:depleted_energium_ingot",
+          "name": "minecraft:air",
           "weight": 4,
           "functions": [
             {
@@ -51,7 +51,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:energium_ingot",
+          "name": "minecraft:air",
           "weight": 2,
           "functions": [
             {

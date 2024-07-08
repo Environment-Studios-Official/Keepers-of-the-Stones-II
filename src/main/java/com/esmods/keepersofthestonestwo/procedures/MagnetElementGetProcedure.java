@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.items.ItemHandlerHelper;
+import net.neoforged.neoforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -28,11 +28,9 @@ public class MagnetElementGetProcedure {
 			PowerModVariables.MapVariables.get(world).magnet_stone = true;
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			{
-				boolean _setval = false;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.unlock_keepers_box = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.unlock_keepers_box = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}
