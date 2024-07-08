@@ -3,7 +3,7 @@
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
-    "recipeRetstackSize": 3,
+    "recipeRetstackSize": 4,
     "group": "",
     "cookingBookCategory": "MISC",
     "xpReward": 0.0,
@@ -15,25 +15,25 @@
         "value": "CUSTOM:CursedStoneBricks"
       },
       {
-        "value": "CUSTOM:CursedStoneBricks"
+        "value": "Blocks.STAINED_GLASS_PANE#0"
       },
       {
         "value": "CUSTOM:CursedStoneBricks"
       },
       {
-        "value": "CUSTOM:CursedStoneBricks"
+        "value": "Blocks.STAINED_GLASS_PANE#0"
       },
       {
         "value": "CUSTOM:AmplifierBlock"
       },
       {
-        "value": "CUSTOM:CursedStoneBricks"
+        "value": "Blocks.STAINED_GLASS_PANE#0"
       },
       {
         "value": "CUSTOM:CursedStoneBricks"
       },
       {
-        "value": "CUSTOM:CursedStoneBricks"
+        "value": "Blocks.STAINED_GLASS_PANE#0"
       },
       {
         "value": "CUSTOM:CursedStoneBricks"
