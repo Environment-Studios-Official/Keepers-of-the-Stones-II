@@ -85,6 +85,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesFireMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -97,6 +102,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesAir");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -115,6 +125,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesEarthMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -127,6 +142,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesWater");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -145,6 +165,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesEtherMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -157,6 +182,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesIce");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -175,6 +205,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesLightningMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -187,6 +222,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSound");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -205,6 +245,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesCrystalMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -217,6 +262,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesLava");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -235,6 +285,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesRainMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -247,6 +302,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTornado");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -265,6 +325,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesOceanMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -277,6 +342,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesPlants");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -295,6 +365,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesAnimalsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -307,6 +382,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMetal");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -325,6 +405,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesLightMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -337,6 +422,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesShadow");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -355,6 +445,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesVacuumMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -367,6 +462,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesEnergy");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -385,6 +485,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesSunMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -397,6 +502,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMoon");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -415,6 +525,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesSpaceMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -427,6 +542,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTime");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -445,6 +565,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesCreationMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -457,6 +582,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesDestruction");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -475,6 +605,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesBloodMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -487,6 +622,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesTechnology");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -505,6 +645,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesTeleportationMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -517,6 +662,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesExplosion");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -535,6 +685,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesAmberMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -547,6 +702,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMist");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -565,6 +725,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesSandMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -577,6 +742,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesSpeed");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
@@ -595,6 +765,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesSpeedMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -610,6 +785,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 
 						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesMagnetMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
@@ -622,6 +802,11 @@ public class ThirdFakeWheelOpenTickProcedure {
 						@Override
 						public Component getDisplayName() {
 							return Component.literal("WheelAbilitiesMushrooms");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
 						}
 
 						@Override
