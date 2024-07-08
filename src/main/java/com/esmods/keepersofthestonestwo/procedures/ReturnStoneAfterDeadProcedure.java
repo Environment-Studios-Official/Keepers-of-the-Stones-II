@@ -1304,6 +1304,46 @@ public class ReturnStoneAfterDeadProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("mercury")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_first = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("mercury")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_second = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("mercury")) {
+					{
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_third = _setval;
+							capability.syncPlayerVariables(entity);
+						});
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.MERCURY_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
 			}
 		}
 	}

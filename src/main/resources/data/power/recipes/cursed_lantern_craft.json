@@ -11,10 +11,10 @@
       "item": "power:cursed_stone"
     },
     "b": {
-      "item": "power:amplifier_drop"
+      "item": "minecraft:white_stained_glass_pane"
     },
     "c": {
-      "item": "minecraft:torch"
+      "item": "power:amplifier_drop"
     }
   },
   "result": {

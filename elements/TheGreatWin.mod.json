@@ -5,7 +5,7 @@
     "achievementName": "Great victory!",
     "achievementDescription": "Defeat the cursed keeper and free him from the curse",
     "achievementIcon": {
-      "value": "CUSTOM:KeeperBook"
+      "value": "CUSTOM:LuckCoin"
     },
     "background": "Default",
     "disableDisplay": false,

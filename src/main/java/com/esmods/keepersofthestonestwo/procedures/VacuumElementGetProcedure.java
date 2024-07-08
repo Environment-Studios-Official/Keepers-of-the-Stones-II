@@ -9,13 +9,14 @@ import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class VacuumElementGetProcedure {
 	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (!PowerModVariables.MapVariables.get(world).vacuum_stone) {
+		if (!PowerModVariables.MapVariables.get(world).vacuum_stone || !world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMITED_NUMBER_OF_STONES)) {
 			PowerMod.queueServerWork(1, () -> {
 				if (entity instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.VACUUM_STONE.get()).copy();
@@ -27,6 +28,15 @@ public class VacuumElementGetProcedure {
 				_player.closeContainer();
 			PowerModVariables.MapVariables.get(world).vacuum_stone = true;
 			PowerModVariables.MapVariables.get(world).syncData(world);
+			if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
+				{
+					boolean _setval = true;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.selected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
+				}
+			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.unlock_keepers_box = false;

@@ -196,7 +196,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:CallOfThePastRecord"
+              "value": "CUSTOM:MusicDiscCallOfThePast"
             },
             "weight": 1,
             "minCount": 1,

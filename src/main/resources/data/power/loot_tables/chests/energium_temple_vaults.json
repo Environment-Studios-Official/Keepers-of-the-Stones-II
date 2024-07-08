@@ -196,7 +196,7 @@
         },
         {
           "type": "minecraft:item",
-          "name": "power:call_of_the_past_record",
+          "name": "power:music_disc_call_of_the_past",
           "weight": 1,
           "functions": [
             {

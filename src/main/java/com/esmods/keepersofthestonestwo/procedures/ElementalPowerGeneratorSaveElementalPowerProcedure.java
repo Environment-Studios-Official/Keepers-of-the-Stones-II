@@ -1,11 +1,15 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraftforge.registries.ForgeRegistries;
+
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
@@ -29,6 +33,13 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					});
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.activate")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
 					{
 						int _value = 1;
 						BlockPos _pos = BlockPos.containing(x, y, z);
@@ -48,6 +59,13 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 						}
 					});
+					if (world instanceof Level _level) {
+						if (!_level.isClientSide()) {
+							_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1);
+						} else {
+							_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.deactivate")), SoundSource.BLOCKS, 1, 1, false);
+						}
+					}
 					{
 						int _value = 0;
 						BlockPos _pos = BlockPos.containing(x, y, z);
@@ -93,6 +111,13 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										}
 									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
+								}
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+									} else {
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+									}
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -140,6 +165,13 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
 								}
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+									} else {
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+									}
+								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_second_timer = 3000;
@@ -186,6 +218,13 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 										}
 									}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded");
 									_vars.syncPlayerVariables(entity);
+								}
+								if (world instanceof Level _level) {
+									if (!_level.isClientSide()) {
+										_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1);
+									} else {
+										_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.beacon.power_select")), SoundSource.BLOCKS, 1, 1, false);
+									}
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

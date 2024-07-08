@@ -49,20 +49,23 @@ public class RenderFogCursedForestProcedure {
 			Entity entity = provider.getCamera().getEntity();
 			if (level != null && entity != null) {
 				Vec3 pos = entity.getPosition((float) provider.getPartialTick());
-				execute(provider, level, pos.x(), pos.y(), pos.z(), entity);
+				execute(provider, level, entity);
 			}
 		}
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		execute(null, world, x, y, z, entity);
+	public static void execute(LevelAccessor world, Entity entity) {
+		execute(null, world, entity);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PowerModMobEffects.MIST.get()))) {
-			setDistance(0, 30);
+		if (world
+				.getBiome(BlockPos.containing(Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().x(), Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().y(),
+						Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().z()))
+				.is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST.get()))) {
+			setDistance(15, 45);
 			setShape(FogShape.SPHERE);
 		}
 	}
