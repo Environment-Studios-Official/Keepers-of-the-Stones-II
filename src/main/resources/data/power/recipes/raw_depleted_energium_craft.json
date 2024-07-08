@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:air",
+    "item": "power:raw_depleted_energium",
     "count": 9
   }
 }

@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:air"
+      "item": "power:amplifier_drop"
     },
     "b": {
       "item": "power:copyrium_ingot"
