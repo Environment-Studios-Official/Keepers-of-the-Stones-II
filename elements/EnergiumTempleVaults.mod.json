@@ -56,7 +56,7 @@
           {
             "type": "item",
             "item": {
-              "value": "PowerModItems.DEPLETED_ENERGIUM_INGOT"
+              "value": "CUSTOM:DepletedEnergiumIngot"
             },
             "weight": 3,
             "minCount": 1,
