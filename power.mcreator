@@ -28619,6 +28619,34 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
+    },
+    {
+      "name": "RawCopyriumBlockCraft",
+      "type": "recipe",
+      "sortid": 1311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_block_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "RawCopyriumFromBlockCraft",
+      "type": "recipe",
+      "sortid": 1312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_from_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_from_block_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
@@ -31534,7 +31562,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.29.080720241925",
+    "version": "1.0.0.29",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
