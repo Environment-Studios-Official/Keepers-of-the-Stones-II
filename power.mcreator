@@ -28619,6 +28619,34 @@
         "type": "logic"
       },
       "path": "~/Gamerules"
+    },
+    {
+      "name": "RawCopyriumBlockCraft",
+      "type": "recipe",
+      "sortid": 1311,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_block_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "RawCopyriumFromBlockCraft",
+      "type": "recipe",
+      "sortid": 1312,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_copyrium_from_block_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/raw_copyrium_from_block_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
