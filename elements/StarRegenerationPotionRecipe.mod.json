@@ -14,7 +14,7 @@
       "value": "POTION:AWKWARD"
     },
     "brewingIngredientStack": {
-      "value": "PowerModItems.AMPLIFIER_DROP"
+      "value": "CUSTOM:AmplifierDrop"
     },
     "brewingReturnStack": {
       "value": "POTION:CUSTOM:StarRegenerationPotion"

@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:keeper_book"
+      "item": "power:luck_coin"
     },
     "title": {
       "translate": "advancements.the_great_win.title"

@@ -2,20 +2,23 @@
   "type": "minecraft:crafting_shaped",
   "category": "misc",
   "pattern": [
-    "aaa",
     "aba",
-    "aaa"
+    "bcb",
+    "aba"
   ],
   "key": {
     "a": {
       "item": "power:cursed_stone_bricks"
     },
     "b": {
+      "item": "minecraft:white_stained_glass_pane"
+    },
+    "c": {
       "item": "power:amplifier_block"
     }
   },
   "result": {
     "item": "power:cursed_lamp",
-    "count": 3
+    "count": 4
   }
 }

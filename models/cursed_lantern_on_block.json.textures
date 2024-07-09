@@ -2,7 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "cursed_lantern"
+        "0": "cursed_lantern_on_block"
       },
       "name": "default"
     }

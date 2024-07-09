@@ -62,11 +62,9 @@ public class CursedLanternBlock extends Block implements SimpleWaterloggedBlock 
 	@Override
 	public VoxelShape getShape(BlockState state, BlockGetter world, BlockPos pos, CollisionContext context) {
 		if (state.getValue(BLOCKSTATE) == 1) {
-			return Shapes.or(box(6, 3, 6, 10, 8, 10), box(5, 8, 6, 11, 10, 10), box(6, 10, 6, 10, 11, 10), box(6, 0, 6, 10, 1, 10), box(6, 8, 5, 10, 10, 6), box(7, 7, 5, 9, 8, 6), box(7, 3, 5, 9, 4, 6), box(7, 7, 10, 9, 8, 11),
-					box(7, 3, 10, 9, 4, 11), box(10, 7, 7, 11, 8, 9), box(10, 3, 7, 11, 4, 9), box(5, 7, 7, 6, 8, 9), box(5, 3, 7, 6, 4, 9), box(6, 8, 10, 10, 10, 11), box(6, 1, 10, 10, 3, 11), box(6, 1, 5, 10, 3, 6), box(5, 1, 6, 11, 3, 10));
+			return box(5.5, 0, 5.5, 10.5, 9, 10.5);
 		}
-		return Shapes.or(box(6, 3, 6, 10, 8, 10), box(5, 8, 6, 11, 10, 10), box(6, 10, 6, 10, 11, 10), box(6, 0, 6, 10, 1, 10), box(6, 8, 5, 10, 10, 6), box(7, 7, 5, 9, 8, 6), box(7, 3, 5, 9, 4, 6), box(7, 7, 10, 9, 8, 11), box(7, 3, 10, 9, 4, 11),
-				box(10, 7, 7, 11, 8, 9), box(10, 3, 7, 11, 4, 9), box(5, 7, 7, 6, 8, 9), box(5, 3, 7, 6, 4, 9), box(6, 8, 10, 10, 10, 11), box(6, 1, 10, 10, 3, 11), box(6, 1, 5, 10, 3, 6), box(5, 1, 6, 11, 3, 10));
+		return box(5.5, 1, 5.5, 10.5, 10, 10.5);
 	}
 
 	@Override

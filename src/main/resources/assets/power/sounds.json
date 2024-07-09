@@ -200,5 +200,13 @@
         "stream": true
       }
     ]
+  },
+  "record.ancient_mood": {
+    "sounds": [
+      {
+        "name": "power:ancient_mood_record",
+        "stream": true
+      }
+    ]
   }
 }
