@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "minecraft:air",
+    "item": "power:raw_amplifier",
     "count": 9
   }
 }
