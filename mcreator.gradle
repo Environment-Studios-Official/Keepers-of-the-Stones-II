@@ -32,6 +32,17 @@ dependencies {
 
 
 repositories {
+ maven {
+     url = 'https://maven.kosmx.dev/'
+ }
+}
+
+ dependencies {
+   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20.4'
+ }
+
+
+repositories {
     maven {
         url "https://www.cursemaven.com"
         content {

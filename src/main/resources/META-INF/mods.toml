@@ -44,7 +44,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
@@ -75,6 +75,12 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="geckolib"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="playeranimator"
     type="optional"
     versionRange="[0,)"
     ordering="NONE"

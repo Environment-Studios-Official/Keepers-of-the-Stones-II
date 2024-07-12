@@ -15,18 +15,14 @@ public class SelectedElementTrueProcedure {
 		try {
 			for (Entity entityiterator : EntityArgument.getEntities(arguments, "players")) {
 				{
-					boolean _setval = !BoolArgumentType.getBool(arguments, "boolean");
-					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.unlock_keepers_box = _setval;
-						capability.syncPlayerVariables(entityiterator);
-					});
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.unlock_keepers_box = !BoolArgumentType.getBool(arguments, "boolean");
+					_vars.syncPlayerVariables(entityiterator);
 				}
 				{
-					boolean _setval = BoolArgumentType.getBool(arguments, "boolean");
-					entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.selected = _setval;
-						capability.syncPlayerVariables(entityiterator);
-					});
+					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.selected = BoolArgumentType.getBool(arguments, "boolean");
+					_vars.syncPlayerVariables(entityiterator);
 				}
 			}
 		} catch (CommandSyntaxException e) {

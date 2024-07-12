@@ -1,19 +1,14 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.network.NetworkDirection;
+import net.neoforged.neoforge.network.PacketDistributor;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.Connection;
 import net.minecraft.client.player.AbstractClientPlayer;
-
-import java.util.List;
-import java.util.Iterator;
 
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
@@ -167,17 +162,8 @@ public class DetransformationKeyUseProcedure {
 				}
 			}
 			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								PowerMod.PACKET_HANDLER.sendTo(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.detransformation"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
+				if (entity instanceof Player)
+					PacketDistributor.ALL.noArg().send(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.detransformation"), entity.getId(), true));
 			}
 		});
 	}

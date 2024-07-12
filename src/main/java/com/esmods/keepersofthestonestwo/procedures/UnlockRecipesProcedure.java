@@ -117,11 +117,11 @@ public class UnlockRecipesProcedure {
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.RAW_COPYRIUM.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_copyrium_block_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_copyrium_block_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModBlocks.RAW_COPYRIUM_BLOCK.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:raw_copyrium_from_block_craft")});
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:raw_copyrium_from_block_craft")));
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.COPYRIUM_INGOT.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
