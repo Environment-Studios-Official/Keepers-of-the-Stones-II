@@ -28647,6 +28647,41 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "AnimationsModuleSetup",
+      "type": "procedure",
+      "sortid": 1313,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "animations_module_setup",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AnimationsModuleSetupProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "SelectedElementTrue",
+      "type": "procedure",
+      "sortid": 1314,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "selected_element_true",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SelectedElementTrueProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "arguments",
+            "type": "cmdcontext"
+          }
+        ]
+      },
+      "path": "~/Commands"
     }
   ],
   "variable_elements": [
@@ -29409,6 +29444,10 @@
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
     ],
+    "ITEMS:minecraft:music_discs": [
+      "~CUSTOM:MusicDiscAncientMood",
+      "~CUSTOM:MusicDiscCallOfThePast"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -29420,10 +29459,6 @@
       "CUSTOM:CreationAxe",
       "CUSTOM:CreationHoe",
       "CUSTOM:CreationShovel"
-    ],
-    "ITEMS:minecraft:music_discs": [
-      "~CUSTOM:MusicDiscAncientMood",
-      "~CUSTOM:MusicDiscCallOfThePast"
     ],
     "ENTITIES:mod:cursed_mobs": [
       "EntityWither",
@@ -31314,6 +31349,10 @@
           {
             "name": "DebugModule",
             "children": []
+          },
+          {
+            "name": "ConvertsModule",
+            "children": []
           }
         ]
       },
@@ -31562,7 +31601,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.29",
+    "version": "1.0.0.30.120720240015",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -31573,6 +31612,7 @@
     "requiredMods": [
       "kleiders_custom_renderer",
       "geckolib",
+      "playeranimator",
       "particlepresets"
     ],
     "dependencies": [
