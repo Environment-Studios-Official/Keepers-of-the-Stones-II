@@ -5,7 +5,6 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
-import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.item.ItemStack;
@@ -14,9 +13,8 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@Mod.EventBusSubscriber
+@Mod.EventBusSubscriber(modid = "power", bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class CancelEnchantEnergiumKeyProcedure {
-	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public static void onEventTriggered(AnvilUpdateEvent event) {
 		execute(event, event.getLeft());

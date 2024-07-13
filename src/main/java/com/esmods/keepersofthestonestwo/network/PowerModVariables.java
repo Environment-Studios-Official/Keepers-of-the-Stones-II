@@ -221,6 +221,7 @@ public class PowerModVariables {
 		public double bpX = 0;
 		public double bpY = 0;
 		public double bpZ = 0;
+		public boolean get_limit_of_stones = true;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -285,6 +286,7 @@ public class PowerModVariables {
 			bpX = nbt.getDouble("bpX");
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
+			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 		}
 
 		@Override
@@ -345,6 +347,7 @@ public class PowerModVariables {
 			nbt.putDouble("bpX", bpX);
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
+			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			return nbt;
 		}
 

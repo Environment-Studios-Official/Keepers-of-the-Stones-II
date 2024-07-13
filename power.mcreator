@@ -21,6 +21,38 @@
       "path": "~/Modules/BasicModule"
     },
     {
+      "name": "GameruleSync",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "return_stone_after_dead",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GameruleSyncProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
+    },
+    {
       "name": "FireStone",
       "type": "item",
       "sortid": 1,
@@ -10835,7 +10867,7 @@
       "name": "BatteryCharger",
       "type": "block",
       "sortid": 54,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "battery_charger",
       "metadata": {
@@ -12236,7 +12268,8 @@
           "src/main/resources/assets/power/models/item/keepers_box.json",
           "src/main/resources/assets/power/blockstates/keepers_box.json",
           "src/main/resources/assets/power/models/block/keepers_box.json",
-          "src/main/resources/data/power/loot_tables/blocks/keepers_box.json"
+          "src/main/resources/data/power/loot_tables/blocks/keepers_box.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/KeepersBoxBlockEntity.java"
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox"
@@ -15976,7 +16009,7 @@
       "name": "AmplifierOre",
       "type": "block",
       "sortid": 39,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amplifier_ore",
       "metadata": {
@@ -17552,7 +17585,7 @@
       "name": "AmplifierBlock",
       "type": "block",
       "sortid": 41,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amplifier_block",
       "metadata": {
@@ -22390,7 +22423,7 @@
       "name": "AmberBlock",
       "type": "block",
       "sortid": 1052,
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amber_block",
       "metadata": {
@@ -29242,6 +29275,12 @@
       "type": "logic",
       "scope": "player_persistent",
       "value": "false"
+    },
+    {
+      "name": "get_limit_of_stones",
+      "type": "logic",
+      "scope": "map",
+      "value": "true"
     }
   ],
   "sound_elements": [

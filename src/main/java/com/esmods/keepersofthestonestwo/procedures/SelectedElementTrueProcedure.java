@@ -19,11 +19,6 @@ public class SelectedElementTrueProcedure {
 					_vars.unlock_keepers_box = !BoolArgumentType.getBool(arguments, "boolean");
 					_vars.syncPlayerVariables(entityiterator);
 				}
-				{
-					PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.selected = BoolArgumentType.getBool(arguments, "boolean");
-					_vars.syncPlayerVariables(entityiterator);
-				}
 			}
 		} catch (CommandSyntaxException e) {
 			e.printStackTrace();
