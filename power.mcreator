@@ -28700,7 +28700,7 @@
       "registry_name": "energium_ore_loot",
       "metadata": {
         "files": [
-          "src/main/resources/data/energium_extra/loot_tables/blocks/energium_ore.json"
+          "src/main/resources/data/power/loot_tables/blocks/energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -31787,7 +31787,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.31",
+    "version": "1.0.0.31.150720240010",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -31807,7 +31807,6 @@
     "dependants": [],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
-      "patchouli",
       "geckolib",
       "playeranimator",
       "particlepresets"

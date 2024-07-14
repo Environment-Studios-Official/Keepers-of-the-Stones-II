@@ -5,7 +5,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -61,49 +61,31 @@ public class AirSpecialAttackProcedure {
 										.getZ()));
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
-							if (!(entityiterator == entity)) {
+							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 										(float) 13.5);
 								if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
 									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
-									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
 									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
-									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
 									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
-									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
 										entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
 									}
 								}

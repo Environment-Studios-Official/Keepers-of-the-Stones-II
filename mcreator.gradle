@@ -11,17 +11,6 @@ dependencies {
 
 repositories {
   maven {
-      url = 'https://maven.blamejared.com'
-  }
-}
-
-dependencies {
-  implementation 'vazkii.patchouli:Patchouli:1.20.4-85-NEOFORGE'
-}
-
-
-repositories {
-  maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }
 }
