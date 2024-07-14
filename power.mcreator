@@ -28842,6 +28842,20 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "SummonSand",
+      "type": "function",
+      "sortid": 1326,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "summon_sand",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/functions/summon_sand.mcfunction"
+        ]
+      },
+      "path": "~/Elements/Sand"
     }
   ],
   "variable_elements": [
