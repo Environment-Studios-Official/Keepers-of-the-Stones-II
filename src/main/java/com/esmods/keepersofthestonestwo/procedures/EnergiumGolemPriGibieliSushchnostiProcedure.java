@@ -36,7 +36,7 @@ public class EnergiumGolemPriGibieliSushchnostiProcedure {
 				}
 				if (entityiterator instanceof Player _player) {
 					ItemStack _setstack = new ItemStack(PowerModItems.ENERGIUM_KEY.get()).copy();
-					_setstack.setCount(1);
+					_setstack.setCount(11);
 					ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 				}
 			}

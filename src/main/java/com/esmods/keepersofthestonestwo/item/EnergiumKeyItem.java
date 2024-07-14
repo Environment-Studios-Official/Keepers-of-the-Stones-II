@@ -10,7 +10,7 @@ import com.esmods.keepersofthestonestwo.procedures.EnergiumKeyOpenVaultProcedure
 
 public class EnergiumKeyItem extends Item {
 	public EnergiumKeyItem() {
-		super(new Item.Properties().durability(11).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON));
 	}
 
 	@Override
