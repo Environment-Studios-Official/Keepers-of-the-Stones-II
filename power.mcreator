@@ -28844,18 +28844,28 @@
       "path": "~/ItemsAndBlocks/Energium"
     },
     {
-      "name": "SummonSand",
-      "type": "function",
+      "name": "IfActiveBarrier",
+      "type": "procedure",
       "sortid": 1326,
       "compiles": true,
       "locked_code": false,
-      "registry_name": "summon_sand",
+      "registry_name": "if_active_barrier",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/functions/summon_sand.mcfunction"
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/IfActiveBarrierProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
         ]
       },
-      "path": "~/Elements/Sand"
+      "path": "~/Elements/Technology"
     }
   ],
   "variable_elements": [
