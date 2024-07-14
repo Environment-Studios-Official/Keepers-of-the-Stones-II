@@ -40,7 +40,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+      "value": "CUSTOM:RawDepletedEnergium"
     },
     "name": "raw_depleted_energium_craft",
     "namespace": "mod"

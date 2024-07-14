@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import org.joml.Vector3i;
+import org.joml.Matrix4f;
 
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.common.extensions.ILevelExtension;
@@ -20,7 +20,6 @@ import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.RenderShape;
 import net.minecraft.world.level.block.EntityBlock;
-import net.minecraft.world.level.LightLayer;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.ItemDisplayContext;
@@ -41,15 +40,15 @@ import net.minecraft.client.renderer.Sheets;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.MultiBufferSource;
 import net.minecraft.client.renderer.LightTexture;
+import net.minecraft.client.renderer.LevelRenderer;
 import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.client.gui.Font;
 import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
 import java.util.Map;
-import java.util.List;
 import java.util.HashMap;
-import java.util.ArrayList;
 
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.systems.RenderSystem;
@@ -60,12 +59,28 @@ import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 public class RenderItemOnBatteryChargerProcedure {
 	private static RenderLevelStageEvent provider = null;
 	private static Map<EntityType, Entity> data = new HashMap<>();
+	private static float textWidth = 1.0F;
+	private static float textHeight = 1.0F;
+	private static int textColor = -1;
+	private static int backColor = 0;
+
+	public static void setBackColor(int color) {
+		RenderItemOnBatteryChargerProcedure.backColor = color;
+	}
+
+	public static void setTextColor(int color) {
+		RenderItemOnBatteryChargerProcedure.textColor = color;
+	}
+
+	public static void setScale(float width, float height) {
+		RenderItemOnBatteryChargerProcedure.textWidth = width;
+		RenderItemOnBatteryChargerProcedure.textHeight = height;
+	}
 
 	public static void renderBlock(BlockState blockState, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		ClientLevel level = Minecraft.getInstance().level;
-		Vec3 pos = provider.getCamera().getPosition();
 		BlockPos blockPos = BlockPos.containing(x, y, z);
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
+		Vec3 pos = provider.getCamera().getPosition();
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(Minecraft.getInstance().level, blockPos);
 		PoseStack poseStack = provider.getPoseStack();
 		poseStack.pushPose();
 		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
@@ -111,7 +126,7 @@ public class RenderItemOnBatteryChargerProcedure {
 			float red = (color >> 16 & 255) / 255.0F;
 			float green = (color >> 8 & 255) / 255.0F;
 			float blue = (color & 255) / 255.0F;
-			for (RenderType renderType : bakedModel.getRenderTypes(blockState, RandomSource.create(42), modelData)) {
+			for (RenderType renderType : bakedModel.getRenderTypes(blockState, RandomSource.create(42L), modelData)) {
 				renderer.renderModel(pose, bufferSource.getBuffer(Sheets.translucentCullBlockSheet()), blockState, bakedModel, red, green, blue, packedLight, OverlayTexture.NO_OVERLAY, modelData, renderType);
 			}
 		}
@@ -121,22 +136,23 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (type == null)
 			return;
 		Entity entity;
+		ClientLevel level = Minecraft.getInstance().level;
 		if (data.containsKey(type)) {
 			entity = data.get(type);
+			if (entity.level() != level) {
+				entity = type.create(level);
+				data.put(type, entity);
+			}
 		} else {
-			entity = type.create(Minecraft.getInstance().level);
+			entity = type.create(level);
 			data.put(type, entity);
 		}
-		ClientLevel level = Minecraft.getInstance().level;
-		BlockPos blockPos = BlockPos.containing(x, y, z);
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
-		renderEntity(entity, 0.0F, x, y, z, yaw, pitch, roll, scale, packedLight);
+		renderEntity(entity, 0.0F, x, y, z, yaw, pitch, roll, scale, glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(level, BlockPos.containing(x, y, z)));
 	}
 
 	public static void renderEntity(Entity entity, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		EntityRenderer renderer = Minecraft.getInstance().getEntityRenderDispatcher().getRenderer(entity);
 		float partialTick = provider.getPartialTick();
-		int packedLight = glowing ? LightTexture.FULL_BRIGHT : renderer.getPackedLightCoords(entity, partialTick);
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : Minecraft.getInstance().getEntityRenderDispatcher().getPackedLightCoords(entity, partialTick);
 		renderEntity(entity, partialTick, x, y, z, yaw, pitch, roll, scale, packedLight);
 	}
 
@@ -164,17 +180,10 @@ public class RenderItemOnBatteryChargerProcedure {
 
 	public static void renderItem(ItemStack itemStack, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean flipping, boolean glowing) {
 		Minecraft minecraft = Minecraft.getInstance();
-		ClientLevel level = minecraft.level;
 		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
 		ItemRenderer renderer = minecraft.getItemRenderer();
 		Vec3 pos = provider.getCamera().getPosition();
-		int packedLight;
-		if (glowing) {
-			packedLight = LightTexture.FULL_BRIGHT;
-		} else {
-			BlockPos blockPos = BlockPos.containing(x, y, z);
-			packedLight = LightTexture.pack(level.getBrightness(LightLayer.BLOCK, blockPos), level.getBrightness(LightLayer.SKY, blockPos));
-		}
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(minecraft.level, BlockPos.containing(x, y, z));
 		PoseStack poseStack = provider.getPoseStack();
 		poseStack.pushPose();
 		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
@@ -183,7 +192,30 @@ public class RenderItemOnBatteryChargerProcedure {
 		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
 		poseStack.scale(scale, scale, scale);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
-		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, flipping, poseStack, bufferSource, level, packedLight, OverlayTexture.NO_OVERLAY, 0);
+		renderer.renderStatic(null, itemStack, ItemDisplayContext.FIXED, flipping, poseStack, bufferSource, minecraft.level, packedLight, OverlayTexture.NO_OVERLAY, 0);
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		poseStack.popPose();
+	}
+
+	public static void renderTexts(String texts, double x, double y, double z, float yaw, float pitch, float roll, boolean glowing) {
+		Minecraft minecraft = Minecraft.getInstance();
+		MultiBufferSource.BufferSource bufferSource = minecraft.renderBuffers().bufferSource();
+		Font font = minecraft.font;
+		Vec3 pos = provider.getCamera().getPosition();
+		int packedLight = glowing ? LightTexture.FULL_BRIGHT : LevelRenderer.getLightColor(minecraft.level, BlockPos.containing(x, y, z));
+		PoseStack poseStack = provider.getPoseStack();
+		poseStack.pushPose();
+		poseStack.translate(x - pos.x(), y - pos.y(), z - pos.z());
+		poseStack.mulPose(com.mojang.math.Axis.YN.rotationDegrees(yaw));
+		poseStack.mulPose(com.mojang.math.Axis.XP.rotationDegrees(pitch));
+		poseStack.mulPose(com.mojang.math.Axis.ZN.rotationDegrees(roll));
+		poseStack.scale(textWidth, -textHeight, 1.0F);
+		poseStack.translate((font.width(texts) - 1) * -0.5F, (font.lineHeight - 1) * -0.5F, 0.0F);
+		Matrix4f matrix4f = poseStack.last().pose();
+		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+		if (backColor != 0)
+			font.drawInBatch(texts, 0.0F, 0.0F, 0, false, matrix4f, bufferSource, Font.DisplayMode.SEE_THROUGH, backColor, packedLight);
+		font.drawInBatch(texts, 0.0F, 0.0F, textColor, false, matrix4f, bufferSource, Font.DisplayMode.NORMAL, 0, packedLight);
 		RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 		poseStack.popPose();
 	}
@@ -194,15 +226,17 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (provider.getStage() == RenderLevelStageEvent.Stage.AFTER_ENTITIES) {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
-			Vec3 pos = entity.getPosition((float) provider.getPartialTick());
+			Vec3 pos = entity.getPosition(provider.getPartialTick());
+			RenderSystem.depthMask(true);
+			RenderSystem.enableDepthTest();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			execute(provider, level);
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
+			RenderSystem.defaultBlendFunc();
 			RenderSystem.disableBlend();
 			RenderSystem.enableCull();
 			RenderSystem.enableDepthTest();
 			RenderSystem.depthMask(true);
-			RenderSystem.colorMask(true, true, true, true);
 		}
 	}
 
@@ -214,253 +248,241 @@ public class RenderItemOnBatteryChargerProcedure {
 		double xpos = 0;
 		double ypos = 0;
 		double zpos = 0;
-		for (BlockEntity _blockentityiterator : (new Object() {
-			public List<BlockEntity> get(LevelAccessor levelAccessor) {
-				if (levelAccessor instanceof ClientLevel clientLevel) {
-					List<BlockEntity> list = new ArrayList<>();
-					Minecraft minecraft = Minecraft.getInstance();
-					BlockPos center = BlockPos.containing(minecraft.player.position());
-					int range = minecraft.options.getEffectiveRenderDistance();
-					for (int j = -range; j <= range; ++j) {
-						for (int i = -range; i <= range; ++i) {
-							LevelChunk levelChunk = clientLevel.getChunk(SectionPos.blockToSectionCoord(center.getX() + (i << 4)), SectionPos.blockToSectionCoord(center.getZ() + (j << 4)));
-							if (levelChunk != null)
-								for (Map.Entry<BlockPos, BlockEntity> entry : levelChunk.getBlockEntities().entrySet())
-									list.add(entry.getValue());
-						}
-					}
-					return list;
-				} else {
-					return new ArrayList<>();
-				}
-			}
-		}).get(world)) {
-			BlockState blockstateiterator = _blockentityiterator.getBlockState();
-			Vector3i positioniterator = new Vector3i(_blockentityiterator.getBlockPos().getX(), _blockentityiterator.getBlockPos().getY(), _blockentityiterator.getBlockPos().getZ());
-			if ((world.getBlockState(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))).getBlock() == PowerModBlocks.BATTERY_CHARGER.get()) {
-				if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.NORTH) {
-					if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
+		if (world instanceof ClientLevel _blockEntityContext) {
+			int _scanRange = Minecraft.getInstance().options.getEffectiveRenderDistance();
+			BlockPos _scanCenter = Minecraft.getInstance().player.blockPosition();
+			LevelChunk _levelChunk;
+			BlockState blockstateiterator;
+			int positionx, positiony, positionz;
+			for (int _chunkZ = -_scanRange; _chunkZ <= _scanRange; ++_chunkZ) {
+				for (int _chunkX = -_scanRange; _chunkX <= _scanRange; ++_chunkX) {
+					_levelChunk = _blockEntityContext.getChunk(SectionPos.blockToSectionCoord(_scanCenter.getX() + (_chunkX << 4)), SectionPos.blockToSectionCoord(_scanCenter.getZ() + (_chunkZ << 4)));
+					if (_levelChunk != null) {
+						for (Map.Entry<BlockPos, BlockEntity> _blockEntityEntry : _levelChunk.getBlockEntities().entrySet()) {
+							blockstateiterator = _blockEntityEntry.getValue().getBlockState();
+							positionx = _blockEntityEntry.getKey().getX();
+							positiony = _blockEntityEntry.getKey().getY();
+							positionz = _blockEntityEntry.getKey().getZ();
+							if ((world.getBlockState(new BlockPos(positionx, positiony, positionz))).getBlock() == PowerModBlocks.BATTERY_CHARGER.get()) {
+								if ((new Object() {
+									public Direction getDirection(BlockPos pos) {
+										BlockState _bs = world.getBlockState(pos);
+										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (property != null && _bs.getValue(property) instanceof Direction _dir)
+											return _dir;
+										else if (_bs.hasProperty(BlockStateProperties.AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+										return Direction.NORTH;
+									}
+								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
+									if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
+									} else if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockPos pos) {
+										BlockState _bs = world.getBlockState(pos);
+										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (property != null && _bs.getValue(property) instanceof Direction _dir)
+											return _dir;
+										else if (_bs.hasProperty(BlockStateProperties.AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+										return Direction.NORTH;
+									}
+								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
+									if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
+									} else if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockPos pos) {
+										BlockState _bs = world.getBlockState(pos);
+										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (property != null && _bs.getValue(property) instanceof Direction _dir)
+											return _dir;
+										else if (_bs.hasProperty(BlockStateProperties.AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+										return Direction.NORTH;
+									}
+								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
+									if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
+									} else if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
+									}
+								} else if ((new Object() {
+									public Direction getDirection(BlockPos pos) {
+										BlockState _bs = world.getBlockState(pos);
+										Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
+										if (property != null && _bs.getValue(property) instanceof Direction _dir)
+											return _dir;
+										else if (_bs.hasProperty(BlockStateProperties.AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
+										else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
+											return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
+										return Direction.NORTH;
+									}
+								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
+									if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
+									} else if (!((new Object() {
+										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
+										}
+									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
+										renderItem((new Object() {
+											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
+											}
+										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
+									}
 								}
-								return ItemStack.EMPTY;
 							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5,
-								true, false);
-					} else if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
 						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 0, 90, 0, (float) 0.5,
-								true, false);
-					}
-				} else if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.SOUTH) {
-					if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
-								true, false);
-					} else if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 180, 90, 0, (float) 0.5,
-								true, false);
-					}
-				} else if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.WEST) {
-					if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
-								true, false);
-					} else if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), -90, 90, 0, (float) 0.5,
-								true, false);
-					}
-				} else if ((new Object() {
-					public Direction getDirection(BlockPos pos) {
-						BlockState _bs = world.getBlockState(pos);
-						Property<?> property = _bs.getBlock().getStateDefinition().getProperty("facing");
-						if (property != null && _bs.getValue(property) instanceof Direction _dir)
-							return _dir;
-						else if (_bs.hasProperty(BlockStateProperties.AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.AXIS), Direction.AxisDirection.POSITIVE);
-						else if (_bs.hasProperty(BlockStateProperties.HORIZONTAL_AXIS))
-							return Direction.fromAxisAndDirection(_bs.getValue(BlockStateProperties.HORIZONTAL_AXIS), Direction.AxisDirection.POSITIVE);
-						return Direction.NORTH;
-					}
-				}.getDirection(BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()))) == Direction.EAST) {
-					if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 2)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
-								true, false);
-					} else if (!((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)).getItem() == ItemStack.EMPTY.getItem())) {
-						renderItem((new Object() {
-							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-								if (world instanceof ILevelExtension _ext) {
-									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-									if (_itemHandler != null)
-										return _itemHandler.getStackInSlot(slotid).copy();
-								}
-								return ItemStack.EMPTY;
-							}
-						}.getItemStack(world, BlockPos.containing(positioniterator.x(), positioniterator.y(), positioniterator.z()), 0)), (positioniterator.x() + 0.5), (positioniterator.y() + 1), (positioniterator.z() + 0.5), 90, 90, 0, (float) 0.5,
-								true, false);
 					}
 				}
 			}

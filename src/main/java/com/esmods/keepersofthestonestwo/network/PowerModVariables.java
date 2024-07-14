@@ -73,10 +73,10 @@ public class PowerModVariables {
 			clone.element_name_third = original.element_name_third;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.max_power = original.max_power;
-			clone.power_recovery_multiplier = original.power_recovery_multiplier;
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.debug = original.debug;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -86,12 +86,23 @@ public class PowerModVariables {
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
+				clone.power_recovery_multiplier = original.power_recovery_multiplier;
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.second_wheel_open_var = original.second_wheel_open_var;
 				clone.third_wheel_open_var = original.third_wheel_open_var;
 				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
 				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
+				clone.helmet = original.helmet;
+				clone.chestplate = original.chestplate;
+				clone.leggings = original.leggings;
+				clone.boots = original.boots;
+				clone.abilities_timer = original.abilities_timer;
+				clone.ability_using = original.ability_using;
+				clone.power_recorded = original.power_recorded;
+				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
+				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
+				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -210,6 +221,7 @@ public class PowerModVariables {
 		public double bpX = 0;
 		public double bpY = 0;
 		public double bpZ = 0;
+		public boolean get_limit_of_stones = true;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -274,6 +286,7 @@ public class PowerModVariables {
 			bpX = nbt.getDouble("bpX");
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
+			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 		}
 
 		@Override
@@ -334,6 +347,7 @@ public class PowerModVariables {
 			nbt.putDouble("bpX", bpX);
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
+			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			return nbt;
 		}
 
@@ -430,6 +444,17 @@ public class PowerModVariables {
 		public boolean first_fake_wheel_open_var = false;
 		public boolean second_fake_wheel_open_var = false;
 		public boolean third_fake_wheel_open_var = false;
+		public String helmet = "\"\"";
+		public String chestplate = "\"\"";
+		public String leggings = "\"\"";
+		public String boots = "\"\"";
+		public double abilities_timer = 0;
+		public boolean ability_using = false;
+		public boolean power_recorded = false;
+		public double fake_element_name_first_timer = 0;
+		public double fake_element_name_second_timer = 0;
+		public double fake_element_name_third_timer = 0;
+		public boolean debug = false;
 
 		@Override
 		public CompoundTag serializeNBT() {
@@ -460,6 +485,17 @@ public class PowerModVariables {
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
+			nbt.putString("helmet", helmet);
+			nbt.putString("chestplate", chestplate);
+			nbt.putString("leggings", leggings);
+			nbt.putString("boots", boots);
+			nbt.putDouble("abilities_timer", abilities_timer);
+			nbt.putBoolean("ability_using", ability_using);
+			nbt.putBoolean("power_recorded", power_recorded);
+			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
+			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
+			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
+			nbt.putBoolean("debug", debug);
 			return nbt;
 		}
 
@@ -491,6 +527,17 @@ public class PowerModVariables {
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
+			helmet = nbt.getString("helmet");
+			chestplate = nbt.getString("chestplate");
+			leggings = nbt.getString("leggings");
+			boots = nbt.getString("boots");
+			abilities_timer = nbt.getDouble("abilities_timer");
+			ability_using = nbt.getBoolean("ability_using");
+			power_recorded = nbt.getBoolean("power_recorded");
+			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
+			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
+			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
+			debug = nbt.getBoolean("debug");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

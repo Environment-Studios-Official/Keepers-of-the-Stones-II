@@ -32,4 +32,10 @@ public class PowerModParticleTypes {
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> TELEPORTATION_PARTICLE = REGISTRY.register("teleportation_particle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE = REGISTRY.register("energium_golem_core_attack_particle", () -> new SimpleParticleType(false));
 	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> AMBER_POWER = REGISTRY.register("amber_power", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BLOOD_SPLASH = REGISTRY.register("blood_splash", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> MIST_PARTICLE = REGISTRY.register("mist_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> POISON_PARTICLE = REGISTRY.register("poison_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> BLUE_MAGNET_PARTICLE = REGISTRY.register("blue_magnet_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> RED_MAGNET_PARTICLE = REGISTRY.register("red_magnet_particle", () -> new SimpleParticleType(false));
+	public static final DeferredHolder<ParticleType<?>, SimpleParticleType> MUSHROOM_SPORES = REGISTRY.register("mushroom_spores", () -> new SimpleParticleType(false));
 }

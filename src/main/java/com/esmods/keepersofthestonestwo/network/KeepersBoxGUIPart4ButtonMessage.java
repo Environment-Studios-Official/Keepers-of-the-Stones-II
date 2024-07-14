@@ -18,7 +18,10 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.SandElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MushrooomsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherElementGetProcedure;
@@ -102,6 +105,18 @@ public record KeepersBoxGUIPart4ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 8) {
 
 			AmberElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 9) {
+
+			SandElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			PoisonElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			MushrooomsElementGetProcedure.execute(world, entity);
 		}
 	}
 

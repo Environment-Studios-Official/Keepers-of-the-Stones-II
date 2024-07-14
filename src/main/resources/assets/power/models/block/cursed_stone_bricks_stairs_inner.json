@@ -1,0 +1,9 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "power:block/cursed_stone_bricks",
+    "top": "power:block/cursed_stone_bricks",
+    "side": "power:block/cursed_stone_bricks"
+  },
+  "render_type": "solid"
+}

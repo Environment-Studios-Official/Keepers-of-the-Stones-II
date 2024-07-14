@@ -33,7 +33,7 @@
         "subtract": false
       }
     ],
-    "name": "Raw Amplifier Block",
+    "name": "Block of Raw Amplifier",
     "specialInformation": {
       "fixedValue": []
     },
@@ -98,7 +98,7 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 4,
     "unbreakable": false,
     "breakHarvestLevel": 2,
     "isBonemealable": false,

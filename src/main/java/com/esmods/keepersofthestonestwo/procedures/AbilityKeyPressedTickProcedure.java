@@ -167,7 +167,7 @@ public class AbilityKeyPressedTickProcedure {
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("blood")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blood")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("blood")) {
-					BloodSpecialAttackProcedure.execute(world, entity);
+					BloodSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("technology") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("technology")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("technology") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("technology")
@@ -188,6 +188,36 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("amber") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("amber")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("amber") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("amber")) {
 					AmberSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mist")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mist")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mist")) {
+					MistSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sand")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sand")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("sand")) {
+					SandSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("speed")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("speed")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("speed")) {
+					SpeedSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("poison")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("poison")) {
+					PoisonSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("magnet")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("magnet")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("magnet")) {
+					MagnetSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mushrooms")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mushrooms")) {
+					MushroomsSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

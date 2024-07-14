@@ -212,7 +212,7 @@
           "image": "destruction_element.png",
           "hoveredImage": "destruction_element_highlighted.png",
           "onClick": {
-            "name": "CreationElementGet"
+            "name": "DestructionElementGet"
           },
           "displayCondition": {
             "name": "DestructionStoneCheck"
@@ -298,6 +298,70 @@
           "width": 24,
           "height": 24,
           "x": 147,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mist_element",
+          "image": "mist_element.png",
+          "hoveredImage": "mist_element_highlighted.png",
+          "onClick": {
+            "name": "MistElementGet"
+          },
+          "displayCondition": {
+            "name": "MistStoneCheck"
+          },
+          "x": 242,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mist",
+          "text": {
+            "fixedValue": "Mist"
+          },
+          "displayCondition": {
+            "name": "MistStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_speed_element_highlighted",
+          "image": "speed_element.png",
+          "hoveredImage": "speed_element_highlighted.png",
+          "onClick": {
+            "name": "SpeedElementGet"
+          },
+          "displayCondition": {
+            "name": "SpeedStoneCheck"
+          },
+          "x": 175,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_speed",
+          "text": {
+            "fixedValue": "Speed"
+          },
+          "displayCondition": {
+            "name": "SpeedStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 171,
           "y": 128
         }
       }

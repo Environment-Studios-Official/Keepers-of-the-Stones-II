@@ -24,15 +24,22 @@ import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedu
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StarRegenerationEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SandMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MasterMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LethalityPriIstiechieniiEffiektaProcedure;
@@ -64,15 +71,24 @@ import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MercuryMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MagnetMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightningMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LightMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.LethalityMobEffect;
@@ -88,6 +104,7 @@ import com.esmods.keepersofthestonestwo.potion.EarthMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AmberMasterMobEffect;
@@ -138,6 +155,16 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> EXPLOSION_MASTER = REGISTRY.register("explosion_master", () -> new ExplosionMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> AMBER_MASTER = REGISTRY.register("amber_master", () -> new AmberMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> STAR_REGENERATION = REGISTRY.register("star_regeneration", () -> new StarRegenerationMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MIST_MASTER = REGISTRY.register("mist_master", () -> new MistMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MIST = REGISTRY.register("mist", () -> new MistMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SAND_MASTER = REGISTRY.register("sand_master", () -> new SandMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SPEED_MASTER = REGISTRY.register("speed_master", () -> new SpeedMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> POISON_MASTER = REGISTRY.register("poison_master", () -> new PoisonMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MAGNET_MASTER = REGISTRY.register("magnet_master", () -> new MagnetMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> RED_MAGNET_POWER = REGISTRY.register("red_magnet_power", () -> new RedMagnetPowerMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BLUE_MAGNET_POWER = REGISTRY.register("blue_magnet_power", () -> new BlueMagnetPowerMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -229,6 +256,20 @@ public class PowerModMobEffects {
 			AmberMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == STAR_REGENERATION.get()) {
 			StarRegenerationEndProcedure.execute(entity);
+		} else if (effect == MIST_MASTER.get()) {
+			MasterMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == SAND_MASTER.get()) {
+			SandMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == SPEED_MASTER.get()) {
+			SpeedMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == POISON_MASTER.get()) {
+			PoisonMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == MAGNET_MASTER.get()) {
+			MagnetMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == MUSHROOMS_MASTER.get()) {
+			MushroomsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == MERCURY_MASTER.get()) {
+			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

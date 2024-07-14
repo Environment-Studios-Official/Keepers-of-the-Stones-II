@@ -19,7 +19,6 @@ import net.minecraft.core.registries.Registries;
 import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
-import com.esmods.keepersofthestonestwo.entity.TeleportationGunProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
@@ -27,6 +26,9 @@ import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
+import com.esmods.keepersofthestonestwo.entity.PoisonPitEntity;
+import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.PoisonBombEntity;
 import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MeteoriteProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
@@ -115,17 +117,21 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem",
-			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.5f, 3f));
+			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.25f, 3f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretEntity>> TURRET = register("turret",
 			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile",
 			EntityType.Builder.<TurretProjectileEntity>of(TurretProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final DeferredHolder<EntityType<?>, EntityType<TeleportationGunProjectileEntity>> TELEPORTATION_GUN_PROJECTILE = register("teleportation_gun_projectile",
-			EntityType.Builder.<TeleportationGunProjectileEntity>of(TeleportationGunProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<AtomicRocketEntity>> ATOMIC_ROCKET = register("atomic_rocket",
 			EntityType.Builder.<AtomicRocketEntity>of(AtomicRocketEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<GrenadeEntity>> GRENADE = register("grenade",
 			EntityType.Builder.<GrenadeEntity>of(GrenadeEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PoisonDropProjectileEntity>> POISON_DROP_PROJECTILE = register("poison_drop_projectile",
+			EntityType.Builder.<PoisonDropProjectileEntity>of(PoisonDropProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PoisonBombEntity>> POISON_BOMB = register("poison_bomb",
+			EntityType.Builder.<PoisonBombEntity>of(PoisonBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<PoisonPitEntity>> POISON_PIT = register("poison_pit",
+			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(4f, 0.2f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -138,6 +144,7 @@ public class PowerModEntities {
 			BlackHoleEntity.init();
 			EnergiumGolemEntity.init();
 			TurretEntity.init();
+			PoisonPitEntity.init();
 		});
 	}
 
@@ -147,5 +154,6 @@ public class PowerModEntities {
 		event.put(BLACK_HOLE.get(), BlackHoleEntity.createAttributes().build());
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
+		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
 	}
 }

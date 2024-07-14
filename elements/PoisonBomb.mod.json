@@ -1,0 +1,22 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Items.POISONOUS_POTATO"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 0.5,
+    "damage": 12.0,
+    "knockback": 4,
+    "entityModel": "Modelpoison_bomb",
+    "customModelTexture": "poison_bomb.png",
+    "onHitsBlock": {
+      "name": "SpawnPoisonPit"
+    }
+  }
+}

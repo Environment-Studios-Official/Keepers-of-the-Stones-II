@@ -22,9 +22,12 @@ import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -102,7 +105,7 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 7) {
 
-			CreationElementGetProcedure.execute(world, entity);
+			DestructionElementGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 8) {
 
@@ -111,6 +114,14 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 9) {
 
 			TeleportationElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			MistElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			SpeedElementGetProcedure.execute(world, entity);
 		}
 	}
 

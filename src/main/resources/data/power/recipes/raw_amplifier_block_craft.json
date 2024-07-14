@@ -8,7 +8,7 @@
   ],
   "key": {
     "a": {
-      "item": "minecraft:air"
+      "item": "power:raw_amplifier"
     }
   },
   "result": {
