@@ -13,7 +13,6 @@ import software.bernie.geckolib.animatable.GeoEntity;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.ItemStack;
@@ -51,6 +50,7 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergiumGolemPriGibieliSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class EnergiumGolemEntity extends Monster implements GeoEntity {
 	public static final EntityDataAccessor<Boolean> SHOOT = SynchedEntityData.defineId(EnergiumGolemEntity.class, EntityDataSerializers.BOOLEAN);
@@ -115,7 +115,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 
 	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
 		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
-		this.spawnAtLocation(new ItemStack(Blocks.AIR));
+		this.spawnAtLocation(new ItemStack(PowerModItems.ENERGIUM_CORE.get()));
 	}
 
 	@Override
