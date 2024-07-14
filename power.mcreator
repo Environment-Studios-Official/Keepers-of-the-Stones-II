@@ -28657,26 +28657,6 @@
       "path": "~/Modules/BasicModule"
     },
     {
-      "name": "SelectedElementTrue",
-      "type": "procedure",
-      "sortid": 1317,
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "selected_element_true",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SelectedElementTrueProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "arguments",
-            "type": "cmdcontext"
-          }
-        ]
-      },
-      "path": "~/Commands"
-    },
-    {
       "name": "RawEnergium",
       "type": "item",
       "sortid": 53,
@@ -29628,40 +29608,6 @@
       "~CUSTOM:EnergiumBlock",
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
-    ],
-    "ENTITIES:mod:is_projectile": [
-      "CUSTOM:AmethystAttackProjectile",
-      "CUSTOM:AmethystClusterAttackProjectile",
-      "CUSTOM:BallLightningProjectile",
-      "CUSTOM:CobbledDeepslateAttackProjectile",
-      "CUSTOM:CobblestoneAttackProjectile",
-      "CUSTOM:CopperAttackProjectile",
-      "CUSTOM:DestructionBallProjectile",
-      "CUSTOM:DirtBlockAttackProjectile",
-      "CUSTOM:EtherAttackProjectile",
-      "CUSTOM:GoldAttackProjectile",
-      "CUSTOM:GrassBlockAttackProjectile",
-      "CUSTOM:IceAttackProjectile",
-      "CUSTOM:IronAttackProjectile",
-      "CUSTOM:KnifeAttackProjectile",
-      "CUSTOM:LavaAttackProjectile",
-      "CUSTOM:LightballProjectile",
-      "CUSTOM:MagicFireballProjectile",
-      "CUSTOM:MeteoriteProjectile",
-      "CUSTOM:MiniTornadoProjectile",
-      "CUSTOM:PoisonDropProjectile",
-      "CUSTOM:RainDropProjectile",
-      "CUSTOM:SoundBombProjectile",
-      "CUSTOM:SphereNothingProjectile",
-      "CUSTOM:StoneAttackProjectile",
-      "CUSTOM:TurretProjectile",
-      "CUSTOM:WaterAttackProjectile",
-      "EntityArrow",
-      "EntityDragonFireball",
-      "EntityFireball",
-      "EntityFireworkRocket",
-      "EntitySmallFireball",
-      "EntitySnowball"
     ],
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
