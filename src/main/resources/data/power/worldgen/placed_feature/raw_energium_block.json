@@ -1,5 +1,5 @@
 {
-  "feature": "power:energium_ore",
+  "feature": "power:raw_energium_block",
   "placement": [
     {
       "type": "minecraft:count",
@@ -13,10 +13,10 @@
       "height": {
         "type": "minecraft:trapezoid",
         "min_inclusive": {
-          "absolute": 24
+          "absolute": 16
         },
         "max_inclusive": {
-          "absolute": 32
+          "absolute": 256
         }
       }
     },

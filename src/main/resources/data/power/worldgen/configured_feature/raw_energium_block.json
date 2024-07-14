@@ -10,7 +10,7 @@
           "tag": "stone_ore_replaceables"
         },
         "state": {
-          "Name": "power:energium_ore"
+          "Name": "power:raw_energium_block"
         }
       }
     ]
