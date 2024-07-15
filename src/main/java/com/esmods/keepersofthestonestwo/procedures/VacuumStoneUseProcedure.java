@@ -25,7 +25,6 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class VacuumStoneUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -34,9 +33,7 @@ public class VacuumStoneUseProcedure {
 		if (((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) == 0 && entity instanceof Player || entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3 && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers >= 1)
 				&& entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && itemstack.getOrCreateTag().getDouble("rechargeStone") == 0) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.VACUUM_STONE.get()) {
-				PowerMod.queueServerWork(1, () -> {
-					itemstack.shrink(1);
-				});
+				itemstack.shrink(1);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.VACUUM_MASTER.get(), 12000, 0, false, false));
 				{
