@@ -295,7 +295,7 @@ public class EarthSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity) && entityiterator instanceof ItemEntity) {
+						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
 							if (world instanceof ServerLevel _level) {
 								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
 										"execute positioned ~ ~ ~ run quakecord ~ ~ ~");
