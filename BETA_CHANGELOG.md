@@ -8,4 +8,3 @@ What's new in Keepers of the Stones II version 1.0.0.31?<br />
 <br />- [Bugfix] Fixed a bug that caused the first air ability to not push players away
 <br />- [Bugfix] Fixed a bug that caused sand to be duplicated when using the burial ability on a sand master
 <br />- [Bugfix] Fixed a bug that caused the black hole to attract all entities including projectiles, etc.
-<br />- [Bugfix] Fixed a bug where rocks could duplicate sound and animations
