@@ -71,6 +71,7 @@ import com.esmods.keepersofthestonestwo.item.SandSaberItem;
 import com.esmods.keepersofthestonestwo.item.SandBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
+import com.esmods.keepersofthestonestwo.item.RawEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
 import com.esmods.keepersofthestonestwo.item.RawAmplifierItem;
@@ -162,6 +163,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumHoeItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
@@ -559,6 +561,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
 	public static final DeferredHolder<Item, Item> LUCK_COIN = REGISTRY.register("luck_coin", () -> new LuckCoinItem());
 	public static final DeferredHolder<Item, Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", () -> new MusicDiscAncientMoodItem());
+	public static final DeferredHolder<Item, Item> RAW_ENERGIUM = REGISTRY.register("raw_energium", () -> new RawEnergiumItem());
+	public static final DeferredHolder<Item, Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE);
+	public static final DeferredHolder<Item, Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", () -> new EnergiumDustItem());
+	public static final DeferredHolder<Item, Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
 
 	// Start of user code block custom items
 	// End of user code block custom items

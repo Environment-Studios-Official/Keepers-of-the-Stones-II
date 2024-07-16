@@ -4,6 +4,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 
 import java.util.List;
@@ -27,7 +28,7 @@ public class BlueMagnetPowerTickProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity == entityiterator)) {
-					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false) && (entity instanceof Mob || entity instanceof Player)) {
 						itemPosX = entityiterator.getX();
 						itemPosY = entityiterator.getY();
 						itemPosZ = entityiterator.getZ();

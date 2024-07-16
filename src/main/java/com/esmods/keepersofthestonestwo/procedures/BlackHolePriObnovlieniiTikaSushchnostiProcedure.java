@@ -4,6 +4,7 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
 
 import java.util.List;
@@ -37,7 +38,7 @@ public class BlackHolePriObnovlieniiTikaSushchnostiProcedure {
 				if (!((entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
 						|| (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space") || (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space"))) {
-					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
+					if (!(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false) && (entityiterator instanceof Mob || entityiterator instanceof Player)) {
 						itemPosX = entityiterator.getX();
 						itemPosY = entityiterator.getY();
 						itemPosZ = entityiterator.getZ();

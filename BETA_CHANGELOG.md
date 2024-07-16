@@ -1,8 +1,15 @@
-What's new in Keepers of the Stones II version 1.0.0.30?<br />
-<br />- Full migration to NeoForge 1.20.4
-<br />- Added the ability to switch from Keepers of the Stones to Keepers of the Stones II (Some items may disappear during the transition)
-<br />- Player animations returned when activating and deactivating stones
-<br />- PlayerAnimator mod is again required for the mod to work
-<br />- One key now opens one vault 
-<br />- The number of keys after defeating bosses is now equal to the number of vaults in the structures
-<br />- [Bugfix] Fixed a bug that caused the mod's game rules to not work
+What's new in Keepers of the Stones II version 1.0.0.31?<br />
+<br />- Content from Energium Extra mod has been moved to Keepers of the Stones II
+<br />- Updated the mechanics of the technobarrier
+<br />- The Sand Master's burial ability has been changed
+<br />- Slightly increased repulsion by the air flow
+<br />- [API] Colorful Powers API has been updated to version 9
+<br />- [API] Added support for custom boosters for stones
+<br />- [API] Added garter for client side activation stone for add-ons
+<br />- [Bugfix] Fixed a crash caused by using abilities on projectiles
+<br />- [Bugfix] Fixed a bug that caused the energium core to not drop out of the golem
+<br />- [Bugfix] Fixed a bug where the player could use abilities in spectator mode
+<br />- [Bugfix] Fixed a bug that caused the first air ability to not push players away
+<br />- [Bugfix] Fixed a bug that caused the third earth ability to not work
+<br />- [Bugfix] Fixed a bug that caused sand to be duplicated when using the burial ability on a sand master
+<br />- [Bugfix] Fixed a bug that caused the black hole to attract all entities including projectiles, etc.
