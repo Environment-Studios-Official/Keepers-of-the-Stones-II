@@ -53,7 +53,6 @@ jobs:
           changelog-file: BETA_CHANGELOG.md                                      
 
           loaders: |
-            forge
             neoforge
           game-versions: "${{env.MINECRAFT_VERSION}}"
           java: "${{env.JAVA_VERSION}}"
@@ -65,6 +64,7 @@ jobs:
             conflicting-dependency(conflicting)
             incompatible-dependency(incompatible)
             geckolib(required){modrinth:8BmcQJ2H}{curseforge:388172}#(ignore:github)
+            playeranimator(required){modrinth:gedNE4y2}{curseforge:658587}#(ignore:github)
             better-combat(recommended){modrinth:8BmcQJ2H}{curseforge:639842}#(ignore:github)
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
