@@ -40,6 +40,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsM
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMoonMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMistMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMercuryMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMagnetMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
@@ -813,6 +814,26 @@ public class WheelOpenKeyPressedTickProcedure {
 						@Override
 						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
 							return new WheelAbilitiesMushroomsMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
+						}
+					}, _bpos);
+				}
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mercury")) {
+				if (entity instanceof ServerPlayer _ent) {
+					BlockPos _bpos = BlockPos.containing(x, y, z);
+					_ent.openMenu(new MenuProvider() {
+						@Override
+						public Component getDisplayName() {
+							return Component.literal("WheelAbilitiesMercury");
+						}
+
+						@Override
+						public boolean shouldTriggerClientSideContainerClosingOnOpen() {
+							return false;
+						}
+
+						@Override
+						public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
+							return new WheelAbilitiesMercuryMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(_bpos));
 						}
 					}, _bpos);
 				}

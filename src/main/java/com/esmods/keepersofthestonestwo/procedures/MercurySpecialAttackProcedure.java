@@ -29,7 +29,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
-public class MushroomsSpecialAttackProcedure {
+public class MercurySpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
@@ -47,7 +47,7 @@ public class MushroomsSpecialAttackProcedure {
 		double playerPosY = 0;
 		double playerPosZ = 0;
 		double playerPosX = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mushrooms_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mercury_attack_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -108,7 +108,7 @@ public class MushroomsSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mushrooms_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mercury_attack_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 				for (int index1 = 0; index1 < 10; index1++) {
 					if (!world.getBlockState(new BlockPos(
@@ -157,7 +157,7 @@ public class MushroomsSpecialAttackProcedure {
 					success = false;
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mushrooms_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("mercury_attack_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 				particleAmount = 8;
 				particleRadius = 2;

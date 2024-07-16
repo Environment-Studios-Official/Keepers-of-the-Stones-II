@@ -45,9 +45,6 @@ public class MagnetSpecialAttackProcedure {
 		double playerPosY = 0;
 		double playerPosZ = 0;
 		double playerPosX = 0;
-		playerPosX = entity.getX();
-		playerPosY = entity.getY();
-		playerPosZ = entity.getZ();
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("magnet_attack_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {

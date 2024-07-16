@@ -233,6 +233,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mushrooms")) {
 					MushroomsSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mercury")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mercury")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mercury")) {
+					MercurySpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.use_ability_key_var = false;
