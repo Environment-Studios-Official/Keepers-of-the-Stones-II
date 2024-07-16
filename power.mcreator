@@ -28866,6 +28866,42 @@
         ]
       },
       "path": "~/Elements/Technology"
+    },
+    {
+      "name": "ExtendedCheckOfActivationStone",
+      "type": "procedure",
+      "sortid": 1327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "extended_check_of_activation_stone",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExtendedCheckOfActivationStoneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
     }
   ],
   "variable_elements": [
@@ -29432,6 +29468,36 @@
       "type": "logic",
       "scope": "map",
       "value": "true"
+    },
+    {
+      "name": "check_activating_stone",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
+    },
+    {
+      "name": "first_booster_slot",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "second_booster_slot",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "third_booster_shop",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "evolution",
+      "type": "string",
+      "scope": "player_persistent",
+      "value": "basic"
     }
   ],
   "sound_elements": [
@@ -31562,6 +31628,10 @@
           },
           {
             "name": "ConvertsModule",
+            "children": []
+          },
+          {
+            "name": "ColorfulPowersModule",
             "children": []
           }
         ]
