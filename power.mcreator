@@ -29479,25 +29479,25 @@
       "name": "first_booster_slot",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "0"
     },
     {
       "name": "second_booster_slot",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "0"
     },
     {
       "name": "third_booster_shop",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "0"
     },
     {
       "name": "evolution",
       "type": "string",
       "scope": "player_persistent",
-      "value": "\"\""
+      "value": "basic"
     }
   ],
   "sound_elements": [

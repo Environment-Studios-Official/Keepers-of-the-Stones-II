@@ -77,6 +77,10 @@ public class PowerModVariables {
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
 			clone.debug = original.debug;
+			clone.first_booster_slot = original.first_booster_slot;
+			clone.second_booster_slot = original.second_booster_slot;
+			clone.third_booster_shop = original.third_booster_shop;
+			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -457,6 +461,10 @@ public class PowerModVariables {
 		public double fake_element_name_third_timer = 0;
 		public boolean debug = false;
 		public boolean check_activating_stone = false;
+		public String first_booster_slot = "0";
+		public String second_booster_slot = "0";
+		public String third_booster_shop = "0";
+		public String evolution = "basic";
 
 		@Override
 		public CompoundTag serializeNBT() {
@@ -499,6 +507,10 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			nbt.putBoolean("debug", debug);
 			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putString("first_booster_slot", first_booster_slot);
+			nbt.putString("second_booster_slot", second_booster_slot);
+			nbt.putString("third_booster_shop", third_booster_shop);
+			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
@@ -542,6 +554,10 @@ public class PowerModVariables {
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 			debug = nbt.getBoolean("debug");
 			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			first_booster_slot = nbt.getString("first_booster_slot");
+			second_booster_slot = nbt.getString("second_booster_slot");
+			third_booster_shop = nbt.getString("third_booster_shop");
+			evolution = nbt.getString("evolution");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
