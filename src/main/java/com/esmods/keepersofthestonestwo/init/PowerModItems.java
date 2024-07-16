@@ -111,6 +111,7 @@ import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBattleAxeItem;
 import com.esmods.keepersofthestonestwo.item.MercuryBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
@@ -567,6 +568,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", () -> new EnergiumDustItem());
 	public static final DeferredHolder<Item, Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
+	public static final DeferredHolder<Item, Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", () -> new MercuryBattleAxeItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

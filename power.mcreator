@@ -29150,6 +29150,41 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBattleAxe",
+      "type": "tool",
+      "sortid": 1338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battle_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_battle_axe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBattleAxeItem.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBattleAxeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 1339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battle_axe_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBattleAxeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
     }
   ],
   "variable_elements": [
@@ -30148,6 +30183,7 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
+      "item.power.mercury_battle_axe": "Tornado Axe",
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "subtitles.strange_sound": "",
@@ -30837,6 +30873,7 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
+      "item.power.mercury_battle_axe": "Mercury Battle Axe",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
       "subtitles.strange_sound": "",
