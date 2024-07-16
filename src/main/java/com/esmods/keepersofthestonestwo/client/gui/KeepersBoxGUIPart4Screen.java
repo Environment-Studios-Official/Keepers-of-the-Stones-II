@@ -22,6 +22,7 @@ import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalStoneCheckProcedure;
@@ -47,6 +48,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_sand_element;
 	ImageButton imagebutton_poison_element;
 	ImageButton imagebutton_mushrooms_element;
+	ImageButton imagebutton_mercury_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -94,6 +96,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (MushroomsStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mushrooms"), mouseX, mouseY);
+		if (MercuryStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mercury"), mouseX, mouseY);
 	}
 
 	@Override
@@ -297,5 +302,20 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_mushrooms_element", imagebutton_mushrooms_element);
 		this.addRenderableWidget(imagebutton_mushrooms_element);
+		imagebutton_mercury_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_element.png"), new ResourceLocation("power:textures/screens/mercury_element_highlighted.png")), e -> {
+					if (MercuryStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(12, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (MercuryStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_mercury_element", imagebutton_mercury_element);
+		this.addRenderableWidget(imagebutton_mercury_element);
 	}
 }

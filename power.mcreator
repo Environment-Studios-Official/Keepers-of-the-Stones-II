@@ -29034,6 +29034,122 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "MercuryElementGet",
+      "type": "procedure",
+      "sortid": 1333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryStoneCheck",
+      "type": "procedure",
+      "sortid": 1334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MercuryBattery",
+      "type": "item",
+      "sortid": 1335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBatteryDesc",
+      "type": "procedure",
+      "sortid": 1336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBatteryUse",
+      "type": "procedure",
+      "sortid": 1337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
     }
   ],
   "variable_elements": [
@@ -29998,20 +30114,20 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -30023,8 +30139,8 @@
       "item.power.magnet_battery": "Батарея",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "effect.power.mushrooms_master": "Мастер грибов",
-      "block.power.cursed_lantern": "Проклятый фонарь",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
+      "block.power.cursed_lantern": "Проклятый фонарь",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
@@ -30040,6 +30156,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
+      "battery.desc.mercury": "Ртуть",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Остановка времени",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
@@ -30063,7 +30180,6 @@
       "entity.power.black_hole": "Black Hole",
       "item.power.energium_armor_leggings": "Энерджиумные поножи",
       "item.keeper_book.desc": "Книга для овладения силой стихий",
-      "gui.power.wheel_abilities_mercury.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "battery.desc.mushrooms": "Грибы",
       "item.power.explosion_stone": "Камень взрыва",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
@@ -30134,6 +30250,7 @@
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
+      "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Ртуть",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
       "death.attack.energium_golem_ds.item": "%1$s был убит Энерджиумный голем",
       "item.power.mushrooms_armor_chestplate": "Нагрудник мастера грибов",
@@ -30181,7 +30298,6 @@
       "entity.power.energium_golem": "Энерджиумный голем",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "item.power.energium_sword": "Энерджиумный меч",
-      "gui.power.wheel_abilities_mercury.tooltip_flying_spores_uses_15": "Flying spores, uses 15",
       "item.power.empty_battery": "Батарея",
       "item.power.technology_armor_leggings": "Поножи мастера технологий",
       "item.power.tornado_armor_chestplate": "Нагрудник мастера торнадо",
@@ -30192,7 +30308,6 @@
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.mushrooms_hammer": "Грибной молот",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
-      "gui.power.wheel_abilities_mercury.tooltip_planting_mushrooms_uses_35": "Planting mushrooms, uses 35",
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
       "battery.desc.mist": "Туман",
       "battery.desc.space": "Космос",
@@ -30582,6 +30697,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Созидание",
       "advancements.the_great_win.title": "Великая победа!",
       "battery.desc.lava": "Лава",
+      "item.power.mercury_battery": "Батарея",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.energium_core": "Энерджиумное ядро",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
@@ -30687,20 +30803,20 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
-      "item_group.power.items": "KotS: Items",
       "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "item_group.power.items": "KotS: Items",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "item.power.time_armor_helmet": "Time Helmet",
       "item.power.poison_battery": "Battery",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
@@ -30712,8 +30828,8 @@
       "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "effect.power.mushrooms_master": "Master of Mushrooms",
-      "block.power.cursed_lantern": "Cursed Lantern",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
+      "block.power.cursed_lantern": "Cursed Lantern",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
@@ -30729,6 +30845,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
+      "battery.desc.mercury": "Mercury",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Time Stopped",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
@@ -30752,7 +30869,6 @@
       "entity.power.black_hole": "Black Hole",
       "item.power.energium_armor_leggings": "Energium Leggings",
       "item.keeper_book.desc": "A book for mastering the power of the elements",
-      "gui.power.wheel_abilities_mercury.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "battery.desc.mushrooms": "Mushrooms",
       "item.power.explosion_stone": "Explosion Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
@@ -30823,6 +30939,7 @@
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
+      "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Mercury",
       "item.power.creation_armor_boots": "Creation Boots",
       "death.attack.energium_golem_ds.item": "%1$s was killed by an Energium Golem",
       "item.power.mushrooms_armor_chestplate": "Mushrooms Chestplate",
@@ -30870,7 +30987,6 @@
       "entity.power.energium_golem": "Energium Golem",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "item.power.energium_sword": "Energium Sword",
-      "gui.power.wheel_abilities_mercury.tooltip_flying_spores_uses_15": "Flying spores, uses 15",
       "item.power.empty_battery": "Battery",
       "item.power.technology_armor_leggings": "Technology Leggings",
       "item.power.tornado_armor_chestplate": "Tornado Chestplate",
@@ -30881,7 +30997,6 @@
       "advancements.super_charge.title": "Super Charge!",
       "item.power.mushrooms_hammer": "Mushrooms Hammer",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
-      "gui.power.wheel_abilities_mercury.tooltip_planting_mushrooms_uses_35": "Planting mushrooms, uses 35",
       "advancements.keepers_of_the_stones_2.title": "Keepers Of The Stones II",
       "battery.desc.mist": "Mist",
       "battery.desc.space": "Space",
@@ -31271,6 +31386,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Creation",
       "advancements.the_great_win.title": "Great victory!",
       "battery.desc.lava": "Lava",
+      "item.power.mercury_battery": "Battery",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.energium_core": "Energium Core",
       "item.power.air_armor_helmet": "Air Helmet",
@@ -31938,6 +32054,10 @@
               },
               {
                 "name": "MushroomsBattery",
+                "children": []
+              },
+              {
+                "name": "MercuryBattery",
                 "children": []
               }
             ]
