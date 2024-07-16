@@ -25,6 +25,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class MoonBatteryUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -32,7 +33,9 @@ public class MoonBatteryUseProcedure {
 			return;
 		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) == 0 && entity instanceof Player && entity.getData(PowerModVariables.PLAYER_VARIABLES).active == false) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MOON_BATTERY.get()) {
-				itemstack.shrink(1);
+				PowerMod.queueServerWork(1, () -> {
+					itemstack.shrink(1);
+				});
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.battery = true;

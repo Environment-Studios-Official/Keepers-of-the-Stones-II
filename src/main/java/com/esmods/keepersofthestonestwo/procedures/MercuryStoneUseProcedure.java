@@ -25,6 +25,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class MercuryStoneUseProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity, ItemStack itemstack) {
@@ -33,9 +34,11 @@ public class MercuryStoneUseProcedure {
 		if (((entity instanceof LivingEntity _livEnt ? _livEnt.getArmorValue() : 0) == 0 && entity instanceof Player || entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3 && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers >= 1)
 				&& entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && itemstack.getOrCreateTag().getDouble("rechargeStone") == 0) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.MERCURY_STONE.get()) {
+				PowerMod.queueServerWork(1, () -> {
+					itemstack.shrink(1);
+				});
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.MERCURY_MASTER.get(), 12000, 0, false, false));
-				itemstack.shrink(1);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
