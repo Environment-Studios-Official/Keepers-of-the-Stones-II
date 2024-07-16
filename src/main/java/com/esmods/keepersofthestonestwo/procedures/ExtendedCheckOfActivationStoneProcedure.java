@@ -1,6 +1,10 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -13,6 +17,8 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.player.AbstractClientPlayer;
 
+import javax.annotation.Nullable;
+
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
 import dev.kosmx.playerAnim.api.layered.ModifierLayer;
@@ -21,8 +27,20 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
+@Mod.EventBusSubscriber
 public class ExtendedCheckOfActivationStoneProcedure {
+	@SubscribeEvent
+	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
+		if (event.phase == TickEvent.Phase.END) {
+			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
+		}
+	}
+
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
+		execute(null, world, x, y, z, entity);
+	}
+
+	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).check_activating_stone) {
