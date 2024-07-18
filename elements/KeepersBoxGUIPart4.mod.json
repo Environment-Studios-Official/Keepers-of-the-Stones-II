@@ -361,6 +361,38 @@
           "x": 263,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mercury_element",
+          "image": "mercury_element.png",
+          "hoveredImage": "mercury_element_highlighted.png",
+          "onClick": {
+            "name": "MercuryElementGet"
+          },
+          "displayCondition": {
+            "name": "MercuryStoneCheck"
+          },
+          "x": 218,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mercury",
+          "text": {
+            "fixedValue": "Mercury"
+          },
+          "displayCondition": {
+            "name": "MercuryStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

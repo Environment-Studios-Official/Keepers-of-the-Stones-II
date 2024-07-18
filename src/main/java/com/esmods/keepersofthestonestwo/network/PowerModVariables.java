@@ -94,6 +94,10 @@ public class PowerModVariables {
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
 			clone.debug = original.debug;
+			clone.first_booster_slot = original.first_booster_slot;
+			clone.second_booster_slot = original.second_booster_slot;
+			clone.third_booster_slot = original.third_booster_slot;
+			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -120,6 +124,7 @@ public class PowerModVariables {
 				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
+				clone.check_activating_stone = original.check_activating_stone;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -242,6 +247,7 @@ public class PowerModVariables {
 		public double bpX = 0;
 		public double bpY = 0;
 		public double bpZ = 0;
+		public boolean get_limit_of_stones = true;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -306,6 +312,7 @@ public class PowerModVariables {
 			bpX = nbt.getDouble("bpX");
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
+			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 		}
 
 		@Override
@@ -366,6 +373,7 @@ public class PowerModVariables {
 			nbt.putDouble("bpX", bpX);
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
+			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			return nbt;
 		}
 
@@ -495,6 +503,11 @@ public class PowerModVariables {
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
 		public boolean debug = false;
+		public boolean check_activating_stone = false;
+		public String first_booster_slot = "0";
+		public String second_booster_slot = "0";
+		public String third_booster_slot = "0";
+		public String evolution = "basic";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -540,6 +553,11 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			nbt.putBoolean("debug", debug);
+			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putString("first_booster_slot", first_booster_slot);
+			nbt.putString("second_booster_slot", second_booster_slot);
+			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
@@ -582,6 +600,11 @@ public class PowerModVariables {
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 			debug = nbt.getBoolean("debug");
+			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			first_booster_slot = nbt.getString("first_booster_slot");
+			second_booster_slot = nbt.getString("second_booster_slot");
+			third_booster_slot = nbt.getString("third_booster_slot");
+			evolution = nbt.getString("evolution");
 		}
 	}
 
@@ -652,6 +675,11 @@ public class PowerModVariables {
 					variables.fake_element_name_second_timer = message.data.fake_element_name_second_timer;
 					variables.fake_element_name_third_timer = message.data.fake_element_name_third_timer;
 					variables.debug = message.data.debug;
+					variables.check_activating_stone = message.data.check_activating_stone;
+					variables.first_booster_slot = message.data.first_booster_slot;
+					variables.second_booster_slot = message.data.second_booster_slot;
+					variables.third_booster_slot = message.data.third_booster_slot;
+					variables.evolution = message.data.evolution;
 				}
 			});
 			context.setPacketHandled(true);

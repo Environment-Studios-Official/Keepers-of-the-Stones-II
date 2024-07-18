@@ -69,6 +69,7 @@ import com.esmods.keepersofthestonestwo.item.SandSaberItem;
 import com.esmods.keepersofthestonestwo.item.SandBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SandArmorItem;
 import com.esmods.keepersofthestonestwo.item.RightMetalGauntletItem;
+import com.esmods.keepersofthestonestwo.item.RawEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawDepletedEnergiumItem;
 import com.esmods.keepersofthestonestwo.item.RawCopyriumItem;
 import com.esmods.keepersofthestonestwo.item.RawAmplifierItem;
@@ -108,6 +109,8 @@ import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBattleAxeItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
@@ -160,6 +163,7 @@ import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumKeyItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumHoeItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumDustItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumCoreItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumAxeItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumArmorItem;
@@ -558,6 +562,13 @@ public class PowerModItems {
 	public static final RegistryObject<Item> MERCURY_ARMOR_BOOTS = REGISTRY.register("mercury_armor_boots", () -> new MercuryArmorItem.Boots());
 	public static final RegistryObject<Item> LUCK_COIN = REGISTRY.register("luck_coin", () -> new LuckCoinItem());
 	public static final RegistryObject<Item> MUSIC_DISC_ANCIENT_MOOD = REGISTRY.register("music_disc_ancient_mood", () -> new MusicDiscAncientMoodItem());
+	public static final RegistryObject<Item> RAW_ENERGIUM = REGISTRY.register("raw_energium", () -> new RawEnergiumItem());
+	public static final RegistryObject<Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE);
+	public static final RegistryObject<Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", () -> new EnergiumDustItem());
+	public static final RegistryObject<Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
+	public static final RegistryObject<Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
+	public static final RegistryObject<Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", () -> new MercuryBattleAxeItem());
+	public static final RegistryObject<Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new ForgeSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
 
 	// Start of user code block custom items
 	// End of user code block custom items
