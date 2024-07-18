@@ -22696,7 +22696,16 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumSetCheckingProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Bosses/CursedKeeper"
     },
