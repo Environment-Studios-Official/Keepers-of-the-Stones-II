@@ -45,6 +45,11 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.WATER);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -71,6 +76,10 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 
 	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 5, 5);
+	}
+
+	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 5, 5);
 	}
 
 	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

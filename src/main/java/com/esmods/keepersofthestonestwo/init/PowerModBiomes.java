@@ -5,7 +5,7 @@
 package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.event.server.ServerAboutToStartEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.levelgen.placement.CaveSurface;
@@ -36,7 +36,7 @@ import com.mojang.datafixers.util.Pair;
 
 import com.google.common.base.Suppliers;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class PowerModBiomes {
 	@SubscribeEvent
 	public static void onServerAboutToStart(ServerAboutToStartEvent event) {

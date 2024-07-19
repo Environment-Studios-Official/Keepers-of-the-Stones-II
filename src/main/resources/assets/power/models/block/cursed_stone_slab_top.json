@@ -1,6 +1,7 @@
 {
   "parent": "block/slab_top",
   "textures": {
+    "particle": "power:block/cursed_stone",
     "bottom": "power:block/cursed_stone",
     "top": "power:block/cursed_stone",
     "side": "power:block/cursed_stone"

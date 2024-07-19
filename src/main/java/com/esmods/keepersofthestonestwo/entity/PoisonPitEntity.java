@@ -2,9 +2,11 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.fluids.FluidType;
+import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
-import net.minecraft.world.level.pathfinder.BlockPathTypes;
+import net.minecraft.world.phys.Vec3;
+import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -18,7 +20,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.EntityDimensions;
@@ -34,11 +35,10 @@ import com.esmods.keepersofthestonestwo.procedures.HitboxScaleProcedure;
 public class PoisonPitEntity extends PathfinderMob {
 	public PoisonPitEntity(EntityType<PoisonPitEntity> type, Level world) {
 		super(type, world);
-		setMaxUpStep(0.6f);
 		xpReward = 0;
 		setNoAi(true);
 		setPersistenceRequired();
-		this.setPathfindingMalus(BlockPathTypes.WATER, 0);
+		this.setPathfindingMalus(PathType.WATER, 0);
 		this.moveControl = new MoveControl(this) {
 			@Override
 			public void tick() {
@@ -79,18 +79,13 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
 	@Override
-	protected float ridingOffset(Entity entity) {
-		return -0.35F;
+	public Vec3 getPassengerRidingPosition(Entity entity) {
+		return super.getPassengerRidingPosition(entity).add(0, -0.35F, 0);
 	}
 
 	@Override
@@ -180,16 +175,16 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose pose) {
+	public EntityDimensions getDefaultDimensions(Pose pose) {
 		Entity entity = this;
 		Level world = this.level();
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
-		return super.getDimensions(pose).scale((float) HitboxScaleProcedure.execute(entity));
+		return super.getDefaultDimensions(pose).scale((float) HitboxScaleProcedure.execute(entity));
 	}
 
-	public static void init() {
+	public static void init(SpawnPlacementRegisterEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -199,7 +194,8 @@ public class PoisonPitEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(NeoForgeMod.SWIM_SPEED.value(), 0.3);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
+		builder = builder.add(NeoForgeMod.SWIM_SPEED, 0.3);
 		return builder;
 	}
 }

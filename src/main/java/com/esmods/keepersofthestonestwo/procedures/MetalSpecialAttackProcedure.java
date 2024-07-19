@@ -286,7 +286,7 @@ public class MetalSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN.get(), 300, 0, false, false));
+						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IRON_SKIN, 300, 0, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2, false, false));
 					{

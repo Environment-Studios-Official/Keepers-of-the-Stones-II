@@ -46,6 +46,11 @@ public class DestructionBallProjectileEntity extends AbstractArrow implements It
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.BEDROCK);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -73,6 +78,10 @@ public class DestructionBallProjectileEntity extends AbstractArrow implements It
 
 	public static DestructionBallProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 9, 2);
+	}
+
+	public static DestructionBallProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 9, 2);
 	}
 
 	public static DestructionBallProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

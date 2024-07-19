@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
@@ -9,10 +9,10 @@ import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.BlackHoleEntity;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EntityAnimationFactory {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		if (event != null && event.getEntity() != null) {
 			if (event.getEntity() instanceof BlackHoleEntity syncable) {
 				String animation = syncable.getSyncedAnimation();

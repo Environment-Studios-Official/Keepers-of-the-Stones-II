@@ -36,7 +36,7 @@ public class PoisonBowItem extends Item {
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
 		return 0f;
 	}
 
@@ -66,16 +66,12 @@ public class PoisonBowItem extends Item {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {
 					if (stack.isDamageableItem()) {
-						if (stack.hurt(1, world.getRandom(), player)) {
+						stack.hurtAndBreak(1, world.getRandom(), player, () -> {
 							stack.shrink(1);
 							stack.setDamageValue(0);
-							if (stack.isEmpty())
-								player.getInventory().removeItem(stack);
-						}
+						});
 					} else {
 						stack.shrink(1);
-						if (stack.isEmpty())
-							player.getInventory().removeItem(stack);
 					}
 				}
 				PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure.execute(entity);

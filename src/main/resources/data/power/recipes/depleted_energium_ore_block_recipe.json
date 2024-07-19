@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:depleted_energium_block",
+    "id": "power:depleted_energium_block",
     "count": 1
   }
 }

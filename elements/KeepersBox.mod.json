@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "block",
   "definition": {
     "texture": "keepers_box",
@@ -230,9 +230,11 @@
     "resistance": 5000.0,
     "hasGravity": false,
     "isWaterloggable": true,
-    "creativeTab": {
-      "value": "CUSTOM:Items"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
@@ -289,7 +291,7 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "vanillaToolTier": "NONE",
     "placingCondition": {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
     },

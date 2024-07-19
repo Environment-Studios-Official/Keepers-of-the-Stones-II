@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:amplifier_ring"
+      "id": "power:amplifier_ring"
     },
     "title": {
       "translate": "advancements.getting_married.title"

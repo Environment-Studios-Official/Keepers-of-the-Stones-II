@@ -43,6 +43,11 @@ public class SphereNothingProjectileEntity extends AbstractArrow implements Item
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.VOID_AIR);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -63,6 +68,10 @@ public class SphereNothingProjectileEntity extends AbstractArrow implements Item
 
 	public static SphereNothingProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 9, 2);
+	}
+
+	public static SphereNothingProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 9, 2);
 	}
 
 	public static SphereNothingProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

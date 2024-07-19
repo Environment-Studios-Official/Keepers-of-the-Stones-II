@@ -2,14 +2,15 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
+import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -29,7 +30,6 @@ import net.minecraft.world.entity.ai.goal.LookAtPlayerGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -67,16 +67,15 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 1000;
 		setNoAi(false);
-		setMaxUpStep(1f);
 		setPersistenceRequired();
 	}
 
 	@Override
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(SHOOT, false);
-		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "energium_golem");
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(SHOOT, false);
+		builder.define(ANIMATION, "undefined");
+		builder.define(TEXTURE, "energium_golem");
 	}
 
 	public void setTexture(String texture) {
@@ -101,11 +100,6 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		this.goalSelector.addGoal(4, new LookAtPlayerGoal(this, Player.class, (float) 6));
 		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 0.8));
 		this.goalSelector.addGoal(6, new RandomLookAroundGoal(this));
-	}
-
-	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
 	}
 
 	@Override
@@ -197,8 +191,8 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 1);
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	@Override
@@ -224,7 +218,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
-	public static void init() {
+	public static void init(SpawnPlacementRegisterEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -234,6 +228,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 16);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 22);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
+		builder = builder.add(Attributes.STEP_HEIGHT, 1);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 1.25);
 		return builder;
@@ -254,14 +249,24 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 		return PlayState.STOP;
 	}
 
+	String prevAnim = "empty";
+
 	private PlayState procedurePredicate(AnimationState event) {
+		if (!this.animationprocedure.equals(prevAnim) && !this.animationprocedure.equals("empty")) {
+			prevAnim = this.animationprocedure;
+			event.getController().forceAnimationReset();
+			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
+			return PlayState.CONTINUE;
+		}
 		if (!animationprocedure.equals("empty") && event.getController().getAnimationState() == AnimationController.State.STOPPED) {
+			prevAnim = this.animationprocedure;
 			event.getController().setAnimation(RawAnimation.begin().thenPlay(this.animationprocedure));
 			if (event.getController().getAnimationState() == AnimationController.State.STOPPED) {
 				this.animationprocedure = "empty";
 				event.getController().forceAnimationReset();
 			}
 		} else if (animationprocedure.equals("empty")) {
+			prevAnim = "empty";
 			return PlayState.STOP;
 		}
 		return PlayState.CONTINUE;

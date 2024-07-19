@@ -5,7 +5,7 @@
 package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
@@ -33,7 +33,7 @@ import com.esmods.keepersofthestonestwo.client.particle.BloodSplashParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
 import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModParticles {
 	@SubscribeEvent
 	public static void registerParticles(RegisterParticleProvidersEvent event) {

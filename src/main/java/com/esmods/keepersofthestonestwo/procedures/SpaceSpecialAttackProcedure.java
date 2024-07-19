@@ -91,7 +91,7 @@ public class SpaceSpecialAttackProcedure {
 								entityToSpawn.setBaseDamage(damage);
 								entityToSpawn.setKnockback(knockback);
 								entityToSpawn.setSilent(true);
-								entityToSpawn.setSecondsOnFire(100);
+								entityToSpawn.igniteForSeconds(100);
 								return entityToSpawn;
 							}
 						}.getArrow(projectileLevel, entity, (float) 11.25, 8);

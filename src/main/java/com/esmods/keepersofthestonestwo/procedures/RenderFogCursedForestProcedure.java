@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.client.event.ViewportEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
@@ -22,7 +22,7 @@ import com.mojang.blaze3d.shaders.FogShape;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT)
+@EventBusSubscriber(value = Dist.CLIENT)
 public class RenderFogCursedForestProcedure {
 	public static ViewportEvent.RenderFog provider = null;
 
@@ -64,7 +64,7 @@ public class RenderFogCursedForestProcedure {
 		if (world
 				.getBiome(BlockPos.containing(Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().x(), Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().y(),
 						Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().z()))
-				.is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST.get()))) {
+				.is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
 			setDistance(15, 45);
 			setShape(FogShape.SPHERE);
 		}

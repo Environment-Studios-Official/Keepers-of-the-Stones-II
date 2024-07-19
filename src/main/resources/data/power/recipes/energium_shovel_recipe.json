@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "power:energium_shovel",
+    "id": "power:energium_shovel",
     "count": 1
   }
 }

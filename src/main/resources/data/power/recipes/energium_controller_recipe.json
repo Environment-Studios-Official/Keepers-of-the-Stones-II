@@ -10,7 +10,7 @@
     }
   ],
   "result": {
-    "item": "power:energium_controller",
+    "id": "power:energium_controller",
     "count": 1
   }
 }

@@ -5,12 +5,12 @@
 package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.GameRules;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModGameRules {
 	public static GameRules.Key<GameRules.BooleanValue> LIMITED_NUMBER_OF_STONES;
 	public static GameRules.Key<GameRules.BooleanValue> LIMIT_OF_STONES_FOR_ONE_PLAYER;

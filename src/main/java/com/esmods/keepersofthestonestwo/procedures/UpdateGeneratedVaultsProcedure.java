@@ -1,50 +1,24 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.level.LevelAccessor;
-import net.minecraft.core.BlockPos;
-
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
-
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class UpdateGeneratedVaultsProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ());
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event);
 	}
 
-	public static void execute(LevelAccessor world, double x, double y, double z) {
-		execute(null, world, x, y, z);
+	public static void execute() {
+		execute(null);
 	}
 
-	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
+	private static void execute(@Nullable Event event) {
 		boolean updated = false;
-		int horizontalRadiusSphere = (int) 6 - 1;
-		int verticalRadiusSphere = (int) 6 - 1;
-		int yIterationsSphere = verticalRadiusSphere;
-		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
-			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
-				for (int zi = -horizontalRadiusSphere; zi <= horizontalRadiusSphere; zi++) {
-					double distanceSq = (xi * xi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere) + (i * i) / (double) (verticalRadiusSphere * verticalRadiusSphere)
-							+ (zi * zi) / (double) (horizontalRadiusSphere * horizontalRadiusSphere);
-					if (distanceSq <= 1.0) {
-						if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PowerModBlocks.ENERGIUM_VAULT.get()) {
-							world.scheduleTick(BlockPos.containing(x + xi, y + i, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getBlock(), 0);
-						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PowerModBlocks.CURSED_VAULT.get()) {
-							world.scheduleTick(BlockPos.containing(x + xi, y + i, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getBlock(), 0);
-							updated = true;
-						}
-					}
-				}
-			}
-		}
 	}
 }

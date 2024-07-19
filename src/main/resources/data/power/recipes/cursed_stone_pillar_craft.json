@@ -4,5 +4,7 @@
   "ingredient": {
     "item": "power:cursed_stone"
   },
-  "result": "power:cursed_stone_pillar"
+  "result": {
+    "id": "power:cursed_stone_pillar"
+  }
 }

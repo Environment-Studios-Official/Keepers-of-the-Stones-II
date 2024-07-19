@@ -41,6 +41,11 @@ public class PoisonDropProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(PowerModItems.POISON_BOW.get());
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -55,6 +60,10 @@ public class PoisonDropProjectileEntity extends AbstractArrow implements ItemSup
 
 	public static PoisonDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 6, 1);
+	}
+
+	public static PoisonDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 6, 1);
 	}
 
 	public static PoisonDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

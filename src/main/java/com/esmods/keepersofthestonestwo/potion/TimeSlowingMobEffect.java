@@ -18,7 +18,8 @@ public class TimeSlowingMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
+	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
 		TimeSlowingKazhdyiTikVoVriemiaEffiektaProcedure.execute(entity);
+		return super.applyEffectTick(entity, amplifier);
 	}
 }

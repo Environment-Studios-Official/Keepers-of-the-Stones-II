@@ -1,11 +1,11 @@
 
 package com.esmods.keepersofthestonestwo.enchantment;
 
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.EquipmentSlot;
+import net.minecraft.tags.ItemTags;
 
 import java.util.List;
 
@@ -14,12 +14,12 @@ import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 
 public class IsolationEnchantment extends Enchantment {
 	public IsolationEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
+		super(Enchantment.definition(ItemTags.WEAPON_ENCHANTABLE, 5, 1, Enchantment.dynamicCost(1, 10), Enchantment.dynamicCost(6, 10), 2, EquipmentSlot.MAINHAND));
 	}
 
 	@Override
-	protected boolean checkCompatibility(Enchantment ench) {
-		return this != ench && !List.of(PowerModEnchantments.REVENGE.get()).contains(ench);
+	protected boolean checkCompatibility(Enchantment enchantment) {
+		return this != enchantment && !List.of(PowerModEnchantments.REVENGE.get()).contains(enchantment);
 	}
 
 	@Override

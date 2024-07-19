@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:cursed_ladder",
+    "id": "power:cursed_ladder",
     "count": 3
   }
 }

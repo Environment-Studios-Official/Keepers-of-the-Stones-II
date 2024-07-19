@@ -18,7 +18,7 @@
     }
   },
   "result": {
-    "item": "power:cursed_lantern",
+    "id": "power:cursed_lantern",
     "count": 1
   }
 }

@@ -7,9 +7,9 @@ package com.esmods.keepersofthestonestwo.init;
 import org.lwjgl.glfw.GLFW;
 
 import net.neoforged.neoforge.network.PacketDistributor;
-import net.neoforged.neoforge.event.TickEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.client.event.ClientTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.network.DetransformationKeyMessage;
 import com.esmods.keepersofthestonestwo.network.AbilityWheelOpeningkeyMessage;
 import com.esmods.keepersofthestonestwo.network.AbilityUsingKeyMessage;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = {Dist.CLIENT})
 public class PowerModKeyMappings {
 	public static final KeyMapping DETRANSFORMATION_KEY = new KeyMapping("key.power.detransformation_key", GLFW.GLFW_KEY_U, "key.categories.power2") {
 		private boolean isDownOld = false;
@@ -29,7 +29,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.SERVER.noArg().send(new DetransformationKeyMessage(0, 0));
+				PacketDistributor.sendToServer(new DetransformationKeyMessage(0, 0));
 				DetransformationKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -42,7 +42,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.SERVER.noArg().send(new AbilityWheelOpeningkeyMessage(0, 0));
+				PacketDistributor.sendToServer(new AbilityWheelOpeningkeyMessage(0, 0));
 				AbilityWheelOpeningkeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -55,7 +55,7 @@ public class PowerModKeyMappings {
 		public void setDown(boolean isDown) {
 			super.setDown(isDown);
 			if (isDownOld != isDown && isDown) {
-				PacketDistributor.SERVER.noArg().send(new AbilityUsingKeyMessage(0, 0));
+				PacketDistributor.sendToServer(new AbilityUsingKeyMessage(0, 0));
 				AbilityUsingKeyMessage.pressAction(Minecraft.getInstance().player, 0, 0);
 			}
 			isDownOld = isDown;
@@ -69,10 +69,10 @@ public class PowerModKeyMappings {
 		event.register(ABILITY_USING_KEY);
 	}
 
-	@Mod.EventBusSubscriber({Dist.CLIENT})
+	@EventBusSubscriber({Dist.CLIENT})
 	public static class KeyEventListener {
 		@SubscribeEvent
-		public static void onClientTick(TickEvent.ClientTickEvent event) {
+		public static void onClientTick(ClientTickEvent.Post event) {
 			if (Minecraft.getInstance().screen == null) {
 				DETRANSFORMATION_KEY.consumeClick();
 				ABILITY_WHEEL_OPENINGKEY.consumeClick();

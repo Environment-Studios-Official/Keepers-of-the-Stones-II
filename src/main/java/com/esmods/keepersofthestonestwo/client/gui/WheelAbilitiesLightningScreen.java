@@ -94,7 +94,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(0, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -109,7 +109,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(1, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -124,7 +124,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(2, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -139,7 +139,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(3, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -154,7 +154,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(4, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -169,7 +169,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(5, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -184,7 +184,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_electrical_discharges = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/electrical_discharges.png"), new ResourceLocation("power:textures/screens/electrical_discharges_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(6, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -198,7 +198,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_lightning_strike = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/lightning_strike.png"), new ResourceLocation("power:textures/screens/lightning_strike_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(7, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -212,7 +212,7 @@ public class WheelAbilitiesLightningScreen extends AbstractContainerScreen<Wheel
 		imagebutton_ball_lightning = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/ball_lightning.png"), new ResourceLocation("power:textures/screens/ball_lightning_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLightningButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLightningButtonMessage(8, x, y, z));
 						WheelAbilitiesLightningButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

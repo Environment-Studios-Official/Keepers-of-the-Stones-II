@@ -44,6 +44,11 @@ public class DirtBlockAttackProjectileEntity extends AbstractArrow implements It
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.DIRT);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class DirtBlockAttackProjectileEntity extends AbstractArrow implements It
 
 	public static DirtBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 2, 2);
+	}
+
+	public static DirtBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 2, 2);
 	}
 
 	public static DirtBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

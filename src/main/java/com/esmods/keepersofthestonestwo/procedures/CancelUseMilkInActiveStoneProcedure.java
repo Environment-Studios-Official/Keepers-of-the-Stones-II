@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
@@ -15,11 +15,11 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class CancelUseMilkInActiveStoneProcedure {
 	@SubscribeEvent
 	public static void onUseItemStart(LivingEntityUseItemEvent.Start event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}
 	}

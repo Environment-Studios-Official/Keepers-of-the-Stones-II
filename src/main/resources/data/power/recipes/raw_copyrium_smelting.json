@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "power:raw_copyrium"
   },
-  "result": "power:copyrium_ingot"
+  "result": {
+    "id": "power:copyrium_ingot"
+  }
 }

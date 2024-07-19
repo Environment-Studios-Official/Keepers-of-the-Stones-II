@@ -41,6 +41,11 @@ public class TurretProjectileEntity extends AbstractArrow implements ItemSupplie
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.TNT);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -55,6 +60,10 @@ public class TurretProjectileEntity extends AbstractArrow implements ItemSupplie
 
 	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1.1f, 12, 2);
+	}
+
+	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1.1f, 12, 2);
 	}
 
 	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

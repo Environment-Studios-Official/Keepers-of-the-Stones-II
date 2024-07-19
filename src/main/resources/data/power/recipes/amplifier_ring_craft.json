@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:amplifier_ring",
+    "id": "power:amplifier_ring",
     "count": 1
   }
 }

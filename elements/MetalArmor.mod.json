@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,9 +22,7 @@
     "onBootsTick": {
       "name": "MetalArmorKazhdyiTikDliaBotinok"
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "armorTextureFile": "metal_armor",
     "helmetName": "Metal Helmet",
     "bodyName": "Metal Chestplate",

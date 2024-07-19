@@ -44,6 +44,11 @@ public class IronAttackProjectileEntity extends AbstractArrow implements ItemSup
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.IRON_BLOCK);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class IronAttackProjectileEntity extends AbstractArrow implements ItemSup
 
 	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 6, 4);
+	}
+
+	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 6, 4);
 	}
 
 	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

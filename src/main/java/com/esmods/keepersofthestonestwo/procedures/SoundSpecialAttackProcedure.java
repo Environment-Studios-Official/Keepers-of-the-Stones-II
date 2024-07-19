@@ -143,7 +143,7 @@ public class SoundSpecialAttackProcedure {
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 									(float) 31.5);
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 300, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 300, 0, false, false));
 						}
 					}
 				}

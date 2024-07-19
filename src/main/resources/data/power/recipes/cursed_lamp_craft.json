@@ -18,7 +18,7 @@
     }
   },
   "result": {
-    "item": "power:cursed_lamp",
+    "id": "power:cursed_lamp",
     "count": 4
   }
 }

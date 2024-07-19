@@ -110,7 +110,7 @@ public class MagnetSpecialAttackProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.BLUE_MAGNET_POWER.get(), 100, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.BLUE_MAGNET_POWER, 100, 0, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:magnetic_waves")), SoundSource.PLAYERS, 1, 1);
@@ -137,7 +137,7 @@ public class MagnetSpecialAttackProcedure {
 					}
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RED_MAGNET_POWER.get(), 100, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RED_MAGNET_POWER, 100, 0, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:magnetic_waves")), SoundSource.PLAYERS, 1, 1);

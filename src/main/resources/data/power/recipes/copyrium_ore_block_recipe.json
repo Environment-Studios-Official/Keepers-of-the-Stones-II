@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:copyrium_block",
+    "id": "power:copyrium_block",
     "count": 1
   }
 }
