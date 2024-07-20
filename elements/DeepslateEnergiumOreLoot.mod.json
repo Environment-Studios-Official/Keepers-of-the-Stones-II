@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "name": "blocks/energium_ore",
+    "name": "blocks/deepslate_energium_ore",
     "namespace": "mod"
   }
 }

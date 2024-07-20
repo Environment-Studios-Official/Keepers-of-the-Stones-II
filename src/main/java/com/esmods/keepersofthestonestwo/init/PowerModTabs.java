@@ -78,6 +78,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE.get().asItem());
 			})
 
 					.build());

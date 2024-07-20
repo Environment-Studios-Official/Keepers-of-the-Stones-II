@@ -29211,6 +29211,136 @@
         ]
       },
       "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "DeepslateDepletedEnergiumOre",
+      "type": "block",
+      "sortid": 1341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_depleted_energium_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateDepletedEnergiumOreBlock.java",
+          "src/main/resources/assets/power/blockstates/deepslate_depleted_energium_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_depleted_energium_ore.json",
+          "src/main/resources/assets/power/models/item/deepslate_depleted_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateDepletedEnergiumOreLoot",
+      "type": "loottable",
+      "sortid": 1342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_depleted_energium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_depleted_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateEnergiumOre",
+      "type": "block",
+      "sortid": 1343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_energium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/deepslate_energium_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_energium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateEnergiumOreBlock.java",
+          "src/main/resources/assets/power/models/block/deepslate_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateEnergiumOreLoot",
+      "type": "loottable",
+      "sortid": 1344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_energium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateAmplifierOre",
+      "type": "block",
+      "sortid": 1345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_amplifier_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/placed_feature/deepslate_amplifier_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
+          "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
+          "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "DeepslateAmplifierOreLoot",
+      "type": "loottable",
+      "sortid": 1346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_amplifier_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_amplifier_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "DeepslateCopyriumOre",
+      "type": "block",
+      "sortid": 1347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_copyrium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/placed_feature/deepslate_copyrium_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "DeepslateCopyriumOreLoot",
+      "type": "loottable",
+      "sortid": 1348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_copyrium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_copyrium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
@@ -29970,6 +30100,10 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
       "~CUSTOM:EnergiumVault",
@@ -30035,6 +30169,8 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
       "~CUSTOM:ElementalPowerGenerator",
       "~CUSTOM:RawCopyriumBlock",
       "~CUSTOM:CopyriumBlock",
@@ -30143,6 +30279,8 @@
       "~CUSTOM:CursedVault"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
       "~CUSTOM:RawDepletedEnergiumBlock",
@@ -30358,6 +30496,7 @@
       "gamerule.limitOfStonesForOnePlayer.description": "Включает режим \"Один игрок, одна сила\".",
       "block.power.cursed_vault": "Проклятое хранилище",
       "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Магнит",
+      "block.power.deepslate_amplifier_ore": "Амплифероносный глубинный сланец",
       "battery.desc.water": "Вода",
       "battery.desc.blood": "Кровь",
       "entity.power.energium_golem": "Энерджиумный голем",
@@ -30652,6 +30791,7 @@
       "battery.desc.energy": "Энергия",
       "item.power.technology_armor_chestplate": "Нагрудник мастера технологий",
       "effect.power.lightning_master": "Мастер молнии",
+      "block.power.deepslate_depleted_energium_ore": "Обеднённый энерджиумоносный глубинный сланец",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
       "item.power.creation_armor_leggings": "Поножи мастера созидания",
       "item.power.water_stone": "Камень воды",
@@ -30669,6 +30809,7 @@
       "effect.power.magnet_master": "Мастер магнита",
       "key.categories.power2": "Хранители Камней II",
       "item.power.teleportation_armor_boots": "Ботинки мастера телепортации",
+      "block.power.deepslate_copyrium_ore": "Копириумоносный глубинный сланец",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Тень",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "block.power.cursed_stone_pillar": "Колонна из проклятого камня",
@@ -30744,6 +30885,7 @@
       "item.power.destruction_stone": "Камень разрушения",
       "item.power.darkness_stone": "Камень тьмы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Атака кристаллическим блоком, расходует 10",
+      "block.power.deepslate_energium_ore": "Энерджиумоносный глубинный сланец",
       "block.power.cursed_stone_bricks_wall": "Ограда из проклятых каменных кирпичей",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Взрыв",
@@ -30869,20 +31011,20 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "item.power.poison_battery": "Battery",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
@@ -30902,8 +31044,8 @@
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.space_armor_boots": "Space Boots",
       "item.power.mercury_battle_axe": "Mercury Battle Axe",
+      "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
@@ -31050,6 +31192,7 @@
       "gamerule.limitOfStonesForOnePlayer.description": "Enables the \"One Player, one Power\" mode",
       "block.power.cursed_vault": "Cursed Vault",
       "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Magnet",
+      "block.power.deepslate_amplifier_ore": "Deepslate Amplifier Ore",
       "battery.desc.water": "Water",
       "battery.desc.blood": "Blood",
       "entity.power.energium_golem": "Energium Golem",
@@ -31345,6 +31488,7 @@
       "battery.desc.energy": "Energy",
       "item.power.technology_armor_chestplate": "Technology Chestplate",
       "effect.power.lightning_master": "Master of Lightning",
+      "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
       "item.power.creation_armor_leggings": "Creation Leggings",
       "item.power.water_stone": "Water Stone",
@@ -31362,6 +31506,7 @@
       "effect.power.magnet_master": "Magnet Master",
       "key.categories.power2": "Keepers of the Stones II",
       "item.power.teleportation_armor_boots": "Teleportation Boots",
+      "block.power.deepslate_copyrium_ore": "Deepslate Copyrium Ore",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Shadow",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Destruction ray, uses 15",
       "block.power.cursed_stone_pillar": "Cursed Stone Pillar",
@@ -31436,6 +31581,7 @@
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.darkness_stone": "Darkness Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
+      "block.power.deepslate_energium_ore": "Deepslate Energium Ore",
       "block.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Explosion",

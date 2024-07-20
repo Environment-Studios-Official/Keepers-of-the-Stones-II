@@ -14,7 +14,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:RawEnergium"
+              "value": "CUSTOM:RawAmplifier"
             },
             "weight": 1,
             "minCount": 1,
@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "name": "blocks/energium_ore",
+    "name": "blocks/deepslate_amplifier_ore",
     "namespace": "mod"
   }
 }

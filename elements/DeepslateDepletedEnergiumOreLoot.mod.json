@@ -14,7 +14,7 @@
           {
             "type": "item",
             "item": {
-              "value": "CUSTOM:RawEnergium"
+              "value": "CUSTOM:RawDepletedEnergium"
             },
             "weight": 1,
             "minCount": 1,
@@ -28,7 +28,7 @@
         ]
       }
     ],
-    "name": "blocks/energium_ore",
+    "name": "blocks/deepslate_depleted_energium_ore",
     "namespace": "mod"
   }
 }
