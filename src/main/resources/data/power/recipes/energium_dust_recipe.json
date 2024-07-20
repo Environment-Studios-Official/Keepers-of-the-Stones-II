@@ -10,7 +10,7 @@
     }
   },
   "result": {
-    "item": "power:energium_dust",
+    "id": "power:energium_dust",
     "count": 1
   }
 }

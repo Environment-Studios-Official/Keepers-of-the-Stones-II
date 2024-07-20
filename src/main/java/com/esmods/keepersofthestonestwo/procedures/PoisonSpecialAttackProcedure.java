@@ -76,7 +76,7 @@ public class PoisonSpecialAttackProcedure {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 										(float) 10.13);
 								if (entityiterator instanceof LivingEntity _entity)
-									_entity.removeEffect(PowerModMobEffects.IRON_SKIN.get());
+									_entity.removeEffect(PowerModMobEffects.IRON_SKIN);
 								if (entityiterator instanceof LivingEntity _entity)
 									_entity.removeEffect(MobEffects.INVISIBILITY);
 								if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).ability_using == true) {
@@ -175,9 +175,9 @@ public class PoisonSpecialAttackProcedure {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.WHIRLWIND.get());
+					_entity.removeEffect(PowerModMobEffects.WHIRLWIND);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LETHALITY.get());
+					_entity.removeEffect(PowerModMobEffects.LETHALITY);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;

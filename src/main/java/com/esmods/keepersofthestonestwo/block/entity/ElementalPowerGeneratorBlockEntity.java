@@ -14,6 +14,7 @@ import net.minecraft.network.protocol.game.ClientboundBlockEntityDataPacket;
 import net.minecraft.network.chat.Component;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.HolderLookup;
 import net.minecraft.core.Direction;
 import net.minecraft.core.BlockPos;
 
@@ -32,18 +33,18 @@ public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlo
 	}
 
 	@Override
-	public void load(CompoundTag compound) {
-		super.load(compound);
+	public void loadAdditional(CompoundTag compound, HolderLookup.Provider lookupProvider) {
+		super.loadAdditional(compound, lookupProvider);
 		if (!this.tryLoadLootTable(compound))
 			this.stacks = NonNullList.withSize(this.getContainerSize(), ItemStack.EMPTY);
-		ContainerHelper.loadAllItems(compound, this.stacks);
+		ContainerHelper.loadAllItems(compound, this.stacks, lookupProvider);
 	}
 
 	@Override
-	public void saveAdditional(CompoundTag compound) {
-		super.saveAdditional(compound);
+	public void saveAdditional(CompoundTag compound, HolderLookup.Provider lookupProvider) {
+		super.saveAdditional(compound, lookupProvider);
 		if (!this.trySaveLootTable(compound)) {
-			ContainerHelper.saveAllItems(compound, this.stacks);
+			ContainerHelper.saveAllItems(compound, this.stacks, lookupProvider);
 		}
 	}
 
@@ -53,8 +54,8 @@ public class ElementalPowerGeneratorBlockEntity extends RandomizableContainerBlo
 	}
 
 	@Override
-	public CompoundTag getUpdateTag() {
-		return this.saveWithFullMetadata();
+	public CompoundTag getUpdateTag(HolderLookup.Provider lookupProvider) {
+		return this.saveWithFullMetadata(lookupProvider);
 	}
 
 	@Override

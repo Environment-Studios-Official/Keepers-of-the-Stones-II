@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
@@ -21,11 +21,11 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 		}
 	}
@@ -38,7 +38,7 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).getValue() == 1) {
+		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.getDelegate()).getValue() == 1) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
@@ -51,7 +51,7 @@ public class FrozenDestructionArmorProcedure {
 					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.break")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
-			((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).setBaseValue(0);
+			((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.getDelegate()).setBaseValue(0);
 		}
 	}
 }

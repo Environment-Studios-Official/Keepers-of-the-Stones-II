@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -14,10 +14,10 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class InIceKazhdyiTikVoVriemiaEffiektaProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		execute(event, event.getEntity());
 	}
 
@@ -28,7 +28,7 @@ public class InIceKazhdyiTikVoVriemiaEffiektaProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).getValue() == 1) {
+		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.getDelegate()).getValue() == 1) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

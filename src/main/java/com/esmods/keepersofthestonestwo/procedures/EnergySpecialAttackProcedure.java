@@ -69,7 +69,7 @@ public class EnergySpecialAttackProcedure {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 										(float) 10.5);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 60, 0));
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 60, 0));
 							}
 						}
 					}

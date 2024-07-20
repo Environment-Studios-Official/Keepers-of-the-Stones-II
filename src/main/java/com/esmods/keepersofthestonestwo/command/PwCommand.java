@@ -5,7 +5,7 @@ import org.checkerframework.checker.units.qual.s;
 
 import net.neoforged.neoforge.event.RegisterCommandsEvent;
 import net.neoforged.neoforge.common.util.FakePlayerFactory;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
@@ -25,7 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FakeElementSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DebugControlProcedure;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {

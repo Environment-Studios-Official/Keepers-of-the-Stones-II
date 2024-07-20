@@ -45,6 +45,11 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.TNT);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -72,6 +77,10 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 3f, 42, 10);
+	}
+
+	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 3f, 42, 10);
 	}
 
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

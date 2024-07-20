@@ -94,7 +94,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(0, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -109,7 +109,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(1, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -124,7 +124,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(2, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -139,7 +139,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(3, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -154,7 +154,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(4, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -169,7 +169,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(5, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -184,7 +184,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_shadow_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/shadow_ray.png"), new ResourceLocation("power:textures/screens/shadow_ray_highlight.png")),
 				e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(6, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -198,7 +198,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_shadow_sphere = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/shadow_sphere.png"), new ResourceLocation("power:textures/screens/shadow_sphere_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(7, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -212,7 +212,7 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		imagebutton_rising_shadow = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/rising_shadow.png"), new ResourceLocation("power:textures/screens/rising_shadow_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesShadowButtonMessage(8, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

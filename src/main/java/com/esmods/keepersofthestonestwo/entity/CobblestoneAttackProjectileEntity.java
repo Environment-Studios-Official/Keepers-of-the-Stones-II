@@ -44,6 +44,11 @@ public class CobblestoneAttackProjectileEntity extends AbstractArrow implements 
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.COBBLESTONE);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class CobblestoneAttackProjectileEntity extends AbstractArrow implements 
 
 	public static CobblestoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 4.5, 4);
+	}
+
+	public static CobblestoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 4.5, 4);
 	}
 
 	public static CobblestoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

@@ -6,9 +6,9 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.MobCategory;
@@ -56,7 +56,7 @@ import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEn
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PowerMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MagicFireballProjectileEntity>> MAGIC_FIREBALL_PROJECTILE = register("magic_fireball_projectile",
@@ -141,15 +141,13 @@ public class PowerModEntities {
 	}
 
 	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		event.enqueueWork(() -> {
-			ShadowEntity.init();
-			BlackHoleEntity.init();
-			EnergiumGolemEntity.init();
-			TurretEntity.init();
-			PoisonPitEntity.init();
-			CursedKeeperEntity.init();
-		});
+	public static void init(SpawnPlacementRegisterEvent event) {
+		ShadowEntity.init(event);
+		BlackHoleEntity.init(event);
+		EnergiumGolemEntity.init(event);
+		TurretEntity.init(event);
+		PoisonPitEntity.init(event);
+		CursedKeeperEntity.init(event);
 	}
 
 	@SubscribeEvent

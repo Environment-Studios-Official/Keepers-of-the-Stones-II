@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:cursed_stone"
+      "id": "power:cursed_stone"
     },
     "title": {
       "translate": "advancements.lets_bail_this_place_isdead.title"

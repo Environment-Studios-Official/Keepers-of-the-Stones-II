@@ -15,7 +15,7 @@
     }
   },
   "result": {
-    "item": "power:elemental_power_generator",
+    "id": "power:elemental_power_generator",
     "count": 1
   }
 }

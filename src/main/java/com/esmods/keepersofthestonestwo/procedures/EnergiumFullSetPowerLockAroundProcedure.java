@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -22,13 +22,11 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EnergiumFullSetPowerLockAroundProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -48,7 +46,7 @@ public class EnergiumFullSetPowerLockAroundProcedure {
 				for (Entity entityiterator : _entfound) {
 					if (!(entity == entityiterator)) {
 						if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 100, 0));
+							_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 100, 0));
 					}
 				}
 			}

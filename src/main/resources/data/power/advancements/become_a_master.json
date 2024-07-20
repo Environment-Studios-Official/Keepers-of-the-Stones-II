@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:fire_armor_chestplate"
+      "id": "power:fire_armor_chestplate"
     },
     "title": {
       "translate": "advancements.become_a_master.title"

@@ -15,6 +15,8 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
@@ -75,7 +77,7 @@ public class EnergiumKeyOpenVaultProcedure {
 					void timedLoop(int current, int total, int ticks) {
 						if (!world.isClientSide() && world.getServer() != null) {
 							BlockPos _bpLootTblWorld = BlockPos.containing(x, y, z);
-							for (ItemStack itemstackiterator : world.getServer().getLootData().getLootTable(new ResourceLocation("power:chests/energium_temple_vaults")).getRandomItems(
+							for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation("power:chests/energium_temple_vaults"))).getRandomItems(
 									new LootParams.Builder((ServerLevel) world).withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(_bpLootTblWorld)).withParameter(LootContextParams.BLOCK_STATE, world.getBlockState(_bpLootTblWorld))
 											.withOptionalParameter(LootContextParams.BLOCK_ENTITY, world.getBlockEntity(_bpLootTblWorld)).create(LootContextParamSets.EMPTY))) {
 								if (world instanceof ServerLevel _level) {

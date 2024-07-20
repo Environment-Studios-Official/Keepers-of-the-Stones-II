@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "power:amplifier_drop",
+    "id": "power:amplifier_drop",
     "count": 9
   }
 }

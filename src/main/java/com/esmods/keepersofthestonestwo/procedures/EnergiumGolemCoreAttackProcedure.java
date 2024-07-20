@@ -89,7 +89,7 @@ public class EnergiumGolemCoreAttackProcedure {
 									entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:energium_golem_ds")))),
 											26);
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(), 200, 0));
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK, 200, 0));
 								}
 							}
 						}

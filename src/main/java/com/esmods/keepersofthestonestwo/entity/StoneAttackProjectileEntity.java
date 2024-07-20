@@ -44,6 +44,11 @@ public class StoneAttackProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.STONE);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class StoneAttackProjectileEntity extends AbstractArrow implements ItemSu
 
 	public static StoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 4.5, 4);
+	}
+
+	public static StoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 4.5, 4);
 	}
 
 	public static StoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

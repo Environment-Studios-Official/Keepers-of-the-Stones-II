@@ -4,12 +4,10 @@ import org.joml.Vector3f;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.item.ItemEntity;
-import net.minecraft.world.entity.item.FallingBlockEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -101,24 +99,6 @@ public class SandSpecialAttackProcedure {
 						if (!(entityiterator == entity) && !(entity instanceof ItemEntity)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 								_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 100, 0, false, true));
-							int horizontalRadiusHemiBot = (int) 3 - 1;
-							int verticalRadiusHemiBot = (int) 3;
-							int yIterationsHemiBot = verticalRadiusHemiBot;
-							for (int i = -yIterationsHemiBot; i <= 0; i++) {
-								if (i == -verticalRadiusHemiBot) {
-									continue;
-								}
-								for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-									for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-										double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-												+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-										if (distanceSq <= 1.0) {
-											if (world instanceof ServerLevel _level)
-												FallingBlockEntity.fall(_level, BlockPos.containing(x + xi, y + i + 10, z + zi), Blocks.SAND.defaultBlockState());
-										}
-									}
-								}
-							}
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
 						}
 					}

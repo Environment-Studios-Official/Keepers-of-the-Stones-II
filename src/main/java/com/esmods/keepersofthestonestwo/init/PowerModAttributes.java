@@ -8,7 +8,7 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.event.entity.EntityAttributeModificationEvent;
 import net.neoforged.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.neoforged.fml.event.lifecycle.FMLConstructModEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.ai.attributes.RangedAttribute;
@@ -23,7 +23,7 @@ import java.util.List;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModAttributes {
 	public static final DeferredRegister<Attribute> ATTRIBUTES = DeferredRegister.create(BuiltInRegistries.ATTRIBUTE, PowerMod.MODID);
 	public static final DeferredHolder<Attribute, Attribute> FROZENINICE = ATTRIBUTES.register("frozen_in_ice", () -> (new RangedAttribute("attribute." + PowerMod.MODID + ".frozen_in_ice", 0, 0, 1)).setSyncable(true));
@@ -42,13 +42,13 @@ public class PowerModAttributes {
 		entityTypes.forEach((e) -> {
 			Class<? extends Entity> baseClass = e.getBaseClass();
 			if (baseClass.isAssignableFrom(Mob.class)) {
-				event.add(e, FROZENINICE.get());
+				event.add(e, FROZENINICE.getDelegate());
 			}
 		});
 		entityTypes.forEach((e) -> {
 			Class<? extends Entity> baseClass = e.getBaseClass();
 			if (baseClass.isAssignableFrom(Mob.class)) {
-				event.add(e, SEALEDINAMBER.get());
+				event.add(e, SEALEDINAMBER.getDelegate());
 			}
 		});
 	}

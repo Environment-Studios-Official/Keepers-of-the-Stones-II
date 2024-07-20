@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.player.CriticalHitEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -16,7 +16,7 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class EnergiumRevengeAttackProcedure {
 	@SubscribeEvent
 	public static void onPlayerCriticalHit(CriticalHitEvent event) {
@@ -32,8 +32,8 @@ public class EnergiumRevengeAttackProcedure {
 			return;
 		if (EnchantmentHelper.getItemEnchantmentLevel(PowerModEnchantments.REVENGE.get(), (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY)) != 0) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POWER_LOCK.get(),
-						(int) (100 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(PowerModEnchantments.REVENGE.get())), 0));
+				_entity.addEffect(
+						new MobEffectInstance(PowerModMobEffects.POWER_LOCK, (int) (100 * (sourceentity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getEnchantmentLevel(PowerModEnchantments.REVENGE.get())), 0));
 		}
 	}
 }

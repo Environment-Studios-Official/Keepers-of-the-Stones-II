@@ -226,7 +226,7 @@ public class AmberSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							((LivingEntity) entityiterator).getAttribute(PowerModAttributes.SEALEDINAMBER.get()).setBaseValue(1);
+							((LivingEntity) entityiterator).getAttribute(PowerModAttributes.SEALEDINAMBER.getDelegate()).setBaseValue(1);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.place")), SoundSource.NEUTRAL, 1, 1);

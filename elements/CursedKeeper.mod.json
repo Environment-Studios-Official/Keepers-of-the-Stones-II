@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "animatedentity",
   "definition": {
     "mobName": "Cursed Keeper",
@@ -28,7 +28,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "CUSTOM:Mobs"
+      "value": "No creative tab entry"
     },
     "isBoss": true,
     "bossBarColor": "PURPLE",
@@ -139,6 +139,15 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "height": 1.0,
+    "raidSpawnsCount": [
+      4,
+      3,
+      3,
+      4,
+      4,
+      4,
+      2
+    ],
     "spawnThisMob": false,
     "doesDespawnWhenIdle": false,
     "spawningProbability": 20,

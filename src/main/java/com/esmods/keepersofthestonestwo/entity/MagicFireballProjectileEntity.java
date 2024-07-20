@@ -41,6 +41,11 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(PowerModItems.MAGIC_FIREBALL.get());
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -57,6 +62,10 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 		return shoot(world, entity, source, 1f, 3, 3);
 	}
 
+	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 3, 3);
+	}
+
 	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
@@ -64,7 +73,7 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 		entityarrow.setCritArrow(false);
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
-		entityarrow.setSecondsOnFire(100);
+		entityarrow.igniteForSeconds(100);
 		world.addFreshEntity(entityarrow);
 		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
@@ -80,7 +89,7 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 		entityarrow.setBaseDamage(3);
 		entityarrow.setKnockback(3);
 		entityarrow.setCritArrow(false);
-		entityarrow.setSecondsOnFire(100);
+		entityarrow.igniteForSeconds(100);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;

@@ -7,7 +7,7 @@ import net.neoforged.neoforge.common.extensions.ILevelExtension;
 import net.neoforged.neoforge.client.model.data.ModelData;
 import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
@@ -55,7 +55,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT)
+@EventBusSubscriber(value = Dist.CLIENT)
 public class RenderItemOnBatteryChargerProcedure {
 	private static RenderLevelStageEvent provider = null;
 	private static Map<EntityType, Entity> data = new HashMap<>();

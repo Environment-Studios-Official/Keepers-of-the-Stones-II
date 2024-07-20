@@ -44,6 +44,11 @@ public class CobbledDeepslateAttackProjectileEntity extends AbstractArrow implem
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.COBBLED_DEEPSLATE);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class CobbledDeepslateAttackProjectileEntity extends AbstractArrow implem
 
 	public static CobbledDeepslateAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 5, 5);
+	}
+
+	public static CobbledDeepslateAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 5, 5);
 	}
 
 	public static CobbledDeepslateAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:amplifier_block",
+    "id": "power:amplifier_block",
     "count": 1
   }
 }

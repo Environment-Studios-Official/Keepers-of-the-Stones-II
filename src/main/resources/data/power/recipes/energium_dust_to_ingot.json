@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "power:energium_dust"
   },
-  "result": "power:energium_ingot"
+  "result": {
+    "id": "power:energium_ingot"
+  }
 }

@@ -43,6 +43,11 @@ public class PoisonBombEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Items.POISONOUS_POTATO);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -63,6 +68,10 @@ public class PoisonBombEntity extends AbstractArrow implements ItemSupplier {
 
 	public static PoisonBombEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.5f, 12, 4);
+	}
+
+	public static PoisonBombEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.5f, 12, 4);
 	}
 
 	public static PoisonBombEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

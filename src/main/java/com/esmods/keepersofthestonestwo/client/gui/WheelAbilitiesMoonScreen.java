@@ -94,7 +94,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(0, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -109,7 +109,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(1, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -124,7 +124,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(2, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -139,7 +139,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(3, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -154,7 +154,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(4, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -169,7 +169,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(5, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -184,7 +184,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_moon_light = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/moon_light.png"), new ResourceLocation("power:textures/screens/moon_light__highlight.png")),
 				e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(6, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -198,7 +198,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_moon_dripstone = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/moon_dripstone.png"), new ResourceLocation("power:textures/screens/moon_dripstone_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(7, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -212,7 +212,7 @@ public class WheelAbilitiesMoonScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_moon_withering = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/moon_withering.png"), new ResourceLocation("power:textures/screens/moon_withering_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMoonButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesMoonButtonMessage(8, x, y, z));
 						WheelAbilitiesMoonButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

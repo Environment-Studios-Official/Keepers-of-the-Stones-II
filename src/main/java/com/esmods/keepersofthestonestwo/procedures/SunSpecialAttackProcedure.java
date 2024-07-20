@@ -64,7 +64,7 @@ public class SunSpecialAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 3));
 								if (world instanceof Level _lvl11 && _lvl11.isDay()) {
-									entityiterator.setSecondsOnFire(5);
+									entityiterator.igniteForSeconds(5);
 								}
 								{
 									Entity _ent = entityiterator;

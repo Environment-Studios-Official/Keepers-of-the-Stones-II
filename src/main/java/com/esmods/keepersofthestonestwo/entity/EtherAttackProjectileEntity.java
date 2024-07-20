@@ -42,6 +42,11 @@ public class EtherAttackProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.BEACON);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -57,6 +62,10 @@ public class EtherAttackProjectileEntity extends AbstractArrow implements ItemSu
 
 	public static EtherAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 9, 2);
+	}
+
+	public static EtherAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 9, 2);
 	}
 
 	public static EtherAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
