@@ -10259,7 +10259,7 @@
         "files": [
           "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json",
           "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/depleted_energium_ore_biome_modifier.json",
           "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
           "src/main/resources/data/power/worldgen/placed_feature/depleted_energium_ore.json",
@@ -16015,10 +16015,10 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierOreBlock.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json",
           "src/main/resources/assets/power/blockstates/amplifier_ore.json",
           "src/main/resources/assets/power/models/block/amplifier_ore.json",
+          "src/main/resources/data/power/forge/biome_modifier/amplifier_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/item/amplifier_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/amplifier_ore.json"
         ]
@@ -22644,9 +22644,9 @@
           "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
           "src/main/resources/assets/power/models/item/cursed_stone.json",
           "src/main/resources/assets/power/models/block/cursed_stone.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_biome_modifier.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone.json",
           "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
+          "src/main/resources/data/power/forge/biome_modifier/cursed_stone_biome_modifier.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java"
         ]
@@ -23271,7 +23271,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumOreBlock.java",
           "src/main/resources/assets/power/models/block/copyrium_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/copyrium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/copyrium_ore_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/copyrium_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/copyrium_ore.json",
           "src/main/resources/assets/power/models/item/copyrium_ore.json"
         ]
@@ -27575,7 +27575,7 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/worldgen/placed_feature/big_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/big_cursed_trees_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/big_cursed_trees_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json"
         ]
       },
@@ -27614,8 +27614,8 @@
       "registry_name": "grass_cursed_forest",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/grass_cursed_forest_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/grass_cursed_forest.json",
+          "src/main/resources/data/power/forge/biome_modifier/grass_cursed_forest_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/grass_cursed_forest.json"
         ]
       },
@@ -28278,7 +28278,7 @@
       "registry_name": "basic_cursed_trees",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/basic_cursed_trees_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/basic_cursed_trees_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json",
           "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
         ]
@@ -28689,7 +28689,7 @@
       "registry_name": "energium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/energium_ore_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/energium_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/energium_ore.json",
           "src/main/resources/assets/power/models/block/energium_ore.json",
           "src/main/resources/assets/power/models/item/energium_ore.json",
@@ -28822,12 +28822,12 @@
         "files": [
           "src/main/resources/data/power/loot_tables/blocks/raw_energium_block.json",
           "src/main/resources/assets/power/blockstates/raw_energium_block.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/raw_energium_block_biome_modifier.json",
           "src/main/resources/assets/power/models/block/raw_energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawEnergiumBlockBlock.java",
           "src/main/resources/data/power/worldgen/placed_feature/raw_energium_block.json",
           "src/main/resources/data/power/worldgen/configured_feature/raw_energium_block.json",
-          "src/main/resources/assets/power/models/item/raw_energium_block.json"
+          "src/main/resources/assets/power/models/item/raw_energium_block.json",
+          "src/main/resources/data/power/forge/biome_modifier/raw_energium_block_biome_modifier.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -29287,7 +29287,7 @@
           "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
           "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
+          "src/main/resources/data/power/forge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
           "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json"
         ]
@@ -29317,11 +29317,11 @@
       "registry_name": "deepslate_copyrium_ore",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/forge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
           "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/deepslate_copyrium_ore.json",
           "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json"
         ]
@@ -32382,7 +32382,7 @@
       "playeranimator",
       "particlepresets"
     ],
-    "currentGenerator": "neoforge-1.20.4",
+    "currentGenerator": "forge-1.20.1",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },

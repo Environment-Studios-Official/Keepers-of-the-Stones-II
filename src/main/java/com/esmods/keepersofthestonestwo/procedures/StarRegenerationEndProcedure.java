@@ -9,9 +9,11 @@ public class StarRegenerationEndProcedure {
 		if (entity == null)
 			return;
 		{
-			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.power_recovery_multiplier = 1;
-			_vars.syncPlayerVariables(entity);
+			double _setval = 1;
+			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+				capability.power_recovery_multiplier = _setval;
+				capability.syncPlayerVariables(entity);
+			});
 		}
 	}
 }

@@ -1,11 +1,11 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -14,9 +14,11 @@ import net.minecraft.tags.ItemTags;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.advancements.AdvancementProgress;
-import net.minecraft.advancements.AdvancementHolder;
+import net.minecraft.advancements.Advancement;
 
 import javax.annotation.Nullable;
+
+import java.util.concurrent.atomic.AtomicReference;
 
 @Mod.EventBusSubscriber
 public class SuperChargeGetProcedure {
@@ -34,13 +36,15 @@ public class SuperChargeGetProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerForEach) {
-			for (int _idx = 0; _idx < _modHandlerForEach.getSlots(); _idx++) {
-				ItemStack itemstackiterator = _modHandlerForEach.getStackInSlot(_idx).copy();
-				if (itemstackiterator.is(ItemTags.create(new ResourceLocation("power:elemental_batteries")))) {
-					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("power:super_charge"));
-						if (_adv != null) {
+		{
+			AtomicReference<IItemHandler> _iitemhandlerref = new AtomicReference<>();
+			entity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(_iitemhandlerref::set);
+			if (_iitemhandlerref.get() != null) {
+				for (int _idx = 0; _idx < _iitemhandlerref.get().getSlots(); _idx++) {
+					ItemStack itemstackiterator = _iitemhandlerref.get().getStackInSlot(_idx).copy();
+					if (itemstackiterator.is(ItemTags.create(new ResourceLocation("power:elemental_batteries")))) {
+						if (entity instanceof ServerPlayer _player) {
+							Advancement _adv = _player.server.getAdvancements().getAdvancement(new ResourceLocation("power:super_charge"));
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {
 								for (String criteria : _ap.getRemainingCriteria())
