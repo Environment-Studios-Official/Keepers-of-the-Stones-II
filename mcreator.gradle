@@ -10,40 +10,6 @@ dependencies {
 
 
 repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-   runtimeOnly fg.deobf("curse.maven:bettercombat-forge-639842:4823303")
-}
-
-
-minecraft {
-  runs {
-      client {
-          property 'mixin.env.remapRefMap', 'true'
-          property 'mixin.env.refMapRemappingFile', "${projectDir}/build/createSrgToMcp/output.srg"
-      }
-  }
-}
-repositories {
-  maven {
-    url = "https://maven.blamejared.com"
-  }
-}
-
-dependencies {
-  compileOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE:api")
-  runtimeOnly fg.deobf("vazkii.patchouli:Patchouli:1.20.1-84-FORGE")
-}
-
-
-repositories {
   maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }
@@ -106,20 +72,6 @@ repositories {
 dependencies {
    compileOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
    runtimeOnly fg.deobf("curse.maven:mpp-forge-986014:5262463")
-}
-
-
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   compileOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
-   runtimeOnly fg.deobf("curse.maven:cloth-config-forge-348521:4633444")
 }
 
 

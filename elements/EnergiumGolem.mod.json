@@ -87,7 +87,7 @@
     "immuneToWither": true,
     "immuneToDragonBreath": true,
     "mobDrop": {
-      "value": "PowerModItems.ENERGIUM_CORE"
+      "value": "CUSTOM:EnergiumCore"
     },
     "livingSound": {
       "value": ""

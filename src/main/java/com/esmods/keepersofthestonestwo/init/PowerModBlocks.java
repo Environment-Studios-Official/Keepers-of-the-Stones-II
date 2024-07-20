@@ -10,6 +10,7 @@ import net.minecraftforge.registries.DeferredRegister;
 
 import net.minecraft.world.level.block.Block;
 
+import com.esmods.keepersofthestonestwo.block.RawEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawDepletedEnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawCopyriumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.RawAmplifierBlockBlock;
@@ -22,11 +23,16 @@ import com.esmods.keepersofthestonestwo.block.OrangePortalBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumVaultBlock;
+import com.esmods.keepersofthestonestwo.block.EnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.ElementalPowerGeneratorBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateEnergiumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateDepletedEnergiumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateCopyriumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateAmplifierOreBlock;
 import com.esmods.keepersofthestonestwo.block.CursedVaultBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
@@ -88,6 +94,12 @@ public class PowerModBlocks {
 	public static final RegistryObject<Block> CURSED_LAMP = REGISTRY.register("cursed_lamp", () -> new CursedLampBlock());
 	public static final RegistryObject<Block> ENERGIUM_VAULT = REGISTRY.register("energium_vault", () -> new EnergiumVaultBlock());
 	public static final RegistryObject<Block> PURPLE_MUSHROOM = REGISTRY.register("purple_mushroom", () -> new PurpleMushroomBlock());
+	public static final RegistryObject<Block> ENERGIUM_ORE = REGISTRY.register("energium_ore", () -> new EnergiumOreBlock());
+	public static final RegistryObject<Block> RAW_ENERGIUM_BLOCK = REGISTRY.register("raw_energium_block", () -> new RawEnergiumBlockBlock());
+	public static final RegistryObject<Block> DEEPSLATE_DEPLETED_ENERGIUM_ORE = REGISTRY.register("deepslate_depleted_energium_ore", () -> new DeepslateDepletedEnergiumOreBlock());
+	public static final RegistryObject<Block> DEEPSLATE_ENERGIUM_ORE = REGISTRY.register("deepslate_energium_ore", () -> new DeepslateEnergiumOreBlock());
+	public static final RegistryObject<Block> DEEPSLATE_AMPLIFIER_ORE = REGISTRY.register("deepslate_amplifier_ore", () -> new DeepslateAmplifierOreBlock());
+	public static final RegistryObject<Block> DEEPSLATE_COPYRIUM_ORE = REGISTRY.register("deepslate_copyrium_ore", () -> new DeepslateCopyriumOreBlock());
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

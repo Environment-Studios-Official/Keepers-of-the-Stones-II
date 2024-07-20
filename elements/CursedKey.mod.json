@@ -12,11 +12,11 @@
     "creativeTab": {
       "value": "CUSTOM:Items"
     },
-    "stackSize": 1,
+    "stackSize": 16,
     "enchantability": 0,
     "useDuration": 0,
     "toolType": 1.0,
-    "damageCount": 8,
+    "damageCount": 0,
     "recipeRemainder": {
       "value": ""
     },

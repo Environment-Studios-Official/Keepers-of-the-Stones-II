@@ -14,7 +14,6 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -71,13 +70,7 @@ public class CursedKeyOpenVaultProcedure {
 					}
 				}
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-					{
-						ItemStack _ist = itemstack;
-						if (_ist.hurt(1, RandomSource.create(), null)) {
-							_ist.shrink(1);
-							_ist.setDamageValue(0);
-						}
-					}
+					itemstack.shrink(1);
 				}
 				new Object() {
 					void timedLoop(int current, int total, int ticks) {

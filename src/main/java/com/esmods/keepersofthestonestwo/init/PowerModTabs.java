@@ -27,13 +27,17 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.AMPLIFIER_RING.get());
 				tabData.accept(PowerModBlocks.KEEPERS_BOX.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.ENERGIUM_ORE.get().asItem());
 				tabData.accept(PowerModBlocks.RAW_DEPLETED_ENERGIUM_BLOCK.get().asItem());
+				tabData.accept(PowerModBlocks.RAW_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.DEPLETED_ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_BLOCK.get().asItem());
 				tabData.accept(PowerModBlocks.ENERGIUM_CONTROLLER.get().asItem());
+				tabData.accept(PowerModItems.RAW_ENERGIUM.get());
 				tabData.accept(PowerModItems.RAW_DEPLETED_ENERGIUM.get());
 				tabData.accept(PowerModItems.DEPLETED_ENERGIUM_INGOT.get());
 				tabData.accept(PowerModItems.ENERGIUM_INGOT.get());
+				tabData.accept(PowerModItems.ENERGIUM_DUST.get());
 				tabData.accept(PowerModBlocks.BATTERY_CHARGER.get().asItem());
 				tabData.accept(PowerModItems.ENERGIUM_UPGRADE_SMITHING_TEMPLATE.get());
 				tabData.accept(PowerModItems.ENERGIUM_PICKAXE.get());
@@ -74,6 +78,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE.get().asItem());
 			})
 
 					.build());
@@ -116,6 +124,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_STONE.get());
 				tabData.accept(PowerModItems.MAGNET_STONE.get());
 				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
+				tabData.accept(PowerModItems.MERCURY_STONE.get());
 			})
 
 					.build());
@@ -165,6 +174,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_BATTERY.get());
 				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 				tabData.accept(PowerModItems.MUSHROOMS_BATTERY.get());
+				tabData.accept(PowerModItems.MERCURY_BATTERY.get());
 			})
 
 					.build());

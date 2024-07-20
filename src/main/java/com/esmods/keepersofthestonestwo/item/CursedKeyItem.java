@@ -10,7 +10,7 @@ import com.esmods.keepersofthestonestwo.procedures.CursedKeyOpenVaultProcedure;
 
 public class CursedKeyItem extends Item {
 	public CursedKeyItem() {
-		super(new Item.Properties().durability(8).rarity(Rarity.COMMON));
+		super(new Item.Properties().stacksTo(16).rarity(Rarity.COMMON));
 	}
 
 	@Override
