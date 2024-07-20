@@ -22696,7 +22696,16 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/EnergiumSetCheckingProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "sourceentity",
+            "type": "entity"
+          }
+        ]
       },
       "path": "~/Bosses/CursedKeeper"
     },
@@ -28694,7 +28703,7 @@
     {
       "name": "EnergiumOreLoot",
       "type": "loottable",
-      "sortid": 1318,
+      "sortid": 1317,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ore_loot",
@@ -28708,7 +28717,7 @@
     {
       "name": "EnergiumOreToIngot",
       "type": "recipe",
-      "sortid": 1319,
+      "sortid": 1318,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ore_to_ingot",
@@ -28722,7 +28731,7 @@
     {
       "name": "RawEnergiumToIngot",
       "type": "recipe",
-      "sortid": 1320,
+      "sortid": 1319,
       "compiles": true,
       "locked_code": false,
       "registry_name": "raw_energium_to_ingot",
@@ -28736,7 +28745,7 @@
     {
       "name": "PowerLockPotion",
       "type": "potion",
-      "sortid": 1321,
+      "sortid": 1320,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_lock_potion",
@@ -28763,7 +28772,7 @@
     {
       "name": "PowerLockPotionRecipe",
       "type": "recipe",
-      "sortid": 1322,
+      "sortid": 1321,
       "compiles": true,
       "locked_code": false,
       "registry_name": "power_lock_potion_recipe",
@@ -28777,7 +28786,7 @@
     {
       "name": "EnergiumDustRecipe",
       "type": "recipe",
-      "sortid": 1323,
+      "sortid": 1322,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_dust_recipe",
@@ -28791,7 +28800,7 @@
     {
       "name": "EnergiumDustToIngot",
       "type": "recipe",
-      "sortid": 1324,
+      "sortid": 1323,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_dust_to_ingot",
@@ -28826,7 +28835,7 @@
     {
       "name": "EnergiumOreClick",
       "type": "procedure",
-      "sortid": 1325,
+      "sortid": 1324,
       "compiles": true,
       "locked_code": false,
       "registry_name": "energium_ore_click",
@@ -28846,7 +28855,7 @@
     {
       "name": "IfActiveBarrier",
       "type": "procedure",
-      "sortid": 1326,
+      "sortid": 1325,
       "compiles": true,
       "locked_code": false,
       "registry_name": "if_active_barrier",
@@ -28870,7 +28879,7 @@
     {
       "name": "ExtendedCheckOfActivationStone",
       "type": "procedure",
-      "sortid": 1327,
+      "sortid": 1326,
       "compiles": true,
       "locked_code": false,
       "registry_name": "extended_check_of_activation_stone",
@@ -28902,6 +28911,436 @@
         ]
       },
       "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "MercurySpecialAttack",
+      "type": "procedure",
+      "sortid": 1327,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercurySpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesMercury",
+      "type": "gui",
+      "sortid": 1328,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_mercury",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMercuryMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMercuryScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMercuryButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "Attack149",
+      "type": "procedure",
+      "sortid": 1329,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_149",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack149Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "Attack150",
+      "type": "procedure",
+      "sortid": 1330,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_150",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack150Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "Attack151",
+      "type": "procedure",
+      "sortid": 1331,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_151",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack151Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "Attack152",
+      "type": "procedure",
+      "sortid": 1332,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_152",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack152Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
+    },
+    {
+      "name": "MercuryElementGet",
+      "type": "procedure",
+      "sortid": 1333,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryStoneCheck",
+      "type": "procedure",
+      "sortid": 1334,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MercuryBattery",
+      "type": "item",
+      "sortid": 1335,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBatteryItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBatteryDesc",
+      "type": "procedure",
+      "sortid": 1336,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBatteryUse",
+      "type": "procedure",
+      "sortid": 1337,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MercuryBattery"
+    },
+    {
+      "name": "MercuryBattleAxe",
+      "type": "tool",
+      "sortid": 1338,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battle_axe",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_battle_axe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBattleAxeItem.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBattleAxeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "sortid": 1339,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_battle_axe_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBattleAxeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "CursedKeeper",
+      "type": "animatedentity",
+      "sortid": 1340,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
+          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "DeepslateDepletedEnergiumOre",
+      "type": "block",
+      "sortid": 1341,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_depleted_energium_ore",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateDepletedEnergiumOreBlock.java",
+          "src/main/resources/assets/power/blockstates/deepslate_depleted_energium_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_depleted_energium_ore.json",
+          "src/main/resources/assets/power/models/item/deepslate_depleted_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateDepletedEnergiumOreLoot",
+      "type": "loottable",
+      "sortid": 1342,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_depleted_energium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_depleted_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateEnergiumOre",
+      "type": "block",
+      "sortid": 1343,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_energium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/deepslate_energium_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_energium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateEnergiumOreBlock.java",
+          "src/main/resources/assets/power/models/block/deepslate_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateEnergiumOreLoot",
+      "type": "loottable",
+      "sortid": 1344,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_energium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_energium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "DeepslateAmplifierOre",
+      "type": "block",
+      "sortid": 1345,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_amplifier_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/worldgen/placed_feature/deepslate_amplifier_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
+          "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
+          "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "DeepslateAmplifierOreLoot",
+      "type": "loottable",
+      "sortid": 1346,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_amplifier_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_amplifier_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Amplifier"
+    },
+    {
+      "name": "DeepslateCopyriumOre",
+      "type": "block",
+      "sortid": 1347,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_copyrium_ore",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/placed_feature/deepslate_copyrium_ore.json",
+          "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
+    },
+    {
+      "name": "DeepslateCopyriumOreLoot",
+      "type": "loottable",
+      "sortid": 1348,
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "deepslate_copyrium_ore_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/deepslate_copyrium_ore.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Copyrium"
     }
   ],
   "variable_elements": [
@@ -29488,7 +29927,7 @@
       "value": "0"
     },
     {
-      "name": "third_booster_shop",
+      "name": "third_booster_slot",
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
@@ -29657,9 +30096,14 @@
   ],
   "tag_elements": {
     "ENTITIES:minecraft:bosses": [
-      "CUSTOM:EnergiumGolem"
+      "CUSTOM:EnergiumGolem",
+      "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
       "~CUSTOM:EnergiumVault",
@@ -29721,9 +30165,12 @@
     "ENTITIES:mod:cursed_mobs": [
       "EntityWither",
       "EntityWitherSkeleton",
-      "EntityWitherSkull"
+      "EntityWitherSkull",
+      "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
       "~CUSTOM:ElementalPowerGenerator",
       "~CUSTOM:RawCopyriumBlock",
       "~CUSTOM:CopyriumBlock",
@@ -29832,6 +30279,8 @@
       "~CUSTOM:CursedVault"
     ],
     "BLOCKS:minecraft:needs_diamond_tool": [
+      "~CUSTOM:DeepslateEnergiumOre",
+      "~CUSTOM:DeepslateDepletedEnergiumOre",
       "~CUSTOM:RawEnergiumBlock",
       "~CUSTOM:EnergiumOre",
       "~CUSTOM:RawDepletedEnergiumBlock",
@@ -29866,20 +30315,20 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -29891,8 +30340,8 @@
       "item.power.magnet_battery": "Батарея",
       "item.power.creation_armor_helmet": "Шлем мастера созидания",
       "effect.power.mushrooms_master": "Мастер грибов",
-      "block.power.cursed_lantern": "Проклятый фонарь",
       "item.power.mushrooms_armor_leggings": "Поножи мастера грибов",
+      "block.power.cursed_lantern": "Проклятый фонарь",
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Переливание, расходует 40",
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
@@ -29900,6 +30349,8 @@
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
+      "item.power.mercury_battle_axe": "Tornado Axe",
+      "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "subtitles.strange_sound": "",
@@ -29908,6 +30359,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
+      "battery.desc.mercury": "Ртуть",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Остановка времени",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
@@ -30001,6 +30453,7 @@
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
+      "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Ртуть",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
       "death.attack.energium_golem_ds.item": "%1$s был убит Энерджиумный голем",
       "item.power.mushrooms_armor_chestplate": "Нагрудник мастера грибов",
@@ -30043,6 +30496,7 @@
       "gamerule.limitOfStonesForOnePlayer.description": "Включает режим \"Один игрок, одна сила\".",
       "block.power.cursed_vault": "Проклятое хранилище",
       "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Магнит",
+      "block.power.deepslate_amplifier_ore": "Амплифероносный глубинный сланец",
       "battery.desc.water": "Вода",
       "battery.desc.blood": "Кровь",
       "entity.power.energium_golem": "Энерджиумный голем",
@@ -30126,6 +30580,7 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Солнечный луч, расходует 15",
       "item.power.magnet_claws": "Магнитные когти",
       "item.power.energy_armor_helmet": "Шлем мастера энергии",
+      "entity.power.cursed_keeper": "Cursed Keeper",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "effect.power.mist_master": "Мастер тумана",
       "item.power.sound_dagger": "Звуковой кинжал",
@@ -30336,6 +30791,7 @@
       "battery.desc.energy": "Энергия",
       "item.power.technology_armor_chestplate": "Нагрудник мастера технологий",
       "effect.power.lightning_master": "Мастер молнии",
+      "block.power.deepslate_depleted_energium_ore": "Обеднённый энерджиумоносный глубинный сланец",
       "item.power.vacuum_armor_boots": "Ботинки мастера пустоты",
       "item.power.creation_armor_leggings": "Поножи мастера созидания",
       "item.power.water_stone": "Камень воды",
@@ -30353,6 +30809,7 @@
       "effect.power.magnet_master": "Мастер магнита",
       "key.categories.power2": "Хранители Камней II",
       "item.power.teleportation_armor_boots": "Ботинки мастера телепортации",
+      "block.power.deepslate_copyrium_ore": "Копириумоносный глубинный сланец",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Тень",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "block.power.cursed_stone_pillar": "Колонна из проклятого камня",
@@ -30428,6 +30885,7 @@
       "item.power.destruction_stone": "Камень разрушения",
       "item.power.darkness_stone": "Камень тьмы",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Атака кристаллическим блоком, расходует 10",
+      "block.power.deepslate_energium_ore": "Энерджиумоносный глубинный сланец",
       "block.power.cursed_stone_bricks_wall": "Ограда из проклятых каменных кирпичей",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Взрыв",
@@ -30447,6 +30905,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Созидание",
       "advancements.the_great_win.title": "Великая победа!",
       "battery.desc.lava": "Лава",
+      "item.power.mercury_battery": "Батарея",
       "key.power.detransformation_key": "Клавиша детрансформации",
       "item.power.energium_core": "Энерджиумное ядро",
       "item.power.air_armor_helmet": "Шлем мастера воздуха",
@@ -30577,15 +31036,17 @@
       "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Creation Helmet",
       "effect.power.mushrooms_master": "Master of Mushrooms",
-      "block.power.cursed_lantern": "Cursed Lantern",
       "item.power.mushrooms_armor_leggings": "Mushrooms Leggings",
+      "block.power.cursed_lantern": "Cursed Lantern",
       "item.power.mushrooms_armor_boots": "Mushrooms Boots",
       "gui.power.wheel_abilities_blood.tooltip_transfusion_uses_40": "Transfusion, uses 40",
       "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
+      "item.power.mercury_battle_axe": "Mercury Battle Axe",
       "item.power.space_armor_boots": "Space Boots",
+      "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
       "subtitles.strange_sound": "",
@@ -30594,6 +31055,7 @@
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
+      "battery.desc.mercury": "Mercury",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Time Stopped",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
@@ -30687,6 +31149,7 @@
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
+      "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Mercury",
       "item.power.creation_armor_boots": "Creation Boots",
       "death.attack.energium_golem_ds.item": "%1$s was killed by an Energium Golem",
       "item.power.mushrooms_armor_chestplate": "Mushrooms Chestplate",
@@ -30729,6 +31192,7 @@
       "gamerule.limitOfStonesForOnePlayer.description": "Enables the \"One Player, one Power\" mode",
       "block.power.cursed_vault": "Cursed Vault",
       "gui.power.keepers_box_gui_part_1.tooltip_magnet": "Magnet",
+      "block.power.deepslate_amplifier_ore": "Deepslate Amplifier Ore",
       "battery.desc.water": "Water",
       "battery.desc.blood": "Blood",
       "entity.power.energium_golem": "Energium Golem",
@@ -30812,6 +31276,7 @@
       "gui.power.wheel_abilities_sun.tooltip_sun_ray_uses_15": "Sun ray, uses 15",
       "item.power.magnet_claws": "Magnet Claws",
       "item.power.energy_armor_helmet": "Energy Helmet",
+      "entity.power.cursed_keeper": "Cursed Keeper",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Light ball, uses 35",
       "effect.power.mist_master": "Master of the Mist",
       "item.power.sound_dagger": "Sound Dagger",
@@ -31023,6 +31488,7 @@
       "battery.desc.energy": "Energy",
       "item.power.technology_armor_chestplate": "Technology Chestplate",
       "effect.power.lightning_master": "Master of Lightning",
+      "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
       "item.power.vacuum_armor_boots": "Vacuum Boots",
       "item.power.creation_armor_leggings": "Creation Leggings",
       "item.power.water_stone": "Water Stone",
@@ -31040,6 +31506,7 @@
       "effect.power.magnet_master": "Magnet Master",
       "key.categories.power2": "Keepers of the Stones II",
       "item.power.teleportation_armor_boots": "Teleportation Boots",
+      "block.power.deepslate_copyrium_ore": "Deepslate Copyrium Ore",
       "gui.power.keepers_box_gui_part_3.tooltip_shadow": "Shadow",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Destruction ray, uses 15",
       "block.power.cursed_stone_pillar": "Cursed Stone Pillar",
@@ -31114,6 +31581,7 @@
       "item.power.destruction_stone": "Destruction Stone",
       "item.power.darkness_stone": "Darkness Stone",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_block_attack_uses_10": "Crystal block attack, uses 10",
+      "block.power.deepslate_energium_ore": "Deepslate Energium Ore",
       "block.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_explosion": "Explosion",
@@ -31133,6 +31601,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_creation": "Creation",
       "advancements.the_great_win.title": "Great victory!",
       "battery.desc.lava": "Lava",
+      "item.power.mercury_battery": "Battery",
       "key.power.detransformation_key": "Detransformation key",
       "item.power.energium_core": "Energium Core",
       "item.power.air_armor_helmet": "Air Helmet",
@@ -31603,6 +32072,10 @@
                       {
                         "name": "Mushrooms",
                         "children": []
+                      },
+                      {
+                        "name": "Mercury",
+                        "children": []
                       }
                     ]
                   }
@@ -31797,6 +32270,10 @@
               {
                 "name": "MushroomsBattery",
                 "children": []
+              },
+              {
+                "name": "MercuryBattery",
+                "children": []
               }
             ]
           },
@@ -31881,7 +32358,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.31",
+    "version": "1.0.0.32",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

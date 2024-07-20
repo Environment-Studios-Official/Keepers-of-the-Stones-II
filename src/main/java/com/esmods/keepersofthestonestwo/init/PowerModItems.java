@@ -111,6 +111,8 @@ import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBattleAxeItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
@@ -565,6 +567,13 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> ENERGIUM_ORE = block(PowerModBlocks.ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> ENERGIUM_DUST = REGISTRY.register("energium_dust", () -> new EnergiumDustItem());
 	public static final DeferredHolder<Item, Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
+	public static final DeferredHolder<Item, Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", () -> new MercuryBatteryItem());
+	public static final DeferredHolder<Item, Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", () -> new MercuryBattleAxeItem());
+	public static final DeferredHolder<Item, Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> DEEPSLATE_DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
 
 	// Start of user code block custom items
 	// End of user code block custom items

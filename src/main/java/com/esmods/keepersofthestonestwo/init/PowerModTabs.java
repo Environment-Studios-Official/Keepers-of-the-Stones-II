@@ -78,6 +78,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE.get().asItem());
+				tabData.accept(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE.get().asItem());
 			})
 
 					.build());
@@ -120,6 +124,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_STONE.get());
 				tabData.accept(PowerModItems.MAGNET_STONE.get());
 				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
+				tabData.accept(PowerModItems.MERCURY_STONE.get());
 			})
 
 					.build());
@@ -169,6 +174,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_BATTERY.get());
 				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 				tabData.accept(PowerModItems.MUSHROOMS_BATTERY.get());
+				tabData.accept(PowerModItems.MERCURY_BATTERY.get());
 			})
 
 					.build());

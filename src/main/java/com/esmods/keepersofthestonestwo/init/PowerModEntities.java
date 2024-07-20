@@ -45,6 +45,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
@@ -132,6 +133,8 @@ public class PowerModEntities {
 			EntityType.Builder.<PoisonBombEntity>of(PoisonBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonPitEntity>> POISON_PIT = register("poison_pit",
 			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(4f, 0.2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
+			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -145,6 +148,7 @@ public class PowerModEntities {
 			EnergiumGolemEntity.init();
 			TurretEntity.init();
 			PoisonPitEntity.init();
+			CursedKeeperEntity.init();
 		});
 	}
 
@@ -155,5 +159,6 @@ public class PowerModEntities {
 		event.put(ENERGIUM_GOLEM.get(), EnergiumGolemEntity.createAttributes().build());
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
+		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 	}
 }
