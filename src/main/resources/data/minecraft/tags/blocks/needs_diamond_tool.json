@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:deepslate_energium_ore",
+    "power:deepslate_depleted_energium_ore",
     "power:raw_energium_block",
     "power:energium_ore",
     "power:energium_vault",

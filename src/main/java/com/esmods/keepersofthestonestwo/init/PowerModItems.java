@@ -569,6 +569,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", MercuryBatteryItem::new);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", MercuryBattleAxeItem::new);
 	public static final DeferredHolder<Item, Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> DEEPSLATE_DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
+	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
 
 	// Start of user code block custom items
 	// End of user code block custom items
