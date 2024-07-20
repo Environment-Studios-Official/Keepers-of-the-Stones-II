@@ -23,33 +23,25 @@ public class ElementalPowerGeneratorRegenerationStarsTickProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(48 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof Player) {
-						if ((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false
-								&& (entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active == false
+						if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).active == false
 								&& !(entityiterator instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(PowerModMobEffects.STAR_REGENERATION.get()))) {
-							if ((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer > 0) {
+							if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 								{
-									double _setval = (entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer - 0.5;
-									entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.powerTimer = _setval;
-										capability.syncPlayerVariables(entityiterator);
-									});
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.powerTimer = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - 0.5;
+									_vars.syncPlayerVariables(entityiterator);
 								}
 							} else {
 								{
-									double _setval = 50;
-									entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-										capability.powerTimer = _setval;
-										capability.syncPlayerVariables(entityiterator);
-									});
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.powerTimer = 50;
+									_vars.syncPlayerVariables(entityiterator);
 								}
-								if ((entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power < (entityiterator
-										.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).max_power) {
+								if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).power < entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).max_power) {
 									{
-										double _setval = (entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 5;
-										entityiterator.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-											capability.power = _setval;
-											capability.syncPlayerVariables(entityiterator);
-										});
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.power = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
+										_vars.syncPlayerVariables(entityiterator);
 									}
 								}
 							}

@@ -1,5 +1,5 @@
-What's new in Keepers of the Stones II version 1.0.0.30?<br />
-<br />- Added the ability to switch from Keepers of the Stones to Keepers of the Stones II (Some items may disappear during the transition)
-<br />- Player animations returned when activating and deactivating stones
-<br />- PlayerAnimator mod is again required for the mod to work
-<br />- [Bugfix] 
+What's new in Keepers of the Stones II version 1.0.0.32?<br />
+<br />- Added deepslate versions of ores
+<br />- Updated textures for cursed and energium vaults
+<br />- [API] Colorful Powers API has been updated to version 10
+<br />- [Bugfix] Incorrect vaults sides have been fixed

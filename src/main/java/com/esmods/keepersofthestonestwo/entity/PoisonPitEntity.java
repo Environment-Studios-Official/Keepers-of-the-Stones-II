@@ -1,13 +1,13 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.common.ForgeMod;
+import net.neoforged.neoforge.fluids.FluidType;
+import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.pathfinder.BlockPathTypes;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.entity.projectile.ThrownPotion;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
@@ -27,18 +27,11 @@ import net.minecraft.world.entity.AreaEffectCloud;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.Mth;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.procedures.PoisonPitTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.HitboxScaleProcedure;
-import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
 public class PoisonPitEntity extends PathfinderMob {
-	public PoisonPitEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.POISON_PIT.get(), world);
-	}
-
 	public PoisonPitEntity(EntityType<PoisonPitEntity> type, Level world) {
 		super(type, world);
 		setMaxUpStep(0.6f);
@@ -81,11 +74,6 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
-	}
-
-	@Override
 	protected PathNavigation createNavigation(Level world) {
 		return new WaterBoundPathNavigation(this, world);
 	}
@@ -101,8 +89,8 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public double getMyRidingOffset() {
-		return -0.35D;
+	protected float ridingOffset(Entity entity) {
+		return -0.35F;
 	}
 
 	@Override
@@ -113,7 +101,7 @@ public class PoisonPitEntity extends PathfinderMob {
 			return false;
 		if (damagesource.getDirectEntity() instanceof Player)
 			return false;
-		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud)
+		if (damagesource.getDirectEntity() instanceof ThrownPotion || damagesource.getDirectEntity() instanceof AreaEffectCloud || damagesource.typeHolder().is(NeoForgeMod.POISON_DAMAGE))
 			return false;
 		if (damagesource.is(DamageTypes.FALL))
 			return false;
@@ -137,7 +125,7 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean ignoreExplosion() {
+	public boolean ignoreExplosion(Explosion explosion) {
 		return true;
 	}
 
@@ -159,13 +147,13 @@ public class PoisonPitEntity extends PathfinderMob {
 	}
 
 	@Override
-	public boolean canBreatheUnderwater() {
+	public boolean canDrownInFluidType(FluidType type) {
 		double x = this.getX();
 		double y = this.getY();
 		double z = this.getZ();
 		Level world = this.level();
 		Entity entity = this;
-		return true;
+		return false;
 	}
 
 	@Override
@@ -211,7 +199,7 @@ public class PoisonPitEntity extends PathfinderMob {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		builder = builder.add(ForgeMod.SWIM_SPEED.get(), 0.3);
+		builder = builder.add(NeoForgeMod.SWIM_SPEED.value(), 0.3);
 		return builder;
 	}
 }

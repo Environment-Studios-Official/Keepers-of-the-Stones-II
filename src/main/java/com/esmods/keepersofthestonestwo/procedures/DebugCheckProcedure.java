@@ -8,6 +8,6 @@ public class DebugCheckProcedure {
 	public static boolean execute(Entity entity) {
 		if (entity == null)
 			return false;
-		return (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).debug;
+		return entity.getData(PowerModVariables.PLAYER_VARIABLES).debug;
 	}
 }

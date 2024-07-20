@@ -1,10 +1,10 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.client.event.RenderLivingEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.RenderLivingEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Mob;
@@ -25,7 +25,7 @@ import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
 @Mod.EventBusSubscriber(value = Dist.CLIENT)
 public class FrozenLayerRenderEventProcedure {
 	@SubscribeEvent
-	public static void KleidersRenderEvent(RenderLivingEvent event) {
+	public static void KleidersRenderEvent(RenderLivingEvent.Pre event) {
 		execute(event, event.getEntity());
 	}
 
@@ -43,8 +43,8 @@ public class FrozenLayerRenderEventProcedure {
 				EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
 				if (_evt.getRenderer() instanceof PlayerRenderer) {
-					if (_evt instanceof RenderLivingEvent.Pre) {
-						// _evt.setCanceled(true);
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						// _pre.setCanceled(true);
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("power:textures/entities/iceberg.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
 							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -57,8 +57,8 @@ public class FrozenLayerRenderEventProcedure {
 				EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
 				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer)) {
-					if (_evt instanceof RenderLivingEvent.Pre) {
-						// _evt.setCanceled(true);
+					if (_evt instanceof RenderLivingEvent.Pre _pre) {
+						// _pre.setCanceled(true);
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer(context, new ResourceLocation("power:textures/entities/iceberg.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION))).render((Mob) _evt.getEntity(),
 							_evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());

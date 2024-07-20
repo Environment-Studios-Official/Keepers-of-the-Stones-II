@@ -9,11 +9,9 @@ public class AbilityUsingKeyPressedProcedure {
 		if (entity == null)
 			return;
 		{
-			boolean _setval = true;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.use_ability_key_var = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.use_ability_key_var = true;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

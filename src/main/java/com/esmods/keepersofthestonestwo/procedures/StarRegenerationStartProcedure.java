@@ -11,11 +11,9 @@ public class StarRegenerationStartProcedure {
 		if (entity == null)
 			return;
 		{
-			double _setval = ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.STAR_REGENERATION.get()) ? _livEnt.getEffect(PowerModMobEffects.STAR_REGENERATION.get()).getAmplifier() : 0) + 1) * 2;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.power_recovery_multiplier = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.power_recovery_multiplier = ((entity instanceof LivingEntity _livEnt && _livEnt.hasEffect(PowerModMobEffects.STAR_REGENERATION.get()) ? _livEnt.getEffect(PowerModMobEffects.STAR_REGENERATION.get()).getAmplifier() : 0) + 1) * 2;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }
