@@ -28,6 +28,10 @@ import com.esmods.keepersofthestonestwo.block.EnergiumBlockBlock;
 import com.esmods.keepersofthestonestwo.block.ElementalPowerGeneratorBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.DepletedEnergiumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateEnergiumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateDepletedEnergiumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateCopyriumOreBlock;
+import com.esmods.keepersofthestonestwo.block.DeepslateAmplifierOreBlock;
 import com.esmods.keepersofthestonestwo.block.CursedVaultBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
@@ -91,6 +95,10 @@ public class PowerModBlocks {
 	public static final DeferredHolder<Block, Block> PURPLE_MUSHROOM = REGISTRY.register("purple_mushroom", PurpleMushroomBlock::new);
 	public static final DeferredHolder<Block, Block> ENERGIUM_ORE = REGISTRY.register("energium_ore", EnergiumOreBlock::new);
 	public static final DeferredHolder<Block, Block> RAW_ENERGIUM_BLOCK = REGISTRY.register("raw_energium_block", RawEnergiumBlockBlock::new);
+	public static final DeferredHolder<Block, Block> DEEPSLATE_DEPLETED_ENERGIUM_ORE = REGISTRY.register("deepslate_depleted_energium_ore", DeepslateDepletedEnergiumOreBlock::new);
+	public static final DeferredHolder<Block, Block> DEEPSLATE_ENERGIUM_ORE = REGISTRY.register("deepslate_energium_ore", DeepslateEnergiumOreBlock::new);
+	public static final DeferredHolder<Block, Block> DEEPSLATE_AMPLIFIER_ORE = REGISTRY.register("deepslate_amplifier_ore", DeepslateAmplifierOreBlock::new);
+	public static final DeferredHolder<Block, Block> DEEPSLATE_COPYRIUM_ORE = REGISTRY.register("deepslate_copyrium_ore", DeepslateCopyriumOreBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
