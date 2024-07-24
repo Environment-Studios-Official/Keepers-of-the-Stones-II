@@ -238,11 +238,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mercury")) {
 					MercurySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.use_ability_key_var = false;
-					_vars.syncPlayerVariables(entity);
-				}
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.use_ability_key_var = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}
