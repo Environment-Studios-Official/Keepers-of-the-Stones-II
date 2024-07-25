@@ -30,11 +30,7 @@
     ],
     "name": "Mercury Stone",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Stones"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,

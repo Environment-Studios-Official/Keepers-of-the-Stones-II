@@ -6,14 +6,19 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
+import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ITEMS = REGISTRY.register("items",
@@ -123,7 +128,6 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_STONE.get());
 				tabData.accept(PowerModItems.MAGNET_STONE.get());
 				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
-				tabData.accept(PowerModItems.MERCURY_STONE.get());
 				tabData.accept(PowerModItems.ENERGY_STONE.get());
 			})
 
@@ -178,4 +182,11 @@ public class PowerModTabs {
 			})
 
 					.build());
+
+	@SubscribeEvent
+	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
+		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+			tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
+		}
+	}
 }
