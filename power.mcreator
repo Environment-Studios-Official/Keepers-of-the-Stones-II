@@ -31216,10 +31216,7 @@
     "updateURL": "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json",
     "modPicture": "logo",
     "requiredMods": [
-      "kleiders_custom_renderer",
-      "geckolib",
-      "playeranimator",
-      "particlepresets"
+      "geckolib"
     ],
     "dependencies": [
       "bettercombat"
