@@ -352,13 +352,13 @@ public class AbilityKeyPressedTickProcedure {
 						|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_third).equals("mercury")) {
 					MercurySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				{
-					boolean _setval = false;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.use_ability_key_var = _setval;
-						capability.syncPlayerVariables(entity);
-					});
-				}
+			}
+			{
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.use_ability_key_var = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}
