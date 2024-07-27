@@ -1,15 +1,17 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 @Mod.EventBusSubscriber
 public class PowerScaleRegenProcedure {
@@ -27,32 +29,45 @@ public class PowerScaleRegenProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer > 0) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).powerTimer
-							- (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power_recovery_multiplier;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.powerTimer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier;
+					_vars.syncPlayerVariables(entity);
 				}
 			} else {
 				{
-					double _setval = 50;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.powerTimer = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.powerTimer = 50;
+					_vars.syncPlayerVariables(entity);
 				}
-				if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power < (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null)
-						.orElse(new PowerModVariables.PlayerVariables())).max_power) {
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power < entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power) {
 					{
-						double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power + 5;
-						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-							capability.power = _setval;
-							capability.syncPlayerVariables(entity);
-						});
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
+						_vars.syncPlayerVariables(entity);
+					}
+				}
+			}
+		} else if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STAR_REGENERATION.get())) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.powerTimer = entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer - entity.getData(PowerModVariables.PLAYER_VARIABLES).power_recovery_multiplier;
+					_vars.syncPlayerVariables(entity);
+				}
+			} else {
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.powerTimer = 50;
+					_vars.syncPlayerVariables(entity);
+				}
+				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power < entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power + 5;
+						_vars.syncPlayerVariables(entity);
 					}
 				}
 			}

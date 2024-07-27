@@ -12,31 +12,31 @@
     "recipeShapeless": false,
     "recipeSlots": [
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       },
       {
-        "value": "PowerModItems.RAW_DEPLETED_ENERGIUM"
+        "value": "CUSTOM:RawDepletedEnergium"
       }
     ],
     "recipeReturnStack": {

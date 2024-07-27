@@ -9,11 +9,9 @@ public class OpenWheelThreeProcedure {
 		if (entity == null)
 			return;
 		{
-			boolean _setval = true;
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.third_wheel_open_var = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.third_wheel_open_var = true;
+			_vars.syncPlayerVariables(entity);
 		}
 	}
 }

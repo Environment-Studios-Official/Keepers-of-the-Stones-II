@@ -4,10 +4,10 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.RegisterParticleProvidersEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.RegisterParticleProvidersEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.particle.VacuumParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.TimeStopParticle;
@@ -19,12 +19,19 @@ import com.esmods.keepersofthestonestwo.client.particle.SunParticlesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.StarParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
+import com.esmods.keepersofthestonestwo.client.particle.RedMagnetParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.MushroomSporesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergiumGolemCoreAttackParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.BlueMagnetParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.BloodSplashParticle;
 import com.esmods.keepersofthestonestwo.client.particle.BassBoomParticle;
+import com.esmods.keepersofthestonestwo.client.particle.AmberPowerParticle;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class PowerModParticles {
@@ -46,5 +53,12 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.TECHNOBARRIER_PARTICLE.get(), TechnobarrierParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.TELEPORTATION_PARTICLE.get(), TeleportationParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.ENERGIUM_GOLEM_CORE_ATTACK_PARTICLE.get(), EnergiumGolemCoreAttackParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.AMBER_POWER.get(), AmberPowerParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.BLOOD_SPLASH.get(), BloodSplashParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.MIST_PARTICLE.get(), MistParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.POISON_PARTICLE.get(), PoisonParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.BLUE_MAGNET_PARTICLE.get(), BlueMagnetParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.RED_MAGNET_PARTICLE.get(), RedMagnetParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.MUSHROOM_SPORES.get(), MushroomSporesParticle::provider);
 	}
 }

@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[2,)"
 license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.22"
+version="1.0.0.34"
 displayName="Keepers of the Stones II"
 updateJSONURL="https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
@@ -17,47 +17,90 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # End of user code block mod configuration
 
 [[dependencies.power]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.4.223,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.power]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1]"
+    type="required"
+    versionRange="[1.20.4]"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.power]]
+    modId="pehkui"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="kleiders_custom_renderer"
+    type="required"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
     modId="geckolib"
-    mandatory=true
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-
-[[dependencies.power]]
-    modId="bettercombat"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="geckolib"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="epicfight"
-    mandatory=false
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    mandatory=false
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
-    modId="cloth-config"
-    mandatory=false
+    modId="particlepresets"
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="kleidersplayerrenderer"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="pehkui"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="bettercombat"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="geckolib"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="playeranimator"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="particlepresets"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.power]]
+    modId="cpapi"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"

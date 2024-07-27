@@ -4,7 +4,7 @@
   "definition": {
     "name": "KotS: Items",
     "icon": {
-      "value": "CUSTOM:EmptyBattery"
+      "value": "CUSTOM:AmplifierRing"
     },
     "showSearch": false
   }

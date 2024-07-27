@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "magnet_claws",
+        "missing": "magnet_claws"
+      },
+      "name": "default"
+    }
+  }
+}

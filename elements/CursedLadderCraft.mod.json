@@ -1,0 +1,48 @@
+{
+  "_fv": 60,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Crafting",
+    "recipeRetstackSize": 3,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.0,
+    "cookingTime": 200,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "recipeSlots": [
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      },
+      {
+        "value": ""
+      },
+      {
+        "value": "CUSTOM:CursedStone"
+      }
+    ],
+    "recipeReturnStack": {
+      "value": "CUSTOM:CursedLadder"
+    },
+    "name": "cursed_ladder_craft",
+    "namespace": "mod"
+  }
+}

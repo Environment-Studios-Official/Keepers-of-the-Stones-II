@@ -1,7 +1,0 @@
-{
-  "parent": "power:custom/earth_shield",
-  "textures": {
-    "0": "power:block/earth_shield",
-    "particle": "power:item/earth_shield"
-  }
-}

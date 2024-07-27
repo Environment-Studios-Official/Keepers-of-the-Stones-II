@@ -4,17 +4,16 @@
  */
 package com.esmods.keepersofthestonestwo.init;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.client.event.EntityRenderersEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.client.renderer.entity.ThrownItemRenderer;
 
 import com.esmods.keepersofthestonestwo.client.renderer.WaterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.TurretRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.TurretProjectileRenderer;
-import com.esmods.keepersofthestonestwo.client.renderer.TeleportationGunProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SphereNothingProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
@@ -22,6 +21,9 @@ import com.esmods.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.PoisonPitRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.PoisonDropProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.PoisonBombRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MeteoriteProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.LightballProjectileRenderer;
@@ -29,6 +31,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.LavaAttackProjectileRend
 import com.esmods.keepersofthestonestwo.client.renderer.KnifeAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.IronAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.IceAttackProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.GrenadeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GrassBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.GoldAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EtherAttackProjectileRenderer;
@@ -36,11 +39,13 @@ import com.esmods.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergiumGolemRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DestructionBallProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.CursedKeeperRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobblestoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CobbledDeepslateAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BlackHoleRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.BallLightningProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.AtomicRocketRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystClusterAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.AmethystAttackProjectileRenderer;
 
@@ -80,6 +85,11 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.ENERGIUM_GOLEM.get(), EnergiumGolemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TURRET.get(), TurretRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.TURRET_PROJECTILE.get(), TurretProjectileRenderer::new);
-		event.registerEntityRenderer(PowerModEntities.TELEPORTATION_GUN_PROJECTILE.get(), TeleportationGunProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.ATOMIC_ROCKET.get(), AtomicRocketRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.GRENADE.get(), GrenadeRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISON_DROP_PROJECTILE.get(), PoisonDropProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISON_BOMB.get(), PoisonBombRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.POISON_PIT.get(), PoisonPitRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
 	}
 }

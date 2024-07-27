@@ -33,12 +33,12 @@
         "subtract": false
       }
     ],
-    "name": "Raw Depleted Energium Block",
+    "name": "Block of Raw Depleted Energium",
     "specialInformation": {
       "fixedValue": []
     },
     "hardness": 6.75,
-    "resistance": 250.0,
+    "resistance": 5.0,
     "hasGravity": false,
     "isWaterloggable": false,
     "creativeTab": {

@@ -1,18 +1,18 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -28,6 +28,7 @@ public class EnergiumGolemHandsAttackProcedure {
 		double YPar = 0;
 		double Range = 0;
 		double ZPar = 0;
+		Entity energium_golem = null;
 		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof EnergiumGolemEntity) {
@@ -62,9 +63,9 @@ public class EnergiumGolemHandsAttackProcedure {
 			if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 9) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}
@@ -77,13 +78,10 @@ public class EnergiumGolemHandsAttackProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
-							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK),
-									((Entity) world.getEntitiesOfClass(EnergiumGolemEntity.class, AABB.ofSize(new Vec3(XPar, YPar, ZPar), 1, 1, 1), e -> true).stream().sorted(new Object() {
-										Comparator<Entity> compareDistOf(double _x, double _y, double _z) {
-											return Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_x, _y, _z));
-										}
-									}.compareDistOf(XPar, YPar, ZPar)).findFirst().orElse(null))), 12);
-							entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.35), 0.25, (entity.getLookAngle().z * 0.35)));
+							if (!(entityiterator instanceof ItemEntity)) {
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:energium_golem_ds")))), 12);
+								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 1.25, (entity.getLookAngle().z * 0.5)));
+							}
 						}
 					}
 				}

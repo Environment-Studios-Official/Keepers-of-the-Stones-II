@@ -1,0 +1,25 @@
+{
+  "_fv": 60,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.TNT"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 7.0,
+    "knockback": 0,
+    "entityModel": "Modelgrenade",
+    "customModelTexture": "grenade.png",
+    "onHitsBlock": {
+      "name": "LiitleExplosion"
+    },
+    "onHitsEntity": {
+      "name": "LiitleExplosion"
+    }
+  }
+}

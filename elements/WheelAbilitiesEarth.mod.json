@@ -29,7 +29,7 @@
             "name": "OpenWheelOne"
           },
           "displayCondition": {
-            "name": "GetWheelTwo"
+            "name": "GetWheelTwoOrFirstFake"
           },
           "x": 258,
           "y": 178
@@ -70,6 +70,54 @@
       {
         "type": "imagebutton",
         "data": {
+          "name": "imagebutton_fake_wheel_button_1",
+          "image": "fake_wheel_button_1.png",
+          "hoveredImage": "fake_wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelOne"
+          },
+          "x": 258,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_2",
+          "image": "fake_wheel_button_2.png",
+          "hoveredImage": "fake_wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelSecond"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelTwo"
+          },
+          "x": 270,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_3",
+          "image": "fake_wheel_button_3.png",
+          "hoveredImage": "fake_wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelThird"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelThird"
+          },
+          "x": 282,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
           "name": "imagebutton_earth_block_attack",
           "image": "earth_block_attack.png",
           "hoveredImage": "earth_block_attack_highlight.png",
@@ -94,19 +142,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_earth_shield",
-          "image": "earth_shield.png",
-          "hoveredImage": "earth_shield_highlight.png",
-          "onClick": {
-            "name": "Attack11"
-          },
-          "x": 190,
-          "y": 158
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_earth_block_attack_uses_15_powe",
@@ -124,7 +159,7 @@
         "data": {
           "name": "tooltip_stalagmite_piercinguses_35_powe",
           "text": {
-            "fixedValue": "Stalagmite piercing.uses, 40"
+            "fixedValue": "Stalagmite piercing, uses 40"
           },
           "width": 24,
           "height": 24,
@@ -133,16 +168,29 @@
         }
       },
       {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_earthquake",
+          "image": "earthquake.png",
+          "hoveredImage": "earthquake_highlight.png",
+          "onClick": {
+            "name": "Attack11"
+          },
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_earth_shielduses_45power_point",
+          "name": "tooltip_earthquakeuses_70",
           "text": {
-            "fixedValue": "Earth shield.uses, 45"
+            "fixedValue": "Earthquake, uses 70"
           },
           "width": 24,
           "height": 24,
           "x": 200,
-          "y": 171
+          "y": 170
         }
       }
     ],
@@ -151,7 +199,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": false
+      "snapOnGrid": true
     }
   }
 }

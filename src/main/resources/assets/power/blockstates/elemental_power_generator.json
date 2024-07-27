@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "blockstate=0": {
+      "model": "power:block/elemental_power_generator"
+    },
+    "blockstate=1": {
+      "model": "power:block/elemental_power_generator_blockstate_blockstate_0"
+    }
+  }
+}

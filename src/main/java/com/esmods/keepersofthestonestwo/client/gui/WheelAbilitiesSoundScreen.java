@@ -1,11 +1,14 @@
 package com.esmods.keepersofthestonestwo.client.gui;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
+import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -15,9 +18,12 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSoundMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesSoundButtonMessage;
-import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbilitiesSoundMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesSoundMenu.guistate;
@@ -27,6 +33,9 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_fake_wheel_button_1;
+	ImageButton imagebutton_fake_wheel_button_2;
+	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_sound_wave;
 	ImageButton imagebutton_sound_bomb;
 	ImageButton imagebutton_sound_boom;
@@ -44,7 +53,7 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics);
+		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46)
@@ -76,81 +85,142 @@ public class WheelAbilitiesSoundScreen extends AbstractContainerScreen<WheelAbil
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 	}
 
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(0, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(0, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
-				if (GetWheelTwoProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
-			if (GetWheelTwoProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(1, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 1, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+					if (GetWheelTwoProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(1, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 1, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelTwoProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
-			if (GetWheelThreeProcedure.execute(entity)) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(2, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 2, x, y, z);
-			}
-		}) {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+					if (GetWheelThreeProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(2, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 2, x, y, z);
+					}
+				}) {
 			@Override
-			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
 				if (GetWheelThreeProcedure.execute(entity))
-					super.render(guiGraphics, gx, gy, ticks);
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_sound_wave = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_wave.png"), 46, 92, e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(3, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 3, x, y, z);
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+					if (GetFakeWheelOneProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(3, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelOneProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+					if (GetFakeWheelTwoProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(4, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelTwoProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+					if (GetFakeWheelThirdProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(5, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelThirdProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
+		imagebutton_sound_wave = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/sound_wave.png"), new ResourceLocation("power:textures/screens/sound_wave_highlight.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(6, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 6, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
 		guistate.put("button:imagebutton_sound_wave", imagebutton_sound_wave);
 		this.addRenderableWidget(imagebutton_sound_wave);
-		imagebutton_sound_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_bomb.png"), 46, 92, e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(4, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 4, x, y, z);
+		imagebutton_sound_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/sound_bomb.png"), new ResourceLocation("power:textures/screens/sound_bomb_highlight.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(7, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 7, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_sound_bomb", imagebutton_sound_bomb);
 		this.addRenderableWidget(imagebutton_sound_bomb);
-		imagebutton_sound_boom = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_sound_boom.png"), 46, 92, e -> {
-			if (true) {
-				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSoundButtonMessage(5, x, y, z));
-				WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 5, x, y, z);
+		imagebutton_sound_boom = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/sound_boom.png"), new ResourceLocation("power:textures/screens/sound_boom_highlight.png")),
+				e -> {
+					if (true) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSoundButtonMessage(8, x, y, z));
+						WheelAbilitiesSoundButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
-		});
+		};
 		guistate.put("button:imagebutton_sound_boom", imagebutton_sound_boom);
 		this.addRenderableWidget(imagebutton_sound_boom);
 	}

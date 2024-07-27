@@ -60,7 +60,7 @@
     "onRightClickedInAir": {
       "name": "BloodStoneUse"
     },
-    "onEntitySwing": {
+    "onItemInInventoryTick": {
       "name": "RechargeStoneTickEvent"
     },
     "enableRanged": false,
