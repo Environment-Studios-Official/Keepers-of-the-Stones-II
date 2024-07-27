@@ -7,6 +7,7 @@ import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -27,7 +28,7 @@ public class BatteryChargerTickProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == BuiltInRegistries.ITEM.get(new ResourceLocation(((("_stone".replace(BuiltInRegistries.ITEM.getKey((new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == BuiltInRegistries.ITEM.get(new ResourceLocation((((BuiltInRegistries.ITEM.getKey((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -36,7 +37,16 @@ public class BatteryChargerTickProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString(), "")) + "_stone")).toLowerCase(java.util.Locale.ENGLISH))) && (new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString()).contains("_stone") ? BuiltInRegistries.ITEM.getKey((new Object() {
+			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+				if (world instanceof ILevelExtension _ext) {
+					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+					if (_itemHandler != null)
+						return _itemHandler.getStackInSlot(slotid).copy();
+				}
+				return ItemStack.EMPTY;
+			}
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString() : BuiltInRegistries.ITEM.getKey(Blocks.AIR.asItem()).toString())).toLowerCase(java.util.Locale.ENGLISH))).asItem() && (new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -55,65 +65,138 @@ public class BatteryChargerTickProcedure {
 				return 0;
 			}
 		}.getAmount(world, BlockPos.containing(x, y, z), 2) == 0) {
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("craftingTime", 3000);
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (!world.isClientSide()) {
-				BlockPos _bp = BlockPos.containing(x, y, z);
-				BlockEntity _blockEntity = world.getBlockEntity(_bp);
-				BlockState _bs = world.getBlockState(_bp);
-				if (_blockEntity != null)
-					_blockEntity.getPersistentData().putDouble("craftingProgress", (new Object() {
-						public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-							BlockEntity blockEntity = world.getBlockEntity(pos);
-							if (blockEntity != null)
-								return blockEntity.getPersistentData().getDouble(tag);
-							return -1;
-						}
-					}.getValue(world, BlockPos.containing(x, y, z), "craftingProgress") + 1));
-				if (world instanceof Level _level)
-					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
-			}
-			if (new Object() {
-				public double getValue(LevelAccessor world, BlockPos pos, String tag) {
-					BlockEntity blockEntity = world.getBlockEntity(pos);
-					if (blockEntity != null)
-						return blockEntity.getPersistentData().getDouble(tag);
-					return -1;
+			if (!((new Object() {
+				public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+					if (world instanceof ILevelExtension _ext) {
+						IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+						if (_itemHandler != null)
+							return _itemHandler.getStackInSlot(slotid).copy();
+					}
+					return ItemStack.EMPTY;
 				}
-			}.getValue(world, BlockPos.containing(x, y, z), "craftingProgress") >= 3000) {
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					int _slotid = 0;
-					ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
-					_stk.shrink(1);
-					_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
-				}
-				if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
-					ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation(((("_stone".replace(BuiltInRegistries.ITEM.getKey((new Object() {
-						public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-							if (world instanceof ILevelExtension _ext) {
-								IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-								if (_itemHandler != null)
-									return _itemHandler.getStackInSlot(slotid).copy();
-							}
-							return ItemStack.EMPTY;
-						}
-					}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString(), "")) + "_battery")).toLowerCase(java.util.Locale.ENGLISH)))).copy();
-					_setstack.setCount(1);
-					_itemHandlerModifiable.setStackInSlot(2, _setstack);
+			}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == Blocks.AIR.asItem())) {
+				if ((new Object() {
+					public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getString(tag);
+						return "";
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "inputStoneSlot")).equals("")) {
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("inputStoneSlot", ((BuiltInRegistries.ITEM.getKey((new Object() {
+								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+									if (world instanceof ILevelExtension _ext) {
+										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+										if (_itemHandler != null)
+											return _itemHandler.getStackInSlot(slotid).copy();
+									}
+									return ItemStack.EMPTY;
+								}
+							}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString()).contains("_stone") ? BuiltInRegistries.ITEM.getKey((new Object() {
+								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+									if (world instanceof ILevelExtension _ext) {
+										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+										if (_itemHandler != null)
+											return _itemHandler.getStackInSlot(slotid).copy();
+									}
+									return ItemStack.EMPTY;
+								}
+							}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString() : ""));
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
 				}
 				if (!world.isClientSide()) {
 					BlockPos _bp = BlockPos.containing(x, y, z);
 					BlockEntity _blockEntity = world.getBlockEntity(_bp);
 					BlockState _bs = world.getBlockState(_bp);
 					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("craftingTime", 100);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putDouble("craftingProgress", (new Object() {
+							public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getDouble(tag);
+								return -1;
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "craftingProgress") + 1));
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (new Object() {
+					public double getValue(LevelAccessor world, BlockPos pos, String tag) {
+						BlockEntity blockEntity = world.getBlockEntity(pos);
+						if (blockEntity != null)
+							return blockEntity.getPersistentData().getDouble(tag);
+						return -1;
+					}
+				}.getValue(world, BlockPos.containing(x, y, z), "craftingProgress") >= 100) {
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						int _slotid = 0;
+						ItemStack _stk = _itemHandlerModifiable.getStackInSlot(_slotid).copy();
+						_stk.shrink(1);
+						_itemHandlerModifiable.setStackInSlot(_slotid, _stk);
+					}
+					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
+						ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((((new Object() {
+							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
+								BlockEntity blockEntity = world.getBlockEntity(pos);
+								if (blockEntity != null)
+									return blockEntity.getPersistentData().getString(tag);
+								return "";
+							}
+						}.getValue(world, BlockPos.containing(x, y, z), "inputStoneSlot")).replace("_stone", "_battery"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
+						_setstack.setCount(1);
+						_itemHandlerModifiable.setStackInSlot(2, _setstack);
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putDouble("craftingProgress", 0);
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+					if (!world.isClientSide()) {
+						BlockPos _bp = BlockPos.containing(x, y, z);
+						BlockEntity _blockEntity = world.getBlockEntity(_bp);
+						BlockState _bs = world.getBlockState(_bp);
+						if (_blockEntity != null)
+							_blockEntity.getPersistentData().putString("inputStoneSlot", "");
+						if (world instanceof Level _level)
+							_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+					}
+				}
+			} else {
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
 						_blockEntity.getPersistentData().putDouble("craftingProgress", 0);
+					if (world instanceof Level _level)
+						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+				}
+				if (!world.isClientSide()) {
+					BlockPos _bp = BlockPos.containing(x, y, z);
+					BlockEntity _blockEntity = world.getBlockEntity(_bp);
+					BlockState _bs = world.getBlockState(_bp);
+					if (_blockEntity != null)
+						_blockEntity.getPersistentData().putString("inputStoneSlot", "");
 					if (world instanceof Level _level)
 						_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 				}
@@ -125,6 +208,15 @@ public class BatteryChargerTickProcedure {
 				BlockState _bs = world.getBlockState(_bp);
 				if (_blockEntity != null)
 					_blockEntity.getPersistentData().putDouble("craftingProgress", 0);
+				if (world instanceof Level _level)
+					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
+			}
+			if (!world.isClientSide()) {
+				BlockPos _bp = BlockPos.containing(x, y, z);
+				BlockEntity _blockEntity = world.getBlockEntity(_bp);
+				BlockState _bs = world.getBlockState(_bp);
+				if (_blockEntity != null)
+					_blockEntity.getPersistentData().putString("inputStoneSlot", "");
 				if (world instanceof Level _level)
 					_level.sendBlockUpdated(_bp, _bs, _bs, 3);
 			}

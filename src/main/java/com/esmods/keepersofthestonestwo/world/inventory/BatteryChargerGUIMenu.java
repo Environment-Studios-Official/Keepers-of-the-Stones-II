@@ -1,12 +1,15 @@
 
 package com.esmods.keepersofthestonestwo.world.inventory;
 
+import net.neoforged.neoforge.items.wrapper.InvWrapper;
 import net.neoforged.neoforge.items.SlotItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
+import net.neoforged.neoforge.items.IItemHandlerModifiable;
 import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.capabilities.Capabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -76,34 +79,25 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 				}
 			} else { // might be bound to block
 				boundBlockEntity = this.world.getBlockEntity(pos);
-				if (boundBlockEntity != null) {
-					IItemHandler cap = this.world.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
-					if (cap != null) {
-						this.internal = cap;
-						this.bound = true;
-					}
+				if (boundBlockEntity instanceof BaseContainerBlockEntity baseContainerBlockEntity) {
+					this.internal = new InvWrapper(baseContainerBlockEntity);
+					this.bound = true;
 				}
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 56, 59) {
-			private final int slot = 0;
-
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return PowerModItems.EMPTY_BATTERY.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 104, 59) {
-			private final int slot = 1;
-
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return stack.is(ItemTags.create(new ResourceLocation("power:elemental_stones")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 35) {
-			private final int slot = 2;
-
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
@@ -235,7 +229,9 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 						continue;
 					if (j == 2)
 						continue;
-					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
+					playerIn.drop(internal.getStackInSlot(j), false);
+					if (internal instanceof IItemHandlerModifiable ihm)
+						ihm.setStackInSlot(j, ItemStack.EMPTY);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
@@ -245,7 +241,9 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 						continue;
 					if (i == 2)
 						continue;
-					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
+					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
+					if (internal instanceof IItemHandlerModifiable ihm)
+						ihm.setStackInSlot(i, ItemStack.EMPTY);
 				}
 			}
 		}
