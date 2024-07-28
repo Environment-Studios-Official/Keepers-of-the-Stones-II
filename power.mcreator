@@ -61,9 +61,9 @@
       "registry_name": "fire_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/fire_stone_0.json",
           "src/main/resources/assets/power/models/item/fire_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FireStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FireStoneItem.java",
+          "src/main/resources/assets/power/models/item/fire_stone_0.json"
         ]
       },
       "path": "~/Elements/Fire"
@@ -93,9 +93,9 @@
       "registry_name": "earth_stone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/earth_stone_0.json",
           "src/main/resources/assets/power/models/item/earth_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthStoneItem.java",
-          "src/main/resources/assets/power/models/item/earth_stone_0.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthStoneItem.java"
         ]
       },
       "path": "~/Elements/Earth"
@@ -109,9 +109,9 @@
       "registry_name": "water_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/water_stone.json",
           "src/main/resources/assets/power/models/item/water_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/WaterStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/WaterStoneItem.java",
+          "src/main/resources/assets/power/models/item/water_stone.json"
         ]
       },
       "path": "~/Elements/Water"
@@ -137,9 +137,9 @@
       "registry_name": "ether_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/ether_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/EtherStoneItem.java",
-          "src/main/resources/assets/power/models/item/ether_stone.json"
+          "src/main/resources/assets/power/models/item/ether_stone.json",
+          "src/main/resources/assets/power/models/item/ether_stone_0.json"
         ]
       },
       "path": "~/Elements/Ether"
@@ -393,11 +393,11 @@
       "registry_name": "fire_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/fire_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FireArmorItem.java",
           "src/main/resources/assets/power/models/item/fire_armor_helmet.json",
           "src/main/resources/assets/power/models/item/fire_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/fire_armor_chestplate.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FireArmorItem.java",
+          "src/main/resources/assets/power/models/item/fire_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/fire_armor_boots.json"
         ]
       },
       "path": "~/Elements/Fire"
@@ -525,10 +525,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/air_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/air_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/air_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AirArmorItem.java",
-          "src/main/resources/assets/power/models/item/air_armor_helmet.json"
+          "src/main/resources/assets/power/models/item/air_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/air_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AirArmorItem.java"
         ]
       },
       "path": "~/Elements/Air"
@@ -834,8 +834,8 @@
       "registry_name": "air_rapier",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/air_rapier.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AirRapierItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AirRapierItem.java",
+          "src/main/resources/assets/power/models/item/air_rapier.json"
         ]
       },
       "path": "~/Elements/Air"
@@ -869,9 +869,9 @@
       "registry_name": "wheel_abilities_fire",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesFireMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesFireScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesFireButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesFireMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesFireButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Fire"
@@ -979,9 +979,9 @@
       "registry_name": "wheel_abilities_air",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesAirScreen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesAirMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAirButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesAirScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAirButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Air"
@@ -1035,11 +1035,11 @@
       "registry_name": "earth_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/earth_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthArmorItem.java",
           "src/main/resources/assets/power/models/item/earth_armor_helmet.json",
           "src/main/resources/assets/power/models/item/earth_armor_boots.json",
           "src/main/resources/assets/power/models/item/earth_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthArmorItem.java"
+          "src/main/resources/assets/power/models/item/earth_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Earth"
@@ -1628,8 +1628,8 @@
       "registry_name": "water_katana",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/WaterKatanaItem.java",
-          "src/main/resources/assets/power/models/item/water_katana.json"
+          "src/main/resources/assets/power/models/item/water_katana.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/WaterKatanaItem.java"
         ]
       },
       "path": "~/Elements/Water"
@@ -1807,11 +1807,11 @@
       "registry_name": "water_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/water_armor_boots.json",
           "src/main/resources/assets/power/models/item/water_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/water_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/water_armor_boots.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/WaterArmorItem.java",
-          "src/main/resources/assets/power/models/item/water_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/water_armor_leggings.json"
+          "src/main/resources/assets/power/models/item/water_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Water"
@@ -2137,8 +2137,8 @@
       "registry_name": "ether_glaive",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EtherGlaiveItem.java",
-          "src/main/resources/assets/power/models/item/ether_glaive.json"
+          "src/main/resources/assets/power/models/item/ether_glaive.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EtherGlaiveItem.java"
         ]
       },
       "path": "~/Elements/Ether"
@@ -2173,10 +2173,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/ether_armor_boots.json",
-          "src/main/resources/assets/power/models/item/ether_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/ether_armor_leggings.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/EtherArmorItem.java",
-          "src/main/resources/assets/power/models/item/ether_armor_helmet.json"
+          "src/main/resources/assets/power/models/item/ether_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/ether_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/ether_armor_chestplate.json"
         ]
       },
       "path": "~/Elements/Ether"
@@ -2383,8 +2383,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesWaterMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesWaterButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesWaterScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesWaterScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesWaterButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Water"
@@ -2398,9 +2398,9 @@
       "registry_name": "wheel_abilities_earth",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesEarthScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesEarthMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesEarthButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesEarthMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesEarthScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Earth"
@@ -2544,9 +2544,9 @@
       "registry_name": "ice_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/IceStoneItem.java",
+          "src/main/resources/assets/power/models/item/ice_stone.json",
           "src/main/resources/assets/power/models/item/ice_stone_0.json",
-          "src/main/resources/assets/power/models/item/ice_stone.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/IceStoneItem.java"
         ]
       },
       "path": "~/Elements/Ice"
@@ -2574,11 +2574,11 @@
       "registry_name": "ice_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/ice_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/IceArmorItem.java",
-          "src/main/resources/assets/power/models/item/ice_armor_helmet.json",
           "src/main/resources/assets/power/models/item/ice_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/ice_armor_boots.json"
+          "src/main/resources/assets/power/models/item/ice_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/ice_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/IceArmorItem.java",
+          "src/main/resources/assets/power/models/item/ice_armor_chestplate.json"
         ]
       },
       "path": "~/Elements/Ice"
@@ -2896,9 +2896,9 @@
         "files": [
           "src/main/resources/assets/power/models/item/lightning_armor_boots.json",
           "src/main/resources/assets/power/models/item/lightning_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LightningArmorItem.java",
           "src/main/resources/assets/power/models/item/lightning_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/lightning_armor_leggings.json"
+          "src/main/resources/assets/power/models/item/lightning_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LightningArmorItem.java"
         ]
       },
       "path": "~/Elements/Lightning"
@@ -3229,8 +3229,8 @@
       "registry_name": "stone_attack_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/StoneAttackProjectileEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/StoneAttackProjectileRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/StoneAttackProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/StoneAttackProjectileEntity.java"
         ]
       },
       "path": "~/Elements/Earth"
@@ -3289,8 +3289,8 @@
       "registry_name": "cobbled_deepslate_attack_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CobbledDeepslateAttackProjectileRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/CobbledDeepslateAttackProjectileEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/CobbledDeepslateAttackProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CobbledDeepslateAttackProjectileRenderer.java"
         ]
       },
       "path": "~/Elements/Earth"
@@ -3304,8 +3304,8 @@
       "registry_name": "water_attack_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/WaterAttackProjectileEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WaterAttackProjectileRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WaterAttackProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/WaterAttackProjectileEntity.java"
         ]
       },
       "path": "~/Elements/Water"
@@ -3335,8 +3335,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/sound_stone_0.json",
-          "src/main/resources/assets/power/models/item/sound_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SoundStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SoundStoneItem.java",
+          "src/main/resources/assets/power/models/item/sound_stone.json"
         ]
       },
       "path": "~/Elements/Sound"
@@ -3364,10 +3364,10 @@
       "registry_name": "sound_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sound_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SoundArmorItem.java",
-          "src/main/resources/assets/power/models/item/sound_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/sound_armor_helmet.json",
           "src/main/resources/assets/power/models/item/sound_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/sound_armor_leggings.json",
           "src/main/resources/assets/power/models/item/sound_armor_boots.json"
         ]
       },
@@ -3670,8 +3670,8 @@
       "registry_name": "ice_attack_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/IceAttackProjectileRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/IceAttackProjectileEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/IceAttackProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/IceAttackProjectileRenderer.java"
         ]
       },
       "path": "~/Elements/Ice"
@@ -3733,10 +3733,10 @@
       "registry_name": "crystal_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/crystal_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalArmorItem.java",
           "src/main/resources/assets/power/models/item/crystal_armor_boots.json",
           "src/main/resources/assets/power/models/item/crystal_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalArmorItem.java",
+          "src/main/resources/assets/power/models/item/crystal_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/crystal_armor_leggings.json"
         ]
       },
@@ -3943,9 +3943,9 @@
       "registry_name": "wheel_abilities_crystal",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesCrystalButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesCrystalMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesCrystalScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesCrystalMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesCrystalButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Crystal"
@@ -4040,8 +4040,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/lava_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LavaStoneItem.java",
-          "src/main/resources/assets/power/models/item/lava_stone.json"
+          "src/main/resources/assets/power/models/item/lava_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LavaStoneItem.java"
         ]
       },
       "path": "~/Elements/Lava"
@@ -4055,11 +4055,11 @@
       "registry_name": "lava_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/lava_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/lava_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/lava_armor_boots.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/LavaArmorItem.java",
           "src/main/resources/assets/power/models/item/lava_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/lava_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/lava_armor_boots.json"
+          "src/main/resources/assets/power/models/item/lava_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Lava"
@@ -4279,9 +4279,9 @@
       "registry_name": "wheel_abilities_lava",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesLavaButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesLavaMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesLavaScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesLavaButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesLavaScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Lava"
@@ -4389,9 +4389,9 @@
       "registry_name": "rain_stone",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/rain_stone.json",
           "src/main/resources/assets/power/models/item/rain_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/RainStoneItem.java",
-          "src/main/resources/assets/power/models/item/rain_stone.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/RainStoneItem.java"
         ]
       },
       "path": "~/Elements/Rain"
@@ -4421,9 +4421,9 @@
       "registry_name": "ocean_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanStoneItem.java",
           "src/main/resources/assets/power/models/item/ocean_stone.json",
-          "src/main/resources/assets/power/models/item/ocean_stone_0.json"
+          "src/main/resources/assets/power/models/item/ocean_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanStoneItem.java"
         ]
       },
       "path": "~/Elements/Ocean"
@@ -4453,9 +4453,9 @@
       "registry_name": "animals_stone",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AnimalsStoneItem.java",
           "src/main/resources/assets/power/models/item/animals_stone.json",
-          "src/main/resources/assets/power/models/item/animals_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AnimalsStoneItem.java"
+          "src/main/resources/assets/power/models/item/animals_stone_0.json"
         ]
       },
       "path": "~/Elements/Animals"
@@ -4469,9 +4469,9 @@
       "registry_name": "metal_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/metal_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MetalStoneItem.java",
           "src/main/resources/assets/power/models/item/metal_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MetalStoneItem.java"
+          "src/main/resources/assets/power/models/item/metal_stone_0.json"
         ]
       },
       "path": "~/Elements/Metal"
@@ -4485,9 +4485,9 @@
       "registry_name": "light_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/light_stone.json",
           "src/main/resources/assets/power/models/item/light_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LightStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LightStoneItem.java",
+          "src/main/resources/assets/power/models/item/light_stone.json"
         ]
       },
       "path": "~/Elements/Light"
@@ -4501,8 +4501,8 @@
       "registry_name": "shadow_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/ShadowStoneItem.java",
           "src/main/resources/assets/power/models/item/shadow_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ShadowStoneItem.java",
           "src/main/resources/assets/power/models/item/shadow_stone_0.json"
         ]
       },
@@ -4517,9 +4517,9 @@
       "registry_name": "vacuum_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/vacuum_stone.json",
           "src/main/resources/assets/power/models/item/vacuum_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumStoneItem.java",
+          "src/main/resources/assets/power/models/item/vacuum_stone.json"
         ]
       },
       "path": "~/Elements/Vacuum"
@@ -4533,9 +4533,9 @@
       "registry_name": "sun_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sun_stone_0.json",
+          "src/main/resources/assets/power/models/item/sun_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SunStoneItem.java",
-          "src/main/resources/assets/power/models/item/sun_stone.json"
+          "src/main/resources/assets/power/models/item/sun_stone_0.json"
         ]
       },
       "path": "~/Elements/Sun"
@@ -4549,9 +4549,9 @@
       "registry_name": "moon_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/moon_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MoonStoneItem.java",
-          "src/main/resources/assets/power/models/item/moon_stone.json"
+          "src/main/resources/assets/power/models/item/moon_stone.json",
+          "src/main/resources/assets/power/models/item/moon_stone_0.json"
         ]
       },
       "path": "~/Elements/Moon"
@@ -4565,9 +4565,9 @@
       "registry_name": "space_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/space_stone.json",
           "src/main/resources/assets/power/models/item/space_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceStoneItem.java",
+          "src/main/resources/assets/power/models/item/space_stone.json"
         ]
       },
       "path": "~/Elements/Space"
@@ -4581,9 +4581,9 @@
       "registry_name": "time_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TimeStoneItem.java",
           "src/main/resources/assets/power/models/item/time_stone.json",
-          "src/main/resources/assets/power/models/item/time_stone_0.json"
+          "src/main/resources/assets/power/models/item/time_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TimeStoneItem.java"
         ]
       },
       "path": "~/Elements/Time"
@@ -4597,9 +4597,9 @@
       "registry_name": "blood_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodStoneItem.java",
           "src/main/resources/assets/power/models/item/blood_stone.json",
-          "src/main/resources/assets/power/models/item/blood_stone_0.json"
+          "src/main/resources/assets/power/models/item/blood_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodStoneItem.java"
         ]
       },
       "path": "~/Elements/Blood"
@@ -4614,8 +4614,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/TechnologyStoneItem.java",
-          "src/main/resources/assets/power/models/item/technology_stone.json",
-          "src/main/resources/assets/power/models/item/technology_stone_0.json"
+          "src/main/resources/assets/power/models/item/technology_stone_0.json",
+          "src/main/resources/assets/power/models/item/technology_stone.json"
         ]
       },
       "path": "~/Elements/Technology"
@@ -4629,9 +4629,9 @@
       "registry_name": "teleportation_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/teleportation_stone_0.json",
           "src/main/resources/assets/power/models/item/teleportation_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationStoneItem.java",
+          "src/main/resources/assets/power/models/item/teleportation_stone_0.json"
         ]
       },
       "path": "~/Elements/Teleportation"
@@ -4661,9 +4661,9 @@
       "registry_name": "amber_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberStoneItem.java",
           "src/main/resources/assets/power/models/item/amber_stone.json",
-          "src/main/resources/assets/power/models/item/amber_stone_0.json"
+          "src/main/resources/assets/power/models/item/amber_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberStoneItem.java"
         ]
       },
       "path": "~/Elements/Amber"
@@ -4677,9 +4677,9 @@
       "registry_name": "creation_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CreationStoneItem.java",
           "src/main/resources/assets/power/models/item/creation_stone.json",
-          "src/main/resources/assets/power/models/item/creation_stone_0.json"
+          "src/main/resources/assets/power/models/item/creation_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CreationStoneItem.java"
         ]
       },
       "path": "~/Elements/Creation"
@@ -4709,8 +4709,8 @@
       "registry_name": "mist_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mist_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MistStoneItem.java",
+          "src/main/resources/assets/power/models/item/mist_stone_0.json",
           "src/main/resources/assets/power/models/item/mist_stone.json"
         ]
       },
@@ -4725,9 +4725,9 @@
       "registry_name": "sand_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sand_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SandStoneItem.java",
           "src/main/resources/assets/power/models/item/sand_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SandStoneItem.java"
+          "src/main/resources/assets/power/models/item/sand_stone.json"
         ]
       },
       "path": "~/Elements/Sand"
@@ -4757,9 +4757,9 @@
       "registry_name": "poison_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/poison_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonStoneItem.java",
-          "src/main/resources/assets/power/models/item/poison_stone_0.json"
+          "src/main/resources/assets/power/models/item/poison_stone_0.json",
+          "src/main/resources/assets/power/models/item/poison_stone.json"
         ]
       },
       "path": "~/Elements/Poison"
@@ -4773,8 +4773,8 @@
       "registry_name": "magnet_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/magnet_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetStoneItem.java",
+          "src/main/resources/assets/power/models/item/magnet_stone.json",
           "src/main/resources/assets/power/models/item/magnet_stone_0.json"
         ]
       },
@@ -4805,9 +4805,9 @@
       "registry_name": "mercury_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mercury_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryStoneItem.java",
           "src/main/resources/assets/power/models/item/mercury_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryStoneItem.java"
+          "src/main/resources/assets/power/models/item/mercury_stone.json"
         ]
       },
       "path": "~/Elements/Mercury"
@@ -4821,9 +4821,9 @@
       "registry_name": "music_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/music_stone.json",
           "src/main/resources/assets/power/models/item/music_stone_0.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicStoneItem.java",
+          "src/main/resources/assets/power/models/item/music_stone.json"
         ]
       },
       "path": "~/Elements/Music"
@@ -4837,9 +4837,9 @@
       "registry_name": "plague_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/plague_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/PlagueStoneItem.java",
-          "src/main/resources/assets/power/models/item/plague_stone.json"
+          "src/main/resources/assets/power/models/item/plague_stone.json",
+          "src/main/resources/assets/power/models/item/plague_stone_0.json"
         ]
       },
       "path": "~/Elements/Plague"
@@ -4869,9 +4869,9 @@
       "registry_name": "gravity_stone",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/GravityStoneItem.java",
           "src/main/resources/assets/power/models/item/gravity_stone_0.json",
-          "src/main/resources/assets/power/models/item/gravity_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/GravityStoneItem.java"
+          "src/main/resources/assets/power/models/item/gravity_stone.json"
         ]
       },
       "path": "~/Elements/Gravity"
@@ -4885,9 +4885,9 @@
       "registry_name": "smoke_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/smoke_stone.json",
+          "src/main/resources/assets/power/models/item/smoke_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeStoneItem.java",
-          "src/main/resources/assets/power/models/item/smoke_stone_0.json"
+          "src/main/resources/assets/power/models/item/smoke_stone.json"
         ]
       },
       "path": "~/Elements/Smoke"
@@ -4917,9 +4917,9 @@
       "registry_name": "mind_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mind_stone_0.json",
           "src/main/resources/assets/power/models/item/mind_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MindStoneItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindStoneItem.java",
+          "src/main/resources/assets/power/models/item/mind_stone_0.json"
         ]
       },
       "path": "~/Elements/Mind"
@@ -4934,8 +4934,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/GoldenDustStoneItem.java",
-          "src/main/resources/assets/power/models/item/golden_dust_stone.json",
-          "src/main/resources/assets/power/models/item/golden_dust_stone_0.json"
+          "src/main/resources/assets/power/models/item/golden_dust_stone_0.json",
+          "src/main/resources/assets/power/models/item/golden_dust_stone.json"
         ]
       },
       "path": "~/Elements/GoldenDust"
@@ -4950,8 +4950,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/darkness_stone.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/DarknessStoneItem.java",
-          "src/main/resources/assets/power/models/item/darkness_stone_0.json"
+          "src/main/resources/assets/power/models/item/darkness_stone_0.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DarknessStoneItem.java"
         ]
       },
       "path": "~/Elements/Darkness"
@@ -4965,9 +4965,9 @@
       "registry_name": "energy_stone",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyStoneItem.java",
+          "src/main/resources/assets/power/models/item/energy_stone_0.json",
           "src/main/resources/assets/power/models/item/energy_stone.json",
-          "src/main/resources/assets/power/models/item/energy_stone_0.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyStoneItem.java"
         ]
       },
       "path": "~/Elements/Energy"
@@ -4981,8 +4981,8 @@
       "registry_name": "spirit_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/spirit_stone_0.json",
           "src/main/resources/assets/power/models/item/spirit_stone.json",
+          "src/main/resources/assets/power/models/item/spirit_stone_0.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritStoneItem.java"
         ]
       },
@@ -4997,8 +4997,8 @@
       "registry_name": "ice_spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/ice_spear.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/IceSpearItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/IceSpearItem.java",
+          "src/main/resources/assets/power/models/item/ice_spear.json"
         ]
       },
       "path": "~/Elements/Ice"
@@ -5046,11 +5046,11 @@
       "registry_name": "rain_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/rain_armor_boots.json",
+          "src/main/resources/assets/power/models/item/rain_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/RainArmorItem.java",
-          "src/main/resources/assets/power/models/item/rain_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/rain_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/rain_armor_helmet.json"
+          "src/main/resources/assets/power/models/item/rain_armor_boots.json",
+          "src/main/resources/assets/power/models/item/rain_armor_chestplate.json"
         ]
       },
       "path": "~/Elements/Rain"
@@ -5159,10 +5159,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/tornado_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TornadoArmorItem.java",
-          "src/main/resources/assets/power/models/item/tornado_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/tornado_armor_boots.json",
           "src/main/resources/assets/power/models/item/tornado_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/tornado_armor_boots.json"
+          "src/main/resources/assets/power/models/item/tornado_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TornadoArmorItem.java"
         ]
       },
       "path": "~/Elements/Tornado"
@@ -5270,11 +5270,11 @@
       "registry_name": "ocean_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/ocean_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/ocean_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/ocean_armor_boots.json",
           "src/main/resources/assets/power/models/item/ocean_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanArmorItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanArmorItem.java",
+          "src/main/resources/assets/power/models/item/ocean_armor_boots.json",
+          "src/main/resources/assets/power/models/item/ocean_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/ocean_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Ocean"
@@ -5382,10 +5382,10 @@
       "registry_name": "plants_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/plants_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/plants_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/PlantsArmorItem.java",
           "src/main/resources/assets/power/models/item/plants_armor_boots.json",
-          "src/main/resources/assets/power/models/item/plants_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/plants_armor_helmet.json",
           "src/main/resources/assets/power/models/item/plants_armor_leggings.json"
         ]
       },
@@ -5494,11 +5494,11 @@
       "registry_name": "animals_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/animals_armor_boots.json",
+          "src/main/resources/assets/power/models/item/animals_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/AnimalsArmorItem.java",
           "src/main/resources/assets/power/models/item/animals_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/animals_armor_boots.json",
-          "src/main/resources/assets/power/models/item/animals_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/animals_armor_helmet.json"
+          "src/main/resources/assets/power/models/item/animals_armor_chestplate.json"
         ]
       },
       "path": "~/Elements/Animals"
@@ -5606,11 +5606,11 @@
       "registry_name": "metal_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/metal_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/metal_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/metal_armor_boots.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MetalArmorItem.java",
           "src/main/resources/assets/power/models/item/metal_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/metal_armor_boots.json"
+          "src/main/resources/assets/power/models/item/metal_armor_chestplate.json"
         ]
       },
       "path": "~/Elements/Metal"
@@ -5704,9 +5704,9 @@
       "registry_name": "wheel_abilities_ice",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesIceScreen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesIceMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesIceButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesIceButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesIceScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Ice"
@@ -5784,8 +5784,8 @@
       "registry_name": "ball_lightning_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/BallLightningProjectileEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BallLightningProjectileRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BallLightningProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/BallLightningProjectileEntity.java"
         ]
       },
       "path": "~/Elements/Lightning"
@@ -5835,8 +5835,8 @@
       "registry_name": "bass_boom",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/particles/bass_boom.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BassBoomParticle.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BassBoomParticle.java",
+          "src/main/resources/assets/power/particles/bass_boom.json"
         ]
       },
       "path": "~/Elements/Sound"
@@ -6096,8 +6096,8 @@
       "registry_name": "sound_bomb_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/SoundBombProjectileRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/SoundBombProjectileEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/SoundBombProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/SoundBombProjectileRenderer.java"
         ]
       },
       "path": "~/Elements/Sound"
@@ -6163,8 +6163,8 @@
       "registry_name": "lightning_falchion",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/lightning_falchion.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LightningFalchionItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LightningFalchionItem.java",
+          "src/main/resources/assets/power/models/item/lightning_falchion.json"
         ]
       },
       "path": "~/Elements/Lightning"
@@ -6233,8 +6233,8 @@
       "registry_name": "crystal_knife",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/crystal_knife.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalKnifeItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalKnifeItem.java",
+          "src/main/resources/assets/power/models/item/crystal_knife.json"
         ]
       },
       "path": "~/Elements/Crystal"
@@ -6380,9 +6380,9 @@
       "registry_name": "wheel_abilities_rain",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesRainButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesRainMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesRainScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesRainScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesRainButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Rain"
@@ -6604,8 +6604,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTornadoMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTornadoButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTornadoScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTornadoScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTornadoButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Tornado"
@@ -6838,9 +6838,9 @@
       "registry_name": "wheel_abilities_ocean",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesOceanMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesOceanScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesOceanButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesOceanMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesOceanButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Ocean"
@@ -7151,9 +7151,9 @@
       "registry_name": "wheel_abilities_plants",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesPlantsScreen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesPlantsButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesPlantsMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesPlantsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesPlantsScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Plants"
@@ -7430,8 +7430,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesAnimalsScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAnimalsButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesAnimalsMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesAnimalsMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAnimalsButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Animals"
@@ -7637,8 +7637,8 @@
       "registry_name": "insects",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/InsectsParticle.java",
-          "src/main/resources/assets/power/particles/insects.json"
+          "src/main/resources/assets/power/particles/insects.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/InsectsParticle.java"
         ]
       },
       "path": "~/Elements/Animals"
@@ -8052,8 +8052,8 @@
       "registry_name": "empty_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/empty_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EmptyBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EmptyBatteryItem.java",
+          "src/main/resources/assets/power/models/item/empty_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
@@ -8095,8 +8095,8 @@
       "registry_name": "fire_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/fire_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/FireBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FireBatteryItem.java",
+          "src/main/resources/assets/power/models/item/fire_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/FireBattery"
@@ -8166,8 +8166,8 @@
       "registry_name": "air_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/air_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AirBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AirBatteryItem.java",
+          "src/main/resources/assets/power/models/item/air_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/AirBattery"
@@ -8221,8 +8221,8 @@
       "registry_name": "earth_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/earth_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EarthBatteryItem.java",
+          "src/main/resources/assets/power/models/item/earth_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EarthBattery"
@@ -8434,8 +8434,8 @@
       "registry_name": "ice_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/IceBatteryItem.java",
-          "src/main/resources/assets/power/models/item/ice_battery.json"
+          "src/main/resources/assets/power/models/item/ice_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/IceBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/IceBattery"
@@ -8590,8 +8590,8 @@
       "registry_name": "right_metal_gauntlet",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/right_metal_gauntlet.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/RightMetalGauntletItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/RightMetalGauntletItem.java",
+          "src/main/resources/assets/power/models/item/right_metal_gauntlet.json"
         ]
       },
       "path": "~/Elements/Metal"
@@ -8660,8 +8660,8 @@
       "registry_name": "sound_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SoundBatteryItem.java",
-          "src/main/resources/assets/power/models/item/sound_battery.json"
+          "src/main/resources/assets/power/models/item/sound_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SoundBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/SoundBattery"
@@ -8802,8 +8802,8 @@
       "registry_name": "lava_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/lava_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LavaBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LavaBatteryItem.java",
+          "src/main/resources/assets/power/models/item/lava_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/LavaBattery"
@@ -8873,8 +8873,8 @@
       "registry_name": "rain_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/RainBatteryItem.java",
-          "src/main/resources/assets/power/models/item/rain_battery.json"
+          "src/main/resources/assets/power/models/item/rain_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/RainBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/RainBattery"
@@ -9015,8 +9015,8 @@
       "registry_name": "ocean_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanBatteryItem.java",
-          "src/main/resources/assets/power/models/item/ocean_battery.json"
+          "src/main/resources/assets/power/models/item/ocean_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/OceanBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/OceanBattery"
@@ -9086,8 +9086,8 @@
       "registry_name": "plants_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/plants_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/PlantsBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/PlantsBatteryItem.java",
+          "src/main/resources/assets/power/models/item/plants_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/PlantsBattery"
@@ -9228,8 +9228,8 @@
       "registry_name": "metal_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MetalBatteryItem.java",
-          "src/main/resources/assets/power/models/item/metal_battery.json"
+          "src/main/resources/assets/power/models/item/metal_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MetalBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MetalBattery"
@@ -9314,10 +9314,10 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/LightArmorItem.java",
-          "src/main/resources/assets/power/models/item/light_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/light_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/light_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/light_armor_boots.json",
-          "src/main/resources/assets/power/models/item/light_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/light_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/light_armor_boots.json"
         ]
       },
       "path": "~/Elements/Light"
@@ -9523,9 +9523,9 @@
       "registry_name": "wheel_abilities_light",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesLightButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesLightMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesLightScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesLightMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesLightButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Light"
@@ -9690,8 +9690,8 @@
       "registry_name": "knife_attack_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/KnifeAttackProjectileRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/KnifeAttackProjectileEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/KnifeAttackProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/KnifeAttackProjectileRenderer.java"
         ]
       },
       "path": "~/Elements/Metal"
@@ -9705,8 +9705,8 @@
       "registry_name": "light_sparkle",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/LightSparkleParticle.java",
-          "src/main/resources/assets/power/particles/light_sparkle.json"
+          "src/main/resources/assets/power/particles/light_sparkle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/LightSparkleParticle.java"
         ]
       },
       "path": "~/Elements/Light"
@@ -9755,8 +9755,8 @@
       "registry_name": "lightball_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/LightballProjectileRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/LightballProjectileEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/LightballProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/LightballProjectileRenderer.java"
         ]
       },
       "path": "~/Elements/Light"
@@ -9823,8 +9823,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesShadowMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesShadowButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesShadowScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesShadowScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesShadowButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Shadow"
@@ -9932,11 +9932,11 @@
       "registry_name": "shadow_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/shadow_armor_leggings.json",
           "src/main/resources/assets/power/models/item/shadow_armor_boots.json",
-          "src/main/resources/assets/power/models/item/shadow_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/ShadowArmorItem.java",
-          "src/main/resources/assets/power/models/item/shadow_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/shadow_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/shadow_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/shadow_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Shadow"
@@ -10242,8 +10242,8 @@
       "registry_name": "depleted_energium_ingot",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/DepletedEnergiumIngotItem.java",
-          "src/main/resources/assets/power/models/item/depleted_energium_ingot.json"
+          "src/main/resources/assets/power/models/item/depleted_energium_ingot.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DepletedEnergiumIngotItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10257,13 +10257,13 @@
       "registry_name": "depleted_energium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json",
-          "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json",
-          "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
           "src/main/resources/data/power/worldgen/placed_feature/depleted_energium_ore.json",
-          "src/main/resources/assets/power/models/item/depleted_energium_ore.json"
+          "src/main/resources/assets/power/models/block/depleted_energium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumOreBlock.java",
+          "src/main/resources/assets/power/blockstates/depleted_energium_ore.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/depleted_energium_ore_biome_modifier.json",
+          "src/main/resources/assets/power/models/item/depleted_energium_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/depleted_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10277,11 +10277,11 @@
       "registry_name": "depleted_energium_block",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/blockstates/depleted_energium_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumBlockBlock.java",
           "src/main/resources/assets/power/models/item/depleted_energium_block.json",
           "src/main/resources/data/power/loot_tables/blocks/depleted_energium_block.json",
-          "src/main/resources/assets/power/models/block/depleted_energium_block.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DepletedEnergiumBlockBlock.java",
-          "src/main/resources/assets/power/blockstates/depleted_energium_block.json"
+          "src/main/resources/assets/power/models/block/depleted_energium_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10337,8 +10337,8 @@
       "registry_name": "raw_depleted_energium",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/raw_depleted_energium.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/RawDepletedEnergiumItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/RawDepletedEnergiumItem.java",
+          "src/main/resources/assets/power/models/item/raw_depleted_energium.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10366,8 +10366,8 @@
       "registry_name": "energium_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_ingot.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumIngotItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumIngotItem.java",
+          "src/main/resources/assets/power/models/item/energium_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10381,11 +10381,11 @@
       "registry_name": "energium_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/energium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumBlockBlock.java",
           "src/main/resources/assets/power/models/block/energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/energium_block.json",
           "src/main/resources/assets/power/models/item/energium_block.json",
-          "src/main/resources/data/power/loot_tables/blocks/energium_block.json"
+          "src/main/resources/assets/power/blockstates/energium_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -10495,10 +10495,10 @@
       "registry_name": "vacuum_armor",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumArmorItem.java",
-          "src/main/resources/assets/power/models/item/vacuum_armor_boots.json",
-          "src/main/resources/assets/power/models/item/vacuum_armor_helmet.json",
           "src/main/resources/assets/power/models/item/vacuum_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/vacuum_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumArmorItem.java",
+          "src/main/resources/assets/power/models/item/vacuum_armor_helmet.json",
           "src/main/resources/assets/power/models/item/vacuum_armor_leggings.json"
         ]
       },
@@ -10593,9 +10593,9 @@
       "registry_name": "wheel_abilities_vacuum",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesVacuumMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesVacuumScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesVacuumButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesVacuumMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesVacuumButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Vacuum"
@@ -10872,11 +10872,11 @@
       "registry_name": "battery_charger",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/BatteryChargerBlock.java",
           "src/main/java/com/esmods/keepersofthestonestwo/block/entity/BatteryChargerBlockEntity.java",
-          "src/main/resources/data/power/loot_tables/blocks/battery_charger.json",
           "src/main/resources/assets/power/blockstates/battery_charger.json",
           "src/main/resources/assets/power/models/block/battery_charger.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/BatteryChargerBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/battery_charger.json",
           "src/main/resources/assets/power/models/item/battery_charger.json"
         ]
       },
@@ -10905,8 +10905,8 @@
       "registry_name": "battery_charger_gui",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/BatteryChargerGUIMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/BatteryChargerGUIScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/BatteryChargerGUIScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/BatteryChargerGUIMenu.java"
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
@@ -11425,8 +11425,8 @@
       "registry_name": "energium_pickaxe",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumPickaxeItem.java",
-          "src/main/resources/assets/power/models/item/energium_pickaxe.json"
+          "src/main/resources/assets/power/models/item/energium_pickaxe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumPickaxeItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11440,8 +11440,8 @@
       "registry_name": "energium_axe",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumAxeItem.java",
-          "src/main/resources/assets/power/models/item/energium_axe.json"
+          "src/main/resources/assets/power/models/item/energium_axe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumAxeItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11455,8 +11455,8 @@
       "registry_name": "energium_sword",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_sword.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumSwordItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumSwordItem.java",
+          "src/main/resources/assets/power/models/item/energium_sword.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11485,8 +11485,8 @@
       "registry_name": "energium_hoe",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumHoeItem.java",
-          "src/main/resources/assets/power/models/item/energium_hoe.json"
+          "src/main/resources/assets/power/models/item/energium_hoe.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumHoeItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11570,11 +11570,11 @@
       "registry_name": "energium_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_armor_boots.json",
           "src/main/resources/assets/power/models/item/energium_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/energium_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/energium_armor_boots.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumArmorItem.java",
-          "src/main/resources/assets/power/models/item/energium_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/energium_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/energium_armor_leggings.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -11979,10 +11979,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/energy_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyArmorItem.java",
-          "src/main/resources/assets/power/models/item/energy_armor_boots.json",
           "src/main/resources/assets/power/models/item/energy_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/energy_armor_helmet.json"
+          "src/main/resources/assets/power/models/item/energy_armor_boots.json",
+          "src/main/resources/assets/power/models/item/energy_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyArmorItem.java"
         ]
       },
       "path": "~/Elements/Energy"
@@ -12112,8 +12112,8 @@
       "registry_name": "energy_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energy_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyBatteryItem.java",
+          "src/main/resources/assets/power/models/item/energy_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/EnergyBattery"
@@ -12182,8 +12182,8 @@
       "registry_name": "energium_core",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_core.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumCoreItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumCoreItem.java",
+          "src/main/resources/assets/power/models/item/energium_core.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -12197,8 +12197,8 @@
       "registry_name": "energy_staff",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energy_staff.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyStaffItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyStaffItem.java",
+          "src/main/resources/assets/power/models/item/energy_staff.json"
         ]
       },
       "path": "~/Elements/Energy"
@@ -12233,11 +12233,11 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/KeepersBoxBlock.java",
-          "src/main/resources/assets/power/models/item/keepers_box.json",
           "src/main/resources/assets/power/blockstates/keepers_box.json",
-          "src/main/resources/assets/power/models/block/keepers_box.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/KeepersBoxBlockEntity.java",
+          "src/main/resources/assets/power/models/item/keepers_box.json",
           "src/main/resources/data/power/loot_tables/blocks/keepers_box.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/KeepersBoxBlockEntity.java"
+          "src/main/resources/assets/power/models/block/keepers_box.json"
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox"
@@ -12392,8 +12392,8 @@
       "registry_name": "energy_charge",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergyChargeRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergyChargeEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergyChargeEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergyChargeRenderer.java"
         ]
       },
       "path": "~/Elements/Energy"
@@ -12453,11 +12453,11 @@
       "registry_name": "sun_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sun_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/sun_armor_leggings.json",
           "src/main/resources/assets/power/models/item/sun_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/sun_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SunArmorItem.java"
+          "src/main/resources/assets/power/models/item/sun_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SunArmorItem.java",
+          "src/main/resources/assets/power/models/item/sun_armor_boots.json"
         ]
       },
       "path": "~/Elements/Sun"
@@ -12663,8 +12663,8 @@
       "registry_name": "wheel_abilities_sun",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSunButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSunMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSunButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSunScreen.java"
         ]
       },
@@ -12759,8 +12759,8 @@
       "registry_name": "sun_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sun_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SunBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SunBatteryItem.java",
+          "src/main/resources/assets/power/models/item/sun_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/SunBattery"
@@ -12846,8 +12846,8 @@
       "registry_name": "solar_blade",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/solar_blade.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SolarBladeItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SolarBladeItem.java",
+          "src/main/resources/assets/power/models/item/solar_blade.json"
         ]
       },
       "path": "~/Elements/Sun"
@@ -12932,9 +12932,9 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/item/MoonArmorItem.java",
           "src/main/resources/assets/power/models/item/moon_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/moon_armor_boots.json",
+          "src/main/resources/assets/power/models/item/moon_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/moon_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/moon_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/moon_armor_boots.json"
         ]
       },
       "path": "~/Elements/Moon"
@@ -13140,9 +13140,9 @@
       "registry_name": "wheel_abilities_moon",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMoonButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMoonMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMoonScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMoonButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMoonScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Moon"
@@ -13307,8 +13307,8 @@
       "registry_name": "moon_double_sided_spear",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/moon_double_sided_spear.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MoonDoubleSidedSpearItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MoonDoubleSidedSpearItem.java",
+          "src/main/resources/assets/power/models/item/moon_double_sided_spear.json"
         ]
       },
       "path": "~/Elements/Moon"
@@ -13342,8 +13342,8 @@
       "registry_name": "moon_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/particles/moon_particle.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MoonParticleParticle.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MoonParticleParticle.java",
+          "src/main/resources/assets/power/particles/moon_particle.json"
         ]
       },
       "path": "~/Elements/Moon"
@@ -13357,11 +13357,11 @@
       "registry_name": "moon_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/moon_block.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/MoonBlockBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/moon_block.json",
           "src/main/resources/assets/power/models/item/moon_block.json",
           "src/main/resources/assets/power/blockstates/moon_block.json",
-          "src/main/resources/data/power/loot_tables/blocks/moon_block.json"
+          "src/main/resources/assets/power/models/block/moon_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/MoonBlockBlock.java"
         ]
       },
       "path": "~/Elements/Moon"
@@ -13406,10 +13406,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/space_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/space_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/space_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceArmorItem.java",
           "src/main/resources/assets/power/models/item/space_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceArmorItem.java"
+          "src/main/resources/assets/power/models/item/space_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/space_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Space"
@@ -13616,8 +13616,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSpaceMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSpaceScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSpaceButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSpaceButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSpaceScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Space"
@@ -13711,8 +13711,8 @@
       "registry_name": "space_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/space_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceBatteryItem.java",
+          "src/main/resources/assets/power/models/item/space_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/SpaceBattery"
@@ -13877,8 +13877,8 @@
       "registry_name": "constellation_sword",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/ConstellationSwordItem.java",
-          "src/main/resources/assets/power/models/item/constellation_sword.json"
+          "src/main/resources/assets/power/models/item/constellation_sword.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ConstellationSwordItem.java"
         ]
       },
       "path": "~/Elements/Space"
@@ -13912,8 +13912,8 @@
       "registry_name": "meteorite_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/MeteoriteProjectileEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/MeteoriteProjectileRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/MeteoriteProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/MeteoriteProjectileEntity.java"
         ]
       },
       "path": "~/Elements/Space"
@@ -14005,11 +14005,11 @@
       "registry_name": "time_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/time_armor_leggings.json",
           "src/main/resources/assets/power/models/item/time_armor_boots.json",
-          "src/main/resources/assets/power/models/item/time_armor_helmet.json",
           "src/main/resources/assets/power/models/item/time_armor_chestplate.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TimeArmorItem.java",
-          "src/main/resources/assets/power/models/item/time_armor_leggings.json"
+          "src/main/resources/assets/power/models/item/time_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TimeArmorItem.java"
         ]
       },
       "path": "~/Elements/Time"
@@ -14215,9 +14215,9 @@
       "registry_name": "wheel_abilities_time",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTimeButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTimeScreen.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTimeMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTimeScreen.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTimeButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Time"
@@ -14397,8 +14397,8 @@
       "registry_name": "time_stop",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeStopParticle.java",
-          "src/main/resources/assets/power/particles/time_stop.json"
+          "src/main/resources/assets/power/particles/time_stop.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeStopParticle.java"
         ]
       },
       "path": "~/Elements/Time"
@@ -14524,10 +14524,10 @@
       "registry_name": "creation_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/creation_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/creation_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/creation_armor_boots.json",
           "src/main/resources/assets/power/models/item/creation_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/creation_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/creation_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationArmorItem.java"
         ]
       },
@@ -14794,9 +14794,9 @@
       "registry_name": "wheel_abilities_creation",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesCreationScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesCreationButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesCreationMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesCreationButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesCreationScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Creation"
@@ -14961,9 +14961,9 @@
       "registry_name": "energium_controller",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/energium_controller.json",
-          "src/main/resources/assets/power/blockstates/energium_controller.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumControllerBlock.java",
+          "src/main/resources/assets/power/blockstates/energium_controller.json",
+          "src/main/resources/assets/power/models/block/energium_controller.json",
           "src/main/resources/assets/power/models/item/energium_controller.json",
           "src/main/resources/data/power/loot_tables/blocks/energium_controller.json"
         ]
@@ -15103,8 +15103,8 @@
       "registry_name": "creation_staff",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CreationStaffItem.java",
-          "src/main/resources/assets/power/models/item/creation_staff.json"
+          "src/main/resources/assets/power/models/item/creation_staff.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CreationStaffItem.java"
         ]
       },
       "path": "~/Elements/Creation"
@@ -15155,8 +15155,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart2Screen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart2Menu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart2ButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart2ButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart2Menu.java"
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
@@ -15170,9 +15170,9 @@
       "registry_name": "keepers_box_gui_part_3",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart3ButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart3Screen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart3Menu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart3Menu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart3ButtonMessage.java"
         ]
       },
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
@@ -15186,8 +15186,8 @@
       "registry_name": "keepers_box_gui_part_4",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart4ButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/KeepersBoxGUIPart4Screen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/KeepersBoxGUIPart4ButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/KeepersBoxGUIPart4Menu.java"
         ]
       },
@@ -15983,12 +15983,12 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierOreBlock.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_ore_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json",
+          "src/main/resources/assets/power/models/item/amplifier_ore.json",
           "src/main/resources/assets/power/blockstates/amplifier_ore.json",
           "src/main/resources/assets/power/models/block/amplifier_ore.json",
-          "src/main/resources/assets/power/models/item/amplifier_ore.json",
-          "src/main/resources/data/power/worldgen/configured_feature/amplifier_ore.json"
+          "src/main/resources/data/power/neoforge/biome_modifier/amplifier_ore_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/amplifier_ore.json",
+          "src/main/resources/data/power/worldgen/placed_feature/amplifier_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -16102,8 +16102,8 @@
       "registry_name": "runes_of_creation",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/RunesOfCreationParticle.java",
-          "src/main/resources/assets/power/particles/runes_of_creation.json"
+          "src/main/resources/assets/power/particles/runes_of_creation.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/RunesOfCreationParticle.java"
         ]
       },
       "path": "~/Elements/Creation"
@@ -16240,11 +16240,11 @@
       "registry_name": "destruction_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/destruction_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionArmorItem.java",
           "src/main/resources/assets/power/models/item/destruction_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/destruction_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/destruction_armor_boots.json",
           "src/main/resources/assets/power/models/item/destruction_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/destruction_armor_boots.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionArmorItem.java"
         ]
       },
       "path": "~/Elements/Destruction"
@@ -16475,8 +16475,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesDestructionScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesDestructionMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesDestructionButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesDestructionButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesDestructionMenu.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Destruction"
@@ -16641,8 +16641,8 @@
       "registry_name": "destruction_broadsword",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionBroadswordItem.java",
-          "src/main/resources/assets/power/models/item/destruction_broadsword.json"
+          "src/main/resources/assets/power/models/item/destruction_broadsword.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionBroadswordItem.java"
         ]
       },
       "path": "~/Elements/Destruction"
@@ -17559,8 +17559,8 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/blockstates/amplifier_block.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierBlockBlock.java",
           "src/main/resources/data/power/loot_tables/blocks/amplifier_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/AmplifierBlockBlock.java",
           "src/main/resources/assets/power/models/item/amplifier_block.json",
           "src/main/resources/assets/power/models/block/amplifier_block.json"
         ]
@@ -17604,8 +17604,8 @@
       "registry_name": "energium_golem",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java",
           "src/main/resources/assets/power/models/item/energium_golem_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergiumGolemEntity.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/model/EnergiumGolemModel.java"
         ]
@@ -17799,11 +17799,11 @@
       "registry_name": "blood_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/blood_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/blood_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/blood_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodArmorItem.java",
           "src/main/resources/assets/power/models/item/blood_armor_helmet.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodArmorItem.java"
+          "src/main/resources/assets/power/models/item/blood_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/blood_armor_boots.json",
+          "src/main/resources/assets/power/models/item/blood_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Blood"
@@ -17897,8 +17897,8 @@
       "registry_name": "blood_sickle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/blood_sickle.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodSickleItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BloodSickleItem.java",
+          "src/main/resources/assets/power/models/item/blood_sickle.json"
         ]
       },
       "path": "~/Elements/Blood"
@@ -18268,11 +18268,11 @@
       "registry_name": "raw_depleted_energium_block",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/raw_depleted_energium_block.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/RawDepletedEnergiumBlockBlock.java",
-          "src/main/resources/assets/power/models/item/raw_depleted_energium_block.json",
           "src/main/resources/assets/power/blockstates/raw_depleted_energium_block.json",
-          "src/main/resources/data/power/loot_tables/blocks/raw_depleted_energium_block.json"
+          "src/main/resources/assets/power/models/block/raw_depleted_energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/raw_depleted_energium_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/RawDepletedEnergiumBlockBlock.java",
+          "src/main/resources/assets/power/models/item/raw_depleted_energium_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -18314,11 +18314,11 @@
       "registry_name": "raw_amplifier_block",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/RawAmplifierBlockBlock.java",
-          "src/main/resources/assets/power/blockstates/raw_amplifier_block.json",
           "src/main/resources/assets/power/models/item/raw_amplifier_block.json",
-          "src/main/resources/data/power/loot_tables/blocks/raw_amplifier_block.json",
-          "src/main/resources/assets/power/models/block/raw_amplifier_block.json"
+          "src/main/resources/assets/power/blockstates/raw_amplifier_block.json",
+          "src/main/resources/assets/power/models/block/raw_amplifier_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/RawAmplifierBlockBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/raw_amplifier_block.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -19429,8 +19429,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/worldgen/structure/energium_temple.json",
-          "src/main/resources/data/power/worldgen/template_pool/energium_temple.json",
-          "src/main/resources/data/power/worldgen/structure_set/energium_temple.json"
+          "src/main/resources/data/power/worldgen/structure_set/energium_temple.json",
+          "src/main/resources/data/power/worldgen/template_pool/energium_temple.json"
         ]
       },
       "path": "~/Structures"
@@ -19472,11 +19472,11 @@
       "registry_name": "technology_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/technology_armor_boots.json",
-          "src/main/resources/assets/power/models/item/technology_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/technology_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/technology_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/technology_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/TechnologyArmorItem.java",
-          "src/main/resources/assets/power/models/item/technology_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/technology_armor_boots.json"
         ]
       },
       "path": "~/Elements/Technology"
@@ -19742,8 +19742,8 @@
       "registry_name": "wheel_abilities_technology",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTechnologyMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesTechnologyScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesTechnologyMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesTechnologyButtonMessage.java"
         ]
       },
@@ -19931,8 +19931,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/TurretRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/TurretModel.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/TurretModel.java"
         ]
       },
       "path": "~/Elements/Technology"
@@ -20011,8 +20011,8 @@
       "registry_name": "technobarrier_particle",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TechnobarrierParticleParticle.java",
-          "src/main/resources/assets/power/particles/technobarrier_particle.json"
+          "src/main/resources/assets/power/particles/technobarrier_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TechnobarrierParticleParticle.java"
         ]
       },
       "path": "~/Elements/Technology"
@@ -20040,11 +20040,11 @@
       "registry_name": "teleportation_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/teleportation_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/teleportation_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationArmorItem.java",
           "src/main/resources/assets/power/models/item/teleportation_armor_boots.json",
-          "src/main/resources/assets/power/models/item/teleportation_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/teleportation_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/teleportation_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Teleportation"
@@ -20584,10 +20584,10 @@
       "registry_name": "blue_portal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/blue_portal.json",
-          "src/main/resources/data/power/loot_tables/blocks/blue_portal.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/BluePortalBlock.java",
           "src/main/resources/assets/power/models/block/blue_portal.json",
+          "src/main/resources/assets/power/models/item/blue_portal.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/BluePortalBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/blue_portal.json",
           "src/main/resources/assets/power/blockstates/blue_portal.json"
         ]
       },
@@ -20690,11 +20690,11 @@
       "registry_name": "orange_portal",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/orange_portal.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/OrangePortalBlock.java",
-          "src/main/resources/data/power/loot_tables/blocks/orange_portal.json",
           "src/main/resources/assets/power/blockstates/orange_portal.json",
-          "src/main/resources/assets/power/models/block/orange_portal.json"
+          "src/main/resources/assets/power/models/block/orange_portal.json",
+          "src/main/resources/data/power/loot_tables/blocks/orange_portal.json",
+          "src/main/resources/assets/power/models/item/orange_portal.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/OrangePortalBlock.java"
         ]
       },
       "path": "~/Elements/Teleportation"
@@ -20708,8 +20708,8 @@
       "registry_name": "energium_golem_core_attack_particle",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/EnergiumGolemCoreAttackParticleParticle.java",
-          "src/main/resources/assets/power/particles/energium_golem_core_attack_particle.json"
+          "src/main/resources/assets/power/particles/energium_golem_core_attack_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/EnergiumGolemCoreAttackParticleParticle.java"
         ]
       },
       "path": "~/Bosses/EnergiumGolem"
@@ -20738,10 +20738,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/explosion_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/explosion_armor_leggings.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/ExplosionArmorItem.java",
-          "src/main/resources/assets/power/models/item/explosion_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/explosion_armor_boots.json"
+          "src/main/resources/assets/power/models/item/explosion_armor_boots.json",
+          "src/main/resources/assets/power/models/item/explosion_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/explosion_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Explosion"
@@ -20992,9 +20992,9 @@
       "registry_name": "wheel_abilities_explosion",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesExplosionMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesExplosionButtonMessage.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesExplosionScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesExplosionMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesExplosionScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Explosion"
@@ -21195,8 +21195,8 @@
       "registry_name": "explosion_mace",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/explosion_mace.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/ExplosionMaceItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/ExplosionMaceItem.java",
+          "src/main/resources/assets/power/models/item/explosion_mace.json"
         ]
       },
       "path": "~/Elements/Explosion"
@@ -21551,8 +21551,8 @@
       "registry_name": "grenade",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/GrenadeEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/GrenadeRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/GrenadeRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/GrenadeEntity.java"
         ]
       },
       "path": "~/Elements/Explosion"
@@ -21612,11 +21612,11 @@
       "registry_name": "amber_armor",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/item/amber_armor_chestplate.json",
           "src/main/resources/assets/power/models/item/amber_armor_boots.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberArmorItem.java",
           "src/main/resources/assets/power/models/item/amber_armor_leggings.json",
           "src/main/resources/assets/power/models/item/amber_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/amber_armor_chestplate.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberArmorItem.java"
         ]
       },
       "path": "~/Elements/Amber"
@@ -21903,9 +21903,9 @@
       "registry_name": "wheel_abilities_amber",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAmberButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesAmberMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesAmberScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesAmberMenu.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesAmberButtonMessage.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Amber"
@@ -22346,8 +22346,8 @@
       "registry_name": "amber_staff",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/amber_staff.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberStaffItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/AmberStaffItem.java",
+          "src/main/resources/assets/power/models/item/amber_staff.json"
         ]
       },
       "path": "~/Elements/Amber"
@@ -22396,10 +22396,10 @@
       "registry_name": "amber_block",
       "metadata": {
         "files": [
+          "src/main/resources/assets/power/models/block/amber_block.json",
           "src/main/resources/assets/power/models/item/amber_block.json",
           "src/main/resources/data/power/loot_tables/blocks/amber_block.json",
           "src/main/resources/assets/power/blockstates/amber_block.json",
-          "src/main/resources/assets/power/models/block/amber_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmberBlockBlock.java"
         ]
       },
@@ -22609,13 +22609,13 @@
       "registry_name": "cursed_stone",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
-          "src/main/resources/assets/power/models/item/cursed_stone.json",
-          "src/main/resources/assets/power/models/block/cursed_stone.json",
           "src/main/resources/data/power/neoforge/biome_modifier/cursed_stone_biome_modifier.json",
-          "src/main/resources/data/power/loot_tables/blocks/cursed_stone.json",
+          "src/main/resources/data/power/worldgen/configured_feature/cursed_stone.json",
           "src/main/resources/data/power/worldgen/placed_feature/cursed_stone.json",
           "src/main/resources/assets/power/blockstates/cursed_stone.json",
+          "src/main/resources/assets/power/models/block/cursed_stone.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone.json",
+          "src/main/resources/assets/power/models/item/cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBlock.java"
         ]
       },
@@ -22630,10 +22630,10 @@
       "registry_name": "cursed_stone_bricks",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/cursed_stone_bricks.json",
-          "src/main/resources/assets/power/models/item/cursed_stone_bricks.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_bricks.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_bricks.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksBlock.java"
         ]
       },
@@ -22723,12 +22723,12 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_stairs.json",
-          "src/main/resources/assets/power/models/item/cursed_stone_stairs.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_stairs_inner.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_stairs.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_stairs.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_stairs_outer.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_stairs.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneStairsBlock.java",
-          "src/main/resources/assets/power/models/block/cursed_stone_stairs_outer.json"
+          "src/main/resources/assets/power/models/block/cursed_stone_stairs.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -22742,13 +22742,13 @@
       "registry_name": "cursed_stone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_slab.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_slab.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_slab.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_slab_top.json",
           "src/main/resources/assets/power/models/block/cursed_stone_slab_full.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneSlabBlock.java",
-          "src/main/resources/assets/power/models/item/cursed_stone_slab.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_slab_top.json"
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_slab.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_slab.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -22762,13 +22762,13 @@
       "registry_name": "cursed_stone_bricks_stairs",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksStairsBlock.java",
           "src/main/resources/assets/power/models/item/cursed_stone_bricks_stairs.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs_outer.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs_inner.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_stairs.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_stairs.json"
+          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_stairs.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_bricks_stairs_inner.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksStairsBlock.java"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -22782,13 +22782,13 @@
       "registry_name": "cursed_stone_bricks_slab",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksSlabBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab_full.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_slab.json",
-          "src/main/resources/assets/power/models/item/cursed_stone_bricks_slab.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab_top.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_slab.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_bricks_slab_full.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksSlabBlock.java"
+          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_slab.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -22802,14 +22802,14 @@
       "registry_name": "cursed_stone_wall",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/cursed_stone_wall_side_tall.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_wall_post.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneWallBlock.java",
+          "src/main/resources/assets/power/blockstates/cursed_stone_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_wall_inventory.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_wall.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneWallBlock.java",
           "src/main/resources/assets/power/models/item/cursed_stone_wall.json",
-          "src/main/resources/assets/power/blockstates/cursed_stone_wall.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_wall_inventory.json"
+          "src/main/resources/assets/power/models/block/cursed_stone_wall_post.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_wall_side_tall.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -22825,11 +22825,11 @@
         "files": [
           "src/main/resources/assets/power/models/item/cursed_stone_bricks_wall.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksWallBlock.java",
-          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_wall.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_side_tall.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_inventory.json",
           "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_post.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_side_tall.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_bricks_wall_inventory.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneBricksWallBlock.java",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_bricks_wall.json"
         ]
       },
@@ -22942,10 +22942,10 @@
       "registry_name": "polished_cursed_stone",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/polished_cursed_stone.json",
-          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone.json",
-          "src/main/resources/assets/power/blockstates/polished_cursed_stone.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone.json",
+          "src/main/resources/assets/power/blockstates/polished_cursed_stone.json",
           "src/main/resources/assets/power/models/item/polished_cursed_stone.json"
         ]
       },
@@ -22960,12 +22960,12 @@
       "registry_name": "polished_cursed_stone_stairs",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneStairsBlock.java",
-          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_stairs.json",
-          "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_inner.json",
           "src/main/resources/assets/power/models/item/polished_cursed_stone_stairs.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneStairsBlock.java",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_outer.json",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_stairs.json",
           "src/main/resources/assets/power/blockstates/polished_cursed_stone_stairs.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs_inner.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_stairs.json"
         ]
       },
@@ -22980,13 +22980,13 @@
       "registry_name": "polished_cursed_stone_slab",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_top.json",
+          "src/main/resources/assets/power/models/item/polished_cursed_stone_slab.json",
           "src/main/resources/assets/power/blockstates/polished_cursed_stone_slab.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneSlabBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_slab.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_slab.json",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_full.json",
-          "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_slab.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneSlabBlock.java",
-          "src/main/resources/assets/power/models/item/polished_cursed_stone_slab.json"
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_slab_top.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -23000,14 +23000,14 @@
       "registry_name": "polished_cursed_stone_wall",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/polished_cursed_stone_wall.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall.json",
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_inventory.json",
           "src/main/resources/data/power/loot_tables/blocks/polished_cursed_stone_wall.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneWallBlock.java",
           "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_post.json",
           "src/main/resources/assets/power/blockstates/polished_cursed_stone_wall.json",
-          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_inventory.json",
-          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall.json",
-          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_side_tall.json"
+          "src/main/resources/assets/power/models/block/polished_cursed_stone_wall_side_tall.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PolishedCursedStoneWallBlock.java",
+          "src/main/resources/assets/power/models/item/polished_cursed_stone_wall.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -23077,11 +23077,11 @@
       "registry_name": "cursed_stone_pillar",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStonePillarBlock.java",
           "src/main/resources/data/power/loot_tables/blocks/cursed_stone_pillar.json",
-          "src/main/resources/assets/power/models/item/cursed_stone_pillar.json",
-          "src/main/resources/assets/power/models/block/cursed_stone_pillar.json",
           "src/main/resources/assets/power/blockstates/cursed_stone_pillar.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStonePillarBlock.java"
+          "src/main/resources/assets/power/models/item/cursed_stone_pillar.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_pillar.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -23110,10 +23110,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/block/cursed_lantern.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLanternBlock.java",
-          "src/main/resources/data/power/loot_tables/blocks/cursed_lantern.json",
           "src/main/resources/assets/power/blockstates/cursed_lantern.json",
-          "src/main/resources/assets/power/models/item/cursed_lantern.json"
+          "src/main/resources/data/power/loot_tables/blocks/cursed_lantern.json",
+          "src/main/resources/assets/power/models/item/cursed_lantern.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLanternBlock.java"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -23220,8 +23220,8 @@
       "registry_name": "copyrium_ingot",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/copyrium_ingot.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/CopyriumIngotItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/CopyriumIngotItem.java",
+          "src/main/resources/assets/power/models/item/copyrium_ingot.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -23235,13 +23235,13 @@
       "registry_name": "copyrium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/copyrium_ore.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumOreBlock.java",
           "src/main/resources/assets/power/models/block/copyrium_ore.json",
-          "src/main/resources/data/power/worldgen/configured_feature/copyrium_ore.json",
           "src/main/resources/data/power/neoforge/biome_modifier/copyrium_ore_biome_modifier.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumOreBlock.java",
+          "src/main/resources/assets/power/models/item/copyrium_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/copyrium_ore.json",
           "src/main/resources/data/power/worldgen/placed_feature/copyrium_ore.json",
-          "src/main/resources/assets/power/models/item/copyrium_ore.json"
+          "src/main/resources/assets/power/blockstates/copyrium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
@@ -23255,10 +23255,10 @@
       "registry_name": "copyrium_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/copyrium_block.json",
+          "src/main/resources/assets/power/models/item/copyrium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CopyriumBlockBlock.java",
           "src/main/resources/assets/power/models/block/copyrium_block.json",
-          "src/main/resources/assets/power/models/item/copyrium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/copyrium_block.json",
           "src/main/resources/assets/power/blockstates/copyrium_block.json"
         ]
       },
@@ -23330,9 +23330,9 @@
       "registry_name": "raw_copyrium_block",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/loot_tables/blocks/raw_copyrium_block.json",
           "src/main/resources/assets/power/models/block/raw_copyrium_block.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawCopyriumBlockBlock.java",
-          "src/main/resources/data/power/loot_tables/blocks/raw_copyrium_block.json",
           "src/main/resources/assets/power/blockstates/raw_copyrium_block.json",
           "src/main/resources/assets/power/models/item/raw_copyrium_block.json"
         ]
@@ -23348,11 +23348,11 @@
       "registry_name": "elemental_power_generator",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/ElementalPowerGeneratorBlockEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/ElementalPowerGeneratorBlock.java",
           "src/main/resources/data/power/loot_tables/blocks/elemental_power_generator.json",
-          "src/main/resources/assets/power/models/block/elemental_power_generator.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/ElementalPowerGeneratorBlock.java",
           "src/main/resources/assets/power/blockstates/elemental_power_generator.json",
+          "src/main/resources/assets/power/models/block/elemental_power_generator.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/ElementalPowerGeneratorBlockEntity.java",
           "src/main/resources/assets/power/models/item/elemental_power_generator.json"
         ]
       },
@@ -23437,10 +23437,10 @@
       "registry_name": "mist_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mist_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/mist_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/MistArmorItem.java",
           "src/main/resources/assets/power/models/item/mist_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/mist_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mist_armor_leggings.json",
           "src/main/resources/assets/power/models/item/mist_armor_boots.json"
         ]
       },
@@ -23728,8 +23728,8 @@
       "registry_name": "wheel_abilities_mist",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMistButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMistScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMistButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMistMenu.java"
         ]
       },
@@ -23824,8 +23824,8 @@
       "registry_name": "mist_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MistBatteryItem.java",
-          "src/main/resources/assets/power/models/item/mist_battery.json"
+          "src/main/resources/assets/power/models/item/mist_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MistBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MistBattery"
@@ -23930,8 +23930,8 @@
       "registry_name": "blood_splash",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BloodSplashParticle.java",
-          "src/main/resources/assets/power/particles/blood_splash.json"
+          "src/main/resources/assets/power/particles/blood_splash.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BloodSplashParticle.java"
         ]
       },
       "path": "~/Elements/Blood"
@@ -24029,8 +24029,8 @@
       "registry_name": "mist_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/particles/mist_particle.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MistParticleParticle.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MistParticleParticle.java",
+          "src/main/resources/assets/power/particles/mist_particle.json"
         ]
       },
       "path": "~/Elements/Mist"
@@ -24098,12 +24098,12 @@
       "registry_name": "cursed_vault",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/cursed_vault.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
           "src/main/resources/assets/power/models/block/cursed_vault.json",
-          "src/main/resources/assets/power/models/item/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
+          "src/main/resources/assets/power/blockstates/cursed_vault.json",
+          "src/main/resources/assets/power/models/item/cursed_vault.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -24117,8 +24117,8 @@
       "registry_name": "cursed_vault_blockstates",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_0.json",
-          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_1.json"
+          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_1.json",
+          "src/main/resources/assets/power/models/block/cursed_vault_blockstates_blockstate_0.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -24333,11 +24333,11 @@
       "registry_name": "sand_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sand_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/sand_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/sand_armor_chestplate.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SandArmorItem.java",
-          "src/main/resources/assets/power/models/item/sand_armor_boots.json",
-          "src/main/resources/assets/power/models/item/sand_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/sand_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/sand_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/sand_armor_boots.json"
         ]
       },
       "path": "~/Elements/Sand"
@@ -24624,9 +24624,9 @@
       "registry_name": "wheel_abilities_sand",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSandMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSandScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSandButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSandButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSandMenu.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Sand"
@@ -24791,8 +24791,8 @@
       "registry_name": "sand_saber",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/sand_saber.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SandSaberItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SandSaberItem.java",
+          "src/main/resources/assets/power/models/item/sand_saber.json"
         ]
       },
       "path": "~/Elements/Sand"
@@ -24843,8 +24843,8 @@
           "src/main/resources/assets/power/models/item/speed_armor_boots.json",
           "src/main/resources/assets/power/models/item/speed_armor_helmet.json",
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpeedArmorItem.java",
-          "src/main/resources/assets/power/models/item/speed_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/speed_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/speed_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/speed_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Speed"
@@ -25086,9 +25086,9 @@
       "registry_name": "wheel_abilities_speed",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSpeedButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesSpeedScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSpeedMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesSpeedButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesSpeedMenu.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Speed"
@@ -25227,8 +25227,8 @@
       "registry_name": "speed_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/speed_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/SpeedBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpeedBatteryItem.java",
+          "src/main/resources/assets/power/models/item/speed_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/SpeedBattery"
@@ -25347,11 +25347,11 @@
       "registry_name": "poison_armor",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonArmorItem.java",
           "src/main/resources/assets/power/models/item/poison_armor_boots.json",
-          "src/main/resources/assets/power/models/item/poison_armor_helmet.json",
           "src/main/resources/assets/power/models/item/poison_armor_leggings.json",
-          "src/main/resources/assets/power/models/item/poison_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/poison_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/poison_armor_helmet.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonArmorItem.java"
         ]
       },
       "path": "~/Elements/Poison"
@@ -25734,8 +25734,8 @@
       "registry_name": "poison_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/poison_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonBatteryItem.java",
+          "src/main/resources/assets/power/models/item/poison_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/PoisonBattery"
@@ -25840,8 +25840,8 @@
       "registry_name": "poison_drop_projectile",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonDropProjectileEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonDropProjectileRenderer.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonDropProjectileRenderer.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonDropProjectileEntity.java"
         ]
       },
       "path": "~/Elements/Poison"
@@ -25875,8 +25875,8 @@
       "registry_name": "poison_particle",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/PoisonParticleParticle.java",
-          "src/main/resources/assets/power/particles/poison_particle.json"
+          "src/main/resources/assets/power/particles/poison_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/PoisonParticleParticle.java"
         ]
       },
       "path": "~/Elements/Poison"
@@ -25926,8 +25926,8 @@
       "registry_name": "poison_bomb",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonBombRenderer.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonBombEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonBombEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonBombRenderer.java"
         ]
       },
       "path": "~/Elements/Poison"
@@ -26060,10 +26060,10 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/models/item/magnet_armor_chestplate.json",
-          "src/main/resources/assets/power/models/item/magnet_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetArmorItem.java",
           "src/main/resources/assets/power/models/item/magnet_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/magnet_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetArmorItem.java"
+          "src/main/resources/assets/power/models/item/magnet_armor_boots.json",
+          "src/main/resources/assets/power/models/item/magnet_armor_leggings.json"
         ]
       },
       "path": "~/Elements/Magnet"
@@ -26351,8 +26351,8 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMagnetMenu.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMagnetScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMagnetButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMagnetButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMagnetScreen.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Magnet"
@@ -26446,8 +26446,8 @@
       "registry_name": "magnet_battery",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetBatteryItem.java",
-          "src/main/resources/assets/power/models/item/magnet_battery.json"
+          "src/main/resources/assets/power/models/item/magnet_battery.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetBatteryItem.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MagnetBattery"
@@ -26517,8 +26517,8 @@
       "registry_name": "magnet_claws",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/magnet_claws.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetClawsItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetClawsItem.java",
+          "src/main/resources/assets/power/models/item/magnet_claws.json"
         ]
       },
       "path": "~/Elements/Magnet"
@@ -26586,10 +26586,10 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/loot_tables/blocks/cursed_ladder.json",
-          "src/main/resources/assets/power/models/item/cursed_ladder.json",
           "src/main/resources/assets/power/blockstates/cursed_ladder.json",
-          "src/main/resources/assets/power/models/block/cursed_ladder.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLadderBlock.java"
+          "src/main/resources/assets/power/models/item/cursed_ladder.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLadderBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_ladder.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -26618,10 +26618,10 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedLampBlock.java",
-          "src/main/resources/data/power/loot_tables/blocks/cursed_lamp.json",
+          "src/main/resources/assets/power/models/item/cursed_lamp.json",
           "src/main/resources/assets/power/blockstates/cursed_lamp.json",
           "src/main/resources/assets/power/models/block/cursed_lamp.json",
-          "src/main/resources/assets/power/models/item/cursed_lamp.json"
+          "src/main/resources/data/power/loot_tables/blocks/cursed_lamp.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -27124,8 +27124,8 @@
       "registry_name": "teleportation_blade",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationBladeItem.java",
-          "src/main/resources/assets/power/models/item/teleportation_blade.json"
+          "src/main/resources/assets/power/models/item/teleportation_blade.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationBladeItem.java"
         ]
       },
       "path": "~/Elements/Teleportation"
@@ -27159,12 +27159,12 @@
       "registry_name": "energium_vault",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
-          "src/main/resources/assets/power/models/item/energium_vault.json",
-          "src/main/resources/assets/power/models/block/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
           "src/main/resources/assets/power/blockstates/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
+          "src/main/resources/assets/power/models/block/energium_vault.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java",
+          "src/main/resources/assets/power/models/item/energium_vault.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -27330,8 +27330,8 @@
       "registry_name": "blue_magnet_particle",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/particles/blue_magnet_particle.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BlueMagnetParticleParticle.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BlueMagnetParticleParticle.java",
+          "src/main/resources/assets/power/particles/blue_magnet_particle.json"
         ]
       },
       "path": "~/Elements/Magnet"
@@ -27401,8 +27401,8 @@
       "registry_name": "red_magnet_particle",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/RedMagnetParticleParticle.java",
-          "src/main/resources/assets/power/particles/red_magnet_particle.json"
+          "src/main/resources/assets/power/particles/red_magnet_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/RedMagnetParticleParticle.java"
         ]
       },
       "path": "~/Elements/Magnet"
@@ -27542,9 +27542,9 @@
       "registry_name": "big_cursed_trees",
       "metadata": {
         "files": [
+          "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json",
           "src/main/resources/data/power/worldgen/placed_feature/big_cursed_trees.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/big_cursed_trees_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/configured_feature/big_cursed_trees.json"
+          "src/main/resources/data/power/neoforge/biome_modifier/big_cursed_trees_biome_modifier.json"
         ]
       },
       "path": "~/Biomes"
@@ -27583,8 +27583,8 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/neoforge/biome_modifier/grass_cursed_forest_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/placed_feature/grass_cursed_forest.json",
-          "src/main/resources/data/power/worldgen/configured_feature/grass_cursed_forest.json"
+          "src/main/resources/data/power/worldgen/configured_feature/grass_cursed_forest.json",
+          "src/main/resources/data/power/worldgen/placed_feature/grass_cursed_forest.json"
         ]
       },
       "path": "~/Biomes"
@@ -27640,11 +27640,11 @@
       "registry_name": "mushrooms_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mushrooms_armor_boots.json",
-          "src/main/resources/assets/power/models/item/mushrooms_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsArmorItem.java",
           "src/main/resources/assets/power/models/item/mushrooms_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/mushrooms_armor_chestplate.json"
+          "src/main/resources/assets/power/models/item/mushrooms_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/mushrooms_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsArmorItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_armor_boots.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -28027,8 +28027,8 @@
       "registry_name": "mushrooms_battery",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mushrooms_battery.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsBatteryItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MushroomsBatteryItem.java",
+          "src/main/resources/assets/power/models/item/mushrooms_battery.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MushroomsBattery"
@@ -28133,11 +28133,11 @@
       "registry_name": "purple_mushroom",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/PurpleMushroomBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/purple_mushroom.json",
           "src/main/resources/assets/power/blockstates/purple_mushroom.json",
-          "src/main/resources/assets/power/models/block/purple_mushroom.json",
           "src/main/resources/assets/power/models/item/purple_mushroom.json",
-          "src/main/resources/data/power/loot_tables/blocks/purple_mushroom.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/PurpleMushroomBlock.java",
+          "src/main/resources/assets/power/models/block/purple_mushroom.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -28151,8 +28151,8 @@
       "registry_name": "mushroom_spores",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/particles/mushroom_spores.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MushroomSporesParticle.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MushroomSporesParticle.java",
+          "src/main/resources/assets/power/particles/mushroom_spores.json"
         ]
       },
       "path": "~/Elements/Mushrooms"
@@ -28246,8 +28246,8 @@
       "registry_name": "basic_cursed_trees",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/neoforge/biome_modifier/basic_cursed_trees_biome_modifier.json",
           "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/basic_cursed_trees_biome_modifier.json",
           "src/main/resources/data/power/worldgen/configured_feature/basic_cursed_trees.json"
         ]
       },
@@ -28277,9 +28277,9 @@
       "registry_name": "cursed_castle",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/worldgen/template_pool/cursed_castle.json",
           "src/main/resources/data/power/worldgen/structure_set/cursed_castle.json",
-          "src/main/resources/data/power/worldgen/structure/cursed_castle.json"
+          "src/main/resources/data/power/worldgen/structure/cursed_castle.json",
+          "src/main/resources/data/power/worldgen/template_pool/cursed_castle.json"
         ]
       },
       "path": "~/Structures"
@@ -28333,11 +28333,11 @@
       "registry_name": "mercury_armor",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/mercury_armor_helmet.json",
-          "src/main/resources/assets/power/models/item/mercury_armor_boots.json",
           "src/main/resources/assets/power/models/item/mercury_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mercury_armor_boots.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java",
           "src/main/resources/assets/power/models/item/mercury_armor_leggings.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java"
+          "src/main/resources/assets/power/models/item/mercury_armor_helmet.json"
         ]
       },
       "path": "~/Elements/Mercury"
@@ -28543,8 +28543,8 @@
       "registry_name": "luck_coin",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/luck_coin.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/LuckCoinItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/LuckCoinItem.java",
+          "src/main/resources/assets/power/models/item/luck_coin.json"
         ]
       },
       "path": "~/ItemsAndBlocks/OtherItems"
@@ -28558,8 +28558,8 @@
       "registry_name": "music_disc_ancient_mood",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/music_disc_ancient_mood.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscAncientMoodItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicDiscAncientMoodItem.java",
+          "src/main/resources/assets/power/models/item/music_disc_ancient_mood.json"
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
@@ -28658,12 +28658,12 @@
       "metadata": {
         "files": [
           "src/main/resources/data/power/neoforge/biome_modifier/energium_ore_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/placed_feature/energium_ore.json",
           "src/main/resources/assets/power/models/block/energium_ore.json",
-          "src/main/resources/assets/power/models/item/energium_ore.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumOreBlock.java",
+          "src/main/resources/data/power/worldgen/placed_feature/energium_ore.json",
+          "src/main/resources/assets/power/blockstates/energium_ore.json",
           "src/main/resources/data/power/worldgen/configured_feature/energium_ore.json",
-          "src/main/resources/assets/power/blockstates/energium_ore.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumOreBlock.java",
+          "src/main/resources/assets/power/models/item/energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -28731,8 +28731,8 @@
       "registry_name": "energium_dust",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/energium_dust.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumDustItem.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/item/EnergiumDustItem.java",
+          "src/main/resources/assets/power/models/item/energium_dust.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -28788,13 +28788,13 @@
       "registry_name": "raw_energium_block",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/raw_energium_block.json",
-          "src/main/resources/assets/power/blockstates/raw_energium_block.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/raw_energium_block_biome_modifier.json",
-          "src/main/resources/assets/power/models/block/raw_energium_block.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/RawEnergiumBlockBlock.java",
           "src/main/resources/data/power/worldgen/placed_feature/raw_energium_block.json",
+          "src/main/resources/assets/power/blockstates/raw_energium_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/RawEnergiumBlockBlock.java",
           "src/main/resources/data/power/worldgen/configured_feature/raw_energium_block.json",
+          "src/main/resources/data/power/loot_tables/blocks/raw_energium_block.json",
+          "src/main/resources/assets/power/models/block/raw_energium_block.json",
+          "src/main/resources/data/power/neoforge/biome_modifier/raw_energium_block_biome_modifier.json",
           "src/main/resources/assets/power/models/item/raw_energium_block.json"
         ]
       },
@@ -28909,9 +28909,9 @@
       "registry_name": "wheel_abilities_mercury",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMercuryMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMercuryButtonMessage.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMercuryScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMercuryButtonMessage.java"
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMercuryMenu.java"
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mercury"
@@ -29157,9 +29157,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
-          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
+          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json"
         ]
       },
       "path": "~/Bosses/CursedKeeper"
@@ -29173,10 +29173,10 @@
       "registry_name": "deepslate_depleted_energium_ore",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateDepletedEnergiumOreBlock.java",
           "src/main/resources/assets/power/blockstates/deepslate_depleted_energium_ore.json",
           "src/main/resources/assets/power/models/block/deepslate_depleted_energium_ore.json",
-          "src/main/resources/assets/power/models/item/deepslate_depleted_energium_ore.json"
+          "src/main/resources/assets/power/models/item/deepslate_depleted_energium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateDepletedEnergiumOreBlock.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -29204,10 +29204,10 @@
       "registry_name": "deepslate_energium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/deepslate_energium_ore.json",
           "src/main/resources/assets/power/blockstates/deepslate_energium_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_energium_ore.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateEnergiumOreBlock.java",
-          "src/main/resources/assets/power/models/block/deepslate_energium_ore.json"
+          "src/main/resources/assets/power/models/item/deepslate_energium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -29235,13 +29235,13 @@
       "registry_name": "deepslate_amplifier_ore",
       "metadata": {
         "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
+          "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
+          "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
           "src/main/resources/data/power/worldgen/placed_feature/deepslate_amplifier_ore.json",
           "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
-          "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
-          "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
-          "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json"
+          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -29269,13 +29269,13 @@
       "registry_name": "deepslate_copyrium_ore",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
-          "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
-          "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
           "src/main/resources/data/power/neoforge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
+          "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json",
+          "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
+          "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
           "src/main/resources/data/power/worldgen/placed_feature/deepslate_copyrium_ore.json",
-          "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json"
+          "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
