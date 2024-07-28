@@ -30251,7 +30251,17 @@
       "CUSTOM:BloodBattery",
       "CUSTOM:TechnologyBattery",
       "CUSTOM:TeleportationBattery",
-      "CUSTOM:ExplosionBattery"
+      "CUSTOM:ExplosionBattery",
+      "CUSTOM:EmptyBattery",
+      "CUSTOM:AmberBattery",
+      "CUSTOM:MistBattery",
+      "CUSTOM:SandBattery",
+      "CUSTOM:SpeedBattery",
+      "CUSTOM:PoisonBattery",
+      "CUSTOM:MagnetBattery",
+      "CUSTOM:MushroomsBattery",
+      "CUSTOM:MercuryBattery",
+      "PowerModItems.EMPTY_BATTERY"
     ],
     "BLOCKS:minecraft:slabs": [
       "~CUSTOM:PolishedCursedStoneSlab",

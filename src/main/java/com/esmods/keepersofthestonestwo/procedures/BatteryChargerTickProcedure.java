@@ -153,13 +153,22 @@ public class BatteryChargerTickProcedure {
 					}
 					if (world instanceof ILevelExtension _ext && _ext.getCapability(Capabilities.ItemHandler.BLOCK, BlockPos.containing(x, y, z), null) instanceof IItemHandlerModifiable _itemHandlerModifiable) {
 						ItemStack _setstack = new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((((new Object() {
+							public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
+								if (world instanceof ILevelExtension _ext) {
+									IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+									if (_itemHandler != null)
+										return _itemHandler.getStackInSlot(slotid).copy();
+								}
+								return ItemStack.EMPTY;
+							}
+						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).is(ItemTags.create(new ResourceLocation("power:elemental_stones"))) ? (new Object() {
 							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
 								if (blockEntity != null)
 									return blockEntity.getPersistentData().getString(tag);
 								return "";
 							}
-						}.getValue(world, BlockPos.containing(x, y, z), "inputStoneSlot")).replace("_stone", "_battery"))).toLowerCase(java.util.Locale.ENGLISH)))).copy();
+						}.getValue(world, BlockPos.containing(x, y, z), "inputStoneSlot")).replace("_stone", "_battery") : "minecraft:air")).toLowerCase(java.util.Locale.ENGLISH)))).copy();
 						_setstack.setCount(1);
 						_itemHandlerModifiable.setStackInSlot(2, _setstack);
 					}
