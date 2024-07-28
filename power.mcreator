@@ -30216,10 +30216,10 @@
       "CUSTOM:SmokeStone",
       "CUSTOM:FormStone",
       "CUSTOM:MindStone",
-      "CUSTOM:GoldenDustStone",
       "CUSTOM:DarknessStone",
       "CUSTOM:EnergyStone",
-      "CUSTOM:SpiritStone"
+      "CUSTOM:SpiritStone",
+      "CUSTOM:GoldenDustStone"
     ],
     "ITEMS:mod:elemental_batteries": [
       "CUSTOM:FireBattery",

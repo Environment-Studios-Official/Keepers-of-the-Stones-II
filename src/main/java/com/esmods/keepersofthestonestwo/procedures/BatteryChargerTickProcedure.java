@@ -11,6 +11,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
@@ -28,7 +29,7 @@ public class BatteryChargerTickProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == BuiltInRegistries.ITEM.get(new ResourceLocation((((BuiltInRegistries.ITEM.getKey((new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem() == BuiltInRegistries.ITEM.get(new ResourceLocation((((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -37,7 +38,7 @@ public class BatteryChargerTickProcedure {
 				}
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString()).contains("_stone") ? BuiltInRegistries.ITEM.getKey((new Object() {
+		}.getItemStack(world, BlockPos.containing(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("power:elemental_stones"))) ? BuiltInRegistries.ITEM.getKey((new Object() {
 			public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 				if (world instanceof ILevelExtension _ext) {
 					IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -88,7 +89,7 @@ public class BatteryChargerTickProcedure {
 						BlockEntity _blockEntity = world.getBlockEntity(_bp);
 						BlockState _bs = world.getBlockState(_bp);
 						if (_blockEntity != null)
-							_blockEntity.getPersistentData().putString("inputStoneSlot", ((BuiltInRegistries.ITEM.getKey((new Object() {
+							_blockEntity.getPersistentData().putString("inputStoneSlot", ((new Object() {
 								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 									if (world instanceof ILevelExtension _ext) {
 										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
@@ -97,7 +98,7 @@ public class BatteryChargerTickProcedure {
 									}
 									return ItemStack.EMPTY;
 								}
-							}.getItemStack(world, BlockPos.containing(x, y, z), 1)).getItem()).toString()).contains("_stone") ? BuiltInRegistries.ITEM.getKey((new Object() {
+							}.getItemStack(world, BlockPos.containing(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("power:elemental_stones"))) ? BuiltInRegistries.ITEM.getKey((new Object() {
 								public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
 									if (world instanceof ILevelExtension _ext) {
 										IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
