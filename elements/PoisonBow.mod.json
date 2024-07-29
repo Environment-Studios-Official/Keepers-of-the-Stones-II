@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 1,
@@ -9,9 +9,7 @@
     "states": [],
     "name": "Poison Bow",
     "rarity": "COMMON",
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 72000,
@@ -40,6 +38,7 @@
     },
     "enableRanged": true,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "projectile": {
       "value": "CUSTOM:PoisonDropProjectile"
     },

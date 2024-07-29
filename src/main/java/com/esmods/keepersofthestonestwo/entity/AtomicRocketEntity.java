@@ -74,6 +74,10 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		return shoot(world, entity, source, 3f, 42, 10);
 	}
 
+	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 3f, 42, 10);
+	}
+
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		AtomicRocketEntity entityarrow = new AtomicRocketEntity(PowerModEntities.ATOMIC_ROCKET.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

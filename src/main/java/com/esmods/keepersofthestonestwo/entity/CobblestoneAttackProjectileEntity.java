@@ -72,6 +72,10 @@ public class CobblestoneAttackProjectileEntity extends AbstractArrow implements 
 		return shoot(world, entity, source, 0.8f, 4.5, 4);
 	}
 
+	public static CobblestoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 4.5, 4);
+	}
+
 	public static CobblestoneAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		CobblestoneAttackProjectileEntity entityarrow = new CobblestoneAttackProjectileEntity(PowerModEntities.COBBLESTONE_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

@@ -67,6 +67,10 @@ public class LightballProjectileEntity extends AbstractArrow implements ItemSupp
 		return shoot(world, entity, source, 1f, 9, 2);
 	}
 
+	public static LightballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 9, 2);
+	}
+
 	public static LightballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		LightballProjectileEntity entityarrow = new LightballProjectileEntity(PowerModEntities.LIGHTBALL_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

@@ -73,6 +73,10 @@ public class WaterAttackProjectileEntity extends AbstractArrow implements ItemSu
 		return shoot(world, entity, source, 0.8f, 5, 5);
 	}
 
+	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 5, 5);
+	}
+
 	public static WaterAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		WaterAttackProjectileEntity entityarrow = new WaterAttackProjectileEntity(PowerModEntities.WATER_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
