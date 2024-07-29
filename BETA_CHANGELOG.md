@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.34?<br/>
+<br />- Improved poison and rain bows, now their range depends on the time of use (like vanilla bows)
 <br />- Added a new required mod - Pehkui
 <br />- [API] Colorful Powers API has been updated to version 11
 <br />- [Bugfix] Fixed a bug where some recipes could not be unlocked
