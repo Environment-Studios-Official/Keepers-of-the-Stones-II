@@ -161,7 +161,7 @@ public class BatteryChargerTickProcedure {
 								}
 								return ItemStack.EMPTY;
 							}
-						}.getItemStack(world, BlockPos.containing(x, y, z), 2)).is(ItemTags.create(new ResourceLocation("power:elemental_stones"))) ? (new Object() {
+						}.getItemStack(world, BlockPos.containing(x, y, z), 1)).is(ItemTags.create(new ResourceLocation("power:elemental_stones"))) ? (new Object() {
 							public String getValue(LevelAccessor world, BlockPos pos, String tag) {
 								BlockEntity blockEntity = world.getBlockEntity(pos);
 								if (blockEntity != null)
