@@ -39,7 +39,6 @@
     "power:poison_battery",
     "power:magnet_battery",
     "power:mushrooms_battery",
-    "power:mercury_battery",
-    "power:empty_battery"
+    "power:mercury_battery"
   ]
 }
