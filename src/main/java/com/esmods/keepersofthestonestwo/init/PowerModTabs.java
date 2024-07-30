@@ -129,6 +129,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.POISON_STONE.get());
 				tabData.accept(PowerModItems.MAGNET_STONE.get());
 				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
+				tabData.accept(PowerModItems.MERCURY_STONE.get());
 			})
 
 					.build());
