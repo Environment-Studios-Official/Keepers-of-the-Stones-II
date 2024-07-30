@@ -1,11 +1,11 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "achievement",
   "definition": {
     "achievementName": "The End of Tyranny",
     "achievementDescription": "Defeat the energium golem",
     "achievementIcon": {
-      "value": "PowerModItems.ENERGIUM_CORE"
+      "value": "CUSTOM:EnergiumCore"
     },
     "background": "Default",
     "disableDisplay": false,

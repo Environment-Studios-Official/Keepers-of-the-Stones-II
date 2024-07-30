@@ -85,6 +85,10 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 		return shoot(world, entity, source, 0.8f, 4.5, 4);
 	}
 
+	public static MeteoriteProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 4.5, 4);
+	}
+
 	public static MeteoriteProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		MeteoriteProjectileEntity entityarrow = new MeteoriteProjectileEntity(PowerModEntities.METEORITE_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

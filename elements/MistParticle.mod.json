@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "particle",
   "definition": {
     "texture": "mist_particle.png",
@@ -7,7 +7,9 @@
     "frameDuration": 1,
     "width": 3.0,
     "height": 3.0,
-    "scale": 3.0,
+    "scale": {
+      "fixedValue": 3.0
+    },
     "speedFactor": 0.1,
     "gravity": 0.0,
     "maxAge": 40,

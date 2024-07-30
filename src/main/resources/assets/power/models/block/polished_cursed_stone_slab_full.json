@@ -1,6 +1,7 @@
 {
   "parent": "block/cube_bottom_top",
   "textures": {
+    "particle": "power:block/polished_cursed_stone",
     "bottom": "power:block/polished_cursed_stone",
     "top": "power:block/polished_cursed_stone",
     "side": "power:block/polished_cursed_stone"

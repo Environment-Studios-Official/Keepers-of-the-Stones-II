@@ -8,6 +8,7 @@ import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.ProjectileWeaponItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.BowItem;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
@@ -59,9 +60,12 @@ public class RainBowItem extends Item {
 	@Override
 	public void releaseUsing(ItemStack itemstack, Level world, LivingEntity entity, int time) {
 		if (!world.isClientSide() && entity instanceof ServerPlayer player) {
+			float pullingPower = BowItem.getPowerForTime(this.getUseDuration(itemstack) - time);
+			if (pullingPower < 0.1)
+				return;
 			ItemStack stack = findAmmo(player);
 			if (player.getAbilities().instabuild || stack != ItemStack.EMPTY) {
-				RainDropProjectileEntity projectile = RainDropProjectileEntity.shoot(world, entity, world.getRandom());
+				RainDropProjectileEntity projectile = RainDropProjectileEntity.shoot(world, entity, world.getRandom(), pullingPower);
 				if (player.getAbilities().instabuild) {
 					projectile.pickup = AbstractArrow.Pickup.CREATIVE_ONLY;
 				} else {

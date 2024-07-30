@@ -30,6 +30,15 @@
     "power:blood_battery",
     "power:technology_battery",
     "power:teleportation_battery",
-    "power:explosion_battery"
+    "power:explosion_battery",
+    "power:empty_battery",
+    "power:amber_battery",
+    "power:mist_battery",
+    "power:sand_battery",
+    "power:speed_battery",
+    "power:poison_battery",
+    "power:magnet_battery",
+    "power:mushrooms_battery",
+    "power:mercury_battery"
   ]
 }
