@@ -37,8 +37,6 @@ public class IfActiveBarrierProcedure {
 					if (!damagesource.is(DamageTypes.FLY_INTO_WALL)) {
 						if (event instanceof ICancellableEvent _cancellable) {
 							_cancellable.setCanceled(true);
-						} else if (event != null && event.hasResult()) {
-							event.setResult(Event.Result.DENY);
 						}
 					}
 				}
