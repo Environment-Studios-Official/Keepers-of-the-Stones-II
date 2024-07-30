@@ -6,19 +6,14 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.network.chat.Component;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModTabs {
 	public static final DeferredRegister<CreativeModeTab> REGISTRY = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, PowerMod.MODID);
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> ITEMS = REGISTRY.register("items",
@@ -116,13 +111,13 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MOON_STONE.get());
 				tabData.accept(PowerModItems.SPACE_STONE.get());
 				tabData.accept(PowerModItems.TIME_STONE.get());
+				tabData.accept(PowerModItems.CREATION_STONE.get());
+				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
 				tabData.accept(PowerModItems.BLOOD_STONE.get());
 				tabData.accept(PowerModItems.TECHNOLOGY_STONE.get());
 				tabData.accept(PowerModItems.TELEPORTATION_STONE.get());
 				tabData.accept(PowerModItems.EXPLOSION_STONE.get());
 				tabData.accept(PowerModItems.AMBER_STONE.get());
-				tabData.accept(PowerModItems.CREATION_STONE.get());
-				tabData.accept(PowerModItems.DESTRUCTION_STONE.get());
 				tabData.accept(PowerModItems.MIST_STONE.get());
 				tabData.accept(PowerModItems.SAND_STONE.get());
 				tabData.accept(PowerModItems.SPEED_STONE.get());
@@ -183,11 +178,4 @@ public class PowerModTabs {
 			})
 
 					.build());
-
-	@SubscribeEvent
-	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
-		if (tabData.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
-			tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
-		}
-	}
 }
