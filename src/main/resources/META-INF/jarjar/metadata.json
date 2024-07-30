@@ -19,7 +19,7 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "1.0.0"
+        "artifactVersion": "1.0.1"
       },
       "path": "META-INF/jarjar/particlepresets-1.0.1.jar",
       "isObfuscated": true
