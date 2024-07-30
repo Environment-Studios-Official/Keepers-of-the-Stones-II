@@ -18,7 +18,7 @@
     "modelShadowSize": 0.5,
     "mountedYOffset": 0.0,
     "stepHeight": 0.6,
-    "hasSpawnEgg": true,
+    "hasSpawnEgg": false,
     "spawnEggBaseColor": {
       "value": -9216650,
       "falpha": 0.0
@@ -28,7 +28,7 @@
       "falpha": 0.0
     },
     "creativeTab": {
-      "value": "No creative tab entry"
+      "value": "MISC"
     },
     "isBoss": true,
     "bossBarColor": "PURPLE",
@@ -99,6 +99,9 @@
       "value": "entity.generic.death"
     },
     "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
       "value": ""
     },
     "hasAI": true,

@@ -234,7 +234,7 @@ public class AbilityKeyPressedTickProcedure {
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mercury")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mercury")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mercury")) {
-					MercurySpecialAttackProcedure.execute(world, x, y, z, entity);
+					MercurySpecialAttackProcedure.execute(entity);
 				}
 			}
 			{
