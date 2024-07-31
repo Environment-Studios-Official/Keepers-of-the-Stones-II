@@ -113,6 +113,7 @@ import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
 import com.esmods.keepersofthestonestwo.item.MercuryBattleAxeItem;
 import com.esmods.keepersofthestonestwo.item.MercuryBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBallItem;
 import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
@@ -573,6 +574,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
+	public static final DeferredHolder<Item, Item> MERCURY_BALL = REGISTRY.register("mercury_ball", () -> new MercuryBallItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

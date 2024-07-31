@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:MercuryBall"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 13.0,
+    "knockback": 1,
+    "entityModel": "Default",
+    "customModelTexture": "",
+    "onHitsBlock": {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVSushchnost"
+    }
+  }
+}

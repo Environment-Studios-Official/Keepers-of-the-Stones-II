@@ -63,7 +63,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/FireStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "AirStone",
@@ -78,7 +78,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/AirStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "EarthStone",
@@ -93,7 +93,7 @@
           "src/main/resources/assets/power/models/item/earth_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterStone",
@@ -108,7 +108,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/WaterStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "Stones",
@@ -134,7 +134,7 @@
           "src/main/resources/assets/power/models/item/ether_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "FireMaster",
@@ -147,7 +147,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/FireMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "AirMaster",
@@ -160,7 +160,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/AirMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "EarthMaster",
@@ -173,7 +173,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/EarthMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterMaster",
@@ -186,7 +186,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/WaterMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "EtherMaster",
@@ -199,7 +199,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/EtherMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "FireStoneUse",
@@ -238,7 +238,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "DetransformationKey",
@@ -309,7 +309,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireMasterEnd",
@@ -344,7 +344,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "EnhancedAbilities",
@@ -380,7 +380,7 @@
           "src/main/resources/assets/power/models/item/fire_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireSword",
@@ -394,7 +394,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/FireSwordItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FirePassiveProtection",
@@ -429,7 +429,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "PowerScaleRegen",
@@ -505,7 +505,7 @@
           "src/main/resources/assets/power/models/item/air_armor_helmet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirStoneUse",
@@ -544,7 +544,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirMasterStart",
@@ -579,7 +579,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirMasterEnd",
@@ -614,7 +614,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "FireSwordKazhdyiTikVInvientarie",
@@ -633,7 +633,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireArmorKazhdyiTikDliaShliema",
@@ -652,7 +652,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireArmorKazhdyiTikDliaNaghrudnika",
@@ -671,7 +671,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireArmorKazhdyiTikDliaPonozhiei",
@@ -690,7 +690,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "FireArmorKazhdyiTikDliaBotinok",
@@ -709,7 +709,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "AirArmorKazhdyiTikDliaShliema",
@@ -728,7 +728,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirArmorKazhdyiTikDliaNaghrudnika",
@@ -747,7 +747,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirArmorKazhdyiTikDliaPonozhiei",
@@ -766,7 +766,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirArmorKazhdyiTikDliaBotinok",
@@ -785,7 +785,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirRapier",
@@ -799,7 +799,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/AirRapierItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "AirRapierKazhdyiTikVInvientarie",
@@ -818,7 +818,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "WheelAbilitiesFire",
@@ -976,7 +976,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthArmor",
@@ -993,7 +993,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/EarthArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "PowerScaleSet",
@@ -1048,7 +1048,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthArmorKazhdyiTikDliaNaghrudnika",
@@ -1067,7 +1067,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthArmorKazhdyiTikDliaPonozhiei",
@@ -1086,7 +1086,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthArmorKazhdyiTikDliaBotinok",
@@ -1105,7 +1105,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthHammer",
@@ -1119,7 +1119,7 @@
           "src/main/resources/assets/power/models/item/earth_hammer.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthHammerKazhdyiTikVInvientarie",
@@ -1138,7 +1138,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "Attack5",
@@ -1418,7 +1418,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "GrassBlockAttackKoghdaSnariadPopadaietVBlok",
@@ -1449,7 +1449,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "DirtBlockAttackKoghdaSnariadPopadaietVBlok",
@@ -1480,7 +1480,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "CobblestoneAttackKoghdaSnariadPopadaietVBlok",
@@ -1511,7 +1511,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "CobbledDeepslateAttackKoghdaSnariadPopadaietVBlok",
@@ -1542,7 +1542,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterKatana",
@@ -1556,7 +1556,7 @@
           "src/main/resources/assets/power/models/item/water_katana.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterKatanaKazhdyiTikVInvientarie",
@@ -1575,7 +1575,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "EarthMasterStart",
@@ -1610,7 +1610,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "EarthMasterEnd",
@@ -1645,7 +1645,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterMasterStart",
@@ -1680,7 +1680,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterMasterEnd",
@@ -1715,7 +1715,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterArmor",
@@ -1732,7 +1732,7 @@
           "src/main/resources/assets/power/models/item/water_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterArmorKazhdyiTikDliaShliema",
@@ -1751,7 +1751,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterArmorKazhdyiTikDliaNaghrudnika",
@@ -1770,7 +1770,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterArmorKazhdyiTikDliaPonozhiei",
@@ -1789,7 +1789,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterArmorKazhdyiTikDliaBotinok",
@@ -1808,7 +1808,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterStoneUse",
@@ -1847,7 +1847,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "Attack13",
@@ -1958,7 +1958,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherMasterEnd",
@@ -1993,7 +1993,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherStoneUse",
@@ -2032,7 +2032,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherGlaive",
@@ -2046,7 +2046,7 @@
           "src/main/resources/assets/power/models/item/ether_glaive.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherGlaiveKazhdyiTikVInvientarie",
@@ -2065,7 +2065,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherArmor",
@@ -2082,7 +2082,7 @@
           "src/main/resources/assets/power/models/item/ether_armor_helmet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherArmorKazhdyiTikDliaShliema",
@@ -2101,7 +2101,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherArmorKazhdyiTikDliaNaghrudnika",
@@ -2120,7 +2120,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherArmorKazhdyiTikDliaPonozhiei",
@@ -2139,7 +2139,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "EtherArmorKazhdyiTikDliaBotinok",
@@ -2158,7 +2158,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "Attack17",
@@ -2265,7 +2265,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WheelAbilitiesWater",
@@ -2341,7 +2341,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "WaterPassiveWaterBreath",
@@ -2376,7 +2376,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "AbilityUsingKey",
@@ -2420,7 +2420,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "IceStone",
@@ -2435,7 +2435,7 @@
           "src/main/resources/assets/power/models/item/ice_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceMaster",
@@ -2448,7 +2448,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/IceMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceArmor",
@@ -2465,7 +2465,7 @@
           "src/main/resources/assets/power/models/item/ice_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceArmorKazhdyiTikDliaShliema",
@@ -2484,7 +2484,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceArmorKazhdyiTikDliaNaghrudnika",
@@ -2503,7 +2503,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceArmorKazhdyiTikDliaPonozhiei",
@@ -2522,7 +2522,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceArmorKazhdyiTikDliaBotinok",
@@ -2541,7 +2541,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceStoneUse",
@@ -2580,7 +2580,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceMasterStart",
@@ -2615,7 +2615,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceMasterEnd",
@@ -2650,7 +2650,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "Attack21",
@@ -2741,7 +2741,7 @@
           "src/main/resources/assets/power/models/item/lightning_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningMaster",
@@ -2754,7 +2754,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/LightningMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningArmor",
@@ -2771,7 +2771,7 @@
           "src/main/resources/assets/power/models/item/lightning_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningArmorKazhdyiTikDliaShliema",
@@ -2790,7 +2790,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningArmorKazhdyiTikDliaNaghrudnika",
@@ -2809,7 +2809,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningArmorKazhdyiTikDliaPonozhiei",
@@ -2828,7 +2828,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningArmorKazhdyiTikDliaBotinok",
@@ -2847,7 +2847,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "WheelAbilitiesLightning",
@@ -2977,7 +2977,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningMasterStart",
@@ -3012,7 +3012,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningMasterEnd",
@@ -3047,7 +3047,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "MagicFireballProjectile",
@@ -3060,7 +3060,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/MagicFireballProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "MagicFireball",
@@ -3074,7 +3074,7 @@
           "src/main/resources/assets/power/models/item/magic_fireball.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "StoneAttackProjectile",
@@ -3088,7 +3088,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/StoneAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "GrassBlockAttackProjectile",
@@ -3102,7 +3102,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/GrassBlockAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "DirtBlockAttackProjectile",
@@ -3116,7 +3116,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/DirtBlockAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "CobblestoneAttackProjectile",
@@ -3130,7 +3130,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CobblestoneAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "CobbledDeepslateAttackProjectile",
@@ -3144,7 +3144,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CobbledDeepslateAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterAttackProjectile",
@@ -3158,7 +3158,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/WaterAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "EtherAttackProjectile",
@@ -3172,7 +3172,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/EtherAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "SoundStone",
@@ -3187,7 +3187,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SoundStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundMaster",
@@ -3200,7 +3200,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/SoundMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundArmor",
@@ -3217,7 +3217,7 @@
           "src/main/resources/assets/power/models/item/sound_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundArmorKazhdyiTikDliaShliema",
@@ -3236,7 +3236,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundArmorKazhdyiTikDliaNaghrudnika",
@@ -3255,7 +3255,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundArmorKazhdyiTikDliaPonozhiei",
@@ -3274,7 +3274,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundArmorKazhdyiTikDliaBotinok",
@@ -3293,7 +3293,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundStoneUse",
@@ -3332,7 +3332,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundMasterStart",
@@ -3367,7 +3367,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundMasterEnd",
@@ -3402,7 +3402,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "WheelAbilitiesSound",
@@ -3507,7 +3507,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/IceAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceAttackProjectileProjectileHitsBlock",
@@ -3538,7 +3538,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "CrystalStone",
@@ -3553,7 +3553,7 @@
           "src/main/resources/assets/power/models/item/crystal_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalArmor",
@@ -3570,7 +3570,7 @@
           "src/main/resources/assets/power/models/item/crystal_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalStoneUse",
@@ -3609,7 +3609,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalMasterStart",
@@ -3644,7 +3644,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalArmorKazhdyiTikDliaShliema",
@@ -3663,7 +3663,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalArmorKazhdyiTikDliaNaghrudnika",
@@ -3682,7 +3682,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalArmorKazhdyiTikDliaPonozhiei",
@@ -3701,7 +3701,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalArmorKazhdyiTikDliaBotinok",
@@ -3720,7 +3720,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalMasterEnd",
@@ -3755,7 +3755,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "WheelAbilitiesCrystal",
@@ -3861,7 +3861,7 @@
           "src/main/resources/assets/power/models/item/lava_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaArmor",
@@ -3878,7 +3878,7 @@
           "src/main/resources/assets/power/models/item/lava_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaArmorKazhdyiTikDliaShliema",
@@ -3897,7 +3897,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaArmorKazhdyiTikDliaNaghrudnika",
@@ -3916,7 +3916,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaArmorKazhdyiTikDliaPonozhiei",
@@ -3935,7 +3935,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaArmorKazhdyiTikDliaBotinok",
@@ -3954,7 +3954,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaMaster",
@@ -3967,7 +3967,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/LavaMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaStoneUse",
@@ -4006,7 +4006,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaMasterStart",
@@ -4041,7 +4041,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaMasterEnd",
@@ -4076,7 +4076,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "WheelAbilitiesLava",
@@ -4180,7 +4180,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/CrystalMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "RainStone",
@@ -4195,7 +4195,7 @@
           "src/main/resources/assets/power/models/item/rain_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "TornadoStone",
@@ -4210,7 +4210,7 @@
           "src/main/resources/assets/power/models/item/tornado_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "OceanStone",
@@ -4225,7 +4225,7 @@
           "src/main/resources/assets/power/models/item/ocean_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "PlantsStone",
@@ -4240,7 +4240,7 @@
           "src/main/resources/assets/power/models/item/plants_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "AnimalsStone",
@@ -4255,7 +4255,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/AnimalsStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "MetalStone",
@@ -4270,7 +4270,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MetalStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "LightStone",
@@ -4285,7 +4285,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/LightStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "ShadowStone",
@@ -4300,7 +4300,7 @@
           "src/main/resources/assets/power/models/item/shadow_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "VacuumStone",
@@ -4315,7 +4315,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/VacuumStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "SunStone",
@@ -4330,7 +4330,7 @@
           "src/main/resources/assets/power/models/item/sun_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "MoonStone",
@@ -4345,7 +4345,7 @@
           "src/main/resources/assets/power/models/item/moon_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "SpaceStone",
@@ -4360,7 +4360,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "TimeStone",
@@ -4375,7 +4375,7 @@
           "src/main/resources/assets/power/models/item/time_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "BloodStone",
@@ -4390,7 +4390,7 @@
           "src/main/resources/assets/power/models/item/blood_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "TechnologyStone",
@@ -4405,7 +4405,7 @@
           "src/main/resources/assets/power/models/item/technology_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TeleportationStone",
@@ -4420,7 +4420,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TeleportationStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "ExplosionStone",
@@ -4435,7 +4435,7 @@
           "src/main/resources/assets/power/models/item/explosion_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "AmberStone",
@@ -4450,7 +4450,7 @@
           "src/main/resources/assets/power/models/item/amber_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "CreationStone",
@@ -4465,7 +4465,7 @@
           "src/main/resources/assets/power/models/item/creation_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "DestructionStone",
@@ -4480,7 +4480,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/DestructionStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "MistStone",
@@ -4495,7 +4495,7 @@
           "src/main/resources/assets/power/models/item/mist_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "SandStone",
@@ -4510,7 +4510,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SandStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SpeedStone",
@@ -4525,7 +4525,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpeedStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "PoisonStone",
@@ -4540,7 +4540,7 @@
           "src/main/resources/assets/power/models/item/poison_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "MagnetStone",
@@ -4555,7 +4555,7 @@
           "src/main/resources/assets/power/models/item/magnet_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MushroomsStone",
@@ -4570,7 +4570,7 @@
           "src/main/resources/assets/power/models/item/mushrooms_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MercuryStone",
@@ -4585,7 +4585,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MusicStone",
@@ -4600,7 +4600,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MusicStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Music"
+      "path": "~/Elements/Music"
     },
     {
       "name": "PlagueStone",
@@ -4615,7 +4615,7 @@
           "src/main/resources/assets/power/models/item/plague_stone.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Plague"
+      "path": "~/Elements/Plague"
     },
     {
       "name": "BlueFlameStone",
@@ -4630,7 +4630,7 @@
           "src/main/resources/assets/power/models/item/blue_flame_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/BlueFlame"
+      "path": "~/Elements/BlueFlame"
     },
     {
       "name": "GravityStone",
@@ -4645,7 +4645,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/GravityStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Gravity"
+      "path": "~/Elements/Gravity"
     },
     {
       "name": "SmokeStone",
@@ -4660,7 +4660,7 @@
           "src/main/resources/assets/power/models/item/smoke_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Smoke"
+      "path": "~/Elements/Smoke"
     },
     {
       "name": "FormStone",
@@ -4675,7 +4675,7 @@
           "src/main/resources/assets/power/models/item/form_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Form"
+      "path": "~/Elements/Form"
     },
     {
       "name": "MindStone",
@@ -4690,7 +4690,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MindStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mind"
+      "path": "~/Elements/Mind"
     },
     {
       "name": "GoldenDustStone",
@@ -4705,7 +4705,7 @@
           "src/main/resources/assets/power/models/item/golden_dust_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/GoldenDust"
+      "path": "~/Elements/GoldenDust"
     },
     {
       "name": "DarknessStone",
@@ -4720,7 +4720,7 @@
           "src/main/resources/assets/power/models/item/darkness_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Darkness"
+      "path": "~/Elements/Darkness"
     },
     {
       "name": "EnergyStone",
@@ -4735,7 +4735,7 @@
           "src/main/resources/assets/power/models/item/energy_stone_0.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "SpiritStone",
@@ -4750,7 +4750,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritStoneItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Spirit"
+      "path": "~/Elements/Spirit"
     },
     {
       "name": "IceSpear",
@@ -4764,7 +4764,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/IceSpearItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "IceSpearKazhdyiTikVInvientarie",
@@ -4783,7 +4783,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "RainMaster",
@@ -4796,7 +4796,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/RainMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainArmor",
@@ -4813,7 +4813,7 @@
           "src/main/resources/assets/power/models/item/rain_armor_helmet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainArmorKazhdyiTikDliaShliema",
@@ -4832,7 +4832,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainArmorKazhdyiTikDliaNaghrudnika",
@@ -4851,7 +4851,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainArmorKazhdyiTikDliaPonozhiei",
@@ -4870,7 +4870,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainArmorKazhdyiTikDliaBotinok",
@@ -4889,7 +4889,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "TornadoMaster",
@@ -4902,7 +4902,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TornadoMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoArmor",
@@ -4919,7 +4919,7 @@
           "src/main/resources/assets/power/models/item/tornado_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoArmorKazhdyiTikDliaShliema",
@@ -4938,7 +4938,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoArmorKazhdyiTikDliaNaghrudnika",
@@ -4957,7 +4957,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoArmorKazhdyiTikDliaPonozhiei",
@@ -4976,7 +4976,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoArmorKazhdyiTikDliaBotinok",
@@ -4995,7 +4995,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "OceanMaster",
@@ -5008,7 +5008,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/OceanMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanArmor",
@@ -5025,7 +5025,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/OceanArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanArmorKazhdyiTikDliaShliema",
@@ -5044,7 +5044,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanArmorKazhdyiTikDliaNaghrudnika",
@@ -5063,7 +5063,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanArmorKazhdyiTikDliaPonozhiei",
@@ -5082,7 +5082,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanArmorKazhdyiTikDliaBotinok",
@@ -5101,7 +5101,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "PlantsMaster",
@@ -5114,7 +5114,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/PlantsMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsArmor",
@@ -5131,7 +5131,7 @@
           "src/main/resources/assets/power/models/item/plants_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsArmorKazhdyiTikDliaShliema",
@@ -5150,7 +5150,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsArmorKazhdyiTikDliaNaghrudnika",
@@ -5169,7 +5169,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsArmorKazhdyiTikDliaPonozhiei",
@@ -5188,7 +5188,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsArmorKazhdyiTikDliaBotinok",
@@ -5207,7 +5207,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "AnimalsMaster",
@@ -5220,7 +5220,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/AnimalsMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsArmor",
@@ -5237,7 +5237,7 @@
           "src/main/resources/assets/power/models/item/animals_armor_helmet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsArmorKazhdyiTikDliaShliema",
@@ -5256,7 +5256,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsArmorKazhdyiTikDliaNaghrudnika",
@@ -5275,7 +5275,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsArmorKazhdyiTikDliaPonozhiei",
@@ -5294,7 +5294,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsArmorKazhdyiTikDliaBotinok",
@@ -5313,7 +5313,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "MetalMaster",
@@ -5326,7 +5326,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MetalMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalArmor",
@@ -5343,7 +5343,7 @@
           "src/main/resources/assets/power/models/item/metal_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalArmorKazhdyiTikDliaShliema",
@@ -5362,7 +5362,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalArmorKazhdyiTikDliaNaghrudnika",
@@ -5381,7 +5381,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalArmorKazhdyiTikDliaPonozhiei",
@@ -5400,7 +5400,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalArmorKazhdyiTikDliaBotinok",
@@ -5419,7 +5419,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "WheelAbilitiesIce",
@@ -5465,7 +5465,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "BallLightningProjectileKazhdyiTikPriPoliotieSnariada",
@@ -5496,7 +5496,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "BallLightningProjectile",
@@ -5510,7 +5510,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BallLightningProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "BallLightningProjectileKoghdaSnariadPopadaietVSushchnost",
@@ -5545,7 +5545,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "BassBoom",
@@ -5559,7 +5559,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BassBoomParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "AmethystAttackProjectile",
@@ -5573,7 +5573,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/AmethystAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "AmethystAttackProjectileKoghdaSnariadPopadaietVBlok",
@@ -5604,7 +5604,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "FrozenDestructionArmor",
@@ -5639,7 +5639,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "PowerOverlay",
@@ -5666,7 +5666,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/LavaAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaAttackProjectileKoghdaSnariadPopadaietVBlok",
@@ -5697,7 +5697,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaAttackProjectileKoghdaSnariadPopadaietVSushchnost",
@@ -5728,7 +5728,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaPassiveProtection",
@@ -5763,7 +5763,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "StunPriNalozhieniiEffiekta",
@@ -5795,7 +5795,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/StunMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundBombProjectile",
@@ -5809,7 +5809,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/SoundBombProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok",
@@ -5840,7 +5840,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost",
@@ -5859,7 +5859,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "LightningFalchion",
@@ -5873,7 +5873,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/LightningFalchionItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "LightningFalchionKazhdyiTikVInvientarie",
@@ -5892,7 +5892,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "SoundDagger",
@@ -5906,7 +5906,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SoundDaggerItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "SoundDaggerKazhdyiTikVInvientarie",
@@ -5925,7 +5925,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "CrystalKnife",
@@ -5939,7 +5939,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CrystalKnifeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "CrystalKnifeKazhdyiTikVInvientarie",
@@ -5958,7 +5958,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "RainStoneUse",
@@ -5997,7 +5997,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainMasterStart",
@@ -6032,7 +6032,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainMasterEnd",
@@ -6067,7 +6067,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "WheelAbilitiesRain",
@@ -6172,7 +6172,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/AmethystClusterAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "TornadoMasterStart",
@@ -6207,7 +6207,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoMasterEnd",
@@ -6242,7 +6242,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoStoneUse",
@@ -6281,7 +6281,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "WheelAbilitiesTornado",
@@ -6391,7 +6391,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "Whirlwind",
@@ -6404,7 +6404,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/WhirlwindMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "RainBow",
@@ -6418,7 +6418,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/RainBowItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainBowPoslieIspolzovaniiaSnariada",
@@ -6437,7 +6437,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "RainBowKazhdyiTikVInvientarie",
@@ -6456,7 +6456,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "LavaHammer",
@@ -6470,7 +6470,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/LavaHammerItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "LavaHammerKazhdyiTikVInvientarie",
@@ -6489,7 +6489,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "RainDropProjectile",
@@ -6503,7 +6503,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/RainDropProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "WheelAbilitiesOcean",
@@ -6629,7 +6629,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanMasterEnd",
@@ -6664,7 +6664,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanStoneUse",
@@ -6703,7 +6703,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "TornadoAxe",
@@ -6717,7 +6717,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TornadoAxeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "TornadoAxeKazhdyiTikVInvientarie",
@@ -6736,7 +6736,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "MiniTornadoProjectile",
@@ -6750,7 +6750,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/MiniTornadoProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "OceanicTrident",
@@ -6764,7 +6764,7 @@
           "src/main/resources/assets/power/models/item/oceanic_trident.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanicTridentKazhdyiTikVInvientarie",
@@ -6783,7 +6783,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "OceanPassiveConduit",
@@ -6802,7 +6802,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "WheelAbilitiesPlants",
@@ -6928,7 +6928,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsMasterEnd",
@@ -6963,7 +6963,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PlantsStoneUse",
@@ -7002,7 +7002,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "GreenStaff",
@@ -7016,7 +7016,7 @@
           "src/main/resources/assets/power/models/item/green_staff.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "GreenStaffKazhdyiTikVInvientarie",
@@ -7035,7 +7035,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PoisonousThornKoghdaSnariadPopadaietVSushchnost",
@@ -7054,7 +7054,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "PoisonousThorn",
@@ -7068,7 +7068,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonousThornRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "WheelAbilitiesAnimals",
@@ -7194,7 +7194,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsMasterEnd",
@@ -7229,7 +7229,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsStoneUse",
@@ -7268,7 +7268,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "Insects",
@@ -7282,7 +7282,7 @@
           "src/main/resources/assets/power/particles/insects.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsHalberd",
@@ -7296,7 +7296,7 @@
           "src/main/resources/assets/power/models/item/animals_halberd.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "AnimalsHalberdKazhdyiTikVInvientarie",
@@ -7315,7 +7315,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "WheelAbilitiesMetal",
@@ -7441,7 +7441,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalMasterEnd",
@@ -7476,7 +7476,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "MetalStoneUse",
@@ -7515,7 +7515,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "CopperAttackProjectile",
@@ -7529,7 +7529,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CopperAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "CopperAttackProjectileKoghdaSnariadPopadaietVBlok",
@@ -7560,7 +7560,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "GoldAttackProjectile",
@@ -7574,7 +7574,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/GoldAttackProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "GoldAttackProjectileKoghdaSnariadPopadaietVBlok",
@@ -7605,7 +7605,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "IronAttackProjectile",
@@ -7619,7 +7619,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/IronAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "IronAttackProjectileKoghdaSnariadPopadaietVBlok",
@@ -7650,7 +7650,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "EmptyBatteryDesc",
@@ -8179,7 +8179,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/IronSkinMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "RightMetalGauntlet",
@@ -8193,7 +8193,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/RightMetalGauntletItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "RightMetalGauntletKazhdyiTikVInvientarie",
@@ -8212,7 +8212,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "LeftMetalGauntlet",
@@ -8226,7 +8226,7 @@
           "src/main/resources/assets/power/models/item/left_metal_gauntlet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "LeftMetalGauntletKazhdyiTikVInvientarie",
@@ -8245,7 +8245,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "SoundBattery",
@@ -8870,7 +8870,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/LightMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightArmor",
@@ -8887,7 +8887,7 @@
           "src/main/resources/assets/power/models/item/light_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightArmorKazhdyiTikDliaShliema",
@@ -8906,7 +8906,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightArmorKazhdyiTikDliaNaghrudnika",
@@ -8925,7 +8925,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightArmorKazhdyiTikDliaPonozhiei",
@@ -8944,7 +8944,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightArmorKazhdyiTikDliaBotinok",
@@ -8963,7 +8963,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightStoneUse",
@@ -9002,7 +9002,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightMasterStart",
@@ -9037,7 +9037,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightMasterEnd",
@@ -9072,7 +9072,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "WheelAbilitiesLight",
@@ -9245,7 +9245,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/KnifeAttackProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "LightSparkle",
@@ -9259,7 +9259,7 @@
           "src/main/resources/assets/power/particles/light_sparkle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightSword",
@@ -9273,7 +9273,7 @@
           "src/main/resources/assets/power/models/item/light_sword.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightSwordKazhdyiTikVInvientarie",
@@ -9292,7 +9292,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightballProjectile",
@@ -9306,7 +9306,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/LightballProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "LightballProjectileKazhdyiTikPriPoliotieSnariada",
@@ -9337,7 +9337,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "LightballProjectileKoghdaSnariadPopadaietVSushchnost",
@@ -9356,7 +9356,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "WheelAbilitiesShadow",
@@ -9460,7 +9460,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/ShadowMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowArmor",
@@ -9477,7 +9477,7 @@
           "src/main/resources/assets/power/models/item/shadow_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowArmorKazhdyiTikDliaShliema",
@@ -9496,7 +9496,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowArmorKazhdyiTikDliaNaghrudnika",
@@ -9515,7 +9515,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowArmorKazhdyiTikDliaPonozhiei",
@@ -9534,7 +9534,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowArmorKazhdyiTikDliaBotinok",
@@ -9553,7 +9553,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowStoneUse",
@@ -9592,7 +9592,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowMasterStart",
@@ -9627,7 +9627,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowMasterEnd",
@@ -9662,7 +9662,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowBattery",
@@ -9744,7 +9744,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ShadowRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "DepletedEnergiumOreLoot",
@@ -9918,7 +9918,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/ShadowSphereRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowSphereKazhdyiTikPriPoliotieSnariada",
@@ -9949,7 +9949,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowScythe",
@@ -9963,7 +9963,7 @@
           "src/main/resources/assets/power/models/item/shadow_scythe.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "ShadowScytheKazhdyiTikVInvientarie",
@@ -9982,7 +9982,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "VacuumMaster",
@@ -9995,7 +9995,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/VacuumMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumArmor",
@@ -10012,7 +10012,7 @@
           "src/main/resources/assets/power/models/item/vacuum_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumArmorKazhdyiTikDliaShliema",
@@ -10031,7 +10031,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumArmorKazhdyiTikDliaNaghrudnika",
@@ -10050,7 +10050,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumArmorKazhdyiTikDliaPonozhiei",
@@ -10069,7 +10069,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumArmorKazhdyiTikDliaBotinok",
@@ -10088,7 +10088,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "WheelAbilitiesVacuum",
@@ -10214,7 +10214,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumMasterEnd",
@@ -10249,7 +10249,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumStoneUse",
@@ -10288,7 +10288,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumBattery",
@@ -10808,7 +10808,7 @@
           "src/main/resources/assets/power/models/item/vacuum_dagger.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumDaggerKazhdyiTikVInvientarie",
@@ -10827,7 +10827,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "SphereNothingProjectile",
@@ -10841,7 +10841,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/SphereNothingProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "VacuumParticle",
@@ -10855,7 +10855,7 @@
           "src/main/resources/assets/power/particles/vacuum_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "EnergiumUpgradeSmithingTemplate",
@@ -11170,7 +11170,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "IronSkinEffectStart",
@@ -11189,7 +11189,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "IronSkinEffectEnd",
@@ -11208,7 +11208,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "CancelUseMilkInActiveStone",
@@ -11331,7 +11331,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/EnergyMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyStoneUse",
@@ -11370,7 +11370,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyMasterStart",
@@ -11405,7 +11405,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyArmor",
@@ -11422,7 +11422,7 @@
           "src/main/resources/assets/power/models/item/energy_armor_helmet.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyArmorKazhdyiTikDliaShliema",
@@ -11441,7 +11441,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyArmorKazhdyiTikDliaNaghrudnika",
@@ -11460,7 +11460,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyArmorKazhdyiTikDliaPonozhiei",
@@ -11479,7 +11479,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyArmorKazhdyiTikDliaBotinok",
@@ -11498,7 +11498,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyMasterEnd",
@@ -11533,7 +11533,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyBattery",
@@ -11600,7 +11600,7 @@
           "src/main/resources/assets/power/particles/energy_spark.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergiumCore",
@@ -11628,7 +11628,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/EnergyStaffItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyStaffKazhdyiTikVInvientarie",
@@ -11647,7 +11647,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "KeepersBox",
@@ -11800,7 +11800,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyCharge",
@@ -11814,7 +11814,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/EnergyChargeEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "EnergyChargeTick",
@@ -11845,7 +11845,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "SunMaster",
@@ -11858,7 +11858,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/SunMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunArmor",
@@ -11875,7 +11875,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SunArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunArmorKazhdyiTikDliaShliema",
@@ -11894,7 +11894,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunArmorKazhdyiTikDliaNaghrudnika",
@@ -11913,7 +11913,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunArmorKazhdyiTikDliaPonozhiei",
@@ -11932,7 +11932,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunArmorKazhdyiTikDliaBotinok",
@@ -11951,7 +11951,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunStoneUse",
@@ -11990,7 +11990,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunMasterStart",
@@ -12025,7 +12025,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunMasterEnd",
@@ -12060,7 +12060,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "WheelAbilitiesSun",
@@ -12248,7 +12248,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SolarBladeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SolarBladeKazhdyiTikVInvientarie",
@@ -12267,7 +12267,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SolarSalvoKoghdaSnariadPopadaietVSushchnost",
@@ -12286,7 +12286,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "SunParticles",
@@ -12300,7 +12300,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/SunParticlesParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "MoonMaster",
@@ -12313,7 +12313,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MoonMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonArmor",
@@ -12330,7 +12330,7 @@
           "src/main/resources/assets/power/models/item/moon_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonMasterStart",
@@ -12365,7 +12365,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonMasterEnd",
@@ -12400,7 +12400,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonStoneUse",
@@ -12439,7 +12439,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonArmorKazhdyiTikDliaShliema",
@@ -12458,7 +12458,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonArmorKazhdyiTikDliaNaghrudnika",
@@ -12477,7 +12477,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonArmorKazhdyiTikDliaPonozhiei",
@@ -12496,7 +12496,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonArmorKazhdyiTikDliaBotinok",
@@ -12515,7 +12515,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "WheelAbilitiesMoon",
@@ -12688,7 +12688,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MoonDoubleSidedSpearItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonDoubleSidedSpearKazhdyiTikVInvientarie",
@@ -12707,7 +12707,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonParticle",
@@ -12721,7 +12721,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MoonParticleParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "MoonBlock",
@@ -12738,7 +12738,7 @@
           "src/main/resources/data/power/loot_tables/blocks/moon_block.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "StarPotionInfinityDopolnitielnaiaInformatsiia",
@@ -12766,7 +12766,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/SpaceMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceArmor",
@@ -12783,7 +12783,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SpaceArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceArmorKazhdyiTikDliaShliema",
@@ -12802,7 +12802,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceArmorKazhdyiTikDliaNaghrudnika",
@@ -12821,7 +12821,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceArmorKazhdyiTikDliaPonozhiei",
@@ -12840,7 +12840,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceArmorKazhdyiTikDliaBotinok",
@@ -12859,7 +12859,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceStoneUse",
@@ -12898,7 +12898,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceMasterStart",
@@ -12933,7 +12933,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpaceMasterEnd",
@@ -12968,7 +12968,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "WheelAbilitiesSpace",
@@ -13150,7 +13150,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "BlackHole",
@@ -13165,7 +13165,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/BlackHoleRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "BlackHolePriNachalnomPrizyvieSushchnosti",
@@ -13184,7 +13184,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "StarParticle",
@@ -13198,7 +13198,7 @@
           "src/main/resources/assets/power/particles/star_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "SpacePassiveAbIlity",
@@ -13217,7 +13217,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "ConstellationSword",
@@ -13231,7 +13231,7 @@
           "src/main/resources/assets/power/models/item/constellation_sword.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "ConstellationSwordKazhdyiTikVInvientarie",
@@ -13250,7 +13250,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "MeteoriteProjectile",
@@ -13264,7 +13264,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/MeteoriteProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "MeteoriteProjectileKazhdyiTikPriPoliotieSnariada",
@@ -13295,7 +13295,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "MeteoriteProjectileKoghdaSnariadPopadaietVBlok",
@@ -13326,7 +13326,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "TimeMaster",
@@ -13339,7 +13339,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TimeMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeArmor",
@@ -13356,7 +13356,7 @@
           "src/main/resources/assets/power/models/item/time_armor_leggings.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeArmorKazhdyiTikDliaShliema",
@@ -13375,7 +13375,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeArmorKazhdyiTikDliaNaghrudnika",
@@ -13394,7 +13394,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeArmorKazhdyiTikDliaPonozhiei",
@@ -13413,7 +13413,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeArmorKazhdyiTikDliaBotinok",
@@ -13432,7 +13432,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeMasterStart",
@@ -13467,7 +13467,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeMasterEnd",
@@ -13502,7 +13502,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeStoneUse",
@@ -13541,7 +13541,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "WheelAbilitiesTime",
@@ -13714,7 +13714,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/TimeSlowParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeStop",
@@ -13728,7 +13728,7 @@
           "src/main/resources/assets/power/particles/time_stop.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeFast",
@@ -13742,7 +13742,7 @@
           "src/main/resources/assets/power/particles/time_fast.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeSlowingKazhdyiTikVoVriemiaEffiekta",
@@ -13761,7 +13761,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeSlowing",
@@ -13774,7 +13774,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TimeSlowingMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeStopped",
@@ -13787,7 +13787,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TimeStoppedMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeKhopesh",
@@ -13801,7 +13801,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TimeKhopeshItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeKhopeshKazhdyiTikVInvientarie",
@@ -13820,7 +13820,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "CreationMaster",
@@ -13833,7 +13833,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/CreationMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationArmor",
@@ -13850,7 +13850,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationArmorKazhdyiTikDliaShliema",
@@ -13869,7 +13869,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationArmorKazhdyiTikDliaNaghrudnika",
@@ -13888,7 +13888,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationArmorKazhdyiTikDliaPonozhiei",
@@ -13907,7 +13907,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationArmorKazhdyiTikDliaBotinok",
@@ -13926,7 +13926,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationStoneUse",
@@ -13965,7 +13965,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationMasterStart",
@@ -14000,7 +14000,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationMasterEnd",
@@ -14035,7 +14035,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "TimeStoppedPriNalozhieniiEffiekta",
@@ -14054,7 +14054,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeStoppedPriIstiechieniiEffiekta",
@@ -14073,7 +14073,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "TimeStoppedKazhdyiTikVoVriemiaEffiekta",
@@ -14092,7 +14092,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "WheelAbilitiesCreation",
@@ -14401,7 +14401,7 @@
           "src/main/resources/assets/power/models/item/creation_staff.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationStaffKazhdyiTikVInvientarie",
@@ -14420,7 +14420,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "KeepersBoxGUIPart1",
@@ -14643,7 +14643,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Fire"
+      "path": "~/Elements/Fire"
     },
     {
       "name": "AirElementGet",
@@ -14666,7 +14666,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Air"
+      "path": "~/Elements/Air"
     },
     {
       "name": "EarthElementGet",
@@ -14689,7 +14689,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Earth"
+      "path": "~/Elements/Earth"
     },
     {
       "name": "WaterElementGet",
@@ -14712,7 +14712,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Water"
+      "path": "~/Elements/Water"
     },
     {
       "name": "EtherElementGet",
@@ -14735,7 +14735,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ether"
+      "path": "~/Elements/Ether"
     },
     {
       "name": "IceElementGet",
@@ -14758,7 +14758,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "LightningElementGet",
@@ -14781,7 +14781,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lightning"
+      "path": "~/Elements/Lightning"
     },
     {
       "name": "SoundElementGet",
@@ -14804,7 +14804,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sound"
+      "path": "~/Elements/Sound"
     },
     {
       "name": "CrystalElementGet",
@@ -14827,7 +14827,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Crystal"
+      "path": "~/Elements/Crystal"
     },
     {
       "name": "LavaElementGet",
@@ -14850,7 +14850,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Lava"
+      "path": "~/Elements/Lava"
     },
     {
       "name": "RainElementGet",
@@ -14873,7 +14873,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Rain"
+      "path": "~/Elements/Rain"
     },
     {
       "name": "TornadoElementGet",
@@ -14896,7 +14896,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Tornado"
+      "path": "~/Elements/Tornado"
     },
     {
       "name": "OceanElementGet",
@@ -14919,7 +14919,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ocean"
+      "path": "~/Elements/Ocean"
     },
     {
       "name": "KeepersBoxPriShchielchkiePKMPoBloku",
@@ -14977,7 +14977,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Plants"
+      "path": "~/Elements/Plants"
     },
     {
       "name": "AnimalsElementGet",
@@ -15000,7 +15000,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Animals"
+      "path": "~/Elements/Animals"
     },
     {
       "name": "MetalElementGet",
@@ -15023,7 +15023,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Metal"
+      "path": "~/Elements/Metal"
     },
     {
       "name": "LightElementGet",
@@ -15046,7 +15046,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Light"
+      "path": "~/Elements/Light"
     },
     {
       "name": "ShadowElementGet",
@@ -15069,7 +15069,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Shadow"
+      "path": "~/Elements/Shadow"
     },
     {
       "name": "VacuumElementGet",
@@ -15092,7 +15092,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Vacuum"
+      "path": "~/Elements/Vacuum"
     },
     {
       "name": "EnergyElementGet",
@@ -15115,7 +15115,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Energy"
+      "path": "~/Elements/Energy"
     },
     {
       "name": "SunElementGet",
@@ -15138,7 +15138,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sun"
+      "path": "~/Elements/Sun"
     },
     {
       "name": "MoonElementGet",
@@ -15161,7 +15161,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Moon"
+      "path": "~/Elements/Moon"
     },
     {
       "name": "SpaceElementGet",
@@ -15184,7 +15184,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Space"
+      "path": "~/Elements/Space"
     },
     {
       "name": "TimeElementGet",
@@ -15207,7 +15207,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Time"
+      "path": "~/Elements/Time"
     },
     {
       "name": "CreationElementGet",
@@ -15230,7 +15230,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "AmplifierOre",
@@ -15356,7 +15356,7 @@
           "src/main/resources/assets/power/particles/runes_of_creation.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "Immortality",
@@ -15369,7 +15369,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/ImmortalityMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "ImmortalityProtection",
@@ -15388,7 +15388,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationSword",
@@ -15402,7 +15402,7 @@
           "src/main/resources/assets/power/models/item/creation_sword.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationPickaxe",
@@ -15416,7 +15416,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationPickaxeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationAxe",
@@ -15430,7 +15430,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationAxeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationHoe",
@@ -15444,7 +15444,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationHoeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "CreationShovel",
@@ -15458,7 +15458,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/CreationShovelItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Creation"
+      "path": "~/Elements/Creation"
     },
     {
       "name": "DestructionMaster",
@@ -15471,7 +15471,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/DestructionMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionArmor",
@@ -15488,7 +15488,7 @@
           "src/main/resources/assets/power/models/item/destruction_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionArmorKazhdyiTikDliaShliema",
@@ -15507,7 +15507,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionArmorKazhdyiTikDliaNaghrudnika",
@@ -15526,7 +15526,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionArmorKazhdyiTikDliaPonozhiei",
@@ -15545,7 +15545,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionArmorKazhdyiTikDliaBotinok",
@@ -15564,7 +15564,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionElementGet",
@@ -15587,7 +15587,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionStoneUse",
@@ -15626,7 +15626,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionMasterStart",
@@ -15661,7 +15661,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionMasterEnd",
@@ -15696,7 +15696,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "WheelAbilitiesDestruction",
@@ -15869,7 +15869,7 @@
           "src/main/resources/assets/power/models/item/destruction_broadsword.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionBroadswordKazhdyiTikVInvientarie",
@@ -15888,7 +15888,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "RunesOfDestruction",
@@ -15902,7 +15902,7 @@
           "src/main/resources/assets/power/particles/runes_of_destruction.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "AbilityUsingKeyPressed",
@@ -16586,7 +16586,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/DestructionBallProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionBallProjectileKazhdyiTikPriPoliotieSnariada",
@@ -16617,7 +16617,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionBallProjectileKoghdaSnariadPopadaietVSushchnost",
@@ -16652,7 +16652,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "DestructionBallProjectileKoghdaSnariadPopadaietVBlok",
@@ -16683,7 +16683,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "LethalityPriIstiechieniiEffiekta",
@@ -16706,7 +16706,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "Lethality",
@@ -16719,7 +16719,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/LethalityMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Destruction"
+      "path": "~/Elements/Destruction"
     },
     {
       "name": "AmplifierBlock",
@@ -16950,7 +16950,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/BloodMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodArmor",
@@ -16967,7 +16967,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/BloodArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodArmorKazhdyiTikDliaShliema",
@@ -16986,7 +16986,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodArmorKazhdyiTikDliaNaghrudnika",
@@ -17005,7 +17005,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodArmorKazhdyiTikDliaPonozhiei",
@@ -17024,7 +17024,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodArmorKazhdyiTikDliaBotinok",
@@ -17043,7 +17043,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodSickle",
@@ -17057,7 +17057,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/BloodSickleItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodSickleKazhdyiTikVInvientarie",
@@ -17076,7 +17076,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodMasterStart",
@@ -17111,7 +17111,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodMasterEnd",
@@ -17146,7 +17146,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodElementGet",
@@ -17169,7 +17169,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "BloodStoneCheck",
@@ -17228,7 +17228,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "WheelAbilitiesBlood",
@@ -18561,7 +18561,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TechnologyMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyArmor",
@@ -18578,7 +18578,7 @@
           "src/main/resources/assets/power/models/item/technology_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyArmorKazhdyiTikDliaShliema",
@@ -18597,7 +18597,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyArmorKazhdyiTikDliaNaghrudnika",
@@ -18616,7 +18616,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyArmorKazhdyiTikDliaPonozhiei",
@@ -18635,7 +18635,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyArmorKazhdyiTikDliaBotinok",
@@ -18654,7 +18654,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyStoneUse",
@@ -18693,7 +18693,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyMasterStart",
@@ -18728,7 +18728,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyMasterEnd",
@@ -18763,7 +18763,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologyElementGet",
@@ -18786,7 +18786,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnologySpecialAttack",
@@ -19015,7 +19015,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "ActiveModeBarrier",
@@ -19050,7 +19050,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "Technobarrier",
@@ -19063,7 +19063,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TechnobarrierMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TurretProjectile",
@@ -19077,7 +19077,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/TurretProjectileEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnobarrierParticle",
@@ -19091,7 +19091,7 @@
           "src/main/resources/assets/power/particles/technobarrier_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TeleportationMaster",
@@ -19104,7 +19104,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/TeleportationMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationArmor",
@@ -19121,7 +19121,7 @@
           "src/main/resources/assets/power/models/item/teleportation_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationArmorKazhdyiTikDliaShliema",
@@ -19140,7 +19140,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationArmorKazhdyiTikDliaNaghrudnika",
@@ -19159,7 +19159,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationArmorKazhdyiTikDliaPonozhiei",
@@ -19178,7 +19178,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationArmorKazhdyiTikDliaBotinok",
@@ -19197,7 +19197,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationElementGet",
@@ -19220,7 +19220,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationStoneCheck",
@@ -19254,7 +19254,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/TechnoPickaxeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TechnoPickaxeKazhdyiTikVInvientarie",
@@ -19273,7 +19273,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "TeleportationMasterStart",
@@ -19308,7 +19308,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationMasterEnd",
@@ -19343,7 +19343,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationStoneUse",
@@ -19382,7 +19382,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationSpecialAttack",
@@ -19590,7 +19590,7 @@
           "src/main/resources/assets/power/particles/teleportation_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportingVisualEffect",
@@ -19625,7 +19625,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "BluePortal",
@@ -19642,7 +19642,7 @@
           "src/main/resources/assets/power/blockstates/blue_portal.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "BluePortalDestroyed",
@@ -19661,7 +19661,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "OrangePortalDestroyed",
@@ -19680,7 +19680,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "BluePortalTeleporting",
@@ -19703,7 +19703,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "OrangePortalTeleporting",
@@ -19726,7 +19726,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "OrangePortal",
@@ -19743,7 +19743,7 @@
           "src/main/resources/assets/power/models/block/orange_portal.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "EnergiumGolemCoreAttackParticle",
@@ -19770,7 +19770,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/ExplosionMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionArmor",
@@ -19787,7 +19787,7 @@
           "src/main/resources/assets/power/models/item/explosion_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionArmorKazhdyiTikDliaShliema",
@@ -19806,7 +19806,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionArmorKazhdyiTikDliaNaghrudnika",
@@ -19825,7 +19825,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionArmorKazhdyiTikDliaPonozhiei",
@@ -19844,7 +19844,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionArmorKazhdyiTikDliaBotinok",
@@ -19863,7 +19863,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionElementGet",
@@ -19886,7 +19886,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionStoneCheck",
@@ -19945,7 +19945,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionMasterStart",
@@ -19980,7 +19980,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionMasterEnd",
@@ -20015,7 +20015,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "WheelAbilitiesExplosion",
@@ -20223,7 +20223,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/ExplosionMaceItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "ExplosionMaceKazhdyiTikVInvientarie",
@@ -20242,7 +20242,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "OpenWheelTwoTick",
@@ -20504,7 +20504,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "AtomicRocket",
@@ -20518,7 +20518,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/AtomicRocketRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "AtomicRocketExplosion",
@@ -20549,7 +20549,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "Grenade",
@@ -20563,7 +20563,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/GrenadeRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "LiitleExplosion",
@@ -20594,7 +20594,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Explosion"
+      "path": "~/Elements/Explosion"
     },
     {
       "name": "AmberMaster",
@@ -20607,7 +20607,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/AmberMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberArmor",
@@ -20624,7 +20624,7 @@
           "src/main/resources/assets/power/models/item/amber_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberArmorKazhdyiTikDliaShliema",
@@ -20643,7 +20643,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberArmorKazhdyiTikDliaNaghrudnika",
@@ -20662,7 +20662,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberArmorKazhdyiTikDliaPonozhiei",
@@ -20681,7 +20681,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberArmorKazhdyiTikDliaBotinok",
@@ -20700,7 +20700,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberStoneUse",
@@ -20739,7 +20739,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberMasterStart",
@@ -20774,7 +20774,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberMasterEnd",
@@ -20809,7 +20809,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberElementGet",
@@ -20832,7 +20832,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberStoneCheck",
@@ -21325,7 +21325,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/AmberStaffItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberStaffKazhdyiTikVInvientarie",
@@ -21344,7 +21344,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberPower",
@@ -21358,7 +21358,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/AmberPowerParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberBlock",
@@ -21375,7 +21375,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/block/AmberBlockBlock.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberDestructionArmor",
@@ -21410,7 +21410,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "AmberLayerOnEntity",
@@ -21429,7 +21429,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "RenderItemOnBatteryCharger",
@@ -22341,7 +22341,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MistMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistArmor",
@@ -22358,7 +22358,7 @@
           "src/main/resources/assets/power/models/item/mist_armor_boots.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistArmorKazhdyiTikDliaShliema",
@@ -22377,7 +22377,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistArmorKazhdyiTikDliaNaghrudnika",
@@ -22396,7 +22396,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistArmorKazhdyiTikDliaPonozhiei",
@@ -22415,7 +22415,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistArmorKazhdyiTikDliaBotinok",
@@ -22434,7 +22434,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistStoneUse",
@@ -22473,7 +22473,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistMasterStart",
@@ -22508,7 +22508,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MasterMasterEnd",
@@ -22543,7 +22543,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistElementGet",
@@ -22566,7 +22566,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistStoneCheck",
@@ -22794,7 +22794,7 @@
           "src/main/resources/assets/power/models/item/misty_fan.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistyFanKazhdyiTikVInvientarie",
@@ -22813,7 +22813,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "BloodSplash",
@@ -22827,7 +22827,7 @@
           "src/main/resources/assets/power/particles/blood_splash.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Blood"
+      "path": "~/Elements/Blood"
     },
     {
       "name": "FrozenLayerRenderEvent",
@@ -22846,7 +22846,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "InIceKazhdyiTikVoVriemiaEffiekta",
@@ -22865,7 +22865,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "FrozenInIce",
@@ -22876,7 +22876,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Gamerules/Elements/Ice"
+      "path": "~/Elements/Ice"
     },
     {
       "name": "AmberLayerRenderEvent",
@@ -22895,7 +22895,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "SealedInAmber",
@@ -22906,7 +22906,7 @@
       "metadata": {
         "files": []
       },
-      "path": "~/Gamerules/Elements/Amber"
+      "path": "~/Elements/Amber"
     },
     {
       "name": "MistParticle",
@@ -22920,7 +22920,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MistParticleParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "Mist",
@@ -22933,7 +22933,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MistMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistEffectRenderTick",
@@ -22952,7 +22952,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "MistInvisibleTick",
@@ -22971,7 +22971,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mist"
+      "path": "~/Elements/Mist"
     },
     {
       "name": "CursedVault",
@@ -23196,7 +23196,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/SandMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandArmor",
@@ -23213,7 +23213,7 @@
           "src/main/resources/assets/power/models/item/sand_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandArmorKazhdyiTikDliaShliema",
@@ -23232,7 +23232,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandArmorKazhdyiTikDliaNaghrudnika",
@@ -23251,7 +23251,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandArmorKazhdyiTikDliaPonozhiei",
@@ -23270,7 +23270,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandArmorKazhdyiTikDliaBotinok",
@@ -23289,7 +23289,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandStoneUse",
@@ -23328,7 +23328,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandMasterStart",
@@ -23363,7 +23363,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandMasterEnd",
@@ -23398,7 +23398,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandElementGet",
@@ -23421,7 +23421,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandStoneCheck",
@@ -23649,7 +23649,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/SandSaberItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SandSaberKazhdyiTikVInvientarie",
@@ -23668,7 +23668,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Sand"
+      "path": "~/Elements/Sand"
     },
     {
       "name": "SpeedMaster",
@@ -23681,7 +23681,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/SpeedMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedArmor",
@@ -23698,7 +23698,7 @@
           "src/main/resources/assets/power/models/item/speed_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedArmorKazhdyiTikDliaShliema",
@@ -23717,7 +23717,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedArmorKazhdyiTikDliaNaghrudnika",
@@ -23736,7 +23736,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedArmorKazhdyiTikDliaPonozhiei",
@@ -23755,7 +23755,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedArmorKazhdyiTikDliaBotinok",
@@ -23774,7 +23774,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedStoneUse",
@@ -23813,7 +23813,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedMasterStart",
@@ -23848,7 +23848,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedMasterEnd",
@@ -23883,7 +23883,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedSpecialAttack",
@@ -24032,7 +24032,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "SpeedStoneCheck",
@@ -24134,7 +24134,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/HighspeedDaggerItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "HighspeedDaggerKazhdyiTikVInvientarie",
@@ -24153,7 +24153,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Speed"
+      "path": "~/Elements/Speed"
     },
     {
       "name": "PoisonMaster",
@@ -24166,7 +24166,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/PoisonMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonArmor",
@@ -24183,7 +24183,7 @@
           "src/main/resources/assets/power/models/item/poison_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonArmorKazhdyiTikDliaShliema",
@@ -24202,7 +24202,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonArmorKazhdyiTikDliaNaghrudnika",
@@ -24221,7 +24221,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonArmorKazhdyiTikDliaPonozhiei",
@@ -24240,7 +24240,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonArmorKazhdyiTikDliaBotinok",
@@ -24259,7 +24259,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonStoneUse",
@@ -24298,7 +24298,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonMasterStart",
@@ -24333,7 +24333,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonMasterEnd",
@@ -24368,7 +24368,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonSpecialAttack",
@@ -24426,7 +24426,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonStoneCheck",
@@ -24619,7 +24619,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/PoisonBowItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonBowKazhdyiTikVInvientarie",
@@ -24638,7 +24638,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonDropProjectile",
@@ -24652,7 +24652,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/PoisonDropProjectileRenderer.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonBowPriVystrielieSnariadomIzPriedmieta",
@@ -24671,7 +24671,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonParticle",
@@ -24685,7 +24685,7 @@
           "src/main/resources/assets/power/particles/poison_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonImmunePassiveAbility",
@@ -24720,7 +24720,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonBomb",
@@ -24734,7 +24734,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonBombEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "HitboxScale",
@@ -24754,7 +24754,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonPit",
@@ -24768,7 +24768,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/PoisonPitEntity.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "PoisonPitTick",
@@ -24803,7 +24803,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "SpawnPoisonPit",
@@ -24834,7 +24834,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Poison"
+      "path": "~/Elements/Poison"
     },
     {
       "name": "MagnetMaster",
@@ -24847,7 +24847,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MagnetMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetArmor",
@@ -24864,7 +24864,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetArmorKazhdyiTikDliaShliema",
@@ -24883,7 +24883,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetArmorKazhdyiTikDliaNaghrudnika",
@@ -24902,7 +24902,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetArmorKazhdyiTikDliaPonozhiei",
@@ -24921,7 +24921,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetArmorKazhdyiTikDliaBotinok",
@@ -24940,7 +24940,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetStoneUse",
@@ -24979,7 +24979,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetMasterStart",
@@ -25014,7 +25014,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetMasterEnd",
@@ -25049,7 +25049,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetElementGet",
@@ -25072,7 +25072,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetStoneCheck",
@@ -25300,7 +25300,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MagnetClawsItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "MagnetClawsKazhdyiTikVInvientarie",
@@ -25319,7 +25319,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "CursedLadderRotation",
@@ -25877,7 +25877,7 @@
           "src/main/resources/assets/power/models/item/teleportation_blade.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "TeleportationBladeKazhdyiTikVInvientarie",
@@ -25896,7 +25896,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Teleportation"
+      "path": "~/Elements/Teleportation"
     },
     {
       "name": "EnergiumVault",
@@ -26074,7 +26074,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/BlueMagnetParticleParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "EnergiumGolemDS",
@@ -26141,7 +26141,7 @@
           "src/main/resources/assets/power/particles/red_magnet_particle.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "CursedForest",
@@ -26212,7 +26212,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "RedMagnetPower",
@@ -26225,7 +26225,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/RedMagnetPowerMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "BlueMagnetPowerTick",
@@ -26248,7 +26248,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "BlueMagnetPower",
@@ -26261,7 +26261,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/BlueMagnetPowerMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Magnet"
+      "path": "~/Elements/Magnet"
     },
     {
       "name": "BigCursedTrees",
@@ -26353,7 +26353,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MushroomsMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsArmor",
@@ -26370,7 +26370,7 @@
           "src/main/resources/assets/power/models/item/mushrooms_armor_chestplate.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsArmorKazhdyiTikDliaShliema",
@@ -26389,7 +26389,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsArmorKazhdyiTikDliaNaghrudnika",
@@ -26408,7 +26408,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsArmorKazhdyiTikDliaPonozhiei",
@@ -26427,7 +26427,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsArmorKazhdyiTikDliaBotinok",
@@ -26446,7 +26446,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsStoneUse",
@@ -26485,7 +26485,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsMasterStart",
@@ -26520,7 +26520,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsMasterEnd",
@@ -26555,7 +26555,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushrooomsElementGet",
@@ -26578,7 +26578,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsStoneCheck",
@@ -26806,7 +26806,7 @@
           "src/main/resources/assets/power/models/item/mushrooms_hammer.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomsHammerKazhdyiTikVInvientarie",
@@ -26825,7 +26825,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "PurpleMushroom",
@@ -26842,7 +26842,7 @@
           "src/main/resources/data/power/loot_tables/blocks/purple_mushroom.json"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "MushroomSpores",
@@ -26856,7 +26856,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MushroomSporesParticle.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "PurpleMushroomSpontannoNaStoronieKliienta",
@@ -26887,7 +26887,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "PurpleMushroomUsloviieRazmieshchieniiaBloka",
@@ -26919,7 +26919,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mushrooms"
+      "path": "~/Elements/Mushrooms"
     },
     {
       "name": "EnergiumGolemBreaksBlocks",
@@ -27014,7 +27014,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/potion/MercuryMasterMobEffect.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryArmor",
@@ -27031,7 +27031,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryArmorItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryArmorKazhdyiTikDliaShliema",
@@ -27050,7 +27050,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryArmorKazhdyiTikDliaNaghrudnika",
@@ -27069,7 +27069,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryArmorKazhdyiTikDliaPonozhiei",
@@ -27088,7 +27088,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryArmorKazhdyiTikDliaBotinok",
@@ -27107,7 +27107,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryStoneUse",
@@ -27146,7 +27146,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryMasterStart",
@@ -27181,7 +27181,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryMasterEnd",
@@ -27216,7 +27216,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "LuckCoin",
@@ -27506,7 +27506,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Technology"
+      "path": "~/Elements/Technology"
     },
     {
       "name": "ExtendedCheckOfActivationStone",
@@ -27557,6 +27557,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -27674,7 +27690,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryStoneCheck",
@@ -27776,7 +27792,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBattleAxeItem.java"
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "MercuryBattleAxeKazhdyiTikVInvientarie",
@@ -27795,7 +27811,7 @@
           }
         ]
       },
-      "path": "~/Gamerules/Elements/Mercury"
+      "path": "~/Elements/Mercury"
     },
     {
       "name": "CursedKeeper",
@@ -27964,6 +27980,97 @@
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
+    },
+    {
+      "name": "MercuryParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MercuryParticleParticle.java",
+          "src/main/resources/assets/power/particles/mercury_particle.json"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBall",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_ball.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBallItem.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBallProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBallProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/MercuryBallProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
     }
   ],
   "variable_elements": [
@@ -29107,20 +29214,20 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -29140,8 +29247,8 @@
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
-      "item.power.mercury_battle_axe": "Tornado Axe",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
+      "item.power.mercury_battle_axe": "Tornado Axe",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
@@ -29241,6 +29348,7 @@
       "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
       "gamerule.limitedNumberOfStones.description": "Ограничивает количество получаемых камней и учитывает их уникальность",
       "attribute.power.frozen_in_ice": "Заморожен во льду",
+      "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
@@ -29803,20 +29911,20 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "item.power.poison_battery": "Battery",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
@@ -29836,8 +29944,8 @@
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
-      "item.power.space_armor_boots": "Space Boots",
       "item.power.mercury_battle_axe": "Mercury Battle Axe",
+      "item.power.space_armor_boots": "Space Boots",
       "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
@@ -29937,6 +30045,7 @@
       "item.power.poison_armor_chestplate": "Poison Chestplate",
       "gamerule.limitedNumberOfStones.description": "Limits the number of stones to receive and includes their uniqueness",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
+      "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
@@ -30488,10 +30597,6 @@
     "name": "~",
     "children": [
       {
-        "name": "Tabs",
-        "children": []
-      },
-      {
         "name": "Modules",
         "children": [
           {
@@ -30904,19 +31009,6 @@
         ]
       },
       {
-        "name": "Bosses",
-        "children": [
-          {
-            "name": "EnergiumGolem",
-            "children": []
-          },
-          {
-            "name": "CursedKeeper",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Structures",
         "children": []
       },
@@ -30942,205 +31034,221 @@
       },
       {
         "name": "Gamerules",
+        "children": []
+      },
+      {
+        "name": "Bosses",
         "children": [
           {
-            "name": "Elements",
-            "children": [
-              {
-                "name": "Fire",
-                "children": []
-              },
-              {
-                "name": "Air",
-                "children": []
-              },
-              {
-                "name": "Earth",
-                "children": []
-              },
-              {
-                "name": "Water",
-                "children": []
-              },
-              {
-                "name": "Ether",
-                "children": []
-              },
-              {
-                "name": "Ice",
-                "children": []
-              },
-              {
-                "name": "Lightning",
-                "children": []
-              },
-              {
-                "name": "Sound",
-                "children": []
-              },
-              {
-                "name": "Crystal",
-                "children": []
-              },
-              {
-                "name": "Lava",
-                "children": []
-              },
-              {
-                "name": "Rain",
-                "children": []
-              },
-              {
-                "name": "Tornado",
-                "children": []
-              },
-              {
-                "name": "Ocean",
-                "children": []
-              },
-              {
-                "name": "Plants",
-                "children": []
-              },
-              {
-                "name": "Animals",
-                "children": []
-              },
-              {
-                "name": "Metal",
-                "children": []
-              },
-              {
-                "name": "Light",
-                "children": []
-              },
-              {
-                "name": "Shadow",
-                "children": []
-              },
-              {
-                "name": "Vacuum",
-                "children": []
-              },
-              {
-                "name": "Energy",
-                "children": []
-              },
-              {
-                "name": "Sun",
-                "children": []
-              },
-              {
-                "name": "Moon",
-                "children": []
-              },
-              {
-                "name": "Space",
-                "children": []
-              },
-              {
-                "name": "Time",
-                "children": []
-              },
-              {
-                "name": "Creation",
-                "children": []
-              },
-              {
-                "name": "Destruction",
-                "children": []
-              },
-              {
-                "name": "Blood",
-                "children": []
-              },
-              {
-                "name": "Technology",
-                "children": []
-              },
-              {
-                "name": "Teleportation",
-                "children": []
-              },
-              {
-                "name": "Explosion",
-                "children": []
-              },
-              {
-                "name": "Amber",
-                "children": []
-              },
-              {
-                "name": "Mist",
-                "children": []
-              },
-              {
-                "name": "Sand",
-                "children": []
-              },
-              {
-                "name": "Speed",
-                "children": []
-              },
-              {
-                "name": "Poison",
-                "children": []
-              },
-              {
-                "name": "Magnet",
-                "children": []
-              },
-              {
-                "name": "Mushrooms",
-                "children": []
-              },
-              {
-                "name": "Mercury",
-                "children": []
-              },
-              {
-                "name": "Music",
-                "children": []
-              },
-              {
-                "name": "Plague",
-                "children": []
-              },
-              {
-                "name": "BlueFlame",
-                "children": []
-              },
-              {
-                "name": "Gravity",
-                "children": []
-              },
-              {
-                "name": "Smoke",
-                "children": []
-              },
-              {
-                "name": "Form",
-                "children": []
-              },
-              {
-                "name": "Mind",
-                "children": []
-              },
-              {
-                "name": "Spirit",
-                "children": []
-              },
-              {
-                "name": "GoldenDust",
-                "children": []
-              },
-              {
-                "name": "Darkness",
-                "children": []
-              }
-            ]
+            "name": "EnergiumGolem",
+            "children": []
+          },
+          {
+            "name": "CursedKeeper",
+            "children": []
           }
         ]
+      },
+      {
+        "name": "Elements",
+        "children": [
+          {
+            "name": "Fire",
+            "children": []
+          },
+          {
+            "name": "Air",
+            "children": []
+          },
+          {
+            "name": "Earth",
+            "children": []
+          },
+          {
+            "name": "Water",
+            "children": []
+          },
+          {
+            "name": "Ether",
+            "children": []
+          },
+          {
+            "name": "Ice",
+            "children": []
+          },
+          {
+            "name": "Lightning",
+            "children": []
+          },
+          {
+            "name": "Sound",
+            "children": []
+          },
+          {
+            "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Lava",
+            "children": []
+          },
+          {
+            "name": "Rain",
+            "children": []
+          },
+          {
+            "name": "Tornado",
+            "children": []
+          },
+          {
+            "name": "Ocean",
+            "children": []
+          },
+          {
+            "name": "Plants",
+            "children": []
+          },
+          {
+            "name": "Animals",
+            "children": []
+          },
+          {
+            "name": "Metal",
+            "children": []
+          },
+          {
+            "name": "Light",
+            "children": []
+          },
+          {
+            "name": "Shadow",
+            "children": []
+          },
+          {
+            "name": "Vacuum",
+            "children": []
+          },
+          {
+            "name": "Energy",
+            "children": []
+          },
+          {
+            "name": "Sun",
+            "children": []
+          },
+          {
+            "name": "Moon",
+            "children": []
+          },
+          {
+            "name": "Space",
+            "children": []
+          },
+          {
+            "name": "Time",
+            "children": []
+          },
+          {
+            "name": "Creation",
+            "children": []
+          },
+          {
+            "name": "Destruction",
+            "children": []
+          },
+          {
+            "name": "Blood",
+            "children": []
+          },
+          {
+            "name": "Technology",
+            "children": []
+          },
+          {
+            "name": "Teleportation",
+            "children": []
+          },
+          {
+            "name": "Explosion",
+            "children": []
+          },
+          {
+            "name": "Amber",
+            "children": []
+          },
+          {
+            "name": "Mist",
+            "children": []
+          },
+          {
+            "name": "Sand",
+            "children": []
+          },
+          {
+            "name": "Speed",
+            "children": []
+          },
+          {
+            "name": "Poison",
+            "children": []
+          },
+          {
+            "name": "Magnet",
+            "children": []
+          },
+          {
+            "name": "Mushrooms",
+            "children": []
+          },
+          {
+            "name": "Mercury",
+            "children": []
+          },
+          {
+            "name": "Music",
+            "children": []
+          },
+          {
+            "name": "Plague",
+            "children": []
+          },
+          {
+            "name": "BlueFlame",
+            "children": []
+          },
+          {
+            "name": "Gravity",
+            "children": []
+          },
+          {
+            "name": "Smoke",
+            "children": []
+          },
+          {
+            "name": "Form",
+            "children": []
+          },
+          {
+            "name": "Mind",
+            "children": []
+          },
+          {
+            "name": "Spirit",
+            "children": []
+          },
+          {
+            "name": "GoldenDust",
+            "children": []
+          },
+          {
+            "name": "Darkness",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tabs",
+        "children": []
       }
     ]
   },
