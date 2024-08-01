@@ -72,6 +72,10 @@ public class GrenadeEntity extends AbstractArrow implements ItemSupplier {
 		return shoot(world, entity, source, 1f, 7, 0);
 	}
 
+	public static GrenadeEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 7, 0);
+	}
+
 	public static GrenadeEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		GrenadeEntity entityarrow = new GrenadeEntity(PowerModEntities.GRENADE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

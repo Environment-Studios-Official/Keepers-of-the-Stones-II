@@ -10,6 +10,17 @@ dependencies {
 
 
 repositories {
+    maven {
+    	url = "https://jitpack.io"
+    }
+}
+    
+dependencies {
+	implementation 'com.github.Virtuoel:Pehkui:3.8.2-1.20.4-neoforge'
+}
+
+
+repositories {
   maven {
       url = 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
   }

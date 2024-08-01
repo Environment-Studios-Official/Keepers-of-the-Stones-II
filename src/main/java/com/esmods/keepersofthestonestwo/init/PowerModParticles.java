@@ -24,6 +24,7 @@ import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MushroomSporesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.MercuryParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.LightSparkleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.InsectsParticle;
 import com.esmods.keepersofthestonestwo.client.particle.EnergySparkParticle;
@@ -60,5 +61,6 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.BLUE_MAGNET_PARTICLE.get(), BlueMagnetParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.RED_MAGNET_PARTICLE.get(), RedMagnetParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MUSHROOM_SPORES.get(), MushroomSporesParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.MERCURY_PARTICLE.get(), MercuryParticleParticle::provider);
 	}
 }

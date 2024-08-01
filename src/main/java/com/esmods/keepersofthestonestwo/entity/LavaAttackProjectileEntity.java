@@ -73,6 +73,10 @@ public class LavaAttackProjectileEntity extends AbstractArrow implements ItemSup
 		return shoot(world, entity, source, 0.8f, 5, 5);
 	}
 
+	public static LavaAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 5, 5);
+	}
+
 	public static LavaAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		LavaAttackProjectileEntity entityarrow = new LavaAttackProjectileEntity(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

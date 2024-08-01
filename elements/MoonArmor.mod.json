@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "armor",
   "definition": {
     "enableHelmet": true,
@@ -22,9 +22,7 @@
     "onBootsTick": {
       "name": "MoonArmorKazhdyiTikDliaBotinok"
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "armorTextureFile": "moon_armor",
     "helmetName": "Moon Helmet",
     "bodyName": "Moon Chestplate",

@@ -36,9 +36,9 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_liquid_mercury;
+	ImageButton imagebutton_mercury_ball;
+	ImageButton imagebutton_mercury_condition;
 
 	public WheelAbilitiesMercuryScreen(WheelAbilitiesMercuryMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -56,6 +56,12 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 24 && mouseY < topPos + 48)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35"), mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55"), mouseX, mouseY);
 	}
 
 	@Override
@@ -175,8 +181,8 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_1.png"), new ResourceLocation("power:textures/screens/ability_1_highlight.png")),
-				e -> {
+		imagebutton_liquid_mercury = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/liquid_mercury.png"), new ResourceLocation("power:textures/screens/liquid_mercury_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMercuryButtonMessage(6, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -187,10 +193,10 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_2.png"), new ResourceLocation("power:textures/screens/ability_2_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_liquid_mercury", imagebutton_liquid_mercury);
+		this.addRenderableWidget(imagebutton_liquid_mercury);
+		imagebutton_mercury_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_ball.png"), new ResourceLocation("power:textures/screens/mercury_ball_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMercuryButtonMessage(7, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -201,10 +207,10 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_3.png"), new ResourceLocation("power:textures/screens/ability_3_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_mercury_ball", imagebutton_mercury_ball);
+		this.addRenderableWidget(imagebutton_mercury_ball);
+		imagebutton_mercury_condition = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_condition.png"), new ResourceLocation("power:textures/screens/mercury_condition_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMercuryButtonMessage(8, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -215,7 +221,7 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_mercury_condition", imagebutton_mercury_condition);
+		this.addRenderableWidget(imagebutton_mercury_condition);
 	}
 }
