@@ -31,6 +31,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonBombEntity;
 import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MeteoriteProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.MercuryBallProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MagicFireballProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.LightballProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
@@ -145,6 +146,8 @@ public class PowerModEntities {
 			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(PoisonPitEntity::new).fireImmune().sized(4f, 0.2f));
 	public static final RegistryObject<EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper", EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(128).setUpdateInterval(3).setCustomClientFactory(CursedKeeperEntity::new).fireImmune().sized(0.6f, 1.8f));
+	public static final RegistryObject<EntityType<MercuryBallProjectileEntity>> MERCURY_BALL_PROJECTILE = register("mercury_ball_projectile", EntityType.Builder.<MercuryBallProjectileEntity>of(MercuryBallProjectileEntity::new, MobCategory.MISC)
+			.setCustomClientFactory(MercuryBallProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> RegistryObject<EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

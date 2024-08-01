@@ -90,6 +90,10 @@ public class IronAttackProjectileEntity extends AbstractArrow implements ItemSup
 		return shoot(world, entity, source, 0.8f, 6, 4);
 	}
 
+	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 6, 4);
+	}
+
 	public static IronAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		IronAttackProjectileEntity entityarrow = new IronAttackProjectileEntity(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

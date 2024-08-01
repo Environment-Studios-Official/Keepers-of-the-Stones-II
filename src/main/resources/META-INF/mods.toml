@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.33"
+version="1.0.0.34"
 displayName="Keepers of the Stones II"
 updateJSONURL="https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
@@ -20,9 +20,15 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
-    ordering="NONE"
+    ordering="AFTER"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="pehkui"
+    mandatory=true
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 [[dependencies.power]]
     modId="kleiders_custom_renderer"
     mandatory=true
@@ -55,6 +61,12 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
+    modId="pehkui"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
     modId="bettercombat"
     mandatory=false
     versionRange="[0,)"
@@ -79,3 +91,18 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 
+[[dependencies.power]]
+    modId="cpapi"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.power]]
+    modId="powerlc"
+    mandatory=false
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
+
+# Start of user code block dependencies configuration
+# End of user code block dependencies configuration

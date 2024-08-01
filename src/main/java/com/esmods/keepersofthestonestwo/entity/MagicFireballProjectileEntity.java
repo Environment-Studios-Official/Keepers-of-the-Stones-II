@@ -75,6 +75,10 @@ public class MagicFireballProjectileEntity extends AbstractArrow implements Item
 		return shoot(world, entity, source, 1f, 3, 3);
 	}
 
+	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 3, 3);
+	}
+
 	public static MagicFireballProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		MagicFireballProjectileEntity entityarrow = new MagicFireballProjectileEntity(PowerModEntities.MAGIC_FIREBALL_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

@@ -75,6 +75,10 @@ public class PoisonDropProjectileEntity extends AbstractArrow implements ItemSup
 		return shoot(world, entity, source, 1f, 6, 1);
 	}
 
+	public static PoisonDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 6, 1);
+	}
+
 	public static PoisonDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		PoisonDropProjectileEntity entityarrow = new PoisonDropProjectileEntity(PowerModEntities.POISON_DROP_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

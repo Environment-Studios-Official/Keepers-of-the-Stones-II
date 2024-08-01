@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "tool",
   "definition": {
     "toolType": "Hoe",
@@ -12,21 +12,19 @@
     "specialInformation": {
       "fixedValue": []
     },
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
-    "harvestLevel": 4,
+    "creativeTabs": [],
     "efficiency": 24.0,
     "attackSpeed": 4.0,
     "enchantability": 0,
     "damageVsEntity": 1.0,
     "usageCount": 5,
-    "blocksAffected": [],
     "glowCondition": {
       "fixedValue": false
     },
     "repairItems": [],
     "immuneToFire": false,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false
   }

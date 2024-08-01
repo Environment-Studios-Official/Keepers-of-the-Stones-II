@@ -38,4 +38,5 @@ public class PowerModParticleTypes {
 	public static final RegistryObject<SimpleParticleType> BLUE_MAGNET_PARTICLE = REGISTRY.register("blue_magnet_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> RED_MAGNET_PARTICLE = REGISTRY.register("red_magnet_particle", () -> new SimpleParticleType(false));
 	public static final RegistryObject<SimpleParticleType> MUSHROOM_SPORES = REGISTRY.register("mushroom_spores", () -> new SimpleParticleType(false));
+	public static final RegistryObject<SimpleParticleType> MERCURY_PARTICLE = REGISTRY.register("mercury_particle", () -> new SimpleParticleType(false));
 }

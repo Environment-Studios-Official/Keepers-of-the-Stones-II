@@ -4,7 +4,7 @@
 | MC Version | Support |
 |------------|---------|
 | 1.21       | Future  |
-| 1.20.6     | Future  |
+| 1.20.6     |   NSL   |
 | 1.20.4     | Active  |
 | 1.20.1     |   LTS   |
 | 1.19.2     |   NSL   |

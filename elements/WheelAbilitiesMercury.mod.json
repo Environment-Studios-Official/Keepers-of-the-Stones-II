@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_liquid_mercury",
+          "image": "liquid_mercury.png",
+          "hoveredImage": "liquid_mercury_highlight.png",
           "onClick": {
             "name": "Attack149"
           },
@@ -131,9 +131,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_mercury_ball",
+          "image": "mercury_ball.png",
+          "hoveredImage": "mercury_ball_highlight.png",
           "onClick": {
             "name": "Attack150"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_mercury_condition",
+          "image": "mercury_condition.png",
+          "hoveredImage": "mercury_condition_highlight.png",
           "onClick": {
             "name": "Attack151"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_liquid_mercury_uses_15",
+          "text": {
+            "fixedValue": "Liquid mercury, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 48
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mercury_ball_uses_35",
+          "text": {
+            "fixedValue": "Mercury ball, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_mercury_condition_uses_55",
+          "text": {
+            "fixedValue": "Mercury condition, uses 55"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
         }
       }
     ],

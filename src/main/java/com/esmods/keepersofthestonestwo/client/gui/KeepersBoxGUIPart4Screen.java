@@ -120,11 +120,6 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 	}
 

@@ -75,6 +75,10 @@ public class TurretProjectileEntity extends AbstractArrow implements ItemSupplie
 		return shoot(world, entity, source, 1.1f, 12, 2);
 	}
 
+	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1.1f, 12, 2);
+	}
+
 	public static TurretProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		TurretProjectileEntity entityarrow = new TurretProjectileEntity(PowerModEntities.TURRET_PROJECTILE.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);

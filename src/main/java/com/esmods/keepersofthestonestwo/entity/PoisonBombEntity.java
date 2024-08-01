@@ -83,6 +83,10 @@ public class PoisonBombEntity extends AbstractArrow implements ItemSupplier {
 		return shoot(world, entity, source, 0.5f, 12, 4);
 	}
 
+	public static PoisonBombEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.5f, 12, 4);
+	}
+
 	public static PoisonBombEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		PoisonBombEntity entityarrow = new PoisonBombEntity(PowerModEntities.POISON_BOMB.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
