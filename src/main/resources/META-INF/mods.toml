@@ -99,7 +99,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     side="BOTH"
 [[dependencies.power]]
     modId="powerlc"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
