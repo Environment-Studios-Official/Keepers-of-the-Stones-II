@@ -83,11 +83,6 @@ public class WheelAbilitiesTechnologyScreen extends AbstractContainerScreen<Whee
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 	}
 

@@ -83,11 +83,6 @@ public class WheelAbilitiesSandScreen extends AbstractContainerScreen<WheelAbili
 	}
 
 	@Override
-	public void containerTick() {
-		super.containerTick();
-	}
-
-	@Override
 	protected void renderLabels(GuiGraphics guiGraphics, int mouseX, int mouseY) {
 	}
 
