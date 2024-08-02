@@ -91,5 +91,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.POISON_BOMB.get(), PoisonBombRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.POISON_PIT.get(), PoisonPitRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.MERCURY_BALL_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

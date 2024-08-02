@@ -25,8 +25,8 @@ public class UpdateGeneratedVaultsProcedure {
 
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z) {
 		boolean updated = false;
-		int horizontalRadiusSphere = (int) 6 - 1;
-		int verticalRadiusSphere = (int) 6 - 1;
+		int horizontalRadiusSphere = (int) 5 - 1;
+		int verticalRadiusSphere = (int) 5 - 1;
 		int yIterationsSphere = verticalRadiusSphere;
 		for (int i = -yIterationsSphere; i <= yIterationsSphere; i++) {
 			for (int xi = -horizontalRadiusSphere; xi <= horizontalRadiusSphere; xi++) {
@@ -38,7 +38,6 @@ public class UpdateGeneratedVaultsProcedure {
 							world.scheduleTick(BlockPos.containing(x + xi, y + i, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getBlock(), 0);
 						} else if ((world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi))).getBlock() == PowerModBlocks.CURSED_VAULT.get()) {
 							world.scheduleTick(BlockPos.containing(x + xi, y + i, z + zi), world.getBlockState(BlockPos.containing(x + xi, y + i, z + zi)).getBlock(), 0);
-							updated = true;
 						}
 					}
 				}

@@ -68,6 +68,12 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
+[[dependencies.power]]
+    modId="powerlc"
+    type="optional"
+    versionRange="[0,)"
+    ordering="NONE"
+    side="BOTH"
 
 # Start of user code block dependencies configuration
 # End of user code block dependencies configuration

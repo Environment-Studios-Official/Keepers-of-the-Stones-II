@@ -22981,11 +22981,11 @@
       "registry_name": "cursed_vault",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/cursed_vault.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
-          "src/main/resources/assets/power/models/block/cursed_vault.json",
           "src/main/resources/assets/power/models/item/cursed_vault.json",
+          "src/main/resources/assets/power/blockstates/cursed_vault.json",
+          "src/main/resources/assets/power/models/block/cursed_vault.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java"
         ]
       },
@@ -25906,12 +25906,12 @@
       "registry_name": "energium_vault",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java",
           "src/main/resources/assets/power/models/item/energium_vault.json",
           "src/main/resources/assets/power/models/block/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
-          "src/main/resources/assets/power/blockstates/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java"
+          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
+          "src/main/resources/assets/power/blockstates/energium_vault.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -27557,6 +27557,22 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -27570,8 +27586,8 @@
       "registry_name": "wheel_abilities_mercury",
       "metadata": {
         "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMercuryMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMercuryScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMercuryMenu.java",
           "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMercuryButtonMessage.java"
         ]
       },
@@ -27964,6 +27980,254 @@
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
+    },
+    {
+      "name": "MercuryParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MercuryParticleParticle.java",
+          "src/main/resources/assets/power/particles/mercury_particle.json"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBall",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mercury_ball.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MercuryBallItem.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVSushchnost",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile_koghda_snariad_popadaiet_v_sushchnost",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBallProjectileKoghdaSnariadPopadaietVSushchnostProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MercuryBallProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "MercuryBallProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mercury_ball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/MercuryBallProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "ChiseledCursedStone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiseled_cursed_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/chiseled_cursed_stone.json",
+          "src/main/resources/assets/power/models/block/chiseled_cursed_stone.json",
+          "src/main/resources/assets/power/blockstates/chiseled_cursed_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/ChiseledCursedStoneBlock.java",
+          "src/main/resources/assets/power/models/item/chiseled_cursed_stone.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricks",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "ChiseledCursedStoneCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiseled_cursed_stone_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/chiseled_cursed_stone_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_slab",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksSlabBlock.java",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_top.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_full.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_slab.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_outer.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_inner.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksStairsBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_inventory.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_side_tall.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksWallBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_post.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_wall.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksSlabCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_slab_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_slab_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksStairsCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_stairs_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_stairs_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksWallCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_wall_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_wall_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -28715,6 +28979,14 @@
       ],
       "category": "record",
       "subtitle": ""
+    },
+    {
+      "name": "time_ability_effect",
+      "files": [
+        "time_ability_effect"
+      ],
+      "category": "neutral",
+      "subtitle": "Time power using"
     }
   ],
   "tag_elements": {
@@ -28723,6 +28995,11 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:CursedStoneCrackedBricks",
+      "~CUSTOM:ChiseledCursedStone",
       "~CUSTOM:DeepslateCopyriumOre",
       "~CUSTOM:DeepslateAmplifierOre",
       "~CUSTOM:DeepslateEnergiumOre",
@@ -28766,6 +29043,12 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
+    "BIOMES:minecraft:is_overworld": [
+      "CUSTOM:CursedForest"
+    ],
+    "ENTITIES:minecraft:fall_damage_immune": [
+      "CUSTOM:EnergiumGolem"
+    ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
       "CUSTOM:EnergiumAxe",
@@ -28789,14 +29072,37 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:ElementalPowerGenerator",
+      "~CUSTOM:RawCopyriumBlock",
+      "~CUSTOM:CopyriumBlock",
+      "~CUSTOM:CopyriumOre",
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre"
+    ],
+    "BLOCKS:minecraft:logs": [],
+    "BLOCKS:mod:keepers_boxes": [
+      "CUSTOM:KeepersBox"
+    ],
+    "BIOMES:minecraft:is_forest": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:CreationHoe",
+      "~CUSTOM:EnergiumHoe"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:MushroomsHammer",
@@ -28927,6 +29233,12 @@
       "CUSTOM:MushroomsBattery",
       "CUSTOM:MercuryBattery"
     ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:PolishedCursedStoneSlab",
+      "~CUSTOM:CursedStoneBricksSlab",
+      "~CUSTOM:CursedStoneSlab"
+    ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
       "~CUSTOM:EnergiumShovel"
@@ -28944,207 +29256,6 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
-    "ENTITIES:minecraft:undead": [
-      "~CUSTOM:Shadow"
-    ],
-    "ITEMS:minecraft:chest_armor": [
-      "~CUSTOM:MercuryArmor.body",
-      "~CUSTOM:MushroomsArmor.body",
-      "~CUSTOM:MagnetArmor.body",
-      "~CUSTOM:PoisonArmor.body",
-      "~CUSTOM:SpeedArmor.body",
-      "~CUSTOM:SandArmor.body",
-      "~CUSTOM:MistArmor.body",
-      "~CUSTOM:AmberArmor.body",
-      "~CUSTOM:ExplosionArmor.body",
-      "~CUSTOM:TeleportationArmor.body",
-      "~CUSTOM:TechnologyArmor.body",
-      "~CUSTOM:BloodArmor.body",
-      "~CUSTOM:DestructionArmor.body",
-      "~CUSTOM:CreationArmor.body",
-      "~CUSTOM:TimeArmor.body",
-      "~CUSTOM:SpaceArmor.body",
-      "~CUSTOM:MoonArmor.body",
-      "~CUSTOM:SunArmor.body",
-      "~CUSTOM:EnergyArmor.body",
-      "~CUSTOM:EnergiumArmor.body",
-      "~CUSTOM:VacuumArmor.body",
-      "~CUSTOM:ShadowArmor.body",
-      "~CUSTOM:LightArmor.body",
-      "~CUSTOM:MetalArmor.body",
-      "~CUSTOM:AnimalsArmor.body",
-      "~CUSTOM:PlantsArmor.body",
-      "~CUSTOM:OceanArmor.body",
-      "~CUSTOM:TornadoArmor.body",
-      "~CUSTOM:RainArmor.body",
-      "~CUSTOM:LavaArmor.body",
-      "~CUSTOM:CrystalArmor.body",
-      "~CUSTOM:SoundArmor.body",
-      "~CUSTOM:LightningArmor.body",
-      "~CUSTOM:IceArmor.body",
-      "~CUSTOM:EtherArmor.body",
-      "~CUSTOM:WaterArmor.body",
-      "~CUSTOM:EarthArmor.body",
-      "~CUSTOM:AirArmor.body",
-      "~CUSTOM:FireArmor.body"
-    ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall"
-    ],
-    "ITEMS:minecraft:leg_armor": [
-      "~CUSTOM:MercuryArmor.legs",
-      "~CUSTOM:MushroomsArmor.legs",
-      "~CUSTOM:MagnetArmor.legs",
-      "~CUSTOM:PoisonArmor.legs",
-      "~CUSTOM:SpeedArmor.legs",
-      "~CUSTOM:SandArmor.legs",
-      "~CUSTOM:MistArmor.legs",
-      "~CUSTOM:AmberArmor.legs",
-      "~CUSTOM:ExplosionArmor.legs",
-      "~CUSTOM:TeleportationArmor.legs",
-      "~CUSTOM:TechnologyArmor.legs",
-      "~CUSTOM:BloodArmor.legs",
-      "~CUSTOM:DestructionArmor.legs",
-      "~CUSTOM:CreationArmor.legs",
-      "~CUSTOM:TimeArmor.legs",
-      "~CUSTOM:SpaceArmor.legs",
-      "~CUSTOM:MoonArmor.legs",
-      "~CUSTOM:SunArmor.legs",
-      "~CUSTOM:EnergyArmor.legs",
-      "~CUSTOM:EnergiumArmor.legs",
-      "~CUSTOM:VacuumArmor.legs",
-      "~CUSTOM:ShadowArmor.legs",
-      "~CUSTOM:LightArmor.legs",
-      "~CUSTOM:MetalArmor.legs",
-      "~CUSTOM:AnimalsArmor.legs",
-      "~CUSTOM:PlantsArmor.legs",
-      "~CUSTOM:OceanArmor.legs",
-      "~CUSTOM:TornadoArmor.legs",
-      "~CUSTOM:RainArmor.legs",
-      "~CUSTOM:LavaArmor.legs",
-      "~CUSTOM:CrystalArmor.legs",
-      "~CUSTOM:SoundArmor.legs",
-      "~CUSTOM:LightningArmor.legs",
-      "~CUSTOM:IceArmor.legs",
-      "~CUSTOM:EtherArmor.legs",
-      "~CUSTOM:WaterArmor.legs",
-      "~CUSTOM:EarthArmor.legs",
-      "~CUSTOM:AirArmor.legs",
-      "~CUSTOM:FireArmor.legs"
-    ],
-    "ITEMS:minecraft:head_armor": [
-      "~CUSTOM:MercuryArmor.helmet",
-      "~CUSTOM:MushroomsArmor.helmet",
-      "~CUSTOM:MagnetArmor.helmet",
-      "~CUSTOM:PoisonArmor.helmet",
-      "~CUSTOM:SpeedArmor.helmet",
-      "~CUSTOM:SandArmor.helmet",
-      "~CUSTOM:MistArmor.helmet",
-      "~CUSTOM:AmberArmor.helmet",
-      "~CUSTOM:ExplosionArmor.helmet",
-      "~CUSTOM:TeleportationArmor.helmet",
-      "~CUSTOM:TechnologyArmor.helmet",
-      "~CUSTOM:BloodArmor.helmet",
-      "~CUSTOM:DestructionArmor.helmet",
-      "~CUSTOM:CreationArmor.helmet",
-      "~CUSTOM:TimeArmor.helmet",
-      "~CUSTOM:SpaceArmor.helmet",
-      "~CUSTOM:MoonArmor.helmet",
-      "~CUSTOM:SunArmor.helmet",
-      "~CUSTOM:EnergyArmor.helmet",
-      "~CUSTOM:EnergiumArmor.helmet",
-      "~CUSTOM:VacuumArmor.helmet",
-      "~CUSTOM:ShadowArmor.helmet",
-      "~CUSTOM:LightArmor.helmet",
-      "~CUSTOM:MetalArmor.helmet",
-      "~CUSTOM:AnimalsArmor.helmet",
-      "~CUSTOM:PlantsArmor.helmet",
-      "~CUSTOM:OceanArmor.helmet",
-      "~CUSTOM:TornadoArmor.helmet",
-      "~CUSTOM:RainArmor.helmet",
-      "~CUSTOM:LavaArmor.helmet",
-      "~CUSTOM:CrystalArmor.helmet",
-      "~CUSTOM:SoundArmor.helmet",
-      "~CUSTOM:LightningArmor.helmet",
-      "~CUSTOM:IceArmor.helmet",
-      "~CUSTOM:EtherArmor.helmet",
-      "~CUSTOM:WaterArmor.helmet",
-      "~CUSTOM:EarthArmor.helmet",
-      "~CUSTOM:AirArmor.helmet",
-      "~CUSTOM:FireArmor.helmet"
-    ],
-    "ENTITIES:minecraft:fall_damage_immune": [
-      "CUSTOM:EnergiumGolem"
-    ],
-    "ITEMS:minecraft:foot_armor": [
-      "~CUSTOM:MercuryArmor.boots",
-      "~CUSTOM:MushroomsArmor.boots",
-      "~CUSTOM:MagnetArmor.boots",
-      "~CUSTOM:PoisonArmor.boots",
-      "~CUSTOM:SpeedArmor.boots",
-      "~CUSTOM:SandArmor.boots",
-      "~CUSTOM:MistArmor.boots",
-      "~CUSTOM:AmberArmor.boots",
-      "~CUSTOM:ExplosionArmor.boots",
-      "~CUSTOM:TeleportationArmor.boots",
-      "~CUSTOM:TechnologyArmor.boots",
-      "~CUSTOM:BloodArmor.boots",
-      "~CUSTOM:DestructionArmor.boots",
-      "~CUSTOM:CreationArmor.boots",
-      "~CUSTOM:TimeArmor.boots",
-      "~CUSTOM:SpaceArmor.boots",
-      "~CUSTOM:MoonArmor.boots",
-      "~CUSTOM:SunArmor.boots",
-      "~CUSTOM:EnergyArmor.boots",
-      "~CUSTOM:EnergiumArmor.boots",
-      "~CUSTOM:VacuumArmor.boots",
-      "~CUSTOM:ShadowArmor.boots",
-      "~CUSTOM:LightArmor.boots",
-      "~CUSTOM:MetalArmor.boots",
-      "~CUSTOM:AnimalsArmor.boots",
-      "~CUSTOM:PlantsArmor.boots",
-      "~CUSTOM:OceanArmor.boots",
-      "~CUSTOM:TornadoArmor.boots",
-      "~CUSTOM:RainArmor.boots",
-      "~CUSTOM:LavaArmor.boots",
-      "~CUSTOM:CrystalArmor.boots",
-      "~CUSTOM:SoundArmor.boots",
-      "~CUSTOM:LightningArmor.boots",
-      "~CUSTOM:IceArmor.boots",
-      "~CUSTOM:EtherArmor.boots",
-      "~CUSTOM:WaterArmor.boots",
-      "~CUSTOM:EarthArmor.boots",
-      "~CUSTOM:AirArmor.boots",
-      "~CUSTOM:FireArmor.boots"
-    ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:DeepslateCopyriumOre",
-      "~CUSTOM:DeepslateAmplifierOre",
-      "~CUSTOM:ElementalPowerGenerator",
-      "~CUSTOM:RawCopyriumBlock",
-      "~CUSTOM:CopyriumBlock",
-      "~CUSTOM:CopyriumOre",
-      "~CUSTOM:RawAmplifierBlock",
-      "~CUSTOM:AmplifierBlock",
-      "~CUSTOM:AmplifierOre"
-    ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
-    ],
-    "ITEMS:minecraft:hoes": [
-      "~CUSTOM:CreationHoe",
-      "~CUSTOM:EnergiumHoe"
-    ],
-    "ITEMS:minecraft:enchantable/durability": [
-      "~CUSTOM:AmplifierRing"
-    ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:PolishedCursedStoneSlab",
-      "~CUSTOM:CursedStoneBricksSlab",
-      "~CUSTOM:CursedStoneSlab"
-    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:MercuryBattleAxe",
       "~CUSTOM:CreationAxe",
@@ -29153,6 +29264,12 @@
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
+    ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall"
     ]
   },
   "tab_element_order": {
@@ -29201,16 +29318,21 @@
       "CopyriumIngot",
       "CursedStone",
       "CursedStoneBricks",
+      "CursedStoneCrackedBricks",
       "PolishedCursedStone",
+      "ChiseledCursedStone",
       "CursedStonePillar",
       "CursedStoneStairs",
       "CursedStoneBricksStairs",
+      "CursedStoneCrackedBricksStairs",
       "PolishedCursedStoneStairs",
       "CursedStoneSlab",
       "CursedStoneBricksSlab",
+      "CursedStoneCrackedBricksSlab",
       "PolishedCursedStoneSlab",
       "CursedStoneWall",
       "CursedStoneBricksWall",
+      "CursedStoneCrackedBricksWall",
       "PolishedCursedStoneWall",
       "CursedLadder",
       "CursedLamp",
@@ -29328,6 +29450,7 @@
       "battery.desc.sun": "Солнце",
       "item.power.gravity_stone": "Камень гравитации",
       "item.power.time_armor_leggings": "Поножи мастера времени",
+      "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Ртутное состояние, расходует 55",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
@@ -29383,6 +29506,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "item.power.copyrium_ingot": "Копириумный слиток",
       "battery.desc.rain": "Дождь",
+      "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "item.power.sand_battery": "Батарея",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
@@ -29411,6 +29535,7 @@
       "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
       "gamerule.limitedNumberOfStones.description": "Ограничивает количество получаемых камней и учитывает их уникальность",
       "attribute.power.frozen_in_ice": "Заморожен во льду",
+      "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
@@ -29424,6 +29549,7 @@
       "effect.power.power_lock": "Блокировка силы",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "block.power.energium_controller": "Энерджиумный контроллер",
+      "subtitles.time_ability_effect": "Time power using",
       "item.minecraft.splash_potion.effect.star_regeneration_potion": "Взрывное зелье звёздной регенерации",
       "item.power.fire_battery": "Батарея",
       "item.power.plants_battery": "Батарея",
@@ -29621,6 +29747,7 @@
       "item.power.lightning_armor_helmet": "Шлем мастера молнии",
       "item.power.mercury_armor_chestplate": "Нагрудник мастера ртути",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
+      "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Шлем мастера телепортации",
       "item.power.water_katana": "Водная катана",
@@ -29713,6 +29840,7 @@
       "item.power.metal_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
+      "block.power.cursed_stone_cracked_bricks": "Проклятые потрескавшиеся каменные кирпичи",
       "effect.power.blue_magnet_power": "Сила синего магнита",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
@@ -29737,7 +29865,9 @@
       "item.power.creation_stone": "Камень творения",
       "item.power.magnet_armor_boots": "Ботинки мастера магнита",
       "effect.power.earth_master": "Мастер земли",
+      "block.power.chiseled_cursed_stone": "Резной проклятый камень",
       "item.power.amber_armor_chestplate": "Нагрудник мастера янтаря",
+      "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
       "item.power.blood_battery": "Батарея",
       "block.power.copyrium_block": "Блок копириума",
@@ -29828,6 +29958,7 @@
       "item.power.shadow_armor_helmet": "Шлем мастера тени",
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Скорость",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
+      "block.power.cursed_stone_cracked_bricks_wall": "Ограда из проклятых потрескавшихся каменных кирпичей",
       "item.power.music_disc_call_of_the_past": "Пластинка",
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
@@ -29947,6 +30078,7 @@
       "item.power.ice_armor_leggings": "Поножи мастера льда",
       "item.power.energium_armor_chestplate": "Энерджиумный нагрудник",
       "item.power.magnet_armor_helmet": "Шлем мастера магнита",
+      "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Жидкая ртуть, расходует 15",
       "item.power.mist_stone": "Камень тумана",
       "item.power.light_armor_leggings": "Поножи мастера света",
       "item.power.amplifier_drop": "Капля амплифера",
@@ -30024,6 +30156,7 @@
       "battery.desc.sun": "Sun",
       "item.power.gravity_stone": "Gravity Stone",
       "item.power.time_armor_leggings": "Time Leggings",
+      "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
@@ -30079,6 +30212,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "item.power.copyrium_ingot": "Copyrium Ingot",
       "battery.desc.rain": "Rain",
+      "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
       "item.power.plants_armor_boots": "Plants Boots",
       "item.power.sand_battery": "Battery",
       "item.power.tornado_armor_boots": "Tornado Boots",
@@ -30107,6 +30241,7 @@
       "item.power.poison_armor_chestplate": "Poison Chestplate",
       "gamerule.limitedNumberOfStones.description": "Limits the number of stones to receive and includes their uniqueness",
       "attribute.power.frozen_in_ice": "Frozen In Ice",
+      "item.power.mercury_ball": "Mercury Ball",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
@@ -30120,6 +30255,7 @@
       "effect.power.power_lock": "Power lock",
       "item.power.metal_armor_helmet": "Metal Helmet",
       "block.power.energium_controller": "Energium Controller",
+      "subtitles.time_ability_effect": "Time power using",
       "item.minecraft.splash_potion.effect.star_regeneration_potion": "Splash Potion of Star Regeneration",
       "item.power.fire_battery": "Battery",
       "item.power.plants_battery": "Battery",
@@ -30318,6 +30454,7 @@
       "item.power.lightning_armor_helmet": "Lightning Helmet",
       "item.power.mercury_armor_chestplate": "Mercury Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
+      "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Mercury ball, uses 35",
       "subtitles.backport.block.vault.place": "",
       "item.power.teleportation_armor_helmet": "Teleportation Helmet",
       "item.power.water_katana": "Water Katana",
@@ -30410,6 +30547,7 @@
       "item.power.metal_battery": "Battery",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Earth",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
+      "block.power.cursed_stone_cracked_bricks": "Cursed Stone Cracked Bricks",
       "effect.power.blue_magnet_power": "Blue Magnet Power",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
       "item.power.ice_armor_boots": "Ice Boots",
@@ -30434,7 +30572,9 @@
       "item.power.creation_stone": "Creation Stone",
       "item.power.magnet_armor_boots": "Magnet Boots",
       "effect.power.earth_master": "Master of the Earth",
+      "block.power.chiseled_cursed_stone": "Chiseled Cursed Stone",
       "item.power.amber_armor_chestplate": "Amber Chestplate",
+      "block.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
       "item.power.ether_armor_helmet": "Ether Helmet",
       "item.power.blood_battery": "Battery",
       "block.power.copyrium_block": "Block of Copyrium",
@@ -30525,6 +30665,7 @@
       "item.power.shadow_armor_helmet": "Shadow Helmet",
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Speed",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
+      "block.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.music_disc_call_of_the_past": "Music Disc",
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
@@ -30643,6 +30784,7 @@
       "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.energium_armor_chestplate": "Energium Chestplate",
       "item.power.magnet_armor_helmet": "Magnet Helmet",
+      "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
       "item.power.mist_stone": "Mist Stone",
       "item.power.light_armor_leggings": "Light Leggings",
       "item.power.amplifier_drop": "Amplifier Drop",
@@ -30657,207 +30799,6 @@
   "foldersRoot": {
     "name": "~",
     "children": [
-      {
-        "name": "Elements",
-        "children": [
-          {
-            "name": "Fire",
-            "children": []
-          },
-          {
-            "name": "Air",
-            "children": []
-          },
-          {
-            "name": "Earth",
-            "children": []
-          },
-          {
-            "name": "Water",
-            "children": []
-          },
-          {
-            "name": "Ether",
-            "children": []
-          },
-          {
-            "name": "Ice",
-            "children": []
-          },
-          {
-            "name": "Lightning",
-            "children": []
-          },
-          {
-            "name": "Sound",
-            "children": []
-          },
-          {
-            "name": "Crystal",
-            "children": []
-          },
-          {
-            "name": "Lava",
-            "children": []
-          },
-          {
-            "name": "Rain",
-            "children": []
-          },
-          {
-            "name": "Tornado",
-            "children": []
-          },
-          {
-            "name": "Ocean",
-            "children": []
-          },
-          {
-            "name": "Plants",
-            "children": []
-          },
-          {
-            "name": "Animals",
-            "children": []
-          },
-          {
-            "name": "Metal",
-            "children": []
-          },
-          {
-            "name": "Light",
-            "children": []
-          },
-          {
-            "name": "Shadow",
-            "children": []
-          },
-          {
-            "name": "Vacuum",
-            "children": []
-          },
-          {
-            "name": "Energy",
-            "children": []
-          },
-          {
-            "name": "Sun",
-            "children": []
-          },
-          {
-            "name": "Moon",
-            "children": []
-          },
-          {
-            "name": "Space",
-            "children": []
-          },
-          {
-            "name": "Time",
-            "children": []
-          },
-          {
-            "name": "Creation",
-            "children": []
-          },
-          {
-            "name": "Destruction",
-            "children": []
-          },
-          {
-            "name": "Blood",
-            "children": []
-          },
-          {
-            "name": "Technology",
-            "children": []
-          },
-          {
-            "name": "Teleportation",
-            "children": []
-          },
-          {
-            "name": "Explosion",
-            "children": []
-          },
-          {
-            "name": "Amber",
-            "children": []
-          },
-          {
-            "name": "Mist",
-            "children": []
-          },
-          {
-            "name": "Sand",
-            "children": []
-          },
-          {
-            "name": "Speed",
-            "children": []
-          },
-          {
-            "name": "Poison",
-            "children": []
-          },
-          {
-            "name": "Magnet",
-            "children": []
-          },
-          {
-            "name": "Mushrooms",
-            "children": []
-          },
-          {
-            "name": "Mercury",
-            "children": []
-          },
-          {
-            "name": "Music",
-            "children": []
-          },
-          {
-            "name": "Plague",
-            "children": []
-          },
-          {
-            "name": "BlueFlame",
-            "children": []
-          },
-          {
-            "name": "Gravity",
-            "children": []
-          },
-          {
-            "name": "Smoke",
-            "children": []
-          },
-          {
-            "name": "Form",
-            "children": []
-          },
-          {
-            "name": "Mind",
-            "children": []
-          },
-          {
-            "name": "Spirit",
-            "children": []
-          },
-          {
-            "name": "GoldenDust",
-            "children": []
-          },
-          {
-            "name": "Darkness",
-            "children": []
-          }
-        ]
-      },
-      {
-        "name": "Tabs",
-        "children": []
-      },
       {
         "name": "Modules",
         "children": [
@@ -31271,19 +31212,6 @@
         ]
       },
       {
-        "name": "Bosses",
-        "children": [
-          {
-            "name": "EnergiumGolem",
-            "children": []
-          },
-          {
-            "name": "CursedKeeper",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Structures",
         "children": []
       },
@@ -31310,6 +31238,220 @@
       {
         "name": "Gamerules",
         "children": []
+      },
+      {
+        "name": "Bosses",
+        "children": [
+          {
+            "name": "EnergiumGolem",
+            "children": []
+          },
+          {
+            "name": "CursedKeeper",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Elements",
+        "children": [
+          {
+            "name": "Fire",
+            "children": []
+          },
+          {
+            "name": "Air",
+            "children": []
+          },
+          {
+            "name": "Earth",
+            "children": []
+          },
+          {
+            "name": "Water",
+            "children": []
+          },
+          {
+            "name": "Ether",
+            "children": []
+          },
+          {
+            "name": "Ice",
+            "children": []
+          },
+          {
+            "name": "Lightning",
+            "children": []
+          },
+          {
+            "name": "Sound",
+            "children": []
+          },
+          {
+            "name": "Crystal",
+            "children": []
+          },
+          {
+            "name": "Lava",
+            "children": []
+          },
+          {
+            "name": "Rain",
+            "children": []
+          },
+          {
+            "name": "Tornado",
+            "children": []
+          },
+          {
+            "name": "Ocean",
+            "children": []
+          },
+          {
+            "name": "Plants",
+            "children": []
+          },
+          {
+            "name": "Animals",
+            "children": []
+          },
+          {
+            "name": "Metal",
+            "children": []
+          },
+          {
+            "name": "Light",
+            "children": []
+          },
+          {
+            "name": "Shadow",
+            "children": []
+          },
+          {
+            "name": "Vacuum",
+            "children": []
+          },
+          {
+            "name": "Energy",
+            "children": []
+          },
+          {
+            "name": "Sun",
+            "children": []
+          },
+          {
+            "name": "Moon",
+            "children": []
+          },
+          {
+            "name": "Space",
+            "children": []
+          },
+          {
+            "name": "Time",
+            "children": []
+          },
+          {
+            "name": "Creation",
+            "children": []
+          },
+          {
+            "name": "Destruction",
+            "children": []
+          },
+          {
+            "name": "Blood",
+            "children": []
+          },
+          {
+            "name": "Technology",
+            "children": []
+          },
+          {
+            "name": "Teleportation",
+            "children": []
+          },
+          {
+            "name": "Explosion",
+            "children": []
+          },
+          {
+            "name": "Amber",
+            "children": []
+          },
+          {
+            "name": "Mist",
+            "children": []
+          },
+          {
+            "name": "Sand",
+            "children": []
+          },
+          {
+            "name": "Speed",
+            "children": []
+          },
+          {
+            "name": "Poison",
+            "children": []
+          },
+          {
+            "name": "Magnet",
+            "children": []
+          },
+          {
+            "name": "Mushrooms",
+            "children": []
+          },
+          {
+            "name": "Mercury",
+            "children": []
+          },
+          {
+            "name": "Music",
+            "children": []
+          },
+          {
+            "name": "Plague",
+            "children": []
+          },
+          {
+            "name": "BlueFlame",
+            "children": []
+          },
+          {
+            "name": "Gravity",
+            "children": []
+          },
+          {
+            "name": "Smoke",
+            "children": []
+          },
+          {
+            "name": "Form",
+            "children": []
+          },
+          {
+            "name": "Mind",
+            "children": []
+          },
+          {
+            "name": "Spirit",
+            "children": []
+          },
+          {
+            "name": "GoldenDust",
+            "children": []
+          },
+          {
+            "name": "Darkness",
+            "children": []
+          }
+        ]
+      },
+      {
+        "name": "Tabs",
+        "children": []
       }
     ]
   },
@@ -31326,19 +31468,26 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "geckolib"
+      "kleiders_custom_renderer",
+      "geckolib",
+      "playeranimator",
+      "particlepresets"
     ],
     "dependencies": [
       "bettercombat"
     ],
     "dependants": [
-      "cpapi"
+      "cpapi",
+      "powerlc"
     ],
     "mcreatorDependencies": [
+      "kleidersplayerrenderer",
       "pehkui",
-      "geckolib"
+      "geckolib",
+      "playeranimator",
+      "particlepresets"
     ],
-    "currentGenerator": "neoforge-1.20.6",
+    "currentGenerator": "neoforge-1.20.4",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
