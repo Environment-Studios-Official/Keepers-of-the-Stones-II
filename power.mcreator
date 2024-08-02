@@ -22981,11 +22981,11 @@
       "registry_name": "cursed_vault",
       "metadata": {
         "files": [
-          "src/main/resources/assets/power/blockstates/cursed_vault.json",
           "src/main/resources/data/power/loot_tables/blocks/cursed_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
-          "src/main/resources/assets/power/models/block/cursed_vault.json",
           "src/main/resources/assets/power/models/item/cursed_vault.json",
+          "src/main/resources/assets/power/blockstates/cursed_vault.json",
+          "src/main/resources/assets/power/models/block/cursed_vault.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/CursedVaultBlockEntity.java",
           "src/main/java/com/esmods/keepersofthestonestwo/block/CursedVaultBlock.java"
         ]
       },
@@ -25906,12 +25906,12 @@
       "registry_name": "energium_vault",
       "metadata": {
         "files": [
-          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java",
           "src/main/resources/assets/power/models/item/energium_vault.json",
           "src/main/resources/assets/power/models/block/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/EnergiumVaultBlock.java",
-          "src/main/resources/assets/power/blockstates/energium_vault.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/entity/EnergiumVaultBlockEntity.java"
+          "src/main/resources/data/power/loot_tables/blocks/energium_vault.json",
+          "src/main/resources/assets/power/blockstates/energium_vault.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Energium"
@@ -28071,6 +28071,163 @@
         ]
       },
       "path": "~/Elements/Mercury"
+    },
+    {
+      "name": "ChiseledCursedStone",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiseled_cursed_stone",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/chiseled_cursed_stone.json",
+          "src/main/resources/assets/power/models/block/chiseled_cursed_stone.json",
+          "src/main/resources/assets/power/blockstates/chiseled_cursed_stone.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/ChiseledCursedStoneBlock.java",
+          "src/main/resources/assets/power/models/item/chiseled_cursed_stone.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricks",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "ChiseledCursedStoneCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "chiseled_cursed_stone_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/chiseled_cursed_stone_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksSlab",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_slab",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksSlabBlock.java",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_top.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_slab.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_slab_full.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_slab.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksStairs",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_stairs",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_outer.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs_inner.json",
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_stairs.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksStairsBlock.java",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_stairs.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksWall",
+      "type": "block",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_wall",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_inventory.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_side_tall.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/CursedStoneCrackedBricksWallBlock.java",
+          "src/main/resources/data/power/loot_tables/blocks/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall.json",
+          "src/main/resources/assets/power/models/block/cursed_stone_cracked_bricks_wall_post.json",
+          "src/main/resources/assets/power/blockstates/cursed_stone_cracked_bricks_wall.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksSlabCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_slab_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_slab_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksStairsCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_stairs_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_stairs_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "CursedStoneCrackedBricksWallCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_stone_cracked_bricks_wall_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipes/cursed_stone_cracked_bricks_wall_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/CursedBlocks"
     }
   ],
   "variable_elements": [
@@ -28830,6 +28987,11 @@
       "CUSTOM:CursedKeeper"
     ],
     "BLOCKS:minecraft:mineable/pickaxe": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:CursedStoneCrackedBricks",
+      "~CUSTOM:ChiseledCursedStone",
       "~CUSTOM:DeepslateCopyriumOre",
       "~CUSTOM:DeepslateAmplifierOre",
       "~CUSTOM:DeepslateEnergiumOre",
@@ -28873,8 +29035,8 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
-    "ENTITIES:minecraft:fall_damage_immune": [
-      "CUSTOM:EnergiumGolem"
+    "BIOMES:minecraft:is_overworld": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:tools": [
       "CUSTOM:EnergiumPickaxe",
@@ -28898,33 +29060,19 @@
       "EntityWitherSkull",
       "CUSTOM:CursedKeeper"
     ],
-    "BLOCKS:minecraft:needs_iron_tool": [
-      "~CUSTOM:DeepslateCopyriumOre",
-      "~CUSTOM:DeepslateAmplifierOre",
-      "~CUSTOM:ElementalPowerGenerator",
-      "~CUSTOM:RawCopyriumBlock",
-      "~CUSTOM:CopyriumBlock",
-      "~CUSTOM:CopyriumOre",
-      "~CUSTOM:RawAmplifierBlock",
-      "~CUSTOM:AmplifierBlock",
-      "~CUSTOM:AmplifierOre"
-    ],
     "BLOCKS:minecraft:stairs": [
+      "~CUSTOM:CursedStoneCrackedBricksStairs",
       "~CUSTOM:PolishedCursedStoneStairs",
       "~CUSTOM:CursedStoneBricksStairs",
       "~CUSTOM:CursedStoneStairs"
     ],
-    "BLOCKS:mod:keepers_boxes": [
-      "CUSTOM:KeepersBox"
+    "BIOMES:minecraft:is_forest": [
+      "CUSTOM:CursedForest"
     ],
     "ITEMS:minecraft:pickaxes": [
       "~CUSTOM:TechnoPickaxe",
       "~CUSTOM:CreationPickaxe",
       "~CUSTOM:EnergiumPickaxe"
-    ],
-    "ITEMS:minecraft:hoes": [
-      "~CUSTOM:CreationHoe",
-      "~CUSTOM:EnergiumHoe"
     ],
     "ITEMS:minecraft:swords": [
       "~CUSTOM:MushroomsHammer",
@@ -29055,11 +29203,6 @@
       "CUSTOM:MushroomsBattery",
       "CUSTOM:MercuryBattery"
     ],
-    "BLOCKS:minecraft:slabs": [
-      "~CUSTOM:PolishedCursedStoneSlab",
-      "~CUSTOM:CursedStoneBricksSlab",
-      "~CUSTOM:CursedStoneSlab"
-    ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
       "~CUSTOM:EnergiumShovel"
@@ -29077,6 +29220,40 @@
       "~CUSTOM:DepletedEnergiumBlock",
       "~CUSTOM:DepletedEnergiumOre"
     ],
+    "BLOCKS:minecraft:walls": [
+      "~CUSTOM:CursedStoneCrackedBricksWall",
+      "~CUSTOM:PolishedCursedStoneWall",
+      "~CUSTOM:CursedStoneBricksWall",
+      "~CUSTOM:CursedStoneWall"
+    ],
+    "ENTITIES:minecraft:fall_damage_immune": [
+      "CUSTOM:EnergiumGolem"
+    ],
+    "BLOCKS:minecraft:needs_iron_tool": [
+      "~CUSTOM:DeepslateCopyriumOre",
+      "~CUSTOM:DeepslateAmplifierOre",
+      "~CUSTOM:ElementalPowerGenerator",
+      "~CUSTOM:RawCopyriumBlock",
+      "~CUSTOM:CopyriumBlock",
+      "~CUSTOM:CopyriumOre",
+      "~CUSTOM:RawAmplifierBlock",
+      "~CUSTOM:AmplifierBlock",
+      "~CUSTOM:AmplifierOre"
+    ],
+    "BLOCKS:minecraft:logs": [],
+    "BLOCKS:mod:keepers_boxes": [
+      "CUSTOM:KeepersBox"
+    ],
+    "ITEMS:minecraft:hoes": [
+      "~CUSTOM:CreationHoe",
+      "~CUSTOM:EnergiumHoe"
+    ],
+    "BLOCKS:minecraft:slabs": [
+      "~CUSTOM:CursedStoneCrackedBricksSlab",
+      "~CUSTOM:PolishedCursedStoneSlab",
+      "~CUSTOM:CursedStoneBricksSlab",
+      "~CUSTOM:CursedStoneSlab"
+    ],
     "ITEMS:minecraft:axes": [
       "~CUSTOM:MercuryBattleAxe",
       "~CUSTOM:CreationAxe",
@@ -29085,11 +29262,6 @@
     ],
     "BLOCKS:minecraft:replaceable": [
       "~CUSTOM:PurpleMushroom"
-    ],
-    "BLOCKS:minecraft:walls": [
-      "~CUSTOM:PolishedCursedStoneWall",
-      "~CUSTOM:CursedStoneBricksWall",
-      "~CUSTOM:CursedStoneWall"
     ]
   },
   "tab_element_order": {
@@ -29138,16 +29310,21 @@
       "CopyriumIngot",
       "CursedStone",
       "CursedStoneBricks",
+      "CursedStoneCrackedBricks",
       "PolishedCursedStone",
+      "ChiseledCursedStone",
       "CursedStonePillar",
       "CursedStoneStairs",
       "CursedStoneBricksStairs",
+      "CursedStoneCrackedBricksStairs",
       "PolishedCursedStoneStairs",
       "CursedStoneSlab",
       "CursedStoneBricksSlab",
+      "CursedStoneCrackedBricksSlab",
       "PolishedCursedStoneSlab",
       "CursedStoneWall",
       "CursedStoneBricksWall",
+      "CursedStoneCrackedBricksWall",
       "PolishedCursedStoneWall",
       "CursedLadder",
       "CursedLamp",
@@ -29214,20 +29391,20 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -29321,6 +29498,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "item.power.copyrium_ingot": "Копириумный слиток",
       "battery.desc.rain": "Дождь",
+      "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "item.power.sand_battery": "Батарея",
       "item.power.tornado_armor_boots": "Ботинки мастера торнадо",
@@ -29653,6 +29831,7 @@
       "item.power.metal_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
+      "block.power.cursed_stone_cracked_bricks": "Проклятые потрескавшиеся каменные кирпичи",
       "effect.power.blue_magnet_power": "Сила синего магнита",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Звуковая волна, расходует 10",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
@@ -29677,7 +29856,9 @@
       "item.power.creation_stone": "Камень творения",
       "item.power.magnet_armor_boots": "Ботинки мастера магнита",
       "effect.power.earth_master": "Мастер земли",
+      "block.power.chiseled_cursed_stone": "Резной проклятый камень",
       "item.power.amber_armor_chestplate": "Нагрудник мастера янтаря",
+      "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.ether_armor_helmet": "Шлем мастера эфира",
       "item.power.blood_battery": "Батарея",
       "block.power.copyrium_block": "Блок копириума",
@@ -29768,6 +29949,7 @@
       "item.power.shadow_armor_helmet": "Шлем мастера тени",
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Скорость",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
+      "block.power.cursed_stone_cracked_bricks_wall": "Ограда из проклятых потрескавшихся каменных кирпичей",
       "item.power.music_disc_call_of_the_past": "Пластинка",
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
@@ -30021,6 +30203,7 @@
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "item.power.copyrium_ingot": "Copyrium Ingot",
       "battery.desc.rain": "Rain",
+      "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
       "item.power.plants_armor_boots": "Plants Boots",
       "item.power.sand_battery": "Battery",
       "item.power.tornado_armor_boots": "Tornado Boots",
@@ -30354,6 +30537,7 @@
       "item.power.metal_battery": "Battery",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Earth",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Lava attack, uses 35",
+      "block.power.cursed_stone_cracked_bricks": "Cursed Stone Cracked Bricks",
       "effect.power.blue_magnet_power": "Blue Magnet Power",
       "gui.power.wheel_abilities_sound.tooltip_sound_wave_uses_10": "Sound wave, uses 10",
       "item.power.ice_armor_boots": "Ice Boots",
@@ -30378,7 +30562,9 @@
       "item.power.creation_stone": "Creation Stone",
       "item.power.magnet_armor_boots": "Magnet Boots",
       "effect.power.earth_master": "Master of the Earth",
+      "block.power.chiseled_cursed_stone": "Chiseled Cursed Stone",
       "item.power.amber_armor_chestplate": "Amber Chestplate",
+      "block.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
       "item.power.ether_armor_helmet": "Ether Helmet",
       "item.power.blood_battery": "Battery",
       "block.power.copyrium_block": "Block of Copyrium",
@@ -30469,6 +30655,7 @@
       "item.power.shadow_armor_helmet": "Shadow Helmet",
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Speed",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
+      "block.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
       "item.power.music_disc_call_of_the_past": "Music Disc",
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",

@@ -1,0 +1,10 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "particle": "power:block/cursed_stone_cracked_bricks",
+    "bottom": "power:block/cursed_stone_cracked_bricks",
+    "top": "power:block/cursed_stone_cracked_bricks",
+    "side": "power:block/cursed_stone_cracked_bricks"
+  },
+  "render_type": "solid"
+}

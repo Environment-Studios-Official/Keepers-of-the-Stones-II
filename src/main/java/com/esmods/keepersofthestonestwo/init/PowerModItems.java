@@ -575,6 +575,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
 	public static final DeferredHolder<Item, Item> MERCURY_BALL = REGISTRY.register("mercury_ball", () -> new MercuryBallItem());
+	public static final DeferredHolder<Item, Item> CHISELED_CURSED_STONE = block(PowerModBlocks.CHISELED_CURSED_STONE);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_SLAB = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_SLAB);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_STAIRS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_STAIRS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_WALL = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_WALL);
 
 	// Start of user code block custom items
 	// End of user code block custom items
