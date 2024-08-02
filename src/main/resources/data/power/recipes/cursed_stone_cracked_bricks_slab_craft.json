@@ -4,5 +4,7 @@
   "ingredient": {
     "item": "power:cursed_stone_cracked_bricks"
   },
-  "result": "power:cursed_stone_cracked_bricks_slab"
+  "result": {
+    "id": "power:cursed_stone_cracked_bricks_slab"
+  }
 }

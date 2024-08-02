@@ -37,6 +37,10 @@ import com.esmods.keepersofthestonestwo.block.CursedStoneWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneStairsBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneSlabBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStonePillarBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneCrackedBricksWallBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneCrackedBricksStairsBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneCrackedBricksSlabBlock;
+import com.esmods.keepersofthestonestwo.block.CursedStoneCrackedBricksBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksWallBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksStairsBlock;
 import com.esmods.keepersofthestonestwo.block.CursedStoneBricksSlabBlock;
@@ -47,6 +51,7 @@ import com.esmods.keepersofthestonestwo.block.CursedLampBlock;
 import com.esmods.keepersofthestonestwo.block.CursedLadderBlock;
 import com.esmods.keepersofthestonestwo.block.CopyriumOreBlock;
 import com.esmods.keepersofthestonestwo.block.CopyriumBlockBlock;
+import com.esmods.keepersofthestonestwo.block.ChiseledCursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.BluePortalBlock;
 import com.esmods.keepersofthestonestwo.block.BatteryChargerBlock;
 import com.esmods.keepersofthestonestwo.block.AmplifierOreBlock;
@@ -99,6 +104,11 @@ public class PowerModBlocks {
 	public static final DeferredHolder<Block, Block> DEEPSLATE_ENERGIUM_ORE = REGISTRY.register("deepslate_energium_ore", DeepslateEnergiumOreBlock::new);
 	public static final DeferredHolder<Block, Block> DEEPSLATE_AMPLIFIER_ORE = REGISTRY.register("deepslate_amplifier_ore", DeepslateAmplifierOreBlock::new);
 	public static final DeferredHolder<Block, Block> DEEPSLATE_COPYRIUM_ORE = REGISTRY.register("deepslate_copyrium_ore", DeepslateCopyriumOreBlock::new);
+	public static final DeferredHolder<Block, Block> CHISELED_CURSED_STONE = REGISTRY.register("chiseled_cursed_stone", ChiseledCursedStoneBlock::new);
+	public static final DeferredHolder<Block, Block> CURSED_STONE_CRACKED_BRICKS = REGISTRY.register("cursed_stone_cracked_bricks", CursedStoneCrackedBricksBlock::new);
+	public static final DeferredHolder<Block, Block> CURSED_STONE_CRACKED_BRICKS_SLAB = REGISTRY.register("cursed_stone_cracked_bricks_slab", CursedStoneCrackedBricksSlabBlock::new);
+	public static final DeferredHolder<Block, Block> CURSED_STONE_CRACKED_BRICKS_STAIRS = REGISTRY.register("cursed_stone_cracked_bricks_stairs", CursedStoneCrackedBricksStairsBlock::new);
+	public static final DeferredHolder<Block, Block> CURSED_STONE_CRACKED_BRICKS_WALL = REGISTRY.register("cursed_stone_cracked_bricks_wall", CursedStoneCrackedBricksWallBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }
