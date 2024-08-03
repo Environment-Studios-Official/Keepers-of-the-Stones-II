@@ -1,10 +1,10 @@
 modLoader="javafml"
-loaderVersion="[2,)"
+loaderVersion="[47,)"
 license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.34"
+version="1.0.0.35"
 displayName="Keepers of the Stones II"
 updateJSONURL="https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
@@ -17,96 +17,89 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # End of user code block mod configuration
 
 [[dependencies.power]]
-    modId="neoforge"
-    type="required"
-    versionRange="[20.4.223,)"
-    ordering="AFTER"
-    side="BOTH"
-
-[[dependencies.power]]
     modId="minecraft"
-    type="required"
-    versionRange="[1.20.4]"
+    mandatory=true
+    versionRange="[1.20.1]"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.power]]
     modId="pehkui"
-    type="required"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="kleiders_custom_renderer"
-    type="required"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="geckolib"
-    type="required"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    type="required"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="particlepresets"
-    type="required"
+    mandatory=true
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.power]]
     modId="kleidersplayerrenderer"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="pehkui"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="geckolib"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="particlepresets"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.power]]
     modId="cpapi"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="powerlc"
-    type="optional"
+    mandatory=false
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"

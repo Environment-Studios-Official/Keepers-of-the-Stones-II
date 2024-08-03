@@ -14,18 +14,6 @@
     },
     {
       "identifier": {
-        "group": "com.esmods.powerlegacycore",
-        "artifact": "powerlc"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "3.3.0"
-      },
-      "path": "META-INF/jarjar/powerlc-3.3.0.jar",
-      "isObfuscated": true
-    },
-    {
-      "identifier": {
         "group": "net.particleeffects",
         "artifact": "particleeffects"
       },
@@ -33,7 +21,7 @@
         "range": "[0,)",
         "artifactVersion": "1.0.1"
       },
-      "path": "META-INF/jarjar/particlepresets-1.0.0-neoforge-1.20.4.jar",
+      "path": "META-INF/jarjar/particlepresets-1.0.1.jar",
       "isObfuscated": true
     },
     {
