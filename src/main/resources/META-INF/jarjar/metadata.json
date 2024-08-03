@@ -14,18 +14,6 @@
     },
     {
       "identifier": {
-        "group": "com.esmods.powerlegacycore",
-        "artifact": "powerlc"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "3.3.0"
-      },
-      "path": "META-INF/jarjar/powerlc-3.3.0.jar",
-      "isObfuscated": true
-    },
-    {
-      "identifier": {
         "group": "net.particleeffects",
         "artifact": "particleeffects"
       },
