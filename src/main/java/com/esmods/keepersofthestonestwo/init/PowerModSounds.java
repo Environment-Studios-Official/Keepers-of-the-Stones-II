@@ -33,4 +33,5 @@ public class PowerModSounds {
 	public static final RegistryObject<SoundEvent> MAGNETIC_WAVES = REGISTRY.register("magnetic_waves", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "magnetic_waves")));
 	public static final RegistryObject<SoundEvent> RECORD_CALL_OF_THE_PAST = REGISTRY.register("record.call_of_the_past", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "record.call_of_the_past")));
 	public static final RegistryObject<SoundEvent> RECORD_ANCIENT_MOOD = REGISTRY.register("record.ancient_mood", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "record.ancient_mood")));
+	public static final RegistryObject<SoundEvent> TIME_ABILITY_EFFECT = REGISTRY.register("time_ability_effect", () -> SoundEvent.createVariableRangeEvent(new ResourceLocation("power", "time_ability_effect")));
 }
