@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -20,7 +20,7 @@
             "name": "OpenWheelOne"
           },
           "displayCondition": {
-            "name": "GetWheelTwo"
+            "name": "GetWheelTwoOrFirstFake"
           },
           "x": 258,
           "y": 178
@@ -59,6 +59,54 @@
         }
       },
       {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_1",
+          "image": "fake_wheel_button_1.png",
+          "hoveredImage": "fake_wheel_button_1_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelOne"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelOne"
+          },
+          "x": 258,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_2",
+          "image": "fake_wheel_button_2.png",
+          "hoveredImage": "fake_wheel_button_2_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelSecond"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelTwo"
+          },
+          "x": 270,
+          "y": 188
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_fake_wheel_button_3",
+          "image": "fake_wheel_button_3.png",
+          "hoveredImage": "fake_wheel_button_3_highlight.png",
+          "onClick": {
+            "name": "OpenFakeWheelThird"
+          },
+          "displayCondition": {
+            "name": "GetFakeWheelThird"
+          },
+          "x": 282,
+          "y": 188
+        }
+      },
+      {
         "type": "image",
         "data": {
           "image": "wheel_of_abilities.png",
@@ -68,48 +116,81 @@
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_1",
-          "text": "1",
-          "isUndecorated": false,
+          "name": "imagebutton_grenade_explosion",
+          "image": "grenade_explosion.png",
+          "hoveredImage": "grenade_explosion_highlight.png",
           "onClick": {
             "name": "Attack117"
           },
-          "width": 30,
-          "height": 20,
-          "x": 196,
-          "y": 49
+          "x": 190,
+          "y": 36
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_2",
-          "text": "2",
-          "isUndecorated": false,
+          "name": "imagebutton_self_detonation",
+          "image": "self_detonation.png",
+          "hoveredImage": "self_detonation_highlight.png",
           "onClick": {
             "name": "Attack118"
           },
-          "width": 30,
-          "height": 20,
-          "x": 258,
-          "y": 110
+          "x": 251,
+          "y": 97
         }
       },
       {
-        "type": "button",
+        "type": "imagebutton",
         "data": {
-          "name": "button_3",
-          "text": "3",
-          "isUndecorated": false,
+          "name": "imagebutton_atomic_bomb",
+          "image": "atomic_bomb.png",
+          "hoveredImage": "atomic_bomb_highlight.png",
           "onClick": {
             "name": "Attack119"
           },
-          "width": 30,
-          "height": 20,
-          "x": 198,
-          "y": 172
+          "x": 190,
+          "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_grenade_explosion_uses_20",
+          "text": {
+            "fixedValue": "Grenade explosion, uses 20"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_selfdetonation_uses_50",
+          "text": {
+            "fixedValue": "Self-detonation, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_atomic_bomb_uses_100",
+          "text": {
+            "fixedValue": "Atomic bomb, uses 100"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
         }
       }
     ],

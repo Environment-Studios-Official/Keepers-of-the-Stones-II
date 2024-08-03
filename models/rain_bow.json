@@ -2,10 +2,6 @@
 	"credit": "Made with Blockbench",
 	"parent": "rain_bow",
 	"texture_size": [64, 64],
-	"textures": {
-		"0": "block/texture",
-		"particle": "block/texture"
-	},
 	"elements": [
 		{
 			"from": [7, -5, 7],
@@ -208,8 +204,16 @@
 			"rotation": [4, 115, 0],
 			"translation": [0, 3.75, 1.25]
 		},
+		"thirdperson_lefthand": {
+			"rotation": [-19.16, -62.79, -16.01],
+			"translation": [0, 3.75, 1.25]
+		},
 		"firstperson_righthand": {
 			"rotation": [4, 115, 0],
+			"translation": [0, 3.75, 1.25]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-19.16, -62.79, -16.01],
 			"translation": [0, 3.75, 1.25]
 		},
 		"ground": {

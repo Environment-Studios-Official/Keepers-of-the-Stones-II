@@ -65,7 +65,7 @@ public class LavaSpecialAttackProcedure {
 								} else {
 									entityiterator.hurt(
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
-									entityiterator.setSecondsOnFire(7);
+									entityiterator.igniteForSeconds(7);
 								}
 							}
 						}

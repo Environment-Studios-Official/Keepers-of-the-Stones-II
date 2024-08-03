@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "mushrooms_hammer"
+      },
+      "name": "default"
+    }
+  }
+}

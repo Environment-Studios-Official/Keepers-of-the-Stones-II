@@ -44,6 +44,11 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.GRASS_BLOCK);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -70,6 +75,10 @@ public class GrassBlockAttackProjectileEntity extends AbstractArrow implements I
 
 	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 0.8f, 2.5, 3);
+	}
+
+	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 0.8f, 2.5, 3);
 	}
 
 	public static GrassBlockAttackProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

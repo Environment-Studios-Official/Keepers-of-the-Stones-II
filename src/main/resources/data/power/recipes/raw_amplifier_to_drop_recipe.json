@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "power:raw_amplifier"
   },
-  "result": "power:amplifier_drop"
+  "result": {
+    "id": "power:amplifier_drop"
+  }
 }

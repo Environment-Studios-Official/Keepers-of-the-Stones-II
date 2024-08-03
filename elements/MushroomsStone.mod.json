@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -30,9 +30,11 @@
     ],
     "name": "Mushrooms Stone",
     "rarity": "COMMON",
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Stones"
+      }
+    ],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
@@ -58,13 +60,14 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "MushroomsStoneUse"
     },
     "onItemInInventoryTick": {
       "name": "RechargeStoneTickEvent"
     },
     "enableRanged": false,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },

@@ -64,7 +64,7 @@ public class SunSpecialAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.BLINDNESS, 300, 3));
 								if (world instanceof Level _lvl11 && _lvl11.isDay()) {
-									entityiterator.setSecondsOnFire(5);
+									entityiterator.igniteForSeconds(5);
 								}
 								{
 									Entity _ent = entityiterator;
@@ -110,7 +110,7 @@ public class SunSpecialAttackProcedure {
 							}
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
 							if (world instanceof Level _level && !_level.isClientSide())
-								_level.explode(null, x, y, z, 5, true, Level.ExplosionInteraction.MOB);
+								_level.explode(null, x, y, z, 3, true, Level.ExplosionInteraction.MOB);
 							if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								if (entity instanceof Player _player) {
 									_player.getAbilities().invulnerable = false;

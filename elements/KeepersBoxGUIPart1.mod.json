@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -328,6 +328,38 @@
           "height": 24,
           "x": 214,
           "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_magnet_element",
+          "image": "magnet_element.png",
+          "hoveredImage": "magnet_element_highlighted.png",
+          "onClick": {
+            "name": "MagnetElementGet"
+          },
+          "displayCondition": {
+            "name": "MagnetStoneCheck"
+          },
+          "x": 264,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_magnet",
+          "text": {
+            "fixedValue": "Magnet"
+          },
+          "displayCondition": {
+            "name": "MagnetStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 129
         }
       }
     ],

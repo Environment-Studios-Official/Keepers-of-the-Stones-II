@@ -1,87 +1,71 @@
 package com.esmods.keepersofthestonestwo.network;
 
-import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
-import net.minecraftforge.common.capabilities.CapabilityToken;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.Capability;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.common.util.INBTSerializable;
+import net.neoforged.neoforge.attachment.AttachmentType;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.nbt.Tag;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
+import net.minecraft.network.chat.Component;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
-import net.minecraft.client.Minecraft;
+import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
+	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
+	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
+
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
+		PowerMod.addNetworkMessage(SavedDataSyncMessage.TYPE, SavedDataSyncMessage.STREAM_CODEC, SavedDataSyncMessage::handleData);
+		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.TYPE, PlayerVariablesSyncMessage.STREAM_CODEC, PlayerVariablesSyncMessage::handleData);
 	}
 
-	@SubscribeEvent
-	public static void init(RegisterCapabilitiesEvent event) {
-		event.register(PlayerVariables.class);
-	}
-
-	@Mod.EventBusSubscriber
+	@EventBusSubscriber
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void clonePlayer(PlayerEvent.Clone event) {
-			event.getOriginal().revive();
-			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
+			PlayerVariables clone = new PlayerVariables();
 			clone.selected = original.selected;
 			clone.attack = original.attack;
 			clone.battery = original.battery;
@@ -90,7 +74,14 @@ public class PowerModVariables {
 			clone.element_name_third = original.element_name_third;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
 			clone.max_power = original.max_power;
-			clone.power_recovery_multiplier = original.power_recovery_multiplier;
+			clone.fake_element_name_first = original.fake_element_name_first;
+			clone.fake_element_name_second = original.fake_element_name_second;
+			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.debug = original.debug;
+			clone.first_booster_slot = original.first_booster_slot;
+			clone.second_booster_slot = original.second_booster_slot;
+			clone.third_booster_slot = original.third_booster_slot;
+			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -100,35 +91,46 @@ public class PowerModVariables {
 				clone.use_ability_key_var = original.use_ability_key_var;
 				clone.detransf_key_var = original.detransf_key_var;
 				clone.wheel_open_key_var = original.wheel_open_key_var;
+				clone.power_recovery_multiplier = original.power_recovery_multiplier;
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.second_wheel_open_var = original.second_wheel_open_var;
 				clone.third_wheel_open_var = original.third_wheel_open_var;
+				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
+				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
+				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
+				clone.helmet = original.helmet;
+				clone.chestplate = original.chestplate;
+				clone.leggings = original.leggings;
+				clone.boots = original.boots;
+				clone.abilities_timer = original.abilities_timer;
+				clone.ability_using = original.ability_using;
+				clone.power_recorded = original.power_recorded;
+				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
+				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
+				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
+				clone.check_activating_stone = original.check_activating_stone;
 			}
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
 
 		@SubscribeEvent
 		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
+			if (event.getEntity() instanceof ServerPlayer player) {
 				SavedData mapdata = MapVariables.get(event.getEntity().level());
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (mapdata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
+					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
+			if (event.getEntity() instanceof ServerPlayer player) {
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 	}
@@ -136,31 +138,31 @@ public class PowerModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
 
-		public static WorldVariables load(CompoundTag tag) {
+		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			WorldVariables data = new WorldVariables();
-			data.read(tag);
+			data.read(tag, lookupProvider);
 			return data;
 		}
 
-		public void read(CompoundTag nbt) {
+		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 		}
 
 		@Override
-		public CompoundTag save(CompoundTag nbt) {
+		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
-			if (world instanceof Level level && !level.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+			if (world instanceof ServerLevel level)
+				PacketDistributor.sendToPlayersInDimension(level, new SavedDataSyncMessage(1, this));
 		}
 
 		static WorldVariables clientSide = new WorldVariables();
 
 		public static WorldVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+				return level.getDataStorage().computeIfAbsent(new SavedData.Factory<>(WorldVariables::new, WorldVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -225,14 +227,15 @@ public class PowerModVariables {
 		public double bpX = 0;
 		public double bpY = 0;
 		public double bpZ = 0;
+		public boolean get_limit_of_stones = true;
 
-		public static MapVariables load(CompoundTag tag) {
+		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
-			data.read(tag);
+			data.read(tag, lookupProvider);
 			return data;
 		}
 
-		public void read(CompoundTag nbt) {
+		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			fire_stone = nbt.getBoolean("fire_stone");
 			air_stone = nbt.getBoolean("air_stone");
 			earth_stone = nbt.getBoolean("earth_stone");
@@ -289,10 +292,11 @@ public class PowerModVariables {
 			bpX = nbt.getDouble("bpX");
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
+			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
 		}
 
 		@Override
-		public CompoundTag save(CompoundTag nbt) {
+		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
 			nbt.putBoolean("fire_stone", fire_stone);
 			nbt.putBoolean("air_stone", air_stone);
 			nbt.putBoolean("earth_stone", earth_stone);
@@ -349,98 +353,68 @@ public class PowerModVariables {
 			nbt.putDouble("bpX", bpX);
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
+			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
 			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
 			if (world instanceof Level && !world.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
+				PacketDistributor.sendToAllPlayers(new SavedDataSyncMessage(0, this));
 		}
 
 		static MapVariables clientSide = new MapVariables();
 
 		public static MapVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(new SavedData.Factory<>(MapVariables::new, MapVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
 		}
 	}
 
-	public static class SavedDataSyncMessage {
-		private final int type;
-		private SavedData data;
-
-		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
-			this.type = buffer.readInt();
+	public record SavedDataSyncMessage(int dataType, SavedData data) implements CustomPacketPayload {
+		public static final Type<SavedDataSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "saved_data_sync"));
+		public static final StreamCodec<RegistryFriendlyByteBuf, SavedDataSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, SavedDataSyncMessage message) -> {
+			buffer.writeInt(message.dataType);
+			if (message.data != null)
+				buffer.writeNbt(message.data.save(new CompoundTag(), buffer.registryAccess()));
+		}, (RegistryFriendlyByteBuf buffer) -> {
+			int dataType = buffer.readInt();
 			CompoundTag nbt = buffer.readNbt();
+			SavedData data = null;
 			if (nbt != null) {
-				this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
-				if (this.data instanceof MapVariables mapVariables)
-					mapVariables.read(nbt);
-				else if (this.data instanceof WorldVariables worldVariables)
-					worldVariables.read(nbt);
+				data = dataType == 0 ? new MapVariables() : new WorldVariables();
+				if (data instanceof MapVariables mapVariables)
+					mapVariables.read(nbt, buffer.registryAccess());
+				else if (data instanceof WorldVariables worldVariables)
+					worldVariables.read(nbt, buffer.registryAccess());
+			}
+			return new SavedDataSyncMessage(dataType, data);
+		});
+
+		@Override
+		public Type<SavedDataSyncMessage> type() {
+			return TYPE;
+		}
+
+		public static void handleData(final SavedDataSyncMessage message, final IPayloadContext context) {
+			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
+				context.enqueueWork(() -> {
+					if (message.dataType == 0)
+						MapVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+					else
+						WorldVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+				}).exceptionally(e -> {
+					context.connection().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
 			}
 		}
-
-		public SavedDataSyncMessage(int type, SavedData data) {
-			this.type = type;
-			this.data = data;
-		}
-
-		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeInt(message.type);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag()));
-		}
-
-		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer() && message.data != null) {
-					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
-					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
-		}
 	}
 
-	public static final Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = CapabilityManager.get(new CapabilityToken<PlayerVariables>() {
-	});
-
-	@Mod.EventBusSubscriber
-	private static class PlayerVariablesProvider implements ICapabilitySerializable<Tag> {
-		@SubscribeEvent
-		public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
-			if (event.getObject() instanceof Player && !(event.getObject() instanceof FakePlayer))
-				event.addCapability(new ResourceLocation("power", "player_variables"), new PlayerVariablesProvider());
-		}
-
-		private final PlayerVariables playerVariables = new PlayerVariables();
-		private final LazyOptional<PlayerVariables> instance = LazyOptional.of(() -> playerVariables);
-
-		@Override
-		public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
-			return cap == PLAYER_VARIABLES_CAPABILITY ? instance.cast() : LazyOptional.empty();
-		}
-
-		@Override
-		public Tag serializeNBT() {
-			return playerVariables.writeNBT();
-		}
-
-		@Override
-		public void deserializeNBT(Tag nbt) {
-			playerVariables.readNBT(nbt);
-		}
-	}
-
-	public static class PlayerVariables {
+	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
 		public boolean active = false;
 		public boolean selected = false;
 		public double power = 0.0;
@@ -461,13 +435,31 @@ public class PowerModVariables {
 		public double teleporting_effect = 0;
 		public boolean second_wheel_open_var = false;
 		public boolean third_wheel_open_var = false;
+		public String fake_element_name_first = "0";
+		public String fake_element_name_second = "0";
+		public String fake_element_name_third = "0";
+		public boolean first_fake_wheel_open_var = false;
+		public boolean second_fake_wheel_open_var = false;
+		public boolean third_fake_wheel_open_var = false;
+		public String helmet = "\"\"";
+		public String chestplate = "\"\"";
+		public String leggings = "\"\"";
+		public String boots = "\"\"";
+		public double abilities_timer = 0;
+		public boolean ability_using = false;
+		public boolean power_recorded = false;
+		public double fake_element_name_first_timer = 0;
+		public double fake_element_name_second_timer = 0;
+		public double fake_element_name_third_timer = 0;
+		public boolean debug = false;
+		public boolean check_activating_stone = false;
+		public String first_booster_slot = "0";
+		public String second_booster_slot = "0";
+		public String third_booster_slot = "0";
+		public String evolution = "basic";
 
-		public void syncPlayerVariables(Entity entity) {
-			if (entity instanceof ServerPlayer serverPlayer)
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
-		}
-
-		public Tag writeNBT() {
+		@Override
+		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("active", active);
 			nbt.putBoolean("selected", selected);
@@ -489,11 +481,33 @@ public class PowerModVariables {
 			nbt.putDouble("teleporting_effect", teleporting_effect);
 			nbt.putBoolean("second_wheel_open_var", second_wheel_open_var);
 			nbt.putBoolean("third_wheel_open_var", third_wheel_open_var);
+			nbt.putString("fake_element_name_first", fake_element_name_first);
+			nbt.putString("fake_element_name_second", fake_element_name_second);
+			nbt.putString("fake_element_name_third", fake_element_name_third);
+			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
+			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
+			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
+			nbt.putString("helmet", helmet);
+			nbt.putString("chestplate", chestplate);
+			nbt.putString("leggings", leggings);
+			nbt.putString("boots", boots);
+			nbt.putDouble("abilities_timer", abilities_timer);
+			nbt.putBoolean("ability_using", ability_using);
+			nbt.putBoolean("power_recorded", power_recorded);
+			nbt.putDouble("fake_element_name_first_timer", fake_element_name_first_timer);
+			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
+			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
+			nbt.putBoolean("debug", debug);
+			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putString("first_booster_slot", first_booster_slot);
+			nbt.putString("second_booster_slot", second_booster_slot);
+			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		@Override
+		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
 			active = nbt.getBoolean("active");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
@@ -514,62 +528,57 @@ public class PowerModVariables {
 			teleporting_effect = nbt.getDouble("teleporting_effect");
 			second_wheel_open_var = nbt.getBoolean("second_wheel_open_var");
 			third_wheel_open_var = nbt.getBoolean("third_wheel_open_var");
+			fake_element_name_first = nbt.getString("fake_element_name_first");
+			fake_element_name_second = nbt.getString("fake_element_name_second");
+			fake_element_name_third = nbt.getString("fake_element_name_third");
+			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
+			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
+			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
+			helmet = nbt.getString("helmet");
+			chestplate = nbt.getString("chestplate");
+			leggings = nbt.getString("leggings");
+			boots = nbt.getString("boots");
+			abilities_timer = nbt.getDouble("abilities_timer");
+			ability_using = nbt.getBoolean("ability_using");
+			power_recorded = nbt.getBoolean("power_recorded");
+			fake_element_name_first_timer = nbt.getDouble("fake_element_name_first_timer");
+			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
+			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
+			debug = nbt.getBoolean("debug");
+			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			first_booster_slot = nbt.getString("first_booster_slot");
+			second_booster_slot = nbt.getString("second_booster_slot");
+			third_booster_slot = nbt.getString("third_booster_slot");
+			evolution = nbt.getString("evolution");
+		}
+
+		public void syncPlayerVariables(Entity entity) {
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 		}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
-	}
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "player_variables_sync"));
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
+				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
+					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
+					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+					return message;
+				});
 
-	public static class PlayerVariablesSyncMessage {
-		private final int target;
-		private final PlayerVariables data;
-
-		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
-			this.data = new PlayerVariables();
-			this.data.readNBT(buffer.readNbt());
-			this.target = buffer.readInt();
+		@Override
+		public Type<PlayerVariablesSyncMessage> type() {
+			return TYPE;
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
-			this.data = data;
-			this.target = entityid;
-		}
-
-		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeNbt((CompoundTag) message.data.writeNBT());
-			buffer.writeInt(message.target);
-		}
-
-		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.active = message.data.active;
-					variables.selected = message.data.selected;
-					variables.power = message.data.power;
-					variables.powerTimer = message.data.powerTimer;
-					variables.attack = message.data.attack;
-					variables.mergers = message.data.mergers;
-					variables.battery = message.data.battery;
-					variables.ability_block = message.data.ability_block;
-					variables.element_name_first = message.data.element_name_first;
-					variables.element_name_second = message.data.element_name_second;
-					variables.element_name_third = message.data.element_name_third;
-					variables.unlock_keepers_box = message.data.unlock_keepers_box;
-					variables.use_ability_key_var = message.data.use_ability_key_var;
-					variables.detransf_key_var = message.data.detransf_key_var;
-					variables.wheel_open_key_var = message.data.wheel_open_key_var;
-					variables.max_power = message.data.max_power;
-					variables.power_recovery_multiplier = message.data.power_recovery_multiplier;
-					variables.teleporting_effect = message.data.teleporting_effect;
-					variables.second_wheel_open_var = message.data.second_wheel_open_var;
-					variables.third_wheel_open_var = message.data.third_wheel_open_var;
-				}
-			});
-			context.setPacketHandled(true);
+		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
+			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
+				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
+					context.connection().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
+			}
 		}
 	}
 }

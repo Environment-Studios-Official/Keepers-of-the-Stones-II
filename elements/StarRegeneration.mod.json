@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Star regeneration",
+    "icon": "star_regeneration.png",
+    "color": {
+      "value": -16763956,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "StarRegenerationStart"
+    },
+    "onExpired": {
+      "name": "StarRegenerationEnd"
+    }
+  }
+}

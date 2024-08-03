@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:energium_core"
+      "id": "power:energium_core"
     },
     "title": {
       "translate": "advancements.the_end_of_tyranny.title"
@@ -18,6 +18,12 @@
     "the_end_of_tyranny_0": {
       "trigger": "minecraft:impossible"
     }
+  },
+  "rewards": {
+    "experience": 0,
+    "loot": [
+      "power:deleted_mod_element"
+    ]
   },
   "parent": "power:what_is_this_metal"
 }

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "block",
   "definition": {
     "texture": "keepers_box",
@@ -230,9 +230,11 @@
     "resistance": 5000.0,
     "hasGravity": false,
     "isWaterloggable": true,
-    "creativeTab": {
-      "value": "CUSTOM:Items"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
@@ -247,7 +249,7 @@
     "material": {
       "value": "ROCK"
     },
-    "tickRate": 0,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "canProvidePower": false,
@@ -289,13 +291,13 @@
     },
     "luminance": 0,
     "unbreakable": false,
-    "breakHarvestLevel": 0,
+    "vanillaToolTier": "NONE",
     "placingCondition": {
       "name": "KeepersBoxUsloviieRazmieshchieniiaBloka"
     },
     "isBonemealable": false,
-    "hasInventory": false,
-    "guiBoundTo": "<NONE>",
+    "hasInventory": true,
+    "guiBoundTo": "KeepersBoxGUIPart1",
     "openGUIOnRightClick": false,
     "inventorySize": 9,
     "inventoryStackSize": 64,

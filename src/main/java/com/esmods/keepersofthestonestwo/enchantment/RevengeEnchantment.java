@@ -1,7 +1,6 @@
 
 package com.esmods.keepersofthestonestwo.enchantment;
 
-import net.minecraft.world.item.enchantment.EnchantmentCategory;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.item.ItemStack;
@@ -15,17 +14,12 @@ import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 
 public class RevengeEnchantment extends Enchantment {
 	public RevengeEnchantment(EquipmentSlot... slots) {
-		super(Enchantment.Rarity.UNCOMMON, EnchantmentCategory.WEAPON, slots);
+		super(Enchantment.definition(ItemTags.WEAPON_ENCHANTABLE, 5, 3, Enchantment.dynamicCost(1, 10), Enchantment.dynamicCost(6, 10), 2, EquipmentSlot.MAINHAND));
 	}
 
 	@Override
-	public int getMaxLevel() {
-		return 3;
-	}
-
-	@Override
-	protected boolean checkCompatibility(Enchantment ench) {
-		return this != ench && !List.of(PowerModEnchantments.ISOLATION.get()).contains(ench);
+	protected boolean checkCompatibility(Enchantment enchantment) {
+		return this != enchantment && !List.of(PowerModEnchantments.ISOLATION.get()).contains(enchantment);
 	}
 
 	@Override

@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "particle",
   "definition": {
     "texture": "moon_particle.png",
@@ -7,7 +7,9 @@
     "frameDuration": 3,
     "width": 3.0,
     "height": 3.0,
-    "scale": 3.0,
+    "scale": {
+      "fixedValue": 3.0
+    },
     "speedFactor": 0.0,
     "gravity": 0.2,
     "maxAge": 9,

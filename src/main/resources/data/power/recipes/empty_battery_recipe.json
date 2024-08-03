@@ -18,7 +18,7 @@
     }
   },
   "result": {
-    "item": "power:empty_battery",
+    "id": "power:empty_battery",
     "count": 1
   }
 }

@@ -89,7 +89,7 @@ public class TornadoSpecialAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 3, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WHIRLWIND.get(), 100, 0, false, false));
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WHIRLWIND, 100, 0, false, false));
 							}
 						}
 					}

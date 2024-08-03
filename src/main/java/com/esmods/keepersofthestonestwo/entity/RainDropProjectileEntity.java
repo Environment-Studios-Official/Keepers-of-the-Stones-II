@@ -41,6 +41,11 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(PowerModItems.RAIN_BOW.get());
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -55,6 +60,10 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 6, 1);
+	}
+
+	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 6, 1);
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

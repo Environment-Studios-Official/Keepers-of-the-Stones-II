@@ -7,7 +7,7 @@
     }
   ],
   "result": {
-    "item": "power:raw_depleted_energium",
+    "id": "power:raw_depleted_energium",
     "count": 9
   }
 }

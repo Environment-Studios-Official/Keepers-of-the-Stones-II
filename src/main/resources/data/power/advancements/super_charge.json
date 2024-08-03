@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:empty_battery"
+      "id": "power:empty_battery"
     },
     "title": {
       "translate": "advancements.super_charge.title"

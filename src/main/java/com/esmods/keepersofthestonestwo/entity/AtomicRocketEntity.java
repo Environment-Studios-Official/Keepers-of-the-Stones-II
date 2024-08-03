@@ -1,11 +1,8 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
-import net.minecraftforge.api.distmarker.OnlyIn;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.EntityHitResult;
 import net.minecraft.world.phys.BlockHitResult;
@@ -19,8 +16,7 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.esmods.keepersofthestonestwo.procedures.AtomicRocketKazhdyiTikPriPoliotieSnariadaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AtomicRocketExplosionProcedure;
@@ -30,25 +26,16 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.TNT);
 
-	public AtomicRocketEntity(PlayMessages.SpawnEntity packet, Level world) {
-		super(PowerModEntities.ATOMIC_ROCKET.get(), world);
-	}
-
 	public AtomicRocketEntity(EntityType<? extends AtomicRocketEntity> type, Level world) {
-		super(type, world);
+		super(type, world, PROJECTILE_ITEM);
 	}
 
 	public AtomicRocketEntity(EntityType<? extends AtomicRocketEntity> type, double x, double y, double z, Level world) {
-		super(type, x, y, z, world);
+		super(type, x, y, z, world, PROJECTILE_ITEM);
 	}
 
 	public AtomicRocketEntity(EntityType<? extends AtomicRocketEntity> type, LivingEntity entity, Level world) {
-		super(type, entity, world);
-	}
-
-	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
+		super(type, entity, world, PROJECTILE_ITEM);
 	}
 
 	@Override
@@ -58,8 +45,8 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	@Override
-	protected ItemStack getPickupItem() {
-		return PROJECTILE_ITEM;
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.TNT);
 	}
 
 	@Override
@@ -92,6 +79,10 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		return shoot(world, entity, source, 3f, 42, 10);
 	}
 
+	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 3f, 42, 10);
+	}
+
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
 		AtomicRocketEntity entityarrow = new AtomicRocketEntity(PowerModEntities.ATOMIC_ROCKET.get(), entity, world);
 		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
@@ -100,7 +91,7 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -115,8 +106,7 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		entityarrow.setKnockback(10);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1,
-				1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }

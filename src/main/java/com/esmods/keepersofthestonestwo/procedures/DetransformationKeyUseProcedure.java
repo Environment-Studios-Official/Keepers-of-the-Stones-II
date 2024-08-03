@@ -15,65 +15,81 @@ public class DetransformationKeyUseProcedure {
 		PowerMod.queueServerWork(1, () -> {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.FIRE_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.FIRE_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.AIR_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.AIR_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.EARTH_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.EARTH_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.WATER_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.WATER_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.ETHER_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.ETHER_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.ICE_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.ICE_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LIGHTNING_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.LIGHTNING_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.SOUND_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.SOUND_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.CRYSTAL_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.CRYSTAL_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LAVA_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.LAVA_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.RAIN_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.RAIN_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.TORNADO_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.TORNADO_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.OCEAN_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.OCEAN_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.PLANTS_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.PLANTS_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.ANIMALS_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.ANIMALS_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.METAL_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.METAL_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.LIGHT_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.LIGHT_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.SHADOW_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.SHADOW_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.VACUUM_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.VACUUM_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.ENERGY_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.ENERGY_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.SUN_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.SUN_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.MOON_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.MOON_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.SPACE_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.SPACE_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.TIME_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.TIME_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.CREATION_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.CREATION_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.DESTRUCTION_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.DESTRUCTION_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.BLOOD_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.BLOOD_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.TECHNOLOGY_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.TELEPORTATION_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.TELEPORTATION_MASTER);
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER.get());
+					_entity.removeEffect(PowerModMobEffects.EXPLOSION_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.AMBER_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MIST_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.SAND_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.SPEED_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.POISON_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MAGNET_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active = false;
@@ -84,6 +100,46 @@ public class DetransformationKeyUseProcedure {
 					_vars.mergers = 0;
 					_vars.syncPlayerVariables(entity);
 				}
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.power = 0;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_first_timer = 0;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_second_timer = 0;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_third_timer = 0;
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_first = "0";
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_second = "0";
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.fake_element_name_third = "0";
+				_vars.syncPlayerVariables(entity);
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.attack = "0";
+				_vars.syncPlayerVariables(entity);
 			}
 		});
 	}

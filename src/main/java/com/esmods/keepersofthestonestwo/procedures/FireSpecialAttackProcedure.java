@@ -67,7 +67,7 @@ public class FireSpecialAttackProcedure {
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 											(float) 13.5);
 								} else {
-									entityiterator.setSecondsOnFire(7);
+									entityiterator.igniteForSeconds(7);
 									entityiterator.hurt(
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
 								}
@@ -131,7 +131,7 @@ public class FireSpecialAttackProcedure {
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
 									entityToSpawn.setSilent(true);
-									entityToSpawn.setSecondsOnFire(100);
+									entityToSpawn.igniteForSeconds(100);
 									return entityToSpawn;
 								}
 							}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -159,7 +159,7 @@ public class FireSpecialAttackProcedure {
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
-										entityToSpawn.setSecondsOnFire(100);
+										entityToSpawn.igniteForSeconds(100);
 										return entityToSpawn;
 									}
 								}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -187,7 +187,7 @@ public class FireSpecialAttackProcedure {
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
-											entityToSpawn.setSecondsOnFire(100);
+											entityToSpawn.igniteForSeconds(100);
 											return entityToSpawn;
 										}
 									}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -217,7 +217,7 @@ public class FireSpecialAttackProcedure {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles(ParticleTypes.FLAME, x, y, z, 30, 0, (-1), 0, 1);
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 4, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 				{

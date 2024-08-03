@@ -1,27 +1,28 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.GameType;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.InteractionHand;
+import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AbilityKeyPressedTickProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player.getX(), event.player.getY(), event.player.getZ(), event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -32,107 +33,214 @@ public class AbilityKeyPressedTickProcedure {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).use_ability_key_var) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block == false) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).ability_block == false && !(new Object() {
+				public boolean checkGamemode(Entity _ent) {
+					if (_ent instanceof ServerPlayer _serverPlayer) {
+						return _serverPlayer.gameMode.getGameModeForPlayer() == GameType.SPECTATOR;
+					} else if (_ent.level().isClientSide() && _ent instanceof Player _player) {
+						return Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()) != null
+								&& Minecraft.getInstance().getConnection().getPlayerInfo(_player.getGameProfile().getId()).getGameMode() == GameType.SPECTATOR;
+					}
+					return false;
+				}
+			}.checkGamemode(entity))) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.swing(InteractionHand.MAIN_HAND, true);
-				if (entity instanceof LivingEntity _livEnt1 && _livEnt1.hasEffect(PowerModMobEffects.FIRE_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("fire")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")) {
 					FireSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt2 && _livEnt2.hasEffect(PowerModMobEffects.AIR_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("air")) {
 					AirSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(PowerModMobEffects.EARTH_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("earth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("earth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("earth")) {
 					EarthSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt4 && _livEnt4.hasEffect(PowerModMobEffects.WATER_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")) {
 					WaterSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.ETHER_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ether") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ether")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ether") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ether")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("ether") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("ether")) {
 					EtherSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt6 && _livEnt6.hasEffect(PowerModMobEffects.ICE_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ice") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ice")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ice") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ice")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("ice") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("ice")) {
 					IceSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt7 && _livEnt7.hasEffect(PowerModMobEffects.LIGHTNING_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("lightning") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("lightning")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("lightning") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lightning")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("lightning") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("lightning")) {
 					LightningSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt8 && _livEnt8.hasEffect(PowerModMobEffects.SOUND_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sound")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("sound")) {
 					SoundSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt9 && _livEnt9.hasEffect(PowerModMobEffects.CRYSTAL_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("crystal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("crystal")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("crystal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("crystal")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("crystal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("crystal")) {
 					CrystalSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt10 && _livEnt10.hasEffect(PowerModMobEffects.LAVA_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("lava")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("lava")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("lava") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("lava")) {
 					LavaSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt11 && _livEnt11.hasEffect(PowerModMobEffects.RAIN_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("rain") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("rain")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("rain") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("rain")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("rain") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("rain")) {
 					RainSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt12 && _livEnt12.hasEffect(PowerModMobEffects.TORNADO_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("tornado") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("tornado")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("tornado") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("tornado")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("tornado") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("tornado")) {
 					TornadoSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt13 && _livEnt13.hasEffect(PowerModMobEffects.OCEAN_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ocean")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("ocean")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("ocean") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("ocean")) {
 					OceanSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt14 && _livEnt14.hasEffect(PowerModMobEffects.PLANTS_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("plants") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("plants")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("plants") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plants")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("plants") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("plants")) {
 					PlantsSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt15 && _livEnt15.hasEffect(PowerModMobEffects.ANIMALS_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("animals") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("animals")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("animals") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("animals")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("animals") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("animals")) {
 					AnimalsSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt16 && _livEnt16.hasEffect(PowerModMobEffects.METAL_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("metal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("metal")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("metal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("metal")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("metal") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("metal")) {
 					MetalSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt17 && _livEnt17.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("light") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("light")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("light") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("light")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("light") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("light")) {
 					LightSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(PowerModMobEffects.LIGHT_MASTER.get())) {
-					LightSpecialAttackProcedure.execute(world, x, y, z, entity);
-				}
-				if (entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(PowerModMobEffects.SHADOW_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("shadow") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("shadow")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("shadow") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("shadow")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("shadow") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("shadow")) {
 					ShadowSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt20 && _livEnt20.hasEffect(PowerModMobEffects.VACUUM_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("vacuum") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("vacuum")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("vacuum") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("vacuum")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("vacuum") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("vacuum")) {
 					VacuumSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt21 && _livEnt21.hasEffect(PowerModMobEffects.ENERGY_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("energy") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("energy")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("energy") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("energy")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("energy") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("energy")) {
 					EnergySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt22 && _livEnt22.hasEffect(PowerModMobEffects.SUN_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sun") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sun")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sun") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sun")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("sun") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("sun")) {
 					SunSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt23 && _livEnt23.hasEffect(PowerModMobEffects.MOON_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("moon") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("moon")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("moon") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("moon")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("moon") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("moon")) {
 					MoonSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt24 && _livEnt24.hasEffect(PowerModMobEffects.SPACE_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("space") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("space")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("space") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("space")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("space") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("space")) {
 					SpaceSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt25 && _livEnt25.hasEffect(PowerModMobEffects.TIME_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("time") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("time")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("time") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("time")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("time") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("time")) {
 					TimeSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt26 && _livEnt26.hasEffect(PowerModMobEffects.CREATION_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("creation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("creation")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("creation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("creation")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("creation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("creation")) {
 					CreationSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt27 && _livEnt27.hasEffect(PowerModMobEffects.DESTRUCTION_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("destruction") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("destruction")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("destruction") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("destruction")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("destruction") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("destruction")) {
 					DestructionSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt28 && _livEnt28.hasEffect(PowerModMobEffects.BLOOD_MASTER.get())) {
-					BloodSpecialAttackProcedure.execute(world, entity);
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("blood")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blood")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("blood") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("blood")) {
+					BloodSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt29 && _livEnt29.hasEffect(PowerModMobEffects.TECHNOLOGY_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("technology") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("technology")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("technology") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("technology")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("technology") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("technology")) {
 					TechnologySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt30 && _livEnt30.hasEffect(PowerModMobEffects.TELEPORTATION_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("teleportation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("teleportation")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("teleportation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("teleportation")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("teleportation") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("teleportation")) {
 					TeleportationSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				if (entity instanceof LivingEntity _livEnt31 && _livEnt31.hasEffect(PowerModMobEffects.EXPLOSION_MASTER.get())) {
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("explosion")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("explosion")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("explosion") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("explosion")) {
 					ExplosionSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.use_ability_key_var = false;
-					_vars.syncPlayerVariables(entity);
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("amber") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("amber")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("amber") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("amber")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("amber") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("amber")) {
+					AmberSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mist")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mist")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mist") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mist")) {
+					MistSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("sand")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sand")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("sand") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("sand")) {
+					SandSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("speed")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("speed")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("speed") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("speed")) {
+					SpeedSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("poison")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("poison")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("poison") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("poison")) {
+					PoisonSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("magnet")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("magnet")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("magnet") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("magnet")) {
+					MagnetSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mushrooms")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mushrooms")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mushrooms") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mushrooms")) {
+					MushroomsSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mercury")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mercury")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mercury") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mercury")) {
+					MercurySpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.use_ability_key_var = false;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

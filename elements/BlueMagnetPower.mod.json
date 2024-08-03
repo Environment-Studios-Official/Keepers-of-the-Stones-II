@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Blue Magnet Power",
+    "icon": "blue_magnet_power.png",
+    "color": {
+      "value": -16763956,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "NEUTRAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "BlueMagnetPowerTick"
+    }
+  }
+}

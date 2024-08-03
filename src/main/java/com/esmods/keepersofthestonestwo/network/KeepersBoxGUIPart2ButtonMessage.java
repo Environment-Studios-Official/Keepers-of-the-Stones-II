@@ -1,9 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.PlayPayloadContext;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
@@ -11,8 +11,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.HashMap;
@@ -22,45 +23,42 @@ import com.esmods.keepersofthestonestwo.procedures.TornadoElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart1Procedure;
+import com.esmods.keepersofthestonestwo.procedures.DestructionElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "keepers_box_gui_part_2_buttons");
-	public KeepersBoxGUIPart2ButtonMessage(FriendlyByteBuf buffer) {
-		this(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt());
-	}
-
+	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, KeepersBoxGUIPart2ButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, KeepersBoxGUIPart2ButtonMessage message) -> {
+		buffer.writeInt(message.buttonID);
+		buffer.writeInt(message.x);
+		buffer.writeInt(message.y);
+		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new KeepersBoxGUIPart2ButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 	@Override
-	public void write(final FriendlyByteBuf buffer) {
-		buffer.writeInt(buttonID);
-		buffer.writeInt(x);
-		buffer.writeInt(y);
-		buffer.writeInt(z);
+	public Type<KeepersBoxGUIPart2ButtonMessage> type() {
+		return TYPE;
 	}
 
-	@Override
-	public ResourceLocation id() {
-		return ID;
-	}
-
-	public static void handleData(final KeepersBoxGUIPart2ButtonMessage message, final PlayPayloadContext context) {
+	public static void handleData(final KeepersBoxGUIPart2ButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.workHandler().submitAsync(() -> {
-				Player entity = context.player().get();
+			context.enqueueWork(() -> {
+				Player entity = context.player();
 				int buttonID = message.buttonID;
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
 				handleButtonAction(entity, buttonID, x, y, z);
 			}).exceptionally(e -> {
-				context.packetHandler().disconnect(Component.literal(e.getMessage()));
+				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
 		}
@@ -102,7 +100,7 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 7) {
 
-			CreationElementGetProcedure.execute(world, entity);
+			DestructionElementGetProcedure.execute(world, entity);
 		}
 		if (buttonID == 8) {
 
@@ -112,10 +110,18 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 
 			TeleportationElementGetProcedure.execute(world, entity);
 		}
+		if (buttonID == 10) {
+
+			MistElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			SpeedElementGetProcedure.execute(world, entity);
+		}
 	}
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(KeepersBoxGUIPart2ButtonMessage.ID, KeepersBoxGUIPart2ButtonMessage::new, KeepersBoxGUIPart2ButtonMessage::handleData);
+		PowerMod.addNetworkMessage(KeepersBoxGUIPart2ButtonMessage.TYPE, KeepersBoxGUIPart2ButtonMessage.STREAM_CODEC, KeepersBoxGUIPart2ButtonMessage::handleData);
 	}
 }

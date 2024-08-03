@@ -1,0 +1,22 @@
+{
+  "_fv": 66,
+  "_type": "recipe",
+  "definition": {
+    "recipeType": "Blasting",
+    "recipeRetstackSize": 1,
+    "group": "",
+    "cookingBookCategory": "MISC",
+    "xpReward": 0.575,
+    "cookingTime": 100,
+    "craftingBookCategory": "MISC",
+    "recipeShapeless": false,
+    "blastingInputStack": {
+      "value": "CUSTOM:RawCopyrium"
+    },
+    "blastingReturnStack": {
+      "value": "CUSTOM:CopyriumIngot"
+    },
+    "name": "copyrium_ore_blasting",
+    "namespace": "mod"
+  }
+}

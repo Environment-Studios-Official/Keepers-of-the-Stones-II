@@ -6,5 +6,7 @@
   "ingredient": {
     "item": "power:depleted_energium_ore"
   },
-  "result": "power:depleted_energium_ingot"
+  "result": {
+    "id": "power:depleted_energium_ingot"
+  }
 }

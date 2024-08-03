@@ -127,7 +127,7 @@ public class DestructionSpecialAttackProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LETHALITY.get(), 400, 0, false, false));
+								_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LETHALITY, 400, 0, false, false));
 						}
 					}
 				}

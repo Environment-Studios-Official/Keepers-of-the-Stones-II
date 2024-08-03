@@ -1,8 +1,8 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "achievement",
   "definition": {
-    "achievementName": "Full Power of Energium",
+    "achievementName": "Full power of energium",
     "achievementDescription": "Wear a full set of energium armor",
     "achievementIcon": {
       "value": "CUSTOM:EnergiumArmor.body"

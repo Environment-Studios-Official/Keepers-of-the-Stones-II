@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "recipe",
   "definition": {
     "recipeType": "Crafting",
@@ -40,7 +40,7 @@
       }
     ],
     "recipeReturnStack": {
-      "value": "PowerModItems.RAW_AMPLIFIER"
+      "value": "CUSTOM:RawAmplifier"
     },
     "name": "raw_amplifier_craft",
     "namespace": "mod"

@@ -17,13 +17,18 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
+import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MushroomsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MercuryStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EarthStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.AmberStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart4ButtonMessage;
 
 public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBoxGUIPart4Menu> {
@@ -39,6 +44,11 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_metal_element;
 	ImageButton imagebutton_earth_element;
 	ImageButton imagebutton_plants_element;
+	ImageButton imagebutton_amber_element;
+	ImageButton imagebutton_sand_element;
+	ImageButton imagebutton_poison_element;
+	ImageButton imagebutton_mushrooms_element;
+	ImageButton imagebutton_mercury_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -74,6 +84,21 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (PlantsStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_plants"), mouseX, mouseY);
+		if (AmberStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_amber"), mouseX, mouseY);
+		if (SandStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 159 && mouseX < leftPos + 183 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_sand"), mouseX, mouseY);
+		if (PoisonStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_poison"), mouseX, mouseY);
+		if (MushroomsStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mushrooms"), mouseX, mouseY);
+		if (MercuryStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mercury"), mouseX, mouseY);
 	}
 
 	@Override
@@ -106,7 +131,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_keepers_box_button_up = new ImageButton(this.leftPos + 209, this.topPos + 70, 18, 18,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/keepers_box_button_up.png"), new ResourceLocation("power:textures/screens/keepers_box_button_up_active.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(0, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -130,7 +155,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_animals_element = new ImageButton(this.leftPos + 49, this.topPos + 69, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/animals_element.png"), new ResourceLocation("power:textures/screens/animals_element_highlighted.png")), e -> {
 					if (AnimalsStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(2, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -145,7 +170,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_crystal_element = new ImageButton(this.leftPos + 95, this.topPos + 69, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/crystal_element.png"), new ResourceLocation("power:textures/screens/crystal_element_highlighted.png")), e -> {
 					if (CrystalStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(3, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -160,7 +185,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_ether_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/ether_element.png"), new ResourceLocation("power:textures/screens/ether_element_highlighted.png")), e -> {
 					if (EtherStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(4, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -175,7 +200,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_metal_element = new ImageButton(this.leftPos + 138, this.topPos + 69, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/metal_element.png"), new ResourceLocation("power:textures/screens/metal_element_highlighted.png")), e -> {
 					if (MetalStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(5, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -190,7 +215,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_earth_element = new ImageButton(this.leftPos + 162, this.topPos + 69, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/earth_element.png"), new ResourceLocation("power:textures/screens/earth_element_highlighted.png")), e -> {
 					if (EarthStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(6, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -205,7 +230,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_plants_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/plants_element.png"), new ResourceLocation("power:textures/screens/plants_element_highlighted.png")), e -> {
 					if (PlantsStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(7, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -217,5 +242,80 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_plants_element", imagebutton_plants_element);
 		this.addRenderableWidget(imagebutton_plants_element);
+		imagebutton_amber_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/amber_element.png"), new ResourceLocation("power:textures/screens/amber_element_highlighted.png")), e -> {
+					if (AmberStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(8, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (AmberStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_amber_element", imagebutton_amber_element);
+		this.addRenderableWidget(imagebutton_amber_element);
+		imagebutton_sand_element = new ImageButton(this.leftPos + 163, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/sand_element.png"), new ResourceLocation("power:textures/screens/sand_element_highlighted.png")), e -> {
+					if (SandStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(9, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 9, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (SandStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_sand_element", imagebutton_sand_element);
+		this.addRenderableWidget(imagebutton_sand_element);
+		imagebutton_poison_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/poison_element.png"), new ResourceLocation("power:textures/screens/poison_element_highlighted.png")), e -> {
+					if (PoisonStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(10, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PoisonStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_poison_element", imagebutton_poison_element);
+		this.addRenderableWidget(imagebutton_poison_element);
+		imagebutton_mushrooms_element = new ImageButton(this.leftPos + 184, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/mushrooms_element.png"), new ResourceLocation("power:textures/screens/mushrooms_element_highlighted.png")), e -> {
+					if (MushroomsStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(11, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (MushroomsStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_mushrooms_element", imagebutton_mushrooms_element);
+		this.addRenderableWidget(imagebutton_mushrooms_element);
+		imagebutton_mercury_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_element.png"), new ResourceLocation("power:textures/screens/mercury_element_highlighted.png")), e -> {
+					if (MercuryStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(12, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (MercuryStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_mercury_element", imagebutton_mercury_element);
+		this.addRenderableWidget(imagebutton_mercury_element);
 	}
 }

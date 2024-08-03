@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "item",
   "definition": {
     "renderType": 0,
@@ -9,9 +9,7 @@
     "states": [],
     "name": "Magic Fireball",
     "rarity": "COMMON",
-    "creativeTab": {
-      "value": "No creative tab entry"
-    },
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 72000,
@@ -30,6 +28,7 @@
     "inventoryStackSize": 64,
     "enableRanged": true,
     "shootConstantly": false,
+    "rangedItemChargesPower": false,
     "projectile": {
       "value": "CUSTOM:MagicFireballProjectile"
     },

@@ -1,0 +1,26 @@
+{
+  "_fv": 66,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "call_of_the_past_music_disc",
+    "description": "bxkqq - Call of the Past",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:record.call_of_the_past"
+    },
+    "lengthInTicks": 2960,
+    "analogOutput": 8
+  }
+}

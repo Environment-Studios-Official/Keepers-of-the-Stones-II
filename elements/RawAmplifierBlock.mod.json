@@ -1,5 +1,5 @@
 {
-  "_fv": 60,
+  "_fv": 66,
   "_type": "block",
   "definition": {
     "texture": "raw_amplifier_block",
@@ -33,17 +33,19 @@
         "subtract": false
       }
     ],
-    "name": "Raw Amplifier Block",
+    "name": "Block of Raw Amplifier",
     "specialInformation": {
       "fixedValue": []
     },
     "hardness": 6.75,
-    "resistance": 250.0,
+    "resistance": 5.0,
     "hasGravity": false,
     "isWaterloggable": false,
-    "creativeTab": {
-      "value": "CUSTOM:Items"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
     "destroyTool": "pickaxe",
     "customDrop": {
       "value": ""
@@ -98,9 +100,9 @@
     "stepSound": {
       "value": ""
     },
-    "luminance": 0,
+    "luminance": 4,
     "unbreakable": false,
-    "breakHarvestLevel": 2,
+    "vanillaToolTier": "IRON",
     "isBonemealable": false,
     "hasInventory": false,
     "guiBoundTo": "<NONE>",

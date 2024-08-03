@@ -1,0 +1,34 @@
+{
+  "_fv": 66,
+  "_type": "tool",
+  "definition": {
+    "toolType": "Sword",
+    "renderType": 1,
+    "blockingRenderType": 0,
+    "texture": "magnet_claws",
+    "customModelName": "magnet_claws:default",
+    "blockingModelName": "Normal blocking",
+    "name": "Magnet Claws",
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "creativeTabs": [],
+    "efficiency": 12.0,
+    "attackSpeed": 1.44,
+    "enchantability": 0,
+    "damageVsEntity": 9.9,
+    "usageCount": 0,
+    "glowCondition": {
+      "fixedValue": true
+    },
+    "repairItems": [],
+    "immuneToFire": true,
+    "blockDropsTier": "NETHERITE",
+    "blocksAffected": [],
+    "stayInGridWhenCrafting": false,
+    "damageOnCrafting": false,
+    "onItemInInventoryTick": {
+      "name": "MagnetClawsKazhdyiTikVInvientarie"
+    }
+  }
+}

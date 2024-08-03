@@ -32,7 +32,7 @@ public class MetalBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.METAL_MASTER.get(), 6000, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.METAL_MASTER, 6000, 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;

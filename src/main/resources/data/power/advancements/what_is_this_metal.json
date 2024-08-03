@@ -1,7 +1,7 @@
 {
   "display": {
     "icon": {
-      "item": "power:depleted_energium_ingot"
+      "id": "power:depleted_energium_ingot"
     },
     "title": {
       "translate": "advancements.what_is_this_metal.title"

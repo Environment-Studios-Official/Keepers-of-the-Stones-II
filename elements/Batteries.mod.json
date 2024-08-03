@@ -1,0 +1,11 @@
+{
+  "_fv": 66,
+  "_type": "tab",
+  "definition": {
+    "name": "KotS: Batteries",
+    "icon": {
+      "value": "CUSTOM:EmptyBattery"
+    },
+    "showSearch": false
+  }
+}

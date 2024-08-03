@@ -196,7 +196,7 @@ public class CreationSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("creation_attack_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IMMORTALITY.get(), 400, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IMMORTALITY, 400, 0, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.totem.use")), SoundSource.PLAYERS, (float) 0.1, 1);

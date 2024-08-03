@@ -2,7 +2,7 @@
   "display": {
     "background": "power:textures/screens/ach_theme.png",
     "icon": {
-      "item": "power:keepers_box"
+      "id": "power:keepers_box"
     },
     "title": {
       "translate": "advancements.keepers_of_the_stones_2.title"

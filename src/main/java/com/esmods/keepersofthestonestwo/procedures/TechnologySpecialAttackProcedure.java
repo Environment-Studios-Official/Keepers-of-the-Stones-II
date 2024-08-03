@@ -74,7 +74,7 @@ public class TechnologySpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("technology_attack_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 60) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TECHNOBARRIER.get(), 300, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TECHNOBARRIER, 300, 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 60;

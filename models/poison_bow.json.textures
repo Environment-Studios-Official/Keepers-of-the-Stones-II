@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "poison_bow"
+      },
+      "name": "default"
+    }
+  }
+}

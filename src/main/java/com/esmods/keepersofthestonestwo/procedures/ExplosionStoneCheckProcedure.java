@@ -6,6 +6,13 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 public class ExplosionStoneCheckProcedure {
 	public static boolean execute(LevelAccessor world) {
-		return PowerModVariables.MapVariables.get(world).explosion_stone == false;
+		if (PowerModVariables.MapVariables.get(world).get_limit_of_stones == true) {
+			if (PowerModVariables.MapVariables.get(world).explosion_stone == false) {
+				return true;
+			}
+		} else if (PowerModVariables.MapVariables.get(world).get_limit_of_stones == false) {
+			return true;
+		}
+		return false;
 	}
 }

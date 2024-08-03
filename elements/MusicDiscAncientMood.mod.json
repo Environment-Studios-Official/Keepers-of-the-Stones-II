@@ -1,0 +1,26 @@
+{
+  "_fv": 66,
+  "_type": "musicdisc",
+  "definition": {
+    "name": "Music Disc",
+    "rarity": "RARE",
+    "texture": "ancient_mood_music_disc",
+    "description": "bxkqq - Ancient Mood",
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Items"
+      }
+    ],
+    "specialInformation": {
+      "fixedValue": []
+    },
+    "glowCondition": {
+      "fixedValue": false
+    },
+    "music": {
+      "value": "CUSTOM:record.ancient_mood"
+    },
+    "lengthInTicks": 4060,
+    "analogOutput": 9
+  }
+}

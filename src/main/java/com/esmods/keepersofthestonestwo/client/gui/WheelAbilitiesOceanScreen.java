@@ -18,7 +18,11 @@ import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesOceanButtonMessage;
 
 public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbilitiesOceanMenu> {
@@ -29,6 +33,9 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_wheel_button_1;
 	ImageButton imagebutton_wheel_button_2;
 	ImageButton imagebutton_wheel_button_3;
+	ImageButton imagebutton_fake_wheel_button_1;
+	ImageButton imagebutton_fake_wheel_button_2;
+	ImageButton imagebutton_fake_wheel_button_3;
 	ImageButton imagebutton_oceanic_current;
 	ImageButton imagebutton_oceanic_storm;
 	ImageButton imagebutton_streamlining;
@@ -86,14 +93,14 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
-					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(0, x, y, z));
+					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(0, x, y, z));
 						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (GetWheelTwoProcedure.execute(entity))
+				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
@@ -102,7 +109,7 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(1, x, y, z));
 						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -117,7 +124,7 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(2, x, y, z));
 						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -129,11 +136,56 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+					if (GetFakeWheelOneProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(3, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 3, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelOneProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+					if (GetFakeWheelTwoProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(4, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 4, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelTwoProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+					if (GetFakeWheelThirdProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(5, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 5, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GetFakeWheelThirdProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
+		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_oceanic_current = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/oceanic_current.png"), new ResourceLocation("power:textures/screens/oceanic_current_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(3, x, y, z));
-						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 3, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(6, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
@@ -146,8 +198,8 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_oceanic_storm = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/oceanic_storm.png"), new ResourceLocation("power:textures/screens/oceanic_storm_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(4, x, y, z));
-						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 4, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(7, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -160,8 +212,8 @@ public class WheelAbilitiesOceanScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_streamlining = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/streamlining.png"), new ResourceLocation("power:textures/screens/streamlining_highlight.png")), e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesOceanButtonMessage(5, x, y, z));
-						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 5, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesOceanButtonMessage(8, x, y, z));
+						WheelAbilitiesOceanButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override

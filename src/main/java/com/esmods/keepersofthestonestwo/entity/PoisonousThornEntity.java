@@ -43,6 +43,11 @@ public class PoisonousThornEntity extends AbstractArrow implements ItemSupplier 
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.ROSE_BUSH);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
@@ -63,6 +68,10 @@ public class PoisonousThornEntity extends AbstractArrow implements ItemSupplier 
 
 	public static PoisonousThornEntity shoot(Level world, LivingEntity entity, RandomSource source) {
 		return shoot(world, entity, source, 1f, 1, 0);
+	}
+
+	public static PoisonousThornEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 1, 0);
 	}
 
 	public static PoisonousThornEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {

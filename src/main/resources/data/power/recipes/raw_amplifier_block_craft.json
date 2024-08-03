@@ -12,7 +12,7 @@
     }
   },
   "result": {
-    "item": "power:raw_amplifier_block",
+    "id": "power:raw_amplifier_block",
     "count": 1
   }
 }

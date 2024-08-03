@@ -1,9 +1,7 @@
-What's new in Keepers of the Stones II version 1.0.0.22?<br />
-<br />- Added new element - explosion
-<br />- Added new achievements
-<br />- Changed the sound of the Ice Master's first attack
-<br />- Increased the speed and height of projectiles for abilities that strike at a radius
-<br />- [API] Colorful Powers API has been updated to version 7
-<br />- [Bugfix] Fixed a bug that caused the teleportation cannon to not fire in survival
-<br />- [Bugfix] Fixed a bug that caused the Blood Stone to not recharge in survival
-<br />- [Bugfix] Fixed a bug that caused some amplifier blocks to be generated in the world
+What's new in Keepers of the Stones II version 1.0.0.35?<br/>
+<br />- Added new cursed stone blocks
+<br />- The radius of interaction between storages has been reduced
+<br />- Changed the sound of using time element abilities
+<br />- Сursed pillar texture has been updated
+<br />- Raw copyrium block texture updated
+<br />- [Bugfix] Fixed a bug that caused the structure not to be generated

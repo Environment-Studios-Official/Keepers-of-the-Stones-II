@@ -5,7 +5,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -61,50 +61,32 @@ public class AirSpecialAttackProcedure {
 										.getZ()));
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
-							if (!(entityiterator == entity)) {
+							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 										(float) 13.5);
 								if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y + 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 1, 0));
+										entityiterator.setDeltaMovement(new Vec3(0, 1.5, 0));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, (y - 3), z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, (-1), 0));
+										entityiterator.setDeltaMovement(new Vec3(0, (-1.5), 0));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z - 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1)));
+										entityiterator.setDeltaMovement(new Vec3(0, 0, (-1.5)));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Z) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3(x, y, (z + 3)), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(0, 0, 1));
+										entityiterator.setDeltaMovement(new Vec3(0, 0, 1.5));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.Y) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x - 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3((-1), 0, 0));
+										entityiterator.setDeltaMovement(new Vec3((-1.5), 0, 0));
 									}
 								} else if ((entity.getDirection()).getAxis() == Direction.Axis.X) {
 									if (!world.getEntitiesOfClass(LivingEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
-									}
-									if (!world.getEntitiesOfClass(ItemEntity.class, AABB.ofSize(new Vec3((x + 3), y, z), 6, 6, 6), e -> true).isEmpty()) {
-										entityiterator.setDeltaMovement(new Vec3(1, 0, 0));
+										entityiterator.setDeltaMovement(new Vec3(1.5, 0, 0));
 									}
 								}
 							}
@@ -127,7 +109,7 @@ public class AirSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("air_attack_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 				particleAmount = 25;
-				particleRadius = 2;
+				particleRadius = 5;
 				for (int index1 = 0; index1 < (int) particleAmount; index1++) {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
@@ -170,7 +152,7 @@ public class AirSpecialAttackProcedure {
 					if (world instanceof ServerLevel _level)
 						_level.sendParticles(ParticleTypes.FIREWORK, x, y, z, 30, 0, (-1), 0, 1);
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-						_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 7, false, false));
+						_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 8, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.SLOW_FALLING, 200, 0, false, false));
 					{

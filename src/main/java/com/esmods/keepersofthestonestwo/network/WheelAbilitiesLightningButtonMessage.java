@@ -1,9 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.PlayPayloadContext;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
@@ -11,8 +11,9 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
 import java.util.HashMap;
@@ -21,43 +22,40 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningM
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
+import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack27Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack26Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack25Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "wheel_abilities_lightning_buttons");
-	public WheelAbilitiesLightningButtonMessage(FriendlyByteBuf buffer) {
-		this(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt());
-	}
-
+	public static final Type<WheelAbilitiesLightningButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "wheel_abilities_lightning_buttons"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, WheelAbilitiesLightningButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, WheelAbilitiesLightningButtonMessage message) -> {
+		buffer.writeInt(message.buttonID);
+		buffer.writeInt(message.x);
+		buffer.writeInt(message.y);
+		buffer.writeInt(message.z);
+	}, (RegistryFriendlyByteBuf buffer) -> new WheelAbilitiesLightningButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
 	@Override
-	public void write(final FriendlyByteBuf buffer) {
-		buffer.writeInt(buttonID);
-		buffer.writeInt(x);
-		buffer.writeInt(y);
-		buffer.writeInt(z);
+	public Type<WheelAbilitiesLightningButtonMessage> type() {
+		return TYPE;
 	}
 
-	@Override
-	public ResourceLocation id() {
-		return ID;
-	}
-
-	public static void handleData(final WheelAbilitiesLightningButtonMessage message, final PlayPayloadContext context) {
+	public static void handleData(final WheelAbilitiesLightningButtonMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.workHandler().submitAsync(() -> {
-				Player entity = context.player().get();
+			context.enqueueWork(() -> {
+				Player entity = context.player();
 				int buttonID = message.buttonID;
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
 				handleButtonAction(entity, buttonID, x, y, z);
 			}).exceptionally(e -> {
-				context.packetHandler().disconnect(Component.literal(e.getMessage()));
+				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
 		}
@@ -71,7 +69,7 @@ public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, i
 			return;
 		if (buttonID == 0) {
 
-			OpenWheelOneProcedure.execute(world, x, y, z, entity);
+			OpenWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 1) {
 
@@ -83,13 +81,25 @@ public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, i
 		}
 		if (buttonID == 3) {
 
-			Attack25Procedure.execute(entity);
+			OpenFakeWheelOneProcedure.execute(entity);
 		}
 		if (buttonID == 4) {
 
-			Attack26Procedure.execute(entity);
+			OpenFakeWheelSecondProcedure.execute(entity);
 		}
 		if (buttonID == 5) {
+
+			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack25Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack26Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
 
 			Attack27Procedure.execute(entity);
 		}
@@ -97,6 +107,6 @@ public record WheelAbilitiesLightningButtonMessage(int buttonID, int x, int y, i
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(WheelAbilitiesLightningButtonMessage.ID, WheelAbilitiesLightningButtonMessage::new, WheelAbilitiesLightningButtonMessage::handleData);
+		PowerMod.addNetworkMessage(WheelAbilitiesLightningButtonMessage.TYPE, WheelAbilitiesLightningButtonMessage.STREAM_CODEC, WheelAbilitiesLightningButtonMessage::handleData);
 	}
 }
