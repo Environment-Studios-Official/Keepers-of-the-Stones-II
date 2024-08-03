@@ -4,9 +4,9 @@ plugins {
     id 'net.neoforged.gradle.userdev' version '7.0.152'
 }
 
-version = '1.0'
+version = '1.0.0.35'
 group = 'com.yourname.modid'
-base.archivesName = "modid"
+base.archivesName = "Keepers-of-the-Stones-II"
 
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 
