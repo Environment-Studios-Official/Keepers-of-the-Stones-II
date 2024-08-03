@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParams;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
@@ -17,6 +15,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
@@ -64,9 +63,9 @@ public class EnergiumKeyOpenVaultProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -89,9 +88,9 @@ public class EnergiumKeyOpenVaultProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 						final int tick2 = ticks;
@@ -105,9 +104,9 @@ public class EnergiumKeyOpenVaultProcedure {
 			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

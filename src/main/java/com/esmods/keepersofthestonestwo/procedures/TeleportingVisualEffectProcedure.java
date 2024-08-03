@@ -1,9 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.event.TickEvent;
+import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Entity;
@@ -35,7 +35,7 @@ public class TeleportingVisualEffectProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).teleporting_effect > 0) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).teleporting_effect > 0) {
 			particleAmount = 8;
 			particleRadius = 2;
 			for (int index0 = 0; index0 < (int) particleAmount; index0++) {
@@ -45,11 +45,9 @@ public class TeleportingVisualEffectProcedure {
 							(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 			}
 			{
-				double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).teleporting_effect - 1;
-				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.teleporting_effect = _setval;
-					capability.syncPlayerVariables(entity);
-				});
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.teleporting_effect = entity.getData(PowerModVariables.PLAYER_VARIABLES).teleporting_effect - 1;
+				_vars.syncPlayerVariables(entity);
 			}
 		}
 	}

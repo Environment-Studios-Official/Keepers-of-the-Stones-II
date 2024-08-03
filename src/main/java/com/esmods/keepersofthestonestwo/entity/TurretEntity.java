@@ -10,12 +10,11 @@ import software.bernie.geckolib.core.animation.AnimatableManager;
 import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
-import net.minecraftforge.registries.ForgeRegistries;
-import net.minecraftforge.network.PlayMessages;
-import net.minecraftforge.network.NetworkHooks;
+import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
@@ -52,9 +51,8 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.EntityDataAccessor;
-import net.minecraft.network.protocol.game.ClientGamePacketListener;
-import net.minecraft.network.protocol.Packet;
 import net.minecraft.nbt.CompoundTag;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
@@ -73,10 +71,6 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 	private boolean lastloop;
 	private long lastSwing;
 	public String animationprocedure = "empty";
-
-	public TurretEntity(PlayMessages.SpawnEntity packet, Level world) {
-		this(PowerModEntities.TURRET.get(), world);
-	}
 
 	public TurretEntity(EntityType<TurretEntity> type, Level world) {
 		super(type, world);
@@ -100,11 +94,6 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 
 	public String getTexture() {
 		return this.entityData.get(TEXTURE);
-	}
-
-	@Override
-	public Packet<ClientGamePacketListener> getAddEntityPacket() {
-		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
@@ -225,17 +214,17 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.step")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.hit"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.hit"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.copper.fall"));
+		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.fall"));
 	}
 
 	@Override
@@ -244,9 +233,19 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 			return false;
 		if (source.is(DamageTypes.CACTUS))
 			return false;
-		if (source.is(DamageTypes.EXPLOSION))
+		if (source.is(DamageTypes.EXPLOSION) || source.is(DamageTypes.PLAYER_EXPLOSION))
 			return false;
 		return super.hurt(source, amount);
+	}
+
+	@Override
+	public boolean ignoreExplosion(Explosion explosion) {
+		return true;
+	}
+
+	@Override
+	public boolean fireImmune() {
+		return true;
 	}
 
 	@Override
@@ -288,7 +287,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 				}
 			} else if (this.isFood(itemstack)) {
 				this.usePlayerItem(sourceentity, hand, itemstack);
-				if (this.random.nextInt(3) == 0 && !net.minecraftforge.event.ForgeEventFactory.onAnimalTame(this, sourceentity)) {
+				if (this.random.nextInt(3) == 0 && !EventHooks.onAnimalTame(this, sourceentity)) {
 					this.tame(sourceentity);
 					this.level().broadcastEntityEvent(this, (byte) 7);
 				} else {

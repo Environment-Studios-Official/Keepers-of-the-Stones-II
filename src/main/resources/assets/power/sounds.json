@@ -208,14 +208,5 @@
         "stream": true
       }
     ]
-  },
-  "time_ability_effect": {
-    "subtitle": "subtitles.time_ability_effect",
-    "sounds": [
-      {
-        "name": "power:time_ability_effect",
-        "stream": false
-      }
-    ]
   }
 }
