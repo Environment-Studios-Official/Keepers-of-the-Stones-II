@@ -38,7 +38,7 @@
     },
     "enableRanged": true,
     "shootConstantly": false,
-    "rangedItemChargesPower": false,
+    "rangedItemChargesPower": true,
     "projectile": {
       "value": "CUSTOM:RainDropProjectile"
     },

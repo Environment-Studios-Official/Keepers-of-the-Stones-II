@@ -1,6 +1,11 @@
 {
   "replace": false,
   "values": [
+    "power:cursed_stone_cracked_bricks_wall",
+    "power:cursed_stone_cracked_bricks_stairs",
+    "power:cursed_stone_cracked_bricks_slab",
+    "power:cursed_stone_cracked_bricks",
+    "power:chiseled_cursed_stone",
     "power:deepslate_copyrium_ore",
     "power:deepslate_amplifier_ore",
     "power:deepslate_energium_ore",

@@ -1,4 +1,9 @@
-What's new in Keepers of the Stones II version 1.0.0.33?<br/>
-<br />- [Bugfix] Fixed crush on FG 1.20.1
-<br />- [Bugfix] Some fixes related with deepslate ores types
-<br />- [Bugfix] Fixed a bug where when using an ability with an active power lock effect, the ability became activated after the end of the effect
+What's new in Keepers of the Stones II version 1.0.0.35?<br/>
+<br />- Added new cursed stone blocks
+<br />- The radius of interaction between storages has been reduced
+<br />- Changed the sound of using time element abilities
+<br />- Сursed pillar texture has been updated
+<br />- Raw copyrium block texture updated
+<br />- [Bugfix] Fixed a bug that caused the structure not to be generated
+<br />- [Bugfix] Fixed a crash that caused old worlds to fail to load (Removed legacy core)
+<br />- [Bugfix] Fixed a crash on version 1.20.6

@@ -15,7 +15,7 @@ import net.minecraft.client.model.EntityModel;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import com.mojang.blaze3d.vertex.PoseStack;
 
-// Made with Blockbench 4.10.1
+// Made with Blockbench 4.10.4
 // Exported for Minecraft version 1.17 or later with Mojang mappings
 // Paste this class into your mod and generate all required imports
 public class Modelatomic_rocket<T extends Entity> extends EntityModel<T> {
@@ -32,13 +32,13 @@ public class Modelatomic_rocket<T extends Entity> extends EntityModel<T> {
 		MeshDefinition meshdefinition = new MeshDefinition();
 		PartDefinition partdefinition = meshdefinition.getRoot();
 		PartDefinition bone = partdefinition.addOrReplaceChild("bone",
-				CubeListBuilder.create().texOffs(24, 34).addBox(-15.0F, -18.0F, -1.0F, 16.0F, 18.0F, 16.0F, new CubeDeformation(0.0F)).texOffs(0, 68).addBox(-13.0F, -1.0F, 1.0F, 12.0F, 2.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(42, 5)
-						.addBox(-13.0F, -32.0F, 1.0F, 12.0F, 14.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(72, 31).addBox(-9.0F, -43.0F, 15.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(68, 68)
-						.addBox(-9.0F, -43.0F, -5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(52, 68).addBox(-21.0F, -43.0F, 5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(36, 68)
-						.addBox(3.0F, -43.0F, 5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 51).addBox(-9.0F, -38.0F, 13.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 34)
-						.addBox(-9.0F, -38.0F, -3.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 17).addBox(-17.0F, -38.0F, 5.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 0)
+				CubeListBuilder.create().texOffs(0, 0).addBox(-15.0F, -18.0F, -1.0F, 16.0F, 18.0F, 16.0F, new CubeDeformation(0.0F)).texOffs(48, 0).addBox(-13.0F, -1.0F, 1.0F, 12.0F, 2.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(0, 34)
+						.addBox(-13.0F, -32.0F, 1.0F, 12.0F, 14.0F, 12.0F, new CubeDeformation(0.0F)).texOffs(64, 26).addBox(-9.0F, -43.0F, 15.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(64, 14)
+						.addBox(-9.0F, -43.0F, -5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 0).addBox(-21.0F, -43.0F, 5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(32, 60)
+						.addBox(3.0F, -43.0F, 5.0F, 4.0F, 8.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(16, 60).addBox(-9.0F, -38.0F, 13.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(0, 60)
+						.addBox(-9.0F, -38.0F, -3.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(48, 34).addBox(-17.0F, -38.0F, 5.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)).texOffs(48, 51)
 						.addBox(-1.0F, -38.0F, 5.0F, 4.0F, 13.0F, 4.0F, new CubeDeformation(0.0F)),
-				PartPose.offset(7.0F, 23.0F, -7.0F));
+				PartPose.offsetAndRotation(-7.0F, -19.0F, -7.0F, 0.0F, 0.0F, -3.1416F));
 		return LayerDefinition.create(meshdefinition, 128, 128);
 	}
 

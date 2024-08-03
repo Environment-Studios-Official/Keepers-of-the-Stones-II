@@ -1,6 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
+import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.OnlyIn;
 import net.neoforged.api.distmarker.Dist;
 
@@ -15,9 +18,12 @@ import net.minecraft.world.item.AxeItem;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.core.component.DataComponents;
 
 import com.esmods.keepersofthestonestwo.procedures.TornadoAxeKazhdyiTikVInvientarieProcedure;
+import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class TornadoAxeItem extends AxeItem {
 	private static final Tier TOOL_TIER = new Tier() {
 		@Override
@@ -53,6 +59,11 @@ public class TornadoAxeItem extends AxeItem {
 
 	public TornadoAxeItem() {
 		super(TOOL_TIER, new Item.Properties().attributes(DiggerItem.createAttributes(TOOL_TIER, 10.88f, -2.91f)).fireResistant());
+	}
+
+	@SubscribeEvent
+	public static void handleToolDamage(ModifyDefaultComponentsEvent event) {
+		event.modify(PowerModItems.TORNADO_AXE.get(), builder -> builder.remove(DataComponents.MAX_DAMAGE));
 	}
 
 	@Override

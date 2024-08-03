@@ -3,37 +3,13 @@
     {
       "identifier": {
         "group": "com.esmods.cpapi",
-        "artifact": "cpapi"
+        "artifact": "cpapi-v11"
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "10"
+        "artifactVersion": "11"
       },
-      "path": "META-INF/jarjar/cpapi-v10.jar",
-      "isObfuscated": true
-    },
-    {
-      "identifier": {
-        "group": "net.particleeffects",
-        "artifact": "particleeffects"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "1.0.0"
-      },
-      "path": "META-INF/jarjar/particlepresets-1.0.0-neoforge-1.20.4.jar",
-      "isObfuscated": true
-    },
-    {
-      "identifier": {
-        "group": "com.kleiders.kleidersplayerrenderer",
-        "artifact": "kleiders_custom_renderer"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "6.0.0"
-      },
-      "path": "META-INF/jarjar/kleiders_custom_renderer_api-6.0.0.jar",
+      "path": "META-INF/jarjar/cpapi-v11.jar",
       "isObfuscated": true
     }
   ]

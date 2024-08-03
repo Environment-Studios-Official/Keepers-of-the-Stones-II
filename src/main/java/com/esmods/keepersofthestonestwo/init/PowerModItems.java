@@ -112,6 +112,7 @@ import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
 import com.esmods.keepersofthestonestwo.item.MercuryStoneItem;
 import com.esmods.keepersofthestonestwo.item.MercuryBattleAxeItem;
 import com.esmods.keepersofthestonestwo.item.MercuryBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MercuryBallItem;
 import com.esmods.keepersofthestonestwo.item.MercuryArmorItem;
 import com.esmods.keepersofthestonestwo.item.MagnetStoneItem;
 import com.esmods.keepersofthestonestwo.item.MagnetClawsItem;
@@ -568,11 +569,16 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", MercuryBatteryItem::new);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", MercuryBattleAxeItem::new);
-	public static final DeferredHolder<Item, Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> DEEPSLATE_DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
+	public static final DeferredHolder<Item, Item> MERCURY_BALL = REGISTRY.register("mercury_ball", MercuryBallItem::new);
+	public static final DeferredHolder<Item, Item> CHISELED_CURSED_STONE = block(PowerModBlocks.CHISELED_CURSED_STONE);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_SLAB = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_SLAB);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_STAIRS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_STAIRS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_WALL = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_WALL);
 
 	// Start of user code block custom items
 	// End of user code block custom items

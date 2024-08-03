@@ -45,9 +45,9 @@
     "power:smoke_stone",
     "power:form_stone",
     "power:mind_stone",
-    "power:golden_dust_stone",
     "power:darkness_stone",
     "power:energy_stone",
-    "power:spirit_stone"
+    "power:spirit_stone",
+    "power:golden_dust_stone"
   ]
 }
