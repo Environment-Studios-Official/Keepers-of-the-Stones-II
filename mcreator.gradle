@@ -1,11 +1,11 @@
 repositories {
     maven {
-    	url = "https://cursemaven.com"
+    	url = "https://jitpack.io"
     }
 }
     
 dependencies {
-	implementation "curse.maven:pehkui-319596:5419264"
+	implementation 'com.github.Virtuoel:Pehkui:3.8.3-1.20.6-neoforge'
 }
 
 
