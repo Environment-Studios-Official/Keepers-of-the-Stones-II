@@ -28228,6 +28228,19 @@
         ]
       },
       "path": "~/ItemsAndBlocks/CursedBlocks"
+    },
+    {
+      "name": "PowerConfig",
+      "type": "config",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "power_config",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/configuration/PowerConfigConfiguration.java"
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
     }
   ],
   "variable_elements": [
