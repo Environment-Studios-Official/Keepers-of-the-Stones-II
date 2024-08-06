@@ -510,7 +510,7 @@
     {
       "name": "AirStoneUse",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "air_stone_use",
       "metadata": {
@@ -549,7 +549,7 @@
     {
       "name": "AirMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "air_master_start",
       "metadata": {
@@ -3079,7 +3079,7 @@
     {
       "name": "StoneAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "stone_attack_projectile",
       "metadata": {
@@ -3093,7 +3093,7 @@
     {
       "name": "GrassBlockAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "grass_block_attack_projectile",
       "metadata": {
@@ -3107,7 +3107,7 @@
     {
       "name": "DirtBlockAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "dirt_block_attack_projectile",
       "metadata": {
@@ -3121,7 +3121,7 @@
     {
       "name": "CobblestoneAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cobblestone_attack_projectile",
       "metadata": {
@@ -3135,7 +3135,7 @@
     {
       "name": "CobbledDeepslateAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "cobbled_deepslate_attack_projectile",
       "metadata": {
@@ -3149,7 +3149,7 @@
     {
       "name": "WaterAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "water_attack_projectile",
       "metadata": {
@@ -3163,7 +3163,7 @@
     {
       "name": "EtherAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_attack_projectile",
       "metadata": {
@@ -3498,7 +3498,7 @@
     {
       "name": "IceAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_attack_projectile",
       "metadata": {
@@ -5501,7 +5501,7 @@
     {
       "name": "BallLightningProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ball_lightning_projectile",
       "metadata": {
@@ -5564,7 +5564,7 @@
     {
       "name": "AmethystAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_attack_projectile",
       "metadata": {
@@ -5657,7 +5657,7 @@
     {
       "name": "LavaAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_attack_projectile",
       "metadata": {
@@ -5800,7 +5800,7 @@
     {
       "name": "SoundBombProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile",
       "metadata": {
@@ -6163,7 +6163,7 @@
     {
       "name": "AmethystClusterAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amethyst_cluster_attack_projectile",
       "metadata": {
@@ -6494,7 +6494,7 @@
     {
       "name": "RainDropProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "rain_drop_projectile",
       "metadata": {
@@ -6741,7 +6741,7 @@
     {
       "name": "MiniTornadoProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mini_tornado_projectile",
       "metadata": {
@@ -7059,7 +7059,7 @@
     {
       "name": "PoisonousThorn",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "poisonous_thorn",
       "metadata": {
@@ -7520,7 +7520,7 @@
     {
       "name": "CopperAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "copper_attack_projectile",
       "metadata": {
@@ -7565,7 +7565,7 @@
     {
       "name": "GoldAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gold_attack_projectile",
       "metadata": {
@@ -7610,7 +7610,7 @@
     {
       "name": "IronAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "iron_attack_projectile",
       "metadata": {
@@ -7792,7 +7792,7 @@
     {
       "name": "AirBatteryUse",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "air_battery_use",
       "metadata": {
@@ -9236,7 +9236,7 @@
     {
       "name": "KnifeAttackProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "knife_attack_projectile",
       "metadata": {
@@ -9297,7 +9297,7 @@
     {
       "name": "LightballProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightball_projectile",
       "metadata": {
@@ -9909,7 +9909,7 @@
     {
       "name": "ShadowSphere",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "shadow_sphere",
       "metadata": {
@@ -10832,7 +10832,7 @@
     {
       "name": "SphereNothingProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sphere_nothing_projectile",
       "metadata": {
@@ -11805,7 +11805,7 @@
     {
       "name": "EnergyCharge",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_charge",
       "metadata": {
@@ -13255,7 +13255,7 @@
     {
       "name": "MeteoriteProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "meteorite_projectile",
       "metadata": {
@@ -16577,7 +16577,7 @@
     {
       "name": "DestructionBallProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_ball_projectile",
       "metadata": {
@@ -19068,7 +19068,7 @@
     {
       "name": "TurretProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "turret_projectile",
       "metadata": {
@@ -20509,7 +20509,7 @@
     {
       "name": "AtomicRocket",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "atomic_rocket",
       "metadata": {
@@ -20554,7 +20554,7 @@
     {
       "name": "Grenade",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "grenade",
       "metadata": {
@@ -20744,7 +20744,7 @@
     {
       "name": "AmberMasterStart",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amber_master_start",
       "metadata": {
@@ -21012,7 +21012,7 @@
     {
       "name": "AmberBatteryUse",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "amber_battery_use",
       "metadata": {
@@ -24643,7 +24643,7 @@
     {
       "name": "PoisonDropProjectile",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "poison_drop_projectile",
       "metadata": {
@@ -24725,7 +24725,7 @@
     {
       "name": "PoisonBomb",
       "type": "projectile",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "poison_bomb",
       "metadata": {
@@ -29570,20 +29570,20 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
+      "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "item_group.power.items": "KotS: Предметы",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
       "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "item_group.power.items": "KotS: Предметы",
+      "item.power.amber_armor_helmet": "Шлем мастера янтаря",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
@@ -30276,20 +30276,20 @@
       "item.power.highspeed_dagger": "High-speed Dagger",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
       "block.power.polished_cursed_stone_slab": "Polished Cursed Stone Slab",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Melting, uses 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Revenge",
-      "block.power.cursed_stone_slab": "Cursed Stone Slab",
-      "item_group.power.items": "KotS: Items",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
       "item.power.amber_armor_helmet": "Amber Helmet",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Animals",
+      "item_group.power.items": "KotS: Items",
+      "block.power.cursed_stone_slab": "Cursed Stone Slab",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "item.power.time_armor_helmet": "Time Helmet",
       "item.power.poison_battery": "Battery",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
