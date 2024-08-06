@@ -45,37 +45,37 @@ public class MistInvisibleTickProcedure {
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(3, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet).toLowerCase(java.util.Locale.ENGLISH)))));
+						_player.getInventory().armor.set(3, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet).toLowerCase(java.util.Locale.ENGLISH)))));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet).toLowerCase(java.util.Locale.ENGLISH)))));
+						_living.setItemSlot(EquipmentSlot.HEAD, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).helmet).toLowerCase(java.util.Locale.ENGLISH)))));
 					}
 				}
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(2, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate).toLowerCase(java.util.Locale.ENGLISH)))));
+						_player.getInventory().armor.set(2, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate).toLowerCase(java.util.Locale.ENGLISH)))));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate).toLowerCase(java.util.Locale.ENGLISH)))));
+						_living.setItemSlot(EquipmentSlot.CHEST, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).chestplate).toLowerCase(java.util.Locale.ENGLISH)))));
 					}
 				}
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(1, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings).toLowerCase(java.util.Locale.ENGLISH)))));
+						_player.getInventory().armor.set(1, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings).toLowerCase(java.util.Locale.ENGLISH)))));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings).toLowerCase(java.util.Locale.ENGLISH)))));
+						_living.setItemSlot(EquipmentSlot.LEGS, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).leggings).toLowerCase(java.util.Locale.ENGLISH)))));
 					}
 				}
 				{
 					Entity _entity = entity;
 					if (_entity instanceof Player _player) {
-						_player.getInventory().armor.set(0, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).boots).toLowerCase(java.util.Locale.ENGLISH)))));
+						_player.getInventory().armor.set(0, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).boots).toLowerCase(java.util.Locale.ENGLISH)))));
 						_player.getInventory().setChanged();
 					} else if (_entity instanceof LivingEntity _living) {
-						_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(BuiltInRegistries.ITEM.get(new ResourceLocation((entity.getData(PowerModVariables.PLAYER_VARIABLES).boots).toLowerCase(java.util.Locale.ENGLISH)))));
+						_living.setItemSlot(EquipmentSlot.FEET, new ItemStack(BuiltInRegistries.ITEM.get(ResourceLocation.parse((entity.getData(PowerModVariables.PLAYER_VARIABLES).boots).toLowerCase(java.util.Locale.ENGLISH)))));
 					}
 				}
 				(entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).enchant(Enchantments.BINDING_CURSE, 1);

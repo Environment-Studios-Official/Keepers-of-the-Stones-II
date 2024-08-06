@@ -2,7 +2,7 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.phys.Vec3;
@@ -184,7 +184,7 @@ public class PoisonPitEntity extends PathfinderMob {
 		return super.getDefaultDimensions(pose).scale((float) HitboxScaleProcedure.execute(entity));
 	}
 
-	public static void init(SpawnPlacementRegisterEvent event) {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

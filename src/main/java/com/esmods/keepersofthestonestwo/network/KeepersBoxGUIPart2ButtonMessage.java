@@ -36,7 +36,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));
+	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, KeepersBoxGUIPart2ButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, KeepersBoxGUIPart2ButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);

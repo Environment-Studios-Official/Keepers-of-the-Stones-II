@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.GrenadeEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelgrenade;
 
 public class GrenadeRenderer extends EntityRenderer<GrenadeEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/grenade.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/grenade.png");
 	private final Modelgrenade model;
 
 	public GrenadeRenderer(EntityRendererProvider.Context context) {

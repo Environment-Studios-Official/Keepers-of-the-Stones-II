@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.IronAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class IronAttackProjectileRenderer extends EntityRenderer<IronAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/iron_attack.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/iron_attack.png");
 	private final Modelblock_attack model;
 
 	public IronAttackProjectileRenderer(EntityRendererProvider.Context context) {

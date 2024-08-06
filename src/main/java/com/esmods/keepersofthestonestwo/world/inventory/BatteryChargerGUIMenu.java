@@ -94,7 +94,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 104, 59) {
 			@Override
 			public boolean mayPlace(ItemStack stack) {
-				return stack.is(ItemTags.create(new ResourceLocation("power:elemental_stones")));
+				return stack.is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 35) {

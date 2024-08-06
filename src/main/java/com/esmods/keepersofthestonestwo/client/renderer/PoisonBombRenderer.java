@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonBombEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoison_bomb;
 
 public class PoisonBombRenderer extends EntityRenderer<PoisonBombEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/poison_bomb.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/poison_bomb.png");
 	private final Modelpoison_bomb model;
 
 	public PoisonBombRenderer(EntityRendererProvider.Context context) {

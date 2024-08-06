@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
 
 public class BallLightningProjectileRenderer extends EntityRenderer<BallLightningProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/ball_lightning.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/ball_lightning.png");
 	private final Modelether_bullet model;
 
 	public BallLightningProjectileRenderer(EntityRendererProvider.Context context) {

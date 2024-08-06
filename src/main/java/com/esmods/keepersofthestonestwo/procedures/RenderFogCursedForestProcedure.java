@@ -64,7 +64,7 @@ public class RenderFogCursedForestProcedure {
 		if (world
 				.getBiome(BlockPos.containing(Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().x(), Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().y(),
 						Minecraft.getInstance().gameRenderer.getMainCamera().getPosition().z()))
-				.is(new ResourceLocation("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
+				.is(ResourceLocation.parse("power:cursed_forest")) && !entity.isUnderWater() && !(entity instanceof LivingEntity _livEnt5 && _livEnt5.hasEffect(PowerModMobEffects.MIST))) {
 			setDistance(15, 45);
 			setShape(FogShape.SPHERE);
 		}

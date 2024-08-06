@@ -70,7 +70,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -92,7 +92,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(0, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 0, x, y, z);
@@ -107,7 +107,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(1, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 1, x, y, z);
@@ -122,7 +122,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(2, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 2, x, y, z);
@@ -137,7 +137,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(3, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -152,7 +152,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(4, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -167,7 +167,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(5, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -182,7 +182,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/flying_spores.png"), new ResourceLocation("power:textures/screens/flying_spores_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/flying_spores.png"), ResourceLocation.parse("power:textures/screens/flying_spores_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(6, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -196,7 +196,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
 		this.addRenderableWidget(imagebutton_ability_1);
 		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/planting_mushrooms.png"), new ResourceLocation("power:textures/screens/planting_mushrooms_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/planting_mushrooms.png"), ResourceLocation.parse("power:textures/screens/planting_mushrooms_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(7, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -210,7 +210,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
 		this.addRenderableWidget(imagebutton_ability_2);
 		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/mushroom_saturation.png"), new ResourceLocation("power:textures/screens/mushroom_saturation_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/mushroom_saturation.png"), ResourceLocation.parse("power:textures/screens/mushroom_saturation_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMushroomsButtonMessage(8, x, y, z));
 						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 8, x, y, z);

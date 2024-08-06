@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "power:raw_depleted_energium",
+          "name": "power:raw_energium",
           "weight": 1,
           "conditions": [
             {
@@ -14,16 +14,14 @@
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "predicates": {
-                    "minecraft:enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
                       }
-                    ]
-                  }
+                    }
+                  ]
                 }
               }
             }
@@ -46,5 +44,5 @@
       ]
     }
   ],
-  "random_sequence": "power:blocks/deepslate_depleted_energium_ore"
+  "random_sequence": "power:blocks/energium_ore"
 }

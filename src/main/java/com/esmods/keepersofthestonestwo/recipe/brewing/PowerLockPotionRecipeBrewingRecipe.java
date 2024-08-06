@@ -1,5 +1,5 @@
 
-package com.esmods.keepersofthestonestwo.recipes.brewing;
+package com.esmods.keepersofthestonestwo.recipe.brewing;
 
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.common.brewing.IBrewingRecipe;
@@ -22,10 +22,10 @@ import com.esmods.keepersofthestonestwo.init.PowerModPotions;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 @EventBusSubscriber
-public class StarRegenerationPotionRecipeBrewingRecipe implements IBrewingRecipe {
+public class PowerLockPotionRecipeBrewingRecipe implements IBrewingRecipe {
 	@SubscribeEvent
 	public static void init(RegisterBrewingRecipesEvent event) {
-		event.getBuilder().addRecipe(new StarRegenerationPotionRecipeBrewingRecipe());
+		event.getBuilder().addRecipe(new PowerLockPotionRecipeBrewingRecipe());
 	}
 
 	@Override
@@ -37,13 +37,13 @@ public class StarRegenerationPotionRecipeBrewingRecipe implements IBrewingRecipe
 
 	@Override
 	public boolean isIngredient(ItemStack ingredient) {
-		return Ingredient.of(new ItemStack(PowerModItems.AMPLIFIER_DROP.get())).test(ingredient);
+		return Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_DUST.get())).test(ingredient);
 	}
 
 	@Override
 	public ItemStack getOutput(ItemStack input, ItemStack ingredient) {
 		if (isInput(input) && isIngredient(ingredient)) {
-			return PotionContents.createItemStack(input.getItem(), PowerModPotions.STAR_REGENERATION_POTION);
+			return PotionContents.createItemStack(input.getItem(), PowerModPotions.POWER_LOCK_POTION);
 		}
 		return ItemStack.EMPTY;
 	}

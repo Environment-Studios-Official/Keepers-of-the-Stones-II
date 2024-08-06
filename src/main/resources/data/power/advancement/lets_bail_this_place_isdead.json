@@ -24,7 +24,7 @@
             "entity": "this",
             "predicate": {
               "location": {
-                "biome": "power:cursed_forest"
+                "biomes": "power:cursed_forest"
               }
             }
           }

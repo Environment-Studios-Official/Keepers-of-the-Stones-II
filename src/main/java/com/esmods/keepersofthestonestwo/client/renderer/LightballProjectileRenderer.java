@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.LightballProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modellightball;
 
 public class LightballProjectileRenderer extends EntityRenderer<LightballProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/lightball.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/lightball.png");
 	private final Modellightball model;
 
 	public LightballProjectileRenderer(EntityRendererProvider.Context context) {

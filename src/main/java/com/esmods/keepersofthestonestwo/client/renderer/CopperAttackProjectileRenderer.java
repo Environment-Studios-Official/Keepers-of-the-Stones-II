@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class CopperAttackProjectileRenderer extends EntityRenderer<CopperAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/copper_attack.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/copper_attack.png");
 	private final Modelblock_attack model;
 
 	public CopperAttackProjectileRenderer(EntityRendererProvider.Context context) {

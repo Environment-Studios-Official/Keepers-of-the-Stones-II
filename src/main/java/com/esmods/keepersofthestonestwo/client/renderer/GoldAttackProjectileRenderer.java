@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.GoldAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelblock_attack;
 
 public class GoldAttackProjectileRenderer extends EntityRenderer<GoldAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/gold_attack.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/gold_attack.png");
 	private final Modelblock_attack model;
 
 	public GoldAttackProjectileRenderer(EntityRendererProvider.Context context) {

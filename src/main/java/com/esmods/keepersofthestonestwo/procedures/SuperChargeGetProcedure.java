@@ -35,9 +35,9 @@ public class SuperChargeGetProcedure {
 		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandler) {
 			for (int _idx = 0; _idx < _modHandler.getSlots(); _idx++) {
 				ItemStack itemstackiterator = _modHandler.getStackInSlot(_idx).copy();
-				if (itemstackiterator.is(ItemTags.create(new ResourceLocation("power:elemental_batteries")))) {
+				if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("power:elemental_batteries")))) {
 					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("power:super_charge"));
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.fromNamespaceAndPath("power:super_charge"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

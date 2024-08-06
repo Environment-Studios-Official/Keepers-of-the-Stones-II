@@ -24,6 +24,6 @@ public class RevengeEnchantment extends Enchantment {
 
 	@Override
 	public boolean canApplyAtEnchantingTable(ItemStack itemstack) {
-		return Ingredient.of(ItemTags.create(new ResourceLocation("minecraft:tools"))).test(itemstack);
+		return Ingredient.of(ItemTags.create(ResourceLocation.parse("minecraft:tools"))).test(itemstack);
 	}
 }

@@ -5,7 +5,7 @@ repositories {
 }
     
 dependencies {
-	implementation "curse.maven:pehkui-319596:5419264"
+	implementation "curse.maven:pehkui-319596:5446174"
 }
 
 
@@ -16,14 +16,18 @@ repositories {
 }
 
 dependencies {
-  implementation 'software.bernie.geckolib:geckolib-neoforge-1.20.6:4.5.4'
+  implementation 'software.bernie.geckolib:geckolib-neoforge-1.21:4.5.7'
 }
 
 
-
-
-dependencies {
-  implementation files('C:/sa/player_animation_lib_forge-1.0.2-rc1+1.20.6.jar')
+repositories {
+ maven {
+     url = 'https://maven.kosmx.dev/'
+ }
 }
+
+ dependencies {
+   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.21'
+ }
 
 

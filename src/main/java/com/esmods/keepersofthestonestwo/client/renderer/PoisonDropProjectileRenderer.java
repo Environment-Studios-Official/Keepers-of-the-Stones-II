@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 
 public class PoisonDropProjectileRenderer extends EntityRenderer<PoisonDropProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/poison_drop.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/poison_drop.png");
 	private final Modelrain_drop model;
 
 	public PoisonDropProjectileRenderer(EntityRendererProvider.Context context) {

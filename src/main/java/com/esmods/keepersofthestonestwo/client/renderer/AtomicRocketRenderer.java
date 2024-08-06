@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.AtomicRocketEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelatomic_rocket;
 
 public class AtomicRocketRenderer extends EntityRenderer<AtomicRocketEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/atomic_rocket.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/atomic_rocket.png");
 	private final Modelatomic_rocket model;
 
 	public AtomicRocketRenderer(EntityRendererProvider.Context context) {

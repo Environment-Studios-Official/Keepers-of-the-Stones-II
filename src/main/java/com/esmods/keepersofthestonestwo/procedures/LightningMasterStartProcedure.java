@@ -33,7 +33,7 @@ public class LightningMasterStartProcedure {
 		}
 		for (int index0 = 0; index0 < 20; index0++) {
 			if (world instanceof ServerLevel _level && _level.getServer() != null) {
-				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.getServer().getFunctions().get(new ResourceLocation("power:lightning_master"));
+				Optional<CommandFunction<CommandSourceStack>> _fopt = _level.getServer().getFunctions().get(ResourceLocation.parse("power:lightning_master"));
 				if (_fopt.isPresent())
 					_level.getServer().getFunctions().execute(_fopt.get(), new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null));
 			}

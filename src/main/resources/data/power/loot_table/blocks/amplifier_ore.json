@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "power:raw_copyrium",
+          "name": "power:raw_amplifier",
           "weight": 1,
           "conditions": [
             {
@@ -14,16 +14,14 @@
               "term": {
                 "condition": "minecraft:match_tool",
                 "predicate": {
-                  "predicates": {
-                    "minecraft:enchantments": [
-                      {
-                        "enchantment": "minecraft:silk_touch",
-                        "levels": {
-                          "min": 1
-                        }
+                  "enchantments": [
+                    {
+                      "enchantment": "minecraft:silk_touch",
+                      "levels": {
+                        "min": 1
                       }
-                    ]
-                  }
+                    }
+                  ]
                 }
               }
             }
@@ -46,5 +44,5 @@
       ]
     }
   ],
-  "random_sequence": "power:blocks/deepslate_copyrium_ore"
+  "random_sequence": "power:blocks/amplifier_ore"
 }

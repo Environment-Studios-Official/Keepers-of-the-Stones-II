@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelether_bullet;
 
 public class DestructionBallProjectileRenderer extends EntityRenderer<DestructionBallProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/destruction_ball.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/destruction_ball.png");
 	private final Modelether_bullet model;
 
 	public DestructionBallProjectileRenderer(EntityRendererProvider.Context context) {

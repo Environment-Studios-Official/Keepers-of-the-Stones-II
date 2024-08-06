@@ -65,9 +65,9 @@ public class CursedKeyOpenVaultProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 				if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
@@ -77,7 +77,7 @@ public class CursedKeyOpenVaultProcedure {
 					void timedLoop(int current, int total, int ticks) {
 						if (!world.isClientSide() && world.getServer() != null) {
 							BlockPos _bpLootTblWorld = BlockPos.containing(x, y, z);
-							for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, new ResourceLocation("power:chests/cursed_castle_vaults"))).getRandomItems(
+							for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("power:chests/cursed_castle_vaults"))).getRandomItems(
 									new LootParams.Builder((ServerLevel) world).withParameter(LootContextParams.ORIGIN, Vec3.atCenterOf(_bpLootTblWorld)).withParameter(LootContextParams.BLOCK_STATE, world.getBlockState(_bpLootTblWorld))
 											.withOptionalParameter(LootContextParams.BLOCK_ENTITY, world.getBlockEntity(_bpLootTblWorld)).create(LootContextParamSets.EMPTY))) {
 								if (world instanceof ServerLevel _level) {
@@ -90,9 +90,9 @@ public class CursedKeyOpenVaultProcedure {
 						}
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
+								_level.playSound(null, BlockPos.containing(x + 0.5, y + 1, z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1);
 							} else {
-								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
+								_level.playLocalSound((x + 0.5), (y + 1), (z + 0.5), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.eject")), SoundSource.BLOCKS, 1, 1, false);
 							}
 						}
 						final int tick2 = ticks;
@@ -106,9 +106,9 @@ public class CursedKeyOpenVaultProcedure {
 			} else {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.insert_fail")), SoundSource.BLOCKS, 1, 1, false);
 					}
 				}
 			}

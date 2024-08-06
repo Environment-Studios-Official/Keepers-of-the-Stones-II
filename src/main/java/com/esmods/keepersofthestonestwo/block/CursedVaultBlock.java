@@ -9,6 +9,7 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.level.material.PushReaction;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.IntegerProperty;
 import net.minecraft.world.level.block.state.properties.DirectionProperty;
 import net.minecraft.world.level.block.state.StateDefinition;
@@ -41,10 +42,10 @@ public class CursedVaultBlock extends Block implements EntityBlock {
 	public static final DirectionProperty FACING = HorizontalDirectionalBlock.FACING;
 
 	public CursedVaultBlock() {
-		super(BlockBehaviour.Properties.of()
-				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.break")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.step")), () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:backport.block.vault.place")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.netherite_block.hit")), () -> BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.netherite_block.fall"))))
+		super(BlockBehaviour.Properties.of().instrument(NoteBlockInstrument.BASEDRUM)
+				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.break")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.step")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.place")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.hit")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)

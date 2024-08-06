@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.KnifeAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelknife;
 
 public class KnifeAttackProjectileRenderer extends EntityRenderer<KnifeAttackProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/knife.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/knife.png");
 	private final Modelknife model;
 
 	public KnifeAttackProjectileRenderer(EntityRendererProvider.Context context) {

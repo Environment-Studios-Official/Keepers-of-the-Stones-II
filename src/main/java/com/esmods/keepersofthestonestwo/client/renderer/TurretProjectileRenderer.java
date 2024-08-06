@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.client.model.Modelturret_projectile;
 
 public class TurretProjectileRenderer extends EntityRenderer<TurretProjectileEntity> {
-	private static final ResourceLocation texture = new ResourceLocation("power:textures/entities/turret_projectile.png");
+	private static final ResourceLocation texture = ResourceLocation.parse("power:textures/entities/turret_projectile.png");
 	private final Modelturret_projectile model;
 
 	public TurretProjectileRenderer(EntityRendererProvider.Context context) {
