@@ -25,7 +25,7 @@ public class EnergiumGolemPriGibieliSushchnostiProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(64 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (entityiterator instanceof ServerPlayer _player) {
-					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.fromNamespaceAndPath("power:the_end_of_tyranny"));
+					AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:the_end_of_tyranny"));
 					if (_adv != null) {
 						AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 						if (!_ap.isDone()) {
