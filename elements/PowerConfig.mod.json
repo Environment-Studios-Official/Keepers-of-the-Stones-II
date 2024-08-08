@@ -10,31 +10,14 @@
             "item": {
               "value": ""
             },
-            "silkTouchMode": 0,
-            "block": {
-              "value": ""
-            },
-            "logicField": 1,
-            "numberField": 0.0,
-            "textDefault": "",
-            "comment": "Allows the configuration file to record static values",
-            "vardisplay": "manage_values_when_using_the_config",
-            "varname": "manage_values_when_using_the_config",
-            "enablecomment": true,
-            "stringlist": []
-          },
-          {
-            "item": {
-              "value": ""
-            },
             "silkTouchMode": 1,
             "block": {
               "value": ""
             },
             "logicField": 0,
-            "numberField": 6000.0,
+            "numberField": 600.0,
             "textDefault": "",
-            "comment": "Allows you to change the duration of the master effect",
+            "comment": "Sets the base duration value for the master effect",
             "vardisplay": "master_effect_duration",
             "varname": "the_duration_of_the_stone_power",
             "enablecomment": true,
@@ -49,7 +32,7 @@
               "value": ""
             },
             "logicField": 0,
-            "numberField": 3000.0,
+            "numberField": 300.0,
             "textDefault": "",
             "comment": "Sets the recharge time of the stone",
             "vardisplay": "recharge_time_of_the_stone",
