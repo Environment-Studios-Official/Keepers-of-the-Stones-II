@@ -29365,6 +29365,9 @@
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
     ],
+    "ITEMS:minecraft:asda": [
+      "CUSTOM:SandStone"
+    ],
     "ITEMS:minecraft:foot_armor": [
       "~CUSTOM:MercuryArmor.boots",
       "~CUSTOM:MushroomsArmor.boots",

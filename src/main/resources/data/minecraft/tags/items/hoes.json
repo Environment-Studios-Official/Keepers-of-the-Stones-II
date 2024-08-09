@@ -1,4 +1,7 @@
 {
   "replace": false,
-  "values": []
+  "values": [
+    "power:creation_hoe",
+    "power:energium_hoe"
+  ]
 }
