@@ -11,6 +11,15 @@
     "isInstant": false,
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
-    "renderStatusInHUD": true
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "MusicMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "MusicMasterEnd"
+    }
   }
 }

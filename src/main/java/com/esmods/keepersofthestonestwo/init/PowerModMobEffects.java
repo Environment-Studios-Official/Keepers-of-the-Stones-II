@@ -34,6 +34,7 @@ import com.esmods.keepersofthestonestwo.procedures.PowerLockEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
@@ -272,6 +273,8 @@ public class PowerModMobEffects {
 			MushroomsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == MERCURY_MASTER.get()) {
 			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == MUSIC_MASTER.get()) {
+			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }
