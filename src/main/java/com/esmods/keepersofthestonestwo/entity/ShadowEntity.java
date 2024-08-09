@@ -52,7 +52,7 @@ public class ShadowEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4, false));
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4));
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {

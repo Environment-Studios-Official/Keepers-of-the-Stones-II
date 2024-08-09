@@ -7,10 +7,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
+import net.minecraft.core.registries.Registries;
 
 import java.util.List;
-
-import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 
 public class RevengeEnchantment extends Enchantment {
 	public RevengeEnchantment(EquipmentSlot... slots) {
@@ -19,7 +19,7 @@ public class RevengeEnchantment extends Enchantment {
 
 	@Override
 	protected boolean checkCompatibility(Enchantment enchantment) {
-		return this != enchantment && !List.of(PowerModEnchantments.ISOLATION.get()).contains(enchantment);
+		return this != enchantment && !List.of(ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("power:isolation"))).contains(enchantment);
 	}
 
 	@Override
