@@ -16,7 +16,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
-public class MasterMasterEndProcedure {
+public class MistMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;

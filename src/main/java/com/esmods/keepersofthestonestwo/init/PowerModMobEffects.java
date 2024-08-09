@@ -36,9 +36,9 @@ import com.esmods.keepersofthestonestwo.procedures.PlantsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MasterMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightMasterEndProcedure;
@@ -82,6 +82,7 @@ import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
@@ -165,6 +166,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> BLUE_MAGNET_POWER = REGISTRY.register("blue_magnet_power", () -> new BlueMagnetPowerMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -257,7 +259,7 @@ public class PowerModMobEffects {
 		} else if (effect == STAR_REGENERATION.get()) {
 			StarRegenerationEndProcedure.execute(entity);
 		} else if (effect == MIST_MASTER.get()) {
-			MasterMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+			MistMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == SAND_MASTER.get()) {
 			SandMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == SPEED_MASTER.get()) {
