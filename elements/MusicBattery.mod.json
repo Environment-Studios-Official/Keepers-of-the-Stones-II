@@ -3,36 +3,15 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "music_stone",
+    "texture": "music_battery",
     "customModelName": "Normal",
-    "customProperties": {
-      "recharge": {
-        "name": "StoneGetRechargeState"
-      }
-    },
-    "states": [
-      {
-        "renderType": 0,
-        "texture": "recharging_stone",
-        "customModelName": "Normal",
-        "stateMap": [
-          {
-            "property": {
-              "min": -1.7976931348623157E308,
-              "max": 1.7976931348623157E308,
-              "name": "CUSTOM:recharge",
-              "type": "number"
-            },
-            "value": 0.01
-          }
-        ]
-      }
-    ],
-    "name": "Music Stone",
+    "customProperties": {},
+    "states": [],
+    "name": "Battery",
     "rarity": "COMMON",
     "creativeTabs": [
       {
-        "value": "CUSTOM:Stones"
+        "value": "CUSTOM:Batteries"
       }
     ],
     "stackSize": 1,
@@ -44,14 +23,14 @@
       "value": ""
     },
     "destroyAnyBlock": false,
-    "immuneToFire": true,
+    "immuneToFire": false,
     "stayInGridWhenCrafting": false,
     "damageOnCrafting": false,
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInformation": {
       "fixedValue": [],
-      "name": "GetRechargeInfo"
+      "name": "MusicBatteryDesc"
     },
     "glowCondition": {
       "fixedValue": false
@@ -60,10 +39,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "MusicStoneUse"
-    },
-    "onItemInInventoryTick": {
-      "name": "RechargeStoneTickEvent"
+      "name": "MusicBatteryUse"
     },
     "enableRanged": false,
     "shootConstantly": false,

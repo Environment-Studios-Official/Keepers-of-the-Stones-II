@@ -94,6 +94,7 @@ import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscCallOfThePastItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscAncientMoodItem;
+import com.esmods.keepersofthestonestwo.item.MusicBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MusicArmorItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsStoneItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsHammerItem;
@@ -585,6 +586,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_CHESTPLATE = REGISTRY.register("music_armor_chestplate", () -> new MusicArmorItem.Chestplate());
 	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_LEGGINGS = REGISTRY.register("music_armor_leggings", () -> new MusicArmorItem.Leggings());
 	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_BOOTS = REGISTRY.register("music_armor_boots", () -> new MusicArmorItem.Boots());
+	public static final DeferredHolder<Item, Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

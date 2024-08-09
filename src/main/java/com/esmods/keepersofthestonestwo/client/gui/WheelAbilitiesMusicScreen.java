@@ -16,17 +16,17 @@ import java.util.HashMap;
 
 import com.mojang.blaze3d.systems.RenderSystem;
 
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.network.WheelAbilitiesMushroomsButtonMessage;
+import com.esmods.keepersofthestonestwo.network.WheelAbilitiesMusicButtonMessage;
 
-public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<WheelAbilitiesMushroomsMenu> {
-	private final static HashMap<String, Object> guistate = WheelAbilitiesMushroomsMenu.guistate;
+public class WheelAbilitiesMusicScreen extends AbstractContainerScreen<WheelAbilitiesMusicMenu> {
+	private final static HashMap<String, Object> guistate = WheelAbilitiesMusicMenu.guistate;
 	private final Level world;
 	private final int x, y, z;
 	private final Player entity;
@@ -36,11 +36,11 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_flying_spores;
-	ImageButton imagebutton_planting_mushrooms;
-	ImageButton imagebutton_mushroom_saturation;
+	ImageButton imagebutton_ability_1;
+	ImageButton imagebutton_ability_2;
+	ImageButton imagebutton_ability_3;
 
-	public WheelAbilitiesMushroomsScreen(WheelAbilitiesMushroomsMenu container, Inventory inventory, Component text) {
+	public WheelAbilitiesMusicScreen(WheelAbilitiesMusicMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
 		this.world = container.world;
 		this.x = container.x;
@@ -56,12 +56,6 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_planting_mushrooms_uses_35"), mouseX, mouseY);
-		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 21 && mouseY < topPos + 45)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_flying_spores_uses_15"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50"), mouseX, mouseY);
 	}
 
 	@Override
@@ -94,8 +88,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(0, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(0, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
@@ -109,8 +103,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(1, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 1, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(1, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
@@ -124,8 +118,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(2, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 2, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(2, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
@@ -139,8 +133,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(3, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 3, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(3, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
 			@Override
@@ -154,8 +148,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(4, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 4, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(4, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
 			@Override
@@ -169,8 +163,8 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(5, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 5, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(5, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
 			@Override
@@ -181,11 +175,11 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_flying_spores = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/flying_spores.png"), new ResourceLocation("power:textures/screens/flying_spores_highlight.png")), e -> {
+		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_1.png"), new ResourceLocation("power:textures/screens/ability_1_highlight.png")),
+				e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(6, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 6, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(6, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
@@ -193,13 +187,13 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_flying_spores", imagebutton_flying_spores);
-		this.addRenderableWidget(imagebutton_flying_spores);
-		imagebutton_planting_mushrooms = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/planting_mushrooms.png"), new ResourceLocation("power:textures/screens/planting_mushrooms_highlight.png")), e -> {
+		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
+		this.addRenderableWidget(imagebutton_ability_1);
+		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_2.png"), new ResourceLocation("power:textures/screens/ability_2_highlight.png")),
+				e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(7, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(7, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -207,13 +201,13 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_planting_mushrooms", imagebutton_planting_mushrooms);
-		this.addRenderableWidget(imagebutton_planting_mushrooms);
-		imagebutton_mushroom_saturation = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/mushroom_saturation.png"), new ResourceLocation("power:textures/screens/mushroom_saturation_highlight.png")), e -> {
+		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
+		this.addRenderableWidget(imagebutton_ability_2);
+		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_3.png"), new ResourceLocation("power:textures/screens/ability_3_highlight.png")),
+				e -> {
 					if (true) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(8, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMusicButtonMessage(8, x, y, z));
+						WheelAbilitiesMusicButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
@@ -221,7 +215,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_mushroom_saturation", imagebutton_mushroom_saturation);
-		this.addRenderableWidget(imagebutton_mushroom_saturation);
+		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
+		this.addRenderableWidget(imagebutton_ability_3);
 	}
 }
