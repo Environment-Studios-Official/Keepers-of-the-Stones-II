@@ -234,13 +234,13 @@ public class AmberSpecialAttackProcedure {
 									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.place")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							{
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+								_vars.syncPlayerVariables(entity);
+							}
 						}
 					}
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

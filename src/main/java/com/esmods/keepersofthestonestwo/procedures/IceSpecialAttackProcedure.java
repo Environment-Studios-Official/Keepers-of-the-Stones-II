@@ -193,13 +193,13 @@ public class IceSpecialAttackProcedure {
 									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
+							{
+								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+								_vars.syncPlayerVariables(entity);
+							}
 						}
 					}
-				}
-				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
-					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}
