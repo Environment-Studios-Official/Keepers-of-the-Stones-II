@@ -14,6 +14,7 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class EarthMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -50,7 +51,7 @@ public class EarthMasterEndProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.EARTH_STONE.get());
 				_setstack.setCount(1);
-				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? 6000 : 0));
+				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIME_OF_THE_STONE.get() * 20 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {

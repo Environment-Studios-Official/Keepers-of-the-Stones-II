@@ -25,6 +25,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class LavaBatteryUseProcedure {
@@ -42,7 +43,7 @@ public class LavaBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LAVA_MASTER.get(), 6000, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LAVA_MASTER.get(), (int) (((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
