@@ -1,5 +1,5 @@
 modLoader="javafml"
-loaderVersion="[47,)"
+loaderVersion="[2,)"
 license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
@@ -17,89 +17,84 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 # End of user code block mod configuration
 
 [[dependencies.power]]
+    modId="neoforge"
+    type="required"
+    versionRange="[20.4.223,)"
+    ordering="AFTER"
+    side="BOTH"
+
+[[dependencies.power]]
     modId="minecraft"
-    mandatory=true
-    versionRange="[1.20.1]"
+    type="required"
+    versionRange="[1.20.4]"
     ordering="AFTER"
     side="BOTH"
 
 [[dependencies.power]]
     modId="pehkui"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="kleiders_custom_renderer"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="geckolib"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="particlepresets"
-    mandatory=true
+    type="required"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.power]]
     modId="kleidersplayerrenderer"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="pehkui"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="bettercombat"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="geckolib"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 [[dependencies.power]]
     modId="playeranimator"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="particlepresets"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
 
 [[dependencies.power]]
     modId="cpapi"
-    mandatory=false
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.power]]
-    modId="powerlc"
-    mandatory=false
+    type="optional"
     versionRange="[0,)"
     ordering="NONE"
     side="BOTH"
