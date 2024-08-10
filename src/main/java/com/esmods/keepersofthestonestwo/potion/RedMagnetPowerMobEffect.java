@@ -13,12 +13,12 @@ public class RedMagnetPowerMobEffect extends MobEffect {
 	}
 
 	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		RedMagnetPowerTickProcedure.execute(entity.level(), entity);
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
-		RedMagnetPowerTickProcedure.execute(entity.level(), entity);
+	public boolean isDurationEffectTick(int duration, int amplifier) {
+		return true;
 	}
 }
