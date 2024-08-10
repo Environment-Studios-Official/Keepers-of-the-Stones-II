@@ -118,7 +118,7 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<source>21</source>
-					<target>1.21</target>
+					<target>21</target>
 				</configuration>
 			</plugin>
 			<plugin>
