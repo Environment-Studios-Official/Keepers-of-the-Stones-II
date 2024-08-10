@@ -308,7 +308,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_music_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/music_element.png"), new ResourceLocation("power:textures/screens/music_element_highlighted.png")), e -> {
 					if (MusicStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart2ButtonMessage(12, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart2ButtonMessage(12, x, y, z));
 						KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 12, x, y, z);
 					}
 				}) {

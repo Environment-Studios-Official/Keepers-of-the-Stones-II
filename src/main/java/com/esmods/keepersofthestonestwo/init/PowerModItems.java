@@ -581,11 +581,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_SLAB = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_SLAB);
 	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_STAIRS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_STAIRS);
 	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_WALL = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_WALL);
-	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_HELMET = REGISTRY.register("music_armor_helmet", () -> new MusicArmorItem.Helmet());
-	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_CHESTPLATE = REGISTRY.register("music_armor_chestplate", () -> new MusicArmorItem.Chestplate());
-	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_LEGGINGS = REGISTRY.register("music_armor_leggings", () -> new MusicArmorItem.Leggings());
-	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_BOOTS = REGISTRY.register("music_armor_boots", () -> new MusicArmorItem.Boots());
-	public static final DeferredHolder<Item, Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_HELMET = REGISTRY.register("music_armor_helmet", MusicArmorItem.Helmet::new);
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_CHESTPLATE = REGISTRY.register("music_armor_chestplate", MusicArmorItem.Chestplate::new);
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_LEGGINGS = REGISTRY.register("music_armor_leggings", MusicArmorItem.Leggings::new);
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_BOOTS = REGISTRY.register("music_armor_boots", MusicArmorItem.Boots::new);
+	public static final DeferredHolder<Item, Item> MUSIC_BATTERY = REGISTRY.register("music_battery", MusicBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
