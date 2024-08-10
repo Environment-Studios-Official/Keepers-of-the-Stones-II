@@ -9,7 +9,7 @@
         "range": "[0,)",
         "artifactVersion": "12"
       },
-      "path": "META-INF/jarjar/cpapi-v12.jar",
+      "path": "META-INF/jarjar/cpapi-v12jar",
       "isObfuscated": true
     },
     {
@@ -21,7 +21,7 @@
         "range": "[0,)",
         "artifactVersion": "1.0.1"
       },
-      "path": "META-INF/jarjar/particlepresets-1.0.0-neoforge-1.20.4.jar",
+      "path": "META-INF/jarjar/particlepresets-1.0.1.jar",
       "isObfuscated": true
     },
     {
