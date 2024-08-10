@@ -32164,22 +32164,19 @@
       "pehkui",
       "kleiders_custom_renderer",
       "geckolib",
-      "playeranimator",
-      "particlepresets"
+      "playeranimator"
     ],
     "dependencies": [
       "bettercombat"
     ],
     "dependants": [
-      "cpapi",
-      "powerlc"
+      "cpapi"
     ],
     "mcreatorDependencies": [
       "kleidersplayerrenderer",
       "pehkui",
       "geckolib",
-      "playeranimator",
-      "particlepresets"
+      "playeranimator"
     ],
     "currentGenerator": "neoforge-1.20.4",
     "credits": "Created by Environment Studios",
