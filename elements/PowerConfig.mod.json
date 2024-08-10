@@ -1,0 +1,49 @@
+{
+  "_fv": 66,
+  "_type": "config",
+  "definition": {
+    "pools": [
+      {
+        "category": "basic_settings",
+        "entries": [
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 600.0,
+            "textDefault": "",
+            "comment": "Sets the base duration value for the master effect",
+            "vardisplay": "master_effect_duration",
+            "varname": "the_duration_of_the_stone_power",
+            "enablecomment": true,
+            "stringlist": []
+          },
+          {
+            "item": {
+              "value": ""
+            },
+            "silkTouchMode": 1,
+            "block": {
+              "value": ""
+            },
+            "logicField": 0,
+            "numberField": 300.0,
+            "textDefault": "",
+            "comment": "Sets the recharge time of the stone",
+            "vardisplay": "recharge_time_of_the_stone",
+            "varname": "recharge_time_of_the_stone",
+            "enablecomment": true,
+            "stringlist": []
+          }
+        ]
+      }
+    ],
+    "file": "power_config",
+    "configType": 0
+  }
+}
