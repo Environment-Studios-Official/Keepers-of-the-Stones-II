@@ -32124,7 +32124,7 @@
     "license": "GNU General Public License version 3 (GPLv3)",
     "serverSideOnly": false,
     "updateURL": "https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json",
-    "modPicture": "biez_imieni-1",
+    "modPicture": "logo",
     "requiredMods": [
       "pehkui",
       "kleiders_custom_renderer",
