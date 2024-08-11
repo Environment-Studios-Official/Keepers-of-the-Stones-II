@@ -32411,8 +32411,7 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "geckolib",
-      "playeranimator"
+      "geckolib"
     ],
     "dependencies": [
       "bettercombat"
