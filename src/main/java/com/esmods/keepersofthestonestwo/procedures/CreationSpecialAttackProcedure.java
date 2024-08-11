@@ -42,7 +42,7 @@ public class CreationSpecialAttackProcedure {
 		double Scaling = 0;
 		double particleAmount = 0;
 		double random = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -106,7 +106,7 @@ public class CreationSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 				particleAmount = 4;
 				particleRadius = 1;
@@ -193,7 +193,7 @@ public class CreationSpecialAttackProcedure {
 					}
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("creation_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.IMMORTALITY.get(), 400, 0, false, false));

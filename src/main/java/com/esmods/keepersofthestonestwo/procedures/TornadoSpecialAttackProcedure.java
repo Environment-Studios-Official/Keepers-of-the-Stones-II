@@ -31,7 +31,7 @@ public class TornadoSpecialAttackProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				{
 					Entity _shootFrom = entity;
@@ -65,7 +65,7 @@ public class TornadoSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -107,7 +107,7 @@ public class TornadoSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("tornado_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 					if (world instanceof Level _level) {
@@ -118,7 +118,7 @@ public class TornadoSpecialAttackProcedure {
 						}
 					}
 					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.SWEEP_ATTACK, x, y, z, 30, 0, (-1), 0, 1);
+						_level.sendParticles(ParticleTypes.CRIT, x, y, z, 30, 0, (-1), 0, 1);
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 10, 5, false, false));
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

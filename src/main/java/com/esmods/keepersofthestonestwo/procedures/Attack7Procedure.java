@@ -11,7 +11,7 @@ public class Attack7Procedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "air_attack_3";
+			_vars.ability = "air_ability_3";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)

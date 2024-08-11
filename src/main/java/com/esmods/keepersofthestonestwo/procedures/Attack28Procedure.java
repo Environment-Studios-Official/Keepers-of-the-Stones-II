@@ -11,7 +11,7 @@ public class Attack28Procedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "lightning_attack_4";
+			_vars.ability = "lightning_ability_4";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)

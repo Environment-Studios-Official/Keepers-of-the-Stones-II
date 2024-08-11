@@ -41,7 +41,7 @@ public class AmberSpecialAttackProcedure {
 		double ZPar = 0;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -89,7 +89,7 @@ public class AmberSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
@@ -203,7 +203,7 @@ public class AmberSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("amber_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (!world
 						.getBlockState(new BlockPos(
