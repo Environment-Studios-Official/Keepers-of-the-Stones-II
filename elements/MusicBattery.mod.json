@@ -9,11 +9,7 @@
     "states": [],
     "name": "Battery",
     "rarity": "COMMON",
-    "creativeTabs": [
-      {
-        "value": "CUSTOM:Batteries"
-      }
-    ],
+    "creativeTabs": [],
     "stackSize": 1,
     "enchantability": 0,
     "useDuration": 0,
