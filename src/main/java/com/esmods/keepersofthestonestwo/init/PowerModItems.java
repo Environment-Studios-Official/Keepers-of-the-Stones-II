@@ -94,6 +94,8 @@ import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscCallOfThePastItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscAncientMoodItem;
+import com.esmods.keepersofthestonestwo.item.MusicBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MusicArmorItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsStoneItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsHammerItem;
 import com.esmods.keepersofthestonestwo.item.MushroomsBatteryItem;
@@ -575,6 +577,16 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_COPYRIUM_ORE = block(PowerModBlocks.DEEPSLATE_COPYRIUM_ORE);
 	public static final DeferredHolder<Item, Item> MERCURY_BALL = REGISTRY.register("mercury_ball", () -> new MercuryBallItem());
+	public static final DeferredHolder<Item, Item> CHISELED_CURSED_STONE = block(PowerModBlocks.CHISELED_CURSED_STONE);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_SLAB = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_SLAB);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_STAIRS = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_STAIRS);
+	public static final DeferredHolder<Item, Item> CURSED_STONE_CRACKED_BRICKS_WALL = block(PowerModBlocks.CURSED_STONE_CRACKED_BRICKS_WALL);
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_HELMET = REGISTRY.register("music_armor_helmet", () -> new MusicArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_CHESTPLATE = REGISTRY.register("music_armor_chestplate", () -> new MusicArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_LEGGINGS = REGISTRY.register("music_armor_leggings", () -> new MusicArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_BOOTS = REGISTRY.register("music_armor_boots", () -> new MusicArmorItem.Boots());
+	public static final DeferredHolder<Item, Item> MUSIC_BATTERY = REGISTRY.register("music_battery", () -> new MusicBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

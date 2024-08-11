@@ -11,12 +11,12 @@ dependencies {
 
 repositories {
     maven {
-    	url = "https://jitpack.io"
+    	url = "https://cursemaven.com"
     }
 }
     
 dependencies {
-	implementation 'com.github.Virtuoel:Pehkui:3.8.2-1.20.4-neoforge'
+	implementation "curse.maven:pehkui-319596:5393108"
 }
 
 
@@ -40,18 +40,5 @@ repositories {
  dependencies {
    implementation 'dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20.4'
  }
-
-
-repositories {
-    maven {
-        url "https://www.cursemaven.com"
-        content {
-            includeGroup "curse.maven"
-        }
-    }
-}
-dependencies {
-   implementation 'curse.maven:mpp-forge-986014:5381050'
-}
 
 

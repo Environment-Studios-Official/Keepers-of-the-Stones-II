@@ -19,6 +19,7 @@ import com.mojang.brigadier.arguments.StringArgumentType;
 import com.mojang.brigadier.arguments.DoubleArgumentType;
 import com.mojang.brigadier.arguments.BoolArgumentType;
 
+import com.esmods.keepersofthestonestwo.procedures.QuakePowerProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerScaleSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerRecoveryMultiplierSetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MaxPowerScaleSetProcedure;
@@ -102,6 +103,20 @@ public class PwCommand {
 
 					DebugControlProcedure.execute(arguments, entity);
 					return 0;
-				}))));
+				}))).then(Commands.literal("quake").then(Commands.argument("x_translate", DoubleArgumentType.doubleArg()).then(Commands.argument("z_translate", DoubleArgumentType.doubleArg()).executes(arguments -> {
+					Level world = arguments.getSource().getUnsidedLevel();
+					double x = arguments.getSource().getPosition().x();
+					double y = arguments.getSource().getPosition().y();
+					double z = arguments.getSource().getPosition().z();
+					Entity entity = arguments.getSource().getEntity();
+					if (entity == null && world instanceof ServerLevel _servLevel)
+						entity = FakePlayerFactory.getMinecraft(_servLevel);
+					Direction direction = Direction.DOWN;
+					if (entity != null)
+						direction = entity.getDirection();
+
+					QuakePowerProcedure.execute(world, x, y, z, arguments);
+					return 0;
+				})))));
 	}
 }
