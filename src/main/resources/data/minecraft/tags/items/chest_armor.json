@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:music_armor_chestplate",
     "power:mercury_armor_chestplate",
     "power:mushrooms_armor_chestplate",
     "power:magnet_armor_chestplate",

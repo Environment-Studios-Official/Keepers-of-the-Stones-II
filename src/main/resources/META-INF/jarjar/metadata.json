@@ -3,13 +3,25 @@
     {
       "identifier": {
         "group": "com.esmods.cpapi",
-        "artifact": "cpapi-v11"
+        "artifact": "cpapi"
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "11"
+        "artifactVersion": "12"
       },
-      "path": "META-INF/jarjar/cpapi-v11.jar",
+      "path": "META-INF/jarjar/cpapi-v12.jar",
+      "isObfuscated": true
+    },
+    {
+      "identifier": {
+        "group": "dev.kosmx.playerAnim",
+        "artifact": "playerAnim"
+      },
+      "version": {
+        "range": "[0,)",
+        "artifactVersion": "1.0.2-rc1+1.20.6"
+      },
+      "path": "META-INF/jarjar/player_animation_lib_forge-1.0.2-rc1+1.20.6.jar",
       "isObfuscated": true
     }
   ]

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:music_armor_helmet",
     "power:mercury_armor_helmet",
     "power:mushrooms_armor_helmet",
     "power:magnet_armor_helmet",
