@@ -9,8 +9,11 @@ import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
+import net.minecraft.util.RandomSource;
+import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -129,10 +132,39 @@ public class MusicSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("music_attack_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 55) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1, false, false));
+				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false));
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.POISON);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.BLINDNESS);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(MobEffects.HUNGER);
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+					}
+				}
+				particleAmount = 8;
+				particleRadius = 2;
+				for (int index1 = 0; index1 < 60; index1++) {
+					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
+						if (world instanceof ServerLevel _level)
+							_level.sendParticles(ParticleTypes.NOTE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+					}
+				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 55;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
