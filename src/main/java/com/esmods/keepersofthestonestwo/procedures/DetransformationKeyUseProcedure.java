@@ -107,6 +107,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.MUSHROOMS_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MUSIC_MASTER.get());
 				{
 					boolean _setval = false;
 					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
@@ -120,6 +122,28 @@ public class DetransformationKeyUseProcedure {
 						capability.mergers = _setval;
 						capability.syncPlayerVariables(entity);
 					});
+				}
+				if (world.isClientSide()) {
+					if (entity instanceof AbstractClientPlayer player) {
+						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
+						if (animation != null) {
+							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.detransformation"))));
+						}
+					}
+				}
+				if (!world.isClientSide()) {
+					if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+						List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+						synchronized (connections) {
+							Iterator<Connection> iterator = connections.iterator();
+							while (iterator.hasNext()) {
+								Connection connection = iterator.next();
+								if (!connection.isConnecting() && connection.isConnected())
+									PowerMod.PACKET_HANDLER.sendTo(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.detransformation"), entity.getId(), true), connection,
+											NetworkDirection.PLAY_TO_CLIENT);
+							}
+						}
+					}
 				}
 			}
 			{
@@ -177,27 +201,6 @@ public class DetransformationKeyUseProcedure {
 					capability.attack = _setval;
 					capability.syncPlayerVariables(entity);
 				});
-			}
-			if (world.isClientSide()) {
-				if (entity instanceof AbstractClientPlayer player) {
-					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
-					if (animation != null) {
-						animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.detransformation"))));
-					}
-				}
-			}
-			if (!world.isClientSide()) {
-				if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
-					List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
-					synchronized (connections) {
-						Iterator<Connection> iterator = connections.iterator();
-						while (iterator.hasNext()) {
-							Connection connection = iterator.next();
-							if (!connection.isConnecting() && connection.isConnected())
-								PowerMod.PACKET_HANDLER.sendTo(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.detransformation"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
-						}
-					}
-				}
 			}
 		});
 	}

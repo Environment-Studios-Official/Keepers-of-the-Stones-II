@@ -56,7 +56,7 @@
     "inventorySize": 9,
     "inventoryStackSize": 64,
     "onRightClickedInAir": {
-      "name": "LavaStoneUse"
+      "name": "MusicStoneUse"
     },
     "onItemInInventoryTick": {
       "name": "RechargeStoneTickEvent"

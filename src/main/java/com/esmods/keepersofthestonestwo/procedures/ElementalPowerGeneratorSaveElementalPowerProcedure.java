@@ -13,6 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class ElementalPowerGeneratorSaveElementalPowerProcedure {
@@ -124,7 +125,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = 3000;
+									double _setval = (double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_first_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -188,7 +189,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = 3000;
+									double _setval = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_second_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -253,7 +254,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = 3000;
+									double _setval = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_third_timer = _setval;
 										capability.syncPlayerVariables(entity);

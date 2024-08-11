@@ -34,6 +34,7 @@ import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
@@ -116,4 +117,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> BLUE_MAGNET_POWER = REGISTRY.register("blue_magnet_power", () -> new BlueMagnetPowerMobEffect());
 	public static final RegistryObject<MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
 	public static final RegistryObject<MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
+	public static final RegistryObject<MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
 }

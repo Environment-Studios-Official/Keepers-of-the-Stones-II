@@ -7,7 +7,7 @@ import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
 import com.esmods.keepersofthestonestwo.procedures.MistMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.MasterMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnhancedAbilitiesProcedure;
 
 public class MistMasterMobEffect extends MobEffect {
@@ -28,7 +28,7 @@ public class MistMasterMobEffect extends MobEffect {
 	@Override
 	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
 		super.removeAttributeModifiers(entity, attributeMap, amplifier);
-		MasterMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		MistMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 	}
 
 	@Override

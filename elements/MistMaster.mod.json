@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Master of the Mist",
-    "icon": "mist_master.png",
+    "icon": "mist_master",
     "color": {
       "value": -13434727,
       "falpha": 0.0
@@ -19,7 +19,7 @@
       "name": "EnhancedAbilities"
     },
     "onExpired": {
-      "name": "MasterMasterEnd"
+      "name": "MistMasterEnd"
     }
   }
 }

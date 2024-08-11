@@ -38,6 +38,7 @@ import com.esmods.keepersofthestonestwo.entity.GrassBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class EarthSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -309,15 +310,85 @@ public class EarthSpecialAttackProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
-							if (world instanceof ServerLevel _level) {
+							if (world instanceof ServerLevel _level)
 								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"execute positioned ~ ~ ~ run quakecord ~ ~ ~");
-							}
-							if (world instanceof ServerLevel _level) {
-								System.out.println(entityiterator.getStringUUID());
-								_level.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(0, 0, 0), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(),
-										"execute as " + entityiterator.getStringUUID() + " run effect give @s particlepresets:shake_effect 20 1 true");
-							}
+										"pw quake 0 0");
+							PowerMod.queueServerWork(2, () -> {
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 1 0");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 0 1");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 1 1");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 0 -1");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -1 0");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -1 -1");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 1 -1");
+								if (world instanceof ServerLevel _level)
+									_level.getServer().getCommands()
+											.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "shockarea -1 1");
+								PowerMod.queueServerWork(2, () -> {
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -2 2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -1 2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 0 2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 1 2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 2 2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -2 1");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 2 1");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -2 0");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 2 0");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 2 -1");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -2 -1");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 2 -2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 1 -2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands()
+												.performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake 0 -2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -1 -2");
+									if (world instanceof ServerLevel _level)
+										_level.getServer().getCommands().performPrefixedCommand(
+												new CommandSourceStack(CommandSource.NULL, new Vec3(x, y, z), Vec2.ZERO, _level, 4, "", Component.literal(""), _level.getServer(), null).withSuppressedOutput(), "pw quake -2 -2");
+								});
+							});
 							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 									(float) 31.5);
 						}

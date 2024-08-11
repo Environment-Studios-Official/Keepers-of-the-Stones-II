@@ -20,6 +20,7 @@ import com.esmods.keepersofthestonestwo.procedures.TeleportationStoneCheckProced
 import com.esmods.keepersofthestonestwo.procedures.TechnologyStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MusicStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationStoneCheckProcedure;
@@ -44,6 +45,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_teleportation_element;
 	ImageButton imagebutton_mist_element;
 	ImageButton imagebutton_speed_element_highlighted;
+	ImageButton imagebutton_music_element;
 
 	public KeepersBoxGUIPart2Screen(KeepersBoxGUIPart2Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -91,6 +93,9 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		if (SpeedStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 91 && mouseX < leftPos + 115 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_speed"), mouseX, mouseY);
+		if (MusicStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_2.tooltip_music"), mouseX, mouseY);
 	}
 
 	@Override
@@ -276,5 +281,19 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_speed_element_highlighted", imagebutton_speed_element_highlighted);
 		this.addRenderableWidget(imagebutton_speed_element_highlighted);
+		imagebutton_music_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_music_element.png"), 16, 32, e -> {
+			if (MusicStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart2ButtonMessage(12, x, y, z));
+				KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (MusicStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_music_element", imagebutton_music_element);
+		this.addRenderableWidget(imagebutton_music_element);
 	}
 }
