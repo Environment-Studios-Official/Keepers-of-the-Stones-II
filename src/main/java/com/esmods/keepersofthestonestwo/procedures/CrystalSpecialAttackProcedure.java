@@ -33,7 +33,7 @@ public class CrystalSpecialAttackProcedure {
 			return;
 		boolean success = false;
 		double Scaling = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("crystal_attack_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				{
 					Entity _shootFrom = entity;
@@ -67,7 +67,7 @@ public class CrystalSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("crystal_attack_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				for (int index0 = 0; index0 < 10; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -116,7 +116,7 @@ public class CrystalSpecialAttackProcedure {
 					success = false;
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("crystal_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("crystal_attack_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

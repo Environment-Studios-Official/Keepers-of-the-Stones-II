@@ -164,7 +164,7 @@ public class DetransformationKeyUseProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.attack = "0";
+				_vars.ability = "0";
 				_vars.syncPlayerVariables(entity);
 			}
 		});

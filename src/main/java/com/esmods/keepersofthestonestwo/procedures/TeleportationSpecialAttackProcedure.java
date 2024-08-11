@@ -28,7 +28,7 @@ public class TeleportationSpecialAttackProcedure {
 		double ZPar = 0;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("teleportation_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_attack_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -55,7 +55,7 @@ public class TeleportationSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("teleportation_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_attack_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -100,7 +100,7 @@ public class TeleportationSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("teleportation_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("teleportation_attack_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				if (!PowerModVariables.MapVariables.get(world).blue_portal_placed) {
 					world.setBlock(BlockPos.containing(entity.getX(), entity.getY(), entity.getZ()), PowerModBlocks.BLUE_PORTAL.get().defaultBlockState(), 3);

@@ -11,7 +11,7 @@ public class Attack88Procedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.attack = "moon_attack_4";
+			_vars.ability = "moon_attack_4";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
