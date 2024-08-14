@@ -32412,9 +32412,7 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "kleiders_custom_renderer",
-      "geckolib",
-      "playeranimator"
+      "geckolib"
     ],
     "dependencies": [
       "bettercombat"
