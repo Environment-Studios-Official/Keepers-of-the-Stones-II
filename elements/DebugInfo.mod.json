@@ -210,9 +210,9 @@
       {
         "type": "label",
         "data": {
-          "name": "label_proc_selected_attack_debug",
+          "name": "label_proc_selected_ability_debug",
           "text": {
-            "fixedValue": "selected_attack: 0",
+            "fixedValue": "selected_ability: 0",
             "name": "SelectedAttackDebug"
           },
           "color": {
