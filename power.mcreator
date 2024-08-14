@@ -28838,7 +28838,7 @@
       "value": "0.0"
     },
     {
-      "name": "attack",
+      "name": "ability",
       "type": "string",
       "scope": "player_persistent",
       "value": "0"

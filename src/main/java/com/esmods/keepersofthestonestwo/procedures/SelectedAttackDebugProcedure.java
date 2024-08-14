@@ -8,6 +8,6 @@ public class SelectedAttackDebugProcedure {
 	public static String execute(Entity entity) {
 		if (entity == null)
 			return "";
-		return "selected_attack: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).attack;
+		return "selected_ability: " + entity.getData(PowerModVariables.PLAYER_VARIABLES).ability;
 	}
 }

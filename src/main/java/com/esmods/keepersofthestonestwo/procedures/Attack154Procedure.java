@@ -11,7 +11,7 @@ public class Attack154Procedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.attack = "music_attack_2";
+			_vars.ability = "music_ability_2";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
