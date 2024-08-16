@@ -197,11 +197,6 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public boolean canChangeDimensions() {
-		return false;
-	}
-
-	@Override
 	public void startSeenByPlayer(ServerPlayer player) {
 		super.startSeenByPlayer(player);
 		this.bossInfo.addPlayer(player);
