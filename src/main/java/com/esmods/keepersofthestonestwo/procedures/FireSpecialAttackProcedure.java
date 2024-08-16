@@ -36,7 +36,7 @@ public class FireSpecialAttackProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("fire_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -111,7 +111,7 @@ public class FireSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("fire_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 25) {
 				PowerMod.queueServerWork(10, () -> {
 					if (world instanceof Level _level) {
@@ -251,7 +251,7 @@ public class FireSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("fire_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("fire_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {

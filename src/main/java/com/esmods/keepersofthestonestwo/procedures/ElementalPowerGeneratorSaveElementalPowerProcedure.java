@@ -12,6 +12,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class ElementalPowerGeneratorSaveElementalPowerProcedure {
@@ -120,7 +121,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_first_timer = 3000;
+									_vars.fake_element_name_first_timer = (double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -173,7 +174,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_second_timer = 3000;
+									_vars.fake_element_name_second_timer = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -227,7 +228,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_third_timer = 3000;
+									_vars.fake_element_name_third_timer = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{

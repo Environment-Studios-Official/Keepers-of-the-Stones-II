@@ -36,7 +36,7 @@ public class DestructionSpecialAttackProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("destruction_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -85,7 +85,7 @@ public class DestructionSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("destruction_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 45) {
 				{
 					Entity _shootFrom = entity;
@@ -134,7 +134,7 @@ public class DestructionSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("destruction_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("destruction_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (world instanceof ServerLevel _level)
 					_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.RUNES_OF_DESTRUCTION.get()), x, y, z, 5, 1, 1, 1, 0.25);

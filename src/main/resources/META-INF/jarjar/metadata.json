@@ -3,13 +3,13 @@
     {
       "identifier": {
         "group": "com.esmods.cpapi",
-        "artifact": "cpapi-v11"
+        "artifact": "cpapi"
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "11"
+        "artifactVersion": "13"
       },
-      "path": "META-INF/jarjar/cpapi-v11.jar",
+      "path": "META-INF/jarjar/cpapi-v13.jar",
       "isObfuscated": true
     }
   ]

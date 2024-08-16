@@ -116,45 +116,6 @@
         }
       },
       {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_ability_1",
-          "image": "flying_spores.png",
-          "hoveredImage": "flying_spores_highlight.png",
-          "onClick": {
-            "name": "Attack145"
-          },
-          "x": 190,
-          "y": 36
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_ability_2",
-          "image": "planting_mushrooms.png",
-          "hoveredImage": "planting_mushrooms_highlight.png",
-          "onClick": {
-            "name": "Attack146"
-          },
-          "x": 251,
-          "y": 97
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_ability_3",
-          "image": "mushroom_saturation.png",
-          "hoveredImage": "mushroom_saturation_highlight.png",
-          "onClick": {
-            "name": "Attack147"
-          },
-          "x": 190,
-          "y": 158
-        }
-      },
-      {
         "type": "tooltip",
         "data": {
           "name": "tooltip_planting_mushrooms_uses_35",
@@ -191,6 +152,45 @@
           "height": 24,
           "x": 200,
           "y": 168
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_flying_spores",
+          "image": "flying_spores.png",
+          "hoveredImage": "flying_spores_highlight.png",
+          "onClick": {
+            "name": "Attack145"
+          },
+          "x": 190,
+          "y": 36
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_planting_mushrooms",
+          "image": "planting_mushrooms.png",
+          "hoveredImage": "planting_mushrooms_highlight.png",
+          "onClick": {
+            "name": "Attack146"
+          },
+          "x": 251,
+          "y": 97
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_mushroom_saturation",
+          "image": "mushroom_saturation.png",
+          "hoveredImage": "mushroom_saturation_highlight.png",
+          "onClick": {
+            "name": "Attack147"
+          },
+          "x": 190,
+          "y": 158
         }
       }
     ],

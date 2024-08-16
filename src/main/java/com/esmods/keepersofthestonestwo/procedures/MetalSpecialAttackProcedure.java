@@ -32,7 +32,7 @@ public class MetalSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("metal_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Blocks.IRON_BLOCK.asItem()) {
 					{
@@ -195,7 +195,7 @@ public class MetalSpecialAttackProcedure {
 					}
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("metal_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -450,7 +450,7 @@ public class MetalSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("metal_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("metal_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

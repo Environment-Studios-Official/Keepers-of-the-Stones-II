@@ -364,6 +364,38 @@
           "x": 171,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_music_element",
+          "image": "music_element.png",
+          "hoveredImage": "music_element_highlighted.png",
+          "onClick": {
+            "name": "MusicElementGet"
+          },
+          "displayCondition": {
+            "name": "MusicStoneCheck"
+          },
+          "x": 218,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_music",
+          "text": {
+            "fixedValue": "Music"
+          },
+          "displayCondition": {
+            "name": "MusicStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {
