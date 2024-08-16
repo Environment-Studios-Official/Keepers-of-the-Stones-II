@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 68,
   "_type": "enchantment",
   "definition": {
     "name": "Isolation",
@@ -45,7 +45,6 @@
     "excludeItems": false,
     "isTreasureEnchantment": false,
     "isCurse": false,
-    "isAllowedOnBooks": true,
     "canGenerateInLootTables": true,
     "canVillagerTrade": true
   }

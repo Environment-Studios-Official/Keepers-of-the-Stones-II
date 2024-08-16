@@ -78,7 +78,7 @@ public class MeteoriteProjectileEntity extends AbstractArrow implements ItemSupp
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		MeteoriteProjectileKoghdaSnariadPopadaietVBlokProcedure.execute();
+		MeteoriteProjectileKoghdaSnariadPopadaietVBlokProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
