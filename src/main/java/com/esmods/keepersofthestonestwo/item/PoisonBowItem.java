@@ -78,7 +78,7 @@ public class PoisonBowItem extends Item {
 						stack.shrink(1);
 					}
 				}
-				PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure.execute(entity);
+				PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure.execute(world, entity);
 			}
 		}
 	}

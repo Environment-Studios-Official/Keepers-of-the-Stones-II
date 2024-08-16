@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.ItemStack;
@@ -14,7 +15,7 @@ import net.minecraft.core.Holder;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class EnergiumItemsPowerLockedProcedure {
-	public static void execute(Entity entity, ItemStack itemstack) {
+	public static void execute(LevelAccessor world, Entity entity, ItemStack itemstack) {
 		if (entity == null)
 			return;
 		if (!(EnchantmentHelper.getItemEnchantmentLevel((Holder<Enchantment>) ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("power:isolation")), itemstack) != 0)) {

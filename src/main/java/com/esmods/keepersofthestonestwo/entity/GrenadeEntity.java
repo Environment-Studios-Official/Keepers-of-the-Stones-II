@@ -78,13 +78,13 @@ public class GrenadeEntity extends AbstractArrow implements ItemSupplier {
 	@Override
 	public void onHitEntity(EntityHitResult entityHitResult) {
 		super.onHitEntity(entityHitResult);
-		LiitleExplosionProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
+		LiitleExplosionProcedure.execute();
 	}
 
 	@Override
 	public void onHitBlock(BlockHitResult blockHitResult) {
 		super.onHitBlock(blockHitResult);
-		LiitleExplosionProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
+		LiitleExplosionProcedure.execute();
 	}
 
 	@Override

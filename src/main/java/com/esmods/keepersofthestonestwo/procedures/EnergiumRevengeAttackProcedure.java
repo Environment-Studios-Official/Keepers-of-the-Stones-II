@@ -5,6 +5,7 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.EnchantmentHelper;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.ItemStack;
@@ -24,14 +25,14 @@ import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 public class EnergiumRevengeAttackProcedure {
 	@SubscribeEvent
 	public static void onPlayerCriticalHit(CriticalHitEvent event) {
-		execute(event, event.getTarget(), event.getEntity());
+		execute(event, event.getEntity().level(), event.getTarget(), event.getEntity());
 	}
 
-	public static void execute(Entity entity, Entity sourceentity) {
-		execute(null, entity, sourceentity);
+	public static void execute(LevelAccessor world, Entity entity, Entity sourceentity) {
+		execute(null, world, entity, sourceentity);
 	}
 
-	private static void execute(@Nullable Event event, Entity entity, Entity sourceentity) {
+	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity, Entity sourceentity) {
 		if (entity == null || sourceentity == null)
 			return;
 		if (EnchantmentHelper.getItemEnchantmentLevel((Holder<Enchantment>) ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("power:revenge")),

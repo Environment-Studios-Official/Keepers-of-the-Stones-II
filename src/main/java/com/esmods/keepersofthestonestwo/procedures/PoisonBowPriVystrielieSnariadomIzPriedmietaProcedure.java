@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.world.item.ItemStack;
@@ -12,7 +13,7 @@ import net.minecraft.core.Holder;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class PoisonBowPriVystrielieSnariadomIzPriedmietaProcedure {
-	public static void execute(Entity entity) {
+	public static void execute(LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
 		if (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {

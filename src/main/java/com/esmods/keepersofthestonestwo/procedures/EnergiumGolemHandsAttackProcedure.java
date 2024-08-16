@@ -32,7 +32,7 @@ public class EnergiumGolemHandsAttackProcedure {
 		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof EnergiumGolemEntity) {
-				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.attack");
+				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.ability");
 			}
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}
@@ -63,9 +63,9 @@ public class EnergiumGolemHandsAttackProcedure {
 			if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 9) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.iron_golem.attack")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}

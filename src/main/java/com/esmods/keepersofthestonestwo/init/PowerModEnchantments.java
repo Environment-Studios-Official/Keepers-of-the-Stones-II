@@ -10,8 +10,6 @@ import net.neoforged.neoforge.registries.DeferredHolder;
 import net.minecraft.world.item.enchantment.Enchantment;
 import net.minecraft.core.registries.Registries;
 
-import com.esmods.keepersofthestonestwo.enchantment.RevengeEnchantment;
-import com.esmods.keepersofthestonestwo.enchantment.IsolationEnchantment;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PowerModEnchantments {
