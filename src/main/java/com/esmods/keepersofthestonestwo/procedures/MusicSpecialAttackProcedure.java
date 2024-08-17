@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraftforge.registries.ForgeRegistries;
-
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
@@ -21,6 +19,7 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
@@ -30,7 +29,7 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.MercuryBallProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.NoteBombProjectileEntity;
 
 public class MusicSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -50,8 +49,8 @@ public class MusicSpecialAttackProcedure {
 		double playerPosY = 0;
 		double playerPosZ = 0;
 		double playerPosX = 0;
-		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("music_ability_1")) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 15) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_1")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
@@ -87,57 +86,154 @@ public class MusicSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 15;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 15;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("music_ability_2")) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 35) {
-				{
-					Entity _shootFrom = entity;
-					Level projectileLevel = _shootFrom.level();
-					if (!projectileLevel.isClientSide()) {
-						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new MercuryBallProjectileEntity(PowerModEntities.MERCURY_BALL_PROJECTILE.get(), level);
-								entityToSpawn.setOwner(shooter);
-								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setKnockback(knockback);
-								entityToSpawn.setSilent(true);
-								return entityToSpawn;
-							}
-						}.getArrow(projectileLevel, entity, (float) 13.5, 2);
-						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
-						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
-						projectileLevel.addFreshEntity(_entityToSpawn);
-					}
-				}
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_2")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.bubble_pop")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.bubble_column.bubble_pop")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
+				if (world instanceof ServerLevel projectileLevel) {
+					Projectile _entityToSpawn = new Object() {
+						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
+							entityToSpawn.setOwner(shooter);
+							entityToSpawn.setBaseDamage(damage);
+							entityToSpawn.setKnockback(knockback);
+							entityToSpawn.setSilent(true);
+							return entityToSpawn;
+						}
+					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
+					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
+					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
+					projectileLevel.addFreshEntity(_entityToSpawn);
+				}
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 35;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("music_ability_3")) {
-			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 75) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("music_ability_3")) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
@@ -152,9 +248,9 @@ public class MusicSpecialAttackProcedure {
 					_entity.removeEffect(MobEffects.HUNGER);
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				particleAmount = 8;
@@ -168,11 +264,9 @@ public class MusicSpecialAttackProcedure {
 					}
 				}
 				{
-					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power - 75;
-					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-						capability.power = _setval;
-						capability.syncPlayerVariables(entity);
-					});
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
+					_vars.syncPlayerVariables(entity);
 				}
 			}
 		}

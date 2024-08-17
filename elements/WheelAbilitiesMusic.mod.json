@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_musical_attack",
+          "image": "musical_attack.png",
+          "hoveredImage": "musical_attack_highlight.png",
           "onClick": {
             "name": "Attack153"
           },
@@ -129,11 +129,24 @@
         }
       },
       {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_musical_attack_uses_15",
+          "text": {
+            "fixedValue": "Musical attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 204,
+          "y": 47
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_explosion_of_notes",
+          "image": "explosion_of_notes.png",
+          "hoveredImage": "explosion_of_notes_highlight.png",
           "onClick": {
             "name": "Attack154"
           },
@@ -142,11 +155,37 @@
         }
       },
       {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_explosion_of_notes_uses_40",
+          "text": {
+            "fixedValue": "Explosion of notes, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_musical_relaxation_uses_75",
+          "text": {
+            "fixedValue": "Musical relaxation, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 170
+        }
+      },
+      {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_musical_relaxation",
+          "image": "musical_relaxation.png",
+          "hoveredImage": "musical_relaxation_highlight.png",
           "onClick": {
             "name": "Attack155"
           },

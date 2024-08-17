@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "freaking_parsnip_block"
+      },
+      "name": "default"
+    }
+  }
+}
