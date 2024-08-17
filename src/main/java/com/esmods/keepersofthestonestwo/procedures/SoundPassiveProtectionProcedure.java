@@ -7,7 +7,6 @@ import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.effect.MobEffectInstance;
 
 import javax.annotation.Nullable;
 
@@ -36,8 +35,8 @@ public class SoundPassiveProtectionProcedure {
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("sound")) {
 			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STUN.get())) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.STUN.get(), 400, 0, false, false));
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.STUN.get());
 			}
 		}
 	}

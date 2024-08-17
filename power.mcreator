@@ -28949,6 +28949,51 @@
         ]
       },
       "path": "~/ItemsAndBlocks/FreakingParsnip"
+    },
+    {
+      "name": "NoteBombProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "note_bomb_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/NoteBombProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/NoteBombProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "note_bomb_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/NoteBombProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Music"
     }
   ],
   "variable_elements": [
