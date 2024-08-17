@@ -29,6 +29,7 @@ import com.esmods.keepersofthestonestwo.entity.PoisonousThornEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonPitEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonDropProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.PoisonBombEntity;
+import com.esmods.keepersofthestonestwo.entity.NoteBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MiniTornadoProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MeteoriteProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.MercuryBallProjectileEntity;
@@ -138,6 +139,8 @@ public class PowerModEntities {
 			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MercuryBallProjectileEntity>> MERCURY_BALL_PROJECTILE = register("mercury_ball_projectile",
 			EntityType.Builder.<MercuryBallProjectileEntity>of(MercuryBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<NoteBombProjectileEntity>> NOTE_BOMB_PROJECTILE = register("note_bomb_projectile",
+			EntityType.Builder.<NoteBombProjectileEntity>of(NoteBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

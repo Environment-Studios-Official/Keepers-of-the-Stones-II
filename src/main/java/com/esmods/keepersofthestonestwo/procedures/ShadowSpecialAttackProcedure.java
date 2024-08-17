@@ -34,7 +34,7 @@ public class ShadowSpecialAttackProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("shadow_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -80,7 +80,7 @@ public class ShadowSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("shadow_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 35) {
 				{
 					Entity _shootFrom = entity;
@@ -114,7 +114,7 @@ public class ShadowSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("shadow_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("shadow_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = PowerModEntities.SHADOW.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
