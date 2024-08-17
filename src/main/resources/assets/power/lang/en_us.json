@@ -53,6 +53,7 @@
   "item.power.plants_stone": "Plants Stone",
   "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
   "subtitles.strange_sound": "",
+  "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Explosion of notes, uses 40",
   "item.power.creation_staff": "Creation Staff",
   "effect.power.ice_master": "Master of the Ice",
   "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
@@ -248,7 +249,6 @@
   "item.power.raw_depleted_energium": "Raw Depleted Energium",
   "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
   "item.power.destruction_battery": "Battery",
-  "gui.power.wheel_abilities_music.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
   "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
   "item.power.ether_glaive": "Ether Glaive",
   "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
@@ -397,7 +397,6 @@
   "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Four elements attack, uses 10",
   "battery.desc.amber": "Amber",
   "item.power.shadow_armor_chestplate": "Shadow Chestplate",
-  "gui.power.wheel_abilities_music.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
   "item.power.ice_armor_helmet": "Ice Helmet",
   "item.power.tornado_axe": "Tornado Axe",
   "block.power.depleted_energium_ore": "Depleted Energium Ore",
@@ -540,6 +539,7 @@
   "item.power.poison_bow": "Poison Bow",
   "item.power.lava_armor_boots": "Lava Boots",
   "item.power.sand_saber": "Sand Saber",
+  "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Musical relaxation, uses 75",
   "battery.desc.explosion": "Explosion",
   "item.power.energium_key": "Energium Key",
   "item.power.moon_armor_helmet": "Moon Helmet",
@@ -579,7 +579,6 @@
   "item.power.space_battery": "Battery",
   "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
   "item.power.lightning_armor_leggings": "Lightning Leggings",
-  "gui.power.wheel_abilities_music.tooltip_mercury_ball_uses_35": "Mercury ball, uses 35",
   "gui.power.keepers_box_gui_part_4.tooltip_amber": "Amber",
   "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Cleaning, uses 70",
   "gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50": "Self-detonation, uses 50",
@@ -721,5 +720,6 @@
   "item.power.energium_upgrade_smithing_template": "Smithing Template",
   "item.power.creation_pickaxe": "Creation Pickaxe",
   "gui.power.keepers_box_gui_part_3.tooltip_moon": "Moon",
-  "gui.power.debug_info.label_power_recorded_false": "power_recorded: false"
+  "gui.power.debug_info.label_power_recorded_false": "power_recorded: false",
+  "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15"
 }
