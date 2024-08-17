@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "power:freaking_parsnip"
+    },
+    {
+      "item": "power:freaking_parsnip"
+    },
+    {
+      "item": "minecraft:salmon"
+    }
+  ],
+  "result": {
+    "item": "power:deleted_mod_element",
+    "count": 1
+  }
+}

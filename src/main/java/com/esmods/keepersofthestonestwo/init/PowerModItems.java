@@ -145,8 +145,8 @@ import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
+import com.esmods.keepersofthestonestwo.item.FreakingParsnipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipItem;
-import com.esmods.keepersofthestonestwo.item.FreakingParshipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FormStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireSwordItem;
 import com.esmods.keepersofthestonestwo.item.FireStoneItem;
@@ -593,7 +593,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MUSIC_GUITAR = REGISTRY.register("music_guitar", () -> new MusicGuitarItem());
 	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP = REGISTRY.register("freaking_parsnip", () -> new FreakingParsnipItem());
 	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP_BLOCK = block(PowerModBlocks.FREAKING_PARSNIP_BLOCK);
-	public static final DeferredHolder<Item, Item> FREAKING_PARSHIP_SOUP = REGISTRY.register("freaking_parship_soup", () -> new FreakingParshipSoupItem());
+	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP_SOUP = REGISTRY.register("freaking_parsnip_soup", () -> new FreakingParsnipSoupItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
