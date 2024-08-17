@@ -87,6 +87,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
+				tabData.accept(PowerModItems.FREAKING_PARSHIP_SOUP.get());
 			})
 
 					.build());
