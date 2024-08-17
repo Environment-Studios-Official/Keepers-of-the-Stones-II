@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:music_guitar",
     "power:mushrooms_hammer",
     "power:teleportation_blade",
     "power:magnet_claws",

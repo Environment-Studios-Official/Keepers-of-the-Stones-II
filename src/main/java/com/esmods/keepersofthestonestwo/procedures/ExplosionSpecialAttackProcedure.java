@@ -36,7 +36,7 @@ public class ExplosionSpecialAttackProcedure {
 		double ZPar = 0;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("explosion_attack_1")) {
+		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("explosion_ability_1")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 20) {
 				{
 					Entity _shootFrom = entity;
@@ -72,7 +72,7 @@ public class ExplosionSpecialAttackProcedure {
 					});
 				}
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("explosion_attack_2")) {
+		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("explosion_ability_2")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 50) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
@@ -93,7 +93,7 @@ public class ExplosionSpecialAttackProcedure {
 					});
 				}
 			}
-		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).attack).equals("explosion_attack_3")) {
+		} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).ability).equals("explosion_ability_3")) {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 100) {
 				{
 					Entity _shootFrom = entity;

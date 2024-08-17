@@ -10,9 +10,9 @@ public class Attack15Procedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "water_attack_3";
+			String _setval = "water_ability_3";
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.attack = _setval;
+				capability.ability = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

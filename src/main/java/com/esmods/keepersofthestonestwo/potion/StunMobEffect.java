@@ -6,7 +6,8 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.effect.MobEffectCategory;
 import net.minecraft.world.effect.MobEffect;
 
-import com.esmods.keepersofthestonestwo.procedures.StunPriNalozhieniiEffiektaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StunSoundTickProcedure;
 
 public class StunMobEffect extends MobEffect {
 	public StunMobEffect() {
@@ -14,8 +15,14 @@ public class StunMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void addAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
-		StunPriNalozhieniiEffiektaProcedure.execute(entity);
+	public void applyEffectTick(LivingEntity entity, int amplifier) {
+		StunSoundTickProcedure.execute(entity);
+	}
+
+	@Override
+	public void removeAttributeModifiers(LivingEntity entity, AttributeMap attributeMap, int amplifier) {
+		super.removeAttributeModifiers(entity, attributeMap, amplifier);
+		StunStopSoundProcedure.execute(entity);
 	}
 
 	@Override

@@ -87,6 +87,8 @@ public class PowerModTabs {
 				tabData.accept(PowerModBlocks.CURSED_VAULT.get().asItem());
 				tabData.accept(PowerModItems.CURSED_KEY.get());
 				tabData.accept(PowerModItems.MUSIC_DISC_ANCIENT_MOOD.get());
+				tabData.accept(PowerModItems.FREAKING_PARSNIP.get());
+				tabData.accept(PowerModItems.FREAKING_PARSHIP_SOUP.get());
 			})
 
 					.build());
@@ -130,6 +132,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MAGNET_STONE.get());
 				tabData.accept(PowerModItems.MUSHROOMS_STONE.get());
 				tabData.accept(PowerModItems.MERCURY_STONE.get());
+				tabData.accept(PowerModItems.MUSIC_STONE.get());
 			})
 
 					.build());
@@ -180,6 +183,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MAGNET_BATTERY.get());
 				tabData.accept(PowerModItems.MUSHROOMS_BATTERY.get());
 				tabData.accept(PowerModItems.MERCURY_BATTERY.get());
+				tabData.accept(PowerModItems.MUSIC_BATTERY.get());
 			})
 
 					.build());

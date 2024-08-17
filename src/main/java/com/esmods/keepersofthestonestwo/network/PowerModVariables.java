@@ -83,7 +83,7 @@ public class PowerModVariables {
 			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.selected = original.selected;
-			clone.attack = original.attack;
+			clone.ability = original.ability;
 			clone.battery = original.battery;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
@@ -470,7 +470,7 @@ public class PowerModVariables {
 		public boolean selected = false;
 		public double power = 0.0;
 		public double powerTimer = 0.0;
-		public String attack = "0";
+		public String ability = "0";
 		public double mergers = 0.0;
 		public boolean battery = false;
 		public boolean ability_block = false;
@@ -520,7 +520,7 @@ public class PowerModVariables {
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
-			nbt.putString("attack", attack);
+			nbt.putString("ability", ability);
 			nbt.putDouble("mergers", mergers);
 			nbt.putBoolean("battery", battery);
 			nbt.putBoolean("ability_block", ability_block);
@@ -567,7 +567,7 @@ public class PowerModVariables {
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
-			attack = nbt.getString("attack");
+			ability = nbt.getString("ability");
 			mergers = nbt.getDouble("mergers");
 			battery = nbt.getBoolean("battery");
 			ability_block = nbt.getBoolean("ability_block");
@@ -642,7 +642,7 @@ public class PowerModVariables {
 					variables.selected = message.data.selected;
 					variables.power = message.data.power;
 					variables.powerTimer = message.data.powerTimer;
-					variables.attack = message.data.attack;
+					variables.ability = message.data.ability;
 					variables.mergers = message.data.mergers;
 					variables.battery = message.data.battery;
 					variables.ability_block = message.data.ability_block;
