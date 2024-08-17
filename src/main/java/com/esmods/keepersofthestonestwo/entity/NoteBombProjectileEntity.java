@@ -44,6 +44,11 @@ public class NoteBombProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(Blocks.LIGHT_BLUE_STAINED_GLASS);
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
