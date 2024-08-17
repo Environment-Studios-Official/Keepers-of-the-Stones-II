@@ -26119,7 +26119,7 @@
           "src/main/resources/data/power/worldgen/biome/cursed_forest.json"
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "PlayerWitheringInCursedForest",
@@ -26154,7 +26154,7 @@
           }
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "RedMagnetPowerTick",
@@ -26241,7 +26241,7 @@
           "src/main/resources/data/power/worldgen/placed_feature/big_cursed_trees.json"
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "RenderFogCursedForest",
@@ -26264,7 +26264,7 @@
           }
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "GrassCursedForest",
@@ -26279,7 +26279,7 @@
           "src/main/resources/data/power/worldgen/configured_feature/grass_cursed_forest.json"
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "LetsBailThisPlaceIsdead",
@@ -26913,7 +26913,7 @@
           "src/main/resources/data/power/worldgen/placed_feature/basic_cursed_trees.json"
         ]
       },
-      "path": "~/Biomes"
+      "path": "~/Biomes/CursedForest"
     },
     {
       "name": "MusicDiscCallOfThePast",
@@ -32241,7 +32241,12 @@
       },
       {
         "name": "Biomes",
-        "children": []
+        "children": [
+          {
+            "name": "CursedForest",
+            "children": []
+          }
+        ]
       },
       {
         "name": "Gamerules",
