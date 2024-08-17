@@ -28780,6 +28780,220 @@
         ]
       },
       "path": "~/TrimsMaterials"
+    },
+    {
+      "name": "StunStopSound",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_stop_sound",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunStopSoundProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "StunSoundTick",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "stun_sound_tick",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundTickProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "SoundPassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "sound_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SoundPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Sound"
+    },
+    {
+      "name": "MusicPassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "MusicGuitar",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_guitar",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/music_guitar.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MusicGuitarItem.java"
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "MusicGuitarKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "music_guitar_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MusicGuitarKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "FreakingParsnip",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freaking_parsnip",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FreakingParsnipItem.java",
+          "src/main/resources/assets/power/models/item/freaking_parsnip.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/FreakingParsnip"
+    },
+    {
+      "name": "FreakingParsnipBlock",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freaking_parsnip_block",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/blockstates/freaking_parsnip_block.json",
+          "src/main/resources/assets/power/models/block/freaking_parsnip_block.json",
+          "src/main/resources/assets/power/models/item/freaking_parsnip_block.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/block/FreakingParsnipBlockBlock.java",
+          "src/main/resources/data/power/neoforge/biome_modifier/freaking_parsnip_block_biome_modifier.json",
+          "src/main/resources/data/power/worldgen/configured_feature/freaking_parsnip_block.json",
+          "src/main/resources/data/power/worldgen/placed_feature/freaking_parsnip_block.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/FreakingParsnip"
+    },
+    {
+      "name": "FreakingParsnipBlockLoot",
+      "type": "loottable",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freaking_parsnip_block_loot",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/loot_tables/blocks/freaking_parsnip_block.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/FreakingParsnip"
+    },
+    {
+      "name": "FreakingParshipSoup",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "freaking_parship_soup",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/freaking_parship_soup.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/FreakingParshipSoupItem.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/FreakingParsnip"
+    },
+    {
+      "name": "NoteBombProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "note_bomb_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/NoteBombProjectileEntity.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/NoteBombProjectileRenderer.java"
+        ]
+      },
+      "path": "~/Elements/Music"
+    },
+    {
+      "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "note_bomb_projectile_koghda_snariad_popadaiet_v_blok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/NoteBombProjectileKoghdaSnariadPopadaietVBlokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Music"
     }
   ],
   "variable_elements": [
@@ -28838,7 +29052,7 @@
       "value": "0.0"
     },
     {
-      "name": "attack",
+      "name": "ability",
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
@@ -29635,6 +29849,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:MusicGuitar",
       "~CUSTOM:MushroomsHammer",
       "~CUSTOM:TeleportationBlade",
       "~CUSTOM:MagnetClaws",
@@ -30240,7 +30455,9 @@
       "CursedLantern",
       "CursedVault",
       "CursedKey",
-      "MusicDiscAncientMood"
+      "MusicDiscAncientMood",
+      "FreakingParsnip",
+      "FreakingParshipSoup"
     ],
     "CUSTOM:Stones": [
       "FireStone",
@@ -30280,7 +30497,8 @@
       "PoisonStone",
       "MagnetStone",
       "MushroomsStone",
-      "MercuryStone"
+      "MercuryStone",
+      "MusicStone"
     ]
   },
   "language_map": {
@@ -30300,25 +30518,25 @@
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
       "block.power.polished_cursed_stone_slab": "Плита из полированного проклятого камня",
       "gui.power.wheel_abilities_lava.tooltip_melting_uses_50": "Плавление, расходует 50",
       "subtitles.backport.block.vault.activate": "",
       "enchantment.power.revenge": "Возмездие",
-      "block.power.cursed_stone_slab": "Плита из проклятого камня",
-      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
-      "item_group.power.items": "KotS: Предметы",
       "item.power.amber_armor_helmet": "Шлем мастера янтаря",
-      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
+      "item_group.power.items": "KotS: Предметы",
+      "gui.power.keepers_box_gui_part_4.tooltip_animals": "Животные",
+      "block.power.cursed_stone_slab": "Плита из проклятого камня",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
+      "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Звёздный поток, расходует 10",
       "item.power.poison_battery": "Батарея",
       "item.power.time_armor_helmet": "Шлем мастера времени",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Струя песка, расходует 15",
-      "battery.desc.ice": "Лёд",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Супер-инструмент, расходует 50",
+      "battery.desc.ice": "Лёд",
       "item.power.creation_axe": "Топор созидания",
       "item.power.lava_hammer": "Лавовый молот",
       "item.power.speed_armor_helmet": "Шлем мастера скорости",
@@ -30339,6 +30557,7 @@
       "item.power.plants_stone": "Камень зелени",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Туманное зелье звёздной регенерации",
       "subtitles.strange_sound": "",
+      "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Нотный взрыв, расходует 40",
       "item.power.creation_staff": "Посох творения",
       "effect.power.ice_master": "Мастер льда",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
@@ -30428,6 +30647,7 @@
       "item.power.earth_armor_leggings": "Поножи мастера земли",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Грибное насыщение, расходует 50",
       "item.power.cursed_key": "Проклятый ключ",
+      "item.power.music_guitar": "Музыкальная гитара",
       "advancements.the_end_of_tyranny.descr": "Победите энерджиумного голема",
       "item.power.ocean_battery": "Батарея",
       "effect.power.star_regeneration": "Звёздная регенерация",
@@ -30435,6 +30655,7 @@
       "item.power.mist_battery": "Батарея",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
+      "block.power.freaking_parsnip_block": "Блок дикого пастернака",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Песок",
       "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
       "gamerule.limitedNumberOfStones.description": "Ограничивает количество получаемых камней и учитывает их уникальность",
@@ -30532,7 +30753,6 @@
       "item.power.raw_depleted_energium": "Рудный обеднённый энерджиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
       "item.power.destruction_battery": "Батарея",
-      "gui.power.wheel_abilities_music.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Струя воды, расходует 10",
       "item.power.ether_glaive": "Эфирная глефа",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
@@ -30657,6 +30877,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Время",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Ртутный шарик, расходует 35",
       "subtitles.backport.block.vault.place": "",
+      "item.power.freaking_parsnip": "Чёртов пастернак",
       "item.power.teleportation_armor_helmet": "Шлем мастера телепортации",
       "item.power.water_katana": "Водная катана",
       "advancements.energized_gold.title": "Золото с энергией",
@@ -30679,7 +30900,6 @@
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Атака четырёх стихий, расходует 10",
       "battery.desc.amber": "Янтарь",
       "item.power.shadow_armor_chestplate": "Нагрудник мастера тени",
-      "gui.power.wheel_abilities_music.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
       "item.power.ice_armor_helmet": "Шлем мастера льда",
       "item.power.tornado_axe": "Топор торнадо",
       "block.power.depleted_energium_ore": "Руда обеднённого энерджиума",
@@ -30822,6 +31042,7 @@
       "item.power.poison_bow": "Ядовитый лук",
       "item.power.lava_armor_boots": "Ботинки мастера лавы",
       "item.power.sand_saber": "Песочная сабля",
+      "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Музыкальная релаксация, расходует 75",
       "battery.desc.explosion": "Взрыв",
       "item.power.energium_key": "Энерджиумный ключ",
       "item.power.moon_armor_helmet": "Шлем мастера луны",
@@ -30861,7 +31082,6 @@
       "item.power.space_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Взрыв гранаты, расходует 20",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
-      "gui.power.wheel_abilities_music.tooltip_mercury_ball_uses_35": "Mercury ball, uses 35",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Янтарь",
       "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Очищение, расходует 70",
       "gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50": "Самоподрыв, расходует 50",
@@ -30959,6 +31179,7 @@
       "item.power.light_stone": "Камень света",
       "item.power.water_armor_helmet": "Шлем мастера воды",
       "item.power.ice_battery": "Батарея",
+      "item.power.freaking_parship_soup": "Суп из чёртова пастернака",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Торнадо",
@@ -31003,7 +31224,8 @@
       "item.power.energium_upgrade_smithing_template": "Кузнечный шаблон",
       "item.power.creation_pickaxe": "Кирка созидания",
       "gui.power.keepers_box_gui_part_3.tooltip_moon": "Луна",
-      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false"
+      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false",
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Нотная атака, расходует 15"
     },
     "en_us": {
       "item.power.ether_battery": "Battery",
@@ -31035,13 +31257,13 @@
       "item.power.amber_armor_helmet": "Amber Helmet",
       "gui.power.wheel_abilities_space.tooltip_star_flow_uses_10": "Star flow, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
-      "item.power.time_armor_helmet": "Time Helmet",
       "item.power.poison_battery": "Battery",
+      "item.power.time_armor_helmet": "Time Helmet",
       "gui.power.wheel_abilities_sand.tooltip_sand_jet_uses_15": "Sand jet, uses 15",
       "gui.power.wheel_abilities_creation.tooltip_supertool_uses_50": "Supertool, uses 50",
       "battery.desc.ice": "Ice",
-      "item.power.creation_axe": "Creation Axe",
       "item.power.lava_hammer": "Lava Hammer",
+      "item.power.creation_axe": "Creation Axe",
       "item.power.speed_armor_helmet": "Speed Helmet",
       "item.power.magnet_battery": "Battery",
       "item.power.creation_armor_helmet": "Creation Helmet",
@@ -31060,6 +31282,7 @@
       "item.power.plants_stone": "Plants Stone",
       "item.minecraft.lingering_potion.effect.star_regeneration_potion": "Lingering Potion of Star Regeneration",
       "subtitles.strange_sound": "",
+      "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Explosion of notes, uses 40",
       "item.power.creation_staff": "Creation Staff",
       "effect.power.ice_master": "Master of the Ice",
       "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
@@ -31149,6 +31372,7 @@
       "item.power.earth_armor_leggings": "Earth Leggings",
       "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",
       "item.power.cursed_key": "Cursed Key",
+      "item.power.music_guitar": "Music Guitar",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
@@ -31156,6 +31380,7 @@
       "item.power.mist_battery": "Battery",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
+      "block.power.freaking_parsnip_block": "Freaking Parsnip Block",
       "gui.power.keepers_box_gui_part_4.tooltip_sand": "Sand",
       "item.power.poison_armor_chestplate": "Poison Chestplate",
       "gamerule.limitedNumberOfStones.description": "Limits the number of stones to receive and includes their uniqueness",
@@ -31253,7 +31478,6 @@
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
       "item.power.destruction_battery": "Battery",
-      "gui.power.wheel_abilities_music.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "gui.power.wheel_abilities_water.tooltip_water_stream_uses_10_power_poin": "Water stream, uses 10",
       "item.power.ether_glaive": "Ether Glaive",
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
@@ -31379,6 +31603,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_time": "Time",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_ball_uses_35": "Mercury ball, uses 35",
       "subtitles.backport.block.vault.place": "",
+      "item.power.freaking_parsnip": "Freaking Parsnip",
       "item.power.teleportation_armor_helmet": "Teleportation Helmet",
       "item.power.water_katana": "Water Katana",
       "advancements.energized_gold.title": "Energized Gold",
@@ -31401,7 +31626,6 @@
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Four elements attack, uses 10",
       "battery.desc.amber": "Amber",
       "item.power.shadow_armor_chestplate": "Shadow Chestplate",
-      "gui.power.wheel_abilities_music.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
       "item.power.ice_armor_helmet": "Ice Helmet",
       "item.power.tornado_axe": "Tornado Axe",
       "block.power.depleted_energium_ore": "Depleted Energium Ore",
@@ -31544,6 +31768,7 @@
       "item.power.poison_bow": "Poison Bow",
       "item.power.lava_armor_boots": "Lava Boots",
       "item.power.sand_saber": "Sand Saber",
+      "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Musical relaxation, uses 75",
       "battery.desc.explosion": "Explosion",
       "item.power.energium_key": "Energium Key",
       "item.power.moon_armor_helmet": "Moon Helmet",
@@ -31583,7 +31808,6 @@
       "item.power.space_battery": "Battery",
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
-      "gui.power.wheel_abilities_music.tooltip_mercury_ball_uses_35": "Mercury ball, uses 35",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Amber",
       "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Cleaning, uses 70",
       "gui.power.wheel_abilities_explosion.tooltip_selfdetonation_uses_50": "Self-detonation, uses 50",
@@ -31680,6 +31904,7 @@
       "item.power.light_stone": "Light Stone",
       "item.power.water_armor_helmet": "Water Helmet",
       "item.power.ice_battery": "Battery",
+      "item.power.freaking_parship_soup": "Soup From Freaking Parship",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Tornado",
@@ -31724,7 +31949,8 @@
       "item.power.energium_upgrade_smithing_template": "Smithing Template",
       "item.power.creation_pickaxe": "Creation Pickaxe",
       "gui.power.keepers_box_gui_part_3.tooltip_moon": "Moon",
-      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false"
+      "gui.power.debug_info.label_power_recorded_false": "power_recorded: false",
+      "gui.power.wheel_abilities_music.tooltip_musical_attack_uses_15": "Musical attack, uses 15"
     }
   },
   "foldersRoot": {
@@ -32147,6 +32373,10 @@
           {
             "name": "OtherItems",
             "children": []
+          },
+          {
+            "name": "FreakingParsnip",
+            "children": []
           }
         ]
       },
@@ -32401,8 +32631,8 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.36",
-    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
+    "version": "1.0.0.37",
+    "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
     "license": "GNU General Public License version 3 (GPLv3)",

@@ -91,6 +91,7 @@ import com.esmods.keepersofthestonestwo.item.OceanStoneItem;
 import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
 import com.esmods.keepersofthestonestwo.item.OceanArmorItem;
 import com.esmods.keepersofthestonestwo.item.MusicStoneItem;
+import com.esmods.keepersofthestonestwo.item.MusicGuitarItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscCallOfThePastItem;
 import com.esmods.keepersofthestonestwo.item.MusicDiscAncientMoodItem;
 import com.esmods.keepersofthestonestwo.item.MusicBatteryItem;
@@ -143,6 +144,8 @@ import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
+import com.esmods.keepersofthestonestwo.item.FreakingParsnipItem;
+import com.esmods.keepersofthestonestwo.item.FreakingParshipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FormStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireSwordItem;
 import com.esmods.keepersofthestonestwo.item.FireStoneItem;
@@ -586,6 +589,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_LEGGINGS = REGISTRY.register("music_armor_leggings", MusicArmorItem.Leggings::new);
 	public static final DeferredHolder<Item, Item> MUSIC_ARMOR_BOOTS = REGISTRY.register("music_armor_boots", MusicArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> MUSIC_BATTERY = REGISTRY.register("music_battery", MusicBatteryItem::new);
+	public static final DeferredHolder<Item, Item> MUSIC_GUITAR = REGISTRY.register("music_guitar", MusicGuitarItem::new);
+	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP = REGISTRY.register("freaking_parsnip", FreakingParsnipItem::new);
+	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP_BLOCK = block(PowerModBlocks.FREAKING_PARSNIP_BLOCK);
+	public static final DeferredHolder<Item, Item> FREAKING_PARSHIP_SOUP = REGISTRY.register("freaking_parship_soup", FreakingParshipSoupItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

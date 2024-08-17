@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.STAINED_GLASS#3"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 23.0,
+    "knockback": 0,
+    "entityModel": "Modelether_bullet",
+    "customModelTexture": "note_bomb.png",
+    "onHitsBlock": {
+      "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}

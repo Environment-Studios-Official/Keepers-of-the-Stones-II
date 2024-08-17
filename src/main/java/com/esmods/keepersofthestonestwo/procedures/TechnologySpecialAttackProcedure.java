@@ -37,7 +37,7 @@ public class TechnologySpecialAttackProcedure {
 		double Range = 0;
 		double ZPar = 0;
 		boolean success = false;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("technology_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("technology_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				{
 					Entity _shootFrom = entity;
@@ -71,7 +71,7 @@ public class TechnologySpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("technology_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("technology_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 60) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.TECHNOBARRIER, 300, 0, false, false));
@@ -81,7 +81,7 @@ public class TechnologySpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("technology_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("technology_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = PowerModEntities.TURRET.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);

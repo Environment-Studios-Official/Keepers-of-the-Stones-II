@@ -37,7 +37,7 @@ public class EtherSpecialAttackProcedure {
 		double particleRadius = 0;
 		double Scaling = 0;
 		double particleAmount = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_1")) {
+		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ether_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 10) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					if (!world.getBlockState(new BlockPos(
@@ -83,7 +83,7 @@ public class EtherSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_2")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ether_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
@@ -218,7 +218,7 @@ public class EtherSpecialAttackProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 			}
-		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).attack).equals("ether_attack_3")) {
+		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ether_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 3, false, false));
