@@ -7,7 +7,7 @@ package com.esmods.keepersofthestonestwo.init;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.event.entity.living.MobEffectEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.Entity;
@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StarRegenerationEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
@@ -113,7 +114,7 @@ import com.esmods.keepersofthestonestwo.potion.AmberMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AirMasterMobEffect;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber
+@Mod.EventBusSubscriber
 public class PowerModMobEffects {
 	public static final DeferredRegister<MobEffect> REGISTRY = DeferredRegister.create(Registries.MOB_EFFECT, PowerMod.MODID);
 	public static final DeferredHolder<MobEffect, MobEffect> FIRE_MASTER = REGISTRY.register("fire_master", () -> new FireMasterMobEffect());
@@ -186,93 +187,96 @@ public class PowerModMobEffects {
 	}
 
 	private static void expireEffects(Entity entity, MobEffectInstance effectInstance) {
-		if (effectInstance.getEffect().is(FIRE_MASTER)) {
+		MobEffect effect = effectInstance.getEffect();
+		if (effect == FIRE_MASTER.get()) {
 			FireMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(AIR_MASTER)) {
+		} else if (effect == AIR_MASTER.get()) {
 			AirMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(EARTH_MASTER)) {
+		} else if (effect == EARTH_MASTER.get()) {
 			EarthMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(WATER_MASTER)) {
+		} else if (effect == WATER_MASTER.get()) {
 			WaterMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(ETHER_MASTER)) {
+		} else if (effect == ETHER_MASTER.get()) {
 			EtherMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(ICE_MASTER)) {
+		} else if (effect == ICE_MASTER.get()) {
 			IceMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(LIGHTNING_MASTER)) {
+		} else if (effect == LIGHTNING_MASTER.get()) {
 			LightningMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SOUND_MASTER)) {
+		} else if (effect == SOUND_MASTER.get()) {
 			SoundMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(LAVA_MASTER)) {
+		} else if (effect == LAVA_MASTER.get()) {
 			LavaMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(CRYSTAL_MASTER)) {
+		} else if (effect == CRYSTAL_MASTER.get()) {
 			CrystalMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(RAIN_MASTER)) {
+		} else if (effect == RAIN_MASTER.get()) {
 			RainMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TORNADO_MASTER)) {
+		} else if (effect == TORNADO_MASTER.get()) {
 			TornadoMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(OCEAN_MASTER)) {
+		} else if (effect == OCEAN_MASTER.get()) {
 			OceanMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(PLANTS_MASTER)) {
+		} else if (effect == PLANTS_MASTER.get()) {
 			PlantsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(ANIMALS_MASTER)) {
+		} else if (effect == ANIMALS_MASTER.get()) {
 			AnimalsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(METAL_MASTER)) {
+		} else if (effect == METAL_MASTER.get()) {
 			MetalMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(IRON_SKIN)) {
+		} else if (effect == STUN.get()) {
+			StunStopSoundProcedure.execute(entity);
+		} else if (effect == IRON_SKIN.get()) {
 			IronSkinEffectEndProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(LIGHT_MASTER)) {
+		} else if (effect == LIGHT_MASTER.get()) {
 			LightMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SHADOW_MASTER)) {
+		} else if (effect == SHADOW_MASTER.get()) {
 			ShadowMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(VACUUM_MASTER)) {
+		} else if (effect == VACUUM_MASTER.get()) {
 			VacuumMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(POWER_LOCK)) {
+		} else if (effect == POWER_LOCK.get()) {
 			PowerLockEndProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(ENERGY_MASTER)) {
+		} else if (effect == ENERGY_MASTER.get()) {
 			EnergyMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SUN_MASTER)) {
+		} else if (effect == SUN_MASTER.get()) {
 			SunMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(MOON_MASTER)) {
+		} else if (effect == MOON_MASTER.get()) {
 			MoonMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SPACE_MASTER)) {
+		} else if (effect == SPACE_MASTER.get()) {
 			SpaceMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TIME_MASTER)) {
+		} else if (effect == TIME_MASTER.get()) {
 			TimeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TIME_STOPPED)) {
+		} else if (effect == TIME_STOPPED.get()) {
 			TimeStoppedPriIstiechieniiEffiektaProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(CREATION_MASTER)) {
+		} else if (effect == CREATION_MASTER.get()) {
 			CreationMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(DESTRUCTION_MASTER)) {
+		} else if (effect == DESTRUCTION_MASTER.get()) {
 			DestructionMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(LETHALITY)) {
+		} else if (effect == LETHALITY.get()) {
 			LethalityPriIstiechieniiEffiektaProcedure.execute(entity.level(), entity);
-		} else if (effectInstance.getEffect().is(BLOOD_MASTER)) {
+		} else if (effect == BLOOD_MASTER.get()) {
 			BloodMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TECHNOLOGY_MASTER)) {
+		} else if (effect == TECHNOLOGY_MASTER.get()) {
 			TechnologyMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(TELEPORTATION_MASTER)) {
+		} else if (effect == TELEPORTATION_MASTER.get()) {
 			TeleportationMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(EXPLOSION_MASTER)) {
+		} else if (effect == EXPLOSION_MASTER.get()) {
 			ExplosionMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(AMBER_MASTER)) {
+		} else if (effect == AMBER_MASTER.get()) {
 			AmberMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(STAR_REGENERATION)) {
+		} else if (effect == STAR_REGENERATION.get()) {
 			StarRegenerationEndProcedure.execute(entity);
-		} else if (effectInstance.getEffect().is(MIST_MASTER)) {
+		} else if (effect == MIST_MASTER.get()) {
 			MistMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SAND_MASTER)) {
+		} else if (effect == SAND_MASTER.get()) {
 			SandMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(SPEED_MASTER)) {
+		} else if (effect == SPEED_MASTER.get()) {
 			SpeedMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(POISON_MASTER)) {
+		} else if (effect == POISON_MASTER.get()) {
 			PoisonMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(MAGNET_MASTER)) {
+		} else if (effect == MAGNET_MASTER.get()) {
 			MagnetMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(MUSHROOMS_MASTER)) {
+		} else if (effect == MUSHROOMS_MASTER.get()) {
 			MushroomsMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(MERCURY_MASTER)) {
+		} else if (effect == MERCURY_MASTER.get()) {
 			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effectInstance.getEffect().is(MUSIC_MASTER)) {
+		} else if (effect == MUSIC_MASTER.get()) {
 			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
