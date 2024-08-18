@@ -84,6 +84,7 @@ import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlagueMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
@@ -172,6 +173,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
