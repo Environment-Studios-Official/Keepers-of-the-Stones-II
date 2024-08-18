@@ -30442,7 +30442,8 @@
       "CUSTOM:MagnetBattery",
       "CUSTOM:MushroomsBattery",
       "CUSTOM:MercuryBattery",
-      "CUSTOM:MusicBattery"
+      "CUSTOM:MusicBattery",
+      "CUSTOM:PlagueBattery"
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
