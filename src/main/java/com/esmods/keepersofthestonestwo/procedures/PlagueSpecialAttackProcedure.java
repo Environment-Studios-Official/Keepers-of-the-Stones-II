@@ -5,8 +5,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.projectile.Projectile;
-import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -31,7 +30,6 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.entity.NoteBombProjectileEntity;
 
 public class PlagueSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -107,132 +105,11 @@ public class PlagueSpecialAttackProcedure {
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plague_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1, false);
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = PowerModEntities.PLAGUE_BOMB.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot((-1), 0, (-1), (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot(1, 0, 1, (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot((-1), 0, 1, (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot(1, 0, (-1), (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot(0, 0, (-1), (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot(0, 0, 1, (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot((-1), 0, 0, (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
-				}
-				if (world instanceof ServerLevel projectileLevel) {
-					Projectile _entityToSpawn = new Object() {
-						public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-							AbstractArrow entityToSpawn = new NoteBombProjectileEntity(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), level);
-							entityToSpawn.setOwner(shooter);
-							entityToSpawn.setBaseDamage(damage);
-							entityToSpawn.setKnockback(knockback);
-							entityToSpawn.setSilent(true);
-							return entityToSpawn;
-						}
-					}.getArrow(projectileLevel, entity, (float) 13.5, 0);
-					_entityToSpawn.setPos(x, (y + entity.getBbHeight() / 1.5), z);
-					_entityToSpawn.shoot(1, 0, 0, (float) 1.5, 0);
-					projectileLevel.addFreshEntity(_entityToSpawn);
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
