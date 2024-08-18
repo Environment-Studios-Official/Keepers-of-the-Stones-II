@@ -161,6 +161,10 @@
     "power:music_armor_helmet",
     "power:music_armor_chestplate",
     "power:music_armor_leggings",
-    "power:music_armor_boots"
+    "power:music_armor_boots",
+    "power:plague_armor_helmet",
+    "power:plague_armor_chestplate",
+    "power:plague_armor_leggings",
+    "power:plague_armor_boots"
   ]
 }

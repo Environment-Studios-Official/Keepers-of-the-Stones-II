@@ -34,6 +34,7 @@ import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
@@ -83,6 +84,7 @@ import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
@@ -169,6 +171,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -278,6 +281,8 @@ public class PowerModMobEffects {
 			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == MUSIC_MASTER.get()) {
 			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == PLAGUE_MASTER.get()) {
+			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

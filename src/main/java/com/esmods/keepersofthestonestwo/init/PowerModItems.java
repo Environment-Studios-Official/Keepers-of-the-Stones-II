@@ -87,6 +87,8 @@ import com.esmods.keepersofthestonestwo.item.PlantsStoneItem;
 import com.esmods.keepersofthestonestwo.item.PlantsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.PlantsArmorItem;
 import com.esmods.keepersofthestonestwo.item.PlagueStoneItem;
+import com.esmods.keepersofthestonestwo.item.PlagueBatteryItem;
+import com.esmods.keepersofthestonestwo.item.PlagueArmorItem;
 import com.esmods.keepersofthestonestwo.item.OceanicTridentItem;
 import com.esmods.keepersofthestonestwo.item.OceanStoneItem;
 import com.esmods.keepersofthestonestwo.item.OceanBatteryItem;
@@ -594,6 +596,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP = REGISTRY.register("freaking_parsnip", () -> new FreakingParsnipItem());
 	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP_BLOCK = block(PowerModBlocks.FREAKING_PARSNIP_BLOCK);
 	public static final DeferredHolder<Item, Item> FREAKING_PARSNIP_SOUP = REGISTRY.register("freaking_parsnip_soup", () -> new FreakingParsnipSoupItem());
+	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_HELMET = REGISTRY.register("plague_armor_helmet", () -> new PlagueArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_CHESTPLATE = REGISTRY.register("plague_armor_chestplate", () -> new PlagueArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_LEGGINGS = REGISTRY.register("plague_armor_leggings", () -> new PlagueArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_BOOTS = REGISTRY.register("plague_armor_boots", () -> new PlagueArmorItem.Boots());
+	public static final DeferredHolder<Item, Item> PLAGUE_BATTERY = REGISTRY.register("plague_battery", () -> new PlagueBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
