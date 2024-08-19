@@ -21,7 +21,6 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
-import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -142,17 +141,7 @@ public class PlagueSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plague_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 400, 1, false, false));
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 200, 1, false, false));
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.POISON);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.DIG_SLOWDOWN);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.BLINDNESS);
-				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(MobEffects.HUNGER);
+					_entity.addEffect(new MobEffectInstance(MobEffects.HEAL, 20, 4, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.note_block.guitar")), SoundSource.PLAYERS, 1, 1);
@@ -165,9 +154,9 @@ public class PlagueSpecialAttackProcedure {
 				for (int index1 = 0; index1 < 60; index1++) {
 					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
 						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.NOTE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+							_level.sendParticles((SimpleParticleType) (PowerModParticleTypes.PLAGUE_PARTICLE_ONE.get()), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
 				{
