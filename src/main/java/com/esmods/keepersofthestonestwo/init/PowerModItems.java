@@ -86,6 +86,7 @@ import com.esmods.keepersofthestonestwo.item.PoisonArmorItem;
 import com.esmods.keepersofthestonestwo.item.PlantsStoneItem;
 import com.esmods.keepersofthestonestwo.item.PlantsBatteryItem;
 import com.esmods.keepersofthestonestwo.item.PlantsArmorItem;
+import com.esmods.keepersofthestonestwo.item.PlagueWalkingStickItem;
 import com.esmods.keepersofthestonestwo.item.PlagueStoneItem;
 import com.esmods.keepersofthestonestwo.item.PlagueBatteryItem;
 import com.esmods.keepersofthestonestwo.item.PlagueArmorItem;
@@ -601,6 +602,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_LEGGINGS = REGISTRY.register("plague_armor_leggings", () -> new PlagueArmorItem.Leggings());
 	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_BOOTS = REGISTRY.register("plague_armor_boots", () -> new PlagueArmorItem.Boots());
 	public static final DeferredHolder<Item, Item> PLAGUE_BATTERY = REGISTRY.register("plague_battery", () -> new PlagueBatteryItem());
+	public static final DeferredHolder<Item, Item> PLAGUE_WALKING_STICK = REGISTRY.register("plague_walking_stick", () -> new PlagueWalkingStickItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

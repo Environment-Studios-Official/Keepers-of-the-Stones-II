@@ -36,9 +36,9 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_plague_wind;
+	ImageButton imagebutton_plague_bomb;
+	ImageButton imagebutton_plague_healing;
 
 	public WheelAbilitiesPlagueScreen(WheelAbilitiesPlagueMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -56,6 +56,12 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_plague.tooltip_plague_wind_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 83 && mouseY < topPos + 107)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_plague.tooltip_plague_bomb_uses_40"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_plague.tooltip_plague_healing_uses_75"), mouseX, mouseY);
 	}
 
 	@Override
@@ -175,8 +181,8 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_1.png"), new ResourceLocation("power:textures/screens/ability_1_highlight.png")),
-				e -> {
+		imagebutton_plague_wind = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_wind.png"), new ResourceLocation("power:textures/screens/plague_wind_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesPlagueButtonMessage(6, x, y, z));
 						WheelAbilitiesPlagueButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -187,10 +193,10 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_2.png"), new ResourceLocation("power:textures/screens/ability_2_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_plague_wind", imagebutton_plague_wind);
+		this.addRenderableWidget(imagebutton_plague_wind);
+		imagebutton_plague_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_bomb.png"), new ResourceLocation("power:textures/screens/plague_bomb_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesPlagueButtonMessage(7, x, y, z));
 						WheelAbilitiesPlagueButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -201,10 +207,10 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_3.png"), new ResourceLocation("power:textures/screens/ability_3_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_plague_bomb", imagebutton_plague_bomb);
+		this.addRenderableWidget(imagebutton_plague_bomb);
+		imagebutton_plague_healing = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_healing.png"), new ResourceLocation("power:textures/screens/plague_healing_highlight.png")), e -> {
 					if (true) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesPlagueButtonMessage(8, x, y, z));
 						WheelAbilitiesPlagueButtonMessage.handleButtonAction(entity, 8, x, y, z);
@@ -215,7 +221,7 @@ public class WheelAbilitiesPlagueScreen extends AbstractContainerScreen<WheelAbi
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_plague_healing", imagebutton_plague_healing);
+		this.addRenderableWidget(imagebutton_plague_healing);
 	}
 }

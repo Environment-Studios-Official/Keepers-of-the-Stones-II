@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_plague_wind",
+          "image": "plague_wind.png",
+          "hoveredImage": "plague_wind_highlight.png",
           "onClick": {
             "name": "Attack157"
           },
@@ -131,9 +131,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_plague_bomb",
+          "image": "plague_bomb.png",
+          "hoveredImage": "plague_bomb_highlight.png",
           "onClick": {
             "name": "Attack158"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_plague_healing",
+          "image": "plague_healing.png",
+          "hoveredImage": "plague_healing_highlight.png",
           "onClick": {
             "name": "Attack159"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_plague_wind_uses_15",
+          "text": {
+            "fixedValue": "Plague wind, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_plague_bomb_uses_40",
+          "text": {
+            "fixedValue": "Plague bomb, uses 40"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 263,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_plague_healing_uses_75",
+          "text": {
+            "fixedValue": "Plague healing, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 169
         }
       }
     ],
