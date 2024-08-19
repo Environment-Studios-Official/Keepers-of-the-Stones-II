@@ -5,7 +5,8 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.projectile.Projectile;
+import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
@@ -30,6 +31,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.entity.PlagueBombEntity;
 
 public class PlagueSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -105,10 +107,30 @@ public class PlagueSpecialAttackProcedure {
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("plague_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
-				if (world instanceof ServerLevel _level) {
-					Entity entityToSpawn = PowerModEntities.PLAGUE_BOMB.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
-					if (entityToSpawn != null) {
-						entityToSpawn.setDeltaMovement(0, 0, 0);
+				{
+					Entity _shootFrom = entity;
+					Level projectileLevel = _shootFrom.level();
+					if (!projectileLevel.isClientSide()) {
+						Projectile _entityToSpawn = new Object() {
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
+								AbstractArrow entityToSpawn = new PlagueBombEntity(PowerModEntities.PLAGUE_BOMB.get(), level);
+								entityToSpawn.setOwner(shooter);
+								entityToSpawn.setBaseDamage(damage);
+								entityToSpawn.setKnockback(knockback);
+								entityToSpawn.setSilent(true);
+								return entityToSpawn;
+							}
+						}.getArrow(projectileLevel, entity, 27, 4);
+						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
+						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
+						projectileLevel.addFreshEntity(_entityToSpawn);
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.wither.shoot")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.wither.shoot")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{

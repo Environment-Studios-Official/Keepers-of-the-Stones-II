@@ -143,9 +143,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<NoteBombProjectileEntity>> NOTE_BOMB_PROJECTILE = register("note_bomb_projectile",
 			EntityType.Builder.<NoteBombProjectileEntity>of(NoteBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<PlagueBombEntity>> PLAGUE_BOMB = register("plague_bomb",
-			EntityType.Builder.<PlagueBombEntity>of(PlagueBombEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
-
-					.sized(0.5f, 0.5f));
+			EntityType.Builder.<PlagueBombEntity>of(PlagueBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -160,7 +158,6 @@ public class PowerModEntities {
 			TurretEntity.init();
 			PoisonPitEntity.init();
 			CursedKeeperEntity.init();
-			PlagueBombEntity.init();
 		});
 	}
 
@@ -172,6 +169,5 @@ public class PowerModEntities {
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
-		event.put(PLAGUE_BOMB.get(), PlagueBombEntity.createAttributes().build());
 	}
 }

@@ -18,9 +18,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class PlagueBombDetonateProcedure {
-	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
-		if (entity == null)
-			return;
+	public static void execute(LevelAccessor world, double x, double y, double z) {
 		double particleRadius = 0;
 		double particleAmount = 0;
 		particleAmount = 300;
@@ -41,7 +39,5 @@ public class PlagueBombDetonateProcedure {
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE.get(), 3600, 0));
 			}
 		}
-		if (!entity.level().isClientSide())
-			entity.discard();
 	}
 }

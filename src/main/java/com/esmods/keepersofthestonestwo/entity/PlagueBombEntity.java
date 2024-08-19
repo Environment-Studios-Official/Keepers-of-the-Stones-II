@@ -1,94 +1,105 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
+import net.neoforged.api.distmarker.OnlyIn;
+import net.neoforged.api.distmarker.Dist;
+
+import net.minecraft.world.phys.EntityHitResult;
+import net.minecraft.world.phys.BlockHitResult;
+import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.entity.monster.Monster;
-import net.minecraft.world.entity.ai.attributes.Attributes;
-import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
-import net.minecraft.world.entity.MobType;
-import net.minecraft.world.entity.Mob;
-import net.minecraft.world.entity.LightningBolt;
+import net.minecraft.world.entity.projectile.ItemSupplier;
+import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.InteractionResult;
-import net.minecraft.world.InteractionHand;
-import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.esmods.keepersofthestonestwo.procedures.PlagueBombDetonateProcedure;
+import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 
-public class PlagueBombEntity extends Monster {
-	public PlagueBombEntity(EntityType<PlagueBombEntity> type, Level world) {
-		super(type, world);
-		setMaxUpStep(0.6f);
-		xpReward = 0;
-		setNoAi(true);
-		setPersistenceRequired();
+@OnlyIn(value = Dist.CLIENT, _interface = ItemSupplier.class)
+public class PlagueBombEntity extends AbstractArrow implements ItemSupplier {
+	public static final ItemStack PROJECTILE_ITEM = new ItemStack(Blocks.WITHER_ROSE);
+
+	public PlagueBombEntity(EntityType<? extends PlagueBombEntity> type, Level world) {
+		super(type, world, PROJECTILE_ITEM);
+	}
+
+	public PlagueBombEntity(EntityType<? extends PlagueBombEntity> type, double x, double y, double z, Level world) {
+		super(type, x, y, z, world, PROJECTILE_ITEM);
+	}
+
+	public PlagueBombEntity(EntityType<? extends PlagueBombEntity> type, LivingEntity entity, Level world) {
+		super(type, entity, world, PROJECTILE_ITEM);
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
+	@OnlyIn(Dist.CLIENT)
+	public ItemStack getItem() {
+		return PROJECTILE_ITEM;
 	}
 
 	@Override
-	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
-		return false;
+	protected void doPostHurtEffects(LivingEntity entity) {
+		super.doPostHurtEffects(entity);
+		entity.setArrowCount(entity.getArrowCount() - 1);
 	}
 
 	@Override
-	public void thunderHit(ServerLevel serverWorld, LightningBolt lightningBolt) {
-		super.thunderHit(serverWorld, lightningBolt);
-		PlagueBombDetonateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
+	public void onHitEntity(EntityHitResult entityHitResult) {
+		super.onHitEntity(entityHitResult);
+		PlagueBombDetonateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
-	public boolean causeFallDamage(float l, float d, DamageSource source) {
-		PlagueBombDetonateProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
-		return super.causeFallDamage(l, d, source);
+	public void onHitBlock(BlockHitResult blockHitResult) {
+		super.onHitBlock(blockHitResult);
+		PlagueBombDetonateProcedure.execute(this.level(), blockHitResult.getBlockPos().getX(), blockHitResult.getBlockPos().getY(), blockHitResult.getBlockPos().getZ());
 	}
 
 	@Override
-	public boolean hurt(DamageSource damagesource, float amount) {
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Level world = this.level();
-		Entity entity = this;
-		Entity sourceentity = damagesource.getEntity();
-		Entity immediatesourceentity = damagesource.getDirectEntity();
-
-		PlagueBombDetonateProcedure.execute(world, x, y, z, entity);
-		return super.hurt(damagesource, amount);
+	public void tick() {
+		super.tick();
+		if (this.inGround)
+			this.discard();
 	}
 
-	@Override
-	public InteractionResult mobInteract(Player sourceentity, InteractionHand hand) {
-		ItemStack itemstack = sourceentity.getItemInHand(hand);
-		InteractionResult retval = InteractionResult.sidedSuccess(this.level().isClientSide());
-		super.mobInteract(sourceentity, hand);
-		double x = this.getX();
-		double y = this.getY();
-		double z = this.getZ();
-		Entity entity = this;
-		Level world = this.level();
-
-		PlagueBombDetonateProcedure.execute(world, x, y, z, entity);
-		return retval;
+	public static PlagueBombEntity shoot(Level world, LivingEntity entity, RandomSource source) {
+		return shoot(world, entity, source, 1f, 5, 5);
 	}
 
-	public static void init() {
+	public static PlagueBombEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
+		return shoot(world, entity, source, pullingPower * 1f, 5, 5);
 	}
 
-	public static AttributeSupplier.Builder createAttributes() {
-		AttributeSupplier.Builder builder = Mob.createMobAttributes();
-		builder = builder.add(Attributes.MOVEMENT_SPEED, 0.3);
-		builder = builder.add(Attributes.MAX_HEALTH, 10);
-		builder = builder.add(Attributes.ARMOR, 0);
-		builder = builder.add(Attributes.ATTACK_DAMAGE, 3);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
-		return builder;
+	public static PlagueBombEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
+		PlagueBombEntity entityarrow = new PlagueBombEntity(PowerModEntities.PLAGUE_BOMB.get(), entity, world);
+		entityarrow.shoot(entity.getViewVector(1).x, entity.getViewVector(1).y, entity.getViewVector(1).z, power * 2, 0);
+		entityarrow.setSilent(true);
+		entityarrow.setCritArrow(false);
+		entityarrow.setBaseDamage(damage);
+		entityarrow.setKnockback(knockback);
+		world.addFreshEntity(entityarrow);
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		return entityarrow;
+	}
+
+	public static PlagueBombEntity shoot(LivingEntity entity, LivingEntity target) {
+		PlagueBombEntity entityarrow = new PlagueBombEntity(PowerModEntities.PLAGUE_BOMB.get(), entity, entity.level());
+		double dx = target.getX() - entity.getX();
+		double dy = target.getY() + target.getEyeHeight() - 1.1;
+		double dz = target.getZ() - entity.getZ();
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
+		entityarrow.setSilent(true);
+		entityarrow.setBaseDamage(5);
+		entityarrow.setKnockback(5);
+		entityarrow.setCritArrow(false);
+		entity.level().addFreshEntity(entityarrow);
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.arrow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		return entityarrow;
 	}
 }
