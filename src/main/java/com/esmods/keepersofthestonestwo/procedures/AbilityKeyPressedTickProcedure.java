@@ -248,6 +248,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("plague")) {
 					PlagueSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("blue_flame")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blue_flame")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("blue_flame")) {
+					BlueFlameSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

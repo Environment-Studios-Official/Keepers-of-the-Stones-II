@@ -57,6 +57,7 @@ import com.esmods.keepersofthestonestwo.procedures.EarthMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AmberMasterEndProcedure;
@@ -111,6 +112,7 @@ import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AmberMasterMobEffect;
@@ -174,6 +176,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -285,6 +288,8 @@ public class PowerModMobEffects {
 			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effect == PLAGUE_MASTER.get()) {
 			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == BLUE_FLAME_MASTER.get()) {
+			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

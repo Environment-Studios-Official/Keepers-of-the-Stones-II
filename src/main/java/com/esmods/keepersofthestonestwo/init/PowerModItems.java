@@ -206,6 +206,7 @@ import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
+import com.esmods.keepersofthestonestwo.item.BlueFlameArmorItem;
 import com.esmods.keepersofthestonestwo.item.BloodStoneItem;
 import com.esmods.keepersofthestonestwo.item.BloodSickleItem;
 import com.esmods.keepersofthestonestwo.item.BloodBatteryItem;
@@ -603,6 +604,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> PLAGUE_ARMOR_BOOTS = REGISTRY.register("plague_armor_boots", () -> new PlagueArmorItem.Boots());
 	public static final DeferredHolder<Item, Item> PLAGUE_BATTERY = REGISTRY.register("plague_battery", () -> new PlagueBatteryItem());
 	public static final DeferredHolder<Item, Item> PLAGUE_WALKING_STICK = REGISTRY.register("plague_walking_stick", () -> new PlagueWalkingStickItem());
+	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_HELMET = REGISTRY.register("blue_flame_armor_helmet", () -> new BlueFlameArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_CHESTPLATE = REGISTRY.register("blue_flame_armor_chestplate", () -> new BlueFlameArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_LEGGINGS = REGISTRY.register("blue_flame_armor_leggings", () -> new BlueFlameArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_BOOTS = REGISTRY.register("blue_flame_armor_boots", () -> new BlueFlameArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

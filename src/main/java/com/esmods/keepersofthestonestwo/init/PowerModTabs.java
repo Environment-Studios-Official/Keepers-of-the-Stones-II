@@ -134,6 +134,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MERCURY_STONE.get());
 				tabData.accept(PowerModItems.MUSIC_STONE.get());
 				tabData.accept(PowerModItems.PLAGUE_STONE.get());
+				tabData.accept(PowerModItems.BLUE_FLAME_STONE.get());
 			})
 
 					.build());
