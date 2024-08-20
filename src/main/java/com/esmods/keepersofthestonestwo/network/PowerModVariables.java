@@ -557,7 +557,7 @@ public class PowerModVariables {
 			if (!entity.level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
 					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
+						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 				}
 			}
 		}
