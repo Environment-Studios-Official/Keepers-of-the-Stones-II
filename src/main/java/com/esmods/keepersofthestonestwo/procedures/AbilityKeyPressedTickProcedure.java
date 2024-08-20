@@ -360,6 +360,16 @@ public class AbilityKeyPressedTickProcedure {
 						|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_third).equals("music")) {
 					MusicSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("plague")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plague")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("plague")) {
+					PlagueSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("blue_flame")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("blue_flame")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("blue_flame") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("blue_flame")) {
+					BlueFlameSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				boolean _setval = false;

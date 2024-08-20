@@ -140,5 +140,9 @@ public class UnlockRecipesProcedure {
 			if (entity instanceof ServerPlayer _serverPlayer)
 				_serverPlayer.awardRecipesByKey(new ResourceLocation[]{new ResourceLocation("power:cursed_lamp_craft")});
 		}
+		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FREAKING_PARSNIP.get())) : false) {
+			if (entity instanceof ServerPlayer _serverPlayer)
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:freaking_parsnip_soup_craft")));
+		}
 	}
 }

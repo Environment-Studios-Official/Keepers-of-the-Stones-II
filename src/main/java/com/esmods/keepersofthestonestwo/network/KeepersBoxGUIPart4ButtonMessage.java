@@ -18,6 +18,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.procedures.SandElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushrooomsElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryElementGetProcedure;
@@ -120,6 +121,10 @@ public class KeepersBoxGUIPart4ButtonMessage {
 		if (buttonID == 12) {
 
 			MercuryElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			PlagueElementGetProcedure.execute(world, entity);
 		}
 	}
 
