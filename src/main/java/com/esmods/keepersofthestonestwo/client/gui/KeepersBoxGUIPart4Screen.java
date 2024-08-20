@@ -20,6 +20,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.procedures.SandStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryStoneCheckProcedure;
@@ -49,6 +50,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_poison_element;
 	ImageButton imagebutton_mushrooms_element;
 	ImageButton imagebutton_mercury_element;
+	ImageButton imagebutton_plague_element;
 
 	public KeepersBoxGUIPart4Screen(KeepersBoxGUIPart4Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -99,6 +101,9 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		if (MercuryStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_mercury"), mouseX, mouseY);
+		if (PlagueStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_4.tooltip_plague"), mouseX, mouseY);
 	}
 
 	@Override
@@ -317,5 +322,20 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_mercury_element", imagebutton_mercury_element);
 		this.addRenderableWidget(imagebutton_mercury_element);
+		imagebutton_plague_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_element.png"), new ResourceLocation("power:textures/screens/plague_element_highlighted.png")), e -> {
+					if (PlagueStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(13, x, y, z));
+						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PlagueStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_plague_element", imagebutton_plague_element);
+		this.addRenderableWidget(imagebutton_plague_element);
 	}
 }

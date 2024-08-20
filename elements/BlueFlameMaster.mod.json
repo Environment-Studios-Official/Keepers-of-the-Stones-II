@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Blue Flame",
+    "icon": "blue_flame_master",
+    "color": {
+      "value": -16737793,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "BlueFlameMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "BlueFlameMasterEnd"
+    }
+  }
+}

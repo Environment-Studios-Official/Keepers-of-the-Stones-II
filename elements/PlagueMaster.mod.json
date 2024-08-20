@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of the Plague",
+    "icon": "plague_master",
+    "color": {
+      "value": -13434829,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "PlagueMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "PlagueMasterEnd"
+    }
+  }
+}
