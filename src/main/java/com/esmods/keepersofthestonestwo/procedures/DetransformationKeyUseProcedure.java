@@ -3,6 +3,14 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.player.AbstractClientPlayer;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.KeyframeAnimationPlayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
@@ -92,6 +100,10 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.MERCURY_MASTER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.MUSIC_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.PLAGUE_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.BLUE_FLAME_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active = false;
@@ -101,6 +113,14 @@ public class DetransformationKeyUseProcedure {
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = 0;
 					_vars.syncPlayerVariables(entity);
+				}
+				if (world.isClientSide()) {
+					if (entity instanceof AbstractClientPlayer player) {
+						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
+						if (animation != null) {
+							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.detransformation"))));
+						}
+					}
 				}
 			}
 			{

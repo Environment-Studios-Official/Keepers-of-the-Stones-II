@@ -38,7 +38,7 @@ repositories {
 }
 
  dependencies {
-   implementation 'curse.maven:keepers-of-the-stones-ii-906406:5637952'
+   implementation 'curse.maven:keepers-of-the-stones-ii-906406:5648080'
  }
 
 

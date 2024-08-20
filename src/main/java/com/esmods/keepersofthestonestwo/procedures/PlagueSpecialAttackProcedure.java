@@ -84,7 +84,7 @@ public class PlagueSpecialAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE.get(), 3600, 0, false, false));
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.PLAGUE, 3600, 0, false, false));
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 										(float) 10.25);
 							}

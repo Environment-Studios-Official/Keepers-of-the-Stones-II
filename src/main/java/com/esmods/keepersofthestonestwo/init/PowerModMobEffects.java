@@ -285,9 +285,9 @@ public class PowerModMobEffects {
 			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(MUSIC_MASTER)) {
 			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effect == PLAGUE_MASTER.get()) {
+		} else if (effectInstance.getEffect().is(PLAGUE_MASTER)) {
 			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effect == BLUE_FLAME_MASTER.get()) {
+		} else if (effectInstance.getEffect().is(BLUE_FLAME_MASTER)) {
 			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}

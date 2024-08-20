@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:blue_flame_armor_leggings",
+    "power:plague_armor_leggings",
     "power:music_armor_leggings",
     "power:mercury_armor_leggings",
     "power:mushrooms_armor_leggings",
