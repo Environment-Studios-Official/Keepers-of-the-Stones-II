@@ -153,6 +153,45 @@
           "x": 190,
           "y": 158
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_blue_flamethrower_uses_20",
+          "text": {
+            "fixedValue": "Blue flamethrower, uses 20"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_sixshot_fireballs_uses_55",
+          "text": {
+            "fixedValue": "Six-shot fireballs, uses 55"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 107
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_electric_discharge_uses_75",
+          "text": {
+            "fixedValue": "Electric discharge, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
+        }
       }
     ],
     "gridSettings": {
