@@ -30172,6 +30172,41 @@
         ]
       },
       "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "BlueFlamePassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlamePassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
     }
   ],
   "variable_elements": [
