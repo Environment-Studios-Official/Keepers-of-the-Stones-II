@@ -205,6 +205,8 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.BlueMagicFireballItem;
+import com.esmods.keepersofthestonestwo.item.BlueFlameSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameBatteryItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameArmorItem;
@@ -610,6 +612,8 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_LEGGINGS = REGISTRY.register("blue_flame_armor_leggings", () -> new BlueFlameArmorItem.Leggings());
 	public static final DeferredHolder<Item, Item> BLUE_FLAME_ARMOR_BOOTS = REGISTRY.register("blue_flame_armor_boots", () -> new BlueFlameArmorItem.Boots());
 	public static final DeferredHolder<Item, Item> BLUE_FLAME_BATTERY = REGISTRY.register("blue_flame_battery", () -> new BlueFlameBatteryItem());
+	public static final DeferredHolder<Item, Item> BLUE_MAGIC_FIREBALL = REGISTRY.register("blue_magic_fireball", () -> new BlueMagicFireballItem());
+	public static final DeferredHolder<Item, Item> BLUE_FLAME_SWORD = REGISTRY.register("blue_flame_sword", () -> new BlueFlameSwordItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
