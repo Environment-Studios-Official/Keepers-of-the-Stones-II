@@ -33,6 +33,8 @@ import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
@@ -58,6 +60,7 @@ import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AmberMasterMobEffect;
@@ -118,4 +121,7 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
 	public static final RegistryObject<MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 	public static final RegistryObject<MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
+	public static final RegistryObject<MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
+	public static final RegistryObject<MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
+	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 }

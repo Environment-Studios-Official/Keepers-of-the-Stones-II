@@ -26,6 +26,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesSandScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesRainScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPoisonScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPlantsScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesPlagueScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesOceanScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMusicScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMushroomsScreen;
@@ -46,6 +47,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEarthScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesDestructionScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCrystalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesCreationScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBlueFlameScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesBloodScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAnimalsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesAmberScreen;
@@ -105,6 +107,8 @@ public class PowerModScreens {
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MUSHROOMS.get(), WheelAbilitiesMushroomsScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MERCURY.get(), WheelAbilitiesMercuryScreen::new);
 			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_MUSIC.get(), WheelAbilitiesMusicScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_PLAGUE.get(), WheelAbilitiesPlagueScreen::new);
+			MenuScreens.register(PowerModMenus.WHEEL_ABILITIES_BLUE_FLAME.get(), WheelAbilitiesBlueFlameScreen::new);
 		});
 	}
 }

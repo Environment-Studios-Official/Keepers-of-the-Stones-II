@@ -24,6 +24,7 @@ import com.esmods.keepersofthestonestwo.procedures.IceStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart1ButtonMessage;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -44,6 +45,7 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_ice_element;
 	ImageButton imagebutton_explosion_element;
 	ImageButton imagebutton_magnet_element;
+	ImageButton imagebutton_blue_flame_element;
 
 	public KeepersBoxGUIPart1Screen(KeepersBoxGUIPart1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -91,6 +93,9 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		if (MagnetStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 183 && mouseX < leftPos + 207 && mouseY > topPos + 103 && mouseY < topPos + 127)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_magnet"), mouseX, mouseY);
+		if (BlueFlameStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_blue_flame"), mouseX, mouseY);
 	}
 
 	@Override
@@ -272,5 +277,19 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_magnet_element", imagebutton_magnet_element);
 		this.addRenderableWidget(imagebutton_magnet_element);
+		imagebutton_blue_flame_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_blue_flame_element.png"), 16, 32, e -> {
+			if (BlueFlameStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(12, x, y, z));
+				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+			}
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (BlueFlameStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
+		guistate.put("button:imagebutton_blue_flame_element", imagebutton_blue_flame_element);
+		this.addRenderableWidget(imagebutton_blue_flame_element);
 	}
 }

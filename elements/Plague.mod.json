@@ -1,0 +1,19 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Plague",
+    "icon": "plague",
+    "color": {
+      "value": -10092442,
+      "falpha": 0.0
+    },
+    "isInstant": true,
+    "mobEffectCategory": "HARMFUL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onActiveTick": {
+      "name": "InfectionRandomTick"
+    }
+  }
+}
