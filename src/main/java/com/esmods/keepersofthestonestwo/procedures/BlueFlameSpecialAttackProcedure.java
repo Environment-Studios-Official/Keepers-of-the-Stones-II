@@ -66,7 +66,7 @@ public class BlueFlameSpecialAttackProcedure {
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
 											(float) 20.25);
 								} else {
-									entityiterator.setSecondsOnFire(14);
+									entityiterator.igniteForSeconds(14);
 									entityiterator.hurt(
 											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
 								}
@@ -130,7 +130,7 @@ public class BlueFlameSpecialAttackProcedure {
 									entityToSpawn.setBaseDamage(damage);
 									entityToSpawn.setKnockback(knockback);
 									entityToSpawn.setSilent(true);
-									entityToSpawn.setSecondsOnFire(100);
+									entityToSpawn.igniteForSeconds(100);
 									return entityToSpawn;
 								}
 							}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -158,7 +158,7 @@ public class BlueFlameSpecialAttackProcedure {
 										entityToSpawn.setBaseDamage(damage);
 										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
-										entityToSpawn.setSecondsOnFire(100);
+										entityToSpawn.igniteForSeconds(100);
 										return entityToSpawn;
 									}
 								}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -186,7 +186,7 @@ public class BlueFlameSpecialAttackProcedure {
 											entityToSpawn.setBaseDamage(damage);
 											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
-											entityToSpawn.setSecondsOnFire(100);
+											entityToSpawn.igniteForSeconds(100);
 											return entityToSpawn;
 										}
 									}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -214,7 +214,7 @@ public class BlueFlameSpecialAttackProcedure {
 												entityToSpawn.setBaseDamage(damage);
 												entityToSpawn.setKnockback(knockback);
 												entityToSpawn.setSilent(true);
-												entityToSpawn.setSecondsOnFire(100);
+												entityToSpawn.igniteForSeconds(100);
 												return entityToSpawn;
 											}
 										}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -242,7 +242,7 @@ public class BlueFlameSpecialAttackProcedure {
 													entityToSpawn.setBaseDamage(damage);
 													entityToSpawn.setKnockback(knockback);
 													entityToSpawn.setSilent(true);
-													entityToSpawn.setSecondsOnFire(100);
+													entityToSpawn.igniteForSeconds(100);
 													return entityToSpawn;
 												}
 											}.getArrow(projectileLevel, entity, (float) 13.5, 1);
@@ -270,7 +270,7 @@ public class BlueFlameSpecialAttackProcedure {
 														entityToSpawn.setBaseDamage(damage);
 														entityToSpawn.setKnockback(knockback);
 														entityToSpawn.setSilent(true);
-														entityToSpawn.setSecondsOnFire(100);
+														entityToSpawn.igniteForSeconds(100);
 														return entityToSpawn;
 													}
 												}.getArrow(projectileLevel, entity, (float) 13.5, 1);

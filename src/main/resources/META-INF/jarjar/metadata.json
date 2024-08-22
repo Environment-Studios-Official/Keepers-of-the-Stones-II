@@ -31,9 +31,9 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "7.1.0"
+        "artifactVersion": "6.0.0"
       },
-      "path": "META-INF/jarjar/kleiders_custom_renderer_api-7.1.0.jar",
+      "path": "META-INF/jarjar/kleiders_custom_renderer_api-6.0.0.jar",
       "isObfuscated": true
     }
   ]
