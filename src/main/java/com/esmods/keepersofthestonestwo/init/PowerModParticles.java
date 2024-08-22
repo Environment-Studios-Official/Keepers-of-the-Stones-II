@@ -21,6 +21,10 @@ import com.esmods.keepersofthestonestwo.client.particle.RunesOfDestructionPartic
 import com.esmods.keepersofthestonestwo.client.particle.RunesOfCreationParticle;
 import com.esmods.keepersofthestonestwo.client.particle.RedMagnetParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.PoisonParticleParticle;
+import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleTwoParticle;
+import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleThreeParticle;
+import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleOneParticle;
+import com.esmods.keepersofthestonestwo.client.particle.PlagueParticleFourParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MushroomSporesParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MoonParticleParticle;
 import com.esmods.keepersofthestonestwo.client.particle.MistParticleParticle;
@@ -62,5 +66,9 @@ public class PowerModParticles {
 		event.registerSpriteSet(PowerModParticleTypes.RED_MAGNET_PARTICLE.get(), RedMagnetParticleParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MUSHROOM_SPORES.get(), MushroomSporesParticle::provider);
 		event.registerSpriteSet(PowerModParticleTypes.MERCURY_PARTICLE.get(), MercuryParticleParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_ONE.get(), PlagueParticleOneParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_TWO.get(), PlagueParticleTwoParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_THREE.get(), PlagueParticleThreeParticle::provider);
+		event.registerSpriteSet(PowerModParticleTypes.PLAGUE_PARTICLE_FOUR.get(), PlagueParticleFourParticle::provider);
 	}
 }

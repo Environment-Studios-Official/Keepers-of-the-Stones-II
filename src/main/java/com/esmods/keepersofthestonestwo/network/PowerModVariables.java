@@ -27,6 +27,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
+import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -210,7 +211,7 @@ public class PowerModVariables {
 		public boolean mercury_stone = false;
 		public boolean music_stone = false;
 		public boolean plague_stone = false;
-		public boolean blue_fire_stone = false;
+		public boolean blue_flame_stone = false;
 		public boolean gravity_stone = false;
 		public boolean smoke_stone = false;
 		public boolean spirit_stone = false;
@@ -275,7 +276,7 @@ public class PowerModVariables {
 			mercury_stone = nbt.getBoolean("mercury_stone");
 			music_stone = nbt.getBoolean("music_stone");
 			plague_stone = nbt.getBoolean("plague_stone");
-			blue_fire_stone = nbt.getBoolean("blue_fire_stone");
+			blue_flame_stone = nbt.getBoolean("blue_flame_stone");
 			gravity_stone = nbt.getBoolean("gravity_stone");
 			smoke_stone = nbt.getBoolean("smoke_stone");
 			spirit_stone = nbt.getBoolean("spirit_stone");
@@ -336,7 +337,7 @@ public class PowerModVariables {
 			nbt.putBoolean("mercury_stone", mercury_stone);
 			nbt.putBoolean("music_stone", music_stone);
 			nbt.putBoolean("plague_stone", plague_stone);
-			nbt.putBoolean("blue_fire_stone", blue_fire_stone);
+			nbt.putBoolean("blue_flame_stone", blue_flame_stone);
 			nbt.putBoolean("gravity_stone", gravity_stone);
 			nbt.putBoolean("smoke_stone", smoke_stone);
 			nbt.putBoolean("spirit_stone", spirit_stone);
@@ -561,8 +562,12 @@ public class PowerModVariables {
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (entity instanceof ServerPlayer serverPlayer)
-				PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
+			if (!entity.level().isClientSide()) {
+				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
+					if (entityiterator instanceof ServerPlayer serverPlayer)
+						PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
+				}
+			}
 		}
 	}
 

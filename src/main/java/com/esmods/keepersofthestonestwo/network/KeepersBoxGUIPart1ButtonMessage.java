@@ -29,6 +29,7 @@ import com.esmods.keepersofthestonestwo.procedures.IceElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
@@ -117,6 +118,10 @@ public record KeepersBoxGUIPart1ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 11) {
 
 			MagnetElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 12) {
+
+			BlueFlameElementGetProcedure.execute(world, entity);
 		}
 	}
 
