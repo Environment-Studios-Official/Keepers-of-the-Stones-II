@@ -4,6 +4,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.eventbus.api.Event;
 import net.minecraftforge.client.event.RenderLivingEvent;
+import net.minecraftforge.api.distmarker.OnlyIn;
 import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.entity.player.Player;
@@ -22,10 +23,11 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT)
+@Mod.EventBusSubscriber(value = {Dist.CLIENT})
 public class AmberLayerRenderEventProcedure {
+	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
-	public static void KleidersRenderEvent(RenderLivingEvent event) {
+	public static void onEventTriggered(RenderLivingEvent event) {
 		execute(event, event.getEntity());
 	}
 
@@ -42,9 +44,9 @@ public class AmberLayerRenderEventProcedure {
 				Minecraft mc = Minecraft.getInstance();
 				EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
-				if (_evt.getRenderer() instanceof PlayerRenderer) {
+				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					if (_evt instanceof RenderLivingEvent.Pre) {
-						// _evt.setCanceled(true);
+						_evt.setCanceled(true);
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersPlayerRenderer(context, new ResourceLocation("power:textures/entities/amber_trap.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
 							.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
@@ -56,9 +58,9 @@ public class AmberLayerRenderEventProcedure {
 				Minecraft mc = Minecraft.getInstance();
 				EntityRenderDispatcher dis = Minecraft.getInstance().getEntityRenderDispatcher();
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
-				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer)) {
+				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer) && _evt.getEntity() instanceof Mob) {
 					if (_evt instanceof RenderLivingEvent.Pre) {
-						// _evt.setCanceled(true);
+						_evt.setCanceled(true);
 					}
 					new com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer(context, new ResourceLocation("power:textures/entities/amber_trap.png"), new Modeliceberg(context.bakeLayer(Modeliceberg.LAYER_LOCATION)))
 							.render((Mob) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());

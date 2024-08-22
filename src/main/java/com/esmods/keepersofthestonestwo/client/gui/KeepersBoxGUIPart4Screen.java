@@ -297,17 +297,16 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_mercury_element", imagebutton_mercury_element);
 		this.addRenderableWidget(imagebutton_mercury_element);
-		imagebutton_plague_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_element.png"), new ResourceLocation("power:textures/screens/plague_element_highlighted.png")), e -> {
-					if (PlagueStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart4ButtonMessage(13, x, y, z));
-						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 13, x, y, z);
-					}
-				}) {
+		imagebutton_plague_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_plague_element.png"), 16, 32, e -> {
+			if (PlagueStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart4ButtonMessage(13, x, y, z));
+				KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (PlagueStoneCheckProcedure.execute(world))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_plague_element", imagebutton_plague_element);

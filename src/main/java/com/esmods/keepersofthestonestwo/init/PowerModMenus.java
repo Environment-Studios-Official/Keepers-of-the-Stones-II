@@ -26,6 +26,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPoisonMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlagueMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
@@ -46,6 +47,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBlueFlameMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBloodMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAmberMenu;
@@ -103,4 +105,6 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesMushroomsMenu>> WHEEL_ABILITIES_MUSHROOMS = REGISTRY.register("wheel_abilities_mushrooms", () -> IForgeMenuType.create(WheelAbilitiesMushroomsMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesMercuryMenu>> WHEEL_ABILITIES_MERCURY = REGISTRY.register("wheel_abilities_mercury", () -> IForgeMenuType.create(WheelAbilitiesMercuryMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesMusicMenu>> WHEEL_ABILITIES_MUSIC = REGISTRY.register("wheel_abilities_music", () -> IForgeMenuType.create(WheelAbilitiesMusicMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesPlagueMenu>> WHEEL_ABILITIES_PLAGUE = REGISTRY.register("wheel_abilities_plague", () -> IForgeMenuType.create(WheelAbilitiesPlagueMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesBlueFlameMenu>> WHEEL_ABILITIES_BLUE_FLAME = REGISTRY.register("wheel_abilities_blue_flame", () -> IForgeMenuType.create(WheelAbilitiesBlueFlameMenu::new));
 }
