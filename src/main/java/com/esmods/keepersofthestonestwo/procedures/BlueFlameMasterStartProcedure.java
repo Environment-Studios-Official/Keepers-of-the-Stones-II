@@ -9,6 +9,7 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
@@ -133,5 +134,13 @@ public class BlueFlameMasterStartProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		}
+		if (entity instanceof LivingEntity _entity) {
+			ItemStack _setstack = new ItemStack(PowerModItems.BLUE_FLAME_SWORD.get()).copy();
+			_setstack.setCount(1);
+			_entity.setItemInHand(InteractionHand.MAIN_HAND, _setstack);
+			if (_entity instanceof Player _player)
+				_player.getInventory().setChanged();
+		}
+		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
 	}
 }

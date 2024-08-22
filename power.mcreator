@@ -29920,41 +29920,6 @@
       "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     },
     {
-      "name": "BlueFlameSpecialAttack",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "blue_flame_special_attack",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameSpecialAttackProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "number"
-          },
-          {
-            "name": "y",
-            "type": "number"
-          },
-          {
-            "name": "z",
-            "type": "number"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
-    },
-    {
       "name": "WheelAbilitiesBlueFlame",
       "type": "gui",
       "compiles": true,
@@ -30112,6 +30077,136 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/BlueFlameBattery"
+    },
+    {
+      "name": "BlueFlameSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "BlueMagicFireball",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_magic_fireball",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blue_magic_fireball.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueMagicFireballItem.java"
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "BlueMagicFireballProjectile",
+      "type": "projectile",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_magic_fireball_projectile",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/entity/BlueMagicFireballProjectileEntity.java"
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "BlueFlameSword",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_sword",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/blue_flame_sword.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/BlueFlameSwordItem.java"
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "BlueFlameSwordKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_sword_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlameSwordKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "BlueFlamePassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "blue_flame_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/BlueFlamePassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/BlueFlame"
     }
   ],
   "variable_elements": [
@@ -30967,6 +31062,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:BlueFlameSword",
       "~CUSTOM:PlagueWalkingStick",
       "~CUSTOM:MusicGuitar",
       "~CUSTOM:MushroomsHammer",
@@ -31658,8 +31754,8 @@
       "effect.power.plague": "Чума",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
@@ -31859,6 +31955,7 @@
       "battery.desc.water": "Вода",
       "battery.desc.blood": "Кровь",
       "entity.power.energium_golem": "Энерджиумный голем",
+      "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Электрический разряд, расходует 75",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Воздушный полет, расходует 5",
       "item.power.plague_armor_boots": "Ботинки мастра чумы",
       "item.power.energium_sword": "Энерджиумный меч",
@@ -31872,6 +31969,7 @@
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.mushrooms_hammer": "Грибной молот",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
+      "item.power.blue_magic_fireball": "Волшебный синий файрбол",
       "trim_material.power.energium_material": "Энерджиум",
       "advancements.keepers_of_the_stones_2.title": "Хранители Камней II",
       "battery.desc.mist": "Туман",
@@ -31894,6 +31992,7 @@
       "effect.power.air_master": "Мастер воздуха",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ледяная атака, расходует 30",
       "battery.desc.sound": "Звук",
+      "item.power.blue_flame_sword": "Меч синего пламени",
       "item.power.crystal_battery": "Батарея",
       "item.power.speed_armor_leggings": "Поножи мастера скорости",
       "item.power.raw_depleted_energium": "Рудный обеднённый энерджиум",
@@ -32174,6 +32273,7 @@
       "item.power.fire_armor_leggings": "Поножи мастера огня",
       "effect.power.energy_master": "Мастер энергии",
       "item.power.plague_armor_chestplate": "Нагрудник мастера чумы",
+      "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Шестерной файрбол, расходует 55",
       "advancements.getting_married.title": "Пора жениться!",
       "item.power.shadow_stone": "Камень тени",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
@@ -32281,7 +32381,8 @@
       "item.power.plants_armor_leggings": "Поножи мастера зелени",
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Обнуление, расходует 100",
       "item.power.plague_battery": "Батарея",
-      "item.power.magic_fireball": "Волшебный файрболл",
+      "item.power.magic_fireball": "Волшебный файрбол",
+      "gui.power.wheel_abilities_blue_flame.tooltip_blue_flamethrower_uses_20": "Синий огнемёт, расходует 20",
       "item.power.crystal_stone": "Камень кристалла",
       "battery.desc.air": "Воздух",
       "battery.desc.animals": "Животные",
@@ -32605,6 +32706,7 @@
       "battery.desc.water": "Water",
       "battery.desc.blood": "Blood",
       "entity.power.energium_golem": "Energium Golem",
+      "gui.power.wheel_abilities_blue_flame.tooltip_electric_discharge_uses_75": "Electric discharge, uses 75",
       "gui.power.wheel_abilities_air.tooltip_air_flight_uses_5_power_points": "Air flight, uses 5",
       "item.power.plague_armor_boots": "Plague Boots",
       "item.power.energium_sword": "Energium Sword",
@@ -32618,6 +32720,7 @@
       "advancements.super_charge.title": "Super Charge!",
       "item.power.mushrooms_hammer": "Mushrooms Hammer",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
+      "item.power.blue_magic_fireball": "Blue Magic Fireball",
       "trim_material.power.energium_material": "Energium",
       "advancements.keepers_of_the_stones_2.title": "Keepers Of The Stones II",
       "battery.desc.mist": "Mist",
@@ -32640,6 +32743,7 @@
       "effect.power.air_master": "Master of the Air",
       "gui.power.wheel_abilities_ice.tooltip_ice_attack_uses_30": "Ice attack, uses 30",
       "battery.desc.sound": "Sound",
+      "item.power.blue_flame_sword": "Blue Flame Sword",
       "item.power.crystal_battery": "Battery",
       "item.power.speed_armor_leggings": "Speed Leggings",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
@@ -32921,6 +33025,7 @@
       "item.power.fire_armor_leggings": "Fire Leggings",
       "effect.power.energy_master": "Master of Energy",
       "item.power.plague_armor_chestplate": "Plague Chestplate",
+      "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Six-shot fireballs, uses 55",
       "advancements.getting_married.title": "Getting married",
       "item.power.shadow_stone": "Shadow Stone",
       "item.power.earth_armor_boots": "Earth Boots",
@@ -33028,6 +33133,7 @@
       "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Zeroing out, uses 100",
       "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Magic Fireball",
+      "gui.power.wheel_abilities_blue_flame.tooltip_blue_flamethrower_uses_20": "Blue flamethrower, uses 20",
       "item.power.crystal_stone": "Crystal Stone",
       "battery.desc.air": "Air",
       "battery.desc.animals": "Animals",
