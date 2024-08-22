@@ -3,6 +3,7 @@ What's new in Keepers of the Stones II version 1.0.0.38?<br/>
 <br />- Added craft for soup from freaking parsnip
 <br />- Added support for features related to Kleiders Custom Render for 1.20.6
 <br />- Updated texture for soup from freaking parsnip and freaking parsnip
+<br />- [Bugfix] Fixed a bug that caused the mob model to disappear when using ice and amber abilities
 <br />- [Bugfix] Fixed a bug that caused the music guitar to not work with Better Combat
 <br />- [Bugfix] Fixed a bug where the sound from the stun effect could not pass when it was abruptly removed
 <br />- [Bugfix] Fixed a bug related the second and third fake slots when using the element of music
