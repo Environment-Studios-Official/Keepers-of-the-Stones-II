@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:blue_flame_armor_chestplate",
+    "power:plague_armor_chestplate",
     "power:music_armor_chestplate",
     "power:mercury_armor_chestplate",
     "power:mushrooms_armor_chestplate",

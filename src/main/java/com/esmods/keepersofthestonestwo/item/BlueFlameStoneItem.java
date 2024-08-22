@@ -21,6 +21,7 @@ import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameStoneUseProcedure;
 
 public class BlueFlameStoneItem extends Item {
 	public BlueFlameStoneItem() {
@@ -43,7 +44,7 @@ public class BlueFlameStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		RechargeStoneTickEventProcedure.execute(ar.getObject());
+		BlueFlameStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 

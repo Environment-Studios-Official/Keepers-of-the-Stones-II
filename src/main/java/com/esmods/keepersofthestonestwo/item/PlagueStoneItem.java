@@ -20,7 +20,7 @@ import net.minecraft.client.Minecraft;
 import java.util.List;
 
 import com.esmods.keepersofthestonestwo.procedures.RechargeStoneTickEventProcedure;
-import com.esmods.keepersofthestonestwo.procedures.LavaStoneUseProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueStoneUseProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetRechargeInfoProcedure;
 
 public class PlagueStoneItem extends Item {
@@ -44,7 +44,7 @@ public class PlagueStoneItem extends Item {
 	@Override
 	public InteractionResultHolder<ItemStack> use(Level world, Player entity, InteractionHand hand) {
 		InteractionResultHolder<ItemStack> ar = super.use(world, entity, hand);
-		LavaStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
+		PlagueStoneUseProcedure.execute(world, entity.getX(), entity.getY(), entity.getZ(), entity, ar.getObject());
 		return ar;
 	}
 

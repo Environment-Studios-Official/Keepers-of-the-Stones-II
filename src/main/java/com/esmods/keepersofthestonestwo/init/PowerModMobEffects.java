@@ -34,6 +34,7 @@ import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PowerLockEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PoisonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.PlantsMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.PlagueMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OceanMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
@@ -56,6 +57,7 @@ import com.esmods.keepersofthestonestwo.procedures.EarthMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.DestructionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CrystalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreationMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.BlueFlameMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AnimalsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AmberMasterEndProcedure;
@@ -83,6 +85,8 @@ import com.esmods.keepersofthestonestwo.potion.RainMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PowerLockMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PoisonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.PlantsMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMobEffect;
+import com.esmods.keepersofthestonestwo.potion.PlagueMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.OceanMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MusicMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
@@ -108,6 +112,7 @@ import com.esmods.keepersofthestonestwo.potion.DestructionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CrystalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.CreationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BlueMagnetPowerMobEffect;
+import com.esmods.keepersofthestonestwo.potion.BlueFlameMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.BloodMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AnimalsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.AmberMasterMobEffect;
@@ -169,6 +174,9 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MUSHROOMS_MASTER = REGISTRY.register("mushrooms_master", () -> new MushroomsMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MERCURY_MASTER = REGISTRY.register("mercury_master", () -> new MercuryMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MUSIC_MASTER = REGISTRY.register("music_master", () -> new MusicMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -277,6 +285,10 @@ public class PowerModMobEffects {
 			MercuryMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(MUSIC_MASTER)) {
 			MusicMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(PLAGUE_MASTER)) {
+			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(BLUE_FLAME_MASTER)) {
+			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

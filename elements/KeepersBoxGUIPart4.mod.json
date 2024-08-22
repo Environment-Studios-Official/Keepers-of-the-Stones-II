@@ -393,6 +393,38 @@
           "x": 214,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_plague_element",
+          "image": "plague_element.png",
+          "hoveredImage": "plague_element_highlighted.png",
+          "onClick": {
+            "name": "PlagueElementGet"
+          },
+          "displayCondition": {
+            "name": "PlagueStoneCheck"
+          },
+          "x": 151,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_plague",
+          "text": {
+            "fixedValue": "Plague"
+          },
+          "displayCondition": {
+            "name": "PlagueStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {
