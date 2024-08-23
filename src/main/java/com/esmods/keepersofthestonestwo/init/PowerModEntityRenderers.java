@@ -24,6 +24,8 @@ import com.esmods.keepersofthestonestwo.client.renderer.PoisonousThornRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonPitRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonDropProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.PoisonBombRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.PlagueBombRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.NoteBombProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MiniTornadoProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.MeteoriteProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.LightballProjectileRenderer;
@@ -92,5 +94,8 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.POISON_PIT.get(), PoisonPitRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KEEPER.get(), CursedKeeperRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.MERCURY_BALL_PROJECTILE.get(), ThrownItemRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.NOTE_BOMB_PROJECTILE.get(), NoteBombProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.PLAGUE_BOMB.get(), PlagueBombRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 	}
 }

@@ -3,7 +3,7 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Stun",
-    "icon": "stun.png",
+    "icon": "stun",
     "color": {
       "value": -10066330,
       "falpha": 0.0
@@ -12,8 +12,11 @@
     "mobEffectCategory": "HARMFUL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "onStarted": {
-      "name": "StunPriNalozhieniiEffiekta"
+    "onActiveTick": {
+      "name": "StunSoundTick"
+    },
+    "onExpired": {
+      "name": "StunStopSound"
     }
   }
 }

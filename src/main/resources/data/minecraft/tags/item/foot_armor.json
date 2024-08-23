@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
+    "power:blue_flame_armor_boots",
+    "power:plague_armor_boots",
     "power:music_armor_boots",
     "power:mercury_armor_boots",
     "power:mushrooms_armor_boots",

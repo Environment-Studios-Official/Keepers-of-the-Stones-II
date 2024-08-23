@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.WITHER_ROSE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 5.0,
+    "knockback": 5,
+    "entityModel": "Modelpoison_bomb",
+    "customModelTexture": "plague_bomb.png",
+    "onHitsBlock": {
+      "name": "PlagueBombDetonate"
+    },
+    "onHitsEntity": {
+      "name": "PlagueBombDetonate"
+    }
+  }
+}
