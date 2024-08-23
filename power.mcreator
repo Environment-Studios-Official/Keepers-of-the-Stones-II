@@ -33956,12 +33956,11 @@
       "cpapi"
     ],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "pehkui",
       "geckolib",
       "playeranimator"
     ],
-    "currentGenerator": "neoforge-1.20.6",
+    "currentGenerator": "neoforge-1.21.1",
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
