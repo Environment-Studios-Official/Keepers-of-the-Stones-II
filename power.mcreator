@@ -448,7 +448,7 @@
           }
         ]
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/ColorfulPowersModule/PowerScaleModule "
     },
     {
       "name": "GetPowerScale",
@@ -468,7 +468,7 @@
           }
         ]
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/ColorfulPowersModule/PowerScaleModule "
     },
     {
       "name": "GetActive",
@@ -488,7 +488,7 @@
           }
         ]
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/ColorfulPowersModule/PowerScaleModule "
     },
     {
       "name": "AirArmor",
@@ -12753,7 +12753,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Modules/PowerScaleModule "
+      "path": "~/Modules/ColorfulPowersModule/PowerScaleModule "
     },
     {
       "name": "SpaceMaster",
@@ -30678,6 +30678,37 @@
         ]
       },
       "path": "~/Modules/BasicModule"
+    },
+    {
+      "name": "QuakeVFX",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "quake_vfx",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/QuakeVFXProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/VFXEngineModule"
     }
   ],
   "variable_elements": [
@@ -31268,12 +31299,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "evolution",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "basic"
     }
   ],
   "sound_elements": [
@@ -33758,10 +33783,6 @@
             ]
           },
           {
-            "name": "PowerScaleModule ",
-            "children": []
-          },
-          {
             "name": "RechargeStoneModule",
             "children": []
           },
@@ -33775,6 +33796,15 @@
           },
           {
             "name": "ColorfulPowersModule",
+            "children": [
+              {
+                "name": "PowerScaleModule ",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "VFXEngineModule",
             "children": []
           }
         ]
