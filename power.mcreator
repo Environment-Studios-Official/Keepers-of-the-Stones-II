@@ -31280,12 +31280,6 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
-    },
-    {
-      "name": "evolution",
-      "type": "string",
-      "scope": "player_persistent",
-      "value": "basic"
     }
   ],
   "sound_elements": [

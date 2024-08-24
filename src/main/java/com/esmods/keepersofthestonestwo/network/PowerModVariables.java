@@ -81,7 +81,6 @@ public class PowerModVariables {
 			clone.first_booster_slot = original.first_booster_slot;
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
-			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -465,7 +464,6 @@ public class PowerModVariables {
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
-		public String evolution = "basic";
 
 		@Override
 		public CompoundTag serializeNBT() {
@@ -511,7 +509,6 @@ public class PowerModVariables {
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
-			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
@@ -558,7 +555,6 @@ public class PowerModVariables {
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
-			evolution = nbt.getString("evolution");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
