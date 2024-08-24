@@ -108,7 +108,7 @@ public class PowerModVariables {
 				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
-				clone.check_activating_stone = original.check_activating_stone;
+				clone.send_client_package = original.send_client_package;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -461,7 +461,7 @@ public class PowerModVariables {
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
 		public boolean debug = false;
-		public boolean check_activating_stone = false;
+		public boolean send_client_package = false;
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
@@ -506,7 +506,7 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			nbt.putBoolean("debug", debug);
-			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putBoolean("send_client_package", send_client_package);
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
@@ -552,7 +552,7 @@ public class PowerModVariables {
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 			debug = nbt.getBoolean("debug");
-			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			send_client_package = nbt.getBoolean("send_client_package");
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
