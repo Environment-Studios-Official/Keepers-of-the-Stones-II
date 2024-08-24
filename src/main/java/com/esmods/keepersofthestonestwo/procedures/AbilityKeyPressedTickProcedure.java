@@ -376,6 +376,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_third).equals("blue_flame")) {
 					BlueFlameSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("gravity") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("gravity")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("gravity") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("gravity")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("gravity") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("gravity")) {
+					GravitySpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				boolean _setval = false;

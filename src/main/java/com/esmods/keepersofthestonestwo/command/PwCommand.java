@@ -31,7 +31,7 @@ public class PwCommand {
 	@SubscribeEvent
 	public static void registerCommand(RegisterCommandsEvent event) {
 		event.getDispatcher().register(Commands.literal("pw").requires(s -> s.hasPermission(4))
-				.then(Commands.literal("set").then(Commands.literal("points").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
+				.then(Commands.literal("points").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -45,7 +45,7 @@ public class PwCommand {
 
 					PowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
-				})))).then(Commands.literal("max_points").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
+				}))))).then(Commands.literal("max_points").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 9999)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -59,7 +59,7 @@ public class PwCommand {
 
 					MaxPowerScaleSetProcedure.execute(arguments, entity);
 					return 0;
-				})))).then(Commands.literal("multiplier").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
+				}))))).then(Commands.literal("multiplier").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(Commands.argument("count", DoubleArgumentType.doubleArg(0, 10)).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -73,7 +73,7 @@ public class PwCommand {
 
 					PowerRecoveryMultiplierSetProcedure.execute(arguments, entity);
 					return 0;
-				})))).then(Commands.literal("fake_element").then(Commands.argument("players", EntityArgument.players()).then(
+				}))))).then(Commands.literal("fake_element").then(Commands.literal("set").then(Commands.argument("players", EntityArgument.players()).then(
 						Commands.argument("element_order", DoubleArgumentType.doubleArg(1, 3)).then(Commands.argument("element_name", StringArgumentType.word()).then(Commands.argument("time", DoubleArgumentType.doubleArg(0)).executes(arguments -> {
 							Level world = arguments.getSource().getUnsidedLevel();
 							double x = arguments.getSource().getPosition().x();
@@ -89,7 +89,7 @@ public class PwCommand {
 							FakeElementSetProcedure.execute(arguments, entity);
 							return 0;
 						})))))))
-				.then(Commands.literal("debug").then(Commands.argument("debug_logic", BoolArgumentType.bool()).executes(arguments -> {
+				.then(Commands.literal("debug").then(Commands.literal("set").then(Commands.argument("debug_logic", BoolArgumentType.bool()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -103,7 +103,7 @@ public class PwCommand {
 
 					DebugControlProcedure.execute(arguments, entity);
 					return 0;
-				}))).then(Commands.literal("quake").then(Commands.argument("x_translate", DoubleArgumentType.doubleArg()).then(Commands.argument("z_translate", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				})))).then(Commands.literal("vfx").then(Commands.literal("quake").then(Commands.argument("x_translate", DoubleArgumentType.doubleArg()).then(Commands.argument("z_translate", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -117,6 +117,6 @@ public class PwCommand {
 
 					QuakePowerProcedure.execute(world, x, y, z, arguments);
 					return 0;
-				})))));
+				}))))));
 	}
 }

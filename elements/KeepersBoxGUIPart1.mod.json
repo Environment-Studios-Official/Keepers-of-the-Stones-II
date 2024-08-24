@@ -393,6 +393,38 @@
           "x": 148,
           "y": 91
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_gravity_element",
+          "image": "gravity_element.png",
+          "hoveredImage": "gravity_element_highlighted.png",
+          "onClick": {
+            "name": "GravityElementGet"
+          },
+          "displayCondition": {
+            "name": "GravityStoneCheck"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_gravity",
+          "text": {
+            "fixedValue": "Gravity"
+          },
+          "displayCondition": {
+            "name": "GravityStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 90
+        }
       }
     ],
     "gridSettings": {

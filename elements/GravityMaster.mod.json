@@ -1,0 +1,25 @@
+{
+  "_fv": 66,
+  "_type": "potioneffect",
+  "definition": {
+    "effectName": "Master of Gravity",
+    "icon": "gravity_master",
+    "color": {
+      "value": -26215,
+      "falpha": 0.0
+    },
+    "isInstant": false,
+    "mobEffectCategory": "BENEFICIAL",
+    "renderStatusInInventory": true,
+    "renderStatusInHUD": true,
+    "onStarted": {
+      "name": "GravityMasterStart"
+    },
+    "onActiveTick": {
+      "name": "EnhancedAbilities"
+    },
+    "onExpired": {
+      "name": "GravityMasterEnd"
+    }
+  }
+}
