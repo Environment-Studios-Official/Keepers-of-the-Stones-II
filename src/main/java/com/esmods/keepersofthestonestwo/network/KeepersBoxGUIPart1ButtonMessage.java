@@ -27,6 +27,7 @@ import com.esmods.keepersofthestonestwo.procedures.LightningElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LavaElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
 import com.esmods.keepersofthestonestwo.procedures.IceElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GravityElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyElementGetProcedure;
@@ -117,6 +118,10 @@ public record KeepersBoxGUIPart1ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 12) {
 
 			BlueFlameElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			GravityElementGetProcedure.execute(world, entity);
 		}
 	}
 

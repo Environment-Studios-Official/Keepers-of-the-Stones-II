@@ -49,6 +49,7 @@ import com.esmods.keepersofthestonestwo.procedures.LethalityPriIstiechieniiEffie
 import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IronSkinEffectEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherMasterEndProcedure;
@@ -103,6 +104,7 @@ import com.esmods.keepersofthestonestwo.potion.LavaMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
@@ -177,6 +179,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -289,6 +292,8 @@ public class PowerModMobEffects {
 			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(BLUE_FLAME_MASTER)) {
 			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == GRAVITY_MASTER.get()) {
+			GravityMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }
