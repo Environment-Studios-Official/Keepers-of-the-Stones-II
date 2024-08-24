@@ -1692,33 +1692,39 @@ public class ReturnStoneAfterDeadProcedure {
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
-				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("gravity")) {
+				if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("gravity")) {
 					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.element_name_first = "0";
-						_vars.syncPlayerVariables(entity);
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_first = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("gravity")) {
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("gravity")) {
 					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.element_name_second = "0";
-						_vars.syncPlayerVariables(entity);
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_second = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("gravity")) {
+				} else if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("gravity")) {
 					{
-						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-						_vars.element_name_third = "0";
-						_vars.syncPlayerVariables(entity);
+						String _setval = "0";
+						entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+							capability.element_name_third = _setval;
+							capability.syncPlayerVariables(entity);
+						});
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();

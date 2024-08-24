@@ -296,17 +296,16 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_blue_flame_element", imagebutton_blue_flame_element);
 		this.addRenderableWidget(imagebutton_blue_flame_element);
-		imagebutton_gravity_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/gravity_element.png"), new ResourceLocation("power:textures/screens/gravity_element_highlighted.png")), e -> {
-					if (GravityStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart1ButtonMessage(13, x, y, z));
-						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 13, x, y, z);
-					}
-				}) {
+		imagebutton_gravity_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16, 0, 0, 16, new ResourceLocation("power:textures/screens/atlas/imagebutton_gravity_element.png"), 16, 32, e -> {
+			if (GravityStoneCheckProcedure.execute(world)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new KeepersBoxGUIPart1ButtonMessage(13, x, y, z));
+				KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GravityStoneCheckProcedure.execute(world))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_gravity_element", imagebutton_gravity_element);
