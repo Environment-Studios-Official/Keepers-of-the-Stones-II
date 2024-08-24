@@ -361,6 +361,70 @@
           "x": 263,
           "y": 129
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_blue_flame_element",
+          "image": "blue_flame_element.png",
+          "hoveredImage": "blue_flame_element_highlighted.png",
+          "onClick": {
+            "name": "BlueFlameElementGet"
+          },
+          "displayCondition": {
+            "name": "BlueFlameStoneCheck"
+          },
+          "x": 151,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_blue_flame",
+          "text": {
+            "fixedValue": "Blue Flame"
+          },
+          "displayCondition": {
+            "name": "BlueFlameStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_gravity_element",
+          "image": "gravity_element.png",
+          "hoveredImage": "gravity_element_highlighted.png",
+          "onClick": {
+            "name": "GravityElementGet"
+          },
+          "displayCondition": {
+            "name": "GravityStoneCheck"
+          },
+          "x": 264,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_gravity",
+          "text": {
+            "fixedValue": "Gravity"
+          },
+          "displayCondition": {
+            "name": "GravityStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 90
+        }
       }
     ],
     "gridSettings": {

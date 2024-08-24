@@ -26,6 +26,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSandMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesRainMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPoisonMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlantsMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesPlagueMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesOceanMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMusicMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMushroomsMenu;
@@ -38,6 +39,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningM
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesGravityMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesExplosionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
@@ -46,6 +48,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEarthMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesDestructionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCrystalMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesCreationMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBlueFlameMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesBloodMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAmberMenu;
@@ -103,4 +106,7 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesMushroomsMenu>> WHEEL_ABILITIES_MUSHROOMS = REGISTRY.register("wheel_abilities_mushrooms", () -> IMenuTypeExtension.create(WheelAbilitiesMushroomsMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesMercuryMenu>> WHEEL_ABILITIES_MERCURY = REGISTRY.register("wheel_abilities_mercury", () -> IMenuTypeExtension.create(WheelAbilitiesMercuryMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesMusicMenu>> WHEEL_ABILITIES_MUSIC = REGISTRY.register("wheel_abilities_music", () -> IMenuTypeExtension.create(WheelAbilitiesMusicMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesPlagueMenu>> WHEEL_ABILITIES_PLAGUE = REGISTRY.register("wheel_abilities_plague", () -> IMenuTypeExtension.create(WheelAbilitiesPlagueMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesBlueFlameMenu>> WHEEL_ABILITIES_BLUE_FLAME = REGISTRY.register("wheel_abilities_blue_flame", () -> IMenuTypeExtension.create(WheelAbilitiesBlueFlameMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesGravityMenu>> WHEEL_ABILITIES_GRAVITY = REGISTRY.register("wheel_abilities_gravity", () -> IMenuTypeExtension.create(WheelAbilitiesGravityMenu::new));
 }
