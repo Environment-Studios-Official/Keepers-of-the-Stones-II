@@ -3,10 +3,7 @@ package com.esmods.keepersofthestonestwo;
 import org.apache.logging.log4j.Logger;
 import org.apache.logging.log4j.LogManager;
 
-import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 import net.neoforged.neoforge.network.handling.IPayloadHandler;
-import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
-import net.neoforged.neoforge.event.tick.ServerTickEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.fml.util.thread.SidedThreadGroups;
 import net.neoforged.fml.common.Mod;
@@ -15,7 +12,6 @@ import net.neoforged.bus.api.IEventBus;
 
 import net.minecraft.util.Tuple;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.FriendlyByteBuf;
 
 import java.util.concurrent.ConcurrentLinkedQueue;

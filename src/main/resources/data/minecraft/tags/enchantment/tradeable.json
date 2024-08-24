@@ -1,6 +1,7 @@
 {
-    "replace": false,
-    "values": [
-            "ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("power:isolation"))",
-            "ResourceKey.create(Registries.ENCHANTMENT, ResourceLocation.parse("power:revenge"))"    ]
+  "replace": false,
+  "values": [
+    "power:isolation",
+    "power:revenge"
+  ]
 }

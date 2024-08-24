@@ -8,6 +8,8 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.ai.attributes.Attributes;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
@@ -63,12 +65,12 @@ public class BlueFlameSpecialAttackProcedure {
 							if (!(entityiterator == entity)) {
 								if (entity.isInWater()) {
 									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
 											(float) 20.25);
 								} else {
 									entityiterator.igniteForSeconds(14);
 									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
 								}
 							}
 						}
@@ -98,9 +100,9 @@ public class BlueFlameSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
@@ -114,9 +116,9 @@ public class BlueFlameSpecialAttackProcedure {
 				PowerMod.queueServerWork(10, () -> {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
 					{
@@ -124,16 +126,31 @@ public class BlueFlameSpecialAttackProcedure {
 						Level projectileLevel = _shootFrom.level();
 						if (!projectileLevel.isClientSide()) {
 							Projectile _entityToSpawn = new Object() {
-								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-									AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+								public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+									AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+										@Override
+										public byte getPierceLevel() {
+											return piercing;
+										}
+
+										@Override
+										protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+											if (knockback > 0) {
+												double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+												Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+												if (vec3.lengthSqr() > 0.0) {
+													livingEntity.push(vec3.x, 0.1, vec3.z);
+												}
+											}
+										}
+									};
 									entityToSpawn.setOwner(shooter);
 									entityToSpawn.setBaseDamage(damage);
-									entityToSpawn.setKnockback(knockback);
 									entityToSpawn.setSilent(true);
 									entityToSpawn.igniteForSeconds(100);
 									return entityToSpawn;
 								}
-							}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+							}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 							_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 							_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 							projectileLevel.addFreshEntity(_entityToSpawn);
@@ -142,9 +159,9 @@ public class BlueFlameSpecialAttackProcedure {
 					PowerMod.queueServerWork(10, () -> {
 						if (world instanceof Level _level) {
 							if (!_level.isClientSide()) {
-								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1);
+								_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1);
 							} else {
-								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1, false);
+								_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.NEUTRAL, 1, 1, false);
 							}
 						}
 						{
@@ -152,16 +169,31 @@ public class BlueFlameSpecialAttackProcedure {
 							Level projectileLevel = _shootFrom.level();
 							if (!projectileLevel.isClientSide()) {
 								Projectile _entityToSpawn = new Object() {
-									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-										AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+									public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+										AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+											@Override
+											public byte getPierceLevel() {
+												return piercing;
+											}
+
+											@Override
+											protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+												if (knockback > 0) {
+													double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+													Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+													if (vec3.lengthSqr() > 0.0) {
+														livingEntity.push(vec3.x, 0.1, vec3.z);
+													}
+												}
+											}
+										};
 										entityToSpawn.setOwner(shooter);
 										entityToSpawn.setBaseDamage(damage);
-										entityToSpawn.setKnockback(knockback);
 										entityToSpawn.setSilent(true);
 										entityToSpawn.igniteForSeconds(100);
 										return entityToSpawn;
 									}
-								}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+								}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 								_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 								_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 								projectileLevel.addFreshEntity(_entityToSpawn);
@@ -170,9 +202,9 @@ public class BlueFlameSpecialAttackProcedure {
 						PowerMod.queueServerWork(10, () -> {
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 								}
 							}
 							{
@@ -180,16 +212,31 @@ public class BlueFlameSpecialAttackProcedure {
 								Level projectileLevel = _shootFrom.level();
 								if (!projectileLevel.isClientSide()) {
 									Projectile _entityToSpawn = new Object() {
-										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-											AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+										public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+											AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+												@Override
+												public byte getPierceLevel() {
+													return piercing;
+												}
+
+												@Override
+												protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+													if (knockback > 0) {
+														double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+														Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+														if (vec3.lengthSqr() > 0.0) {
+															livingEntity.push(vec3.x, 0.1, vec3.z);
+														}
+													}
+												}
+											};
 											entityToSpawn.setOwner(shooter);
 											entityToSpawn.setBaseDamage(damage);
-											entityToSpawn.setKnockback(knockback);
 											entityToSpawn.setSilent(true);
 											entityToSpawn.igniteForSeconds(100);
 											return entityToSpawn;
 										}
-									}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+									}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 									_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 									_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 									projectileLevel.addFreshEntity(_entityToSpawn);
@@ -198,9 +245,9 @@ public class BlueFlameSpecialAttackProcedure {
 							PowerMod.queueServerWork(10, () -> {
 								if (world instanceof Level _level) {
 									if (!_level.isClientSide()) {
-										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+										_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 									} else {
-										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+										_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 									}
 								}
 								{
@@ -208,16 +255,31 @@ public class BlueFlameSpecialAttackProcedure {
 									Level projectileLevel = _shootFrom.level();
 									if (!projectileLevel.isClientSide()) {
 										Projectile _entityToSpawn = new Object() {
-											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-												AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+											public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+												AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+													@Override
+													public byte getPierceLevel() {
+														return piercing;
+													}
+
+													@Override
+													protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+														if (knockback > 0) {
+															double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+															Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+															if (vec3.lengthSqr() > 0.0) {
+																livingEntity.push(vec3.x, 0.1, vec3.z);
+															}
+														}
+													}
+												};
 												entityToSpawn.setOwner(shooter);
 												entityToSpawn.setBaseDamage(damage);
-												entityToSpawn.setKnockback(knockback);
 												entityToSpawn.setSilent(true);
 												entityToSpawn.igniteForSeconds(100);
 												return entityToSpawn;
 											}
-										}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+										}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 										_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 										_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 										projectileLevel.addFreshEntity(_entityToSpawn);
@@ -226,9 +288,9 @@ public class BlueFlameSpecialAttackProcedure {
 								PowerMod.queueServerWork(10, () -> {
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 										}
 									}
 									{
@@ -236,16 +298,31 @@ public class BlueFlameSpecialAttackProcedure {
 										Level projectileLevel = _shootFrom.level();
 										if (!projectileLevel.isClientSide()) {
 											Projectile _entityToSpawn = new Object() {
-												public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-													AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+												public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+													AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+														@Override
+														public byte getPierceLevel() {
+															return piercing;
+														}
+
+														@Override
+														protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+															if (knockback > 0) {
+																double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+																Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+																if (vec3.lengthSqr() > 0.0) {
+																	livingEntity.push(vec3.x, 0.1, vec3.z);
+																}
+															}
+														}
+													};
 													entityToSpawn.setOwner(shooter);
 													entityToSpawn.setBaseDamage(damage);
-													entityToSpawn.setKnockback(knockback);
 													entityToSpawn.setSilent(true);
 													entityToSpawn.igniteForSeconds(100);
 													return entityToSpawn;
 												}
-											}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+											}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 											_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 											_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 											projectileLevel.addFreshEntity(_entityToSpawn);
@@ -254,9 +331,9 @@ public class BlueFlameSpecialAttackProcedure {
 									PowerMod.queueServerWork(10, () -> {
 										if (world instanceof Level _level) {
 											if (!_level.isClientSide()) {
-												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
+												_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1);
 											} else {
-												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
+												_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.PLAYERS, 1, 1, false);
 											}
 										}
 										{
@@ -264,16 +341,31 @@ public class BlueFlameSpecialAttackProcedure {
 											Level projectileLevel = _shootFrom.level();
 											if (!projectileLevel.isClientSide()) {
 												Projectile _entityToSpawn = new Object() {
-													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-														AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level);
+													public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+														AbstractArrow entityToSpawn = new BlueMagicFireballProjectileEntity(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), level) {
+															@Override
+															public byte getPierceLevel() {
+																return piercing;
+															}
+
+															@Override
+															protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+																if (knockback > 0) {
+																	double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+																	Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+																	if (vec3.lengthSqr() > 0.0) {
+																		livingEntity.push(vec3.x, 0.1, vec3.z);
+																	}
+																}
+															}
+														};
 														entityToSpawn.setOwner(shooter);
 														entityToSpawn.setBaseDamage(damage);
-														entityToSpawn.setKnockback(knockback);
 														entityToSpawn.setSilent(true);
 														entityToSpawn.igniteForSeconds(100);
 														return entityToSpawn;
 													}
-												}.getArrow(projectileLevel, entity, (float) 13.5, 1);
+												}.getArrow(projectileLevel, entity, (float) 13.5, 1, (byte) 0);
 												_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 												_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, (float) 1.5, 0);
 												projectileLevel.addFreshEntity(_entityToSpawn);
@@ -303,7 +395,8 @@ public class BlueFlameSpecialAttackProcedure {
 								entityToSpawn.moveTo(Vec3.atBottomCenterOf(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ())));;
 								_level.addFreshEntity(entityToSpawn);
 							}
-							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity), 0);
+							entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
+									0);
 						}
 					}
 				}

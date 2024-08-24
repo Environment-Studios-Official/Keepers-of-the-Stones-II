@@ -19,7 +19,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.1,)"
+    versionRange="[21.1.12,)"
     ordering="AFTER"
     side="BOTH"
 
@@ -55,12 +55,6 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.power]]
-    modId="kleidersplayerrenderer"
-    type="optional"
-    versionRange="[0,)"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.power]]
     modId="pehkui"
     type="optional"

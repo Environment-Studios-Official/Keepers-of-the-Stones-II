@@ -2,7 +2,17 @@
   "description": {
     "translate": "enchantment.power.isolation"
   },
-  "supported_items": "#minecraft:enchantable/WEAPON_ENCHANTABLE",
+  "supported_items": [
+    "power:energium_pickaxe",
+    "power:energium_axe",
+    "power:energium_sword",
+    "power:energium_shovel",
+    "power:energium_hoe",
+    "power:energium_armor_helmet",
+    "power:energium_armor_chestplate",
+    "power:energium_armor_leggings",
+    "power:energium_armor_boots"
+  ],
   "weight": 5,
   "max_level": 1,
   "min_cost": {
@@ -17,5 +27,5 @@
   "slots": [
     "mainhand"
   ],
-  }
-
+  "exclusive_set": "power:revenge"
+}

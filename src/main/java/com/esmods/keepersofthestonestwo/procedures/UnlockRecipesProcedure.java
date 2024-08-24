@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.tick.PlayerTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -142,7 +140,7 @@ public class UnlockRecipesProcedure {
 		}
 		if (entity instanceof Player _playerHasItem ? _playerHasItem.getInventory().contains(new ItemStack(PowerModItems.FREAKING_PARSNIP.get())) : false) {
 			if (entity instanceof ServerPlayer _serverPlayer)
-				_serverPlayer.awardRecipesByKey(Collections.singletonList(new ResourceLocation("power:freaking_parsnip_soup_craft")));
+				_serverPlayer.awardRecipesByKey(Collections.singletonList(ResourceLocation.parse("power:freaking_parsnip_soup_craft")));
 		}
 	}
 }

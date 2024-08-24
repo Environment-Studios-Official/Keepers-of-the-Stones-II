@@ -2,11 +2,9 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import net.neoforged.neoforge.fluids.FluidType;
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.phys.Vec3;
-import net.minecraft.world.level.pathfinder.PathType;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;

@@ -1,8 +1,6 @@
 
 package com.esmods.keepersofthestonestwo.item;
 
-import net.neoforged.neoforge.event.ModifyDefaultComponentsEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.block.Block;
@@ -15,7 +13,6 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.tags.TagKey;
 import net.minecraft.tags.BlockTags;
-import net.minecraft.core.component.DataComponents;
 
 import com.esmods.keepersofthestonestwo.procedures.MoonDoubleSidedSpearKazhdyiTikVInvientarieProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;

@@ -8,7 +8,6 @@ import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
@@ -21,14 +20,11 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -554,12 +550,8 @@ public class PowerModVariables {
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 		}
 	}
 

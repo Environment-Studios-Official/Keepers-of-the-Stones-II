@@ -1,8 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.core.component.DataComponents;
 
 public class RechargeStoneTickEventProcedure {
 	public static void execute(ItemStack itemstack) {

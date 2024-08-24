@@ -2,7 +2,6 @@
 package com.esmods.keepersofthestonestwo.item;
 
 import net.neoforged.neoforge.registries.RegisterEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;

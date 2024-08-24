@@ -4,7 +4,6 @@ package com.esmods.keepersofthestonestwo.client.screens;
 import org.checkerframework.checker.units.qual.h;
 
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.api.distmarker.Dist;

@@ -78,7 +78,7 @@ public class RainBowItem extends Item {
 						stack.shrink(1);
 					}
 				}
-				RainBowPoslieIspolzovaniiaSnariadaProcedure.execute(world, entity);
+				RainBowPoslieIspolzovaniiaSnariadaProcedure.execute(entity);
 			}
 		}
 	}

@@ -323,7 +323,7 @@ public class KeepersBoxGUIPart4Screen extends AbstractContainerScreen<KeepersBox
 		guistate.put("button:imagebutton_mercury_element", imagebutton_mercury_element);
 		this.addRenderableWidget(imagebutton_mercury_element);
 		imagebutton_plague_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/plague_element.png"), new ResourceLocation("power:textures/screens/plague_element_highlighted.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/plague_element.png"), ResourceLocation.parse("power:textures/screens/plague_element_highlighted.png")), e -> {
 					if (PlagueStoneCheckProcedure.execute(world)) {
 						PacketDistributor.sendToServer(new KeepersBoxGUIPart4ButtonMessage(13, x, y, z));
 						KeepersBoxGUIPart4ButtonMessage.handleButtonAction(entity, 13, x, y, z);

@@ -21,6 +21,7 @@ import com.esmods.keepersofthestonestwo.block.PolishedCursedStoneBlock;
 import com.esmods.keepersofthestonestwo.block.OrangePortalBlock;
 import com.esmods.keepersofthestonestwo.block.MoonBlockBlock;
 import com.esmods.keepersofthestonestwo.block.KeepersBoxBlock;
+import com.esmods.keepersofthestonestwo.block.FreakingParsnipBlockBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumVaultBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumOreBlock;
 import com.esmods.keepersofthestonestwo.block.EnergiumControllerBlock;
@@ -109,6 +110,7 @@ public class PowerModBlocks {
 	public static final DeferredBlock<Block> CURSED_STONE_CRACKED_BRICKS_SLAB = REGISTRY.register("cursed_stone_cracked_bricks_slab", CursedStoneCrackedBricksSlabBlock::new);
 	public static final DeferredBlock<Block> CURSED_STONE_CRACKED_BRICKS_STAIRS = REGISTRY.register("cursed_stone_cracked_bricks_stairs", CursedStoneCrackedBricksStairsBlock::new);
 	public static final DeferredBlock<Block> CURSED_STONE_CRACKED_BRICKS_WALL = REGISTRY.register("cursed_stone_cracked_bricks_wall", CursedStoneCrackedBricksWallBlock::new);
+	public static final DeferredBlock<Block> FREAKING_PARSNIP_BLOCK = REGISTRY.register("freaking_parsnip_block", FreakingParsnipBlockBlock::new);
 	// Start of user code block custom blocks
 	// End of user code block custom blocks
 }

@@ -1,7 +1,6 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.phys.Vec3;

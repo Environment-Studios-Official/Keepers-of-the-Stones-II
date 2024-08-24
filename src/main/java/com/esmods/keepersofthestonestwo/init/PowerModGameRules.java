@@ -5,7 +5,6 @@
 package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.GameRules;

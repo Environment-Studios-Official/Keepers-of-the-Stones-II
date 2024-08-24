@@ -1,20 +1,13 @@
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.fml.event.lifecycle.FMLConstructModEvent;
 import net.neoforged.fml.config.ModConfig;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.fml.ModLoadingContext;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.fml.ModContainer;
+import net.neoforged.bus.api.IEventBus;
 
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
-import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(modid = PowerMod.MODID, bus = EventBusSubscriber.Bus.MOD)
 public class PowerModConfigs {
-	@SubscribeEvent
-	public static void register(FMLConstructModEvent event) {
-		event.enqueueWork(() -> {
-			ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, PowerConfigConfiguration.SPEC, "power_config.toml");
-		});
+	public static void register(IEventBus bus, ModContainer modContainer) {
+		modContainer.registerConfig(ModConfig.Type.COMMON, PowerConfigConfiguration.SPEC, "power_config.toml");
 	}
 }

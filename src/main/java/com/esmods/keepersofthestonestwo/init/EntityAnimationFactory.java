@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.init;
 
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
