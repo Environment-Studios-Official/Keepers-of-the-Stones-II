@@ -189,6 +189,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.MUSIC_BATTERY.get());
 				tabData.accept(PowerModItems.PLAGUE_BATTERY.get());
 				tabData.accept(PowerModItems.BLUE_FLAME_BATTERY.get());
+				tabData.accept(PowerModItems.GRAVITY_BATTERY.get());
 			})
 
 					.build());
