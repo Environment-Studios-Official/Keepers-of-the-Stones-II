@@ -103,7 +103,7 @@ public class PwCommand {
 
 					DebugControlProcedure.execute(arguments, entity);
 					return 0;
-				}))).then(Commands.literal("quake").then(Commands.argument("x_translate", DoubleArgumentType.doubleArg()).then(Commands.argument("z_translate", DoubleArgumentType.doubleArg()).executes(arguments -> {
+				}))).then(Commands.literal("vfx").then(Commands.literal("quake").then(Commands.argument("x_translate", DoubleArgumentType.doubleArg()).then(Commands.argument("z_translate", DoubleArgumentType.doubleArg()).executes(arguments -> {
 					Level world = arguments.getSource().getUnsidedLevel();
 					double x = arguments.getSource().getPosition().x();
 					double y = arguments.getSource().getPosition().y();
@@ -117,6 +117,6 @@ public class PwCommand {
 
 					QuakePowerProcedure.execute(world, x, y, z, arguments);
 					return 0;
-				})))));
+				}))))));
 	}
 }
