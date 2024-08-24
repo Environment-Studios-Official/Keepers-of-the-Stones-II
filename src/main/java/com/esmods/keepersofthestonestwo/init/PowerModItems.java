@@ -147,6 +147,7 @@ import com.esmods.keepersofthestonestwo.item.IceArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
+import com.esmods.keepersofthestonestwo.item.GravityArmorItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipItem;
@@ -614,6 +615,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> BLUE_FLAME_BATTERY = REGISTRY.register("blue_flame_battery", () -> new BlueFlameBatteryItem());
 	public static final DeferredHolder<Item, Item> BLUE_MAGIC_FIREBALL = REGISTRY.register("blue_magic_fireball", () -> new BlueMagicFireballItem());
 	public static final DeferredHolder<Item, Item> BLUE_FLAME_SWORD = REGISTRY.register("blue_flame_sword", () -> new BlueFlameSwordItem());
+	public static final DeferredHolder<Item, Item> GRAVITY_ARMOR_HELMET = REGISTRY.register("gravity_armor_helmet", () -> new GravityArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> GRAVITY_ARMOR_CHESTPLATE = REGISTRY.register("gravity_armor_chestplate", () -> new GravityArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> GRAVITY_ARMOR_LEGGINGS = REGISTRY.register("gravity_armor_leggings", () -> new GravityArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> GRAVITY_ARMOR_BOOTS = REGISTRY.register("gravity_armor_boots", () -> new GravityArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items

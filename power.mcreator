@@ -30207,6 +30207,264 @@
         ]
       },
       "path": "~/Elements/BlueFlame"
+    },
+    {
+      "name": "GravityMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/GravityMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/gravity_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/gravity_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/GravityArmorItem.java",
+          "src/main/resources/assets/power/models/item/gravity_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/gravity_armor_boots.json"
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -31394,7 +31652,11 @@
       "CUSTOM:BlueFlameArmor.helmet",
       "CUSTOM:BlueFlameArmor.body",
       "CUSTOM:BlueFlameArmor.legs",
-      "CUSTOM:BlueFlameArmor.boots"
+      "CUSTOM:BlueFlameArmor.boots",
+      "CUSTOM:GravityArmor.helmet",
+      "CUSTOM:GravityArmor.body",
+      "CUSTOM:GravityArmor.legs",
+      "CUSTOM:GravityArmor.boots"
     ],
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
@@ -31551,7 +31813,8 @@
       "MercuryStone",
       "MusicStone",
       "PlagueStone",
-      "BlueFlameStone"
+      "BlueFlameStone",
+      "GravityStone"
     ]
   },
   "language_map": {
@@ -31606,6 +31869,7 @@
       "item.power.blood_armor_chestplate": "Нагрудник мастера крови",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Подъём тумана, расходует 50",
+      "battery.desc.gravity": "Гравитация",
       "item.power.ocean_armor_chestplate": "Нагрудник мастера океана",
       "item.power.mercury_battle_axe": "Ртутный боевой топор",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
@@ -31699,6 +31963,7 @@
       "battery.desc.shadow": "Тень",
       "item.power.blood_stone": "Камень крови",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Природное исцеление, расходует 65",
+      "gui.power.keepers_box_gui_part_1.tooltip_gravity": "Гравитация",
       "item.power.ice_spear": "Копьё льда",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Пронзание сталагмитом, расходует 40",
       "subtitles.stone_activation": "Камень был активирован",
@@ -31823,6 +32088,7 @@
       "item.power.explosion_mace": "Взрывная булава",
       "block.power.cursed_stone_bricks": "Проклятые каменные кирпичи",
       "entity.power.poison_pit": "Ядовитая яма",
+      "item.power.gravity_armor_chestplate": "Нагрудник мастера гравитации",
       "subtitles.backport.block.vault.insert": "",
       "item.power.magnet_armor_chestplate": "Нагрудник мастера магнита",
       "death.attack.elemental_powers": "%1$s был убит силой стихии",
@@ -31848,6 +32114,7 @@
       "item.power.energy_armor_chestplate": "Нагрудник мастера энергии",
       "item.power.blood_sickle": "Кровавый серп",
       "item.power.mind_stone": "Камень разума",
+      "item.power.gravity_armor_helmet": "Шлем мастера гравитации",
       "item.power.ocean_armor_helmet": "Шлем мастера океана",
       "block.power.purple_mushroom": "Фиолетовый гриб",
       "item.power.mushrooms_armor_helmet": "Шлем мастера грибов",
@@ -32000,6 +32267,7 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30": "Отрицательный заряд, расходует 30",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энерджиума",
+      "item.power.gravity_armor_boots": "Ботинки мастера гравитации",
       "effect.power.amber_master": "Мастер янтаря",
       "item.power.amber_armor_boots": "Ботинки мастера янтаря",
       "effect.power.shadow_master": "Мастер тени",
@@ -32057,6 +32325,7 @@
       "block.power.energium_ore": "Энерджиумная руда",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Удар молнии, расходует 35",
       "block.power.energium_vault": "Энерджиумное хранилище",
+      "effect.power.gravity_master": "Мастер гравитации",
       "item.power.teleportation_battery": "Батарея",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
@@ -32204,6 +32473,7 @@
       "item.power.crystal_stone": "Камень кристалла",
       "battery.desc.air": "Воздух",
       "battery.desc.animals": "Животные",
+      "item.power.gravity_armor_leggings": "Поножи мастера гравитации",
       "item.power.technology_stone": "Камень технологий",
       "item.power.energium_golem_spawn_egg": "Яйцо призыва энерджиумного голема",
       "item.power.misty_fan": "Туманный веер",
@@ -32357,6 +32627,7 @@
       "item.power.blood_armor_chestplate": "Blood Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Technology",
       "gui.power.wheel_abilities_mist.tooltip_mist_lifting_uses_50": "Mist lifting, uses 50",
+      "battery.desc.gravity": "Gravity",
       "item.power.ocean_armor_chestplate": "Ocean Chestplate",
       "item.power.space_armor_boots": "Space Boots",
       "item.power.mercury_battle_axe": "Mercury Battle Axe",
@@ -32450,6 +32721,7 @@
       "battery.desc.shadow": "Shadow",
       "item.power.blood_stone": "Blood Stone",
       "gui.power.wheel_abilities_plants.tooltip_natural_healing_uses_65": "Natural healing, uses 65",
+      "gui.power.keepers_box_gui_part_1.tooltip_gravity": "Gravity",
       "item.power.ice_spear": "Ice Spear",
       "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing, uses 40",
       "subtitles.stone_activation": "The stone has been activated",
@@ -32574,6 +32846,7 @@
       "item.power.explosion_mace": "Explosion Mace",
       "block.power.cursed_stone_bricks": "Cursed Stone Bricks",
       "entity.power.poison_pit": "Poison Pit",
+      "item.power.gravity_armor_chestplate": "Gravity Chestplate",
       "subtitles.backport.block.vault.insert": "",
       "item.power.magnet_armor_chestplate": "Magnet Chestplate",
       "death.attack.elemental_powers": "%1$s died by elemental power",
@@ -32599,6 +32872,7 @@
       "item.power.energy_armor_chestplate": "Energy Chestplate",
       "item.power.blood_sickle": "Blood Sickle",
       "item.power.mind_stone": "Mind Stone",
+      "item.power.gravity_armor_helmet": "Gravity Helmet",
       "item.power.ocean_armor_helmet": "Ocean Helmet",
       "block.power.purple_mushroom": "Purple Mushroom",
       "item.power.mushrooms_armor_helmet": "Mushrooms Helmet",
@@ -32752,6 +33026,7 @@
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "gui.power.wheel_abilities_magnet.tooltip_negative_charge_uses_30": "Negative charge, uses 30",
       "block.power.raw_depleted_energium_block": "Block of Raw Depleted Energium",
+      "item.power.gravity_armor_boots": "Gravity Boots",
       "effect.power.amber_master": "Master of Amber",
       "item.power.amber_armor_boots": "Amber Boots",
       "effect.power.shadow_master": "Master of Shadow",
@@ -32809,6 +33084,7 @@
       "block.power.energium_ore": "Energium Ore",
       "gui.power.wheel_abilities_lightning.tooltip_lightning_strike_uses_35": "Lightning strike, uses 35",
       "block.power.energium_vault": "Energium Vault",
+      "effect.power.gravity_master": "Master of Gravity",
       "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Energium Helmet",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
@@ -32955,6 +33231,7 @@
       "item.power.crystal_stone": "Crystal Stone",
       "battery.desc.air": "Air",
       "battery.desc.animals": "Animals",
+      "item.power.gravity_armor_leggings": "Gravity Leggings",
       "item.power.technology_stone": "Technology Stone",
       "item.power.energium_golem_spawn_egg": "Energium Golem Spawn Egg",
       "item.power.misty_fan": "Misty Fan",
@@ -33283,221 +33560,6 @@
         ]
       },
       {
-        "name": "ItemsAndBlocks",
-        "children": [
-          {
-            "name": "Energium",
-            "children": []
-          },
-          {
-            "name": "Batteries",
-            "children": [
-              {
-                "name": "EmptyBattery",
-                "children": []
-              },
-              {
-                "name": "FireBattery",
-                "children": []
-              },
-              {
-                "name": "AirBattery",
-                "children": []
-              },
-              {
-                "name": "EarthBattery",
-                "children": []
-              },
-              {
-                "name": "WaterBattery",
-                "children": []
-              },
-              {
-                "name": "EtherBattery",
-                "children": []
-              },
-              {
-                "name": "IceBattery",
-                "children": []
-              },
-              {
-                "name": "LightningBattery",
-                "children": []
-              },
-              {
-                "name": "SoundBattery",
-                "children": []
-              },
-              {
-                "name": "CrystalBattery",
-                "children": []
-              },
-              {
-                "name": "LavaBattery",
-                "children": []
-              },
-              {
-                "name": "RainBattery",
-                "children": []
-              },
-              {
-                "name": "TornadoBattery",
-                "children": []
-              },
-              {
-                "name": "OceanBattery",
-                "children": []
-              },
-              {
-                "name": "PlantsBattery",
-                "children": []
-              },
-              {
-                "name": "AnimalsBattery",
-                "children": []
-              },
-              {
-                "name": "MetalBattery",
-                "children": []
-              },
-              {
-                "name": "LightBattery",
-                "children": []
-              },
-              {
-                "name": "ShadowBattery",
-                "children": []
-              },
-              {
-                "name": "VacuumBattery",
-                "children": []
-              },
-              {
-                "name": "EnergyBattery",
-                "children": []
-              },
-              {
-                "name": "SunBattery",
-                "children": []
-              },
-              {
-                "name": "MoonBattery",
-                "children": []
-              },
-              {
-                "name": "SpaceBattery",
-                "children": []
-              },
-              {
-                "name": "TimeBattery",
-                "children": []
-              },
-              {
-                "name": "CreationBattery",
-                "children": []
-              },
-              {
-                "name": "DestructionBattery",
-                "children": []
-              },
-              {
-                "name": "BloodBattery",
-                "children": []
-              },
-              {
-                "name": "TechnologyBattery",
-                "children": []
-              },
-              {
-                "name": "TeleportationBattery",
-                "children": []
-              },
-              {
-                "name": "ExplosionBattery",
-                "children": []
-              },
-              {
-                "name": "AmberBattery",
-                "children": []
-              },
-              {
-                "name": "MistBattery",
-                "children": []
-              },
-              {
-                "name": "SandBattery",
-                "children": []
-              },
-              {
-                "name": "SpeedBattery",
-                "children": []
-              },
-              {
-                "name": "PoisonBattery",
-                "children": []
-              },
-              {
-                "name": "MagnetBattery",
-                "children": []
-              },
-              {
-                "name": "MushroomsBattery",
-                "children": []
-              },
-              {
-                "name": "MercuryBattery",
-                "children": []
-              },
-              {
-                "name": "MusicBattery",
-                "children": []
-              },
-              {
-                "name": "PlagueBattery",
-                "children": []
-              },
-              {
-                "name": "BlueFlameBattery",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "BatteryCharger",
-            "children": []
-          },
-          {
-            "name": "KeepersBox",
-            "children": [
-              {
-                "name": "GUI",
-                "children": []
-              }
-            ]
-          },
-          {
-            "name": "Amplifier",
-            "children": []
-          },
-          {
-            "name": "CursedBlocks",
-            "children": []
-          },
-          {
-            "name": "Copyrium",
-            "children": []
-          },
-          {
-            "name": "OtherItems",
-            "children": []
-          },
-          {
-            "name": "FreakingParsnip",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Structures",
         "children": []
       },
@@ -33747,6 +33809,221 @@
       {
         "name": "TrimsMaterials",
         "children": []
+      },
+      {
+        "name": "ItemsAndBlocks",
+        "children": [
+          {
+            "name": "Energium",
+            "children": []
+          },
+          {
+            "name": "Batteries",
+            "children": [
+              {
+                "name": "EmptyBattery",
+                "children": []
+              },
+              {
+                "name": "FireBattery",
+                "children": []
+              },
+              {
+                "name": "AirBattery",
+                "children": []
+              },
+              {
+                "name": "EarthBattery",
+                "children": []
+              },
+              {
+                "name": "WaterBattery",
+                "children": []
+              },
+              {
+                "name": "EtherBattery",
+                "children": []
+              },
+              {
+                "name": "IceBattery",
+                "children": []
+              },
+              {
+                "name": "LightningBattery",
+                "children": []
+              },
+              {
+                "name": "SoundBattery",
+                "children": []
+              },
+              {
+                "name": "CrystalBattery",
+                "children": []
+              },
+              {
+                "name": "LavaBattery",
+                "children": []
+              },
+              {
+                "name": "RainBattery",
+                "children": []
+              },
+              {
+                "name": "TornadoBattery",
+                "children": []
+              },
+              {
+                "name": "OceanBattery",
+                "children": []
+              },
+              {
+                "name": "PlantsBattery",
+                "children": []
+              },
+              {
+                "name": "AnimalsBattery",
+                "children": []
+              },
+              {
+                "name": "MetalBattery",
+                "children": []
+              },
+              {
+                "name": "LightBattery",
+                "children": []
+              },
+              {
+                "name": "ShadowBattery",
+                "children": []
+              },
+              {
+                "name": "VacuumBattery",
+                "children": []
+              },
+              {
+                "name": "EnergyBattery",
+                "children": []
+              },
+              {
+                "name": "SunBattery",
+                "children": []
+              },
+              {
+                "name": "MoonBattery",
+                "children": []
+              },
+              {
+                "name": "SpaceBattery",
+                "children": []
+              },
+              {
+                "name": "TimeBattery",
+                "children": []
+              },
+              {
+                "name": "CreationBattery",
+                "children": []
+              },
+              {
+                "name": "DestructionBattery",
+                "children": []
+              },
+              {
+                "name": "BloodBattery",
+                "children": []
+              },
+              {
+                "name": "TechnologyBattery",
+                "children": []
+              },
+              {
+                "name": "TeleportationBattery",
+                "children": []
+              },
+              {
+                "name": "ExplosionBattery",
+                "children": []
+              },
+              {
+                "name": "AmberBattery",
+                "children": []
+              },
+              {
+                "name": "MistBattery",
+                "children": []
+              },
+              {
+                "name": "SandBattery",
+                "children": []
+              },
+              {
+                "name": "SpeedBattery",
+                "children": []
+              },
+              {
+                "name": "PoisonBattery",
+                "children": []
+              },
+              {
+                "name": "MagnetBattery",
+                "children": []
+              },
+              {
+                "name": "MushroomsBattery",
+                "children": []
+              },
+              {
+                "name": "MercuryBattery",
+                "children": []
+              },
+              {
+                "name": "MusicBattery",
+                "children": []
+              },
+              {
+                "name": "PlagueBattery",
+                "children": []
+              },
+              {
+                "name": "BlueFlameBattery",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "BatteryCharger",
+            "children": []
+          },
+          {
+            "name": "KeepersBox",
+            "children": [
+              {
+                "name": "GUI",
+                "children": []
+              }
+            ]
+          },
+          {
+            "name": "Amplifier",
+            "children": []
+          },
+          {
+            "name": "CursedBlocks",
+            "children": []
+          },
+          {
+            "name": "Copyrium",
+            "children": []
+          },
+          {
+            "name": "OtherItems",
+            "children": []
+          },
+          {
+            "name": "FreakingParsnip",
+            "children": []
+          }
+        ]
       }
     ]
   },
