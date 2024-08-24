@@ -5,7 +5,7 @@ repositories {
 }
       
 dependencies {
-    implementation 'curse.maven:kleidersplayerrenderer-682065:5647658'
+    implementation 'curse.maven:kleidersplayerrenderer-682065:5654805'
 }
 
 

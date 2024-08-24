@@ -292,7 +292,7 @@ public class PowerModMobEffects {
 			PlagueMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(BLUE_FLAME_MASTER)) {
 			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effect == GRAVITY_MASTER.get()) {
+		} else if (effectInstance.getEffect().is(GRAVITY_MASTER)) {
 			GravityMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
