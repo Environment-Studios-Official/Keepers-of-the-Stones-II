@@ -1393,6 +1393,39 @@
       }
     }
   ],
+  "display": {
+    "ground": {
+      "translation": [
+        0,
+        5,
+        0
+      ]
+    },
+    "gui": {
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "translation": [
+        -3.5,
+        -3,
+        0
+      ]
+    },
+    "fixed": {
+      "rotation": [
+        0,
+        0,
+        -45
+      ],
+      "translation": [
+        -3.5,
+        -3,
+        0
+      ]
+    }
+  },
   "groups": [
     {
       "name": "gravity_mace",
