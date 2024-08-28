@@ -562,22 +562,23 @@ public class PowerModVariables {
 			if (!entity.level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
 					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
+						PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this, entity.getId()));
 				}
 			}
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
 		public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "player_variables_sync");
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
-			this(new PlayerVariables());
+			this(new PlayerVariables(), buffer.readInt());
 			this.data.deserializeNBT(buffer.readNbt());
 		}
 
 		@Override
 		public void write(final FriendlyByteBuf buffer) {
+			buffer.writeInt(target());
 			buffer.writeNbt(data.serializeNBT());
 		}
 
@@ -588,7 +589,7 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final PlayPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.workHandler().submitAsync(() -> Minecraft.getInstance().player.getData(PLAYER_VARIABLES).deserializeNBT(message.data.serializeNBT())).exceptionally(e -> {
+				context.workHandler().submitAsync(() -> Minecraft.getInstance().player.level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(message.data.serializeNBT())).exceptionally(e -> {
 					context.packetHandler().disconnect(Component.literal(e.getMessage()));
 					return null;
 				});

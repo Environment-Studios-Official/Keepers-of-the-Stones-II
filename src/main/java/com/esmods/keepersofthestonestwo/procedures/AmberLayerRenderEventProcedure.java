@@ -21,6 +21,8 @@ import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 import com.esmods.keepersofthestonestwo.client.model.Modeliceberg;
 
@@ -47,6 +49,7 @@ public class AmberLayerRenderEventProcedure {
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
 				Entity _evtEntity = _evt.getEntity();
 				PlayerRenderer _pr = null;
+				PoseStack poseStack = _evt.getPoseStack();
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/empty.png");
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer emptyRenderer = new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context,
@@ -71,6 +74,7 @@ public class AmberLayerRenderEventProcedure {
 				EntityRendererProvider.Context context = new EntityRendererProvider.Context(dis, mc.getItemRenderer(), mc.getBlockRenderer(), dis.getItemInHandRenderer(), mc.getResourceManager(), mc.getEntityModels(), mc.font);
 				Entity _evtEntity = _evt.getEntity();
 				PlayerRenderer _pr = null;
+				PoseStack poseStack = _evt.getPoseStack();
 				if (_evt.getRenderer() instanceof PlayerRenderer && !(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersIgnoreCancel)) {
 					ResourceLocation _texture = new ResourceLocation("kleiders_custom_renderer:textures/entities/empty.png");
 					com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer emptyRenderer = new com.kleiders.kleidersplayerrenderer.KleidersSkinRenderer(context,
