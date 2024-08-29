@@ -118,22 +118,22 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_gravity_wave",
+          "image": "gravity_wave.png",
+          "hoveredImage": "gravity_wave_highlight.png",
           "onClick": {
             "name": "Attack165"
           },
           "x": 190,
-          "y": 36
+          "y": 35
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_telekinesis",
+          "image": "telekinesis.png",
+          "hoveredImage": "telekinesis_highlight.png",
           "onClick": {
             "name": "Attack166"
           },
@@ -144,14 +144,53 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_gravity_denial",
+          "image": "gravity_denial.png",
+          "hoveredImage": "gravity_denial_highlight.png",
           "onClick": {
             "name": "Attack167"
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_gravity_wave_uses_15",
+          "text": {
+            "fixedValue": "Gravity wave, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 202,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_telekinesis_uses_35",
+          "text": {
+            "fixedValue": "Telekinesis, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 106
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_gravity_denial_uses_5",
+          "text": {
+            "fixedValue": "Gravity denial, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 168
         }
       }
     ],

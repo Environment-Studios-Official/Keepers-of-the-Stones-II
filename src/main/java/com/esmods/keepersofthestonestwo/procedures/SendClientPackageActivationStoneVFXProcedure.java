@@ -56,7 +56,7 @@ public class SendClientPackageActivationStoneVFXProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.active = false;
+				_vars.send_client_package = false;
 				_vars.syncPlayerVariables(entity);
 			}
 		}
