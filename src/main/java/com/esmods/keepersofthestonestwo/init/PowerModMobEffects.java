@@ -51,6 +51,7 @@ import com.esmods.keepersofthestonestwo.potion.LavaMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
@@ -124,4 +125,5 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> PLAGUE_MASTER = REGISTRY.register("plague_master", () -> new PlagueMasterMobEffect());
 	public static final RegistryObject<MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
 	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
+	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 }

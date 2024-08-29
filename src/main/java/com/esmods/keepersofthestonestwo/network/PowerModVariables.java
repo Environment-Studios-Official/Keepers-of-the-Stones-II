@@ -19,6 +19,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
@@ -93,11 +94,14 @@ public class PowerModVariables {
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.helmet = original.helmet;
+			clone.chestplate = original.chestplate;
+			clone.leggings = original.leggings;
+			clone.boots = original.boots;
 			clone.debug = original.debug;
 			clone.first_booster_slot = original.first_booster_slot;
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
-			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -114,17 +118,13 @@ public class PowerModVariables {
 				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
 				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
-				clone.helmet = original.helmet;
-				clone.chestplate = original.chestplate;
-				clone.leggings = original.leggings;
-				clone.boots = original.boots;
 				clone.abilities_timer = original.abilities_timer;
 				clone.ability_using = original.ability_using;
 				clone.power_recorded = original.power_recorded;
 				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
-				clone.check_activating_stone = original.check_activating_stone;
+				clone.send_client_package = original.send_client_package;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -492,10 +492,10 @@ public class PowerModVariables {
 		public boolean first_fake_wheel_open_var = false;
 		public boolean second_fake_wheel_open_var = false;
 		public boolean third_fake_wheel_open_var = false;
-		public String helmet = "\"\"";
-		public String chestplate = "\"\"";
-		public String leggings = "\"\"";
-		public String boots = "\"\"";
+		public ItemStack helmet = ItemStack.EMPTY;
+		public ItemStack chestplate = ItemStack.EMPTY;
+		public ItemStack leggings = ItemStack.EMPTY;
+		public ItemStack boots = ItemStack.EMPTY;
 		public double abilities_timer = 0;
 		public boolean ability_using = false;
 		public boolean power_recorded = false;
@@ -503,11 +503,10 @@ public class PowerModVariables {
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
 		public boolean debug = false;
-		public boolean check_activating_stone = false;
+		public boolean send_client_package = false;
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
-		public String evolution = "basic";
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -542,10 +541,10 @@ public class PowerModVariables {
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
-			nbt.putString("helmet", helmet);
-			nbt.putString("chestplate", chestplate);
-			nbt.putString("leggings", leggings);
-			nbt.putString("boots", boots);
+			nbt.put("helmet", helmet.save(new CompoundTag()));
+			nbt.put("chestplate", chestplate.save(new CompoundTag()));
+			nbt.put("leggings", leggings.save(new CompoundTag()));
+			nbt.put("boots", boots.save(new CompoundTag()));
 			nbt.putDouble("abilities_timer", abilities_timer);
 			nbt.putBoolean("ability_using", ability_using);
 			nbt.putBoolean("power_recorded", power_recorded);
@@ -553,11 +552,10 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			nbt.putBoolean("debug", debug);
-			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putBoolean("send_client_package", send_client_package);
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
-			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
@@ -589,10 +587,10 @@ public class PowerModVariables {
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
-			helmet = nbt.getString("helmet");
-			chestplate = nbt.getString("chestplate");
-			leggings = nbt.getString("leggings");
-			boots = nbt.getString("boots");
+			helmet = ItemStack.of(nbt.getCompound("helmet"));
+			chestplate = ItemStack.of(nbt.getCompound("chestplate"));
+			leggings = ItemStack.of(nbt.getCompound("leggings"));
+			boots = ItemStack.of(nbt.getCompound("boots"));
 			abilities_timer = nbt.getDouble("abilities_timer");
 			ability_using = nbt.getBoolean("ability_using");
 			power_recorded = nbt.getBoolean("power_recorded");
@@ -600,11 +598,10 @@ public class PowerModVariables {
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 			debug = nbt.getBoolean("debug");
-			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			send_client_package = nbt.getBoolean("send_client_package");
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
-			evolution = nbt.getString("evolution");
 		}
 	}
 
@@ -675,11 +672,10 @@ public class PowerModVariables {
 					variables.fake_element_name_second_timer = message.data.fake_element_name_second_timer;
 					variables.fake_element_name_third_timer = message.data.fake_element_name_third_timer;
 					variables.debug = message.data.debug;
-					variables.check_activating_stone = message.data.check_activating_stone;
+					variables.send_client_package = message.data.send_client_package;
 					variables.first_booster_slot = message.data.first_booster_slot;
 					variables.second_booster_slot = message.data.second_booster_slot;
 					variables.third_booster_slot = message.data.third_booster_slot;
-					variables.evolution = message.data.evolution;
 				}
 			});
 			context.setPacketHandled(true);

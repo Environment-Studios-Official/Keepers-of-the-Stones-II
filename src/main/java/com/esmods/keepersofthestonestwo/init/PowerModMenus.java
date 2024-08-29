@@ -39,6 +39,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightningM
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLightMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesLavaMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesIceMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesGravityMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesExplosionMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
@@ -107,4 +108,5 @@ public class PowerModMenus {
 	public static final RegistryObject<MenuType<WheelAbilitiesMusicMenu>> WHEEL_ABILITIES_MUSIC = REGISTRY.register("wheel_abilities_music", () -> IForgeMenuType.create(WheelAbilitiesMusicMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesPlagueMenu>> WHEEL_ABILITIES_PLAGUE = REGISTRY.register("wheel_abilities_plague", () -> IForgeMenuType.create(WheelAbilitiesPlagueMenu::new));
 	public static final RegistryObject<MenuType<WheelAbilitiesBlueFlameMenu>> WHEEL_ABILITIES_BLUE_FLAME = REGISTRY.register("wheel_abilities_blue_flame", () -> IForgeMenuType.create(WheelAbilitiesBlueFlameMenu::new));
+	public static final RegistryObject<MenuType<WheelAbilitiesGravityMenu>> WHEEL_ABILITIES_GRAVITY = REGISTRY.register("wheel_abilities_gravity", () -> IForgeMenuType.create(WheelAbilitiesGravityMenu::new));
 }
