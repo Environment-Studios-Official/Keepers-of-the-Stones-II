@@ -56,7 +56,7 @@ public class FrozenLayerRenderEventProcedure {
 							(_evtEntity instanceof AbstractClientPlayer ? ((AbstractClientPlayer) _evtEntity).getSkin().model() == PlayerSkin.Model.SLIM : false), _texture);
 					_pr = emptyRenderer;
 					emptyRenderer.clearLayers();
-					emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+					emptyRenderer.render((AbstractClientPlayer) _evtEntity, _evtEntity.getYRot(), _evt.getPartialTick(), poseStack, _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 				if (_evt.getRenderer() instanceof PlayerRenderer) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
@@ -81,7 +81,7 @@ public class FrozenLayerRenderEventProcedure {
 							(_evtEntity instanceof AbstractClientPlayer ? ((AbstractClientPlayer) _evtEntity).getSkin().model() == PlayerSkin.Model.SLIM : false), _texture);
 					_pr = emptyRenderer;
 					emptyRenderer.clearLayers();
-					emptyRenderer.render((AbstractClientPlayer) _evt.getEntity(), _evt.getEntity().getYRot(), _evt.getPartialTick(), _evt.getPoseStack(), _evt.getMultiBufferSource(), _evt.getPackedLight());
+					emptyRenderer.render((AbstractClientPlayer) _evtEntity, _evtEntity.getYRot(), _evt.getPartialTick(), poseStack, _evt.getMultiBufferSource(), _evt.getPackedLight());
 				}
 				if (!(_evt.getRenderer() instanceof com.kleiders.kleidersplayerrenderer.KleidersEntityRenderer) && _evt.getEntity() instanceof Mob) {
 					if (_evt instanceof RenderLivingEvent.Pre _pre) {
