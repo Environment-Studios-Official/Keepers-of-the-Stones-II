@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:gravity_mace",
     "power:blue_flame_sword",
     "power:plague_walking_stick",
     "power:music_guitar",

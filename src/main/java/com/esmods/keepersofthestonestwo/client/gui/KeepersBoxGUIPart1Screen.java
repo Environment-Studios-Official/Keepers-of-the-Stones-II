@@ -24,6 +24,7 @@ import com.esmods.keepersofthestonestwo.procedures.MagnetStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightningStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LavaStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GravityStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyStoneCheckProcedure;
@@ -48,6 +49,7 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_explosion_element;
 	ImageButton imagebutton_magnet_element;
 	ImageButton imagebutton_blue_flame_element;
+	ImageButton imagebutton_gravity_element;
 
 	public KeepersBoxGUIPart1Screen(KeepersBoxGUIPart1Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -98,6 +100,9 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		if (BlueFlameStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_blue_flame"), mouseX, mouseY);
+		if (GravityStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 64 && mouseY < topPos + 88)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_1.tooltip_gravity"), mouseX, mouseY);
 	}
 
 	@Override
@@ -316,5 +321,20 @@ public class KeepersBoxGUIPart1Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_blue_flame_element", imagebutton_blue_flame_element);
 		this.addRenderableWidget(imagebutton_blue_flame_element);
+		imagebutton_gravity_element = new ImageButton(this.leftPos + 184, this.topPos + 69, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/gravity_element.png"), new ResourceLocation("power:textures/screens/gravity_element_highlighted.png")), e -> {
+					if (GravityStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart1ButtonMessage(13, x, y, z));
+						KeepersBoxGUIPart1ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GravityStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_gravity_element", imagebutton_gravity_element);
+		this.addRenderableWidget(imagebutton_gravity_element);
 	}
 }
