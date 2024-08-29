@@ -42,6 +42,7 @@
     "power:mercury_battery",
     "power:music_battery",
     "power:plague_battery",
-    "power:blue_flame_battery"
+    "power:blue_flame_battery",
+    "power:gravity_battery"
   ]
 }

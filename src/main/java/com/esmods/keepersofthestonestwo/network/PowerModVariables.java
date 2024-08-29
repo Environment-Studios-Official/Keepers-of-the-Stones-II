@@ -15,6 +15,7 @@ import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
@@ -78,11 +79,14 @@ public class PowerModVariables {
 			clone.fake_element_name_first = original.fake_element_name_first;
 			clone.fake_element_name_second = original.fake_element_name_second;
 			clone.fake_element_name_third = original.fake_element_name_third;
+			clone.helmet = original.helmet;
+			clone.chestplate = original.chestplate;
+			clone.leggings = original.leggings;
+			clone.boots = original.boots;
 			clone.debug = original.debug;
 			clone.first_booster_slot = original.first_booster_slot;
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
-			clone.evolution = original.evolution;
 			if (!event.isWasDeath()) {
 				clone.active = original.active;
 				clone.power = original.power;
@@ -99,17 +103,13 @@ public class PowerModVariables {
 				clone.first_fake_wheel_open_var = original.first_fake_wheel_open_var;
 				clone.second_fake_wheel_open_var = original.second_fake_wheel_open_var;
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
-				clone.helmet = original.helmet;
-				clone.chestplate = original.chestplate;
-				clone.leggings = original.leggings;
-				clone.boots = original.boots;
 				clone.abilities_timer = original.abilities_timer;
 				clone.ability_using = original.ability_using;
 				clone.power_recorded = original.power_recorded;
 				clone.fake_element_name_first_timer = original.fake_element_name_first_timer;
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
-				clone.check_activating_stone = original.check_activating_stone;
+				clone.send_client_package = original.send_client_package;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -442,10 +442,10 @@ public class PowerModVariables {
 		public boolean first_fake_wheel_open_var = false;
 		public boolean second_fake_wheel_open_var = false;
 		public boolean third_fake_wheel_open_var = false;
-		public String helmet = "\"\"";
-		public String chestplate = "\"\"";
-		public String leggings = "\"\"";
-		public String boots = "\"\"";
+		public ItemStack helmet = ItemStack.EMPTY;
+		public ItemStack chestplate = ItemStack.EMPTY;
+		public ItemStack leggings = ItemStack.EMPTY;
+		public ItemStack boots = ItemStack.EMPTY;
 		public double abilities_timer = 0;
 		public boolean ability_using = false;
 		public boolean power_recorded = false;
@@ -453,11 +453,10 @@ public class PowerModVariables {
 		public double fake_element_name_second_timer = 0;
 		public double fake_element_name_third_timer = 0;
 		public boolean debug = false;
-		public boolean check_activating_stone = false;
+		public boolean send_client_package = false;
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
-		public String evolution = "basic";
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -488,10 +487,10 @@ public class PowerModVariables {
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
-			nbt.putString("helmet", helmet);
-			nbt.putString("chestplate", chestplate);
-			nbt.putString("leggings", leggings);
-			nbt.putString("boots", boots);
+			nbt.put("helmet", helmet.saveOptional(lookupProvider));
+			nbt.put("chestplate", chestplate.saveOptional(lookupProvider));
+			nbt.put("leggings", leggings.saveOptional(lookupProvider));
+			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putDouble("abilities_timer", abilities_timer);
 			nbt.putBoolean("ability_using", ability_using);
 			nbt.putBoolean("power_recorded", power_recorded);
@@ -499,11 +498,10 @@ public class PowerModVariables {
 			nbt.putDouble("fake_element_name_second_timer", fake_element_name_second_timer);
 			nbt.putDouble("fake_element_name_third_timer", fake_element_name_third_timer);
 			nbt.putBoolean("debug", debug);
-			nbt.putBoolean("check_activating_stone", check_activating_stone);
+			nbt.putBoolean("send_client_package", send_client_package);
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
-			nbt.putString("evolution", evolution);
 			return nbt;
 		}
 
@@ -535,10 +533,10 @@ public class PowerModVariables {
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
-			helmet = nbt.getString("helmet");
-			chestplate = nbt.getString("chestplate");
-			leggings = nbt.getString("leggings");
-			boots = nbt.getString("boots");
+			helmet = ItemStack.parseOptional(lookupProvider, nbt.getCompound("helmet"));
+			chestplate = ItemStack.parseOptional(lookupProvider, nbt.getCompound("chestplate"));
+			leggings = ItemStack.parseOptional(lookupProvider, nbt.getCompound("leggings"));
+			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			abilities_timer = nbt.getDouble("abilities_timer");
 			ability_using = nbt.getBoolean("ability_using");
 			power_recorded = nbt.getBoolean("power_recorded");
@@ -546,31 +544,33 @@ public class PowerModVariables {
 			fake_element_name_second_timer = nbt.getDouble("fake_element_name_second_timer");
 			fake_element_name_third_timer = nbt.getDouble("fake_element_name_third_timer");
 			debug = nbt.getBoolean("debug");
-			check_activating_stone = nbt.getBoolean("check_activating_stone");
+			send_client_package = nbt.getBoolean("send_client_package");
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
-			evolution = nbt.getString("evolution");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
 			if (!entity.level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
 					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
+						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
 				}
 			}
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
-				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
-					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
-					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
-					return message;
-				});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
+			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
+			buffer.writeInt(message.target()); // Write the entity ID to the buffer
+		}, (RegistryFriendlyByteBuf buffer) -> {
+			var nbt = buffer.readNbt();
+			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
+			message.data.deserializeNBT(buffer.registryAccess(), nbt);
+			return message;
+		});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -579,10 +579,11 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
-					return null;
-				});
+				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
+						.exceptionally(e -> {
+							context.connection().disconnect(Component.literal(e.getMessage()));
+							return null;
+						});
 			}
 		}
 	}

@@ -25,7 +25,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
 @EventBusSubscriber
-public class ExtendedCheckOfActivationStoneProcedure {
+public class SendClientPackageActivationStoneVFXProcedure {
 	@SubscribeEvent
 	public static void onPlayerTick(PlayerTickEvent.Post event) {
 		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
@@ -38,7 +38,7 @@ public class ExtendedCheckOfActivationStoneProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).check_activating_stone) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).send_client_package) {
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
 					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:stone_activation")), SoundSource.PLAYERS, 1, 1);
@@ -56,7 +56,7 @@ public class ExtendedCheckOfActivationStoneProcedure {
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.check_activating_stone = false;
+				_vars.send_client_package = false;
 				_vars.syncPlayerVariables(entity);
 			}
 		}
