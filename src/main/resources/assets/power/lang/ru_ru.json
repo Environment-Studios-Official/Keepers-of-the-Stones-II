@@ -343,7 +343,7 @@
   "block.power.blue_portal": "Синий портал",
   "item.power.air_armor_boots": "Ботинки мастера воздуха",
   "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
-  "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Отрицание гравитации, расходует 5",
+  "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Отрицании гравитации, расходует 5",
   "item.power.time_armor_boots": "Ботинки мастера времени",
   "battery.desc.empty": "Пустая",
   "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Разломы, расходует 45",

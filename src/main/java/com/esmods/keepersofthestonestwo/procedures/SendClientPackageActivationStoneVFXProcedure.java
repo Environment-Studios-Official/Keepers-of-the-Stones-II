@@ -81,7 +81,7 @@ public class SendClientPackageActivationStoneVFXProcedure {
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.active = _setval;
+					capability.send_client_package = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

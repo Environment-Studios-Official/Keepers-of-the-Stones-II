@@ -34,9 +34,9 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_gravity_wave;
+	ImageButton imagebutton_telekinesis;
+	ImageButton imagebutton_gravity_denial;
 
 	public WheelAbilitiesGravityScreen(WheelAbilitiesGravityMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -54,6 +54,12 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 84 && mouseX < leftPos + 108 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_gravity_wave_uses_15"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 82 && mouseY < topPos + 106)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35"), mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 144 && mouseY < topPos + 168)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5"), mouseX, mouseY);
 	}
 
 	@Override
@@ -167,29 +173,29 @@ public class WheelAbilitiesGravityScreen extends AbstractContainerScreen<WheelAb
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_1.png"), 46, 92, e -> {
+		imagebutton_gravity_wave = new ImageButton(this.leftPos + 72, this.topPos + 11, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_gravity_wave.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesGravityButtonMessage(6, x, y, z));
 				WheelAbilitiesGravityButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_2.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_gravity_wave", imagebutton_gravity_wave);
+		this.addRenderableWidget(imagebutton_gravity_wave);
+		imagebutton_telekinesis = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_telekinesis.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesGravityButtonMessage(7, x, y, z));
 				WheelAbilitiesGravityButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ability_3.png"), 46, 92, e -> {
+		guistate.put("button:imagebutton_telekinesis", imagebutton_telekinesis);
+		this.addRenderableWidget(imagebutton_telekinesis);
+		imagebutton_gravity_denial = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_gravity_denial.png"), 46, 92, e -> {
 			if (true) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesGravityButtonMessage(8, x, y, z));
 				WheelAbilitiesGravityButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		});
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_gravity_denial", imagebutton_gravity_denial);
+		this.addRenderableWidget(imagebutton_gravity_denial);
 	}
 }

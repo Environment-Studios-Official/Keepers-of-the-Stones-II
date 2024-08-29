@@ -145,6 +145,7 @@ import com.esmods.keepersofthestonestwo.item.IceArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
+import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
 import com.esmods.keepersofthestonestwo.item.GravityBatteryItem;
 import com.esmods.keepersofthestonestwo.item.GravityArmorItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
@@ -620,6 +621,7 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_ARMOR_LEGGINGS = REGISTRY.register("gravity_armor_leggings", () -> new GravityArmorItem.Leggings());
 	public static final RegistryObject<Item> GRAVITY_ARMOR_BOOTS = REGISTRY.register("gravity_armor_boots", () -> new GravityArmorItem.Boots());
 	public static final RegistryObject<Item> GRAVITY_BATTERY = REGISTRY.register("gravity_battery", () -> new GravityBatteryItem());
+	public static final RegistryObject<Item> GRAVITY_MACE = REGISTRY.register("gravity_mace", () -> new GravityMaceItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
