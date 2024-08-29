@@ -30709,6 +30709,53 @@
         ]
       },
       "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "GravityMace",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_mace",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/gravity_mace.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/GravityMaceItem.java"
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "GravityMaceKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gravity_mace_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GravityMaceKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Gravity"
+    },
+    {
+      "name": "FeatherParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "feather_particle",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/FeatherParticleParticle.java",
+          "src/main/resources/assets/power/particles/feather_particle.json"
+        ]
+      },
+      "path": "~/Elements/Gravity"
     }
   ],
   "variable_elements": [
@@ -31558,6 +31605,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:GravityMace",
       "~CUSTOM:BlueFlameSword",
       "~CUSTOM:PlagueWalkingStick",
       "~CUSTOM:MusicGuitar",
@@ -32133,6 +32181,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
       "block.power.amplifier_block": "Блок амплифера",
+      "item.power.gravity_mace": "Гравитационная булава",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
       "battery.desc.plants": "Зелень",
       "item.power.ocean_armor_boots": "Ботинки мастера океана",
@@ -32235,6 +32284,7 @@
       "battery.desc.poison": "Яд",
       "item.power.tornado_battery": "Батарея",
       "effect.power.power_lock": "Блокировка силы",
+      "gui.power.wheel_abilities_gravity.tooltip_gravity_wave_uses_15": "Гравитационная волна, расходует 15",
       "item.power.metal_armor_helmet": "Щлем мастера металла",
       "block.power.energium_controller": "Энерджиумный контроллер",
       "subtitles.time_ability_effect": "Time power using",
@@ -32400,6 +32450,7 @@
       "block.power.blue_portal": "Синий портал",
       "item.power.air_armor_boots": "Ботинки мастера воздуха",
       "block.power.cursed_stone_bricks_slab": "Плита из проклятых каменных кирпичей",
+      "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Отрицании гравитации, расходует 5",
       "item.power.time_armor_boots": "Ботинки мастера времени",
       "battery.desc.empty": "Пустая",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Разломы, расходует 45",
@@ -32662,6 +32713,7 @@
       "item.power.lightning_falchion": "Молниеносный фальшион",
       "item.power.space_battery": "Батарея",
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Взрыв гранаты, расходует 20",
+      "gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35": "Телекинез, расходует 35",
       "item.power.plague_armor_leggings": "Поножи мастера чумы",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Янтарь",
@@ -32892,6 +32944,7 @@
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
       "block.power.amplifier_block": "Amplifier Block",
+      "item.power.gravity_mace": "Gravity Mace",
       "item.power.rain_armor_leggings": "Rain Leggings",
       "battery.desc.plants": "Plants",
       "item.power.ocean_armor_boots": "Ocean Boots",
@@ -32994,6 +33047,7 @@
       "battery.desc.poison": "Poison",
       "item.power.tornado_battery": "Battery",
       "effect.power.power_lock": "Power lock",
+      "gui.power.wheel_abilities_gravity.tooltip_gravity_wave_uses_15": "Gravity wave, uses 15",
       "item.power.metal_armor_helmet": "Metal Helmet",
       "block.power.energium_controller": "Energium Controller",
       "subtitles.time_ability_effect": "Time power using",
@@ -33159,6 +33213,7 @@
       "block.power.blue_portal": "Blue Portal",
       "item.power.air_armor_boots": "Air Boots",
       "block.power.cursed_stone_bricks_slab": "Cursed Stone Bricks Slab",
+      "gui.power.wheel_abilities_gravity.tooltip_gravity_denial_uses_5": "Gravity denial, uses 5",
       "item.power.time_armor_boots": "Time Boots",
       "battery.desc.empty": "Empty",
       "gui.power.wheel_abilities_vacuum.tooltip_rifts_uses_45": "Rifts, uses 45",
@@ -33422,6 +33477,7 @@
       "item.power.lightning_falchion": "Lightning Falchion",
       "item.power.space_battery": "Battery",
       "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
+      "gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35": "Telekinesis, uses 35",
       "item.power.plague_armor_leggings": "Plague Leggings",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Amber",
