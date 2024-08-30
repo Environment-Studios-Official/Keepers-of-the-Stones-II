@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack153"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -149,6 +152,9 @@
           "hoveredImage": "explosion_of_notes_highlight.png",
           "onClick": {
             "name": "Attack154"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 251,
           "y": 97
@@ -188,6 +194,9 @@
           "hoveredImage": "musical_relaxation_highlight.png",
           "onClick": {
             "name": "Attack155"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

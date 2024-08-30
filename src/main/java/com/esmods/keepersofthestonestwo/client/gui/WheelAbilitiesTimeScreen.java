@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTimeMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -183,42 +184,45 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_time_stopping = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/time_stopping.png"), new ResourceLocation("power:textures/screens/time_stopping_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(6, x, y, z));
 						WheelAbilitiesTimeButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_time_stopping", imagebutton_time_stopping);
 		this.addRenderableWidget(imagebutton_time_stopping);
 		imagebutton_time_dilation = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/time_dilation.png"), new ResourceLocation("power:textures/screens/time_dilation_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(7, x, y, z));
 						WheelAbilitiesTimeButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_time_dilation", imagebutton_time_dilation);
 		this.addRenderableWidget(imagebutton_time_dilation);
 		imagebutton_acceleration_time = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/acceleration_time.png"), new ResourceLocation("power:textures/screens/acceleration_time_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(8, x, y, z));
 						WheelAbilitiesTimeButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_acceleration_time", imagebutton_acceleration_time);

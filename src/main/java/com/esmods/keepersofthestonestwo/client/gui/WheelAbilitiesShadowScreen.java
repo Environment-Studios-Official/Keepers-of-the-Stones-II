@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesShadowMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -183,42 +184,45 @@ public class WheelAbilitiesShadowScreen extends AbstractContainerScreen<WheelAbi
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_shadow_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/shadow_ray.png"), new ResourceLocation("power:textures/screens/shadow_ray_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(6, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_shadow_ray", imagebutton_shadow_ray);
 		this.addRenderableWidget(imagebutton_shadow_ray);
 		imagebutton_shadow_sphere = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/shadow_sphere.png"), new ResourceLocation("power:textures/screens/shadow_sphere_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(7, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_shadow_sphere", imagebutton_shadow_sphere);
 		this.addRenderableWidget(imagebutton_shadow_sphere);
 		imagebutton_rising_shadow = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/rising_shadow.png"), new ResourceLocation("power:textures/screens/rising_shadow_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesShadowButtonMessage(8, x, y, z));
 						WheelAbilitiesShadowButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_rising_shadow", imagebutton_rising_shadow);

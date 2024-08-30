@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -92,42 +93,45 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 	public void init() {
 		super.init();
 		imagebutton_air_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/air_flow.png"), new ResourceLocation("power:textures/screens/air_flow_highlight.png")), e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesAirButtonMessage(0, x, y, z));
 				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 0, x, y, z);
 			}
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_air_flow", imagebutton_air_flow);
 		this.addRenderableWidget(imagebutton_air_flow);
 		imagebutton_wind_gust = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/wind_gust.png"), new ResourceLocation("power:textures/screens/wind_gust_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesAirButtonMessage(1, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wind_gust", imagebutton_wind_gust);
 		this.addRenderableWidget(imagebutton_wind_gust);
 		imagebutton_air_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/air_flight.png"), new ResourceLocation("power:textures/screens/air_flight_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesAirButtonMessage(2, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_air_flight", imagebutton_air_flight);

@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMetalMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -183,42 +184,45 @@ public class WheelAbilitiesMetalScreen extends AbstractContainerScreen<WheelAbil
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_metal_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/metal_attack.png"), new ResourceLocation("power:textures/screens/metal_attack_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMetalButtonMessage(6, x, y, z));
 						WheelAbilitiesMetalButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_metal_attack", imagebutton_metal_attack);
 		this.addRenderableWidget(imagebutton_metal_attack);
 		imagebutton_metal_knives = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/metal_knives.png"), new ResourceLocation("power:textures/screens/metal_knives_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMetalButtonMessage(7, x, y, z));
 						WheelAbilitiesMetalButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_metal_knives", imagebutton_metal_knives);
 		this.addRenderableWidget(imagebutton_metal_knives);
 		imagebutton_metal_skin = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/metal_skin.png"), new ResourceLocation("power:textures/screens/metal_skin_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMetalButtonMessage(8, x, y, z));
 						WheelAbilitiesMetalButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_metal_skin", imagebutton_metal_skin);

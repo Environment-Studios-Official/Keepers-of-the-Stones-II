@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack77"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -136,6 +139,9 @@
           "hoveredImage": "energy_charge_highlight.png",
           "onClick": {
             "name": "Attack79"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158
@@ -188,6 +194,9 @@
           "hoveredImage": "energy_charged_ball_highlight.png",
           "onClick": {
             "name": "Attack78"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 251,
           "y": 97
