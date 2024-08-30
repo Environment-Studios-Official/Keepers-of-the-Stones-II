@@ -31366,6 +31366,24 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "level_exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "base_damage_by_lvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
     }
   ],
   "sound_elements": [
@@ -32142,8 +32160,8 @@
       "effect.power.plague": "Чума",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
-      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.blue_flame_battery": "Батарея",
       "item.power.energium_shovel": "Энерджиумная лопата",
       "item.power.earth_battery": "Батарея",
@@ -32905,8 +32923,8 @@
       "effect.power.plague": "Plague",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
-      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.blue_flame_battery": "Battery",
       "item.power.energium_shovel": "Energium Shovel",
       "item.power.earth_battery": "Battery",
@@ -33881,6 +33899,10 @@
           },
           {
             "name": "VFXEngineModule",
+            "children": []
+          },
+          {
+            "name": "LevelingSystemModule",
             "children": []
           }
         ]
