@@ -30776,6 +30776,264 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey"
+    },
+    {
+      "name": "SmokeMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/SmokeMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/smoke_armor_boots.json",
+          "src/main/resources/assets/power/models/item/smoke_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/smoke_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/smoke_armor_leggings.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SmokeArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -31963,7 +32221,11 @@
       "CUSTOM:GravityArmor.helmet",
       "CUSTOM:GravityArmor.body",
       "CUSTOM:GravityArmor.legs",
-      "CUSTOM:GravityArmor.boots"
+      "CUSTOM:GravityArmor.boots",
+      "CUSTOM:SmokeArmor.helmet",
+      "CUSTOM:SmokeArmor.body",
+      "CUSTOM:SmokeArmor.legs",
+      "CUSTOM:SmokeArmor.boots"
     ],
     "ENTITIES:minecraft:fall_damage_immune": [
       "CUSTOM:EnergiumGolem"
@@ -32121,7 +32383,8 @@
       "MusicStone",
       "PlagueStone",
       "BlueFlameStone",
-      "GravityStone"
+      "GravityStone",
+      "SmokeStone"
     ]
   },
   "language_map": {
@@ -32285,6 +32548,7 @@
       "effect.power.star_regeneration": "Звёздная регенерация",
       "block.power.moon_block": "Лунный блок",
       "item.power.mist_battery": "Батарея",
+      "item.power.smoke_armor_chestplate": "Gravity Chestplate",
       "power.modinfo.recharge_stone": "Перезарядка: ",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "block.power.freaking_parsnip_block": "Блок дикого пастернака",
@@ -32369,6 +32633,7 @@
       "battery.desc.space": "Космос",
       "item.power.moon_double_sided_spear": "Двухстороннее лунное копьё",
       "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
+      "item.power.smoke_armor_leggings": "Gravity Leggings",
       "block.power.raw_energium_block": "Блок рудного энерджиума",
       "item.power.creation_hoe": "Мотыга созидания",
       "effect.power.water_master": "Мастер воды",
@@ -32490,6 +32755,7 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Положительный заряд, расходует 30",
       "effect.power.sound_master": "Мастер звука",
       "gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40": "Ядовитая бомба, расходует 40",
+      "effect.power.smoke_master": "Master of Smoke",
       "subtitles.ear_ringing": "Звон в ушах",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Эфир",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
@@ -32567,7 +32833,9 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Океаническое течение, расходует 10",
       "item.power.explosion_battery": "Батарея",
       "item.power.tornado_stone": "Камень торнадо",
+      "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Батарея",
+      "item.power.smoke_armor_boots": "Gravity Boots",
       "battery.desc.vacuum": "Пустота",
       "item.power.creation_battery": "Батарея",
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Создание/разрушение порталов, расходует 20",
@@ -32748,6 +33016,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Скорость",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Дождевая завеса, расходует 45",
       "block.power.cursed_stone_cracked_bricks_wall": "Ограда из проклятых потрескавшихся каменных кирпичей",
+      "item.power.smoke_armor_helmet": "Gravity Helmet",
       "item.power.music_disc_call_of_the_past": "Пластинка",
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
@@ -33048,6 +33317,7 @@
       "effect.power.star_regeneration": "Star regeneration",
       "block.power.moon_block": "Moon Block",
       "item.power.mist_battery": "Battery",
+      "item.power.smoke_armor_chestplate": "Smoke Chestplate",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "power.modinfo.recharge_stone": "Recharge: ",
       "block.power.freaking_parsnip_block": "Freaking Parsnip Block",
@@ -33132,6 +33402,7 @@
       "battery.desc.space": "Space",
       "item.power.moon_double_sided_spear": "Moon Double-Sided Spear",
       "gui.power.debug_info.label_debug_mode": "DEBUG_MODE",
+      "item.power.smoke_armor_leggings": "Smoke Leggings",
       "block.power.raw_energium_block": "Block of Raw Energium",
       "item.power.creation_hoe": "Creation Hoe",
       "effect.power.water_master": "Master of Water",
@@ -33254,6 +33525,7 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "effect.power.sound_master": "Master of Sound",
       "gui.power.wheel_abilities_poison.tooltip_poison_bomb_uses_40": "Poison bomb, uses 40",
+      "effect.power.smoke_master": "Master of Smoke",
       "subtitles.ear_ringing": "Ear ringing",
       "gui.power.keepers_box_gui_part_4.tooltip_ether": "Ether",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
@@ -33331,7 +33603,9 @@
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_current_uses_10": "Oceanic current, uses 10",
       "item.power.explosion_battery": "Battery",
       "item.power.tornado_stone": "Tornado Stone",
+      "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Battery",
+      "item.power.smoke_armor_boots": "Smoke Boots",
       "battery.desc.vacuum": "Vacuum",
       "item.power.creation_battery": "Battery",
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Creating/Destructing portals, uses 20",
@@ -33512,6 +33786,7 @@
       "gui.power.keepers_box_gui_part_2.tooltip_speed": "Speed",
       "gui.power.wheel_abilities_rain.tooltip_rain_curtain_uses_45": "Rain curtain, uses 45",
       "block.power.cursed_stone_cracked_bricks_wall": "Cursed Stone Cracked Bricks Wall",
+      "item.power.smoke_armor_helmet": "Smoke Helmet",
       "item.power.music_disc_call_of_the_past": "Music Disc",
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
