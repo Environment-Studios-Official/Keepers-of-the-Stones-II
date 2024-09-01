@@ -31228,6 +31228,29 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Smoke"
+    },
+    {
+      "name": "DetransformAnimationStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "detransform_animation_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/DetransformAnimationStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/DetransformationKey"
     }
   ],
   "variable_elements": [
@@ -31818,6 +31841,12 @@
       "type": "string",
       "scope": "player_persistent",
       "value": "0"
+    },
+    {
+      "name": "detransform_anim_trigger",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [

@@ -109,6 +109,7 @@ public class PowerModVariables {
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 				clone.send_client_package = original.send_client_package;
+				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -465,6 +466,7 @@ public class PowerModVariables {
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
+		public boolean detransform_anim_trigger = false;
 
 		@Override
 		public CompoundTag serializeNBT() {
@@ -510,6 +512,7 @@ public class PowerModVariables {
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
 			return nbt;
 		}
 
@@ -556,6 +559,7 @@ public class PowerModVariables {
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
+			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
