@@ -34871,6 +34871,27 @@
             "children": []
           }
         ]
+      },
+      {
+        "name": "DarkElements",
+        "children": [
+          {
+            "name": "Thirst",
+            "children": []
+          },
+          {
+            "name": "Chaos",
+            "children": []
+          },
+          {
+            "name": "Filth",
+            "children": []
+          },
+          {
+            "name": "Horror",
+            "children": []
+          }
+        ]
       }
     ]
   },
