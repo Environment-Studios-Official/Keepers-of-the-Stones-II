@@ -47,7 +47,7 @@ public class LightMasterEndProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.LIGHT_STONE.get());
 				_setstack.setCount(1);
@@ -57,7 +57,7 @@ public class LightMasterEndProcedure {
 		} else {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.battery = false;
+				_vars.active_battery = false;
 				_vars.syncPlayerVariables(entity);
 			}
 		}

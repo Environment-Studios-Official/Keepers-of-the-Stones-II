@@ -29,7 +29,7 @@ public class PowerScaleRegenProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == true) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

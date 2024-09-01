@@ -29,7 +29,7 @@ public class ReturnStoneAfterDeadProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active) {
+		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.fake_element_name_first = "0";
@@ -45,7 +45,7 @@ public class ReturnStoneAfterDeadProcedure {
 				_vars.fake_element_name_third = "0";
 				_vars.syncPlayerVariables(entity);
 			}
-			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).battery) {
+			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery) {
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
