@@ -16,7 +16,7 @@ repositories {
 }
     
 dependencies {
-	implementation "curse.maven:pehkui-319596:5393108"
+	implementation 'curse.maven:pehkui-319596:5393108'
 }
 
 
