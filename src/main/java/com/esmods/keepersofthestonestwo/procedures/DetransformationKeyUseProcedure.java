@@ -25,7 +25,7 @@ public class DetransformationKeyUseProcedure {
 		if (entity == null)
 			return;
 		PowerMod.queueServerWork(1, () -> {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == true) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == true) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.FIRE_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
@@ -110,9 +110,11 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.BLUE_FLAME_MASTER.get());
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.GRAVITY_MASTER.get());
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.SMOKE_MASTER.get());
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.active = false;
+					_vars.active_power = false;
 					_vars.syncPlayerVariables(entity);
 				}
 				{

@@ -29,7 +29,7 @@ public class ReturnStoneAfterDeadProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active) {
+		if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.fake_element_name_first = "0";
@@ -45,7 +45,7 @@ public class ReturnStoneAfterDeadProcedure {
 				_vars.fake_element_name_third = "0";
 				_vars.syncPlayerVariables(entity);
 			}
-			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).battery) {
+			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery) {
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -1470,6 +1470,40 @@ public class ReturnStoneAfterDeadProcedure {
 					}
 					if (entity instanceof Player _player) {
 						ItemStack _setstack = new ItemStack(PowerModItems.GRAVITY_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("smoke")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("smoke")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("smoke")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.SMOKE_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}

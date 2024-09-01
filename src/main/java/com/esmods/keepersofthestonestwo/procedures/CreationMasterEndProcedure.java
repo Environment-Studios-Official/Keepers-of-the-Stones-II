@@ -47,17 +47,17 @@ public class CreationMasterEndProcedure {
 				_vars.syncPlayerVariables(entity);
 			}
 		}
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.CREATION_STONE.get());
 				_setstack.setCount(1);
-				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIME_OF_THE_STONE.get() * 20 : 0));
+				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIMER.get() * 20 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.battery = false;
+				_vars.active_battery = false;
 				_vars.syncPlayerVariables(entity);
 			}
 		}

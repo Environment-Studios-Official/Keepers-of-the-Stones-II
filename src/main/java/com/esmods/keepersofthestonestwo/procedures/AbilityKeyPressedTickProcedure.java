@@ -258,6 +258,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("gravity") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("gravity")) {
 					GravitySpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("smoke") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("smoke")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("smoke") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("smoke")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("smoke") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("smoke")) {
+					SmokeSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

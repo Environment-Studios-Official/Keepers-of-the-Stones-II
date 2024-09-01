@@ -69,7 +69,7 @@ public class PowerModVariables {
 			PlayerVariables clone = new PlayerVariables();
 			clone.selected = original.selected;
 			clone.ability = original.ability;
-			clone.battery = original.battery;
+			clone.active_battery = original.active_battery;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
@@ -87,7 +87,7 @@ public class PowerModVariables {
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
 			if (!event.isWasDeath()) {
-				clone.active = original.active;
+				clone.active_power = original.active_power;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
@@ -424,13 +424,13 @@ public class PowerModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public boolean active = false;
+		public boolean active_power = false;
 		public boolean selected = false;
 		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public String ability = "0";
 		public double mergers = 0.0;
-		public boolean battery = false;
+		public boolean active_battery = false;
 		public boolean ability_block = false;
 		public String element_name_first = "0";
 		public String element_name_second = "0";
@@ -469,13 +469,13 @@ public class PowerModVariables {
 		@Override
 		public CompoundTag serializeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("active", active);
+			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("ability", ability);
 			nbt.putDouble("mergers", mergers);
-			nbt.putBoolean("battery", battery);
+			nbt.putBoolean("active_battery", active_battery);
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
@@ -515,13 +515,13 @@ public class PowerModVariables {
 
 		@Override
 		public void deserializeNBT(CompoundTag nbt) {
-			active = nbt.getBoolean("active");
+			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			ability = nbt.getString("ability");
 			mergers = nbt.getDouble("mergers");
-			battery = nbt.getBoolean("battery");
+			active_battery = nbt.getBoolean("active_battery");
 			ability_block = nbt.getBoolean("ability_block");
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
