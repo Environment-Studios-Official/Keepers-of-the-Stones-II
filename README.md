@@ -1,6 +1,6 @@
 # Keepers-of-the-Stones 2
-[![Version](https://img.shields.io/github/v/tag/Hexagon-Studio/Keepers-of-the-Stones?label=version)](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones/files)
-![Date](https://img.shields.io/github/release-date/Hexagon-Studio/Keepers-of-the-Stones)
+[![Version](https://img.shields.io/github/v/tag/Environment-Studios-Official/Keepers-of-the-Stones-II?label=version)](https://www.curseforge.com/minecraft/mc-mods/keepers-of-the-stones/files)
+![Date](https://img.shields.io/github/release-date/Environment-Studios-Official/Keepers-of-the-Stones-II)
 | MC Version | Modloader | Support |
 |------------|-----------|---------|
 | 1.21.1     |  NEOFORGE | IN-DEV  |
