@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack81"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -137,6 +140,9 @@
           "onClick": {
             "name": "Attack82"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -149,6 +155,9 @@
           "hoveredImage": "sun_healing_highlight.png",
           "onClick": {
             "name": "Attack83"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

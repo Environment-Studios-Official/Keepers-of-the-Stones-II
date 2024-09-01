@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFireMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -93,42 +94,45 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		super.init();
 		imagebutton_flamethrower = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/flamethrower.png"), new ResourceLocation("power:textures/screens/flamethrower_highlighted.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(0, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(0, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_flamethrower", imagebutton_flamethrower);
 		this.addRenderableWidget(imagebutton_flamethrower);
 		imagebutton_triple_fireball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/triple_fireball.png"), new ResourceLocation("power:textures/screens/triple_fireball_highlighted.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(1, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(1, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_triple_fireball", imagebutton_triple_fireball);
 		this.addRenderableWidget(imagebutton_triple_fireball);
 		imagebutton_jet_fire = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/jet_fire.png"), new ResourceLocation("power:textures/screens/jet_fire_highlighted.png")),
 				e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(2, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(2, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_jet_fire", imagebutton_jet_fire);
@@ -136,7 +140,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(3, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(3, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -151,7 +155,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(4, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(4, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -166,7 +170,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(5, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(5, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -181,7 +185,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(6, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(6, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -196,7 +200,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(7, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(7, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -211,7 +215,7 @@ public class WheelAbilitiesFireScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesFireButtonMessage(8, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesFireButtonMessage(8, x, y, z));
 						WheelAbilitiesFireButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

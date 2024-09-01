@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -94,7 +95,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(0, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(0, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -109,7 +110,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(1, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(1, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -124,7 +125,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(2, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(2, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -139,7 +140,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(3, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(3, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -154,7 +155,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(4, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(4, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -169,7 +170,7 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(5, x, y, z));
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(5, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -183,42 +184,45 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_ethereal_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/ethereal_ray.png"), new ResourceLocation("power:textures/screens/ethereal_ray_highlight.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(6, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(6, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_ethereal_ray", imagebutton_ethereal_ray);
 		this.addRenderableWidget(imagebutton_ethereal_ray);
 		imagebutton_ethereal_volley = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/ethereal_volley.png"), new ResourceLocation("power:textures/screens/ethereal_volley_highlight.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(7, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(7, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_ethereal_volley", imagebutton_ethereal_volley);
 		this.addRenderableWidget(imagebutton_ethereal_volley);
 		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/ethereal_aura.png"), new ResourceLocation("power:textures/screens/ethereal_aura_highlight.png")), e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesEtherButtonMessage(8, x, y, z));
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEtherButtonMessage(8, x, y, z));
 						WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_ethereal_aura", imagebutton_ethereal_aura);

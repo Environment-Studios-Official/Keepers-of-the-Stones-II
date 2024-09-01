@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack113"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack114"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "creating_portals_highlight.png",
           "onClick": {
             "name": "Attack115"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

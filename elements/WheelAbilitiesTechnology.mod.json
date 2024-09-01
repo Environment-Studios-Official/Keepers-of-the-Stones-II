@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack109"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack110"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "turret_highlight.png",
           "onClick": {
             "name": "Attack111"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158
