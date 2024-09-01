@@ -49,7 +49,7 @@ public class LavaBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LAVA_MASTER.get(), (int) (((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 2) * 20), 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.LAVA_MASTER.get(), (int) (((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
