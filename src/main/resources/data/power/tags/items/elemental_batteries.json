@@ -43,6 +43,7 @@
     "power:music_battery",
     "power:plague_battery",
     "power:blue_flame_battery",
-    "power:gravity_battery"
+    "power:gravity_battery",
+    "power:smoke_battery"
   ]
 }
