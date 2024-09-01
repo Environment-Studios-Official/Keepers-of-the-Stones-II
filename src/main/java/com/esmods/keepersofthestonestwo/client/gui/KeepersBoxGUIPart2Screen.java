@@ -328,7 +328,7 @@ public class KeepersBoxGUIPart2Screen extends AbstractContainerScreen<KeepersBox
 		imagebutton_smoke_element = new ImageButton(this.leftPos + 162, this.topPos + 106, 16, 16,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/smoke_element.png"), new ResourceLocation("power:textures/screens/smoke_element_highlighted.png")), e -> {
 					if (SmokeStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart2ButtonMessage(13, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart2ButtonMessage(13, x, y, z));
 						KeepersBoxGUIPart2ButtonMessage.handleButtonAction(entity, 13, x, y, z);
 					}
 				}) {

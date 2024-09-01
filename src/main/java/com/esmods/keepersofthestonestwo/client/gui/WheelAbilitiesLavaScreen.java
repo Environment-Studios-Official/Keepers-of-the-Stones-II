@@ -95,7 +95,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(0, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -110,7 +110,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(1, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -125,7 +125,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(2, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -140,7 +140,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(3, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -155,7 +155,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(4, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -170,7 +170,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(5, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -185,7 +185,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_lava_outburst = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/lava_outburst.png"), new ResourceLocation("power:textures/screens/lava_outburst_highligh.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(6, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -200,7 +200,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_lava_attack = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/lava_attack.png"), new ResourceLocation("power:textures/screens/lava_attack_highligh.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(7, x, y, z));
 						WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -214,7 +214,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		this.addRenderableWidget(imagebutton_lava_attack);
 		imagebutton_melting = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/melting.png"), new ResourceLocation("power:textures/screens/melting_highligh.png")), e -> {
 			if (PowerLockCheckProcedure.execute(entity)) {
-				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesLavaButtonMessage(8, x, y, z));
+				PacketDistributor.sendToServer(new WheelAbilitiesLavaButtonMessage(8, x, y, z));
 				WheelAbilitiesLavaButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
 		}) {

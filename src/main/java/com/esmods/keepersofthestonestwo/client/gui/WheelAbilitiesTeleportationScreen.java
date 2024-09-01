@@ -95,7 +95,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(0, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -110,7 +110,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(1, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -125,7 +125,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(2, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -140,7 +140,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(3, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -155,7 +155,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(4, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -170,7 +170,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(5, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -185,7 +185,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_creating_checkpoint = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/creating_checkpoint.png"), new ResourceLocation("power:textures/screens/creating_checkpoint_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(6, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -200,7 +200,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_return_to_checkpoint = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/return_to_checkpoint.png"), new ResourceLocation("power:textures/screens/return_to_checkpoint_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(7, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -215,7 +215,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		imagebutton_creating_portals = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/creating_portals.png"), new ResourceLocation("power:textures/screens/creating_portals_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTeleportationButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(8, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

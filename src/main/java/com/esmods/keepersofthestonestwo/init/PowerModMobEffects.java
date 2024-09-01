@@ -297,7 +297,7 @@ public class PowerModMobEffects {
 			BlueFlameMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(GRAVITY_MASTER)) {
 			GravityMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-		} else if (effect == SMOKE_MASTER.get()) {
+		} else if (effectInstance.getEffect().is(SMOKE_MASTER)) {
 			SmokeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
