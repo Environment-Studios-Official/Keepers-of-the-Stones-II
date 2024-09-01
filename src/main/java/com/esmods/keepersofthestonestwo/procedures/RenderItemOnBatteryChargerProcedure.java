@@ -2,13 +2,15 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import org.joml.Matrix4f;
 
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.eventbus.api.Event;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.client.model.data.ModelData;
-import net.minecraftforge.client.event.RenderLevelStageEvent;
-import net.minecraftforge.api.distmarker.Dist;
+import net.neoforged.neoforge.items.IItemHandler;
+import net.neoforged.neoforge.common.extensions.ILevelExtension;
+import net.neoforged.neoforge.client.model.data.ModelData;
+import net.neoforged.neoforge.client.event.RenderLevelStageEvent;
+import net.neoforged.neoforge.capabilities.Capabilities;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
+import net.neoforged.bus.api.Event;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.level.chunk.LevelChunk;
@@ -45,7 +47,6 @@ import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
 
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.Map;
 import java.util.HashMap;
 
@@ -226,6 +227,8 @@ public class RenderItemOnBatteryChargerProcedure {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
 			Vec3 pos = entity.getPosition(provider.getPartialTick());
+			RenderSystem.depthMask(true);
+			RenderSystem.enableDepthTest();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
 			execute(provider, level);
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
@@ -276,38 +279,42 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.NORTH) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 0, 90, 0, (float) 0.5, true, false);
 									}
@@ -326,38 +333,42 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.SOUTH) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 180, 90, 0, (float) 0.5, true, false);
 									}
@@ -376,38 +387,42 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.WEST) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), -90, 90, 0, (float) 0.5, true, false);
 									}
@@ -426,38 +441,42 @@ public class RenderItemOnBatteryChargerProcedure {
 								}.getDirection(new BlockPos(positionx, positiony, positionz))) == Direction.EAST) {
 									if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 2)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
 									} else if (!((new Object() {
 										public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-											AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-											BlockEntity _ent = world.getBlockEntity(pos);
-											if (_ent != null)
-												_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-											return _retval.get();
+											if (world instanceof ILevelExtension _ext) {
+												IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+												if (_itemHandler != null)
+													return _itemHandler.getStackInSlot(slotid).copy();
+											}
+											return ItemStack.EMPTY;
 										}
 									}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)).getItem() == ItemStack.EMPTY.getItem())) {
 										renderItem((new Object() {
 											public ItemStack getItemStack(LevelAccessor world, BlockPos pos, int slotid) {
-												AtomicReference<ItemStack> _retval = new AtomicReference<>(ItemStack.EMPTY);
-												BlockEntity _ent = world.getBlockEntity(pos);
-												if (_ent != null)
-													_ent.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> _retval.set(capability.getStackInSlot(slotid).copy()));
-												return _retval.get();
+												if (world instanceof ILevelExtension _ext) {
+													IItemHandler _itemHandler = _ext.getCapability(Capabilities.ItemHandler.BLOCK, pos, null);
+													if (_itemHandler != null)
+														return _itemHandler.getStackInSlot(slotid).copy();
+												}
+												return ItemStack.EMPTY;
 											}
 										}.getItemStack(world, new BlockPos(positionx, positiony, positionz), 0)), (positionx + 0.5), (positiony + 1), (positionz + 0.5), 90, 90, 0, (float) 0.5, true, false);
 									}

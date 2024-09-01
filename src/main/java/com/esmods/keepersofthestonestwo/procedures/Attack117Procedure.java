@@ -10,11 +10,9 @@ public class Attack117Procedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "explosion_ability_1";
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.ability = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.ability = "explosion_ability_1";
+			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();

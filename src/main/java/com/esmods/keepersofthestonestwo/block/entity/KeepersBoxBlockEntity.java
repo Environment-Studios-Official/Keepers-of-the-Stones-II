@@ -1,10 +1,6 @@
 package com.esmods.keepersofthestonestwo.block.entity;
 
-import net.minecraftforge.items.wrapper.SidedInvWrapper;
-import net.minecraftforge.items.IItemHandler;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.capabilities.ForgeCapabilities;
-import net.minecraftforge.common.capabilities.Capability;
+import net.neoforged.neoforge.items.wrapper.SidedInvWrapper;
 
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.entity.RandomizableContainerBlockEntity;
@@ -32,7 +28,7 @@ import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class KeepersBoxBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
 	private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
-	private final LazyOptional<? extends IItemHandler>[] handlers = SidedInvWrapper.create(this, Direction.values());
+	private final SidedInvWrapper handler = new SidedInvWrapper(this, null);
 
 	public KeepersBoxBlockEntity(BlockPos position, BlockState state) {
 		super(PowerModBlockEntities.KEEPERS_BOX.get(), position, state);
@@ -127,17 +123,7 @@ public class KeepersBoxBlockEntity extends RandomizableContainerBlockEntity impl
 		return true;
 	}
 
-	@Override
-	public <T> LazyOptional<T> getCapability(Capability<T> capability, @Nullable Direction facing) {
-		if (!this.remove && facing != null && capability == ForgeCapabilities.ITEM_HANDLER)
-			return handlers[facing.ordinal()].cast();
-		return super.getCapability(capability, facing);
-	}
-
-	@Override
-	public void setRemoved() {
-		super.setRemoved();
-		for (LazyOptional<? extends IItemHandler> handler : handlers)
-			handler.invalidate();
+	public SidedInvWrapper getItemHandler() {
+		return handler;
 	}
 }

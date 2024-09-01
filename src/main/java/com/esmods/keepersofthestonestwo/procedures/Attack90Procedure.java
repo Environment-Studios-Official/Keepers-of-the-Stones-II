@@ -10,11 +10,9 @@ public class Attack90Procedure {
 		if (entity == null)
 			return;
 		{
-			String _setval = "space_ability_2";
-			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.ability = _setval;
-				capability.syncPlayerVariables(entity);
-			});
+			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+			_vars.ability = "space_ability_2";
+			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
 			_player.closeContainer();
