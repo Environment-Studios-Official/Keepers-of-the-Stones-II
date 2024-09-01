@@ -1,6 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.network.PacketDistributor;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.NetworkDirection;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
@@ -12,11 +13,15 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.Connection;
 import net.minecraft.core.BlockPos;
 import net.minecraft.client.player.AbstractClientPlayer;
+
+import java.util.List;
+import java.util.Iterator;
 
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
 import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
@@ -38,8 +43,9 @@ public class CrystalStoneUseProcedure {
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("power:passing_armor")))
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("power:passing_armor")))
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).is(ItemTags.create(new ResourceLocation("power:passing_armor"))) && entity instanceof Player
-				|| entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers < 3 && entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers >= 1) && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false
-				&& itemstack.getOrCreateTag().getDouble("rechargeStone") == 0) {
+				|| (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers < 3
+						&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers >= 1)
+				&& (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active_battery == false && itemstack.getOrCreateTag().getDouble("rechargeStone") == 0) {
 			if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == PowerModItems.CRYSTAL_STONE.get()) {
 				PowerMod.queueServerWork(1, () -> {
 					itemstack.shrink(1);
@@ -47,20 +53,24 @@ public class CrystalStoneUseProcedure {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CRYSTAL_MASTER.get(), (int) ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() * 20), 0, false, false));
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-					_vars.syncPlayerVariables(entity);
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).mergers + 1;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.mergers = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).max_power;
-					_vars.syncPlayerVariables(entity);
+					double _setval = (entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).max_power;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.power = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:stone_activation")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_activation")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("power:stone_activation")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("power:stone_activation")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				if (world.isClientSide()) {
@@ -72,8 +82,17 @@ public class CrystalStoneUseProcedure {
 					}
 				}
 				if (!world.isClientSide()) {
-					if (entity instanceof Player)
-						PacketDistributor.ALL.noArg().send(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.transformation"), entity.getId(), true));
+					if (entity instanceof Player && world instanceof ServerLevel srvLvl_) {
+						List<Connection> connections = srvLvl_.getServer().getConnection().getConnections();
+						synchronized (connections) {
+							Iterator<Connection> iterator = connections.iterator();
+							while (iterator.hasNext()) {
+								Connection connection = iterator.next();
+								if (!connection.isConnecting() && connection.isConnected())
+									PowerMod.PACKET_HANDLER.sendTo(new AnimationsModuleSetupProcedure.PowerModAnimationMessage(Component.literal("animation.player.transformation"), entity.getId(), true), connection, NetworkDirection.PLAY_TO_CLIENT);
+							}
+						}
+					}
 				}
 			}
 		}

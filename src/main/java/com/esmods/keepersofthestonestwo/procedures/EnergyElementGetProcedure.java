@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.items.ItemHandlerHelper;
+import net.minecraftforge.items.ItemHandlerHelper;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.item.ItemStack;
@@ -30,15 +30,19 @@ public class EnergyElementGetProcedure {
 			PowerModVariables.MapVariables.get(world).syncData(world);
 			if (world.getLevelData().getGameRules().getBoolean(PowerModGameRules.LIMIT_OF_STONES_FOR_ONE_PLAYER)) {
 				{
-					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.selected = true;
-					_vars.syncPlayerVariables(entity);
+					boolean _setval = true;
+					entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+						capability.selected = _setval;
+						capability.syncPlayerVariables(entity);
+					});
 				}
 			}
 			{
-				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-				_vars.unlock_keepers_box = false;
-				_vars.syncPlayerVariables(entity);
+				boolean _setval = false;
+				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
+					capability.unlock_keepers_box = _setval;
+					capability.syncPlayerVariables(entity);
+				});
 			}
 		}
 	}

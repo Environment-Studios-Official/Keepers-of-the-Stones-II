@@ -1,9 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -31,9 +31,12 @@ public class PlaguePassiveProtectionProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("plague")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plague")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plague") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("plague")) {
+		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("plague")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("plague")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("plague")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("plague")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("plague")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("plague")) {
 			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.PLAGUE.get())) {
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.PLAGUE.get());

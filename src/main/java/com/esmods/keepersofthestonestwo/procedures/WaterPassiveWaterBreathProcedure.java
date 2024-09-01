@@ -1,9 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.bus.api.Event;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
+import net.minecraftforge.eventbus.api.Event;
+import net.minecraftforge.event.TickEvent;
 
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.LivingEntity;
@@ -36,9 +36,12 @@ public class WaterPassiveWaterBreathProcedure {
 			return;
 		double particleRadius = 0;
 		double particleAmount = 0;
-		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")
-				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")) {
+		if (((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_first).equals("water")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_second).equals("water")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).element_name_third).equals("water")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("water")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("water")
+				|| ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).fake_element_name_first).equals("water")) {
 			if (entity.isInWater()) {
 				particleAmount = 8;
 				particleRadius = 2;

@@ -1,14 +1,11 @@
 package com.esmods.keepersofthestonestwo.client.gui;
 
-import net.neoforged.neoforge.network.PacketDistributor;
-
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.player.Inventory;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.chat.Component;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
-import net.minecraft.client.gui.components.WidgetSprites;
 import net.minecraft.client.gui.components.ImageButton;
 import net.minecraft.client.gui.GuiGraphics;
 
@@ -25,6 +22,7 @@ import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetFakeWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.network.WheelAbilitiesMushroomsButtonMessage;
+import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<WheelAbilitiesMushroomsMenu> {
 	private final static HashMap<String, Object> guistate = WheelAbilitiesMushroomsMenu.guistate;
@@ -54,7 +52,7 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 
 	@Override
 	public void render(GuiGraphics guiGraphics, int mouseX, int mouseY, float partialTicks) {
-		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
+		this.renderBackground(guiGraphics);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
 		if (mouseX > leftPos + 145 && mouseX < leftPos + 169 && mouseY > topPos + 84 && mouseY < topPos + 108)
@@ -92,137 +90,128 @@ public class WheelAbilitiesMushroomsScreen extends AbstractContainerScreen<Wheel
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
-					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(0, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 0, x, y, z);
-					}
-				}) {
+		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_1.png"), 10, 14, e -> {
+			if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(0, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 0, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetWheelTwoOrFirstFakeProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
-		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
-					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(1, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 1, x, y, z);
-					}
-				}) {
+		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_2.png"), 10, 14, e -> {
+			if (GetWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(1, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 1, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetWheelTwoProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
-		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
-					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(2, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 2, x, y, z);
-					}
-				}) {
+		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_wheel_button_3.png"), 10, 14, e -> {
+			if (GetWheelThreeProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(2, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 2, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetWheelThreeProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
-		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
-					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(3, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 3, x, y, z);
-					}
-				}) {
+		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_1.png"), 10, 14, e -> {
+			if (GetFakeWheelOneProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(3, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 3, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetFakeWheelOneProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
-		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
-					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(4, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 4, x, y, z);
-					}
-				}) {
+		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_2.png"), 10, 14, e -> {
+			if (GetFakeWheelTwoProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(4, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 4, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetFakeWheelTwoProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
-		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
-					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(5, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 5, x, y, z);
-					}
-				}) {
+		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7, 0, 0, 7, new ResourceLocation("power:textures/screens/atlas/imagebutton_fake_wheel_button_3.png"), 10, 14, e -> {
+			if (GetFakeWheelThirdProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(5, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 5, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (GetFakeWheelThirdProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_flying_spores = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/flying_spores.png"), new ResourceLocation("power:textures/screens/flying_spores_highlight.png")), e -> {
-					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(6, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 6, x, y, z);
-					}
-				}) {
+		imagebutton_flying_spores = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_flying_spores.png"), 46, 92, e -> {
+			if (PowerLockCheckProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(6, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 6, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_flying_spores", imagebutton_flying_spores);
 		this.addRenderableWidget(imagebutton_flying_spores);
-		imagebutton_planting_mushrooms = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/planting_mushrooms.png"), new ResourceLocation("power:textures/screens/planting_mushrooms_highlight.png")), e -> {
-					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(7, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 7, x, y, z);
-					}
-				}) {
+		imagebutton_planting_mushrooms = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_planting_mushrooms.png"), 46, 92, e -> {
+			if (PowerLockCheckProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(7, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 7, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_planting_mushrooms", imagebutton_planting_mushrooms);
 		this.addRenderableWidget(imagebutton_planting_mushrooms);
-		imagebutton_mushroom_saturation = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/mushroom_saturation.png"), new ResourceLocation("power:textures/screens/mushroom_saturation_highlight.png")), e -> {
-					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesMushroomsButtonMessage(8, x, y, z));
-						WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 8, x, y, z);
-					}
-				}) {
+		imagebutton_mushroom_saturation = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mushroom_saturation.png"), 46, 92, e -> {
+			if (PowerLockCheckProcedure.execute(entity)) {
+				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMushroomsButtonMessage(8, x, y, z));
+				WheelAbilitiesMushroomsButtonMessage.handleButtonAction(entity, 8, x, y, z);
+			}
+		}) {
 			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
 				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+					super.render(guiGraphics, gx, gy, ticks);
 			}
 		};
 		guistate.put("button:imagebutton_mushroom_saturation", imagebutton_mushroom_saturation);

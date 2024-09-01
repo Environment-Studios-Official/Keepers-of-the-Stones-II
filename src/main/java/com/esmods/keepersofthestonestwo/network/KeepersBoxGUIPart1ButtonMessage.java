@@ -1,20 +1,17 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.PlayPayloadContext;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
-import net.neoforged.bus.api.SubscribeEvent;
+import net.minecraftforge.network.NetworkEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.core.BlockPos;
 
+import java.util.function.Supplier;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
@@ -34,40 +31,41 @@ import com.esmods.keepersofthestonestwo.procedures.BlueFlameElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public record KeepersBoxGUIPart1ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+public class KeepersBoxGUIPart1ButtonMessage {
+	private final int buttonID, x, y, z;
 
-	public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "keepers_box_gui_part_1_buttons");
 	public KeepersBoxGUIPart1ButtonMessage(FriendlyByteBuf buffer) {
-		this(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt());
+		this.buttonID = buffer.readInt();
+		this.x = buffer.readInt();
+		this.y = buffer.readInt();
+		this.z = buffer.readInt();
 	}
 
-	@Override
-	public void write(final FriendlyByteBuf buffer) {
-		buffer.writeInt(buttonID);
-		buffer.writeInt(x);
-		buffer.writeInt(y);
-		buffer.writeInt(z);
+	public KeepersBoxGUIPart1ButtonMessage(int buttonID, int x, int y, int z) {
+		this.buttonID = buttonID;
+		this.x = x;
+		this.y = y;
+		this.z = z;
 	}
 
-	@Override
-	public ResourceLocation id() {
-		return ID;
+	public static void buffer(KeepersBoxGUIPart1ButtonMessage message, FriendlyByteBuf buffer) {
+		buffer.writeInt(message.buttonID);
+		buffer.writeInt(message.x);
+		buffer.writeInt(message.y);
+		buffer.writeInt(message.z);
 	}
 
-	public static void handleData(final KeepersBoxGUIPart1ButtonMessage message, final PlayPayloadContext context) {
-		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.workHandler().submitAsync(() -> {
-				Player entity = context.player().get();
-				int buttonID = message.buttonID;
-				int x = message.x;
-				int y = message.y;
-				int z = message.z;
-				handleButtonAction(entity, buttonID, x, y, z);
-			}).exceptionally(e -> {
-				context.packetHandler().disconnect(Component.literal(e.getMessage()));
-				return null;
-			});
-		}
+	public static void handler(KeepersBoxGUIPart1ButtonMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
+		NetworkEvent.Context context = contextSupplier.get();
+		context.enqueueWork(() -> {
+			Player entity = context.getSender();
+			int buttonID = message.buttonID;
+			int x = message.x;
+			int y = message.y;
+			int z = message.z;
+			handleButtonAction(entity, buttonID, x, y, z);
+		});
+		context.setPacketHandled(true);
 	}
 
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
@@ -132,6 +130,6 @@ public record KeepersBoxGUIPart1ButtonMessage(int buttonID, int x, int y, int z)
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(KeepersBoxGUIPart1ButtonMessage.ID, KeepersBoxGUIPart1ButtonMessage::new, KeepersBoxGUIPart1ButtonMessage::handleData);
+		PowerMod.addNetworkMessage(KeepersBoxGUIPart1ButtonMessage.class, KeepersBoxGUIPart1ButtonMessage::buffer, KeepersBoxGUIPart1ButtonMessage::new, KeepersBoxGUIPart1ButtonMessage::handler);
 	}
 }

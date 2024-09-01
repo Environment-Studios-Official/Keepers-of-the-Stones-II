@@ -1,15 +1,12 @@
 
 package com.esmods.keepersofthestonestwo.world.inventory;
 
-import net.neoforged.neoforge.items.wrapper.InvWrapper;
-import net.neoforged.neoforge.items.SlotItemHandler;
-import net.neoforged.neoforge.items.ItemStackHandler;
-import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.items.IItemHandler;
-import net.neoforged.neoforge.capabilities.Capabilities;
+import net.minecraftforge.items.SlotItemHandler;
+import net.minecraftforge.items.ItemStackHandler;
+import net.minecraftforge.items.IItemHandler;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 
 import net.minecraft.world.level.block.entity.BlockEntity;
-import net.minecraft.world.level.block.entity.BaseContainerBlockEntity;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.inventory.Slot;
@@ -62,42 +59,46 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 				byte hand = extraData.readByte();
 				ItemStack itemstack = hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem();
 				this.boundItemMatcher = () -> itemstack == (hand == 0 ? this.entity.getMainHandItem() : this.entity.getOffhandItem());
-				IItemHandler cap = itemstack.getCapability(Capabilities.ItemHandler.ITEM);
-				if (cap != null) {
-					this.internal = cap;
+				itemstack.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+					this.internal = capability;
 					this.bound = true;
-				}
+				});
 			} else if (extraData.readableBytes() > 1) { // bound to entity
 				extraData.readByte(); // drop padding
 				boundEntity = world.getEntity(extraData.readVarInt());
-				if (boundEntity != null) {
-					IItemHandler cap = boundEntity.getCapability(Capabilities.ItemHandler.ENTITY);
-					if (cap != null) {
-						this.internal = cap;
+				if (boundEntity != null)
+					boundEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						this.internal = capability;
 						this.bound = true;
-					}
-				}
+					});
 			} else { // might be bound to block
 				boundBlockEntity = this.world.getBlockEntity(pos);
-				if (boundBlockEntity instanceof BaseContainerBlockEntity baseContainerBlockEntity) {
-					this.internal = new InvWrapper(baseContainerBlockEntity);
-					this.bound = true;
-				}
+				if (boundBlockEntity != null)
+					boundBlockEntity.getCapability(ForgeCapabilities.ITEM_HANDLER, null).ifPresent(capability -> {
+						this.internal = capability;
+						this.bound = true;
+					});
 			}
 		}
 		this.customSlots.put(0, this.addSlot(new SlotItemHandler(internal, 0, 56, 59) {
+			private final int slot = 0;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return PowerModItems.EMPTY_BATTERY.get() == stack.getItem();
 			}
 		}));
 		this.customSlots.put(1, this.addSlot(new SlotItemHandler(internal, 1, 104, 59) {
+			private final int slot = 1;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return stack.is(ItemTags.create(new ResourceLocation("power:elemental_stones")));
 			}
 		}));
 		this.customSlots.put(2, this.addSlot(new SlotItemHandler(internal, 2, 80, 35) {
+			private final int slot = 2;
+
 			@Override
 			public boolean mayPlace(ItemStack stack) {
 				return false;
@@ -163,7 +164,14 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 			i = p_38906_ - 1;
 		}
 		if (p_38904_.isStackable()) {
-			while (!p_38904_.isEmpty() && (p_38907_ ? i >= p_38905_ : i < p_38906_)) {
+			while (!p_38904_.isEmpty()) {
+				if (p_38907_) {
+					if (i < p_38905_) {
+						break;
+					}
+				} else if (i >= p_38906_) {
+					break;
+				}
 				Slot slot = this.slots.get(i);
 				ItemStack itemstack = slot.getItem();
 				if (slot.mayPlace(itemstack) && !itemstack.isEmpty() && ItemStack.isSameItemSameTags(p_38904_, itemstack)) {
@@ -194,7 +202,14 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 			} else {
 				i = p_38905_;
 			}
-			while (p_38907_ ? i >= p_38905_ : i < p_38906_) {
+			while (true) {
+				if (p_38907_) {
+					if (i < p_38905_) {
+						break;
+					}
+				} else if (i >= p_38906_) {
+					break;
+				}
 				Slot slot1 = this.slots.get(i);
 				ItemStack itemstack1 = slot1.getItem();
 				if (itemstack1.isEmpty() && slot1.mayPlace(p_38904_)) {
@@ -229,9 +244,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 						continue;
 					if (j == 2)
 						continue;
-					playerIn.drop(internal.getStackInSlot(j), false);
-					if (internal instanceof IItemHandlerModifiable ihm)
-						ihm.setStackInSlot(j, ItemStack.EMPTY);
+					playerIn.drop(internal.extractItem(j, internal.getStackInSlot(j).getCount(), false), false);
 				}
 			} else {
 				for (int i = 0; i < internal.getSlots(); ++i) {
@@ -241,9 +254,7 @@ public class BatteryChargerGUIMenu extends AbstractContainerMenu implements Supp
 						continue;
 					if (i == 2)
 						continue;
-					playerIn.getInventory().placeItemBackInInventory(internal.getStackInSlot(i));
-					if (internal instanceof IItemHandlerModifiable ihm)
-						ihm.setStackInSlot(i, ItemStack.EMPTY);
+					playerIn.getInventory().placeItemBackInInventory(internal.extractItem(i, internal.getStackInSlot(i).getCount(), false));
 				}
 			}
 		}
