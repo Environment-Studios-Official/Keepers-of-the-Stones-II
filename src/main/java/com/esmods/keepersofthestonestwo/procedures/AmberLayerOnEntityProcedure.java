@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.tick.EntityTickEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.neoforge.event.entity.living.LivingEvent;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -12,12 +12,10 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
-
-@EventBusSubscriber
+@Mod.EventBusSubscriber
 public class AmberLayerOnEntityProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(EntityTickEvent.Pre event) {
+	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
 		execute(event, event.getEntity());
 	}
 
@@ -29,7 +27,7 @@ public class AmberLayerOnEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity) {
-			if (((LivingEntity) entity).getAttribute(PowerModAttributes.SEALEDINAMBER.getDelegate()).getValue() >= 1) {
+			if (entity.getPersistentData().getBoolean("amberLayer")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

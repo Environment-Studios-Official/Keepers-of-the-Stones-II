@@ -2,13 +2,13 @@ package com.esmods.keepersofthestonestwo.network;
 
 import net.neoforged.neoforge.registries.NeoForgeRegistries;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import net.neoforged.neoforge.network.handling.IPayloadContext;
+import net.neoforged.neoforge.network.handling.PlayPayloadContext;
 import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.event.entity.player.PlayerEvent;
 import net.neoforged.neoforge.common.util.INBTSerializable;
 import net.neoforged.neoforge.attachment.AttachmentType;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
@@ -22,29 +22,27 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
+import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.HolderLookup;
+import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
 	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
 	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
 
 	@SubscribeEvent
 	public static void init(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SavedDataSyncMessage.TYPE, SavedDataSyncMessage.STREAM_CODEC, SavedDataSyncMessage::handleData);
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.TYPE, PlayerVariablesSyncMessage.STREAM_CODEC, PlayerVariablesSyncMessage::handleData);
+		PowerMod.addNetworkMessage(SavedDataSyncMessage.ID, SavedDataSyncMessage::new, SavedDataSyncMessage::handleData);
+		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.ID, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handleData);
 	}
 
-	@EventBusSubscriber
+	@Mod.EventBusSubscriber
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
@@ -121,9 +119,9 @@ public class PowerModVariables {
 				SavedData mapdata = MapVariables.get(event.getEntity().level());
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (mapdata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(0, mapdata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(0, mapdata));
 				if (worlddata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 
@@ -132,7 +130,7 @@ public class PowerModVariables {
 			if (event.getEntity() instanceof ServerPlayer player) {
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (worlddata != null)
-					PacketDistributor.sendToPlayer(player, new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 	}
@@ -140,24 +138,24 @@ public class PowerModVariables {
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
 
-		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+		public static WorldVariables load(CompoundTag tag) {
 			WorldVariables data = new WorldVariables();
-			data.read(tag, lookupProvider);
+			data.read(tag);
 			return data;
 		}
 
-		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+		public void read(CompoundTag nbt) {
 		}
 
 		@Override
-		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+		public CompoundTag save(CompoundTag nbt) {
 			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
-			if (world instanceof ServerLevel level)
-				PacketDistributor.sendToPlayersInDimension(level, new SavedDataSyncMessage(1, this));
+			if (world instanceof Level level && !level.isClientSide())
+				PacketDistributor.DIMENSION.with(level.dimension()).send(new SavedDataSyncMessage(1, this));
 		}
 
 		static WorldVariables clientSide = new WorldVariables();
@@ -231,13 +229,13 @@ public class PowerModVariables {
 		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
 
-		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
+		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
-			data.read(tag, lookupProvider);
+			data.read(tag);
 			return data;
 		}
 
-		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+		public void read(CompoundTag nbt) {
 			fire_stone = nbt.getBoolean("fire_stone");
 			air_stone = nbt.getBoolean("air_stone");
 			earth_stone = nbt.getBoolean("earth_stone");
@@ -298,7 +296,7 @@ public class PowerModVariables {
 		}
 
 		@Override
-		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+		public CompoundTag save(CompoundTag nbt) {
 			nbt.putBoolean("fire_stone", fire_stone);
 			nbt.putBoolean("air_stone", air_stone);
 			nbt.putBoolean("earth_stone", earth_stone);
@@ -362,7 +360,7 @@ public class PowerModVariables {
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
 			if (world instanceof Level && !world.isClientSide())
-				PacketDistributor.sendToAllPlayers(new SavedDataSyncMessage(0, this));
+				PacketDistributor.ALL.noArg().send(new SavedDataSyncMessage(0, this));
 		}
 
 		static MapVariables clientSide = new MapVariables();
@@ -376,40 +374,49 @@ public class PowerModVariables {
 		}
 	}
 
-	public record SavedDataSyncMessage(int dataType, SavedData data) implements CustomPacketPayload {
-		public static final Type<SavedDataSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "saved_data_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, SavedDataSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, SavedDataSyncMessage message) -> {
-			buffer.writeInt(message.dataType);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag(), buffer.registryAccess()));
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			int dataType = buffer.readInt();
-			CompoundTag nbt = buffer.readNbt();
-			SavedData data = null;
-			if (nbt != null) {
-				data = dataType == 0 ? new MapVariables() : new WorldVariables();
-				if (data instanceof MapVariables mapVariables)
-					mapVariables.read(nbt, buffer.registryAccess());
-				else if (data instanceof WorldVariables worldVariables)
-					worldVariables.read(nbt, buffer.registryAccess());
-			}
-			return new SavedDataSyncMessage(dataType, data);
-		});
+	public static class SavedDataSyncMessage implements CustomPacketPayload {
+		public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "saved_data_sync");
+		private final int type;
+		private SavedData data;
 
-		@Override
-		public Type<SavedDataSyncMessage> type() {
-			return TYPE;
+		public SavedDataSyncMessage(FriendlyByteBuf buffer) {
+			this.type = buffer.readInt();
+			CompoundTag nbt = buffer.readNbt();
+			if (nbt != null) {
+				this.data = this.type == 0 ? new MapVariables() : new WorldVariables();
+				if (this.data instanceof MapVariables mapVariables)
+					mapVariables.read(nbt);
+				else if (this.data instanceof WorldVariables worldVariables)
+					worldVariables.read(nbt);
+			}
 		}
 
-		public static void handleData(final SavedDataSyncMessage message, final IPayloadContext context) {
+		public SavedDataSyncMessage(int type, SavedData data) {
+			this.type = type;
+			this.data = data;
+		}
+
+		@Override
+		public void write(final FriendlyByteBuf buffer) {
+			buffer.writeInt(type);
+			if (data != null)
+				buffer.writeNbt(data.save(new CompoundTag()));
+		}
+
+		@Override
+		public ResourceLocation id() {
+			return ID;
+		}
+
+		public static void handleData(final SavedDataSyncMessage message, final PlayPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> {
-					if (message.dataType == 0)
-						MapVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+				context.workHandler().submitAsync(() -> {
+					if (message.type == 0)
+						MapVariables.clientSide.read(message.data.save(new CompoundTag()));
 					else
-						WorldVariables.clientSide.read(message.data.save(new CompoundTag(), context.player().registryAccess()), context.player().registryAccess());
+						WorldVariables.clientSide.read(message.data.save(new CompoundTag()));
 				}).exceptionally(e -> {
-					context.connection().disconnect(Component.literal(e.getMessage()));
+					context.packetHandler().disconnect(Component.literal(e.getMessage()));
 					return null;
 				});
 			}
@@ -461,7 +468,7 @@ public class PowerModVariables {
 		public boolean detransform_anim_trigger = false;
 
 		@Override
-		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
+		public CompoundTag serializeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
@@ -489,10 +496,10 @@ public class PowerModVariables {
 			nbt.putBoolean("first_fake_wheel_open_var", first_fake_wheel_open_var);
 			nbt.putBoolean("second_fake_wheel_open_var", second_fake_wheel_open_var);
 			nbt.putBoolean("third_fake_wheel_open_var", third_fake_wheel_open_var);
-			nbt.put("helmet", helmet.saveOptional(lookupProvider));
-			nbt.put("chestplate", chestplate.saveOptional(lookupProvider));
-			nbt.put("leggings", leggings.saveOptional(lookupProvider));
-			nbt.put("boots", boots.saveOptional(lookupProvider));
+			nbt.put("helmet", helmet.save(new CompoundTag()));
+			nbt.put("chestplate", chestplate.save(new CompoundTag()));
+			nbt.put("leggings", leggings.save(new CompoundTag()));
+			nbt.put("boots", boots.save(new CompoundTag()));
 			nbt.putDouble("abilities_timer", abilities_timer);
 			nbt.putBoolean("ability_using", ability_using);
 			nbt.putBoolean("power_recorded", power_recorded);
@@ -509,7 +516,7 @@ public class PowerModVariables {
 		}
 
 		@Override
-		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
+		public void deserializeNBT(CompoundTag nbt) {
 			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
@@ -536,10 +543,10 @@ public class PowerModVariables {
 			first_fake_wheel_open_var = nbt.getBoolean("first_fake_wheel_open_var");
 			second_fake_wheel_open_var = nbt.getBoolean("second_fake_wheel_open_var");
 			third_fake_wheel_open_var = nbt.getBoolean("third_fake_wheel_open_var");
-			helmet = ItemStack.parseOptional(lookupProvider, nbt.getCompound("helmet"));
-			chestplate = ItemStack.parseOptional(lookupProvider, nbt.getCompound("chestplate"));
-			leggings = ItemStack.parseOptional(lookupProvider, nbt.getCompound("leggings"));
-			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
+			helmet = ItemStack.of(nbt.getCompound("helmet"));
+			chestplate = ItemStack.of(nbt.getCompound("chestplate"));
+			leggings = ItemStack.of(nbt.getCompound("leggings"));
+			boots = ItemStack.of(nbt.getCompound("boots"));
 			abilities_timer = nbt.getDouble("abilities_timer");
 			ability_using = nbt.getBoolean("ability_using");
 			power_recorded = nbt.getBoolean("power_recorded");
@@ -555,39 +562,35 @@ public class PowerModVariables {
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
-		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
-			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
-			buffer.writeInt(message.target()); // Write the entity ID to the buffer
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			var nbt = buffer.readNbt();
-			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
-			message.data.deserializeNBT(buffer.registryAccess(), nbt);
-			return message;
-		});
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+		public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "player_variables_sync");
 
-		@Override
-		public Type<PlayerVariablesSyncMessage> type() {
-			return TYPE;
+		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
+			this(new PlayerVariables());
+			this.data.deserializeNBT(buffer.readNbt());
 		}
 
-		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
+		@Override
+		public void write(final FriendlyByteBuf buffer) {
+			buffer.writeNbt(data.serializeNBT());
+		}
+
+		@Override
+		public ResourceLocation id() {
+			return ID;
+		}
+
+		public static void handleData(final PlayerVariablesSyncMessage message, final PlayPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
-						.exceptionally(e -> {
-							context.connection().disconnect(Component.literal(e.getMessage()));
-							return null;
-						});
+				context.workHandler().submitAsync(() -> Minecraft.getInstance().player.getData(PLAYER_VARIABLES).deserializeNBT(message.data.serializeNBT())).exceptionally(e -> {
+					context.packetHandler().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
 			}
 		}
 	}

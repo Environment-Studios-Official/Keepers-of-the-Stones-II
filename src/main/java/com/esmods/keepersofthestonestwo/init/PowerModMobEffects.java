@@ -29,6 +29,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SmokeMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SmokeIntangibilityEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SandMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.RainMasterEndProcedure;
@@ -81,6 +82,7 @@ import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SmokeMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SmokeIntangibilityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
@@ -183,6 +185,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -299,6 +302,8 @@ public class PowerModMobEffects {
 			GravityMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SMOKE_MASTER)) {
 			SmokeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effect == SMOKE_INTANGIBILITY.get()) {
+			SmokeIntangibilityEndProcedure.execute(entity);
 		}
 	}
 }
