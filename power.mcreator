@@ -22795,25 +22795,6 @@
       "path": "~/Elements/Blood"
     },
     {
-      "name": "FrozenLayerRenderEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_layer_render_event",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FrozenLayerRenderEventProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
       "name": "InIceKazhdyiTikVoVriemiaEffiekta",
       "type": "procedure",
       "compiles": true,
@@ -22831,47 +22812,6 @@
         ]
       },
       "path": "~/Elements/Ice"
-    },
-    {
-      "name": "FrozenInIce",
-      "type": "attribute",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "frozen_in_ice",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Elements/Ice"
-    },
-    {
-      "name": "AmberLayerRenderEvent",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "amber_layer_render_event",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/AmberLayerRenderEventProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Elements/Amber"
-    },
-    {
-      "name": "SealedInAmber",
-      "type": "attribute",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "sealed_in_amber",
-      "metadata": {
-        "files": []
-      },
-      "path": "~/Elements/Amber"
     },
     {
       "name": "MistParticle",
@@ -31251,6 +31191,107 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/DetransformationKey"
+    },
+    {
+      "name": "SmokeIntangibility",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_intangibility",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/SmokeIntangibilityMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeIntangibilityStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_intangibility_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeIntangibilityStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeIntangibilityEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_intangibility_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeIntangibilityEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeIntangibilityCancelAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_intangibility_cancel_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeIntangibilityCancelAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "SmokeIntangibilitySmokeEffect",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "smoke_intangibility_smoke_effect",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SmokeIntangibilitySmokeEffectProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Smoke"
     }
   ],
   "variable_elements": [
@@ -32691,7 +32732,6 @@
       "item.power.mist_battery": "Батарея",
       "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
-      "attribute.power.frozen_in_ice": "Заморожен во льду",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Воплощение тени, расходует 75",
@@ -32826,7 +32866,7 @@
       "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "effect.power.time_master": "Мастер времени",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
-      "advancements.what_is_this_metal.title": "Это что за метал?",
+      "advancements.what_is_this_metal.title": "Это что за металл?",
       "gui.power.wheel_abilities_lightning.tooltip_electrical_discharges_uses_10": "Электрические разряды, расходует 10",
       "battery.desc.earth": "Земля",
       "item.power.shadow_battery": "Батарея",
@@ -32842,7 +32882,7 @@
       "item.power.plague_armor_helmet": "Шлем мастера чумы",
       "item.power.metal_battery": "Батарея",
       "gui.power.keepers_box_gui_part_4.tooltip_earth": "Земля",
-      "item.power.smoke_battery": "Battery",
+      "item.power.smoke_battery": "Батарея",
       "gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35": "Лавовая атака, расходует 35",
       "effect.power.blue_magnet_power": "Сила синего магнита",
       "effect.power.plague_master": "Мастер чумы",
@@ -32884,6 +32924,7 @@
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r Этот мод устарел! (последняя версия: v",
       "item.power.sand_armor_helmet": "Шлем мастера песка",
       "battery.desc.blue_flame": "Синее пламя",
+      "effect.power.smoke_intangibility": "Дымовая неосязаемость",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Атака насекомых, расходует 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Пустота",
       "effect.power.teleportation_master": "Мастер телепортации",
@@ -33044,8 +33085,6 @@
       "item.power.blue_flame_armor_helmet": "Шлем мастера синего пламени",
       "item.power.energy_staff": "Посох энергии",
       "item.power.mist_armor_leggings": "Поножи мастера тумана",
-      "gui.power.wheel_abilities_smoke.tooltip_telekinesis_uses_35": "Telekinesis, uses 35",
-      "gui.power.wheel_abilities_smoke.tooltip_gravity_wave_uses_15": "Gravity wave, uses 15",
       "block.power.cursed_stone_bricks_stairs": "Ступеньки из проклятых каменных кирпичей",
       "block.power.cursed_lamp": "Проклятая лампа",
       "block.power.cursed_ladder": "Проклятая лестница",
@@ -33072,7 +33111,6 @@
       "item.power.poison_armor_chestplate": "Нагрудник мастера яда",
       "gamerule.limitedNumberOfStones.description": "Ограничивает количество получаемых камней и учитывает их уникальность",
       "item.power.mercury_ball": "Mercury Ball",
-      "gui.power.wheel_abilities_smoke.tooltip_gravity_denial_uses_5": "Gravity denial, uses 5",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Заряд энергии, расходует 80",
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Ртуть",
       "item.power.creation_armor_boots": "Ботинки мастера созидания",
@@ -33208,7 +33246,6 @@
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "effect.power.rain_master": "Мастер дождя",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Космос",
-      "attribute.power.sealed_in_amber": "Заперт в янтаре",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "effect.power.crystal_master": "Мастер кристалла",
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Атака четырёх стихий, расходует 10",
@@ -33465,7 +33502,6 @@
       "item.power.mist_battery": "Battery",
       "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
-      "attribute.power.frozen_in_ice": "Frozen In Ice",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
       "gui.power.wheel_abilities_shadow.tooltip_rising_shadow_uses_75": "Rising shadow, uses 75",
@@ -33658,6 +33694,7 @@
       "power.modinfo.outdated_mod": "§9[Keepers of the Stones II]§r This mod is out of date! (latest version: v",
       "item.power.sand_armor_helmet": "Sand Helmet",
       "battery.desc.blue_flame": "Blue Flame",
+      "effect.power.smoke_intangibility": "Smoke Intangibility",
       "gui.power.wheel_abilities_animals.tooltip_insect_attack_uses_10": "Insect attack, uses 10",
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Vacuum",
       "effect.power.teleportation_master": "Master of Teleportation",
@@ -33818,8 +33855,6 @@
       "item.power.blue_flame_armor_helmet": "Blue Flame Helmet",
       "item.power.energy_staff": "Energy Staff",
       "item.power.mist_armor_leggings": "Mist Leggings",
-      "gui.power.wheel_abilities_smoke.tooltip_telekinesis_uses_35": "Telekinesis, uses 35",
-      "gui.power.wheel_abilities_smoke.tooltip_gravity_wave_uses_15": "Gravity wave, uses 15",
       "block.power.cursed_stone_bricks_stairs": "Cursed Stone Bricks Stairs",
       "block.power.cursed_lamp": "Cursed Lamp",
       "block.power.cursed_ladder": "Cursed Ladder",
@@ -33846,7 +33881,6 @@
       "item.power.poison_armor_chestplate": "Poison Chestplate",
       "gamerule.limitedNumberOfStones.description": "Limits the number of stones to receive and includes their uniqueness",
       "item.power.mercury_ball": "Mercury Ball",
-      "gui.power.wheel_abilities_smoke.tooltip_gravity_denial_uses_5": "Gravity denial, uses 5",
       "gui.power.wheel_abilities_energy.tooltip_energy_charge_uses_80": "Energy charge, uses 80",
       "gui.power.keepers_box_gui_part_4.tooltip_mercury": "Mercury",
       "item.power.creation_armor_boots": "Creation Boots",
@@ -33983,7 +34017,6 @@
       "item.power.animals_armor_boots": "Animals Boots",
       "effect.power.rain_master": "Master of the Rain",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Space",
-      "attribute.power.sealed_in_amber": "Sealed In Amber",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "effect.power.crystal_master": "Master of the Crystal",
       "gui.power.wheel_abilities_creation.tooltip_four_elements_attack_uses_10": "Four elements attack, uses 10",
@@ -34908,7 +34941,6 @@
     "modPicture": "logo",
     "requiredMods": [
       "pehkui",
-      "kleiders_custom_renderer",
       "geckolib",
       "playeranimator"
     ],
@@ -34919,7 +34951,6 @@
       "cpapi"
     ],
     "mcreatorDependencies": [
-      "kleidersplayerrenderer",
       "pehkui",
       "geckolib",
       "playeranimator"
