@@ -69,7 +69,6 @@ jobs:
             epic-fight(incompatible){modrinth:vu3NZ5Ma}{curseforge:405076}#(ignore:github)
           modrinth-featured: false
           fail-mode: warn
-	
       - name: Send Discord webhook
         uses: Ilshidur/action-discord@0.3.2
         with:
