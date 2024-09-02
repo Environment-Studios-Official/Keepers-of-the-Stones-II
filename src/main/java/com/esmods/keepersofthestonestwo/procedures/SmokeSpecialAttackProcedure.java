@@ -125,7 +125,7 @@ public class SmokeSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("smoke_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.SMOKE_INTANGIBILITY.get(), 200, 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.SMOKE_INTANGIBILITY, 200, 0, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false));
 				if (world instanceof Level _level) {

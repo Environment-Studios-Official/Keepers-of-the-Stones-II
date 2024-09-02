@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
@@ -13,11 +13,11 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class SmokeIntangibilityCancelAttackProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}
 	}
@@ -29,11 +29,9 @@ public class SmokeIntangibilityCancelAttackProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.SMOKE_INTANGIBILITY.get()) && entity instanceof LivingEntity) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.SMOKE_INTANGIBILITY) && entity instanceof LivingEntity) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 		}
 	}

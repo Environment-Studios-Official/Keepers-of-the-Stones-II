@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
@@ -20,11 +20,11 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class AmberDestructionArmorProcedure {
 	@SubscribeEvent
 	public static void onEntityAttacked(LivingAttackEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 		}
 	}
@@ -39,8 +39,6 @@ public class AmberDestructionArmorProcedure {
 		if (entity.getPersistentData().getBoolean("amberLayer")) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 			world.levelEvent(2001, BlockPos.containing(x, y + 1, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(PowerModBlocks.AMBER_BLOCK.get().defaultBlockState()));

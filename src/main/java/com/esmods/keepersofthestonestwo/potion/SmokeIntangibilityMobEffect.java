@@ -24,7 +24,8 @@ public class SmokeIntangibilityMobEffect extends MobEffect {
 	}
 
 	@Override
-	public void applyEffectTick(LivingEntity entity, int amplifier) {
+	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
 		SmokeIntangibilitySmokeEffectProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ());
+		return super.applyEffectTick(entity, amplifier);
 	}
 }
