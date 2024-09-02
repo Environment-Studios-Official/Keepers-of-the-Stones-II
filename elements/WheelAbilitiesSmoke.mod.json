@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_smoke_attack",
+          "image": "smoke_attack.png",
+          "hoveredImage": "smoke_attack_highlight.png",
           "onClick": {
             "name": "Attack169"
           },
@@ -134,9 +134,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_smoke_bomb",
+          "image": "smoke_bomb.png",
+          "hoveredImage": "smoke_bomb_highlight.png",
           "onClick": {
             "name": "Attack170"
           },
@@ -150,9 +150,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_smoke_intangibility",
+          "image": "smoke_intangibility.png",
+          "hoveredImage": "smoke_intangibility_highlight.png",
           "onClick": {
             "name": "Attack171"
           },
