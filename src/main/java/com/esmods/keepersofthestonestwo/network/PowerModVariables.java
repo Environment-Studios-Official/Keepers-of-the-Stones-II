@@ -28,7 +28,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -563,12 +562,8 @@ public class PowerModVariables {
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
 		}
 	}
 
