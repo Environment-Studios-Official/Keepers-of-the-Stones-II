@@ -22797,7 +22797,7 @@
     {
       "name": "FrozenLayerRenderEvent",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "frozen_layer_render_event",
       "metadata": {
@@ -22846,7 +22846,7 @@
     {
       "name": "AmberLayerRenderEvent",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_layer_render_event",
       "metadata": {
@@ -34995,7 +34995,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.40.020920241655",
+    "version": "1.0.0.40.020920241715",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
