@@ -19,9 +19,9 @@
       },
       "version": {
         "range": "[0,)",
-        "artifactVersion": "1.0.2-rc1+1.20.6"
+        "artifactVersion": "1.0.2-rc1+1.21"
       },
-      "path": "META-INF/jarjar/player_animation_lib_forge-1.0.2-rc1+1.20.6.jar",
+      "path": "META-INF/jarjar/player-animation-lib-forge-1.0.2-rc1+1.21.jar",
       "isObfuscated": true
     }
   ]
