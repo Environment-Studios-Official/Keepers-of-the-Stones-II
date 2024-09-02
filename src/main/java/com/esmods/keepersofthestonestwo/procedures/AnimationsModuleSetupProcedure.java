@@ -18,7 +18,7 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 public class AnimationsModuleSetupProcedure {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
-		PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(new ResourceLocation("power", "player_animation"), 1000, AnimationsModuleSetupProcedure::registerPlayerAnimations);
+		PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(ResourceLocation.fromNamespaceAndPath("power", "player_animation"), 1000, AnimationsModuleSetupProcedure::registerPlayerAnimations);
 	}
 
 	private static IAnimation registerPlayerAnimations(AbstractClientPlayer player) {

@@ -204,7 +204,7 @@
     {
       "name": "FireStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_stone_use",
       "metadata": {
@@ -510,7 +510,7 @@
     {
       "name": "AirStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_stone_use",
       "metadata": {
@@ -942,7 +942,7 @@
     {
       "name": "EarthStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_stone_use",
       "metadata": {
@@ -1998,7 +1998,7 @@
     {
       "name": "EtherStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_stone_use",
       "metadata": {
@@ -2546,7 +2546,7 @@
     {
       "name": "IceStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_stone_use",
       "metadata": {
@@ -2943,7 +2943,7 @@
     {
       "name": "LightningStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_stone_use",
       "metadata": {
@@ -3575,7 +3575,7 @@
     {
       "name": "CrystalStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_stone_use",
       "metadata": {
@@ -3972,7 +3972,7 @@
     {
       "name": "LavaStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_stone_use",
       "metadata": {
@@ -7238,7 +7238,7 @@
     {
       "name": "AnimalsStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_stone_use",
       "metadata": {
@@ -7485,7 +7485,7 @@
     {
       "name": "MetalStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_stone_use",
       "metadata": {
@@ -7728,7 +7728,7 @@
     {
       "name": "FireBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "fire_battery_use",
       "metadata": {
@@ -7796,7 +7796,7 @@
     {
       "name": "AirBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "air_battery_use",
       "metadata": {
@@ -7864,7 +7864,7 @@
     {
       "name": "EarthBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "earth_battery_use",
       "metadata": {
@@ -8000,7 +8000,7 @@
     {
       "name": "EtherBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ether_battery_use",
       "metadata": {
@@ -8068,7 +8068,7 @@
     {
       "name": "IceBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "ice_battery_use",
       "metadata": {
@@ -8136,7 +8136,7 @@
     {
       "name": "LightningBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lightning_battery_use",
       "metadata": {
@@ -8351,7 +8351,7 @@
     {
       "name": "CrystalBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "crystal_battery_use",
       "metadata": {
@@ -8419,7 +8419,7 @@
     {
       "name": "LavaBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "lava_battery_use",
       "metadata": {
@@ -8759,7 +8759,7 @@
     {
       "name": "AnimalsBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animals_battery_use",
       "metadata": {
@@ -8827,7 +8827,7 @@
     {
       "name": "MetalBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "metal_battery_use",
       "metadata": {
@@ -8972,7 +8972,7 @@
     {
       "name": "LightStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "light_stone_use",
       "metadata": {
@@ -9201,7 +9201,7 @@
     {
       "name": "LightBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "light_battery_use",
       "metadata": {
@@ -11348,7 +11348,7 @@
     {
       "name": "EnergyStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_stone_use",
       "metadata": {
@@ -11564,7 +11564,7 @@
     {
       "name": "EnergyBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "energy_battery_use",
       "metadata": {
@@ -12417,7 +12417,7 @@
     {
       "name": "MoonStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "moon_stone_use",
       "metadata": {
@@ -12652,7 +12652,7 @@
     {
       "name": "MoonBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "moon_battery_use",
       "metadata": {
@@ -13943,7 +13943,7 @@
     {
       "name": "CreationStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "creation_stone_use",
       "metadata": {
@@ -14229,7 +14229,7 @@
     {
       "name": "CreationBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "creation_battery_use",
       "metadata": {
@@ -15604,7 +15604,7 @@
     {
       "name": "DestructionStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_stone_use",
       "metadata": {
@@ -15833,7 +15833,7 @@
     {
       "name": "DestructionBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "destruction_battery_use",
       "metadata": {
@@ -17206,7 +17206,7 @@
     {
       "name": "BloodStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blood_stone_use",
       "metadata": {
@@ -17365,7 +17365,7 @@
     {
       "name": "BloodBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blood_battery_use",
       "metadata": {
@@ -19923,7 +19923,7 @@
     {
       "name": "ExplosionStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_stone_use",
       "metadata": {
@@ -20187,7 +20187,7 @@
     {
       "name": "ExplosionBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "explosion_battery_use",
       "metadata": {
@@ -20717,7 +20717,7 @@
     {
       "name": "AmberStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_stone_use",
       "metadata": {
@@ -21024,7 +21024,7 @@
     {
       "name": "AmberBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "amber_battery_use",
       "metadata": {
@@ -22455,7 +22455,7 @@
     {
       "name": "MistStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mist_stone_use",
       "metadata": {
@@ -22727,7 +22727,7 @@
     {
       "name": "MistBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mist_battery_use",
       "metadata": {
@@ -24870,7 +24870,7 @@
     {
       "name": "MagnetStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "magnet_stone_use",
       "metadata": {
@@ -25177,7 +25177,7 @@
     {
       "name": "MagnetBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "magnet_battery_use",
       "metadata": {
@@ -26376,7 +26376,7 @@
     {
       "name": "MushroomsStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mushrooms_stone_use",
       "metadata": {
@@ -26683,7 +26683,7 @@
     {
       "name": "MushroomsBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mushrooms_battery_use",
       "metadata": {
@@ -27038,7 +27038,7 @@
     {
       "name": "MercuryStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mercury_stone_use",
       "metadata": {
@@ -27226,7 +27226,7 @@
     {
       "name": "AnimationsModuleSetup",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "animations_module_setup",
       "metadata": {
@@ -27636,7 +27636,7 @@
     {
       "name": "MercuryBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "mercury_battery_use",
       "metadata": {
@@ -29697,7 +29697,7 @@
     {
       "name": "BlueFlameStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_stone_use",
       "metadata": {
@@ -29969,7 +29969,7 @@
     {
       "name": "BlueFlameBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "blue_flame_battery_use",
       "metadata": {
@@ -30244,7 +30244,7 @@
     {
       "name": "GravityStoneUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_stone_use",
       "metadata": {
@@ -30551,7 +30551,7 @@
     {
       "name": "GravityBatteryUse",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "gravity_battery_use",
       "metadata": {
@@ -31194,7 +31194,7 @@
     {
       "name": "DetransformAnimationStart",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "detransform_animation_start",
       "metadata": {
@@ -32939,8 +32939,8 @@
       "item.power.time_armor_leggings": "Поножи мастера времени",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Ртутное состояние, расходует 55",
       "item.power.teleportation_armor_chestplate": "Нагрудник мастера телепортации",
-      "item.power.gravity_mace": "Гравитационная булава",
       "block.power.amplifier_block": "Блок амплифера",
+      "item.power.gravity_mace": "Гравитационная булава",
       "battery.desc.plants": "Зелень",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Метеорит, расходует 45",
       "item.power.music_armor_leggings": "Поножи мастера музыки",
@@ -32958,8 +32958,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
-      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "item.power.oceanic_trident": "Океанический трезубец",
+      "item.minecraft.lingering_potion.effect.power_lock_potion": "Туманное зелье блокировки силы",
       "effect.power.tornado_master": "Мастер торнадо",
       "item.keeper_book.name": "Книга хранителя",
       "gui.power.wheel_abilities_moon.tooltip_moon_withering_uses_80": "Лунное иссушение, расходует 80",
@@ -32983,9 +32983,9 @@
       "item.power.music_guitar": "Музыкальная гитара",
       "advancements.the_end_of_tyranny.descr": "Победите энерджиумного голема",
       "item.power.ocean_battery": "Батарея",
-      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
-      "item.power.mist_battery": "Батарея",
       "effect.power.star_regeneration": "Звёздная регенерация",
+      "item.power.mist_battery": "Батарея",
+      "item.power.smoke_armor_chestplate": "Нагрудник мастера дыма",
       "item.power.crystal_armor_leggings": "Поножи мастера кристалла",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Запечатывание в янтаре, расходует 80",
       "item.power.mist_armor_boots": "Ботинки мастера тумана",
@@ -33022,8 +33022,8 @@
       "block.power.raw_energium_block": "Блок рудного энерджиума",
       "item.power.sound_armor_boots": "Ботинки мастера звука",
       "item.power.smoke_stone": "Камень дыма",
-      "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.air_master": "Мастер воздуха",
+      "item.power.blue_flame_sword": "Меч синего пламени",
       "item.power.raw_depleted_energium": "Рудный обеднённый энерджиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
       "item.power.destruction_broadsword": "Широкий меч разрушения",
@@ -33076,11 +33076,11 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Положительный заряд, расходует 30",
       "effect.power.sound_master": "Мастер звука",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Телепортация",
-      "item.power.raw_copyrium": "Рудный копириум",
       "item.power.moon_armor_chestplate": "Нагрудник мастера луны",
-      "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
-      "effect.power.ocean_master": "Мастер океана",
+      "item.power.raw_copyrium": "Рудный копириум",
       "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Звуковая бомба, расходует 30",
+      "effect.power.ocean_master": "Мастер океана",
+      "item.power.creation_armor_chestplate": "Нагрудник мастера созидания",
       "battery.desc.fire": "Огонь",
       "item.power.crystal_armor_boots": "Ботинки мастера кристалла",
       "advancements.the_great_win.descr": "Победите проклятого хранителя и освободите его от проклятия",
@@ -33108,8 +33108,8 @@
       "effect.power.blood_master": "Мастер крови",
       "advancements.lets_bail_this_place_isdead.descr": "Найдите биом - проклятый лес",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
-      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "effect.power.stun": "Оглушение",
+      "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "item.power.explosion_battery": "Батарея",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Дым",
       "item.power.water_battery": "Батарея",
@@ -33117,8 +33117,8 @@
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Создание/разрушение порталов, расходует 20",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Энергетический заряженный шар, расходует 35",
       "block.power.raw_depleted_energium_block": "Блок рудного обеднённого энерджиума",
-      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "item.power.energy_battery": "Батарея",
+      "gui.power.keepers_box_gui_part_1.tooltip_lava": "Лава",
       "effect.power.time_master": "Мастер времени",
       "item.power.fire_armor_chestplate": "Нагрудник мастера огня",
       "advancements.what_is_this_metal.title": "Это что за металл?",
@@ -33129,8 +33129,8 @@
       "item.power.lava_battery": "Батарея",
       "item.power.vacuum_stone": "Камень пустоты",
       "item.power.energium_armor_boots": "Энерджиумные ботинки",
-      "item.power.poison_stone": "Камень яда",
       "effect.power.destruction_master": "Мастер разрушения",
+      "item.power.poison_stone": "Камень яда",
       "item.power.poison_armor_boots": "Ботинки мастера яда",
       "effect.power.immortality": "Бессмертие",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Рывок, расходует 20",
@@ -33142,8 +33142,8 @@
       "effect.power.blue_magnet_power": "Сила синего магнита",
       "effect.power.plague_master": "Мастер чумы",
       "item.power.ice_armor_boots": "Ботинки мастера льда",
-      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.destruction": "Разрушение",
+      "item.power.amber_stone": "Камень янтаря",
       "battery.desc.magnet": "Магнит",
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
@@ -33157,16 +33157,16 @@
       "block.power.deepslate_depleted_energium_ore": "Обеднённый энерджиумоносный глубинный сланец",
       "item.power.water_stone": "Камень воды",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Вишнёвый ветер, расходует 10",
-      "item.power.fire_armor_leggings": "Поножи мастера огня",
       "effect.power.energy_master": "Мастер энергии",
+      "item.power.fire_armor_leggings": "Поножи мастера огня",
       "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Шестерной файрбол, расходует 55",
-      "item.power.shadow_stone": "Камень тени",
       "item.power.earth_armor_boots": "Ботинки мастера земли",
+      "item.power.shadow_stone": "Камень тени",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Вода",
       "effect.power.magnet_master": "Мастер магнита",
       "block.power.deepslate_copyrium_ore": "Копириумоносный глубинный сланец",
-      "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "block.power.cursed_stone_pillar": "Колонна из проклятого камня",
+      "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Луч разрушения, расходует 15",
       "effect.power.iron_skin": "Железная кожа",
       "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Музыкальная релаксация, расходует 75",
       "item.power.moon_armor_helmet": "Шлем мастера луны",
@@ -33184,14 +33184,14 @@
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Пустота",
       "effect.power.teleportation_master": "Мастер телепортации",
       "battery.desc.music": "Музыка",
-      "item.power.lava_stone": "Камень лавы",
       "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Турель, расходует 80",
+      "item.power.lava_stone": "Камень лавы",
       "item.power.speed_armor_boots": "Ботинки мастера скорости",
-      "gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35": "Телекинез, расходует 35",
-      "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Взрыв гранаты, расходует 20",
-      "item.power.space_battery": "Батарея",
-      "item.power.lightning_falchion": "Молниеносный фальшион",
       "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Огнемет, расходует 10",
+      "item.power.lightning_falchion": "Молниеносный фальшион",
+      "item.power.space_battery": "Батарея",
+      "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Взрыв гранаты, расходует 20",
+      "gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35": "Телекинез, расходует 35",
       "item.power.plague_armor_leggings": "Поножи мастера чумы",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Янтарь",
       "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Очищение, расходует 70",
@@ -33206,10 +33206,10 @@
       "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.explosion_armor_leggings": "Поножи мастера взрыва",
       "item.power.mercury_armor_boots": "Ботинки мастера ртути",
-      "advancements.full_power_of_energium.title": "Полная мощь энерджиума",
       "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
-      "item.power.destruction_stone": "Камень разрушения",
+      "advancements.full_power_of_energium.title": "Полная мощь энерджиума",
       "item.power.darkness_stone": "Камень тьмы",
+      "item.power.destruction_stone": "Камень разрушения",
       "block.power.cursed_stone_bricks_wall": "Ограда из проклятых каменных кирпичей",
       "item.power.lava_armor_helmet": "Шлем мастера лавы",
       "item.power.music_armor_boots": "Ботинки мастера музыки",
@@ -33252,8 +33252,8 @@
       "item.power.destruction_armor_helmet": "Шлем мастера разрушение",
       "gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10": "Волна магнитного поля, расходует 10",
       "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Поток токсичной кислоты, расходует 15",
-      "item.power.ice_battery": "Батарея",
       "item.power.water_armor_helmet": "Шлем мастера воды",
+      "item.power.ice_battery": "Батарея",
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Торнадо",
@@ -33269,8 +33269,8 @@
       "item.power.metal_armor_chestplate": "Нагрудник мастера металла",
       "battery.desc.teleportation": "Телепортациия",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Воздух",
-      "item.power.magnet_armor_helmet": "Шлем мастера магнита",
       "item.power.ice_armor_leggings": "Поножи мастера льда",
+      "item.power.magnet_armor_helmet": "Шлем мастера магнита",
       "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Жидкая ртуть, расходует 15",
       "item.power.light_armor_leggings": "Поножи мастера света",
       "item.power.amplifier_drop": "Капля амплифера",
@@ -33709,8 +33709,8 @@
       "item.power.time_armor_leggings": "Time Leggings",
       "gui.power.wheel_abilities_mercury.tooltip_mercury_condition_uses_55": "Mercury condition, uses 55",
       "item.power.teleportation_armor_chestplate": "Teleportation Chestplate",
-      "block.power.amplifier_block": "Amplifier Block",
       "item.power.gravity_mace": "Gravity Mace",
+      "block.power.amplifier_block": "Amplifier Block",
       "battery.desc.plants": "Plants",
       "gui.power.wheel_abilities_space.tooltip_meteorite_uses_45": "Meteorite, uses 45",
       "item.power.music_armor_leggings": "Music Leggings",
@@ -33728,8 +33728,8 @@
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.animals_stone": "Animals Stone",
       "item.power.light_battery": "Battery",
-      "item.power.oceanic_trident": "Oceanic Trident",
       "item.minecraft.lingering_potion.effect.power_lock_potion": "Lingering Potion of Power Lock",
+      "item.power.oceanic_trident": "Oceanic Trident",
       "effect.power.tornado_master": "Master of Tornado",
       "item.keeper_book.name": "The Keeper\u0027s Book",
       "item.power.ether_armor_boots": "Ether Boots",
@@ -33753,9 +33753,9 @@
       "item.power.music_guitar": "Music Guitar",
       "advancements.the_end_of_tyranny.descr": "Defeat the energium golem",
       "item.power.ocean_battery": "Battery",
-      "effect.power.star_regeneration": "Star regeneration",
-      "item.power.mist_battery": "Battery",
       "item.power.smoke_armor_chestplate": "Smoke Chestplate",
+      "item.power.mist_battery": "Battery",
+      "effect.power.star_regeneration": "Star regeneration",
       "item.power.crystal_armor_leggings": "Crystal Leggings",
       "gui.power.wheel_abilities_amber.tooltip_sealing_in_amber_uses_80": "Sealing in amber, uses 80",
       "item.power.mist_armor_boots": "Mist Boots",
@@ -33792,8 +33792,8 @@
       "block.power.raw_energium_block": "Block of Raw Energium",
       "item.power.sound_armor_boots": "Sound Boots",
       "item.power.smoke_stone": "Smoke Stone",
-      "effect.power.air_master": "Master of the Air",
       "item.power.blue_flame_sword": "Blue Flame Sword",
+      "effect.power.air_master": "Master of the Air",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
       "item.power.destruction_broadsword": "Destruction Broadsword",
@@ -33846,11 +33846,11 @@
       "gui.power.wheel_abilities_magnet.tooltip_positive_charge_uses_30": "Positive charge, uses 30",
       "effect.power.sound_master": "Master of Sound",
       "gui.power.keepers_box_gui_part_2.tooltip_teleportation": "Teleportation",
-      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.raw_copyrium": "Raw Copyrium",
-      "effect.power.ocean_master": "Master of the Ocean",
-      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "item.power.moon_armor_chestplate": "Moon Chestplate",
       "item.power.creation_armor_chestplate": "Creation Chestplate",
+      "gui.power.wheel_abilities_sound.tooltip_sound_bomb_uses_30": "Sound bomb, uses 30",
+      "effect.power.ocean_master": "Master of the Ocean",
       "battery.desc.fire": "Fire",
       "item.power.crystal_armor_boots": "Crystal Boots",
       "advancements.the_great_win.descr": "Defeat the cursed keeper and free him from the curse",
@@ -33878,8 +33878,8 @@
       "effect.power.blood_master": "Master of Blood",
       "advancements.lets_bail_this_place_isdead.descr": "Find the biome - the cursed forest",
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
-      "effect.power.stun": "Stun",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
+      "effect.power.stun": "Stun",
       "item.power.explosion_battery": "Battery",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
       "item.power.water_battery": "Battery",
@@ -33887,8 +33887,8 @@
       "gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us": "Creating/Destructing portals, uses 20",
       "gui.power.wheel_abilities_energy.tooltip_energy_charged_ball_uses_35": "Energy charged ball, uses 35",
       "block.power.raw_depleted_energium_block": "Block of Raw Depleted Energium",
-      "item.power.energy_battery": "Battery",
       "gui.power.keepers_box_gui_part_1.tooltip_lava": "Lava",
+      "item.power.energy_battery": "Battery",
       "effect.power.time_master": "Master of Time",
       "item.power.fire_armor_chestplate": "Fire Chestplate",
       "advancements.what_is_this_metal.title": "What is this metal?",
@@ -33899,8 +33899,8 @@
       "item.power.lava_battery": "Battery",
       "item.power.vacuum_stone": "Vacuum Stone",
       "item.power.energium_armor_boots": "Energium Boots",
-      "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_stone": "Poison Stone",
+      "effect.power.destruction_master": "Master of Destruction",
       "item.power.poison_armor_boots": "Poison Boots",
       "effect.power.immortality": "Immortality",
       "gui.power.wheel_abilities_speed.tooltip_dash_uses_20": "Dash, uses 20",
@@ -33912,8 +33912,8 @@
       "effect.power.blue_magnet_power": "Blue Magnet Power",
       "effect.power.plague_master": "Master of the Plague",
       "item.power.ice_armor_boots": "Ice Boots",
-      "battery.desc.destruction": "Destruction",
       "item.power.amber_stone": "Amber Stone",
+      "battery.desc.destruction": "Destruction",
       "battery.desc.magnet": "Magnet",
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
@@ -33927,16 +33927,16 @@
       "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
       "item.power.water_stone": "Water Stone",
       "gui.power.wheel_abilities_plants.tooltip_cherry_wind_uses_10": "Cherry wind, uses 10",
-      "effect.power.energy_master": "Master of Energy",
       "item.power.fire_armor_leggings": "Fire Leggings",
+      "effect.power.energy_master": "Master of Energy",
       "gui.power.wheel_abilities_blue_flame.tooltip_sixshot_fireballs_uses_55": "Six-shot fireballs, uses 55",
-      "item.power.earth_armor_boots": "Earth Boots",
       "item.power.shadow_stone": "Shadow Stone",
+      "item.power.earth_armor_boots": "Earth Boots",
       "gui.power.keepers_box_gui_part_1.tooltip_water": "Water",
       "effect.power.magnet_master": "Magnet Master",
       "block.power.deepslate_copyrium_ore": "Deepslate Copyrium Ore",
-      "block.power.cursed_stone_pillar": "Cursed Stone Pillar",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ray_uses_15": "Destruction ray, uses 15",
+      "block.power.cursed_stone_pillar": "Cursed Stone Pillar",
       "effect.power.iron_skin": "Iron Skin",
       "gui.power.wheel_abilities_music.tooltip_musical_relaxation_uses_75": "Musical relaxation, uses 75",
       "item.power.moon_armor_helmet": "Moon Helmet",
@@ -33954,14 +33954,14 @@
       "gui.power.keepers_box_gui_part_3.tooltip_vacuum": "Vacuum",
       "effect.power.teleportation_master": "Master of Teleportation",
       "battery.desc.music": "Music",
-      "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Turret, uses 80",
       "item.power.lava_stone": "Lava Stone",
+      "gui.power.wheel_abilities_technology.tooltip_turret_uses_80": "Turret, uses 80",
       "item.power.speed_armor_boots": "Speed Boots",
-      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
-      "item.power.lightning_falchion": "Lightning Falchion",
-      "item.power.space_battery": "Battery",
-      "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
       "gui.power.wheel_abilities_gravity.tooltip_telekinesis_uses_35": "Telekinesis, uses 35",
+      "gui.power.wheel_abilities_explosion.tooltip_grenade_explosion_uses_20": "Grenade explosion, uses 20",
+      "item.power.space_battery": "Battery",
+      "item.power.lightning_falchion": "Lightning Falchion",
+      "gui.power.wheel_abilities_fire.tooltip_flamethrower_uses_10_power_poin": "Flamethrower, uses 10",
       "item.power.plague_armor_leggings": "Plague Leggings",
       "gui.power.keepers_box_gui_part_4.tooltip_amber": "Amber",
       "gui.power.wheel_abilities_poison.tooltip_cleaning_uses_70": "Cleaning, uses 70",
@@ -33976,10 +33976,10 @@
       "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.explosion_armor_leggings": "Explosion Leggings",
       "item.power.mercury_armor_boots": "Mercury Boots",
-      "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "advancements.full_power_of_energium.title": "Full power of energium",
-      "item.power.darkness_stone": "Darkness Stone",
+      "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.destruction_stone": "Destruction Stone",
+      "item.power.darkness_stone": "Darkness Stone",
       "block.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
       "item.power.lava_armor_helmet": "Lava Helmet",
       "item.power.music_armor_boots": "Music Boots",
@@ -34022,8 +34022,8 @@
       "item.power.destruction_armor_helmet": "Destruction Helmet",
       "gui.power.wheel_abilities_magnet.tooltip_magnetic_field_wave_uses_10": "Magnetic field wave, uses 10",
       "gui.power.wheel_abilities_poison.tooltip_toxic_acid_flow_uses_15": "Toxic acid flow, uses 15",
-      "item.power.water_armor_helmet": "Water Helmet",
       "item.power.ice_battery": "Battery",
+      "item.power.water_armor_helmet": "Water Helmet",
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Tornado",
@@ -34039,8 +34039,8 @@
       "item.power.metal_armor_chestplate": "Metal Chestplate",
       "battery.desc.teleportation": "Teleportation",
       "gui.power.keepers_box_gui_part_2.tooltip_air": "Air",
-      "item.power.ice_armor_leggings": "Ice Leggings",
       "item.power.magnet_armor_helmet": "Magnet Helmet",
+      "item.power.ice_armor_leggings": "Ice Leggings",
       "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
       "item.power.light_armor_leggings": "Light Leggings",
       "item.power.amplifier_drop": "Amplifier Drop",

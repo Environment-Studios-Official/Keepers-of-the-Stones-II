@@ -45,7 +45,7 @@ public class RainBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RAIN_MASTER, (int) ((12000 / 2) * 20), 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.RAIN_MASTER, (int) ((PowerModVariables.MapVariables.get(world).master_effect_duration / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
@@ -65,9 +65,9 @@ public class RainBatteryUseProcedure {
 				}
 				if (world.isClientSide()) {
 					if (entity instanceof AbstractClientPlayer player) {
-						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(new ResourceLocation("power", "player_animation"));
+						var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(player).get(ResourceLocation.fromNamespaceAndPath("power", "player_animation"));
 						if (animation != null) {
-							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(new ResourceLocation("power", "animation.player.transformation"))));
+							animation.setAnimation(new KeyframeAnimationPlayer(PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", "animation.player.transformation"))));
 						}
 					}
 				}
