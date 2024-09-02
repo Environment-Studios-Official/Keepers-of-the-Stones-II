@@ -1,15 +1,4 @@
 repositories {
-  maven {
-    url = "https://cursemaven.com"
-  }
-}
-
-dependencies {
-  implementation 'curse.maven:kleidersplayerrenderer-682065:5265399'
-}
-
-
-repositories {
     maven {
     	url = "https://cursemaven.com"
     }

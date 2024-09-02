@@ -11,18 +11,6 @@
       },
       "path": "META-INF/jarjar/cpapi-v15.jar",
       "isObfuscated": true
-    },
-    {
-      "identifier": {
-        "group": "com.kleiders.kleidersplayerrenderer",
-        "artifact": "kleiders_custom_renderer"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "6.0.0"
-      },
-      "path": "META-INF/jarjar/kleiders_custom_renderer_api-6.0.0.jar",
-      "isObfuscated": true
     }
   ]
 }
