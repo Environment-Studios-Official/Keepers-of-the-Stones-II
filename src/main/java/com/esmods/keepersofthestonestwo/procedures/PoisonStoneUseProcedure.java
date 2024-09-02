@@ -27,7 +27,6 @@ import dev.kosmx.playerAnim.api.layered.IAnimation;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class PoisonStoneUseProcedure {
@@ -45,7 +44,7 @@ public class PoisonStoneUseProcedure {
 					itemstack.shrink(1);
 				});
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POISON_MASTER.get(), (int) ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() * 20), 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.POISON_MASTER.get(), (int) (PowerModVariables.MapVariables.get(world).master_effect_duration * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
