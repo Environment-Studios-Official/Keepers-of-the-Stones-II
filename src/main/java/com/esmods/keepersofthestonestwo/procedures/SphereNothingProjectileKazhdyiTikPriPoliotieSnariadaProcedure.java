@@ -9,7 +9,6 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.core.particles.SimpleParticleType;
 
 import java.util.List;
@@ -29,7 +28,7 @@ public class SphereNothingProjectileKazhdyiTikPriPoliotieSnariadaProcedure {
 			List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 			for (Entity entityiterator : _entfound) {
 				if (!(entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.VACUUM_MASTER))) {
-					entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MAGIC)), 9);
+					entityiterator.hurt(new DamageSource(world.holderOrThrow(DamageTypes.MAGIC)), 9);
 				}
 			}
 		}

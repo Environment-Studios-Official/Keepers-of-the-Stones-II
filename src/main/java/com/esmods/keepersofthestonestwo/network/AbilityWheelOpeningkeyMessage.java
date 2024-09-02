@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record AbilityWheelOpeningkeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
-	public static final Type<AbilityWheelOpeningkeyMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "key_ability_wheel_openingkey"));
+	public static final Type<AbilityWheelOpeningkeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_ability_wheel_openingkey"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, AbilityWheelOpeningkeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, AbilityWheelOpeningkeyMessage message) -> {
 		buffer.writeInt(message.eventType);
 		buffer.writeInt(message.pressedms);

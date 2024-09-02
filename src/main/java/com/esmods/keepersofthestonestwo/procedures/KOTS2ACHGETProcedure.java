@@ -28,7 +28,7 @@ public class KOTS2ACHGETProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof ServerPlayer _player) {
-			AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("power:keepers_of_the_stones_2"));
+			AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:keepers_of_the_stones_2"));
 			if (_adv != null) {
 				AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 				if (!_ap.isDone()) {

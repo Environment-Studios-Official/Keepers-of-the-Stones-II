@@ -20,7 +20,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record DetransformationKeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
-	public static final Type<DetransformationKeyMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "key_detransformation_key"));
+	public static final Type<DetransformationKeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_detransformation_key"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, DetransformationKeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, DetransformationKeyMessage message) -> {
 		buffer.writeInt(message.eventType);
 		buffer.writeInt(message.pressedms);
