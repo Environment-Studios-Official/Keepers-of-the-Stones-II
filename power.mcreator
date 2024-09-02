@@ -31314,6 +31314,25 @@
         ]
       },
       "path": "~/Elements/Smoke"
+    },
+    {
+      "name": "ConfigVariablesToMapVariables",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "config_variables_to_map_variables",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConfigVariablesToMapVariablesProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
     }
   ],
   "variable_elements": [
@@ -31910,6 +31929,18 @@
       "type": "logic",
       "scope": "player_lifetime",
       "value": "false"
+    },
+    {
+      "name": "master_effect_duration",
+      "type": "number",
+      "scope": "map",
+      "value": "600.0"
+    },
+    {
+      "name": "recharge_timer",
+      "type": "number",
+      "scope": "map",
+      "value": "300.0"
     }
   ],
   "sound_elements": [

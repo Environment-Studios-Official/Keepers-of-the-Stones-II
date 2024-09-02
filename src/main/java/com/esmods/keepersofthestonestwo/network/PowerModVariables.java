@@ -229,6 +229,8 @@ public class PowerModVariables {
 		public double bpY = 0;
 		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
+		public double master_effect_duration = 600.0;
+		public double recharge_timer = 300.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -294,6 +296,8 @@ public class PowerModVariables {
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
+			recharge_timer = nbt.getDouble("recharge_timer");
 		}
 
 		@Override
@@ -355,6 +359,8 @@ public class PowerModVariables {
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
+			nbt.putDouble("master_effect_duration", master_effect_duration);
+			nbt.putDouble("recharge_timer", recharge_timer);
 			return nbt;
 		}
 
