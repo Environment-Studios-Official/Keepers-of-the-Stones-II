@@ -225,7 +225,7 @@ public class AmberSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							entity.getPersistentData().putBoolean("amberLayer", true);
+							entityiterator.getPersistentData().putBoolean("amberLayer", true);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.place")), SoundSource.NEUTRAL, 1, 1);

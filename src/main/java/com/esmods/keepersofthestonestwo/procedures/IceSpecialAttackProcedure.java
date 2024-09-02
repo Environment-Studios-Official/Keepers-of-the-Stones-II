@@ -183,7 +183,7 @@ public class IceSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							entity.getPersistentData().putBoolean("iceLayer", true);
+							entityiterator.getPersistentData().putBoolean("iceLayer", true);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
 									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.player.hurt_freeze")), SoundSource.NEUTRAL, 1, 1);
