@@ -7,4 +7,5 @@ What's new in Keepers of the Stones II version 1.0.0.40?<br/>
 <br />- [Bugfix] Fixed a bug that caused the transformation animation to not play (Only 1.20.6)
 <br />- [Bugfix] Fixed a bug due to the animation of the energium golem's melee attack not being played
 <br />- [Bugfix] Fixed a bug that caused the power received from the elemental power generator to quickly disappear
+<br />- [Bugfix] Fixed clicking on the energium ore block
 <br />- [Bugfix] Fixed a bug that caused vacuum battery not to work
