@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpeedMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +175,45 @@ public class WheelAbilitiesSpeedScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_dash = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_dash.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSpeedButtonMessage(6, x, y, z));
 				WheelAbilitiesSpeedButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_dash", imagebutton_dash);
 		this.addRenderableWidget(imagebutton_dash);
 		imagebutton_acceleration = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_acceleration.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSpeedButtonMessage(7, x, y, z));
 				WheelAbilitiesSpeedButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_acceleration", imagebutton_acceleration);
 		this.addRenderableWidget(imagebutton_acceleration);
 		imagebutton_deceleration = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_deceleration.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesSpeedButtonMessage(8, x, y, z));
 				WheelAbilitiesSpeedButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_deceleration", imagebutton_deceleration);
 		this.addRenderableWidget(imagebutton_deceleration);
 	}

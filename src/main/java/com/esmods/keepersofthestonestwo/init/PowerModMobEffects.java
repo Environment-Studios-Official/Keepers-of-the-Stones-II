@@ -26,6 +26,8 @@ import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SmokeMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SmokeIntangibilityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ShadowMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SandMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.RedMagnetPowerMobEffect;
@@ -126,4 +128,6 @@ public class PowerModMobEffects {
 	public static final RegistryObject<MobEffect> PLAGUE = REGISTRY.register("plague", () -> new PlagueMobEffect());
 	public static final RegistryObject<MobEffect> BLUE_FLAME_MASTER = REGISTRY.register("blue_flame_master", () -> new BlueFlameMasterMobEffect());
 	public static final RegistryObject<MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
+	public static final RegistryObject<MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
+	public static final RegistryObject<MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
 }

@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTechnologyMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +175,45 @@ public class WheelAbilitiesTechnologyScreen extends AbstractContainerScreen<Whee
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_red_plasma_ball = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_red_plasma_ball.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTechnologyButtonMessage(6, x, y, z));
 				WheelAbilitiesTechnologyButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_red_plasma_ball", imagebutton_red_plasma_ball);
 		this.addRenderableWidget(imagebutton_red_plasma_ball);
 		imagebutton_technobarrier = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_technobarrier.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTechnologyButtonMessage(7, x, y, z));
 				WheelAbilitiesTechnologyButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_technobarrier", imagebutton_technobarrier);
 		this.addRenderableWidget(imagebutton_technobarrier);
 		imagebutton_turret = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_turret.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesTechnologyButtonMessage(8, x, y, z));
 				WheelAbilitiesTechnologyButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_turret", imagebutton_turret);
 		this.addRenderableWidget(imagebutton_turret);
 	}

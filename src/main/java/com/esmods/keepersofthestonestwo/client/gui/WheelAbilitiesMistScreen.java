@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMistMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +175,45 @@ public class WheelAbilitiesMistScreen extends AbstractContainerScreen<WheelAbili
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_stream_of_mist = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_stream_of_mist.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMistButtonMessage(6, x, y, z));
 				WheelAbilitiesMistButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_stream_of_mist", imagebutton_stream_of_mist);
 		this.addRenderableWidget(imagebutton_stream_of_mist);
 		imagebutton_mist_lifting = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mist_lifting.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMistButtonMessage(7, x, y, z));
 				WheelAbilitiesMistButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_mist_lifting", imagebutton_mist_lifting);
 		this.addRenderableWidget(imagebutton_mist_lifting);
 		imagebutton_misty_invisibility = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_misty_invisibility.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMistButtonMessage(8, x, y, z));
 				WheelAbilitiesMistButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_misty_invisibility", imagebutton_misty_invisibility);
 		this.addRenderableWidget(imagebutton_misty_invisibility);
 	}

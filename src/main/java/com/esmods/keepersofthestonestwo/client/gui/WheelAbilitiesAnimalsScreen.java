@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAnimalsMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +175,45 @@ public class WheelAbilitiesAnimalsScreen extends AbstractContainerScreen<WheelAb
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_insect_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_insect_attack.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAnimalsButtonMessage(6, x, y, z));
 				WheelAbilitiesAnimalsButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_insect_attack", imagebutton_insect_attack);
 		this.addRenderableWidget(imagebutton_insect_attack);
 		imagebutton_scorpion_sting = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_scorpion_sting.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAnimalsButtonMessage(7, x, y, z));
 				WheelAbilitiesAnimalsButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_scorpion_sting", imagebutton_scorpion_sting);
 		this.addRenderableWidget(imagebutton_scorpion_sting);
 		imagebutton_wolf_pack = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_wolf_pack.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesAnimalsButtonMessage(8, x, y, z));
 				WheelAbilitiesAnimalsButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_wolf_pack", imagebutton_wolf_pack);
 		this.addRenderableWidget(imagebutton_wolf_pack);
 	}

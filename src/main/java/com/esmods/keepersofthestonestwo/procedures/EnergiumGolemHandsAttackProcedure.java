@@ -33,7 +33,7 @@ public class EnergiumGolemHandsAttackProcedure {
 		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof EnergiumGolemEntity) {
-				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.ability");
+				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.attack");
 			}
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}

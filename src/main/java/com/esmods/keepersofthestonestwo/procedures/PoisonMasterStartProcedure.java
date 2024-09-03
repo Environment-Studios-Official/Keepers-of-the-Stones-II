@@ -29,7 +29,7 @@ public class PoisonMasterStartProcedure {
 		{
 			boolean _setval = true;
 			entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-				capability.active = _setval;
+				capability.active_power = _setval;
 				capability.syncPlayerVariables(entity);
 			});
 		}

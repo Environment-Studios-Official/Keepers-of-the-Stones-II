@@ -14,7 +14,6 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class RainMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -53,18 +52,18 @@ public class RainMasterEndProcedure {
 				});
 			}
 		}
-		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).battery == false) {
+		if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).active_battery == false) {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.RAIN_STONE.get());
 				_setstack.setCount(1);
-				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIME_OF_THE_STONE.get() * 20 : 0));
+				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? PowerModVariables.MapVariables.get(world).recharge_timer * 20 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {
 			{
 				boolean _setval = false;
 				entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
-					capability.battery = _setval;
+					capability.active_battery = _setval;
 					capability.syncPlayerVariables(entity);
 				});
 			}

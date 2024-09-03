@@ -14,6 +14,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesEtherMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +175,45 @@ public class WheelAbilitiesEtherScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_ethereal_ray = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_ray.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(6, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_ethereal_ray", imagebutton_ethereal_ray);
 		this.addRenderableWidget(imagebutton_ethereal_ray);
 		imagebutton_ethereal_volley = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_volley.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(7, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_ethereal_volley", imagebutton_ethereal_volley);
 		this.addRenderableWidget(imagebutton_ethereal_volley);
 		imagebutton_ethereal_aura = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_ethereal_aura.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesEtherButtonMessage(8, x, y, z));
 				WheelAbilitiesEtherButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_ethereal_aura", imagebutton_ethereal_aura);
 		this.addRenderableWidget(imagebutton_ethereal_aura);
 	}

@@ -85,7 +85,7 @@ public class PowerModVariables {
 			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
 			clone.selected = original.selected;
 			clone.ability = original.ability;
-			clone.battery = original.battery;
+			clone.active_battery = original.active_battery;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
@@ -103,7 +103,7 @@ public class PowerModVariables {
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
 			if (!event.isWasDeath()) {
-				clone.active = original.active;
+				clone.active_power = original.active_power;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
@@ -125,6 +125,7 @@ public class PowerModVariables {
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 				clone.send_client_package = original.send_client_package;
+				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 			}
 			if (!event.getEntity().level().isClientSide()) {
 				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
@@ -248,6 +249,8 @@ public class PowerModVariables {
 		public double bpY = 0;
 		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
+		public double master_effect_duration = 600.0;
+		public double recharge_timer = 300.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -313,6 +316,8 @@ public class PowerModVariables {
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
+			recharge_timer = nbt.getDouble("recharge_timer");
 		}
 
 		@Override
@@ -374,6 +379,8 @@ public class PowerModVariables {
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
+			nbt.putDouble("master_effect_duration", master_effect_duration);
+			nbt.putDouble("recharge_timer", recharge_timer);
 			return nbt;
 		}
 
@@ -466,13 +473,13 @@ public class PowerModVariables {
 	}
 
 	public static class PlayerVariables {
-		public boolean active = false;
+		public boolean active_power = false;
 		public boolean selected = false;
 		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public String ability = "0";
 		public double mergers = 0.0;
-		public boolean battery = false;
+		public boolean active_battery = false;
 		public boolean ability_block = false;
 		public String element_name_first = "0";
 		public String element_name_second = "0";
@@ -507,6 +514,7 @@ public class PowerModVariables {
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
+		public boolean detransform_anim_trigger = false;
 
 		public void syncPlayerVariables(Entity entity) {
 			if (entity instanceof ServerPlayer serverPlayer)
@@ -515,13 +523,13 @@ public class PowerModVariables {
 
 		public Tag writeNBT() {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("active", active);
+			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("ability", ability);
 			nbt.putDouble("mergers", mergers);
-			nbt.putBoolean("battery", battery);
+			nbt.putBoolean("active_battery", active_battery);
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
@@ -556,18 +564,19 @@ public class PowerModVariables {
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
 			return nbt;
 		}
 
 		public void readNBT(Tag Tag) {
 			CompoundTag nbt = (CompoundTag) Tag;
-			active = nbt.getBoolean("active");
+			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			ability = nbt.getString("ability");
 			mergers = nbt.getDouble("mergers");
-			battery = nbt.getBoolean("battery");
+			active_battery = nbt.getBoolean("active_battery");
 			ability_block = nbt.getBoolean("ability_block");
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
@@ -602,6 +611,7 @@ public class PowerModVariables {
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
+			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 		}
 	}
 
@@ -635,13 +645,13 @@ public class PowerModVariables {
 			context.enqueueWork(() -> {
 				if (!context.getDirection().getReceptionSide().isServer()) {
 					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.active = message.data.active;
+					variables.active_power = message.data.active_power;
 					variables.selected = message.data.selected;
 					variables.power = message.data.power;
 					variables.powerTimer = message.data.powerTimer;
 					variables.ability = message.data.ability;
 					variables.mergers = message.data.mergers;
-					variables.battery = message.data.battery;
+					variables.active_battery = message.data.active_battery;
 					variables.ability_block = message.data.ability_block;
 					variables.element_name_first = message.data.element_name_first;
 					variables.element_name_second = message.data.element_name_second;
@@ -676,6 +686,7 @@ public class PowerModVariables {
 					variables.first_booster_slot = message.data.first_booster_slot;
 					variables.second_booster_slot = message.data.second_booster_slot;
 					variables.third_booster_slot = message.data.third_booster_slot;
+					variables.detransform_anim_trigger = message.data.detransform_anim_trigger;
 				}
 			});
 			context.setPacketHandled(true);

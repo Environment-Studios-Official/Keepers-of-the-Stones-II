@@ -60,6 +60,8 @@ import com.esmods.keepersofthestonestwo.item.SoundBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SoundArmorItem;
 import com.esmods.keepersofthestonestwo.item.SolarBladeItem;
 import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
+import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
+import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
 import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
@@ -622,6 +624,11 @@ public class PowerModItems {
 	public static final RegistryObject<Item> GRAVITY_ARMOR_BOOTS = REGISTRY.register("gravity_armor_boots", () -> new GravityArmorItem.Boots());
 	public static final RegistryObject<Item> GRAVITY_BATTERY = REGISTRY.register("gravity_battery", () -> new GravityBatteryItem());
 	public static final RegistryObject<Item> GRAVITY_MACE = REGISTRY.register("gravity_mace", () -> new GravityMaceItem());
+	public static final RegistryObject<Item> SMOKE_ARMOR_HELMET = REGISTRY.register("smoke_armor_helmet", () -> new SmokeArmorItem.Helmet());
+	public static final RegistryObject<Item> SMOKE_ARMOR_CHESTPLATE = REGISTRY.register("smoke_armor_chestplate", () -> new SmokeArmorItem.Chestplate());
+	public static final RegistryObject<Item> SMOKE_ARMOR_LEGGINGS = REGISTRY.register("smoke_armor_leggings", () -> new SmokeArmorItem.Leggings());
+	public static final RegistryObject<Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", () -> new SmokeArmorItem.Boots());
+	public static final RegistryObject<Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", () -> new SmokeBatteryItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items

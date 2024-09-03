@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack141"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack142"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -162,6 +168,9 @@
           "hoveredImage": "positive_charge_highlight.png",
           "onClick": {
             "name": "Attack143"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

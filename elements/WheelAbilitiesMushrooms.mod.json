@@ -163,6 +163,9 @@
           "onClick": {
             "name": "Attack145"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -176,6 +179,9 @@
           "onClick": {
             "name": "Attack146"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -188,6 +194,9 @@
           "hoveredImage": "mushroom_saturation_highlight.png",
           "onClick": {
             "name": "Attack147"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

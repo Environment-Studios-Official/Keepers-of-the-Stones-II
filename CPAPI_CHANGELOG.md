@@ -1,7 +1,7 @@
-What's new in Colorful Powers API v14?<br />
-<br />- Added the vfx argument to the pw command
-<br />- Moved the quake argument to the vfx argument
-<br />- Some of the arguments of the pw command have been taken out
-<br />- Renamed the ``check_activating_stone`` variable to ``send_client_package``
-<br />- Removed the ``evolution`` variable as it is not actually used
-<br />- [Deprecates, CPAPIv15] The variables ``active`` and ``battery`` will be renamed in the next version
+What's new in Colorful Powers API v15?<br />
+<br />- Renamed the ``active`` variable to ``active_power``
+<br />- Renamed the ``battery`` variable to ``active_battery``
+<br />- Renamed the ``the_duration_of_the_stone_power`` field to ``master_effect_duration`` in configuration file
+<br />- Renamed the ``recharge_time_of_the_stone`` field to ``recharge_timer`` in configuration file
+<br />- Duplicated config fields as world variables, to be able to disable mod config changes
+<br />- [Deprecates] 

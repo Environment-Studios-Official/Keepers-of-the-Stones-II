@@ -14,6 +14,8 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMercuryMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GravityStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -174,27 +176,45 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_liquid_mercury = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_liquid_mercury.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMercuryButtonMessage(6, x, y, z));
 				WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 6, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_liquid_mercury", imagebutton_liquid_mercury);
 		this.addRenderableWidget(imagebutton_liquid_mercury);
 		imagebutton_mercury_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mercury_ball.png"), 46, 92, e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMercuryButtonMessage(7, x, y, z));
 				WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_mercury_ball", imagebutton_mercury_ball);
 		this.addRenderableWidget(imagebutton_mercury_ball);
 		imagebutton_mercury_condition = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, 0, 0, 46, new ResourceLocation("power:textures/screens/atlas/imagebutton_mercury_condition.png"), 46, 92, e -> {
-			if (true) {
+			if (GravityStoneCheckProcedure.execute(world)) {
 				PowerMod.PACKET_HANDLER.sendToServer(new WheelAbilitiesMercuryButtonMessage(8, x, y, z));
 				WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 8, x, y, z);
 			}
-		});
+		}) {
+			@Override
+			public void render(GuiGraphics guiGraphics, int gx, int gy, float ticks) {
+				if (GravityStoneCheckProcedure.execute(world))
+					super.render(guiGraphics, gx, gy, ticks);
+			}
+		};
 		guistate.put("button:imagebutton_mercury_condition", imagebutton_mercury_condition);
 		this.addRenderableWidget(imagebutton_mercury_condition);
 	}
