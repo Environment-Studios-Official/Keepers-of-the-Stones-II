@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -183,41 +184,44 @@ public class WheelAbilitiesVacuumScreen extends AbstractContainerScreen<WheelAbi
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_sphere_of_nothing = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/sphere_of_nothing.png"), new ResourceLocation("power:textures/screens/sphere_of_nothing_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesVacuumButtonMessage(6, x, y, z));
 						WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_sphere_of_nothing", imagebutton_sphere_of_nothing);
 		this.addRenderableWidget(imagebutton_sphere_of_nothing);
 		imagebutton_rifts = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/rifts.png"), new ResourceLocation("power:textures/screens/rifts_highlight.png")), e -> {
-			if (true) {
+			if (PowerLockCheckProcedure.execute(entity)) {
 				PacketDistributor.SERVER.noArg().send(new WheelAbilitiesVacuumButtonMessage(7, x, y, z));
 				WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 7, x, y, z);
 			}
 		}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_rifts", imagebutton_rifts);
 		this.addRenderableWidget(imagebutton_rifts);
 		imagebutton_zeroing_out = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/zeroing_out.png"), new ResourceLocation("power:textures/screens/zeroing_out_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesVacuumButtonMessage(8, x, y, z));
 						WheelAbilitiesVacuumButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_zeroing_out", imagebutton_zeroing_out);

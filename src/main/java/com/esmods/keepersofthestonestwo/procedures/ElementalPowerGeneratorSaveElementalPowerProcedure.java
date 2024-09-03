@@ -12,14 +12,13 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).battery == false) {
+		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false) {
 			if (entity.isShiftKeyDown()) {
 				if (!(entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("0")) {
 					PowerMod.queueServerWork(1, () -> {
@@ -99,7 +98,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								return "";
 							}
 						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
-							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first_timer == 0) {
+							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_first = new Object() {
@@ -121,7 +120,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_first_timer = (double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4;
+									_vars.fake_element_name_first_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -152,7 +151,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								return "";
 							}
 						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
-							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second_timer == 0) {
+							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_second = new Object() {
@@ -174,7 +173,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_second_timer = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
+									_vars.fake_element_name_second_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -206,7 +205,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								return "";
 							}
 						}.getValue(world, BlockPos.containing(x, y, z), "powerRecorded"))) {
-							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third_timer == 0) {
+							if (entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false && entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third_timer == 0) {
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 									_vars.fake_element_name_third = new Object() {
@@ -228,7 +227,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_third_timer = ((double) PowerConfigConfiguration.THE_DURATION_OF_THE_STONE_POWER.get() / 4) * 20;
+									_vars.fake_element_name_third_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{

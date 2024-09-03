@@ -173,6 +173,10 @@
     "power:gravity_armor_helmet",
     "power:gravity_armor_chestplate",
     "power:gravity_armor_leggings",
-    "power:gravity_armor_boots"
+    "power:gravity_armor_boots",
+    "power:smoke_armor_helmet",
+    "power:smoke_armor_chestplate",
+    "power:smoke_armor_leggings",
+    "power:smoke_armor_boots"
   ]
 }

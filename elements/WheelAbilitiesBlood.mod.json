@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack105"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack106"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "transfusion_highlight.png",
           "onClick": {
             "name": "Attack107"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

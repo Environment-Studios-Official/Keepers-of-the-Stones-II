@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -18,8 +17,6 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
-
-import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 @Mod.EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
@@ -38,7 +35,7 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).getValue() == 1) {
+		if (entity.getPersistentData().getBoolean("iceLayer")) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			} else if (event != null && event.hasResult()) {
@@ -53,7 +50,7 @@ public class FrozenDestructionArmorProcedure {
 					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.break")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
-			((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.get()).setBaseValue(0);
+			entity.getPersistentData().putBoolean("iceLayer", false);
 		}
 	}
 }

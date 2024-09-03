@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack45"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -137,6 +140,9 @@
           "onClick": {
             "name": "Attack46"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -149,6 +155,9 @@
           "hoveredImage": "tornado_flight_highlight.png",
           "onClick": {
             "name": "Attack47"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

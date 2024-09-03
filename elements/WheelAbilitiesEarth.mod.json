@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack9"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -136,6 +139,9 @@
           "hoveredImage": "stalagmite_piercing_highlight.png",
           "onClick": {
             "name": "Attack10"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 251,
           "y": 97
@@ -175,6 +181,9 @@
           "hoveredImage": "earthquake_highlight.png",
           "onClick": {
             "name": "Attack11"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

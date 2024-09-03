@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 public class EnergiumGolemRenderer extends GeoEntityRenderer<EnergiumGolemEntity> {
 	public EnergiumGolemRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new EnergiumGolemModel());
-		this.shadowRadius = 1.5f;
+		this.shadowRadius = 1.125f;
 	}
 
 	@Override
