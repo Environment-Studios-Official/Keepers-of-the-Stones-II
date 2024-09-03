@@ -13,7 +13,6 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 public class ElementalPowerGeneratorSaveElementalPowerProcedure {
@@ -125,7 +124,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() / 4) * 20;
+									double _setval = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_first_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -189,7 +188,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() / 4) * 20;
+									double _setval = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_second_timer = _setval;
 										capability.syncPlayerVariables(entity);
@@ -254,7 +253,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 									}
 								}
 								{
-									double _setval = ((double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get() / 4) * 20;
+									double _setval = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
 									entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).ifPresent(capability -> {
 										capability.fake_element_name_third_timer = _setval;
 										capability.syncPlayerVariables(entity);
