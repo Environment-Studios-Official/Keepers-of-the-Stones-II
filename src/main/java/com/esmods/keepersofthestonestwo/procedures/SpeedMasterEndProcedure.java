@@ -14,7 +14,6 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class SpeedMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -57,7 +56,7 @@ public class SpeedMasterEndProcedure {
 			if (entity instanceof Player _player) {
 				ItemStack _setstack = new ItemStack(PowerModItems.SPEED_STONE.get());
 				_setstack.setCount(1);
-				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIMER.get() * 20 : 0));
+				_setstack.getOrCreateTag().putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? PowerModVariables.MapVariables.get(world).recharge_timer * 20 : 0));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {
