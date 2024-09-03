@@ -28,7 +28,7 @@ public class LavaMasterStartProcedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.active = true;
+			_vars.active_power = true;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 20; index0++) {

@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack101"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack102"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "lethal_result_highlight.png",
           "onClick": {
             "name": "Attack103"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack33"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack34"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "crystal_volley_highlight.png",
           "onClick": {
             "name": "Attack35"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

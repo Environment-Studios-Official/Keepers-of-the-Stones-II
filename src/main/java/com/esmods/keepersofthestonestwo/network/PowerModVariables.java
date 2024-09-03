@@ -29,7 +29,6 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.HolderLookup;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -70,7 +69,7 @@ public class PowerModVariables {
 			PlayerVariables clone = new PlayerVariables();
 			clone.selected = original.selected;
 			clone.ability = original.ability;
-			clone.battery = original.battery;
+			clone.active_battery = original.active_battery;
 			clone.element_name_first = original.element_name_first;
 			clone.element_name_second = original.element_name_second;
 			clone.element_name_third = original.element_name_third;
@@ -88,7 +87,7 @@ public class PowerModVariables {
 			clone.second_booster_slot = original.second_booster_slot;
 			clone.third_booster_slot = original.third_booster_slot;
 			if (!event.isWasDeath()) {
-				clone.active = original.active;
+				clone.active_power = original.active_power;
 				clone.power = original.power;
 				clone.powerTimer = original.powerTimer;
 				clone.mergers = original.mergers;
@@ -110,6 +109,7 @@ public class PowerModVariables {
 				clone.fake_element_name_second_timer = original.fake_element_name_second_timer;
 				clone.fake_element_name_third_timer = original.fake_element_name_third_timer;
 				clone.send_client_package = original.send_client_package;
+				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -229,6 +229,8 @@ public class PowerModVariables {
 		public double bpY = 0;
 		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
+		public double master_effect_duration = 600.0;
+		public double recharge_timer = 300.0;
 
 		public static MapVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			MapVariables data = new MapVariables();
@@ -294,6 +296,8 @@ public class PowerModVariables {
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
+			master_effect_duration = nbt.getDouble("master_effect_duration");
+			recharge_timer = nbt.getDouble("recharge_timer");
 		}
 
 		@Override
@@ -355,6 +359,8 @@ public class PowerModVariables {
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
+			nbt.putDouble("master_effect_duration", master_effect_duration);
+			nbt.putDouble("recharge_timer", recharge_timer);
 			return nbt;
 		}
 
@@ -416,13 +422,13 @@ public class PowerModVariables {
 	}
 
 	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
-		public boolean active = false;
+		public boolean active_power = false;
 		public boolean selected = false;
 		public double power = 0.0;
 		public double powerTimer = 0.0;
 		public String ability = "0";
 		public double mergers = 0.0;
-		public boolean battery = false;
+		public boolean active_battery = false;
 		public boolean ability_block = false;
 		public String element_name_first = "0";
 		public String element_name_second = "0";
@@ -457,17 +463,18 @@ public class PowerModVariables {
 		public String first_booster_slot = "0";
 		public String second_booster_slot = "0";
 		public String third_booster_slot = "0";
+		public boolean detransform_anim_trigger = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
 			CompoundTag nbt = new CompoundTag();
-			nbt.putBoolean("active", active);
+			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
 			nbt.putDouble("power", power);
 			nbt.putDouble("powerTimer", powerTimer);
 			nbt.putString("ability", ability);
 			nbt.putDouble("mergers", mergers);
-			nbt.putBoolean("battery", battery);
+			nbt.putBoolean("active_battery", active_battery);
 			nbt.putBoolean("ability_block", ability_block);
 			nbt.putString("element_name_first", element_name_first);
 			nbt.putString("element_name_second", element_name_second);
@@ -502,18 +509,19 @@ public class PowerModVariables {
 			nbt.putString("first_booster_slot", first_booster_slot);
 			nbt.putString("second_booster_slot", second_booster_slot);
 			nbt.putString("third_booster_slot", third_booster_slot);
+			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
 			return nbt;
 		}
 
 		@Override
 		public void deserializeNBT(HolderLookup.Provider lookupProvider, CompoundTag nbt) {
-			active = nbt.getBoolean("active");
+			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
 			powerTimer = nbt.getDouble("powerTimer");
 			ability = nbt.getString("ability");
 			mergers = nbt.getDouble("mergers");
-			battery = nbt.getBoolean("battery");
+			active_battery = nbt.getBoolean("active_battery");
 			ability_block = nbt.getBoolean("ability_block");
 			element_name_first = nbt.getString("element_name_first");
 			element_name_second = nbt.getString("element_name_second");
@@ -548,29 +556,23 @@ public class PowerModVariables {
 			first_booster_slot = nbt.getString("first_booster_slot");
 			second_booster_slot = nbt.getString("second_booster_slot");
 			third_booster_slot = nbt.getString("third_booster_slot");
+			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 		}
 
 		public void syncPlayerVariables(Entity entity) {
-			if (!entity.level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(entity.level().players())) {
-					if (entityiterator instanceof ServerPlayer serverPlayer)
-						PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this, entity.getId()));
-				}
-			}
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.sendToPlayer(serverPlayer, new PlayerVariablesSyncMessage(this));
 		}
 	}
 
-	public record PlayerVariablesSyncMessage(PlayerVariables data, int target) implements CustomPacketPayload {
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
 		public static final Type<PlayerVariablesSyncMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "player_variables_sync"));
-		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> {
-			buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess()));
-			buffer.writeInt(message.target()); // Write the entity ID to the buffer
-		}, (RegistryFriendlyByteBuf buffer) -> {
-			var nbt = buffer.readNbt();
-			PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables(), buffer.readInt());
-			message.data.deserializeNBT(buffer.registryAccess(), nbt);
-			return message;
-		});
+		public static final StreamCodec<RegistryFriendlyByteBuf, PlayerVariablesSyncMessage> STREAM_CODEC = StreamCodec
+				.of((RegistryFriendlyByteBuf buffer, PlayerVariablesSyncMessage message) -> buffer.writeNbt(message.data().serializeNBT(buffer.registryAccess())), (RegistryFriendlyByteBuf buffer) -> {
+					PlayerVariablesSyncMessage message = new PlayerVariablesSyncMessage(new PlayerVariables());
+					message.data.deserializeNBT(buffer.registryAccess(), buffer.readNbt());
+					return message;
+				});
 
 		@Override
 		public Type<PlayerVariablesSyncMessage> type() {
@@ -579,11 +581,10 @@ public class PowerModVariables {
 
 		public static void handleData(final PlayerVariablesSyncMessage message, final IPayloadContext context) {
 			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
-				context.enqueueWork(() -> context.player().level().getEntity(message.target()).getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess())))
-						.exceptionally(e -> {
-							context.connection().disconnect(Component.literal(e.getMessage()));
-							return null;
-						});
+				context.enqueueWork(() -> context.player().getData(PLAYER_VARIABLES).deserializeNBT(context.player().registryAccess(), message.data.serializeNBT(context.player().registryAccess()))).exceptionally(e -> {
+					context.connection().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
 			}
 		}
 	}

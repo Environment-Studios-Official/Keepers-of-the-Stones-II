@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProced
 import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SmokeElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MusicElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
@@ -122,6 +123,10 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 12) {
 
 			MusicElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			SmokeElementGetProcedure.execute(world, entity);
 		}
 	}
 

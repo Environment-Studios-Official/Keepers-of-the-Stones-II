@@ -17,6 +17,8 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMercuryMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GravityStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -183,42 +185,45 @@ public class WheelAbilitiesMercuryScreen extends AbstractContainerScreen<WheelAb
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_liquid_mercury = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/liquid_mercury.png"), new ResourceLocation("power:textures/screens/liquid_mercury_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMercuryButtonMessage(6, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_liquid_mercury", imagebutton_liquid_mercury);
 		this.addRenderableWidget(imagebutton_liquid_mercury);
 		imagebutton_mercury_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_ball.png"), new ResourceLocation("power:textures/screens/mercury_ball_highlight.png")), e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMercuryButtonMessage(7, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_mercury_ball", imagebutton_mercury_ball);
 		this.addRenderableWidget(imagebutton_mercury_ball);
 		imagebutton_mercury_condition = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/mercury_condition.png"), new ResourceLocation("power:textures/screens/mercury_condition_highlight.png")), e -> {
-					if (true) {
+					if (GravityStoneCheckProcedure.execute(world)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMercuryButtonMessage(8, x, y, z));
 						WheelAbilitiesMercuryButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (GravityStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_mercury_condition", imagebutton_mercury_condition);

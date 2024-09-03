@@ -14,8 +14,8 @@
     },
     "entityDataEntries": [],
     "modelWidth": 2.25,
-    "modelHeight": 3.0,
-    "modelShadowSize": 1.5,
+    "modelHeight": 2.0,
+    "modelShadowSize": 1.125,
     "mountedYOffset": 0.0,
     "stepHeight": 1.0,
     "hasSpawnEgg": true,
@@ -100,6 +100,9 @@
     },
     "stepSound": {
       "value": "entity.irongolem.step"
+    },
+    "raidCelebrationSound": {
+      "value": ""
     },
     "whenMobDies": {
       "name": "EnergiumGolemPriGibieliSushchnosti"

@@ -61,6 +61,8 @@ import com.esmods.keepersofthestonestwo.item.SoundBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SoundArmorItem;
 import com.esmods.keepersofthestonestwo.item.SolarBladeItem;
 import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
+import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
+import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
 import com.esmods.keepersofthestonestwo.item.ShadowScytheItem;
 import com.esmods.keepersofthestonestwo.item.ShadowBatteryItem;
@@ -622,6 +624,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> GRAVITY_ARMOR_BOOTS = REGISTRY.register("gravity_armor_boots", GravityArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> GRAVITY_BATTERY = REGISTRY.register("gravity_battery", GravityBatteryItem::new);
 	public static final DeferredHolder<Item, Item> GRAVITY_MACE = REGISTRY.register("gravity_mace", GravityMaceItem::new);
+	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_HELMET = REGISTRY.register("smoke_armor_helmet", SmokeArmorItem.Helmet::new);
+	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_CHESTPLATE = REGISTRY.register("smoke_armor_chestplate", SmokeArmorItem.Chestplate::new);
+	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_LEGGINGS = REGISTRY.register("smoke_armor_leggings", SmokeArmorItem.Leggings::new);
+	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", SmokeArmorItem.Boots::new);
+	public static final DeferredHolder<Item, Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", SmokeBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

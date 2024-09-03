@@ -28,7 +28,7 @@ public class EarthMasterStartProcedure {
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.active = true;
+			_vars.active_power = true;
 			_vars.syncPlayerVariables(entity);
 		}
 		for (int index0 = 0; index0 < 40; index0++) {
