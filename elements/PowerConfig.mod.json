@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "config",
   "definition": {
     "pools": [
@@ -19,7 +19,7 @@
             "textDefault": "",
             "comment": "Sets the base duration value for the master effect",
             "vardisplay": "master_effect_duration",
-            "varname": "the_duration_of_the_stone_power",
+            "varname": "master_effect_duration",
             "enablecomment": true,
             "stringlist": []
           },
@@ -35,8 +35,8 @@
             "numberField": 300.0,
             "textDefault": "",
             "comment": "Sets the recharge time of the stone",
-            "vardisplay": "recharge_time_of_the_stone",
-            "varname": "recharge_time_of_the_stone",
+            "vardisplay": "recharge_timer",
+            "varname": "recharge_timer",
             "enablecomment": true,
             "stringlist": []
           }

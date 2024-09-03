@@ -6,7 +6,7 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -122,7 +122,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<DestructionBallProjectileEntity>> DESTRUCTION_BALL_PROJECTILE = register("destruction_ball_projectile",
 			EntityType.Builder.<DestructionBallProjectileEntity>of(DestructionBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<EnergiumGolemEntity>> ENERGIUM_GOLEM = register("energium_golem",
-			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.25f, 3f));
+			EntityType.Builder.<EnergiumGolemEntity>of(EnergiumGolemEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(2.25f, 2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretEntity>> TURRET = register("turret",
 			EntityType.Builder.<TurretEntity>of(TurretEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(48).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<TurretProjectileEntity>> TURRET_PROJECTILE = register("turret_projectile",
@@ -153,7 +153,7 @@ public class PowerModEntities {
 	}
 
 	@SubscribeEvent
-	public static void init(SpawnPlacementRegisterEvent event) {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 		ShadowEntity.init(event);
 		BlackHoleEntity.init(event);
 		EnergiumGolemEntity.init(event);

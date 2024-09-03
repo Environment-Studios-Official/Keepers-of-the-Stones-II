@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -394,6 +394,38 @@
           "width": 24,
           "height": 24,
           "x": 214,
+          "y": 128
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_smoke_element",
+          "image": "smoke_element.png",
+          "hoveredImage": "smoke_element_highlighted.png",
+          "onClick": {
+            "name": "SmokeElementGet"
+          },
+          "displayCondition": {
+            "name": "SmokeStoneCheck"
+          },
+          "x": 242,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smoke",
+          "text": {
+            "fixedValue": "Smoke"
+          },
+          "displayCondition": {
+            "name": "SmokeStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 238,
           "y": 128
         }
       }

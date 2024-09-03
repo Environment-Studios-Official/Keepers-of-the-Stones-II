@@ -23,7 +23,7 @@ public class ElementalPowerGeneratorRegenerationStarsTickProcedure {
 				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(48 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (entityiterator instanceof Player) {
-						if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).battery == false && entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).active == false
+						if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).active_battery == false && entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).active_power == false
 								&& !(entityiterator instanceof LivingEntity _livEnt3 && _livEnt3.hasEffect(PowerModMobEffects.STAR_REGENERATION))) {
 							if (entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).powerTimer > 0) {
 								{

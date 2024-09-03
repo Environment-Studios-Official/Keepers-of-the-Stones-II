@@ -4,6 +4,7 @@ import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
+import net.neoforged.api.distmarker.Dist;
 
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -14,11 +15,11 @@ import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationFactory;
 import dev.kosmx.playerAnim.api.layered.ModifierLayer;
 import dev.kosmx.playerAnim.api.layered.IAnimation;
 
-@EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD)
+@EventBusSubscriber(modid = "power", bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class AnimationsModuleSetupProcedure {
 	@SubscribeEvent
 	public static void onClientSetup(FMLClientSetupEvent event) {
-		PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(new ResourceLocation("power", "player_animation"), 1000, AnimationsModuleSetupProcedure::registerPlayerAnimations);
+		PlayerAnimationFactory.ANIMATION_DATA_FACTORY.registerFactory(ResourceLocation.fromNamespaceAndPath("power", "player_animation"), 1000, AnimationsModuleSetupProcedure::registerPlayerAnimations);
 	}
 
 	private static IAnimation registerPlayerAnimations(AbstractClientPlayer player) {

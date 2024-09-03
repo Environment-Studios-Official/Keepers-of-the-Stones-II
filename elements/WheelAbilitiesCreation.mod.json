@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack99"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 158
         }
@@ -150,6 +153,9 @@
           "onClick": {
             "name": "Attack97"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -175,6 +181,9 @@
           "hoveredImage": "supertool_highlight.png",
           "onClick": {
             "name": "Attack98"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 251,
           "y": 97

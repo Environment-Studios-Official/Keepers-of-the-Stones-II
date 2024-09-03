@@ -33,7 +33,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record WheelAbilitiesLightButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final Type<WheelAbilitiesLightButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "wheel_abilities_light_buttons"));
+	public static final Type<WheelAbilitiesLightButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_light_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, WheelAbilitiesLightButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, WheelAbilitiesLightButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);

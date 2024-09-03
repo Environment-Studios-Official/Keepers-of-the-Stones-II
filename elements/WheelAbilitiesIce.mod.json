@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -163,6 +163,9 @@
           "onClick": {
             "name": "Attack21"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -176,6 +179,9 @@
           "onClick": {
             "name": "Attack22"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -188,6 +194,9 @@
           "hoveredImage": "ice_trap_highlight.png",
           "onClick": {
             "name": "Attack23"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

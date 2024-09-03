@@ -14,17 +14,17 @@ import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 public class CursedKeeperModel extends GeoModel<CursedKeeperEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(CursedKeeperEntity entity) {
-		return new ResourceLocation("power", "animations/cursed_keeper.animation.json");
+		return ResourceLocation.fromNamespaceAndPath("power", "animations/cursed_keeper.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(CursedKeeperEntity entity) {
-		return new ResourceLocation("power", "geo/cursed_keeper.geo.json");
+		return ResourceLocation.fromNamespaceAndPath("power", "geo/cursed_keeper.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(CursedKeeperEntity entity) {
-		return new ResourceLocation("power", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.fromNamespaceAndPath("power", "textures/entities/" + entity.getTexture() + ".png");
 	}
 
 	@Override

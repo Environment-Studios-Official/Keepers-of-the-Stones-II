@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -124,6 +124,9 @@
           "onClick": {
             "name": "Attack37"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
           "y": 36
         }
@@ -137,6 +140,9 @@
           "onClick": {
             "name": "Attack38"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97
         }
@@ -149,6 +155,9 @@
           "hoveredImage": "melting_highligh.png",
           "onClick": {
             "name": "Attack39"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158

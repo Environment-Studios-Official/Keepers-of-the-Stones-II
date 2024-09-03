@@ -32,7 +32,7 @@ public class EnergiumGolemHandsAttackProcedure {
 		Range = 0.25;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof EnergiumGolemEntity) {
-				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.ability");
+				((EnergiumGolemEntity) entity).setAnimation("energium_golem.animation.attack");
 			}
 			entity.getPersistentData().putDouble("Look", (entity.getYRot()));
 		}
@@ -63,9 +63,9 @@ public class EnergiumGolemHandsAttackProcedure {
 			if (entity.getPersistentData().getDouble("IA") > 7 && entity.getPersistentData().getDouble("IA") < 9) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.HOSTILE, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.HOSTILE, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.HOSTILE, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.HOSTILE, 1, 1, false);
 					}
 				}
 			}
@@ -79,7 +79,7 @@ public class EnergiumGolemHandsAttackProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							if (!(entityiterator instanceof ItemEntity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:energium_golem_ds")))), 12);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:energium_golem_ds")))), 12);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 1.25, (entity.getLookAngle().z * 0.5)));
 							}
 						}

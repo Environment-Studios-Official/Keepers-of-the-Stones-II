@@ -18,7 +18,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 public class EnergiumGolemRenderer extends GeoEntityRenderer<EnergiumGolemEntity> {
 	public EnergiumGolemRenderer(EntityRendererProvider.Context renderManager) {
 		super(renderManager, new EnergiumGolemModel());
-		this.shadowRadius = 1.5f;
+		this.shadowRadius = 1.125f;
 	}
 
 	@Override
@@ -27,12 +27,11 @@ public class EnergiumGolemRenderer extends GeoEntityRenderer<EnergiumGolemEntity
 	}
 
 	@Override
-	public void preRender(PoseStack poseStack, EnergiumGolemEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, float red, float green,
-			float blue, float alpha) {
+	public void preRender(PoseStack poseStack, EnergiumGolemEntity entity, BakedGeoModel model, MultiBufferSource bufferSource, VertexConsumer buffer, boolean isReRender, float partialTick, int packedLight, int packedOverlay, int colour) {
 		float scale = 1f;
 		this.scaleHeight = scale;
 		this.scaleWidth = scale;
-		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, red, green, blue, alpha);
+		super.preRender(poseStack, entity, model, bufferSource, buffer, isReRender, partialTick, packedLight, packedOverlay, 0);
 	}
 
 	@Override

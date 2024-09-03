@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.TeleportationElementGetProced
 import com.esmods.keepersofthestonestwo.procedures.TechnologyElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SmokeElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MusicElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart3Procedure;
@@ -37,7 +38,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));
+	public static final Type<KeepersBoxGUIPart2ButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "keepers_box_gui_part_2_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, KeepersBoxGUIPart2ButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, KeepersBoxGUIPart2ButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);
@@ -122,6 +123,10 @@ public record KeepersBoxGUIPart2ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 12) {
 
 			MusicElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 13) {
+
+			SmokeElementGetProcedure.execute(world, entity);
 		}
 	}
 

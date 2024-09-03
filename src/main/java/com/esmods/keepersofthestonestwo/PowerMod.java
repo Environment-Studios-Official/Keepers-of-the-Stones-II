@@ -34,7 +34,6 @@ import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMenus;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
-import com.esmods.keepersofthestonestwo.init.PowerModEnchantments;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
@@ -58,7 +57,6 @@ public class PowerMod {
 
 		PowerModPotions.REGISTRY.register(modEventBus);
 		PowerModMobEffects.REGISTRY.register(modEventBus);
-		PowerModEnchantments.REGISTRY.register(modEventBus);
 		PowerModMenus.REGISTRY.register(modEventBus);
 		PowerModParticleTypes.REGISTRY.register(modEventBus);
 

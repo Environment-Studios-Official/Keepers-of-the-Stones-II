@@ -33,7 +33,7 @@ import com.esmods.keepersofthestonestwo.PowerMod;
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public record WheelAbilitiesMoonButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
-	public static final Type<WheelAbilitiesMoonButtonMessage> TYPE = new Type<>(new ResourceLocation(PowerMod.MODID, "wheel_abilities_moon_buttons"));
+	public static final Type<WheelAbilitiesMoonButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_moon_buttons"));
 	public static final StreamCodec<RegistryFriendlyByteBuf, WheelAbilitiesMoonButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, WheelAbilitiesMoonButtonMessage message) -> {
 		buffer.writeInt(message.buttonID);
 		buffer.writeInt(message.x);

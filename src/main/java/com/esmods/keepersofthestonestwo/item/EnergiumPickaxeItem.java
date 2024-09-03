@@ -56,6 +56,6 @@ public class EnergiumPickaxeItem extends PickaxeItem {
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+		EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 	}
 }

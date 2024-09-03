@@ -41,8 +41,8 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 				map.put(ArmorItem.Type.CHESTPLATE, 10);
 				map.put(ArmorItem.Type.HELMET, 4);
 				map.put(ArmorItem.Type.BODY, 10);
-			}), 20, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get())), List.of(new ArmorMaterial.Layer(new ResourceLocation("power:energium"))), 0f, 0f);
-			registerHelper.register(new ResourceLocation("power:energium_armor"), armorMaterial);
+			}), 20, BuiltInRegistries.SOUND_EVENT.wrapAsHolder(SoundEvents.EMPTY), () -> Ingredient.of(new ItemStack(PowerModItems.ENERGIUM_INGOT.get())), List.of(new ArmorMaterial.Layer(ResourceLocation.parse("power:energium"))), 0f, 0f);
+			registerHelper.register(ResourceLocation.parse("power:energium_armor"), armorMaterial);
 			ARMOR_MATERIAL = BuiltInRegistries.ARMOR_MATERIAL.wrapAsHolder(armorMaterial);
 		});
 	}
@@ -60,7 +60,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -74,7 +74,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -88,7 +88,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}
@@ -102,7 +102,7 @@ public abstract class EnergiumArmorItem extends ArmorItem {
 		public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 			super.inventoryTick(itemstack, world, entity, slot, selected);
 			if (entity instanceof Player player && Iterables.contains(player.getArmorSlots(), itemstack)) {
-				EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+				EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 			}
 		}
 	}

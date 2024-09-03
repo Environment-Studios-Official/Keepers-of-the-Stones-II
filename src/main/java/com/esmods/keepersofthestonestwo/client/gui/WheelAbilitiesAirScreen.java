@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesAirMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -70,7 +71,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -91,49 +92,53 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 	@Override
 	public void init() {
 		super.init();
-		imagebutton_air_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/air_flow.png"), new ResourceLocation("power:textures/screens/air_flow_highlight.png")), e -> {
-			if (true) {
-				PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(0, x, y, z));
-				WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 0, x, y, z);
-			}
-		}) {
+		imagebutton_air_flow = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/air_flow.png"), ResourceLocation.parse("power:textures/screens/air_flow_highlight.png")),
+				e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(0, x, y, z));
+						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 0, x, y, z);
+					}
+				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_air_flow", imagebutton_air_flow);
 		this.addRenderableWidget(imagebutton_air_flow);
-		imagebutton_wind_gust = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/wind_gust.png"), new ResourceLocation("power:textures/screens/wind_gust_highlight.png")),
+		imagebutton_wind_gust = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/wind_gust.png"), ResourceLocation.parse("power:textures/screens/wind_gust_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(1, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_wind_gust", imagebutton_wind_gust);
 		this.addRenderableWidget(imagebutton_wind_gust);
-		imagebutton_air_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/air_flight.png"), new ResourceLocation("power:textures/screens/air_flight_highlight.png")),
-				e -> {
-					if (true) {
+		imagebutton_air_flight = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/air_flight.png"), ResourceLocation.parse("power:textures/screens/air_flight_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(2, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
 		guistate.put("button:imagebutton_air_flight", imagebutton_air_flight);
 		this.addRenderableWidget(imagebutton_air_flight);
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(3, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 3, x, y, z);
@@ -148,7 +153,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(4, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 4, x, y, z);
@@ -163,7 +168,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(5, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 5, x, y, z);
@@ -178,7 +183,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(6, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 6, x, y, z);
@@ -193,7 +198,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(7, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 7, x, y, z);
@@ -208,7 +213,7 @@ public class WheelAbilitiesAirScreen extends AbstractContainerScreen<WheelAbilit
 		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesAirButtonMessage(8, x, y, z));
 						WheelAbilitiesAirButtonMessage.handleButtonAction(entity, 8, x, y, z);

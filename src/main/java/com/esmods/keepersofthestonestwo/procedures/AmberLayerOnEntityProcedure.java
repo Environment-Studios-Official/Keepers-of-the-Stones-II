@@ -12,8 +12,6 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
-
 @EventBusSubscriber
 public class AmberLayerOnEntityProcedure {
 	@SubscribeEvent
@@ -29,7 +27,7 @@ public class AmberLayerOnEntityProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity) {
-			if (((LivingEntity) entity).getAttribute(PowerModAttributes.SEALEDINAMBER.getDelegate()).getValue() >= 1) {
+			if (entity.getPersistentData().getBoolean("amberLayer")) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.WEAKNESS, 200, 200, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())

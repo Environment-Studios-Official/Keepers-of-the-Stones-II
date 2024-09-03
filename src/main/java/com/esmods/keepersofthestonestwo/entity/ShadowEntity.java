@@ -1,7 +1,7 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.neoforge.event.entity.SpawnPlacementRegisterEvent;
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.phys.Vec3;
@@ -52,7 +52,7 @@ public class ShadowEntity extends TamableAnimal {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4, false));
+		this.goalSelector.addGoal(1, new FollowOwnerGoal(this, 1, (float) 16, (float) 4));
 		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
@@ -79,12 +79,12 @@ public class ShadowEntity extends TamableAnimal {
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.zombie.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.zombie.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.zombie.death"));
 	}
 
 	@Override
@@ -170,7 +170,7 @@ public class ShadowEntity extends TamableAnimal {
 		return Ingredient.of(new ItemStack(Blocks.LIGHT)).test(stack);
 	}
 
-	public static void init(SpawnPlacementRegisterEvent event) {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {

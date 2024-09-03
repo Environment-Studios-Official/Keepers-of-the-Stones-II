@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.entity.living.LivingAttackEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
@@ -10,7 +10,6 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -19,12 +18,10 @@ import net.minecraft.core.BlockPos;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
-
 @EventBusSubscriber
 public class FrozenDestructionArmorProcedure {
 	@SubscribeEvent
-	public static void onEntityAttacked(LivingAttackEvent event) {
+	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
 		if (event.getEntity() != null) {
 			execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 		}
@@ -38,7 +35,7 @@ public class FrozenDestructionArmorProcedure {
 		if (entity == null)
 			return;
 		double Scaling = 0;
-		if (((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.getDelegate()).getValue() == 1) {
+		if (entity.getPersistentData().getBoolean("iceLayer")) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}
@@ -46,12 +43,12 @@ public class FrozenDestructionArmorProcedure {
 			world.levelEvent(2001, BlockPos.containing(x, y, z), Block.getId(Blocks.ICE.defaultBlockState()));
 			if (world instanceof Level _level) {
 				if (!_level.isClientSide()) {
-					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.break")), SoundSource.PLAYERS, 1, 1);
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.break")), SoundSource.PLAYERS, 1, 1);
 				} else {
-					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.glass.break")), SoundSource.PLAYERS, 1, 1, false);
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.glass.break")), SoundSource.PLAYERS, 1, 1, false);
 				}
 			}
-			((LivingEntity) entity).getAttribute(PowerModAttributes.FROZENINICE.getDelegate()).setBaseValue(0);
+			entity.getPersistentData().putBoolean("iceLayer", false);
 		}
 	}
 }

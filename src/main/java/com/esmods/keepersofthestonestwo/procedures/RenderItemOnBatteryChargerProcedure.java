@@ -151,7 +151,7 @@ public class RenderItemOnBatteryChargerProcedure {
 	}
 
 	public static void renderEntity(Entity entity, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		float partialTick = provider.getPartialTick();
+		float partialTick = provider.getPartialTick().getGameTimeDeltaTicks();
 		int packedLight = glowing ? LightTexture.FULL_BRIGHT : Minecraft.getInstance().getEntityRenderDispatcher().getPackedLightCoords(entity, partialTick);
 		renderEntity(entity, partialTick, x, y, z, yaw, pitch, roll, scale, packedLight);
 	}
@@ -226,7 +226,7 @@ public class RenderItemOnBatteryChargerProcedure {
 		if (provider.getStage() == RenderLevelStageEvent.Stage.AFTER_ENTITIES) {
 			ClientLevel level = Minecraft.getInstance().level;
 			Entity entity = provider.getCamera().getEntity();
-			Vec3 pos = entity.getPosition(provider.getPartialTick());
+			Vec3 pos = entity.getPosition(provider.getPartialTick().getGameTimeDeltaTicks());
 			RenderSystem.depthMask(true);
 			RenderSystem.enableDepthTest();
 			RenderSystem.setShaderColor(1.0F, 1.0F, 1.0F, 1.0F);
