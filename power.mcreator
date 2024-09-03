@@ -21447,7 +21447,7 @@
       "name": "RenderItemOnBatteryCharger",
       "type": "procedure",
       "compiles": true,
-      "locked_code": true,
+      "locked_code": false,
       "registry_name": "render_item_on_battery_charger",
       "metadata": {
         "files": [

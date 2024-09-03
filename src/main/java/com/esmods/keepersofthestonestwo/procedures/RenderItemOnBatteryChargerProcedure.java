@@ -151,7 +151,7 @@ public class RenderItemOnBatteryChargerProcedure {
 	}
 
 	public static void renderEntity(Entity entity, double x, double y, double z, float yaw, float pitch, float roll, float scale, boolean glowing) {
-		float partialTick = provider.getPartialTick().getRealtimeDeltaTicks();
+		float partialTick = provider.getPartialTick().getGameTimeDeltaTicks();
 		int packedLight = glowing ? LightTexture.FULL_BRIGHT : Minecraft.getInstance().getEntityRenderDispatcher().getPackedLightCoords(entity, partialTick);
 		renderEntity(entity, partialTick, x, y, z, yaw, pitch, roll, scale, packedLight);
 	}
