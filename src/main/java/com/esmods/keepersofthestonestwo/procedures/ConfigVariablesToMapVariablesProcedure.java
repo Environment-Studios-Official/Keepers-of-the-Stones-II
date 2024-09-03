@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -11,7 +11,7 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ConfigVariablesToMapVariablesProcedure {
 	@SubscribeEvent
 	public static void onWorldLoad(net.neoforged.neoforge.event.level.LevelEvent.Load event) {

@@ -16,7 +16,6 @@ import net.minecraft.core.BlockPos;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
-import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
 
 public class FireMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -54,7 +53,7 @@ public class FireMasterEndProcedure {
 				ItemStack _setstack = new ItemStack(PowerModItems.FIRE_STONE.get());
 				_setstack.setCount(1);
 				CustomData.update(DataComponents.CUSTOM_DATA, _setstack,
-						tag -> tag.putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? (double) PowerConfigConfiguration.RECHARGE_TIMER.get() * 20 : 0)));
+						tag -> tag.putDouble("rechargeStone", (!(entity instanceof Player _plr ? _plr.getAbilities().instabuild : false) ? PowerModVariables.MapVariables.get(world).recharge_timer * 20 : 0)));
 				ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 			}
 		} else {
