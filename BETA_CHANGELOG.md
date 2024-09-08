@@ -1,4 +1,6 @@
 What's new in Keepers of the Stones II version 1.0.0.41<br/>
+<br />- Added explosion immunity for the explosion wizard
+<br />- The explosion force of a nuclear missile has been reduced
 <br />- Now triple fireball requires 35 instead of 25 star points
 <br />- Now zeroing requires 75 instead of 100 star points
 <br />- Added compat with playerAnimator 2.0.0+ (Only 1.21.1)

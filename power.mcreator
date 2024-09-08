@@ -31311,6 +31311,29 @@
         ]
       },
       "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "ExplosionPassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExplosionPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Explosion"
     }
   ],
   "variable_elements": [
