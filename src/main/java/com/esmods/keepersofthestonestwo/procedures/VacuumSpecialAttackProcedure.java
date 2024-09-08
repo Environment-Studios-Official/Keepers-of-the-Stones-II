@@ -103,7 +103,7 @@ public class VacuumSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("vacuum_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 100) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				particleAmount = 8;
 				particleRadius = 2;
 				for (int index1 = 0; index1 < 60; index1++) {
@@ -148,7 +148,7 @@ public class VacuumSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 100;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
