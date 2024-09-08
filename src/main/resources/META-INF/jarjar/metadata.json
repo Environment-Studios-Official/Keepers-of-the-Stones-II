@@ -11,18 +11,6 @@
       },
       "path": "META-INF/jarjar/cpapi-v15.jar",
       "isObfuscated": true
-    },
-    {
-      "identifier": {
-        "group": "dev.kosmx.playerAnim",
-        "artifact": "playerAnim"
-      },
-      "version": {
-        "range": "[0,)",
-        "artifactVersion": "1.0.2-rc1+1.21"
-      },
-      "path": "META-INF/jarjar/player-animation-lib-forge-1.0.2-rc1+1.21.jar",
-      "isObfuscated": true
     }
   ]
 }

@@ -194,7 +194,7 @@
         "data": {
           "name": "tooltip_zeroing_out_uses_100",
           "text": {
-            "fixedValue": "Zeroing out, uses 100"
+            "fixedValue": "Zeroing out, uses 75"
           },
           "width": 24,
           "height": 24,
