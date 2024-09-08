@@ -76,11 +76,11 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 	}
 
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 3f, 42, 10);
+		return shoot(world, entity, source, 2f, 36, 5);
 	}
 
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 3f, 42, 10);
+		return shoot(world, entity, source, pullingPower * 2f, 36, 5);
 	}
 
 	public static AtomicRocketEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -100,10 +100,10 @@ public class AtomicRocketEntity extends AbstractArrow implements ItemSupplier {
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 3f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 2f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(42);
-		entityarrow.setKnockback(10);
+		entityarrow.setBaseDamage(36);
+		entityarrow.setKnockback(5);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
 		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.firework_rocket.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
