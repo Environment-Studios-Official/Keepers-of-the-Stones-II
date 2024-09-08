@@ -31333,6 +31333,29 @@
         ]
       },
       "path": "~/Modules/ColorfulPowersModule"
+    },
+    {
+      "name": "ExplosionPassiveProtection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "explosion_passive_protection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/ExplosionPassiveProtectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "damagesource",
+            "type": "damagesource"
+          },
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Explosion"
     }
   ],
   "variable_elements": [
@@ -32927,7 +32950,7 @@
       "subtitles.strange_sound": "",
       "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Нотный взрыв, расходует 40",
       "item.power.creation_staff": "Посох творения",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 25",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Тройной огненный шар, расходует 35",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Солнечный взрыв, расходует 45",
       "battery.desc.mercury": "Ртуть",
       "battery.desc.sun": "Солнце",
@@ -33213,7 +33236,7 @@
       "battery.desc.technology": "Технологии",
       "item.power.left_metal_gauntlet": "Левая металлическая перчатка",
       "item.power.plants_armor_leggings": "Поножи мастера зелени",
-      "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Обнуление, расходует 100",
+      "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Обнуление, расходует 75",
       "item.power.plague_battery": "Батарея",
       "item.power.magic_fireball": "Волшебный файрбол",
       "gui.power.wheel_abilities_blue_flame.tooltip_blue_flamethrower_uses_20": "Синий огнемёт, расходует 20",
@@ -33697,7 +33720,7 @@
       "subtitles.strange_sound": "",
       "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Explosion of notes, uses 40",
       "item.power.creation_staff": "Creation Staff",
-      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 25",
+      "gui.power.wheel_abilities_fire.tooltip_triple_fireball_uses_25_power_p": "Triple fireball, uses 35",
       "gui.power.wheel_abilities_sun.tooltip_sun_explosion_uses_45": "Sun explosion, uses 45",
       "battery.desc.mercury": "Mercury",
       "battery.desc.sun": "Sun",
@@ -33983,7 +34006,7 @@
       "battery.desc.technology": "Technology",
       "item.power.left_metal_gauntlet": "Left Metal Gauntlet",
       "item.power.plants_armor_leggings": "Plants Leggings",
-      "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Zeroing out, uses 100",
+      "gui.power.wheel_abilities_vacuum.tooltip_zeroing_out_uses_100": "Zeroing out, uses 75",
       "item.power.plague_battery": "Battery",
       "item.power.magic_fireball": "Magic Fireball",
       "gui.power.wheel_abilities_blue_flame.tooltip_blue_flamethrower_uses_20": "Blue flamethrower, uses 20",
