@@ -4,6 +4,7 @@ What's new in Keepers of the Stones II version 1.0.0.42<br/>
 <br />- The explosion radius of the sound bomb has been slightly increased
 <br />- Increased the level of effects when using ether aura
 <br />- Increased the level of strength effect when using energy charge
+<br />- Lava smelting can now smelt raw ore from the mod
 <br />- Now healing water requires 70 instead of 30 star points
 <br />- Now Wolf pack requires 80 instead of 60 star points
 <br />- [Bugfix] Fixed a bug that caused amplifier and copyright deepslate ores to be generated in the world
