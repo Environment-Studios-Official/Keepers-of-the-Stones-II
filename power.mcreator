@@ -27765,12 +27765,9 @@
       "metadata": {
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateAmplifierOreBlock.java",
-          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_amplifier_ore_biome_modifier.json",
           "src/main/resources/assets/power/models/block/deepslate_amplifier_ore.json",
-          "src/main/resources/data/power/worldgen/configured_feature/deepslate_amplifier_ore.json",
           "src/main/resources/assets/power/models/item/deepslate_amplifier_ore.json",
-          "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json",
-          "src/main/resources/data/power/worldgen/placed_feature/deepslate_amplifier_ore.json"
+          "src/main/resources/assets/power/blockstates/deepslate_amplifier_ore.json"
         ]
       },
       "path": "~/ItemsAndBlocks/Amplifier"
@@ -27797,12 +27794,9 @@
       "metadata": {
         "files": [
           "src/main/resources/assets/power/blockstates/deepslate_copyrium_ore.json",
-          "src/main/resources/data/power/worldgen/configured_feature/deepslate_copyrium_ore.json",
           "src/main/resources/assets/power/models/block/deepslate_copyrium_ore.json",
           "src/main/resources/assets/power/models/item/deepslate_copyrium_ore.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/deepslate_copyrium_ore_biome_modifier.json",
-          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java",
-          "src/main/resources/data/power/worldgen/placed_feature/deepslate_copyrium_ore.json"
+          "src/main/java/com/esmods/keepersofthestonestwo/block/DeepslateCopyriumOreBlock.java"
         ]
       },
       "path": "~/ItemsAndBlocks/Copyrium"
