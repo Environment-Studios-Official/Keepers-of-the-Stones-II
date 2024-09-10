@@ -57,11 +57,11 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 22 && mouseY < topPos + 46)
+		if (mouseX > leftPos + 81 && mouseX < leftPos + 105 && mouseY > topPos + 143 && mouseY < topPos + 167)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_stopping_time_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 84 && mouseY < topPos + 108)
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30"), mouseX, mouseY);
-		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 146 && mouseY < topPos + 170)
+		if (mouseX > leftPos + 142 && mouseX < leftPos + 166 && mouseY > topPos + 84 && mouseY < topPos + 108)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_time.tooltip_acceleration_of_time_uses_30"), mouseX, mouseY);
 	}
 
@@ -182,7 +182,7 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_time_stopping = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+		imagebutton_time_stopping = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/time_stopping.png"), new ResourceLocation("power:textures/screens/time_stopping_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(6, x, y, z));
@@ -197,7 +197,7 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_time_stopping", imagebutton_time_stopping);
 		this.addRenderableWidget(imagebutton_time_stopping);
-		imagebutton_time_dilation = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
+		imagebutton_time_dilation = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/time_dilation.png"), new ResourceLocation("power:textures/screens/time_dilation_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(7, x, y, z));
@@ -212,7 +212,7 @@ public class WheelAbilitiesTimeScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_time_dilation", imagebutton_time_dilation);
 		this.addRenderableWidget(imagebutton_time_dilation);
-		imagebutton_acceleration_time = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+		imagebutton_acceleration_time = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
 				new WidgetSprites(new ResourceLocation("power:textures/screens/acceleration_time.png"), new ResourceLocation("power:textures/screens/acceleration_time_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesTimeButtonMessage(8, x, y, z));
