@@ -80,11 +80,11 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 1f, 6, 1);
+		return shoot(world, entity, source, 1f, 12, 1);
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 1f, 6, 1);
+		return shoot(world, entity, source, pullingPower * 1f, 12, 1);
 	}
 
 	public static RainDropProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -106,7 +106,7 @@ public class RainDropProjectileEntity extends AbstractArrow implements ItemSuppl
 		double dz = target.getZ() - entity.getZ();
 		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 1f * 2, 12.0F);
 		entityarrow.setSilent(true);
-		entityarrow.setBaseDamage(6);
+		entityarrow.setBaseDamage(12);
 		entityarrow.setKnockback(1);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);

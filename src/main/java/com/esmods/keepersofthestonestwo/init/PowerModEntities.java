@@ -6,9 +6,9 @@ package com.esmods.keepersofthestonestwo.init;
 
 import net.neoforged.neoforge.registries.DeferredRegister;
 import net.neoforged.neoforge.registries.DeferredHolder;
-import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.Mod;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.entity.MobCategory;
@@ -48,6 +48,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
@@ -60,7 +61,7 @@ import com.esmods.keepersofthestonestwo.entity.AmethystClusterAttackProjectileEn
 import com.esmods.keepersofthestonestwo.entity.AmethystAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, PowerMod.MODID);
 	public static final DeferredHolder<EntityType<?>, EntityType<MagicFireballProjectileEntity>> MAGIC_FIREBALL_PROJECTILE = register("magic_fireball_projectile",
@@ -147,19 +148,24 @@ public class PowerModEntities {
 			EntityType.Builder.<PlagueBombEntity>of(PlagueBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueMagicFireballProjectileEntity>> BLUE_MAGIC_FIREBALL_PROJECTILE = register("blue_magic_fireball_projectile",
 			EntityType.Builder.<BlueMagicFireballProjectileEntity>of(BlueMagicFireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
+			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
 	}
 
 	@SubscribeEvent
-	public static void init(RegisterSpawnPlacementsEvent event) {
-		ShadowEntity.init(event);
-		BlackHoleEntity.init(event);
-		EnergiumGolemEntity.init(event);
-		TurretEntity.init(event);
-		PoisonPitEntity.init(event);
-		CursedKeeperEntity.init(event);
+	public static void init(FMLCommonSetupEvent event) {
+		event.enqueueWork(() -> {
+			ShadowEntity.init();
+			BlackHoleEntity.init();
+			EnergiumGolemEntity.init();
+			TurretEntity.init();
+			PoisonPitEntity.init();
+			CursedKeeperEntity.init();
+			CursedKnightEntity.init();
+		});
 	}
 
 	@SubscribeEvent
@@ -170,5 +176,6 @@ public class PowerModEntities {
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
+		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 	}
 }
