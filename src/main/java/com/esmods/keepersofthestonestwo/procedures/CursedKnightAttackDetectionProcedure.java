@@ -22,7 +22,7 @@ public class CursedKnightAttackDetectionProcedure {
 		double Range = 0;
 		double Zpar = 0;
 		Range = 0.5;
-		if (entity.getPersistentData().getDouble("IA") > 23) {
+		if (entity.getPersistentData().getDouble("IA") > 73) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
 					Xpar = x + entity.getLookAngle().x * Range;

@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.LivingEntity;
@@ -10,7 +11,11 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
+import net.minecraft.sounds.SoundSource;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.BlockPos;
 
 import java.util.List;
 import java.util.Comparator;
@@ -46,7 +51,7 @@ public class CursedKnightBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 25) {
+		if (entity.getPersistentData().getDouble("IA") < 31) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -54,7 +59,7 @@ public class CursedKnightBiteProcedure {
 				Range = Range + 1.25;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 25 && entity.getPersistentData().getDouble("IA") < 29) {
+		if (entity.getPersistentData().getDouble("IA") > 31 && entity.getPersistentData().getDouble("IA") < 33) {
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -65,13 +70,38 @@ public class CursedKnightBiteProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity)) {
 							if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 6);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 14);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 0.25, (entity.getLookAngle().z * 0.5)));
-								{
-									ItemStack _ist = new ItemStack(Items.SHIELD);
-									if (_ist.hurt(1, RandomSource.create(), null)) {
-										_ist.shrink(1);
-										_ist.setDamageValue(0);
+							} else {
+								if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
+									{
+										ItemStack _ist = (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+										if (_ist.hurt(1, RandomSource.create(), null)) {
+											_ist.shrink(1);
+											_ist.setDamageValue(0);
+										}
+									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.shield.block")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
+										}
+									}
+								} else if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
+									{
+										ItemStack _ist = (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
+										if (_ist.hurt(1, RandomSource.create(), null)) {
+											_ist.shrink(1);
+											_ist.setDamageValue(0);
+										}
+									}
+									if (world instanceof Level _level) {
+										if (!_level.isClientSide()) {
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.shield.block")), SoundSource.PLAYERS, 1, 1);
+										} else {
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.shield.block")), SoundSource.PLAYERS, 1, 1, false);
+										}
 									}
 								}
 							}
