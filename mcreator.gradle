@@ -3,7 +3,7 @@ repositories {
     	url = "https://cursemaven.com"
     }
 }
-    
+
 dependencies {
 	implementation "curse.maven:pehkui-319596:5446174"
 }
