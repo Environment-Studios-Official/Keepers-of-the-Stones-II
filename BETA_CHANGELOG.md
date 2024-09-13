@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.42<br/>
+<br />- Added new element - Smoke
 <br />- Added new mob - Cursed Knight
 <br />- Time element abilities have been reworked
 <br />- Increased the damage of rain and poison bows to 12

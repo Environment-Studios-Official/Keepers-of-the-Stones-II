@@ -22,6 +22,7 @@ import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
@@ -150,6 +151,8 @@ public class PowerModEntities {
 			EntityType.Builder.<BlueMagicFireballProjectileEntity>of(BlueMagicFireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
 			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SmokeMusketProjectileEntity>> SMOKE_MUSKET_PROJECTILE = register("smoke_musket_projectile",
+			EntityType.Builder.<SmokeMusketProjectileEntity>of(SmokeMusketProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -17,6 +17,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.TurretProjectileRenderer
 import com.esmods.keepersofthestonestwo.client.renderer.StoneAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SphereNothingProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.SoundBombProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.SmokeMusketProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowSphereRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.ShadowRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.RainDropProjectileRenderer;
@@ -99,5 +100,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.PLAGUE_BOMB.get(), PlagueBombRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.BLUE_MAGIC_FIREBALL_PROJECTILE.get(), ThrownItemRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.CURSED_KNIGHT.get(), CursedKnightRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.SMOKE_MUSKET_PROJECTILE.get(), SmokeMusketProjectileRenderer::new);
 	}
 }

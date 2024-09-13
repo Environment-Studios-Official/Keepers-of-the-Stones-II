@@ -62,6 +62,7 @@ import com.esmods.keepersofthestonestwo.item.SoundBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SoundArmorItem;
 import com.esmods.keepersofthestonestwo.item.SolarBladeItem;
 import com.esmods.keepersofthestonestwo.item.SmokeStoneItem;
+import com.esmods.keepersofthestonestwo.item.SmokeMusketItem;
 import com.esmods.keepersofthestonestwo.item.SmokeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SmokeArmorItem;
 import com.esmods.keepersofthestonestwo.item.ShadowStoneItem;
@@ -631,6 +632,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", () -> new SmokeArmorItem.Boots());
 	public static final DeferredHolder<Item, Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", () -> new SmokeBatteryItem());
 	public static final DeferredHolder<Item, Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", () -> new SmokeMusketItem());
 
 	// Start of user code block custom items
 	// End of user code block custom items
