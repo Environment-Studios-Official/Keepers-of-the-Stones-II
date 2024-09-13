@@ -5,8 +5,6 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 
 import java.util.Random;
 import java.util.List;
@@ -33,10 +31,7 @@ public class CursedKnightAttackDetectionProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								Random = Mth.nextInt(RandomSource.create(), 0, 1);
-								if (Range < 5) {
-									entity.getPersistentData().putString("State", "Bite");
-								}
+								entity.getPersistentData().putString("State", "Bite");
 								entity.getPersistentData().putDouble("IA", 0);
 							}
 						}

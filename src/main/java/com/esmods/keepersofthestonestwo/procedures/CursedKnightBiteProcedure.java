@@ -6,6 +6,7 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.damagesource.DamageTypes;
@@ -51,15 +52,15 @@ public class CursedKnightBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 13) {
+		if (entity.getPersistentData().getDouble("IA") < 15) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
 				ZPar = z + entity.getLookAngle().z * Range;
-				Range = Range + 1.25;
+				Range = Range + 0.25;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 13 && entity.getPersistentData().getDouble("IA") < 15) {
+		if (entity.getPersistentData().getDouble("IA") > 15 && entity.getPersistentData().getDouble("IA") < 17) {
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -68,8 +69,8 @@ public class CursedKnightBiteProcedure {
 					final Vec3 _center = new Vec3(XPar, YPar, ZPar);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity)) {
-							if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
+						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
+							if (!(entityiterator instanceof LivingEntity _livEnt17 && _livEnt17.isBlocking())) {
 								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 14);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 0.25, (entity.getLookAngle().z * 0.5)));
 							} else {
@@ -108,7 +109,7 @@ public class CursedKnightBiteProcedure {
 						}
 					}
 				}
-				Range = Range + 1.25;
+				Range = Range + 0.25;
 			}
 		}
 		if (entity.getPersistentData().getDouble("IA") == 36) {

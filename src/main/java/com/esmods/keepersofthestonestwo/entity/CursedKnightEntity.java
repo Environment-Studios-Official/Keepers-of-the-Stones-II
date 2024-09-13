@@ -55,7 +55,7 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 
 	public CursedKnightEntity(EntityType<CursedKnightEntity> type, Level world) {
 		super(type, world);
-		xpReward = 120;
+		xpReward = 50;
 		setNoAi(false);
 		setMaxUpStep(0.6f);
 		setPersistenceRequired();
@@ -167,7 +167,7 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 20);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 12);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
-		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.125);
+		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 1);
 		return builder;
 	}
 
