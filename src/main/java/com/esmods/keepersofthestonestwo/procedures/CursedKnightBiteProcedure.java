@@ -51,7 +51,7 @@ public class CursedKnightBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 31) {
+		if (entity.getPersistentData().getDouble("IA") < 13) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -59,7 +59,7 @@ public class CursedKnightBiteProcedure {
 				Range = Range + 1.25;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 31 && entity.getPersistentData().getDouble("IA") < 33) {
+		if (entity.getPersistentData().getDouble("IA") > 13 && entity.getPersistentData().getDouble("IA") < 15) {
 			for (int index1 = 0; index1 < 4; index1++) {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
@@ -111,7 +111,7 @@ public class CursedKnightBiteProcedure {
 				Range = Range + 1.25;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 73) {
+		if (entity.getPersistentData().getDouble("IA") == 36) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 		}
