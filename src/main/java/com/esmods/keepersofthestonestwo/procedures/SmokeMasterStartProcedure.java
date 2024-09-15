@@ -142,6 +142,6 @@ public class SmokeMasterStartProcedure {
 			if (_entity instanceof Player _player)
 				_player.getInventory().setChanged();
 		}
-		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(Enchantments.VANISHING_CURSE, 1);
+		(entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).enchant(world.registryAccess().lookupOrThrow(Registries.ENCHANTMENT).getOrThrow(Enchantments.VANISHING_CURSE), 1);
 	}
 }

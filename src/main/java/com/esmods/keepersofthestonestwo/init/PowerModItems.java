@@ -631,7 +631,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> SMOKE_ARMOR_BOOTS = REGISTRY.register("smoke_armor_boots", SmokeArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", SmokeBatteryItem::new);
 	public static final DeferredHolder<Item, Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
-	public static final DeferredHolder<Item, Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", () -> new SmokeMusketItem());
+	public static final DeferredHolder<Item, Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", SmokeMusketItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
