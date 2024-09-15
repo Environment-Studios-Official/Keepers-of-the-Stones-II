@@ -1,8 +1,11 @@
 
 package com.esmods.keepersofthestonestwo.entity;
 
-import net.neoforged.api.distmarker.OnlyIn;
-import net.neoforged.api.distmarker.Dist;
+import net.minecraftforge.registries.ForgeRegistries;
+import net.minecraftforge.network.PlayMessages;
+import net.minecraftforge.network.NetworkHooks;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.api.distmarker.Dist;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
@@ -13,7 +16,8 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.network.protocol.game.ClientGamePacketListener;
+import net.minecraft.network.protocol.Packet;
 
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
@@ -22,21 +26,35 @@ import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSupplier {
 	public static final ItemStack PROJECTILE_ITEM = new ItemStack(PowerModItems.SMOKE_MUSKET.get());
 
+	public SmokeMusketProjectileEntity(PlayMessages.SpawnEntity packet, Level world) {
+		super(PowerModEntities.SMOKE_MUSKET_PROJECTILE.get(), world);
+	}
+
 	public SmokeMusketProjectileEntity(EntityType<? extends SmokeMusketProjectileEntity> type, Level world) {
-		super(type, world, PROJECTILE_ITEM);
+		super(type, world);
 	}
 
 	public SmokeMusketProjectileEntity(EntityType<? extends SmokeMusketProjectileEntity> type, double x, double y, double z, Level world) {
-		super(type, x, y, z, world, PROJECTILE_ITEM);
+		super(type, x, y, z, world);
 	}
 
 	public SmokeMusketProjectileEntity(EntityType<? extends SmokeMusketProjectileEntity> type, LivingEntity entity, Level world) {
-		super(type, entity, world, PROJECTILE_ITEM);
+		super(type, entity, world);
+	}
+
+	@Override
+	public Packet<ClientGamePacketListener> getAddEntityPacket() {
+		return NetworkHooks.getEntitySpawningPacket(this);
 	}
 
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public ItemStack getItem() {
+		return PROJECTILE_ITEM;
+	}
+
+	@Override
+	protected ItemStack getPickupItem() {
 		return PROJECTILE_ITEM;
 	}
 
@@ -69,7 +87,7 @@ public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSu
 		entityarrow.setBaseDamage(damage);
 		entityarrow.setKnockback(knockback);
 		world.addFreshEntity(entityarrow);
-		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.crossbow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
+		world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.crossbow.shoot")), SoundSource.PLAYERS, 1, 1f / (random.nextFloat() * 0.5f + 1) + (power / 2));
 		return entityarrow;
 	}
 
@@ -84,7 +102,7 @@ public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSu
 		entityarrow.setKnockback(0);
 		entityarrow.setCritArrow(false);
 		entity.level().addFreshEntity(entityarrow);
-		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("item.crossbow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
+		entity.level().playSound(null, entity.getX(), entity.getY(), entity.getZ(), ForgeRegistries.SOUND_EVENTS.getValue(new ResourceLocation("item.crossbow.shoot")), SoundSource.PLAYERS, 1, 1f / (RandomSource.create().nextFloat() * 0.5f + 1));
 		return entityarrow;
 	}
 }
