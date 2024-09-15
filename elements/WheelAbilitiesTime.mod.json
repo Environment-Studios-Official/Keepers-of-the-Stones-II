@@ -128,7 +128,7 @@
             "name": "PowerLockCheck"
           },
           "x": 190,
-          "y": 36
+          "y": 158
         }
       },
       {
@@ -136,12 +136,12 @@
         "data": {
           "name": "tooltip_stopping_time_uses_30",
           "text": {
-            "fixedValue": "Stopping time, uses 30"
+            "fixedValue": "Stopping time, uses 80"
           },
           "width": 24,
           "height": 24,
-          "x": 200,
-          "y": 46
+          "x": 199,
+          "y": 167
         }
       },
       {
@@ -156,8 +156,8 @@
           "displayCondition": {
             "name": "PowerLockCheck"
           },
-          "x": 251,
-          "y": 97
+          "x": 190,
+          "y": 36
         }
       },
       {
@@ -165,12 +165,12 @@
         "data": {
           "name": "tooltip_time_dilation_uses_30",
           "text": {
-            "fixedValue": "Time dilation, uses 30"
+            "fixedValue": "Time dilation, uses 20"
           },
           "width": 24,
           "height": 24,
-          "x": 262,
-          "y": 108
+          "x": 200,
+          "y": 47
         }
       },
       {
@@ -185,8 +185,8 @@
           "displayCondition": {
             "name": "PowerLockCheck"
           },
-          "x": 190,
-          "y": 158
+          "x": 251,
+          "y": 97
         }
       },
       {
@@ -194,12 +194,12 @@
         "data": {
           "name": "tooltip_acceleration_of_time_uses_30",
           "text": {
-            "fixedValue": "Acceleration of time, uses 30"
+            "fixedValue": "Acceleration of time, uses 40"
           },
           "width": 24,
           "height": 24,
-          "x": 200,
-          "y": 170
+          "x": 260,
+          "y": 108
         }
       }
     ],
@@ -208,7 +208,7 @@
       "sy": 4,
       "ox": 11,
       "oy": 15,
-      "snapOnGrid": true
+      "snapOnGrid": false
     }
   }
 }

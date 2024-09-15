@@ -51,7 +51,7 @@ public class EnergiumGolemHandsAttackProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") < 10) {
+		if (entity.getPersistentData().getDouble("IA") < 7) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				Range = Range + 1;
 				XPar = x + entity.getLookAngle().x * Range;

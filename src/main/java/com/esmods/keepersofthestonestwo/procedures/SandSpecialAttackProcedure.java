@@ -145,10 +145,10 @@ public class SandSpecialAttackProcedure {
 			if ((entity.getCapability(PowerModVariables.PLAYER_VARIABLES_CAPABILITY, null).orElse(new PowerModVariables.PlayerVariables())).power >= 80) {
 				new Object() {
 					void timedLoop(int current, int total, int ticks) {
-						for (int index1 = 0; index1 < 200; index1++) {
+						for (int index1 = 0; index1 < 50; index1++) {
 							if (world instanceof ServerLevel)
 								((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(191 / 255.0F, 187 / 255.0F, 154 / 255.0F), 5)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8),
-										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+										(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8), 20, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
 										(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 						}
 						{
