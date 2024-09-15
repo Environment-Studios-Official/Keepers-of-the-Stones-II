@@ -9,11 +9,11 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.item.ItemEntity;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.BlockPos;
@@ -71,7 +71,7 @@ public class CursedKnightBiteProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
 							if (!(entityiterator instanceof LivingEntity _livEnt17 && _livEnt17.isBlocking())) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(DamageTypes.MOB_ATTACK)), 14);
+								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:cursed_knight_ds")))), 14);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 0.25, (entity.getLookAngle().z * 0.5)));
 							} else {
 								if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
