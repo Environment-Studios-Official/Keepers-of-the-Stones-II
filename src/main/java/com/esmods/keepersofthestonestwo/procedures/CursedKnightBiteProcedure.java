@@ -77,10 +77,10 @@ public class CursedKnightBiteProcedure {
 								if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
 									{
 										ItemStack _ist = (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-										if (_ist.hurt(1, RandomSource.create(), null)) {
+										_ist.hurtAndBreak(1, RandomSource.create(), null, () -> {
 											_ist.shrink(1);
 											_ist.setDamageValue(0);
-										}
+										});
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
@@ -92,10 +92,10 @@ public class CursedKnightBiteProcedure {
 								} else if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {
 									{
 										ItemStack _ist = (entityiterator instanceof LivingEntity _livEnt ? _livEnt.getOffhandItem() : ItemStack.EMPTY);
-										if (_ist.hurt(1, RandomSource.create(), null)) {
+										_ist.hurtAndBreak(1, RandomSource.create(), null, () -> {
 											_ist.shrink(1);
 											_ist.setDamageValue(0);
-										}
+										});
 									}
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {

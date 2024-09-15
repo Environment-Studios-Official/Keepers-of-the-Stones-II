@@ -41,6 +41,11 @@ public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	@Override
+	protected ItemStack getDefaultPickupItem() {
+		return new ItemStack(PowerModItems.SMOKE_MUSKET.get());
+	}
+
+	@Override
 	protected void doPostHurtEffects(LivingEntity entity) {
 		super.doPostHurtEffects(entity);
 		entity.setArrowCount(entity.getArrowCount() - 1);
