@@ -38,7 +38,7 @@
     },
     "enableRanged": true,
     "shootConstantly": false,
-    "rangedItemChargesPower": true,
+    "rangedItemChargesPower": false,
     "projectile": {
       "value": "CUSTOM:SmokeMusketProjectile"
     },
