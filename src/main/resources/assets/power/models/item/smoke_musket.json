@@ -1,0 +1,7 @@
+{
+  "parent": "power:custom/smoke_musket",
+  "textures": {
+    "0": "power:block/smoke_musket",
+    "particle": "power:item/smoke_musket"
+  }
+}

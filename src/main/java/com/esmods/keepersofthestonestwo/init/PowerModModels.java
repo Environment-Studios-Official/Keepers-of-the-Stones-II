@@ -11,6 +11,7 @@ import net.neoforged.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.model.Modelturret_projectile;
 import com.esmods.keepersofthestonestwo.client.model.Modelsolar_salvo;
+import com.esmods.keepersofthestonestwo.client.model.Modelsmoke_bomb;
 import com.esmods.keepersofthestonestwo.client.model.Modelrain_drop;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoisonous_thorn;
 import com.esmods.keepersofthestonestwo.client.model.Modelpoison_bomb;
@@ -36,6 +37,7 @@ public class PowerModModels {
 		event.registerLayerDefinition(Modelgrenade.LAYER_LOCATION, Modelgrenade::createBodyLayer);
 		event.registerLayerDefinition(ModelCrossed.LAYER_LOCATION, ModelCrossed::createBodyLayer);
 		event.registerLayerDefinition(Modelrain_drop.LAYER_LOCATION, Modelrain_drop::createBodyLayer);
+		event.registerLayerDefinition(Modelsmoke_bomb.LAYER_LOCATION, Modelsmoke_bomb::createBodyLayer);
 		event.registerLayerDefinition(Modellightball.LAYER_LOCATION, Modellightball::createBodyLayer);
 		event.registerLayerDefinition(Modelpoisonous_thorn.LAYER_LOCATION, Modelpoisonous_thorn::createBodyLayer);
 		event.registerLayerDefinition(Modelmini_tornado.LAYER_LOCATION, Modelmini_tornado::createBodyLayer);
