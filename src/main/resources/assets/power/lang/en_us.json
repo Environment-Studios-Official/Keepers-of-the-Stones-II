@@ -532,6 +532,7 @@
   "subtitles.backport.block.vault.insert": "",
   "item.power.magnet_armor_chestplate": "Magnet Chestplate",
   "battery.desc.creation": "Creation",
+  "gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75": "Surface melting, uses 75",
   "item.minecraft.tipped_arrow.effect.star_regeneration_potion": "Arrow of Star Regeneration",
   "battery.desc.speed": "Speed",
   "item.power.crystal_knife": "Crystal Knife",
