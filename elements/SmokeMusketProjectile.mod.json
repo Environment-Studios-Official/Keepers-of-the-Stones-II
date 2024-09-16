@@ -1,0 +1,19 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "CUSTOM:SmokeMusket"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "item.crossbow.shoot"
+    },
+    "igniteFire": false,
+    "power": 5.0,
+    "damage": 22.0,
+    "knockback": 0,
+    "entityModel": "Modelturret_projectile",
+    "customModelTexture": "smoke_musket_projectile.png"
+  }
+}

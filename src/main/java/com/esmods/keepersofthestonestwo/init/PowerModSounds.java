@@ -44,4 +44,5 @@ public class PowerModSounds {
 			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "record.call_of_the_past")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> RECORD_ANCIENT_MOOD = REGISTRY.register("record.ancient_mood", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "record.ancient_mood")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> TIME_ABILITY_EFFECT = REGISTRY.register("time_ability_effect", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "time_ability_effect")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> MUSKET = REGISTRY.register("musket", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "musket")));
 }

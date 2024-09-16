@@ -75,7 +75,7 @@ public class BloodSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("blood_ability_2")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				for (int index1 = 0; index1 < 15; index1++) {
 					if (!world.getBlockState(new BlockPos(
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
@@ -121,12 +121,12 @@ public class BloodSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("blood_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 40) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 20) {
 				for (int index2 = 0; index2 < 15; index2++) {
 					if (!world.getBlockState(new BlockPos(
 							entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX(),
@@ -172,7 +172,7 @@ public class BloodSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 40;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 20;
 					_vars.syncPlayerVariables(entity);
 				}
 			}

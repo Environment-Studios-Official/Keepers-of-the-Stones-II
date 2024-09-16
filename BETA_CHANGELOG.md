@@ -1,9 +1,16 @@
-What's new in Keepers of the Stones II version 1.0.0.41<br/>
-<br />- Added explosion immunity for the explosion wizard
-<br />- The explosion force of a nuclear missile has been reduced
-<br />- Now triple fireball requires 35 instead of 25 star points
-<br />- Now zeroing requires 75 instead of 100 star points
-<br />- Added compat with playerAnimator 2.0.0+ (Only 1.21.1)
-<br />- [Bugfix] The localization of the energium upgrade smithing template has been fixed (Only 1.20.6 & 1.21.1)
-<br />- [Bugfix] Fixed a bug that could cause energium armor to be replaced when activating a stone
-<br />- [Bugfix] Fixed clicking on the deepslate energium ore block
+What's new in Keepers of the Stones II version 1.0.0.42<br/>
+<br />- Added new element - smoke
+<br />- Added new mob - Cursed Knight
+<br />- Time element abilities have been reworked
+<br />- The third ability of the Lava Master has been reworked
+<br />- Increased the damage of rain and poison bows to 12
+<br />- The ball lightning attack now creates regular lightning bolts
+<br />- The explosion radius of the sound bomb has been slightly increased
+<br />- Increased the level of effects when using ether aura
+<br />- Increased the level of strength effect when using energy charge
+<br />- Lava smelting can now smelt raw ore from the mod
+<br />- Now healing water requires 70 instead of 30 star points
+<br />- Now Wolf pack requires 80 instead of 60 star points
+<br />- Now second and third blood abilities requires 20 instead of 40 star points
+<br />- [Bugfix] Fixed a bug that caused amplifier and copyright deepslate ores to be generated in the world
+<br />- [Bugfix] Fixed a bug that caused the Cursed Forest to be generated in Nether

@@ -22,6 +22,8 @@ import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.SmokeBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowSphereEntity;
 import com.esmods.keepersofthestonestwo.entity.ShadowEntity;
 import com.esmods.keepersofthestonestwo.entity.RainDropProjectileEntity;
@@ -48,6 +50,7 @@ import com.esmods.keepersofthestonestwo.entity.EnergyChargeEntity;
 import com.esmods.keepersofthestonestwo.entity.EnergiumGolemEntity;
 import com.esmods.keepersofthestonestwo.entity.DirtBlockAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.DestructionBallProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.CursedKnightEntity;
 import com.esmods.keepersofthestonestwo.entity.CursedKeeperEntity;
 import com.esmods.keepersofthestonestwo.entity.CopperAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity;
@@ -147,6 +150,12 @@ public class PowerModEntities {
 			EntityType.Builder.<PlagueBombEntity>of(PlagueBombEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<BlueMagicFireballProjectileEntity>> BLUE_MAGIC_FIREBALL_PROJECTILE = register("blue_magic_fireball_projectile",
 			EntityType.Builder.<BlueMagicFireballProjectileEntity>of(BlueMagicFireballProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight",
+			EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(1f, 2f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SmokeMusketProjectileEntity>> SMOKE_MUSKET_PROJECTILE = register("smoke_musket_projectile",
+			EntityType.Builder.<SmokeMusketProjectileEntity>of(SmokeMusketProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SmokeBombProjectileEntity>> SMOKE_BOMB_PROJECTILE = register("smoke_bomb_projectile",
+			EntityType.Builder.<SmokeBombProjectileEntity>of(SmokeBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -160,6 +169,7 @@ public class PowerModEntities {
 		TurretEntity.init(event);
 		PoisonPitEntity.init(event);
 		CursedKeeperEntity.init(event);
+		CursedKnightEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -170,5 +180,6 @@ public class PowerModEntities {
 		event.put(TURRET.get(), TurretEntity.createAttributes().build());
 		event.put(POISON_PIT.get(), PoisonPitEntity.createAttributes().build());
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
+		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 	}
 }

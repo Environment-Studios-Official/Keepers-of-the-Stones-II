@@ -341,11 +341,11 @@ public class EtherSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("ether_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.ABSORPTION, 200, 4, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4, false, false));
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 3, false, false));
+					_entity.addEffect(new MobEffectInstance(MobEffects.DAMAGE_BOOST, 200, 4, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.beacon.activate")), SoundSource.PLAYERS, 1, 1);

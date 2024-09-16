@@ -1,0 +1,170 @@
+{
+  "_fv": 69,
+  "_type": "animatedentity",
+  "definition": {
+    "mobName": "Cursed Knight",
+    "mobLabel": "",
+    "mobModelTexture": "cursed_knight.png",
+    "mobModelGlowTexture": "",
+    "visualScale": {
+      "fixedValue": 1.0
+    },
+    "boundingBoxScale": {
+      "fixedValue": 1.0
+    },
+    "entityDataEntries": [],
+    "modelWidth": 1.0,
+    "modelHeight": 2.0,
+    "modelShadowSize": 0.75,
+    "mountedYOffset": 0.0,
+    "stepHeight": 0.6,
+    "hasSpawnEgg": true,
+    "spawnEggBaseColor": {
+      "value": -11447452,
+      "falpha": 0.0
+    },
+    "spawnEggDotColor": {
+      "value": -9817013,
+      "falpha": 0.0
+    },
+    "creativeTab": {
+      "value": "CUSTOM:Mobs"
+    },
+    "isBoss": false,
+    "bossBarColor": "PINK",
+    "bossBarType": "PROGRESS",
+    "equipmentMainHand": {
+      "value": ""
+    },
+    "equipmentOffHand": {
+      "value": ""
+    },
+    "equipmentHelmet": {
+      "value": ""
+    },
+    "equipmentBody": {
+      "value": ""
+    },
+    "equipmentLeggings": {
+      "value": ""
+    },
+    "equipmentBoots": {
+      "value": ""
+    },
+    "mobBehaviourType": "Mob",
+    "mobCreatureType": "UNDEFINED",
+    "attackStrength": 12,
+    "attackKnockback": 0.0,
+    "knockbackResistance": 1.0,
+    "movementSpeed": 0.15,
+    "armorBaseValue": 20.0,
+    "trackingRange": 64,
+    "followRange": 32,
+    "health": 100,
+    "xpAmount": 50,
+    "waterMob": false,
+    "flyingMob": false,
+    "guiBoundTo": "<NONE>",
+    "inventorySize": 9,
+    "inventoryStackSize": 64,
+    "deathTime": 20,
+    "lerp": 4,
+    "disableCollisions": false,
+    "ridable": false,
+    "canControlForward": false,
+    "canControlStrafe": false,
+    "immuneToFire": true,
+    "immuneToArrows": true,
+    "immuneToFallDamage": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
+    "immuneToLightning": false,
+    "immuneToPotions": false,
+    "immuneToPlayer": false,
+    "immuneToExplosion": false,
+    "immuneToTrident": false,
+    "immuneToAnvil": false,
+    "immuneToWither": false,
+    "immuneToDragonBreath": true,
+    "mobDrop": {
+      "value": ""
+    },
+    "livingSound": {
+      "value": ""
+    },
+    "hurtSound": {
+      "value": "entity.generic.hurt"
+    },
+    "deathSound": {
+      "value": "entity.generic.death"
+    },
+    "stepSound": {
+      "value": ""
+    },
+    "raidCelebrationSound": {
+      "value": ""
+    },
+    "onMobTickUpdate": {
+      "name": "CursedKnightPriObnovlieniiTikaSushchnosti"
+    },
+    "hasAI": true,
+    "aiBase": "(none)",
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"attack_entity\"><field name=\"insight\">TRUE</field><field name=\"nearby\">TRUE</field><field name=\"entity\">EntityPlayer</field><field name=\"condition\">null,null</field><next><block type=\"attack_on_collide\"><field name=\"speed\">1.2</field><field name=\"longmemory\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"attack_action\"><field name=\"callhelp\">FALSE</field><field name=\"condition\">null,null</field><next><block type=\"wander\"><field name=\"speed\">0.8</field><field name=\"condition\">null,null</field><next><block type=\"leap_at_target\"><field name=\"speed\">0.5</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
+    "model": "cursed_knight.geo.json",
+    "groupName": "head",
+    "animation1": "cursed_knight.animation.idle",
+    "animation2": "cursed_knight.animation.walk",
+    "animation3": "",
+    "animation4": "",
+    "animation5": "",
+    "animation6": "",
+    "animation7": "cursed_knight.animation.sprint",
+    "animation8": "",
+    "animation9": "",
+    "animation10": "",
+    "enable2": true,
+    "enable3": false,
+    "enable4": false,
+    "enable5": false,
+    "enable6": false,
+    "enable7": true,
+    "enable8": false,
+    "enable9": false,
+    "enable10": false,
+    "breedable": false,
+    "tameable": false,
+    "disableDeathRotation": false,
+    "headMovement": true,
+    "eyeHeight": false,
+    "breedTriggerItems": [],
+    "ranged": false,
+    "rangedAttackItem": {
+      "value": ""
+    },
+    "rangedItemType": "Default item",
+    "rangedAttackInterval": 20,
+    "rangedAttackRadius": 10.0,
+    "height": 1.0,
+    "raidSpawnsCount": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "spawnThisMob": true,
+    "doesDespawnWhenIdle": false,
+    "spawningProbability": 20,
+    "mobSpawningType": "creature",
+    "minNumberOfMobsPerGroup": 1,
+    "maxNumberOfMobsPerGroup": 3,
+    "restrictionBiomes": [
+      {
+        "value": "CUSTOM:CursedForest"
+      }
+    ],
+    "spawnInDungeons": false
+  }
+}

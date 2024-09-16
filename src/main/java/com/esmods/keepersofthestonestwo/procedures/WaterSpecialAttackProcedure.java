@@ -132,7 +132,7 @@ public class WaterSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("water_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 30) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 70) {
 				{
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(2 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
@@ -151,7 +151,7 @@ public class WaterSpecialAttackProcedure {
 							}
 							{
 								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 30;
+								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 70;
 								_vars.syncPlayerVariables(entity);
 							}
 						}

@@ -128,7 +128,7 @@ public class SandSpecialAttackProcedure {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				new Object() {
 					void timedLoop(int current, int total, int ticks) {
-						for (int index1 = 0; index1 < 200; index1++) {
+						for (int index1 = 0; index1 < 50; index1++) {
 						}
 						{
 							final Vec3 _center = new Vec3(x, y, z);

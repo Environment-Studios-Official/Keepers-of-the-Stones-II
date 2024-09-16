@@ -1,0 +1,25 @@
+{
+  "_fv": 69,
+  "_type": "projectile",
+  "definition": {
+    "projectileItem": {
+      "value": "Blocks.CAMPFIRE"
+    },
+    "showParticles": false,
+    "actionSound": {
+      "value": "entity.arrow.shoot"
+    },
+    "igniteFire": false,
+    "power": 1.0,
+    "damage": 12.0,
+    "knockback": 0,
+    "entityModel": "Modelsmoke_bomb",
+    "customModelTexture": "smoke_bomb.png",
+    "onHitsBlock": {
+      "name": "SmokeBombProjectileKoghdaSnariadPopadaietVBlok"
+    },
+    "onHitsEntity": {
+      "name": "SmokeBombProjectileKoghdaSnariadPopadaietVBlok"
+    }
+  }
+}
