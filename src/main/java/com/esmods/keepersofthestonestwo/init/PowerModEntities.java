@@ -161,7 +161,7 @@ public class PowerModEntities {
 	public static final RegistryObject<EntityType<BlueMagicFireballProjectileEntity>> BLUE_MAGIC_FIREBALL_PROJECTILE = register("blue_magic_fireball_projectile",
 			EntityType.Builder.<BlueMagicFireballProjectileEntity>of(BlueMagicFireballProjectileEntity::new, MobCategory.MISC).setCustomClientFactory(BlueMagicFireballProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64)
 					.setUpdateInterval(1).sized(0.5f, 0.5f));
-	public static final RegistryObject<EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight", EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true)
+	public static final RegistryObject<EntityType<CursedKnightEntity>> CURSED_KNIGHT = register("cursed_knight", EntityType.Builder.<CursedKnightEntity>of(CursedKnightEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true)
 			.setTrackingRange(64).setUpdateInterval(3).setCustomClientFactory(CursedKnightEntity::new).fireImmune().sized(1f, 2f));
 	public static final RegistryObject<EntityType<SmokeMusketProjectileEntity>> SMOKE_MUSKET_PROJECTILE = register("smoke_musket_projectile", EntityType.Builder.<SmokeMusketProjectileEntity>of(SmokeMusketProjectileEntity::new, MobCategory.MISC)
 			.setCustomClientFactory(SmokeMusketProjectileEntity::new).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
