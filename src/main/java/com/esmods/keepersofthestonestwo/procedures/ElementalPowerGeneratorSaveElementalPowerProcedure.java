@@ -120,7 +120,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_first_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
+									_vars.fake_element_name_first_timer = (PowerModVariables.master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -173,7 +173,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_second_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
+									_vars.fake_element_name_second_timer = (PowerModVariables.master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
@@ -227,7 +227,7 @@ public class ElementalPowerGeneratorSaveElementalPowerProcedure {
 								}
 								{
 									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.fake_element_name_third_timer = (PowerModVariables.MapVariables.get(world).master_effect_duration / 4) * 20;
+									_vars.fake_element_name_third_timer = (PowerModVariables.master_effect_duration / 4) * 20;
 									_vars.syncPlayerVariables(entity);
 								}
 								{
