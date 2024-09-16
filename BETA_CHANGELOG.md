@@ -2,6 +2,7 @@ What's new in Keepers of the Stones II version 1.0.0.42<br/>
 <br />- Added new element - smoke
 <br />- Added new mob - Cursed Knight
 <br />- Time element abilities have been reworked
+<br />- The third ability of the Lava Master has been reworked
 <br />- Increased the damage of rain and poison bows to 12
 <br />- The ball lightning attack now creates regular lightning bolts
 <br />- The explosion radius of the sound bomb has been slightly increased
