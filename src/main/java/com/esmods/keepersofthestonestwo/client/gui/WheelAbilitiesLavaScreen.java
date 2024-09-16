@@ -62,7 +62,7 @@ public class WheelAbilitiesLavaScreen extends AbstractContainerScreen<WheelAbili
 		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 83 && mouseY < topPos + 107)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_lava_attack_uses_35"), mouseX, mouseY);
 		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 144 && mouseY < topPos + 168)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_melting_uses_50"), mouseX, mouseY);
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75"), mouseX, mouseY);
 	}
 
 	@Override

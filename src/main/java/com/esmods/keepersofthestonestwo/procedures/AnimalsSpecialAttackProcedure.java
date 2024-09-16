@@ -109,7 +109,7 @@ public class AnimalsSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("animals_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 60) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				for (int index1 = 0; index1 < 3; index1++) {
 					if (world instanceof ServerLevel _level) {
 						Entity entityToSpawn = EntityType.WOLF.spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
@@ -130,7 +130,7 @@ public class AnimalsSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 60;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
