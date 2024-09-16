@@ -10,7 +10,7 @@
       "value": "item.crossbow.shoot"
     },
     "igniteFire": false,
-    "power": 2.0,
+    "power": 5.0,
     "damage": 22.0,
     "knockback": 0,
     "entityModel": "Modelturret_projectile",

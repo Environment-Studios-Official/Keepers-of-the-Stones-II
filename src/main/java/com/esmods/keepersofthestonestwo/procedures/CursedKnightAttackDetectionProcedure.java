@@ -19,7 +19,7 @@ public class CursedKnightAttackDetectionProcedure {
 		double Random = 0;
 		double Range = 0;
 		double Zpar = 0;
-		Range = 0.5;
+		Range = 1;
 		if (entity.getPersistentData().getDouble("IA") > 73) {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				for (int index0 = 0; index0 < 15; index0++) {
@@ -31,12 +31,14 @@ public class CursedKnightAttackDetectionProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(0.75 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (entityiterator == (entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null)) {
-								entity.getPersistentData().putString("State", "Bite");
+								if (Range <= 2.5) {
+									entity.getPersistentData().putString("State", "Bite");
+								}
 								entity.getPersistentData().putDouble("IA", 0);
 							}
 						}
 					}
-					Range = Range + 0.85;
+					Range = Range + 1;
 				}
 			}
 		} else {
