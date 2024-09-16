@@ -54,11 +54,11 @@ public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSu
 	}
 
 	public static SmokeMusketProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source) {
-		return shoot(world, entity, source, 2f, 22, 0);
+		return shoot(world, entity, source, 5f, 22, 0);
 	}
 
 	public static SmokeMusketProjectileEntity shoot(Level world, LivingEntity entity, RandomSource source, float pullingPower) {
-		return shoot(world, entity, source, pullingPower * 2f, 22, 0);
+		return shoot(world, entity, source, pullingPower * 5f, 22, 0);
 	}
 
 	public static SmokeMusketProjectileEntity shoot(Level world, LivingEntity entity, RandomSource random, float power, double damage, int knockback) {
@@ -78,7 +78,7 @@ public class SmokeMusketProjectileEntity extends AbstractArrow implements ItemSu
 		double dx = target.getX() - entity.getX();
 		double dy = target.getY() + target.getEyeHeight() - 1.1;
 		double dz = target.getZ() - entity.getZ();
-		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 2f * 2, 12.0F);
+		entityarrow.shoot(dx, dy - entityarrow.getY() + Math.hypot(dx, dz) * 0.2F, dz, 5f * 2, 12.0F);
 		entityarrow.setSilent(true);
 		entityarrow.setBaseDamage(22);
 		entityarrow.setKnockback(0);
