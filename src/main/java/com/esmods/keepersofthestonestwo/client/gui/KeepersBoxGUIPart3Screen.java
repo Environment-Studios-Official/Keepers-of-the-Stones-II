@@ -19,6 +19,7 @@ import com.mojang.blaze3d.systems.RenderSystem;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.procedures.VacuumStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpiritStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
@@ -40,6 +41,7 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_moon_element;
 	ImageButton imagebutton_vacuum_element;
 	ImageButton imagebutton_blood_element;
+	ImageButton imagebutton_spirit_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -77,6 +79,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_vacuum"), mouseX, mouseY);
 		if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_blood"), mouseX, mouseY);
+		if (SpiritStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_spirit"), mouseX, mouseY);
 	}
 
 	@Override
@@ -239,5 +244,20 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_blood_element", imagebutton_blood_element);
 		this.addRenderableWidget(imagebutton_blood_element);
+		imagebutton_spirit_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
+				new WidgetSprites(new ResourceLocation("power:textures/screens/spirit_element.png"), new ResourceLocation("power:textures/screens/spirit_element_highlighted.png")), e -> {
+					if (SpiritStoneCheckProcedure.execute(world)) {
+						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart3ButtonMessage(9, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 9, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (SpiritStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_spirit_element", imagebutton_spirit_element);
+		this.addRenderableWidget(imagebutton_spirit_element);
 	}
 }

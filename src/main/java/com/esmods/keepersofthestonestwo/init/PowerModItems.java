@@ -50,6 +50,7 @@ import com.esmods.keepersofthestonestwo.item.SunStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpiritArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpeedArmorItem;
@@ -633,6 +634,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> SMOKE_BATTERY = REGISTRY.register("smoke_battery", () -> new SmokeBatteryItem());
 	public static final DeferredHolder<Item, Item> CURSED_KNIGHT_SPAWN_EGG = REGISTRY.register("cursed_knight_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KNIGHT, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> SMOKE_MUSKET = REGISTRY.register("smoke_musket", () -> new SmokeMusketItem());
+	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_HELMET = REGISTRY.register("spirit_armor_helmet", () -> new SpiritArmorItem.Helmet());
+	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_CHESTPLATE = REGISTRY.register("spirit_armor_chestplate", () -> new SpiritArmorItem.Chestplate());
+	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_LEGGINGS = REGISTRY.register("spirit_armor_leggings", () -> new SpiritArmorItem.Leggings());
+	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_BOOTS = REGISTRY.register("spirit_armor_boots", () -> new SpiritArmorItem.Boots());
 
 	// Start of user code block custom items
 	// End of user code block custom items
