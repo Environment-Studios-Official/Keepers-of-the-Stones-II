@@ -149,39 +149,39 @@ public class LavaSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(4 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
-						if (!(entityiterator == entity)) {
-							int horizontalRadiusHemiBot = (int) 4 - 1;
-							int verticalRadiusHemiBot = (int) 1;
-							int yIterationsHemiBot = verticalRadiusHemiBot;
-							for (int i = -yIterationsHemiBot; i <= 0; i++) {
-								if (i == -verticalRadiusHemiBot) {
-									continue;
-								}
-								for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
-									for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
-										double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
-												+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
-										if (distanceSq <= 1.0) {
-											if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude()) {
-												world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
-												world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId(Blocks.MAGMA_BLOCK.defaultBlockState()));
+						int horizontalRadiusHemiBot = (int) 4 - 1;
+						int verticalRadiusHemiBot = (int) 1;
+						int yIterationsHemiBot = verticalRadiusHemiBot;
+						for (int i = -yIterationsHemiBot; i <= 0; i++) {
+							if (i == -verticalRadiusHemiBot) {
+								continue;
+							}
+							for (int xi = -horizontalRadiusHemiBot; xi <= horizontalRadiusHemiBot; xi++) {
+								for (int zi = -horizontalRadiusHemiBot; zi <= horizontalRadiusHemiBot; zi++) {
+									double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
+											+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
+									if (distanceSq <= 1.0) {
+										if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude()) {
+											world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
+											world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)))));
+											if (!(entityiterator == entity)) {
 												entityiterator.hurt(
 														new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))),
 																entity),
 														(float) 31.5);
-												if (world instanceof Level _level) {
-													if (!_level.isClientSide()) {
-														_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
-													} else {
-														_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
-													}
-												}
 											}
 										}
 									}
 								}
 							}
 						}
+					}
+				}
+				if (world instanceof Level _level) {
+					if (!_level.isClientSide()) {
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1);
+					} else {
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.lava.pop")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
