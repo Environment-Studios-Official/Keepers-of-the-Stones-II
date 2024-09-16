@@ -31,7 +31,7 @@ public class CursedKnightBiteProcedure {
 		double YPar = 0;
 		double Range = 0;
 		double ZPar = 0;
-		Range = 0.5;
+		Range = 1;
 		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedKnightEntity) {
 				((CursedKnightEntity) entity).setAnimation("cursed_knight.animation.attack");
@@ -57,7 +57,7 @@ public class CursedKnightBiteProcedure {
 				XPar = x + entity.getLookAngle().x * Range;
 				YPar = y + 1.75;
 				ZPar = z + entity.getLookAngle().z * Range;
-				Range = Range + 0.5;
+				Range = Range + 1;
 			}
 		}
 		if (entity.getPersistentData().getDouble("IA") > 15 && entity.getPersistentData().getDouble("IA") < 17) {
@@ -109,7 +109,7 @@ public class CursedKnightBiteProcedure {
 						}
 					}
 				}
-				Range = Range + 0.5;
+				Range = Range + 1;
 			}
 		}
 		if (entity.getPersistentData().getDouble("IA") == 36) {

@@ -21,7 +21,7 @@ public class CursedKnightPriObnovlieniiTikaSushchnostiProcedure {
 			if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
 				entity.getPersistentData().putDouble("Patience", 0);
 			} else {
-				entity.getPersistentData().putDouble("Patience", (entity.getPersistentData().getDouble("Patience") + 10));
+				entity.getPersistentData().putDouble("Patience", (entity.getPersistentData().getDouble("Patience") + 20));
 			}
 			if ((entity.getPersistentData().getString("State")).equals("Idle")) {
 				if (!((entity instanceof Mob _mobEnt ? (Entity) _mobEnt.getTarget() : null) == null)) {
