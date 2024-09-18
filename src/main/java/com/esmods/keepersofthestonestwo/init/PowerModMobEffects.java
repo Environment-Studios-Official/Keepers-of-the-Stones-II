@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StunStopSoundProcedure;
 import com.esmods.keepersofthestonestwo.procedures.StarRegenerationEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpiritMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpeedMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SoundMasterEndProcedure;
@@ -78,6 +79,7 @@ import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SunMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StunMobEffect;
 import com.esmods.keepersofthestonestwo.potion.StarRegenerationMobEffect;
+import com.esmods.keepersofthestonestwo.potion.SpiritMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpeedMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SpaceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.SoundMasterMobEffect;
@@ -186,6 +188,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> GRAVITY_MASTER = REGISTRY.register("gravity_master", () -> new GravityMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -304,6 +307,8 @@ public class PowerModMobEffects {
 			SmokeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SMOKE_INTANGIBILITY)) {
 			SmokeIntangibilityEndProcedure.execute(entity);
+		} else if (effect == SPIRIT_MASTER.get()) {
+			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

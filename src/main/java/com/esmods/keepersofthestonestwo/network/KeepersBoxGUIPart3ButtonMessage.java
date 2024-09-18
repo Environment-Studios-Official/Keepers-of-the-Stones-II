@@ -21,6 +21,7 @@ import java.util.HashMap;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.procedures.VacuumElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.SpiritElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
@@ -102,6 +103,10 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 8) {
 
 			BloodElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 9) {
+
+			SpiritElementGetProcedure.execute(world, entity);
 		}
 	}
 
