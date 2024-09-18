@@ -265,6 +265,38 @@
           "x": 125,
           "y": 91
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_spirit_element",
+          "image": "spirit_element.png",
+          "hoveredImage": "spirit_element_highlighted.png",
+          "onClick": {
+            "name": "SpiritElementGet"
+          },
+          "displayCondition": {
+            "name": "SpiritStoneCheck"
+          },
+          "x": 218,
+          "y": 132
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spirit",
+          "text": {
+            "fixedValue": "Spirit"
+          },
+          "displayCondition": {
+            "name": "SpiritStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 214,
+          "y": 128
+        }
       }
     ],
     "gridSettings": {

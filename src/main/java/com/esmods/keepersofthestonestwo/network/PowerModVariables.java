@@ -1,88 +1,73 @@
 package com.esmods.keepersofthestonestwo.network;
 
-import net.minecraftforge.network.PacketDistributor;
-import net.minecraftforge.network.NetworkEvent;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.event.entity.player.PlayerEvent;
-import net.minecraftforge.event.AttachCapabilitiesEvent;
-import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.common.util.FakePlayer;
-import net.minecraftforge.common.capabilities.RegisterCapabilitiesEvent;
-import net.minecraftforge.common.capabilities.ICapabilitySerializable;
-import net.minecraftforge.common.capabilities.CapabilityToken;
-import net.minecraftforge.common.capabilities.CapabilityManager;
-import net.minecraftforge.common.capabilities.Capability;
+import net.neoforged.neoforge.registries.NeoForgeRegistries;
+import net.neoforged.neoforge.registries.DeferredRegister;
+import net.neoforged.neoforge.network.handling.PlayPayloadContext;
+import net.neoforged.neoforge.network.PacketDistributor;
+import net.neoforged.neoforge.event.entity.player.PlayerEvent;
+import net.neoforged.neoforge.common.util.INBTSerializable;
+import net.neoforged.neoforge.attachment.AttachmentType;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.saveddata.SavedData;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
+import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.chat.Component;
 import net.minecraft.network.FriendlyByteBuf;
-import net.minecraft.nbt.Tag;
 import net.minecraft.nbt.CompoundTag;
-import net.minecraft.core.Direction;
 import net.minecraft.client.Minecraft;
 
 import java.util.function.Supplier;
-import java.util.ArrayList;
 
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class PowerModVariables {
-	@SubscribeEvent
-	public static void init(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(SavedDataSyncMessage.class, SavedDataSyncMessage::buffer, SavedDataSyncMessage::new, SavedDataSyncMessage::handler);
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
-	}
+	public static final DeferredRegister<AttachmentType<?>> ATTACHMENT_TYPES = DeferredRegister.create(NeoForgeRegistries.Keys.ATTACHMENT_TYPES, PowerMod.MODID);
+	public static final Supplier<AttachmentType<PlayerVariables>> PLAYER_VARIABLES = ATTACHMENT_TYPES.register("player_variables", () -> AttachmentType.serializable(() -> new PlayerVariables()).build());
+	public static double master_effect_duration = 600.0;
+	public static double recharge_timer = 300.0;
 
 	@SubscribeEvent
-	public static void init(RegisterCapabilitiesEvent event) {
-		event.register(PlayerVariables.class);
+	public static void init(FMLCommonSetupEvent event) {
+		PowerMod.addNetworkMessage(SavedDataSyncMessage.ID, SavedDataSyncMessage::new, SavedDataSyncMessage::handleData);
+		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.ID, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handleData);
 	}
 
 	@Mod.EventBusSubscriber
 	public static class EventBusVariableHandlers {
 		@SubscribeEvent
 		public static void onPlayerLoggedInSyncPlayerVariables(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerRespawnedSyncPlayerVariables(PlayerEvent.PlayerRespawnEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimensionSyncPlayerVariables(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			if (event.getEntity() instanceof ServerPlayer player)
+				player.getData(PLAYER_VARIABLES).syncPlayerVariables(event.getEntity());
 		}
 
 		@SubscribeEvent
 		public static void clonePlayer(PlayerEvent.Clone event) {
-			event.getOriginal().revive();
-			PlayerVariables original = ((PlayerVariables) event.getOriginal().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-			PlayerVariables clone = ((PlayerVariables) event.getEntity().getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
+			PlayerVariables original = event.getOriginal().getData(PLAYER_VARIABLES);
+			PlayerVariables clone = new PlayerVariables();
 			clone.selected = original.selected;
 			clone.ability = original.ability;
 			clone.active_battery = original.active_battery;
@@ -127,31 +112,27 @@ public class PowerModVariables {
 				clone.send_client_package = original.send_client_package;
 				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 			}
-			if (!event.getEntity().level().isClientSide()) {
-				for (Entity entityiterator : new ArrayList<>(event.getEntity().level().players())) {
-					((PlayerVariables) entityiterator.getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables())).syncPlayerVariables(entityiterator);
-				}
-			}
+			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
 
 		@SubscribeEvent
 		public static void onPlayerLoggedIn(PlayerEvent.PlayerLoggedInEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
+			if (event.getEntity() instanceof ServerPlayer player) {
 				SavedData mapdata = MapVariables.get(event.getEntity().level());
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (mapdata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(0, mapdata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(0, mapdata));
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 
 		@SubscribeEvent
 		public static void onPlayerChangedDimension(PlayerEvent.PlayerChangedDimensionEvent event) {
-			if (!event.getEntity().level().isClientSide()) {
+			if (event.getEntity() instanceof ServerPlayer player) {
 				SavedData worlddata = WorldVariables.get(event.getEntity().level());
 				if (worlddata != null)
-					PowerMod.PACKET_HANDLER.send(PacketDistributor.PLAYER.with(() -> (ServerPlayer) event.getEntity()), new SavedDataSyncMessage(1, worlddata));
+					PacketDistributor.PLAYER.with(player).send(new SavedDataSyncMessage(1, worlddata));
 			}
 		}
 	}
@@ -176,14 +157,14 @@ public class PowerModVariables {
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
 			if (world instanceof Level level && !level.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(level::dimension), new SavedDataSyncMessage(1, this));
+				PacketDistributor.DIMENSION.with(level.dimension()).send(new SavedDataSyncMessage(1, this));
 		}
 
 		static WorldVariables clientSide = new WorldVariables();
 
 		public static WorldVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevel level) {
-				return level.getDataStorage().computeIfAbsent(e -> WorldVariables.load(e), WorldVariables::new, DATA_NAME);
+				return level.getDataStorage().computeIfAbsent(new SavedData.Factory<>(WorldVariables::new, WorldVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
@@ -249,8 +230,6 @@ public class PowerModVariables {
 		public double bpY = 0;
 		public double bpZ = 0;
 		public boolean get_limit_of_stones = true;
-		public double master_effect_duration = 600.0;
-		public double recharge_timer = 300.0;
 
 		public static MapVariables load(CompoundTag tag) {
 			MapVariables data = new MapVariables();
@@ -316,8 +295,6 @@ public class PowerModVariables {
 			bpY = nbt.getDouble("bpY");
 			bpZ = nbt.getDouble("bpZ");
 			get_limit_of_stones = nbt.getBoolean("get_limit_of_stones");
-			master_effect_duration = nbt.getDouble("master_effect_duration");
-			recharge_timer = nbt.getDouble("recharge_timer");
 		}
 
 		@Override
@@ -379,29 +356,28 @@ public class PowerModVariables {
 			nbt.putDouble("bpY", bpY);
 			nbt.putDouble("bpZ", bpZ);
 			nbt.putBoolean("get_limit_of_stones", get_limit_of_stones);
-			nbt.putDouble("master_effect_duration", master_effect_duration);
-			nbt.putDouble("recharge_timer", recharge_timer);
 			return nbt;
 		}
 
 		public void syncData(LevelAccessor world) {
 			this.setDirty();
 			if (world instanceof Level && !world.isClientSide())
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.ALL.noArg(), new SavedDataSyncMessage(0, this));
+				PacketDistributor.ALL.noArg().send(new SavedDataSyncMessage(0, this));
 		}
 
 		static MapVariables clientSide = new MapVariables();
 
 		public static MapVariables get(LevelAccessor world) {
 			if (world instanceof ServerLevelAccessor serverLevelAcc) {
-				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(e -> MapVariables.load(e), MapVariables::new, DATA_NAME);
+				return serverLevelAcc.getLevel().getServer().getLevel(Level.OVERWORLD).getDataStorage().computeIfAbsent(new SavedData.Factory<>(MapVariables::new, MapVariables::load), DATA_NAME);
 			} else {
 				return clientSide;
 			}
 		}
 	}
 
-	public static class SavedDataSyncMessage {
+	public static class SavedDataSyncMessage implements CustomPacketPayload {
+		public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "saved_data_sync");
 		private final int type;
 		private SavedData data;
 
@@ -422,57 +398,34 @@ public class PowerModVariables {
 			this.data = data;
 		}
 
-		public static void buffer(SavedDataSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeInt(message.type);
-			if (message.data != null)
-				buffer.writeNbt(message.data.save(new CompoundTag()));
+		@Override
+		public void write(final FriendlyByteBuf buffer) {
+			buffer.writeInt(type);
+			if (data != null)
+				buffer.writeNbt(data.save(new CompoundTag()));
 		}
 
-		public static void handler(SavedDataSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer() && message.data != null) {
+		@Override
+		public ResourceLocation id() {
+			return ID;
+		}
+
+		public static void handleData(final SavedDataSyncMessage message, final PlayPayloadContext context) {
+			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
+				context.workHandler().submitAsync(() -> {
 					if (message.type == 0)
-						MapVariables.clientSide = (MapVariables) message.data;
+						MapVariables.clientSide.read(message.data.save(new CompoundTag()));
 					else
-						WorldVariables.clientSide = (WorldVariables) message.data;
-				}
-			});
-			context.setPacketHandled(true);
+						WorldVariables.clientSide.read(message.data.save(new CompoundTag()));
+				}).exceptionally(e -> {
+					context.packetHandler().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
+			}
 		}
 	}
 
-	public static final Capability<PlayerVariables> PLAYER_VARIABLES_CAPABILITY = CapabilityManager.get(new CapabilityToken<PlayerVariables>() {
-	});
-
-	@Mod.EventBusSubscriber
-	private static class PlayerVariablesProvider implements ICapabilitySerializable<Tag> {
-		@SubscribeEvent
-		public static void onAttachCapabilities(AttachCapabilitiesEvent<Entity> event) {
-			if (event.getObject() instanceof Player && !(event.getObject() instanceof FakePlayer))
-				event.addCapability(new ResourceLocation("power", "player_variables"), new PlayerVariablesProvider());
-		}
-
-		private final PlayerVariables playerVariables = new PlayerVariables();
-		private final LazyOptional<PlayerVariables> instance = LazyOptional.of(() -> playerVariables);
-
-		@Override
-		public <T> LazyOptional<T> getCapability(Capability<T> cap, Direction side) {
-			return cap == PLAYER_VARIABLES_CAPABILITY ? instance.cast() : LazyOptional.empty();
-		}
-
-		@Override
-		public Tag serializeNBT() {
-			return playerVariables.writeNBT();
-		}
-
-		@Override
-		public void deserializeNBT(Tag nbt) {
-			playerVariables.readNBT(nbt);
-		}
-	}
-
-	public static class PlayerVariables {
+	public static class PlayerVariables implements INBTSerializable<CompoundTag> {
 		public boolean active_power = false;
 		public boolean selected = false;
 		public double power = 0.0;
@@ -516,12 +469,8 @@ public class PowerModVariables {
 		public String third_booster_slot = "0";
 		public boolean detransform_anim_trigger = false;
 
-		public void syncPlayerVariables(Entity entity) {
-			if (entity instanceof ServerPlayer serverPlayer)
-				PowerMod.PACKET_HANDLER.send(PacketDistributor.DIMENSION.with(entity.level()::dimension), new PlayerVariablesSyncMessage(this, entity.getId()));
-		}
-
-		public Tag writeNBT() {
+		@Override
+		public CompoundTag serializeNBT() {
 			CompoundTag nbt = new CompoundTag();
 			nbt.putBoolean("active_power", active_power);
 			nbt.putBoolean("selected", selected);
@@ -568,8 +517,8 @@ public class PowerModVariables {
 			return nbt;
 		}
 
-		public void readNBT(Tag Tag) {
-			CompoundTag nbt = (CompoundTag) Tag;
+		@Override
+		public void deserializeNBT(CompoundTag nbt) {
 			active_power = nbt.getBoolean("active_power");
 			selected = nbt.getBoolean("selected");
 			power = nbt.getDouble("power");
@@ -613,83 +562,38 @@ public class PowerModVariables {
 			third_booster_slot = nbt.getString("third_booster_slot");
 			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 		}
+
+		public void syncPlayerVariables(Entity entity) {
+			if (entity instanceof ServerPlayer serverPlayer)
+				PacketDistributor.PLAYER.with(serverPlayer).send(new PlayerVariablesSyncMessage(this));
+		}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(PlayerVariablesSyncMessage.class, PlayerVariablesSyncMessage::buffer, PlayerVariablesSyncMessage::new, PlayerVariablesSyncMessage::handler);
-	}
-
-	public static class PlayerVariablesSyncMessage {
-		private final int target;
-		private final PlayerVariables data;
+	public record PlayerVariablesSyncMessage(PlayerVariables data) implements CustomPacketPayload {
+		public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "player_variables_sync");
 
 		public PlayerVariablesSyncMessage(FriendlyByteBuf buffer) {
-			this.data = new PlayerVariables();
-			this.data.readNBT(buffer.readNbt());
-			this.target = buffer.readInt();
+			this(new PlayerVariables());
+			this.data.deserializeNBT(buffer.readNbt());
 		}
 
-		public PlayerVariablesSyncMessage(PlayerVariables data, int entityid) {
-			this.data = data;
-			this.target = entityid;
+		@Override
+		public void write(final FriendlyByteBuf buffer) {
+			buffer.writeNbt(data.serializeNBT());
 		}
 
-		public static void buffer(PlayerVariablesSyncMessage message, FriendlyByteBuf buffer) {
-			buffer.writeNbt((CompoundTag) message.data.writeNBT());
-			buffer.writeInt(message.target);
+		@Override
+		public ResourceLocation id() {
+			return ID;
 		}
 
-		public static void handler(PlayerVariablesSyncMessage message, Supplier<NetworkEvent.Context> contextSupplier) {
-			NetworkEvent.Context context = contextSupplier.get();
-			context.enqueueWork(() -> {
-				if (!context.getDirection().getReceptionSide().isServer()) {
-					PlayerVariables variables = ((PlayerVariables) Minecraft.getInstance().player.level().getEntity(message.target).getCapability(PLAYER_VARIABLES_CAPABILITY, null).orElse(new PlayerVariables()));
-					variables.active_power = message.data.active_power;
-					variables.selected = message.data.selected;
-					variables.power = message.data.power;
-					variables.powerTimer = message.data.powerTimer;
-					variables.ability = message.data.ability;
-					variables.mergers = message.data.mergers;
-					variables.active_battery = message.data.active_battery;
-					variables.ability_block = message.data.ability_block;
-					variables.element_name_first = message.data.element_name_first;
-					variables.element_name_second = message.data.element_name_second;
-					variables.element_name_third = message.data.element_name_third;
-					variables.unlock_keepers_box = message.data.unlock_keepers_box;
-					variables.use_ability_key_var = message.data.use_ability_key_var;
-					variables.detransf_key_var = message.data.detransf_key_var;
-					variables.wheel_open_key_var = message.data.wheel_open_key_var;
-					variables.max_power = message.data.max_power;
-					variables.power_recovery_multiplier = message.data.power_recovery_multiplier;
-					variables.teleporting_effect = message.data.teleporting_effect;
-					variables.second_wheel_open_var = message.data.second_wheel_open_var;
-					variables.third_wheel_open_var = message.data.third_wheel_open_var;
-					variables.fake_element_name_first = message.data.fake_element_name_first;
-					variables.fake_element_name_second = message.data.fake_element_name_second;
-					variables.fake_element_name_third = message.data.fake_element_name_third;
-					variables.first_fake_wheel_open_var = message.data.first_fake_wheel_open_var;
-					variables.second_fake_wheel_open_var = message.data.second_fake_wheel_open_var;
-					variables.third_fake_wheel_open_var = message.data.third_fake_wheel_open_var;
-					variables.helmet = message.data.helmet;
-					variables.chestplate = message.data.chestplate;
-					variables.leggings = message.data.leggings;
-					variables.boots = message.data.boots;
-					variables.abilities_timer = message.data.abilities_timer;
-					variables.ability_using = message.data.ability_using;
-					variables.power_recorded = message.data.power_recorded;
-					variables.fake_element_name_first_timer = message.data.fake_element_name_first_timer;
-					variables.fake_element_name_second_timer = message.data.fake_element_name_second_timer;
-					variables.fake_element_name_third_timer = message.data.fake_element_name_third_timer;
-					variables.debug = message.data.debug;
-					variables.send_client_package = message.data.send_client_package;
-					variables.first_booster_slot = message.data.first_booster_slot;
-					variables.second_booster_slot = message.data.second_booster_slot;
-					variables.third_booster_slot = message.data.third_booster_slot;
-					variables.detransform_anim_trigger = message.data.detransform_anim_trigger;
-				}
-			});
-			context.setPacketHandled(true);
+		public static void handleData(final PlayerVariablesSyncMessage message, final PlayPayloadContext context) {
+			if (context.flow() == PacketFlow.CLIENTBOUND && message.data != null) {
+				context.workHandler().submitAsync(() -> Minecraft.getInstance().player.getData(PLAYER_VARIABLES).deserializeNBT(message.data.serializeNBT())).exceptionally(e -> {
+					context.packetHandler().disconnect(Component.literal(e.getMessage()));
+					return null;
+				});
+			}
 		}
 	}
 }

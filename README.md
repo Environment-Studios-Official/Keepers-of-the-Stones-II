@@ -4,7 +4,6 @@
 | MC Version | Modloader | Support |
 |------------|-----------|---------|
 | 1.21.1     |  NEOFORGE | Active  |
-| 1.20.6     |  NEOFORGE | Active  |
 | 1.20.4     |  NEOFORGE | Active  |
 | 1.20.1     |   FORGE   | Active  |
 

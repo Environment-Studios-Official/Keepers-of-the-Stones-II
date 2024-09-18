@@ -31297,12 +31297,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/ConfigVariablesToMapVariablesProcedure.java"
         ],
-        "dependencies": [
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
+        "dependencies": []
       },
       "path": "~/Modules/ColorfulPowersModule"
     },
@@ -31593,6 +31588,264 @@
         ]
       },
       "path": "~/DamageSources"
+    },
+    {
+      "name": "SpiritMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/SpiritMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_armor",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/spirit_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/spirit_armor_boots.json",
+          "src/main/resources/assets/power/models/item/spirit_armor_helmet.json",
+          "src/main/resources/assets/power/models/item/spirit_armor_chestplate.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/SpiritArmorItem.java"
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "SpiritStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "spirit_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/SpiritStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
     }
   ],
   "variable_elements": [
@@ -32193,13 +32446,13 @@
     {
       "name": "master_effect_duration",
       "type": "number",
-      "scope": "map",
+      "scope": "global",
       "value": "600.0"
     },
     {
       "name": "recharge_timer",
       "type": "number",
-      "scope": "map",
+      "scope": "global",
       "value": "300.0"
     }
   ],
@@ -32967,7 +33220,8 @@
       "PlagueStone",
       "BlueFlameStone",
       "GravityStone",
-      "SmokeStone"
+      "SmokeStone",
+      "SpiritStone"
     ]
   },
   "language_map": {
@@ -33123,6 +33377,7 @@
       "gui.power.wheel_abilities_time.tooltip_time_dilation_uses_30": "Замедление времени, расходует 20",
       "battery.desc.sand": "Песок",
       "battery.desc.light": "Свет",
+      "item.power.spirit_armor_chestplate": "Нагрудник мастера духа",
       "block.power.amber_block": "Amber Block",
       "entity.power.cursed_knight": "Проклятый рыцарь",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Солнце",
@@ -33270,6 +33525,7 @@
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
       "item.power.mist_armor_helmet": "Шлем мастера тумана",
+      "battery.desc.spirit": "Дух",
       "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.explosion_armor_leggings": "Поножи мастера взрыва",
       "item.power.mercury_armor_boots": "Ботинки мастера ртути",
@@ -33311,6 +33567,7 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
       "item.power.blood_armor_helmet": "Шлем мастера крови",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Лёд",
+      "gui.power.keepers_box_gui_part_3.tooltip_spirit": "Дух",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Реактивный полет, расходует 5",
       "battery.desc.plague": "Чума",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Металлическая атака, расходует 15",
@@ -33390,6 +33647,7 @@
       "item.power.ether_armor_leggings": "Поножи мастера эфира",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Остановка времени",
+      "item.power.spirit_armor_boots": "Ботинки мастера духа",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
@@ -33573,6 +33831,7 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "effect.power.rain_master": "Мастер дождя",
+      "effect.power.spirit_master": "Мастер духа",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Космос",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
       "effect.power.crystal_master": "Мастер кристалла",
@@ -33593,6 +33852,7 @@
       "item.power.tornado_stone": "Камень торнадо",
       "item.power.smoke_armor_boots": "Ботинки мастера дыма",
       "item.power.creation_battery": "Батарея",
+      "item.power.spirit_armor_helmet": "Шлем мастера духа",
       "item.power.technology_battery": "Батарея",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Ослепляющая вспышка, расходует 75",
       "effect.power.explosion_master": "Мастер взрыва",
@@ -33628,6 +33888,7 @@
       "block.power.energium_vault": "Энерджиумное хранилище",
       "item.power.teleportation_battery": "Батарея",
       "item.power.energium_armor_helmet": "Энерджиумный шлем",
+      "item.power.spirit_armor_leggings": "Поножи мастера духа",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Атака блоком земли, расходует 15",
       "item.power.creation_stone": "Камень творения",
       "battery.desc.smoke": "Дым",
@@ -33906,6 +34167,7 @@
       "battery.desc.sand": "Sand",
       "battery.desc.light": "Light",
       "block.power.amber_block": "Amber Block",
+      "item.power.spirit_armor_chestplate": "Spirit Chestplate",
       "entity.power.cursed_knight": "Cursed Knight",
       "gui.power.keepers_box_gui_part_3.tooltip_sun": "Sun",
       "gamerule.limitedNumberOfStones": "Limited number of stones",
@@ -34052,6 +34314,7 @@
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
       "item.power.mist_armor_helmet": "Mist Helmet",
+      "battery.desc.spirit": "Spirit",
       "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.explosion_armor_leggings": "Explosion Leggings",
       "item.power.mercury_armor_boots": "Mercury Boots",
@@ -34093,6 +34356,7 @@
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
       "item.power.blood_armor_helmet": "Blood Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Ice",
+      "gui.power.keepers_box_gui_part_3.tooltip_spirit": "Spirit",
       "gui.power.wheel_abilities_fire.tooltip_jet_flight_uses_5_power_points": "Jet flight, uses 5",
       "battery.desc.plague": "Plague",
       "gui.power.wheel_abilities_metal.tooltip_metal_attack_uses_15": "Metal attack, uses 15",
@@ -34172,6 +34436,7 @@
       "item.power.ether_armor_leggings": "Ether Leggings",
       "gui.power.debug_info.label_fake_elements_timer_000": "fake_elements_timer: 0/0/0",
       "effect.power.time_stopped": "Time Stopped",
+      "item.power.spirit_armor_boots": "Spirit Boots",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.rain_armor_leggings": "Rain Leggings",
@@ -34356,6 +34621,7 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 70",
       "item.power.animals_armor_boots": "Animals Boots",
       "effect.power.rain_master": "Master of the Rain",
+      "effect.power.spirit_master": "Master of the Spirit",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Space",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",
       "effect.power.crystal_master": "Master of the Crystal",
@@ -34376,6 +34642,7 @@
       "item.power.tornado_stone": "Tornado Stone",
       "item.power.smoke_armor_boots": "Smoke Boots",
       "item.power.creation_battery": "Battery",
+      "item.power.spirit_armor_helmet": "Spirit Helmet",
       "item.power.technology_battery": "Battery",
       "gui.power.wheel_abilities_light.tooltip_blinding_flash_uses_75": "Blinding flash, uses 75",
       "effect.power.explosion_master": "Master of Explosion",
@@ -34411,6 +34678,7 @@
       "block.power.energium_vault": "Energium Vault",
       "item.power.teleportation_battery": "Battery",
       "item.power.energium_armor_helmet": "Energium Helmet",
+      "item.power.spirit_armor_leggings": "Spirit Leggings",
       "gui.power.wheel_abilities_earth.tooltip_earth_block_attack_uses_15_powe": "Earth block attack, uses 15",
       "item.power.creation_stone": "Creation Stone",
       "battery.desc.smoke": "Smoke",
@@ -35276,7 +35544,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.42",
+    "version": "1.0.0.43",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character\u0027s skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
