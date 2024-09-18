@@ -42,6 +42,7 @@
     "projectile": {
       "value": "CUSTOM:RainDropProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "onRangedItemUsed": {
       "name": "RainBowPoslieIspolzovaniiaSnariada"
     },

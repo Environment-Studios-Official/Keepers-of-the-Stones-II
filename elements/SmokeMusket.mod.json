@@ -42,6 +42,7 @@
     "projectile": {
       "value": "CUSTOM:SmokeMusketProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "onRangedItemUsed": {
       "name": "SmokeMusketPriVystrielieSnariadomIzPriedmieta"
     },

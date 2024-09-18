@@ -42,6 +42,7 @@
     "projectile": {
       "value": "CUSTOM:PoisonDropProjectile"
     },
+    "projectileDisableAmmoCheck": false,
     "onRangedItemUsed": {
       "name": "PoisonBowPriVystrielieSnariadomIzPriedmieta"
     },
