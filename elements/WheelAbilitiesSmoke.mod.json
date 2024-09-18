@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -118,9 +118,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_smoke_attack",
+          "image": "smoke_attack.png",
+          "hoveredImage": "smoke_attack_highlight.png",
           "onClick": {
             "name": "Attack169"
           },
@@ -134,9 +134,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_smoke_bomb",
+          "image": "smoke_bomb.png",
+          "hoveredImage": "smoke_bomb_highlight.png",
           "onClick": {
             "name": "Attack170"
           },
@@ -150,9 +150,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_smoke_intangibility",
+          "image": "smoke_intangibility.png",
+          "hoveredImage": "smoke_intangibility_highlight.png",
           "onClick": {
             "name": "Attack171"
           },
@@ -161,6 +161,45 @@
           },
           "x": 190,
           "y": 158
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smoke_attack_uses_10",
+          "text": {
+            "fixedValue": "Smoke attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 46
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smoke_bomb_uses_35",
+          "text": {
+            "fixedValue": "Smoke bomb, uses 35"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 264,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_smoke_intangibility_uses_80",
+          "text": {
+            "fixedValue": "Smoke intangibility, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 169
         }
       }
     ],

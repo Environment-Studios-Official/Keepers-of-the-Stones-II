@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "deepslate_energium_ore",
@@ -121,9 +121,6 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "onRightClicked": {
-      "name": "EnergiumOreClick"
-    },
     "onDestroyedByPlayer": {
       "name": "EnergiumOreClick"
     },

@@ -2,13 +2,15 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
+
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.Explosion;
@@ -24,7 +26,6 @@ import net.minecraft.world.entity.ai.goal.MeleeAttackGoal;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.EntityType;
@@ -33,6 +34,7 @@ import net.minecraft.world.damagesource.DamageTypes;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.server.level.ServerPlayer;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerBossEvent;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.syncher.SynchedEntityData;
@@ -58,16 +60,15 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		super(type, world);
 		xpReward = 1000;
 		setNoAi(false);
-		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 	}
 
 	@Override
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(SHOOT, false);
-		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "cursed_keeper");
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(SHOOT, false);
+		builder.define(ANIMATION, "undefined");
+		builder.define(TEXTURE, "cursed_keeper");
 	}
 
 	public void setTexture(String texture) {
@@ -94,28 +95,23 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
-	protected void dropCustomDeathLoot(DamageSource source, int looting, boolean recentlyHitIn) {
-		super.dropCustomDeathLoot(source, looting, recentlyHitIn);
+	protected void dropCustomDeathLoot(ServerLevel serverLevel, DamageSource source, boolean recentlyHitIn) {
+		super.dropCustomDeathLoot(serverLevel, source, recentlyHitIn);
 		this.spawnAtLocation(new ItemStack(PowerModItems.LUCK_COIN.get()));
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.hurt"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.hurt"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.generic.death"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.generic.death"));
 	}
 
 	@Override
@@ -171,13 +167,8 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 1);
-	}
-
-	@Override
-	public boolean canChangeDimensions() {
-		return false;
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	@Override
@@ -198,7 +189,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		this.bossInfo.setProgress(this.getHealth() / this.getMaxHealth());
 	}
 
-	public static void init() {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -208,6 +199,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 24);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.25);
 		return builder;
 	}
@@ -255,7 +247,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(CursedKeeperEntity.RemovalReason.KILLED);
-			this.dropExperience();
+			this.dropExperience(null);
 		}
 	}
 

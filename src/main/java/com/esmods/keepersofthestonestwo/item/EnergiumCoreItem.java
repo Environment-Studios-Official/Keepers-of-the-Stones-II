@@ -16,13 +16,13 @@ public class EnergiumCoreItem extends Item {
 	}
 
 	@Override
-	public float getDestroySpeed(ItemStack par1ItemStack, BlockState par2Block) {
+	public float getDestroySpeed(ItemStack itemstack, BlockState state) {
 		return 0f;
 	}
 
 	@Override
 	public void inventoryTick(ItemStack itemstack, Level world, Entity entity, int slot, boolean selected) {
 		super.inventoryTick(itemstack, world, entity, slot, selected);
-		EnergiumItemsPowerLockedProcedure.execute(entity, itemstack);
+		EnergiumItemsPowerLockedProcedure.execute(world, entity, itemstack);
 	}
 }

@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.living.LivingDeathEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
@@ -15,11 +15,11 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class ImmortalityProtectionProcedure {
 	@SubscribeEvent
 	public static void onEntityDeath(LivingDeathEvent event) {
-		if (event != null && event.getEntity() != null) {
+		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}
 	}
@@ -31,18 +31,16 @@ public class ImmortalityProtectionProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.IMMORTALITY.get())) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.IMMORTALITY)) {
 			if (entity instanceof LivingEntity _entity)
 				_entity.setHealth(1);
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
-			} else if (event != null && event.hasResult()) {
-				event.setResult(Event.Result.DENY);
 			}
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 60, 4));
 			if (entity instanceof LivingEntity _entity)
-				_entity.removeEffect(PowerModMobEffects.IMMORTALITY.get());
+				_entity.removeEffect(PowerModMobEffects.IMMORTALITY);
 		}
 	}
 }

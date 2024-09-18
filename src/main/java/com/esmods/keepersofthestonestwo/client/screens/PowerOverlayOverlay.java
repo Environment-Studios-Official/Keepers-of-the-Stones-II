@@ -4,7 +4,7 @@ package com.esmods.keepersofthestonestwo.client.screens;
 import org.checkerframework.checker.units.qual.h;
 
 import net.neoforged.neoforge.client.event.RenderGuiEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.EventPriority;
 import net.neoforged.api.distmarker.Dist;
@@ -21,12 +21,12 @@ import com.mojang.blaze3d.platform.GlStateManager;
 import com.esmods.keepersofthestonestwo.procedures.GetPowerScaleProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetActiveProcedure;
 
-@Mod.EventBusSubscriber({Dist.CLIENT})
+@EventBusSubscriber({Dist.CLIENT})
 public class PowerOverlayOverlay {
 	@SubscribeEvent(priority = EventPriority.HIGHEST)
 	public static void eventHandler(RenderGuiEvent.Pre event) {
-		int w = event.getWindow().getGuiScaledWidth();
-		int h = event.getWindow().getGuiScaledHeight();
+		int w = event.getGuiGraphics().guiWidth();
+		int h = event.getGuiGraphics().guiHeight();
 		Level world = null;
 		double x = 0;
 		double y = 0;
@@ -46,7 +46,7 @@ public class PowerOverlayOverlay {
 		RenderSystem.setShaderColor(1, 1, 1, 1);
 		if (true) {
 			if (GetActiveProcedure.execute(entity)) {
-				event.getGuiGraphics().blit(new ResourceLocation("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
+				event.getGuiGraphics().blit(ResourceLocation.parse("power:textures/screens/star_points_overlay.png"), 2, 28, 0, 0, 59, 20, 59, 20);
 			}
 			if (GetActiveProcedure.execute(entity))
 				event.getGuiGraphics().drawString(Minecraft.getInstance().font,

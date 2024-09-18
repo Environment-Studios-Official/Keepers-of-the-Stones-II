@@ -37,9 +37,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_smoke_attack;
+	ImageButton imagebutton_smoke_bomb;
+	ImageButton imagebutton_smoke_intangibility;
 
 	public WheelAbilitiesSmokeScreen(WheelAbilitiesSmokeMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -57,6 +57,12 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 22 && mouseY < topPos + 46)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_attack_uses_10"), mouseX, mouseY);
+		if (mouseX > leftPos + 146 && mouseX < leftPos + 170 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_bomb_uses_35"), mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 145 && mouseY < topPos + 169)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_smoke.tooltip_smoke_intangibility_uses_80"), mouseX, mouseY);
 	}
 
 	@Override
@@ -65,7 +71,7 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -87,9 +93,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(0, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -102,9 +108,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(1, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -117,9 +123,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(2, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -132,9 +138,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(3, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -147,9 +153,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(4, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -162,9 +168,9 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(5, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -176,10 +182,10 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_1.png"), new ResourceLocation("power:textures/screens/ability_1_highlight.png")),
-				e -> {
+		imagebutton_smoke_attack = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/smoke_attack.png"), ResourceLocation.parse("power:textures/screens/smoke_attack_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(6, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -189,12 +195,12 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_2.png"), new ResourceLocation("power:textures/screens/ability_2_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_smoke_attack", imagebutton_smoke_attack);
+		this.addRenderableWidget(imagebutton_smoke_attack);
+		imagebutton_smoke_bomb = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/smoke_bomb.png"), ResourceLocation.parse("power:textures/screens/smoke_bomb_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(7, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -204,12 +210,12 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(new ResourceLocation("power:textures/screens/ability_3.png"), new ResourceLocation("power:textures/screens/ability_3_highlight.png")),
-				e -> {
+		guistate.put("button:imagebutton_smoke_bomb", imagebutton_smoke_bomb);
+		this.addRenderableWidget(imagebutton_smoke_bomb);
+		imagebutton_smoke_intangibility = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/smoke_intangibility.png"), ResourceLocation.parse("power:textures/screens/smoke_intangibility_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesSmokeButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesSmokeButtonMessage(8, x, y, z));
 						WheelAbilitiesSmokeButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
@@ -219,7 +225,7 @@ public class WheelAbilitiesSmokeScreen extends AbstractContainerScreen<WheelAbil
 					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_smoke_intangibility", imagebutton_smoke_intangibility);
+		this.addRenderableWidget(imagebutton_smoke_intangibility);
 	}
 }

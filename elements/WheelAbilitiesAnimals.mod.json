@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -194,7 +194,7 @@
         "data": {
           "name": "tooltip_wolf_pack_uses_60",
           "text": {
-            "fixedValue": "Wolf pack, uses 60"
+            "fixedValue": "Wolf pack, uses 80"
           },
           "width": 24,
           "height": 24,

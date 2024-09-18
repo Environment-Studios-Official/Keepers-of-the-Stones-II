@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.client.event.ViewportEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 import net.neoforged.api.distmarker.Dist;
@@ -19,7 +19,7 @@ import com.mojang.blaze3d.shaders.FogShape;
 
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber(value = Dist.CLIENT)
+@EventBusSubscriber(value = Dist.CLIENT)
 public class MistEffectRenderTickProcedure {
 	public static ViewportEvent.RenderFog provider = null;
 
@@ -58,7 +58,7 @@ public class MistEffectRenderTickProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.MIST.get())) {
+		if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.MIST)) {
 			setDistance(1, 3);
 		}
 	}

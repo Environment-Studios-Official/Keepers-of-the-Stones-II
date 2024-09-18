@@ -2,14 +2,15 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.common.NeoForgeMod;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -27,7 +28,6 @@ import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.SpawnGroupData;
 import net.minecraft.world.entity.Pose;
 import net.minecraft.world.entity.PathfinderMob;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.EntityType;
@@ -65,17 +65,16 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		super(type, world);
 		xpReward = 100000;
 		setNoAi(true);
-		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 		this.moveControl = new FlyingMoveControl(this, 10, true);
 	}
 
 	@Override
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(SHOOT, false);
-		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "black_hole");
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(SHOOT, false);
+		builder.define(ANIMATION, "undefined");
+		builder.define(TEXTURE, "black_hole");
 	}
 
 	public void setTexture(String texture) {
@@ -92,18 +91,13 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
 	@Override
 	public SoundEvent getAmbientSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.respawn_anchor.ambient"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.respawn_anchor.ambient"));
 	}
 
 	@Override
@@ -153,8 +147,8 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata, @Nullable CompoundTag tag) {
-		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata, tag);
+	public SpawnGroupData finalizeSpawn(ServerLevelAccessor world, DifficultyInstance difficulty, MobSpawnType reason, @Nullable SpawnGroupData livingdata) {
+		SpawnGroupData retval = super.finalizeSpawn(world, difficulty, reason, livingdata);
 		BlackHolePriNachalnomPrizyvieSushchnostiProcedure.execute(this);
 		return retval;
 	}
@@ -180,8 +174,8 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 1);
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	@Override
@@ -213,7 +207,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		this.setNoGravity(true);
 	}
 
-	public static void init() {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -223,6 +217,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 16);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.FLYING_SPEED, 0.3);
 		return builder;
 	}
@@ -267,7 +262,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(BlackHoleEntity.RemovalReason.KILLED);
-			this.dropExperience();
+			this.dropExperience(null);
 		}
 	}
 

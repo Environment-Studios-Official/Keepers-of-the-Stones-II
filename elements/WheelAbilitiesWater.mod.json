@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -194,7 +194,7 @@
         "data": {
           "name": "tooltip_healing_water_uses_30_power_poi",
           "text": {
-            "fixedValue": "Healing water, uses 30"
+            "fixedValue": "Healing water, uses 70"
           },
           "width": 24,
           "height": 24,

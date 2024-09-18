@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "block",
   "definition": {
     "texture": "deepslate_amplifier_ore",
@@ -121,7 +121,7 @@
     "isFluidTank": false,
     "fluidCapacity": 8000,
     "fluidRestrictions": [],
-    "generateFeature": true,
+    "generateFeature": false,
     "restrictionBiomes": [
       {
         "value": "#is_ocean"

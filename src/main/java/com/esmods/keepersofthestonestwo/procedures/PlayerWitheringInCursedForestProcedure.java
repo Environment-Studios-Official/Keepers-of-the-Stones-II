@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.entity.living.LivingEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.EntityTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -22,10 +22,10 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class PlayerWitheringInCursedForestProcedure {
 	@SubscribeEvent
-	public static void onEntityTick(LivingEvent.LivingTickEvent event) {
+	public static void onEntityTick(EntityTickEvent.Pre event) {
 		execute(event, event.getEntity().level(), event.getEntity().getX(), event.getEntity().getY(), event.getEntity().getZ(), event.getEntity());
 	}
 
@@ -36,12 +36,12 @@ public class PlayerWitheringInCursedForestProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
-		if (world.getBiome(BlockPos.containing(x, y, z)).is(new ResourceLocation("power:cursed_forest"))
+		if (world.getBiome(BlockPos.containing(x, y, z)).is(ResourceLocation.parse("power:cursed_forest"))
 				&& !((entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.HEAD) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_HELMET.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.CHEST) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_CHESTPLATE.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get()
 						&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_BOOTS.get())
-				&& !entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, new ResourceLocation("power:cursed_mobs"))) && !(world.getDifficulty() == Difficulty.PEACEFUL)) {
+				&& !entity.getType().is(TagKey.create(Registries.ENTITY_TYPE, ResourceLocation.parse("power:cursed_mobs"))) && !(world.getDifficulty() == Difficulty.PEACEFUL)) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.WITHER, 40, 0));
 		}

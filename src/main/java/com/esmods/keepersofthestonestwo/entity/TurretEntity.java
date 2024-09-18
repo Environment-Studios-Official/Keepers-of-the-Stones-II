@@ -2,14 +2,15 @@
 package com.esmods.keepersofthestonestwo.entity;
 
 import software.bernie.geckolib.util.GeckoLibUtil;
-import software.bernie.geckolib.core.object.PlayState;
-import software.bernie.geckolib.core.animation.RawAnimation;
-import software.bernie.geckolib.core.animation.AnimationState;
-import software.bernie.geckolib.core.animation.AnimationController;
-import software.bernie.geckolib.core.animation.AnimatableManager;
-import software.bernie.geckolib.core.animatable.instance.AnimatableInstanceCache;
+import software.bernie.geckolib.animation.RawAnimation;
+import software.bernie.geckolib.animation.PlayState;
+import software.bernie.geckolib.animation.AnimationState;
+import software.bernie.geckolib.animation.AnimationController;
+import software.bernie.geckolib.animation.AnimatableManager;
+import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animatable.GeoEntity;
 
+import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.EventHooks;
 
 import net.minecraft.world.level.block.state.BlockState;
@@ -18,6 +19,7 @@ import net.minecraft.world.level.Explosion;
 import net.minecraft.world.item.SpawnEggItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.monster.RangedAttackMob;
 import net.minecraft.world.entity.ai.goal.target.OwnerHurtTargetGoal;
@@ -33,7 +35,6 @@ import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.TamableAnimal;
 import net.minecraft.world.entity.Pose;
-import net.minecraft.world.entity.MobType;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.Mob;
 import net.minecraft.world.entity.LivingEntity;
@@ -76,16 +77,15 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		super(type, world);
 		xpReward = 20;
 		setNoAi(false);
-		setMaxUpStep(0.6f);
 		setPersistenceRequired();
 	}
 
 	@Override
-	protected void defineSynchedData() {
-		super.defineSynchedData();
-		this.entityData.define(SHOOT, false);
-		this.entityData.define(ANIMATION, "undefined");
-		this.entityData.define(TEXTURE, "turret");
+	protected void defineSynchedData(SynchedEntityData.Builder builder) {
+		super.defineSynchedData(builder);
+		builder.define(SHOOT, false);
+		builder.define(ANIMATION, "undefined");
+		builder.define(TEXTURE, "turret");
 	}
 
 	public void setTexture(String texture) {
@@ -100,7 +100,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 	protected void registerGoals() {
 		super.registerGoals();
 		this.targetSelector.addGoal(1, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1, (float) 32, (float) 16, false));
+		this.goalSelector.addGoal(2, new FollowOwnerGoal(this, 1, (float) 32, (float) 16));
 		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 1));
 		this.goalSelector.addGoal(4, new OwnerHurtByTargetGoal(this));
 		this.targetSelector.addGoal(5, new OwnerHurtTargetGoal(this));
@@ -203,28 +203,23 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 	}
 
 	@Override
-	public MobType getMobType() {
-		return MobType.UNDEFINED;
-	}
-
-	@Override
 	public boolean removeWhenFarAway(double distanceToClosestPlayer) {
 		return false;
 	}
 
 	@Override
 	public void playStepSound(BlockPos pos, BlockState blockIn) {
-		this.playSound(BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.step")), 0.15f, 1);
+		this.playSound(BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.copper.step")), 0.15f, 1);
 	}
 
 	@Override
 	public SoundEvent getHurtSound(DamageSource ds) {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.hit"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.copper.hit"));
 	}
 
 	@Override
 	public SoundEvent getDeathSound() {
-		return BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.copper.fall"));
+		return BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.copper.fall"));
 	}
 
 	@Override
@@ -273,9 +268,11 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		} else {
 			if (this.isTame()) {
 				if (this.isOwnedBy(sourceentity)) {
-					if (item.isEdible() && this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
+					if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
 						this.usePlayerItem(sourceentity, hand, itemstack);
-						this.heal((float) item.getFoodProperties().getNutrition());
+						FoodProperties foodproperties = itemstack.getFoodProperties(this);
+						float nutrition = foodproperties != null ? (float) foodproperties.nutrition() : 1;
+						this.heal(nutrition);
 						retval = InteractionResult.sidedSuccess(this.level().isClientSide());
 					} else if (this.isFood(itemstack) && this.getHealth() < this.getMaxHealth()) {
 						this.usePlayerItem(sourceentity, hand, itemstack);
@@ -311,8 +308,8 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 	}
 
 	@Override
-	public EntityDimensions getDimensions(Pose p_33597_) {
-		return super.getDimensions(p_33597_).scale((float) 1);
+	public EntityDimensions getDefaultDimensions(Pose pose) {
+		return super.getDefaultDimensions(pose).scale(1f);
 	}
 
 	@Override
@@ -323,7 +320,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 	@Override
 	public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
 		TurretEntity retval = PowerModEntities.TURRET.get().create(serverWorld);
-		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
+		retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null);
 		return retval;
 	}
 
@@ -338,7 +335,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		this.updateSwingTime();
 	}
 
-	public static void init() {
+	public static void init(RegisterSpawnPlacementsEvent event) {
 	}
 
 	public static AttributeSupplier.Builder createAttributes() {
@@ -348,6 +345,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		builder = builder.add(Attributes.ARMOR, 0);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 8);
 		builder = builder.add(Attributes.FOLLOW_RANGE, 16);
+		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.KNOCKBACK_RESISTANCE, 0.15);
 		return builder;
 	}
@@ -410,7 +408,7 @@ public class TurretEntity extends TamableAnimal implements RangedAttackMob, GeoE
 		++this.deathTime;
 		if (this.deathTime == 20) {
 			this.remove(TurretEntity.RemovalReason.KILLED);
-			this.dropExperience();
+			this.dropExperience(null);
 		}
 	}
 

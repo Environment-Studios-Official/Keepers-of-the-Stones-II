@@ -71,7 +71,7 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		RenderSystem.enableBlend();
 		RenderSystem.defaultBlendFunc();
 
-		guiGraphics.blit(new ResourceLocation("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
+		guiGraphics.blit(ResourceLocation.parse("power:textures/screens/wheel_of_abilities.png"), this.leftPos + -1, this.topPos + 0, 0, 0, 192, 192, 192, 192);
 
 		RenderSystem.disableBlend();
 	}
@@ -93,9 +93,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 	public void init() {
 		super.init();
 		imagebutton_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_1.png"), new ResourceLocation("power:textures/screens/wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/wheel_button_1_highlight.png")), e -> {
 					if (GetWheelTwoOrFirstFakeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(0, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(0, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 0, x, y, z);
 					}
 				}) {
@@ -108,9 +108,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_wheel_button_1", imagebutton_wheel_button_1);
 		this.addRenderableWidget(imagebutton_wheel_button_1);
 		imagebutton_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_2.png"), new ResourceLocation("power:textures/screens/wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/wheel_button_2_highlight.png")), e -> {
 					if (GetWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(1, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(1, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 1, x, y, z);
 					}
 				}) {
@@ -123,9 +123,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_wheel_button_2", imagebutton_wheel_button_2);
 		this.addRenderableWidget(imagebutton_wheel_button_2);
 		imagebutton_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 154, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/wheel_button_3.png"), new ResourceLocation("power:textures/screens/wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/wheel_button_3_highlight.png")), e -> {
 					if (GetWheelThreeProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(2, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(2, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 2, x, y, z);
 					}
 				}) {
@@ -138,9 +138,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_wheel_button_3", imagebutton_wheel_button_3);
 		this.addRenderableWidget(imagebutton_wheel_button_3);
 		imagebutton_fake_wheel_button_1 = new ImageButton(this.leftPos + 140, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_1.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_1.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_1_highlight.png")), e -> {
 					if (GetFakeWheelOneProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(3, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(3, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 3, x, y, z);
 					}
 				}) {
@@ -153,9 +153,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_fake_wheel_button_1", imagebutton_fake_wheel_button_1);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_1);
 		imagebutton_fake_wheel_button_2 = new ImageButton(this.leftPos + 152, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_2.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_2.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_2_highlight.png")), e -> {
 					if (GetFakeWheelTwoProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(4, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(4, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 4, x, y, z);
 					}
 				}) {
@@ -168,9 +168,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_fake_wheel_button_2", imagebutton_fake_wheel_button_2);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_2);
 		imagebutton_fake_wheel_button_3 = new ImageButton(this.leftPos + 164, this.topPos + 164, 10, 7,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/fake_wheel_button_3.png"), new ResourceLocation("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/fake_wheel_button_3.png"), ResourceLocation.parse("power:textures/screens/fake_wheel_button_3_highlight.png")), e -> {
 					if (GetFakeWheelThirdProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(5, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(5, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 5, x, y, z);
 					}
 				}) {
@@ -183,9 +183,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
 		imagebutton_energy_flux = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/energy_flux.png"), new ResourceLocation("power:textures/screens/energy_flux_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/energy_flux.png"), ResourceLocation.parse("power:textures/screens/energy_flux_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(6, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(6, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
@@ -198,9 +198,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_energy_flux", imagebutton_energy_flux);
 		this.addRenderableWidget(imagebutton_energy_flux);
 		imagebutton_energy_charge = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/energy_charge.png"), new ResourceLocation("power:textures/screens/energy_charge_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/energy_charge.png"), ResourceLocation.parse("power:textures/screens/energy_charge_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(7, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(7, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
@@ -213,9 +213,9 @@ public class WheelAbilitiesEnergyScreen extends AbstractContainerScreen<WheelAbi
 		guistate.put("button:imagebutton_energy_charge", imagebutton_energy_charge);
 		this.addRenderableWidget(imagebutton_energy_charge);
 		imagebutton_energy_charged_ball = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/energy_charged_ball.png"), new ResourceLocation("power:textures/screens/energy_charged_ball_highlight.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/energy_charged_ball.png"), ResourceLocation.parse("power:textures/screens/energy_charged_ball_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.SERVER.noArg().send(new WheelAbilitiesEnergyButtonMessage(8, x, y, z));
+						PacketDistributor.sendToServer(new WheelAbilitiesEnergyButtonMessage(8, x, y, z));
 						WheelAbilitiesEnergyButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {

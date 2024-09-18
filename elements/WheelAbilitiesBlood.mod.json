@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -165,7 +165,7 @@
         "data": {
           "name": "tooltip_vampirism_uses_40",
           "text": {
-            "fixedValue": "Vampirism, uses 40"
+            "fixedValue": "Vampirism, uses 20"
           },
           "width": 24,
           "height": 24,
@@ -194,7 +194,7 @@
         "data": {
           "name": "tooltip_transfusion_uses_40",
           "text": {
-            "fixedValue": "Transfusion, uses 40"
+            "fixedValue": "Transfusion, uses 20"
           },
           "width": 24,
           "height": 24,

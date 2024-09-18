@@ -137,12 +137,14 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.BLUE_FLAME_STONE.get());
 				tabData.accept(PowerModItems.GRAVITY_STONE.get());
 				tabData.accept(PowerModItems.SMOKE_STONE.get());
+				tabData.accept(PowerModItems.SPIRIT_STONE.get());
 			})
 
 					.build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
 			})
 
 					.build());

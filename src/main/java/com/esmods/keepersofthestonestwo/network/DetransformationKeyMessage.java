@@ -1,9 +1,9 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.PlayPayloadContext;
+import net.neoforged.neoforge.network.handling.IPayloadContext;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 
 import net.minecraft.world.level.Level;
@@ -11,37 +11,32 @@ import net.minecraft.world.entity.player.Player;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
 import net.minecraft.network.protocol.PacketFlow;
+import net.minecraft.network.codec.StreamCodec;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.FriendlyByteBuf;
+import net.minecraft.network.RegistryFriendlyByteBuf;
 
 import com.esmods.keepersofthestonestwo.procedures.DetransformKeyPressedProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
-public record DetransformationKeyMessage(int type, int pressedms) implements CustomPacketPayload {
-	public static final ResourceLocation ID = new ResourceLocation(PowerMod.MODID, "key_detransformation_key");
-
-	public DetransformationKeyMessage(FriendlyByteBuf buffer) {
-		this(buffer.readInt(), buffer.readInt());
-	}
-
-	@Override
-	public void write(final FriendlyByteBuf buffer) {
-		buffer.writeInt(type);
-		buffer.writeInt(pressedms);
-	}
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
+public record DetransformationKeyMessage(int eventType, int pressedms) implements CustomPacketPayload {
+	public static final Type<DetransformationKeyMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "key_detransformation_key"));
+	public static final StreamCodec<RegistryFriendlyByteBuf, DetransformationKeyMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, DetransformationKeyMessage message) -> {
+		buffer.writeInt(message.eventType);
+		buffer.writeInt(message.pressedms);
+	}, (RegistryFriendlyByteBuf buffer) -> new DetransformationKeyMessage(buffer.readInt(), buffer.readInt()));
 
 	@Override
-	public ResourceLocation id() {
-		return ID;
+	public Type<DetransformationKeyMessage> type() {
+		return TYPE;
 	}
 
-	public static void handleData(final DetransformationKeyMessage message, final PlayPayloadContext context) {
+	public static void handleData(final DetransformationKeyMessage message, final IPayloadContext context) {
 		if (context.flow() == PacketFlow.SERVERBOUND) {
-			context.workHandler().submitAsync(() -> {
-				pressAction(context.player().get(), message.type, message.pressedms);
+			context.enqueueWork(() -> {
+				pressAction(context.player(), message.eventType, message.pressedms);
 			}).exceptionally(e -> {
-				context.packetHandler().disconnect(Component.literal(e.getMessage()));
+				context.connection().disconnect(Component.literal(e.getMessage()));
 				return null;
 			});
 		}
@@ -63,6 +58,6 @@ public record DetransformationKeyMessage(int type, int pressedms) implements Cus
 
 	@SubscribeEvent
 	public static void registerMessage(FMLCommonSetupEvent event) {
-		PowerMod.addNetworkMessage(DetransformationKeyMessage.ID, DetransformationKeyMessage::new, DetransformationKeyMessage::handleData);
+		PowerMod.addNetworkMessage(DetransformationKeyMessage.TYPE, DetransformationKeyMessage.STREAM_CODEC, DetransformationKeyMessage::handleData);
 	}
 }

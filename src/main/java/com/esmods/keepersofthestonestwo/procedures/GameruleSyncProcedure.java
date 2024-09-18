@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -14,7 +14,7 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModGameRules;
 import com.esmods.keepersofthestonestwo.init.PowerModBlocks;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class GameruleSyncProcedure {
 	@SubscribeEvent
 	public static void onRightClickBlock(PlayerInteractEvent.RightClickBlock event) {

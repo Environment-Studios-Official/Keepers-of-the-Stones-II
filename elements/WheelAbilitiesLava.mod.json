@@ -1,5 +1,5 @@
 {
-  "_fv": 66,
+  "_fv": 69,
   "_type": "gui",
   "definition": {
     "type": 0,
@@ -192,9 +192,9 @@
       {
         "type": "tooltip",
         "data": {
-          "name": "tooltip_melting_uses_50",
+          "name": "tooltip_surface_melting_uses_75",
           "text": {
-            "fixedValue": "Melting, uses 50"
+            "fixedValue": "Surface melting, uses 75"
           },
           "width": 24,
           "height": 24,

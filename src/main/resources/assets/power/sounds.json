@@ -217,5 +217,14 @@
         "stream": false
       }
     ]
+  },
+  "musket": {
+    "subtitle": "subtitles.musket",
+    "sounds": [
+      {
+        "name": "power:musket",
+        "stream": false
+      }
+    ]
   }
 }

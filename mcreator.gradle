@@ -1,22 +1,11 @@
 repositories {
-  maven {
-    url = "https://cursemaven.com"
-  }
-}
-      
-dependencies {
-    implementation 'curse.maven:kleidersplayerrenderer-682065:5654810'
-}
-
-
-repositories {
     maven {
     	url = "https://cursemaven.com"
     }
 }
     
 dependencies {
-	implementation "curse.maven:pehkui-319596:5393108"
+	implementation "curse.maven:pehkui-319596:5446174"
 }
 
 
@@ -27,7 +16,7 @@ repositories {
 }
 
 dependencies {
-  implementation 'software.bernie.geckolib:geckolib-neoforge-1.20.4:4.4.4'
+  implementation 'software.bernie.geckolib:geckolib-neoforge-1.21:4.5.7'
 }
 
 
@@ -38,7 +27,7 @@ repositories {
 }
 
  dependencies {
-   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:1.0.2-rc1+1.20.4'
+   implementation 'dev.kosmx.player-anim:player-animation-lib-forge:2.0.0-alpha1+1.21'
  }
 
 

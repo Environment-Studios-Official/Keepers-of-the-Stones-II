@@ -7,10 +7,12 @@ import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
+import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
+import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -38,15 +40,30 @@ public class TornadoSpecialAttackProcedure {
 					Level projectileLevel = _shootFrom.level();
 					if (!projectileLevel.isClientSide()) {
 						Projectile _entityToSpawn = new Object() {
-							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback) {
-								AbstractArrow entityToSpawn = new MiniTornadoProjectileEntity(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), level);
+							public Projectile getArrow(Level level, Entity shooter, float damage, int knockback, byte piercing) {
+								AbstractArrow entityToSpawn = new MiniTornadoProjectileEntity(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), level) {
+									@Override
+									public byte getPierceLevel() {
+										return piercing;
+									}
+
+									@Override
+									protected void doKnockback(LivingEntity livingEntity, DamageSource damageSource) {
+										if (knockback > 0) {
+											double d1 = Math.max(0.0, 1.0 - livingEntity.getAttributeValue(Attributes.KNOCKBACK_RESISTANCE));
+											Vec3 vec3 = this.getDeltaMovement().multiply(1.0, 0.0, 1.0).normalize().scale(knockback * 0.6 * d1);
+											if (vec3.lengthSqr() > 0.0) {
+												livingEntity.push(vec3.x, 0.1, vec3.z);
+											}
+										}
+									}
+								};
 								entityToSpawn.setOwner(shooter);
 								entityToSpawn.setBaseDamage(damage);
-								entityToSpawn.setKnockback(knockback);
 								entityToSpawn.setSilent(true);
 								return entityToSpawn;
 							}
-						}.getArrow(projectileLevel, entity, (float) 13.5, 4);
+						}.getArrow(projectileLevel, entity, (float) 13.5, 4, (byte) 0);
 						_entityToSpawn.setPos(_shootFrom.getX(), _shootFrom.getEyeY() - 0.1, _shootFrom.getZ());
 						_entityToSpawn.shoot(_shootFrom.getLookAngle().x, _shootFrom.getLookAngle().y, _shootFrom.getLookAngle().z, 1, 0);
 						projectileLevel.addFreshEntity(_entityToSpawn);
@@ -54,9 +71,9 @@ public class TornadoSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
@@ -89,15 +106,15 @@ public class TornadoSpecialAttackProcedure {
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.LEVITATION, 100, 3, false, false));
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WHIRLWIND.get(), 100, 0, false, false));
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WHIRLWIND, 100, 0, false, false));
 							}
 						}
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
 				}
@@ -112,9 +129,9 @@ public class TornadoSpecialAttackProcedure {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 5) {
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
 					if (world instanceof ServerLevel _level)

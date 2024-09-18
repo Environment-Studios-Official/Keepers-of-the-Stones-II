@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -18,13 +18,11 @@ import javax.annotation.Nullable;
 
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class FullPowerOfEnergiumGetProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity());
 	}
 
 	public static void execute(Entity entity) {
@@ -39,7 +37,7 @@ public class FullPowerOfEnergiumGetProcedure {
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.LEGS) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_LEGGINGS.get()
 				&& (entity instanceof LivingEntity _entGetArmor ? _entGetArmor.getItemBySlot(EquipmentSlot.FEET) : ItemStack.EMPTY).getItem() == PowerModItems.ENERGIUM_ARMOR_BOOTS.get()) {
 			if (entity instanceof ServerPlayer _player) {
-				AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("power:full_power_of_energium"));
+				AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:full_power_of_energium"));
 				if (_adv != null) {
 					AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 					if (!_ap.isDone()) {

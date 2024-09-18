@@ -27,7 +27,6 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
-import com.esmods.keepersofthestonestwo.init.PowerModAttributes;
 
 public class AmberSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -68,8 +67,7 @@ public class AmberSpecialAttackProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-										(float) 10.13);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.13);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 300, 2));
 							}
@@ -77,9 +75,9 @@ public class AmberSpecialAttackProcedure {
 					}
 					if (world instanceof Level _level) {
 						if (!_level.isClientSide()) {
-							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+							_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 						} else {
-							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+							_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
 						}
 					}
 				}
@@ -192,9 +190,9 @@ public class AmberSpecialAttackProcedure {
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("intentionally_empty")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
@@ -226,12 +224,12 @@ public class AmberSpecialAttackProcedure {
 								_vars.ability_block = true;
 								_vars.syncPlayerVariables(entityiterator);
 							}
-							((LivingEntity) entityiterator).getAttribute(PowerModAttributes.SEALEDINAMBER.get()).setBaseValue(1);
+							entityiterator.getPersistentData().putBoolean("amberLayer", true);
 							if (world instanceof Level _level) {
 								if (!_level.isClientSide()) {
-									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.place")), SoundSource.NEUTRAL, 1, 1);
+									_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.NEUTRAL, 1, 1);
 								} else {
-									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.stone.place")), SoundSource.NEUTRAL, 1, 1, false);
+									_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.stone.place")), SoundSource.NEUTRAL, 1, 1, false);
 								}
 							}
 						}

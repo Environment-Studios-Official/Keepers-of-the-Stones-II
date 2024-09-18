@@ -89,17 +89,16 @@ public class MushroomsSpecialAttackProcedure {
 									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 										_entity.addEffect(new MobEffectInstance(MobEffects.HUNGER, 100, 4));
 								}
-								entityiterator.hurt(new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-										(float) 10.13);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.13);
 							}
 						}
 					}
 				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.fall")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.fall")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.fall")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.fall")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{
@@ -132,14 +131,12 @@ public class MushroomsSpecialAttackProcedure {
 								if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), PowerModBlocks.PURPLE_MUSHROOM.get().defaultBlockState(), 3);
 									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(PowerModBlocks.PURPLE_MUSHROOM.get().defaultBlockState()));
-									entityiterator.hurt(
-											new DamageSource(world.registryAccess().registryOrThrow(Registries.DAMAGE_TYPE).getHolderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, new ResourceLocation("power:elemental_powers"))), entity),
-											(float) 13.5);
+									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 13.5);
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
-											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.break")), SoundSource.PLAYERS, 1, 1);
+											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.break")), SoundSource.PLAYERS, 1, 1);
 										} else {
-											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.break")), SoundSource.PLAYERS, 1, 1, false);
+											_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.break")), SoundSource.PLAYERS, 1, 1, false);
 										}
 									}
 									success = true;
@@ -173,9 +170,9 @@ public class MushroomsSpecialAttackProcedure {
 					_entity.addEffect(new MobEffectInstance(MobEffects.SATURATION, 100, 4, false, false));
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.fall")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.fall")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(new ResourceLocation("block.fungus.fall")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.fungus.fall")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
 				{

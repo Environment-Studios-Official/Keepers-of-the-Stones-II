@@ -1,9 +1,9 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.items.IItemHandlerModifiable;
-import net.neoforged.neoforge.event.TickEvent;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.neoforge.capabilities.Capabilities;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -18,13 +18,11 @@ import net.minecraft.advancements.AdvancementHolder;
 
 import javax.annotation.Nullable;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class BecomeAMasterGetProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player.level(), event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity().level(), event.getEntity());
 	}
 
 	public static void execute(LevelAccessor world, Entity entity) {
@@ -34,12 +32,12 @@ public class BecomeAMasterGetProcedure {
 	private static void execute(@Nullable Event event, LevelAccessor world, Entity entity) {
 		if (entity == null)
 			return;
-		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerForEach) {
-			for (int _idx = 0; _idx < _modHandlerForEach.getSlots(); _idx++) {
-				ItemStack itemstackiterator = _modHandlerForEach.getStackInSlot(_idx).copy();
-				if (itemstackiterator.is(ItemTags.create(new ResourceLocation("power:elemental_stones")))) {
+		if (entity.getCapability(Capabilities.ItemHandler.ENTITY, null) instanceof IItemHandlerModifiable _modHandlerIter) {
+			for (int _idx = 0; _idx < _modHandlerIter.getSlots(); _idx++) {
+				ItemStack itemstackiterator = _modHandlerIter.getStackInSlot(_idx).copy();
+				if (itemstackiterator.is(ItemTags.create(ResourceLocation.parse("power:elemental_stones")))) {
 					if (entity instanceof ServerPlayer _player) {
-						AdvancementHolder _adv = _player.server.getAdvancements().get(new ResourceLocation("power:become_a_master"));
+						AdvancementHolder _adv = _player.server.getAdvancements().get(ResourceLocation.parse("power:become_a_master"));
 						if (_adv != null) {
 							AdvancementProgress _ap = _player.getAdvancements().getOrStartProgress(_adv);
 							if (!_ap.isDone()) {

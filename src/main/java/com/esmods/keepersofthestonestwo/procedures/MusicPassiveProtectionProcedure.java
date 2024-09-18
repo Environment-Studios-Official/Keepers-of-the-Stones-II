@@ -1,7 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.TickEvent;
-import net.neoforged.fml.common.Mod;
+import net.neoforged.neoforge.event.tick.PlayerTickEvent;
+import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
@@ -13,13 +13,11 @@ import javax.annotation.Nullable;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
-@Mod.EventBusSubscriber
+@EventBusSubscriber
 public class MusicPassiveProtectionProcedure {
 	@SubscribeEvent
-	public static void onPlayerTick(TickEvent.PlayerTickEvent event) {
-		if (event.phase == TickEvent.Phase.END) {
-			execute(event, event.player);
-		}
+	public static void onPlayerTick(PlayerTickEvent.Post event) {
+		execute(event, event.getEntity());
 	}
 
 	public static void execute(Entity entity) {
@@ -34,9 +32,9 @@ public class MusicPassiveProtectionProcedure {
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("music") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("music")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("music") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("music")
 				|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("music") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("music")) {
-			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STUN.get())) {
+			if (entity instanceof LivingEntity _livEnt0 && _livEnt0.hasEffect(PowerModMobEffects.STUN)) {
 				if (entity instanceof LivingEntity _entity)
-					_entity.removeEffect(PowerModMobEffects.STUN.get());
+					_entity.removeEffect(PowerModMobEffects.STUN);
 			}
 		}
 	}
