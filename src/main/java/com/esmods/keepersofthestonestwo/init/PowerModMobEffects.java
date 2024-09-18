@@ -307,7 +307,7 @@ public class PowerModMobEffects {
 			SmokeMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(SMOKE_INTANGIBILITY)) {
 			SmokeIntangibilityEndProcedure.execute(entity);
-		} else if (effect == SPIRIT_MASTER.get()) {
+		} else if (effectInstance.getEffect().is(SPIRIT_MASTER)) {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}

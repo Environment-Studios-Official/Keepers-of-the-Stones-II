@@ -245,9 +245,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		guistate.put("button:imagebutton_blood_element", imagebutton_blood_element);
 		this.addRenderableWidget(imagebutton_blood_element);
 		imagebutton_spirit_element = new ImageButton(this.leftPos + 138, this.topPos + 106, 16, 16,
-				new WidgetSprites(new ResourceLocation("power:textures/screens/spirit_element.png"), new ResourceLocation("power:textures/screens/spirit_element_highlighted.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/spirit_element.png"), ResourceLocation.parse("power:textures/screens/spirit_element_highlighted.png")), e -> {
 					if (SpiritStoneCheckProcedure.execute(world)) {
-						PacketDistributor.SERVER.noArg().send(new KeepersBoxGUIPart3ButtonMessage(9, x, y, z));
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart3ButtonMessage(9, x, y, z));
 						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 9, x, y, z);
 					}
 				}) {
