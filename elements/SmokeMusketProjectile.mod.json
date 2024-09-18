@@ -11,7 +11,7 @@
     },
     "igniteFire": false,
     "power": 5.0,
-    "damage": 2.2,
+    "damage": 2.4,
     "knockback": 0,
     "entityModel": "Modelturret_projectile",
     "customModelTexture": "smoke_musket_projectile.png",
