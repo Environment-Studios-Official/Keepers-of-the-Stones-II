@@ -174,7 +174,7 @@ public class LavaSpecialAttackProcedure {
 									double distanceSq = (xi * xi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot) + (i * i) / (double) (verticalRadiusHemiBot * verticalRadiusHemiBot)
 											+ (zi * zi) / (double) (horizontalRadiusHemiBot * horizontalRadiusHemiBot);
 									if (distanceSq <= 1.0) {
-										if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude()) {
+										if (world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)).canOcclude() && !((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi))).getBlock() == Blocks.BEDROCK)) {
 											world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)))));
 											if (!(entityiterator == entity)) {
