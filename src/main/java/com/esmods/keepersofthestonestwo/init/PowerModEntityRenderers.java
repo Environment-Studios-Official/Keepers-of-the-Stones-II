@@ -43,6 +43,7 @@ import com.esmods.keepersofthestonestwo.client.renderer.EnergyChargeRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.EnergiumGolemRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DirtBlockAttackProjectileRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.DestructionBallProjectileRenderer;
+import com.esmods.keepersofthestonestwo.client.renderer.CursedSquireRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CursedKnightRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CursedKeeperRenderer;
 import com.esmods.keepersofthestonestwo.client.renderer.CopperAttackProjectileRenderer;
@@ -103,5 +104,6 @@ public class PowerModEntityRenderers {
 		event.registerEntityRenderer(PowerModEntities.CURSED_KNIGHT.get(), CursedKnightRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SMOKE_MUSKET_PROJECTILE.get(), SmokeMusketProjectileRenderer::new);
 		event.registerEntityRenderer(PowerModEntities.SMOKE_BOMB_PROJECTILE.get(), SmokeBombProjectileRenderer::new);
+		event.registerEntityRenderer(PowerModEntities.CURSED_SQUIRE.get(), CursedSquireRenderer::new);
 	}
 }
