@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.43<br/>
+<br />- Improved the AI of the Cursed Knight
 <br />- The pointless reloading of bows has been removed
 <br />- [API] Colorful Powers API has been updated to version 16
 <br />- [Bugfix] Fixed damage from the Smoke Master's musket
