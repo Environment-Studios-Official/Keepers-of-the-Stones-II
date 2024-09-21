@@ -254,6 +254,7 @@ public class BlackHoleEntity extends PathfinderMob implements GeoEntity {
 			prevAnim = "empty";
 			return PlayState.STOP;
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 

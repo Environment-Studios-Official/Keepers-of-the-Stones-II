@@ -208,7 +208,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		if (this.animationprocedure.equals("empty")) {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
-			) {
+					&& !this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.walk"));
 			}
 			if (this.isSprinting()) {
@@ -239,6 +239,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 			prevAnim = "empty";
 			return PlayState.STOP;
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 
