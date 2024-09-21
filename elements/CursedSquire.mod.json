@@ -93,13 +93,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:cursed_squire.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:cursed_squire.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:cursed_squire.walk"
     },
     "raidCelebrationSound": {
       "value": ""

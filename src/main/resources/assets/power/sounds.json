@@ -118,5 +118,45 @@
         "stream": false
       }
     ]
+  },
+  "cursed_squire.death": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.death",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.hurt": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.attack": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.attack",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_squire.walk": {
+    "sounds": [
+      {
+        "name": "power:cursed_squire.step_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_squire.step_2",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_squire.step_3",
+        "stream": false
+      }
+    ]
   }
 }

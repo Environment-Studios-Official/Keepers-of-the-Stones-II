@@ -52,6 +52,15 @@ public class CursedSquireBiteProcedure {
 				_entity.yHeadRotO = _entity.getYRot();
 			}
 		}
+		if (entity.getPersistentData().getDouble("IA") == 3) {
+			if (world instanceof Level _level) {
+				if (!_level.isClientSide()) {
+					_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_squire.attack")), SoundSource.NEUTRAL, 1, 1);
+				} else {
+					_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:cursed_squire.attack")), SoundSource.NEUTRAL, 1, 1, false);
+				}
+			}
+		}
 		if (entity.getPersistentData().getDouble("IA") > 6 && entity.getPersistentData().getDouble("IA") < 9) {
 			for (int index0 = 0; index0 < 4; index0++) {
 				XPar = x + entity.getLookAngle().x * Range;
@@ -62,8 +71,8 @@ public class CursedSquireBiteProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
-							if (!(entityiterator instanceof LivingEntity _livEnt14 && _livEnt14.isBlocking())) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:cursed_knight_ds")))), 7);
+							if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:cursed_squire_ds")))), 7);
 								entityiterator.setDeltaMovement(new Vec3((entity.getLookAngle().x * 0.5), 0.25, (entity.getLookAngle().z * 0.5)));
 							} else {
 								if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {

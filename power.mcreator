@@ -32923,6 +32923,40 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "cursed_squire.death",
+      "files": [
+        "cursed_squire.death"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "cursed_squire.hurt",
+      "files": [
+        "cursed_squire.hurt"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "cursed_squire.attack",
+      "files": [
+        "cursed_squire.attack"
+      ],
+      "category": "hostile",
+      "subtitle": ""
+    },
+    {
+      "name": "cursed_squire.walk",
+      "files": [
+        "cursed_squire.step_1",
+        "cursed_squire.step_2",
+        "cursed_squire.step_3"
+      ],
+      "category": "hostile",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -33746,7 +33780,7 @@
       "item.power.mushrooms_armor_boots": "Ботинки мастера грибов",
       "gui.power.keepers_box_gui_part_2.tooltip_technology": "Технологии",
       "item.power.space_armor_boots": "Ботинки мастера космоса",
-      "item.power.cursed_keeper_spawn_egg": "Cursed Keeper Spawn Egg",
+      "item.power.cursed_keeper_spawn_egg": "Яйцо призыва проклятого хранителя",
       "item.power.plants_stone": "Камень зелени",
       "subtitles.strange_sound": "",
       "gui.power.wheel_abilities_music.tooltip_explosion_of_notes_uses_40": "Нотный взрыв, расходует 40",
@@ -33872,7 +33906,7 @@
       "item.power.light_armor_helmet": "Шлем мастера света",
       "gui.power.keepers_box_gui_part_4.tooltip_plants": "Зелень",
       "item.power.magnet_claws": "Магнитные когти",
-      "entity.power.cursed_keeper": "Cursed Keeper",
+      "entity.power.cursed_keeper": "Проклятый хранитель",
       "gui.power.wheel_abilities_light.tooltip_light_ball_uses_35": "Световой шар, расходует 35",
       "effect.power.mist_master": "Мастер тумана",
       "item.power.sound_dagger": "Звуковой кинжал",
@@ -34033,6 +34067,7 @@
       "block.power.depleted_energium_block": "Блок обеднённого энерджиума",
       "item.power.amber_armor_leggings": "Поножи мастера янтаря",
       "item.power.mist_armor_helmet": "Шлем мастера тумана",
+      "subtitles.cursed_squire.death": "",
       "battery.desc.spirit": "Дух",
       "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.explosion_armor_leggings": "Поножи мастера взрыва",
@@ -34090,6 +34125,7 @@
       "item.power.sand_stone": "Камень песка",
       "item.power.lightning_armor_boots": "Ботинки мастера молнии",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Торнадо",
+      "subtitles.cursed_squire.attack": "",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Кристальный залп, расходует 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Энергия",
       "block.power.polished_cursed_stone_stairs": "Ступеньки из полированного проклятого камня",
@@ -34160,6 +34196,7 @@
       "effect.power.time_stopped": "Остановка времени",
       "item.power.spirit_armor_boots": "Ботинки мастера духа",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Водный удар, расходует 20",
+      "subtitles.cursed_squire.walk": "",
       "subtitles.cursed_knight.death": "",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Яд",
       "item.power.rain_armor_leggings": "Поножи мастера дождя",
@@ -34283,7 +34320,7 @@
       "gui.power.wheel_abilities_tornado.tooltip_tornado_flight_uses_5": "Полёт торнадо, расходует 5",
       "item.power.light_sword": "Световой меч",
       "advancements.the_end_of_tyranny.title": "Конец Тирании",
-      "death.attack.cursed_knight_ds": "%1$s was killed by an Cursed Knight",
+      "death.attack.cursed_knight_ds": "%1$s  был убит Проклятый рыцарьй",
       "gui.power.wheel_abilities_air.tooltip_air_flow_uses_10_power_points": "Поток воздуха, расходует 25",
       "item.power.ice_stone": "Камень льда",
       "battery.desc.ocean": "Океан",
@@ -34344,6 +34381,7 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Целебная вода, расходует 70",
       "item.power.animals_armor_boots": "Ботинки мастера животных",
       "effect.power.rain_master": "Мастер дождя",
+      "subtitles.cursed_squire.hurt": "",
       "effect.power.spirit_master": "Мастер духа",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Космос",
       "item.power.energium_upgrade_smithing_template.applies_to": " §9Обеднённому энерджиуму",
@@ -34414,7 +34452,6 @@
       "item.power.time_stone": "Камень времени",
       "item.power.lava_armor_leggings": "Поножи мастера лавы",
       "gamerule.limitOfStonesForOnePlayer": "Лимит камней для одного игрока",
-      "death.attack.cursed_knight_dsэн": "%1$s  был убит Проклятый рыцарь",
       "gui.power.wheel_abilities_tornado.tooltip_mini_tornado_attack_uses_15": "Атака мини-торнадо, расходует 15",
       "item.power.destruction_armor_leggings": "Поножи мастера разрушение",
       "effect.power.space_master": "Мастер космоса",
@@ -34833,6 +34870,7 @@
       "block.power.depleted_energium_block": "Block of Depleted Energium",
       "item.power.amber_armor_leggings": "Amber Leggings",
       "item.power.mist_armor_helmet": "Mist Helmet",
+      "subtitles.cursed_squire.death": "",
       "battery.desc.spirit": "Spirit",
       "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.explosion_armor_leggings": "Explosion Leggings",
@@ -34890,6 +34928,7 @@
       "item.power.sand_stone": "Sand Stone",
       "item.power.lightning_armor_boots": "Lightning Boots",
       "gui.power.keepers_box_gui_part_2.tooltip_tornado": "Tornado",
+      "subtitles.cursed_squire.attack": "",
       "gui.power.wheel_abilities_crystal.tooltip_crystal_volley_uses_65": "Crystal volley, uses 65",
       "gui.power.keepers_box_gui_part_1.tooltip_energy": "Energy",
       "block.power.polished_cursed_stone_stairs": "Polished Cursed Stone Stairs",
@@ -34960,6 +34999,7 @@
       "effect.power.time_stopped": "Time Stopped",
       "item.power.spirit_armor_boots": "Spirit Boots",
       "gui.power.wheel_abilities_water.tooltip_water_shock_uses_20_power_point": "Water shock, uses 20",
+      "subtitles.cursed_squire.walk": "",
       "subtitles.cursed_knight.death": "",
       "gui.power.keepers_box_gui_part_4.tooltip_poison": "Poison",
       "item.power.rain_armor_leggings": "Rain Leggings",
@@ -35145,6 +35185,7 @@
       "gui.power.wheel_abilities_water.tooltip_healing_water_uses_30_power_poi": "Healing water, uses 70",
       "item.power.animals_armor_boots": "Animals Boots",
       "effect.power.rain_master": "Master of the Rain",
+      "subtitles.cursed_squire.hurt": "",
       "effect.power.spirit_master": "Master of the Spirit",
       "gui.power.keepers_box_gui_part_3.tooltip_space": "Space",
       "item.power.energium_upgrade_smithing_template.applies_to": "§9Depleted Energium",

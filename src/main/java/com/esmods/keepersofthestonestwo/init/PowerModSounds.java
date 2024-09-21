@@ -29,4 +29,8 @@ public class PowerModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_DEATH = REGISTRY.register("cursed_knight.death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.death")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_HURT = REGISTRY.register("cursed_knight.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.hurt")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_WALK = REGISTRY.register("cursed_knight.walk", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.walk")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_DEATH = REGISTRY.register("cursed_squire.death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_HURT = REGISTRY.register("cursed_squire.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_ATTACK = REGISTRY.register("cursed_squire.attack", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.attack")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_WALK = REGISTRY.register("cursed_squire.walk", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.walk")));
 }
