@@ -42,9 +42,9 @@ public class EnergiumVaultBlock extends Block implements EntityBlock {
 
 	public EnergiumVaultBlock() {
 		super(BlockBehaviour.Properties.of()
-				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.break")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.step")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:backport.block.vault.place")),
-						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.hit")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.netherite_block.fall"))))
+				.sound(new DeferredSoundType(1.0f, 1.0f, () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.break")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.step")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.place")), () -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.hit")),
+						() -> BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.vault.fall"))))
 				.strength(50f).lightLevel(s -> (new Object() {
 					public int getLightLevel() {
 						if (s.getValue(BLOCKSTATE) == 1)
