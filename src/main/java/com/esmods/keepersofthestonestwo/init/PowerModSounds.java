@@ -45,4 +45,8 @@ public class PowerModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> RECORD_ANCIENT_MOOD = REGISTRY.register("record.ancient_mood", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "record.ancient_mood")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> TIME_ABILITY_EFFECT = REGISTRY.register("time_ability_effect", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "time_ability_effect")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> MUSKET = REGISTRY.register("musket", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "musket")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_ATTACK = REGISTRY.register("cursed_knight.attack", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.attack")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_DEATH = REGISTRY.register("cursed_knight.death", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.death")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_HURT = REGISTRY.register("cursed_knight.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.hurt")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_KNIGHT_WALK = REGISTRY.register("cursed_knight.walk", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_knight.walk")));
 }

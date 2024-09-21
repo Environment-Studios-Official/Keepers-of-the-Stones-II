@@ -226,5 +226,45 @@
         "stream": false
       }
     ]
+  },
+  "cursed_knight.attack": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.attack",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.death": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.death",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.hurt": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.hurt",
+        "stream": false
+      }
+    ]
+  },
+  "cursed_knight.walk": {
+    "sounds": [
+      {
+        "name": "power:cursed_knight.step_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_knight.step_2",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_knight.step_3",
+        "stream": false
+      }
+    ]
   }
 }

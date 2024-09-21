@@ -93,13 +93,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:cursed_knight.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:cursed_knight.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:cursed_knight.walk"
     },
     "raidCelebrationSound": {
       "value": ""
