@@ -27,10 +27,11 @@
       "value": -9817013,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Mobs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Mobs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -116,7 +117,7 @@
     "animation1": "cursed_squire.animation.idle",
     "animation2": "cursed_squire.animation.walk",
     "animation3": "",
-    "animation4": "cursed_squire.animation.attack",
+    "animation4": "",
     "animation5": "",
     "animation6": "",
     "animation7": "",
@@ -157,10 +158,10 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 60,
-    "mobSpawningType": "creature",
+    "spawningProbability": 8,
+    "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 3,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:CursedForest"
