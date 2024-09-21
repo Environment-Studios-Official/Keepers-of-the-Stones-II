@@ -26185,21 +26185,6 @@
       "path": "~/Biomes/CursedForest"
     },
     {
-      "name": "GrassCursedForest",
-      "type": "feature",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "grass_cursed_forest",
-      "metadata": {
-        "files": [
-          "src/main/resources/data/power/worldgen/configured_feature/grass_cursed_forest.json",
-          "src/main/resources/data/power/worldgen/placed_feature/grass_cursed_forest.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/grass_cursed_forest_biome_modifier.json"
-        ]
-      },
-      "path": "~/Biomes/CursedForest"
-    },
-    {
       "name": "LetsBailThisPlaceIsdead",
       "type": "achievement",
       "compiles": true,
