@@ -46,7 +46,7 @@ public class CreationBatteryUseProcedure {
 					_vars.syncPlayerVariables(entity);
 				}
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CREATION_MASTER, (int) ((PowerModVariables.MapVariables.get(world).master_effect_duration / 2) * 20), 0, false, false));
+					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CREATION_MASTER, (int) ((PowerModVariables.master_effect_duration / 2) * 20), 0, false, false));
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;

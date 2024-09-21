@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:spirit_armor_helmet",
     "power:smoke_armor_helmet",
     "power:gravity_armor_helmet",
     "power:blue_flame_armor_helmet",
