@@ -30,6 +30,7 @@
     "creativeTab": {
       "value": "MISC"
     },
+    "creativeTabs": [],
     "isBoss": true,
     "bossBarColor": "PURPLE",
     "bossBarType": "NOTCHED_10",

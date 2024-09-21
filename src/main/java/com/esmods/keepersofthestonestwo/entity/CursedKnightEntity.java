@@ -178,7 +178,7 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 		if (this.animationprocedure.equals("empty")) {
 			if ((event.isMoving() || !(event.getLimbSwingAmount() > -0.15F && event.getLimbSwingAmount() < 0.15F))
 
-			) {
+					&& !this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("cursed_knight.animation.walk"));
 			}
 			if (this.isSprinting()) {
@@ -209,6 +209,7 @@ public class CursedKnightEntity extends Monster implements GeoEntity {
 			prevAnim = "empty";
 			return PlayState.STOP;
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 

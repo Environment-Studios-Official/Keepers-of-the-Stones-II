@@ -30,6 +30,7 @@
     "creativeTab": {
       "value": "CUSTOM:Mobs"
     },
+    "creativeTabs": [],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
