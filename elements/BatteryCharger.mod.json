@@ -59,7 +59,7 @@
     "canRedstoneConnect": false,
     "lightOpacity": 15,
     "material": {
-      "value": "IRON"
+      "value": "NONE"
     },
     "tickRate": 1,
     "tickRandomly": false,
@@ -106,7 +106,7 @@
     "vanillaToolTier": "DIAMOND",
     "isBonemealable": false,
     "hasInventory": true,
-    "guiBoundTo": "BatteryChargerGUI",
+    "guiBoundTo": "BatteryChargerGUIv2",
     "openGUIOnRightClick": true,
     "inventorySize": 3,
     "inventoryStackSize": 1,

@@ -59,6 +59,7 @@ import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart4Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart3Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart2Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.KeepersBoxGUIPart1Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIv2Menu;
 import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -113,4 +114,5 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesGravityMenu>> WHEEL_ABILITIES_GRAVITY = REGISTRY.register("wheel_abilities_gravity", () -> IMenuTypeExtension.create(WheelAbilitiesGravityMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesSmokeMenu>> WHEEL_ABILITIES_SMOKE = REGISTRY.register("wheel_abilities_smoke", () -> IMenuTypeExtension.create(WheelAbilitiesSmokeMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesSpiritMenu>> WHEEL_ABILITIES_SPIRIT = REGISTRY.register("wheel_abilities_spirit", () -> IMenuTypeExtension.create(WheelAbilitiesSpiritMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<BatteryChargerGUIv2Menu>> BATTERY_CHARGER_GU_IV_2 = REGISTRY.register("battery_charger_gu_iv_2", () -> IMenuTypeExtension.create(BatteryChargerGUIv2Menu::new));
 }

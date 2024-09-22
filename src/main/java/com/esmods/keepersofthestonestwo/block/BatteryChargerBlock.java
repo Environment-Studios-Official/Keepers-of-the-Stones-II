@@ -36,7 +36,7 @@ import net.minecraft.client.Minecraft;
 
 import io.netty.buffer.Unpooled;
 
-import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIv2Menu;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerClientTickProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.BatteryChargerBlockEntity;
@@ -108,7 +108,7 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new BatteryChargerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+					return new BatteryChargerGUIv2Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
 				}
 			}, pos);
 		}
