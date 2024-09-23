@@ -30,6 +30,7 @@
     "creativeTab": {
       "value": "CUSTOM:Mobs"
     },
+    "creativeTabs": [],
     "isBoss": true,
     "bossBarColor": "YELLOW",
     "bossBarType": "NOTCHED_10",

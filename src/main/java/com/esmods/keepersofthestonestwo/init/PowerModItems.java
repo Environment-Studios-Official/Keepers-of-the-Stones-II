@@ -49,6 +49,8 @@ import com.esmods.keepersofthestonestwo.item.SunStoneItem;
 import com.esmods.keepersofthestonestwo.item.SunBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SunArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpiritStoneItem;
+import com.esmods.keepersofthestonestwo.item.SpiritSickleItem;
+import com.esmods.keepersofthestonestwo.item.SpiritBatteryItem;
 import com.esmods.keepersofthestonestwo.item.SpiritArmorItem;
 import com.esmods.keepersofthestonestwo.item.SpeedStoneItem;
 import com.esmods.keepersofthestonestwo.item.SpeedBatteryItem;
@@ -637,6 +639,9 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_CHESTPLATE = REGISTRY.register("spirit_armor_chestplate", SpiritArmorItem.Chestplate::new);
 	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_LEGGINGS = REGISTRY.register("spirit_armor_leggings", SpiritArmorItem.Leggings::new);
 	public static final DeferredHolder<Item, Item> SPIRIT_ARMOR_BOOTS = REGISTRY.register("spirit_armor_boots", SpiritArmorItem.Boots::new);
+	public static final DeferredHolder<Item, Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
+	public static final DeferredHolder<Item, Item> SPIRIT_BATTERY = REGISTRY.register("spirit_battery", SpiritBatteryItem::new);
+	public static final DeferredHolder<Item, Item> SPIRIT_SICKLE = REGISTRY.register("spirit_sickle", SpiritSickleItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
