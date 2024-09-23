@@ -118,11 +118,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_flow_astral_energy",
+          "image": "flow_astral_energy.png",
+          "hoveredImage": "flow_astral_energy_highlight.png",
           "onClick": {
             "name": "Attack173"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 36
@@ -131,11 +134,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_spiritual_flight",
+          "image": "spiritual_flight.png",
+          "hoveredImage": "spiritual_flight_highlight.png",
           "onClick": {
             "name": "Attack174"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 251,
           "y": 97
@@ -144,11 +150,14 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_summon_spirit",
+          "image": "summon_spirit.png",
+          "hoveredImage": "summon_spirit_highlight.png",
           "onClick": {
             "name": "Attack175"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 158
