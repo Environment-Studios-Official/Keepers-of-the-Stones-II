@@ -3,9 +3,9 @@
   "_type": "potioneffect",
   "definition": {
     "effectName": "Star regeneration",
-    "icon": "star_regeneration.png",
+    "icon": "star_regeneration",
     "color": {
-      "value": -16763956,
+      "value": -5335961,
       "falpha": 0.0
     },
     "isInstant": false,

@@ -9,7 +9,7 @@ import com.esmods.keepersofthestonestwo.procedures.StarRegenerationStartProcedur
 
 public class StarRegenerationMobEffect extends MobEffect {
 	public StarRegenerationMobEffect() {
-		super(MobEffectCategory.BENEFICIAL, -16763956);
+		super(MobEffectCategory.BENEFICIAL, -5335961);
 	}
 
 	@Override
