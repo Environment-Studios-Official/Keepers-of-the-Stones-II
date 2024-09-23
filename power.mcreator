@@ -32868,6 +32868,24 @@
       "value": "0"
     },
     {
+      "name": "level",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "level_exp",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
+      "name": "base_damage_by_lvl",
+      "type": "number",
+      "scope": "player_persistent",
+      "value": "0"
+    },
+    {
       "name": "detransform_anim_trigger",
       "type": "logic",
       "scope": "player_lifetime",
@@ -34252,6 +34270,7 @@
       "item.power.lightning_battery": "Батарея",
       "entity.power.cursed_squire": "Проклятый оруженосец",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Лунный сталагмит, расходует 40",
+      "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.blue_flame_battery": "Батарея",
       "subtitles.cursed_knight.walk": "",
       "item.power.earth_battery": "Батарея",
@@ -35045,6 +35064,7 @@
       "item.power.lightning_battery": "Battery",
       "entity.power.cursed_squire": "Cursed Squire",
       "gui.power.wheel_abilities_moon.tooltip_moon_dripstone_uses_40": "Moon dripstone, uses 40",
+      "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.blue_flame_battery": "Battery",
       "subtitles.cursed_knight.walk": "",
       "item.power.earth_battery": "Battery",
@@ -35679,6 +35699,10 @@
           },
           {
             "name": "VFXEngineModule",
+            "children": []
+          },
+          {
+            "name": "LevelingSystemModule",
             "children": []
           }
         ]
