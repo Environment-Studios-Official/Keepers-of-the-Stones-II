@@ -20,6 +20,7 @@ import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.TurretEntity;
 import com.esmods.keepersofthestonestwo.entity.StoneAttackProjectileEntity;
+import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 import com.esmods.keepersofthestonestwo.entity.SphereNothingProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SoundBombProjectileEntity;
 import com.esmods.keepersofthestonestwo.entity.SmokeMusketProjectileEntity;
@@ -159,6 +160,8 @@ public class PowerModEntities {
 			EntityType.Builder.<SmokeBombProjectileEntity>of(SmokeBombProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
+			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));
@@ -174,6 +177,7 @@ public class PowerModEntities {
 		CursedKeeperEntity.init(event);
 		CursedKnightEntity.init(event);
 		CursedSquireEntity.init(event);
+		SpiritEntity.init(event);
 	}
 
 	@SubscribeEvent
@@ -186,5 +190,6 @@ public class PowerModEntities {
 		event.put(CURSED_KEEPER.get(), CursedKeeperEntity.createAttributes().build());
 		event.put(CURSED_KNIGHT.get(), CursedKnightEntity.createAttributes().build());
 		event.put(CURSED_SQUIRE.get(), CursedSquireEntity.createAttributes().build());
+		event.put(SPIRIT.get(), SpiritEntity.createAttributes().build());
 	}
 }
