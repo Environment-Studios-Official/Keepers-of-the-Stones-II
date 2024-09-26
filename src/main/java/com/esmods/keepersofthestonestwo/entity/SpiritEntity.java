@@ -407,7 +407,7 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 
 	private PlayState movementPredicate(AnimationState event) {
 		if (this.animationprocedure.equals("empty")) {
-			return event.setAndContinue(RawAnimation.begin().thenLoop("idle"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.spirit.idle"));
 		}
 		return PlayState.STOP;
 	}
