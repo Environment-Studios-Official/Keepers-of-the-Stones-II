@@ -114,7 +114,7 @@ public class SpiritSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("spirit_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
 				if (world instanceof ServerLevel _level) {
 					Entity entityToSpawn = PowerModEntities.SPIRIT.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
 					if (entityToSpawn != null) {
@@ -133,7 +133,7 @@ public class SpiritSpecialAttackProcedure {
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
 					_vars.syncPlayerVariables(entity);
 				}
 			}

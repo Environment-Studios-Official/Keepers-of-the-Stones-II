@@ -162,6 +162,45 @@
           "x": 190,
           "y": 158
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_flow_astral_energy_uses_10",
+          "text": {
+            "fixedValue": "Flow astral energy, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spiritual_flight_uses_5",
+          "text": {
+            "fixedValue": "Spiritual flight, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_summon_spirit_uses_75",
+          "text": {
+            "fixedValue": "Summon spirit, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169
+        }
       }
     ],
     "gridSettings": {
