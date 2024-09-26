@@ -153,14 +153,14 @@ public class SpiritEntity extends TamableAnimal implements GeoEntity {
 					SpiritEntity.this.doHurtTarget(livingentity);
 				} else {
 					double d0 = SpiritEntity.this.distanceToSqr(livingentity);
-					if (d0 < 16) {
+					if (d0 < 4) {
 						Vec3 vec3d = livingentity.getEyePosition(1);
 						SpiritEntity.this.moveControl.setWantedPosition(vec3d.x, vec3d.y, vec3d.z, 1.2);
 					}
 				}
 			}
 		});
-		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1, (float) 16, (float) 8));
+		this.goalSelector.addGoal(4, new FollowOwnerGoal(this, 1, (float) 4, (float) 10));
 		this.goalSelector.addGoal(5, new RandomStrollGoal(this, 1, 20) {
 			@Override
 			protected Vec3 getPosition() {
