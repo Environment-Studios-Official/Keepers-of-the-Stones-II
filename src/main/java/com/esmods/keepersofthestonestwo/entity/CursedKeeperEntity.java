@@ -214,7 +214,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 			if (this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.run"));
 			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle_ground"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle_no"));
 		}
 		return PlayState.STOP;
 	}

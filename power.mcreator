@@ -27658,6 +27658,7 @@
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/CursedKeeperRenderer.java",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/CursedKeeperEntity.java",
+          "src/main/resources/assets/power/models/item/cursed_keeper_spawn_egg.json",
           "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
         ]
       },
