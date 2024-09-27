@@ -265,6 +265,7 @@ public class EnergiumGolemEntity extends Monster implements GeoEntity {
 			prevAnim = "empty";
 			return PlayState.STOP;
 		}
+		prevAnim = this.animationprocedure;
 		return PlayState.CONTINUE;
 	}
 

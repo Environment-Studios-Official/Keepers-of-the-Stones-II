@@ -1,9 +1,7 @@
-What's new in Keepers of the Stones II version 1.0.0.43<br/>
-<br />- Improved the AI of the Cursed Knight
-<br />- The pointless reloading of bows has been removed
-<br />- [API] Colorful Powers API has been updated to version 16
-<br />- [Bugfix] Fixed damage from the Smoke Master's musket
-<br />- [Bugfix] Fixed the sound of the musket
-<br />- [Bugfix] Fixed a bug where water could spill using the ability
-<br />- [Bugfix] Fixed a bug that caused the lava surface to break bedrock
-<br />- [Bugfix] Fixed a bug where it was possible to activate more than 3 stones
+What's new in Keepers of the Stones II version 1.0.0.44<br/>
+<br />- Added new element - spirit
+<br />- Added new mob - cursed squire
+<br />- Added sounds for cursed knight
+<br />- Energium and cursed vaults now display the most valuable item you can get
+<br />- The bar animation in the battery charger is now smoother
+<br />- [Bugfix] Fixed a bug that caused the end portal and other blocks to be replaced with magma

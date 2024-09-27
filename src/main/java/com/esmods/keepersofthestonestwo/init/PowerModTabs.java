@@ -137,6 +137,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.BLUE_FLAME_STONE.get());
 				tabData.accept(PowerModItems.GRAVITY_STONE.get());
 				tabData.accept(PowerModItems.SMOKE_STONE.get());
+				tabData.accept(PowerModItems.SPIRIT_STONE.get());
 			})
 
 					.build());
@@ -144,6 +145,7 @@ public class PowerModTabs {
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_SQUIRE_SPAWN_EGG.get());
 			})
 
 					.build());
@@ -193,6 +195,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.BLUE_FLAME_BATTERY.get());
 				tabData.accept(PowerModItems.GRAVITY_BATTERY.get());
 				tabData.accept(PowerModItems.SMOKE_BATTERY.get());
+				tabData.accept(PowerModItems.SPIRIT_BATTERY.get());
 			})
 
 					.build());

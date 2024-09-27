@@ -27,9 +27,11 @@
       "value": -9817013,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Mobs"
-    },
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Mobs"
+      }
+    ],
     "isBoss": false,
     "bossBarColor": "PINK",
     "bossBarType": "PROGRESS",
@@ -93,13 +95,13 @@
       "value": ""
     },
     "hurtSound": {
-      "value": "entity.generic.hurt"
+      "value": "CUSTOM:cursed_knight.hurt"
     },
     "deathSound": {
-      "value": "entity.generic.death"
+      "value": "CUSTOM:cursed_knight.death"
     },
     "stepSound": {
-      "value": ""
+      "value": "CUSTOM:cursed_knight.walk"
     },
     "raidCelebrationSound": {
       "value": ""
@@ -156,10 +158,10 @@
     ],
     "spawnThisMob": true,
     "doesDespawnWhenIdle": false,
-    "spawningProbability": 20,
-    "mobSpawningType": "creature",
+    "spawningProbability": 4,
+    "mobSpawningType": "monster",
     "minNumberOfMobsPerGroup": 1,
-    "maxNumberOfMobsPerGroup": 3,
+    "maxNumberOfMobsPerGroup": 1,
     "restrictionBiomes": [
       {
         "value": "CUSTOM:CursedForest"

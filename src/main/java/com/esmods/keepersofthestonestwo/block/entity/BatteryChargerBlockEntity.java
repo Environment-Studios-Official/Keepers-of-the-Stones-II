@@ -24,7 +24,7 @@ import java.util.stream.IntStream;
 
 import io.netty.buffer.Unpooled;
 
-import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIv2Menu;
 import com.esmods.keepersofthestonestwo.init.PowerModBlockEntities;
 
 public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity implements WorldlyContainer {
@@ -86,7 +86,7 @@ public class BatteryChargerBlockEntity extends RandomizableContainerBlockEntity 
 
 	@Override
 	public AbstractContainerMenu createMenu(int id, Inventory inventory) {
-		return new BatteryChargerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
+		return new BatteryChargerGUIv2Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(this.worldPosition));
 	}
 
 	@Override

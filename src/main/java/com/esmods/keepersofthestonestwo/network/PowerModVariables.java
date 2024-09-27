@@ -140,6 +140,7 @@ public class PowerModVariables {
 
 	public static class WorldVariables extends SavedData {
 		public static final String DATA_NAME = "power_worldvars";
+		public double entity_rotation = 0;
 
 		public static WorldVariables load(CompoundTag tag, HolderLookup.Provider lookupProvider) {
 			WorldVariables data = new WorldVariables();
@@ -148,10 +149,12 @@ public class PowerModVariables {
 		}
 
 		public void read(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			entity_rotation = nbt.getDouble("entity_rotation");
 		}
 
 		@Override
 		public CompoundTag save(CompoundTag nbt, HolderLookup.Provider lookupProvider) {
+			nbt.putDouble("entity_rotation", entity_rotation);
 			return nbt;
 		}
 
