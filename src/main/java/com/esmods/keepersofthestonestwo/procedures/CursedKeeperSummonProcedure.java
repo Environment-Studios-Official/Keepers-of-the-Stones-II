@@ -42,12 +42,12 @@ public class CursedKeeperSummonProcedure {
 						}
 					}
 				});
-				entity.getPersistentData().putDouble("Wave", 1);
 			}
 			if (entity.getPersistentData().getDouble("IA") == 206) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
+				entity.getPersistentData().putDouble("Wave", 1);
 			}
 		}
 		if (entity.getPersistentData().getDouble("Wave") == 1) {
@@ -71,12 +71,12 @@ public class CursedKeeperSummonProcedure {
 						}
 					});
 				});
-				entity.getPersistentData().putDouble("Wave", 2);
 			}
 			if (entity.getPersistentData().getDouble("IA") == 873) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
+				entity.getPersistentData().putDouble("Wave", 2);
 			}
 		}
 		if (entity.getPersistentData().getDouble("Wave") == 2) {
@@ -116,12 +116,12 @@ public class CursedKeeperSummonProcedure {
 						});
 					});
 				});
-				entity.getPersistentData().putDouble("Wave", 3);
 			}
 			if (entity.getPersistentData().getDouble("IA") == 1540) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
+				entity.getPersistentData().putDouble("Wave", 3);
 			}
 		}
 		if (entity.getPersistentData().getDouble("Wave") == 3) {
