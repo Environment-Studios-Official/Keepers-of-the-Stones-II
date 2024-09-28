@@ -32492,6 +32492,25 @@
         ]
       },
       "path": "~/Bosses/CursedKeeper"
+    },
+    {
+      "name": "CursedKeepersFirstPhaseImmune",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keepers_first_phase_immune",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeepersFirstPhaseImmuneProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
     }
   ],
   "variable_elements": [
