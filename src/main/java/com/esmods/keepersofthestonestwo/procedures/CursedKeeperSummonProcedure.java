@@ -19,17 +19,17 @@ public class CursedKeeperSummonProcedure {
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5));
+		if (entity.getPersistentData().getDouble("IA") == 15) {
+			if (entity instanceof CursedKeeperEntity) {
+				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
+			}
+		}
+		if (entity.getPersistentData().getDouble("IA") == 82) {
+			if (entity instanceof CursedKeeperEntity) {
+				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
+			}
+		}
 		if (entity.getPersistentData().getDouble("Wave") == 0) {
-			if (entity.getPersistentData().getDouble("IA") == 15) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 82) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
 			if (entity.getPersistentData().getDouble("IA") == 139) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
@@ -49,6 +49,8 @@ public class CursedKeeperSummonProcedure {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
 			}
+		}
+		if (entity.getPersistentData().getDouble("Wave") == 1) {
 			if (entity.getPersistentData().getDouble("IA") == 806) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
@@ -76,6 +78,8 @@ public class CursedKeeperSummonProcedure {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
 			}
+		}
+		if (entity.getPersistentData().getDouble("Wave") == 2) {
 			if (entity.getPersistentData().getDouble("IA") == 1473) {
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
@@ -119,185 +123,8 @@ public class CursedKeeperSummonProcedure {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
 				}
 			}
-			if (entity.getPersistentData().getDouble("IA") == 2140) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 56, 255, false, false));
-				entity.getPersistentData().putBoolean("Phase", true);
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.fall");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 2196) {
-				CursedKeeperStateChangerProcedure.execute(entity);
-			}
-		} else if (entity.getPersistentData().getDouble("Wave") == 1) {
-			if (entity.getPersistentData().getDouble("IA") == 15) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 82) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 806) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
-				}
-				PowerMod.queueServerWork(28, () -> {
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-						if (entityToSpawn != null) {
-							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-						}
-					}
-					PowerMod.queueServerWork(48, () -> {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-							}
-						}
-					});
-				});
-				entity.getPersistentData().putDouble("Wave", 2);
-			}
-			if (entity.getPersistentData().getDouble("IA") == 873) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 1473) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
-				}
-				PowerMod.queueServerWork(18, () -> {
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-						if (entityToSpawn != null) {
-							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-						}
-					}
-					PowerMod.queueServerWork(28, () -> {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-							}
-						}
-						PowerMod.queueServerWork(38, () -> {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-									entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-								}
-							}
-							PowerMod.queueServerWork(48, () -> {
-								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-									if (entityToSpawn != null) {
-										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-									}
-								}
-							});
-						});
-					});
-				});
-				entity.getPersistentData().putDouble("Wave", 3);
-			}
-			if (entity.getPersistentData().getDouble("IA") == 1540) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 2140) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 56, 255, false, false));
-				entity.getPersistentData().putBoolean("Phase", true);
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.fall");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 2196) {
-				CursedKeeperStateChangerProcedure.execute(entity);
-			}
-		} else if (entity.getPersistentData().getDouble("Wave") == 2) {
-			if (entity.getPersistentData().getDouble("IA") == 15) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 82) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 1473) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.summon_wave");
-				}
-				PowerMod.queueServerWork(18, () -> {
-					if (world instanceof ServerLevel _level) {
-						Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-						if (entityToSpawn != null) {
-							entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-						}
-					}
-					PowerMod.queueServerWork(28, () -> {
-						if (world instanceof ServerLevel _level) {
-							Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-							if (entityToSpawn != null) {
-								entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-							}
-						}
-						PowerMod.queueServerWork(38, () -> {
-							if (world instanceof ServerLevel _level) {
-								Entity entityToSpawn = PowerModEntities.CURSED_KNIGHT.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-								if (entityToSpawn != null) {
-									entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-								}
-							}
-							PowerMod.queueServerWork(48, () -> {
-								if (world instanceof ServerLevel _level) {
-									Entity entityToSpawn = PowerModEntities.CURSED_SQUIRE.get().spawn(_level, BlockPos.containing(x, y, z), MobSpawnType.MOB_SUMMONED);
-									if (entityToSpawn != null) {
-										entityToSpawn.setYRot(world.getRandom().nextFloat() * 360F);
-									}
-								}
-							});
-						});
-					});
-				});
-				entity.getPersistentData().putDouble("Wave", 3);
-			}
-			if (entity.getPersistentData().getDouble("IA") == 1540) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 2140) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 56, 255, false, false));
-				entity.getPersistentData().putBoolean("Phase", true);
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.fall");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 2196) {
-				CursedKeeperStateChangerProcedure.execute(entity);
-			}
-		} else if (entity.getPersistentData().getDouble("Wave") == 3) {
-			if (entity.getPersistentData().getDouble("IA") == 15) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
-				}
-			}
-			if (entity.getPersistentData().getDouble("IA") == 82) {
-				if (entity instanceof CursedKeeperEntity) {
-					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.idle");
-				}
-			}
+		}
+		if (entity.getPersistentData().getDouble("Wave") == 3) {
 			if (entity.getPersistentData().getDouble("IA") == 2140) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 56, 255, false, false));
