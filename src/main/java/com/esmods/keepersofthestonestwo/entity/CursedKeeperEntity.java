@@ -200,7 +200,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 		builder = builder.add(Attributes.MAX_HEALTH, 250);
 		builder = builder.add(Attributes.ARMOR, 10);
 		builder = builder.add(Attributes.ATTACK_DAMAGE, 24);
-		builder = builder.add(Attributes.FOLLOW_RANGE, 32);
+		builder = builder.add(Attributes.FOLLOW_RANGE, 128);
 		builder = builder.add(Attributes.STEP_HEIGHT, 0.6);
 		builder = builder.add(Attributes.ATTACK_KNOCKBACK, 0.25);
 		return builder;
