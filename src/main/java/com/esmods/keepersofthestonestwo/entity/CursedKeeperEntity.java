@@ -43,6 +43,7 @@ import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriObnovlieniiTikaSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class CursedKeeperEntity extends Monster implements GeoEntity {
@@ -82,16 +83,16 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	protected void registerGoals() {
 		super.registerGoals();
-		this.goalSelector.addGoal(1, new MeleeAttackGoal(this, 1.2, false) {
+		this.targetSelector.addGoal(1, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.goalSelector.addGoal(2, new MeleeAttackGoal(this, 1.2, false) {
 			@Override
 			protected boolean canPerformAttack(LivingEntity entity) {
 				return this.isTimeToAttack() && this.mob.distanceToSqr(entity) < (this.mob.getBbWidth() * this.mob.getBbWidth() + entity.getBbWidth()) && this.mob.getSensing().hasLineOfSight(entity);
 			}
 		});
-		this.targetSelector.addGoal(2, new HurtByTargetGoal(this));
-		this.goalSelector.addGoal(3, new RandomStrollGoal(this, 0.8));
-		this.goalSelector.addGoal(4, new RandomLookAroundGoal(this));
-		this.targetSelector.addGoal(5, new NearestAttackableTargetGoal(this, Player.class, false, false));
+		this.targetSelector.addGoal(3, new HurtByTargetGoal(this));
+		this.goalSelector.addGoal(4, new RandomStrollGoal(this, 0.8));
+		this.goalSelector.addGoal(5, new RandomLookAroundGoal(this));
 	}
 
 	@Override
@@ -163,6 +164,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	public void baseTick() {
 		super.baseTick();
+		CursedKeeperPriObnovlieniiTikaSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ(), this);
 		this.refreshDimensions();
 	}
 
@@ -214,7 +216,7 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 			if (this.isSprinting()) {
 				return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.run"));
 			}
-			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle_no"));
+			return event.setAndContinue(RawAnimation.begin().thenLoop("animation.cursed_keeper.idle_ground"));
 		}
 		return PlayState.STOP;
 	}
