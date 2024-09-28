@@ -32330,6 +32330,25 @@
         ]
       },
       "path": "~/Elements/Spirit"
+    },
+    {
+      "name": "CancelSpiritAllDamage",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cancel_spirit_all_damage",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CancelSpiritAllDamageProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Spirit"
     }
   ],
   "variable_elements": [
@@ -33623,7 +33642,11 @@
       "CUSTOM:SmokeArmor.helmet",
       "CUSTOM:SmokeArmor.body",
       "CUSTOM:SmokeArmor.legs",
-      "CUSTOM:SmokeArmor.boots"
+      "CUSTOM:SmokeArmor.boots",
+      "CUSTOM:SpiritArmor.helmet",
+      "CUSTOM:SpiritArmor.body",
+      "CUSTOM:SpiritArmor.legs",
+      "CUSTOM:SpiritArmor.boots"
     ],
     "ITEMS:minecraft:head_armor": [
       "~CUSTOM:SpiritArmor.helmet",

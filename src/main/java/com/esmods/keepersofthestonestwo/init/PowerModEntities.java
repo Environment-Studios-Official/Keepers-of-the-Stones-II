@@ -161,7 +161,9 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
-			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

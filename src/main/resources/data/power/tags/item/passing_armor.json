@@ -173,6 +173,10 @@
     "power:smoke_armor_helmet",
     "power:smoke_armor_chestplate",
     "power:smoke_armor_leggings",
-    "power:smoke_armor_boots"
+    "power:smoke_armor_boots",
+    "power:spirit_armor_helmet",
+    "power:spirit_armor_chestplate",
+    "power:spirit_armor_leggings",
+    "power:spirit_armor_boots"
   ]
 }
