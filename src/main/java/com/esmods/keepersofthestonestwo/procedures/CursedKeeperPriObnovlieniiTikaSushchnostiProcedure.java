@@ -30,6 +30,12 @@ public class CursedKeeperPriObnovlieniiTikaSushchnostiProcedure {
 			if ((entity.getPersistentData().getString("State")).equals("Air")) {
 				CursedKeeperAirProcedure.execute(entity);
 			}
+			if ((entity.getPersistentData().getString("State")).equals("Earth")) {
+				CursedKeeperEarthProcedure.execute(world, x, y, z, entity);
+			}
+			if ((entity.getPersistentData().getString("State")).equals("Water")) {
+				CursedKeeperWaterProcedure.execute(entity);
+			}
 		}
 	}
 }

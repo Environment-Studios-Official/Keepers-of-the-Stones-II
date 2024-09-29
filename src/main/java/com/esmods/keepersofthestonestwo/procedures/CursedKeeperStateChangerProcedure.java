@@ -15,12 +15,18 @@ public class CursedKeeperStateChangerProcedure {
 		if (!entity.getPersistentData().getBoolean("Phase")) {
 			entity.getPersistentData().putString("State", "Summon");
 		} else {
-			StateSelector = Mth.nextInt(RandomSource.create(), 1, 2);
+			StateSelector = Mth.nextInt(RandomSource.create(), 1, 4);
 			if (StateSelector == 1) {
 				entity.getPersistentData().putString("State", "Fire");
 			}
 			if (StateSelector == 2) {
 				entity.getPersistentData().putString("State", "Air");
+			}
+			if (StateSelector == 3) {
+				entity.getPersistentData().putString("State", "Earth");
+			}
+			if (StateSelector == 4) {
+				entity.getPersistentData().putString("State", "Water");
 			}
 		}
 		if ((entity.getPersistentData().getString("State")).equals(entity.getPersistentData().getString("PreviousState")) || (entity.getPersistentData().getString("State")).equals(entity.getPersistentData().getString("PreviousPreviousState"))) {

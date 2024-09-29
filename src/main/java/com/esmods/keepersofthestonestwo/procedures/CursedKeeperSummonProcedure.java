@@ -18,7 +18,7 @@ public class CursedKeeperSummonProcedure {
 		if (entity == null)
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5));
+			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
 		if (entity.getPersistentData().getDouble("IA") == 15) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
@@ -133,7 +133,7 @@ public class CursedKeeperSummonProcedure {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.fall");
 				}
 			}
-			if (entity.getPersistentData().getDouble("IA") == 2196) {
+			if (entity.getPersistentData().getDouble("IA") == 2216) {
 				CursedKeeperStateChangerProcedure.execute(entity);
 			}
 		}
