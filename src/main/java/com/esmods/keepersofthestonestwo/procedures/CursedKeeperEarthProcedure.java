@@ -41,13 +41,13 @@ public class CursedKeeperEarthProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
-		if (entity.getPersistentData().getDouble("IA") == 0) {
+		if (entity.getPersistentData().getDouble("IA") == 15) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.stalagmite_piercing");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 44 && entity.getPersistentData().getDouble("IA") < 46) {
-			if (entity.getPersistentData().getDouble("IA") > 44 && entity.getPersistentData().getDouble("IA") < 46) {
+		if (entity.getPersistentData().getDouble("IA") > 59 && entity.getPersistentData().getDouble("IA") < 61) {
+			if (entity.getPersistentData().getDouble("IA") > 59 && entity.getPersistentData().getDouble("IA") < 61) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate_tiles.break")), SoundSource.HOSTILE, 1, 1);
@@ -78,7 +78,7 @@ public class CursedKeeperEarthProcedure {
 				}
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 65) {
+		if (entity.getPersistentData().getDouble("IA") == 80) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 		}

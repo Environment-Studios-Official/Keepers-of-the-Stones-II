@@ -23,16 +23,16 @@ public class CursedKeeperWaterProcedure {
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
 		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
-		if (entity.getPersistentData().getDouble("IA") == 0) {
+		if (entity.getPersistentData().getDouble("IA") == 15) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.water_healing");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 55) {
+		if (entity.getPersistentData().getDouble("IA") == 70) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4, false, false));
 		}
-		if (entity.getPersistentData().getDouble("IA") == 75) {
+		if (entity.getPersistentData().getDouble("IA") == 90) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 		}
