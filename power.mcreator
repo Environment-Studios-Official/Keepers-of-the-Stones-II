@@ -32928,6 +32928,132 @@
         ]
       },
       "path": "~/Elements/Form"
+    },
+    {
+      "name": "FormSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "form_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/FormSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesForm",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_form",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesFormButtonMessage.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesFormScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesFormMenu.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Form"
+    },
+    {
+      "name": "Attack177",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_177",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack177Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Form"
+    },
+    {
+      "name": "Attack178",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_178",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack178Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Form"
+    },
+    {
+      "name": "Attack179",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_179",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack179Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Form"
+    },
+    {
+      "name": "Attack180",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_180",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack180Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Form"
     }
   ],
   "variable_elements": [
@@ -34627,6 +34753,7 @@
       "item.power.light_armor_chestplate": "Нагрудник мастера света",
       "item.power.mist_armor_chestplate": "Нагрудник мастера тумана",
       "item.power.energium_hoe": "Энерджиумная мотыга",
+      "gui.power.wheel_abilities_form.tooltip_spiritual_flight_uses_5": "Spiritual flight, uses 5",
       "trim_material.power.copyrium_material": "Копириум",
       "item.power.plants_armor_chestplate": "Нагрудник мастера зелени",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Океанический шторм, расходует 35",
@@ -34717,6 +34844,7 @@
       "item.power.destruction_armor_boots": "Ботинки мастера разрушениеt",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Разрушительный шар, расходует 45",
       "item.power.space_armor_helmet": "Шлем мастера космоса",
+      "gui.power.wheel_abilities_form.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "advancements.keepers_of_the_stones_2.descr": "Обновитесь до Хранители Камней II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Замораживающий луч, расходует 10",
       "power.modinfo.update_cpapi": "§eВерсия Colorful Powers API была обновлена до версии: ",
@@ -35104,6 +35232,7 @@
       "item.power.plants_armor_helmet": "Шлем мастера зелени",
       "subtitles.record.ancient_mood": "A record is playing",
       "item.power.sound_armor_helmet": "Шлем мастера звука",
+      "gui.power.wheel_abilities_form.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "item.power.right_metal_gauntlet": "Правая металлическая перчатка",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r Вы используете неофициальную версию мода!",
       "entity.power.turret": "Турель",
@@ -35431,6 +35560,7 @@
       "item.power.light_armor_chestplate": "Light Chestplate",
       "item.power.mist_armor_chestplate": "Mist Chestplate",
       "item.power.energium_hoe": "Energium Hoe",
+      "gui.power.wheel_abilities_form.tooltip_spiritual_flight_uses_5": "Spiritual flight, uses 5",
       "trim_material.power.copyrium_material": "Copyrium",
       "item.power.plants_armor_chestplate": "Plants Chestplate",
       "gui.power.wheel_abilities_ocean.tooltip_oceanic_storm_uses_35": "Oceanic storm, uses 35",
@@ -35521,6 +35651,7 @@
       "item.power.destruction_armor_boots": "Destruction Boots",
       "gui.power.wheel_abilities_destruction.tooltip_destruction_ball_uses_45": "Destruction ball, uses 45",
       "item.power.space_armor_helmet": "Space Helmet",
+      "gui.power.wheel_abilities_form.tooltip_summon_spirit_uses_75": "Summon spirit, uses 75",
       "advancements.keepers_of_the_stones_2.descr": "Upgrade to Keepers of the Stones II",
       "gui.power.wheel_abilities_ice.tooltip_freezing_ray_uses_10": "Freezing ray, uses 10",
       "power.modinfo.update_cpapi": "§eThe Colorful Powers API version has been updated to: ",
@@ -35908,6 +36039,7 @@
       "item.power.plants_armor_helmet": "Plants Helmet",
       "subtitles.record.ancient_mood": "",
       "item.power.sound_armor_helmet": "Sound Helmet",
+      "gui.power.wheel_abilities_form.tooltip_flow_astral_energy_uses_10": "Flow astral energy, uses 10",
       "item.power.right_metal_gauntlet": "Right Metal Gauntlet",
       "power.modinfo.unofficial_version": "§9[Keepers of the Stones II]§r You are using an unofficial version of the mod!",
       "entity.power.turret": "Turret",
@@ -36336,6 +36468,10 @@
                       },
                       {
                         "name": "Spirit",
+                        "children": []
+                      },
+                      {
+                        "name": "Form",
                         "children": []
                       }
                     ]
