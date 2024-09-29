@@ -198,6 +198,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.GRAVITY_BATTERY.get());
 				tabData.accept(PowerModItems.SMOKE_BATTERY.get());
 				tabData.accept(PowerModItems.SPIRIT_BATTERY.get());
+				tabData.accept(PowerModItems.FORM_BATTERY.get());
 			})
 
 					.build());
