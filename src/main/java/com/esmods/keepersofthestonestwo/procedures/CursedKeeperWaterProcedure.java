@@ -22,17 +22,19 @@ public class CursedKeeperWaterProcedure {
 		double ZPar = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
-		if (entity.getPersistentData().getDouble("IA") == 15) {
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.water_healing");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 50) {
+		if (entity.getPersistentData().getDouble("IA") == 55) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 2, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4, false, false));
 		}
-		if (entity.getPersistentData().getDouble("IA") == 70) {
-			CursedKeeperStateChangerProcedure.execute(entity);
+		if (entity.getPersistentData().getDouble("IA") == 75) {
+			entity.getPersistentData().putDouble("IA", 0);
+			entity.getPersistentData().putString("State", "Idle");
 		}
 	}
 }

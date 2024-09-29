@@ -32405,25 +32405,6 @@
       "path": "~/Bosses/CursedKeeper"
     },
     {
-      "name": "CursedKeeperStateChanger",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "cursed_keeper_state_changer",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperStateChangerProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Bosses/CursedKeeper"
-    },
-    {
       "name": "CursedKeeperSummon",
       "type": "procedure",
       "compiles": true,
@@ -32673,6 +32654,41 @@
         ]
       },
       "path": "~/ItemsAndBlocks/OtherItems"
+    },
+    {
+      "name": "CursedKeeperAttackDetection",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "cursed_keeper_attack_detection",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/CursedKeeperAttackDetectionProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Bosses/CursedKeeper"
     }
   ],
   "variable_elements": [

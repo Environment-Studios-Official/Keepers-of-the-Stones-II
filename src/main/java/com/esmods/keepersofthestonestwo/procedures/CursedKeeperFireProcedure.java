@@ -39,16 +39,17 @@ public class CursedKeeperFireProcedure {
 		double ZPar = 0;
 		Range = 1;
 		particles = 3;
-		if (entity.getPersistentData().getDouble("IA") == 15) {
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.firethrowing");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 22 && entity.getPersistentData().getDouble("IA") < 32) {
+		if (entity.getPersistentData().getDouble("IA") > 4 && entity.getPersistentData().getDouble("IA") < 15) {
 			entity.getPersistentData().putDouble("BreathRange", (entity.getPersistentData().getDouble("BreathRange") + 1));
 		}
-		if (entity.getPersistentData().getDouble("IA") > 35 && entity.getPersistentData().getDouble("IA") < 55) {
-			if (entity.getPersistentData().getDouble("IA") > 35 && entity.getPersistentData().getDouble("IA") < 37) {
+		if (entity.getPersistentData().getDouble("IA") > 20 && entity.getPersistentData().getDouble("IA") < 47) {
+			if (entity.getPersistentData().getDouble("IA") > 20 && entity.getPersistentData().getDouble("IA") < 22) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("item.firecharge.use")), SoundSource.HOSTILE, 1, 1);
@@ -70,9 +71,9 @@ public class CursedKeeperFireProcedure {
 								.toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity)) {
-								if (!(entityiterator instanceof LivingEntity _livEnt16 && _livEnt16.isBlocking())) {
+								if (!(entityiterator instanceof LivingEntity _livEnt18 && _livEnt18.isBlocking())) {
 									if (!(entityiterator instanceof ItemEntity)) {
-										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 12);
+										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 24);
 										entityiterator.igniteForSeconds(5);
 									}
 								} else {
@@ -112,9 +113,10 @@ public class CursedKeeperFireProcedure {
 				loop = 0;
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 86) {
+		if (entity.getPersistentData().getDouble("IA") == 55) {
 			entity.getPersistentData().putDouble("BreathRange", 0);
-			CursedKeeperStateChangerProcedure.execute(entity);
+			entity.getPersistentData().putDouble("IA", 0);
+			entity.getPersistentData().putString("State", "Idle");
 		}
 	}
 }

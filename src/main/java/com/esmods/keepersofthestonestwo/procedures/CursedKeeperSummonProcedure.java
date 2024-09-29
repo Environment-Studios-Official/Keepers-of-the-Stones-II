@@ -19,6 +19,7 @@ public class CursedKeeperSummonProcedure {
 			return;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
 		if (entity.getPersistentData().getDouble("IA") == 15) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.agro");
@@ -128,13 +129,16 @@ public class CursedKeeperSummonProcedure {
 			if (entity.getPersistentData().getDouble("IA") == 2140) {
 				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 					_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 60, 255, false, false));
-				entity.getPersistentData().putBoolean("Phase", true);
 				if (entity instanceof CursedKeeperEntity) {
 					((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.fall");
 				}
 			}
-			if (entity.getPersistentData().getDouble("IA") == 2216) {
-				CursedKeeperStateChangerProcedure.execute(entity);
+			if (entity.getPersistentData().getDouble("IA") == 2196) {
+				entity.getPersistentData().putBoolean("Phase", true);
+				entity.getPersistentData().putDouble("IA", 0);
+				PowerMod.queueServerWork(1, () -> {
+					entity.getPersistentData().putString("State", "Idle");
+				});
 			}
 		}
 	}

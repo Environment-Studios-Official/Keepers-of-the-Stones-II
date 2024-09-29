@@ -27,10 +27,11 @@
       "value": -8337805,
       "falpha": 0.0
     },
-    "creativeTab": {
-      "value": "CUSTOM:Mobs"
-    },
-    "creativeTabs": [],
+    "creativeTabs": [
+      {
+        "value": "CUSTOM:Mobs"
+      }
+    ],
     "isBoss": true,
     "bossBarColor": "YELLOW",
     "bossBarType": "NOTCHED_10",

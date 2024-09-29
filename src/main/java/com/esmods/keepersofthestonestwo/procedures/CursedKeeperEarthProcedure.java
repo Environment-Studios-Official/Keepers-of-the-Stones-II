@@ -40,13 +40,14 @@ public class CursedKeeperEarthProcedure {
 		double ZPar = 0;
 		if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 			_entity.addEffect(new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 3, 5, false, false));
-		if (entity.getPersistentData().getDouble("IA") == 15) {
+		entity.getPersistentData().putDouble("IA", (entity.getPersistentData().getDouble("IA") + 1));
+		if (entity.getPersistentData().getDouble("IA") == 0) {
 			if (entity instanceof CursedKeeperEntity) {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.stalagmite_piercing");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") > 37 && entity.getPersistentData().getDouble("IA") < 39) {
-			if (entity.getPersistentData().getDouble("IA") > 37 && entity.getPersistentData().getDouble("IA") < 39) {
+		if (entity.getPersistentData().getDouble("IA") > 44 && entity.getPersistentData().getDouble("IA") < 46) {
+			if (entity.getPersistentData().getDouble("IA") > 44 && entity.getPersistentData().getDouble("IA") < 46) {
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.deepslate_tiles.break")), SoundSource.HOSTILE, 1, 1);
@@ -57,7 +58,7 @@ public class CursedKeeperEarthProcedure {
 			}
 			{
 				final Vec3 _center = new Vec3(x, y, z);
-				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(8 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+				List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(16 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 				for (Entity entityiterator : _entfound) {
 					if (!(entityiterator == entity) && entityiterator instanceof Player) {
 						if (!(entityiterator instanceof ItemEntity)) {
@@ -71,14 +72,15 @@ public class CursedKeeperEarthProcedure {
 							if (world instanceof Level _level)
 								_level.updateNeighborsAt(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()),
 										_level.getBlockState(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ())).getBlock());
-							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 21);
+							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 42);
 						}
 					}
 				}
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 59) {
-			CursedKeeperStateChangerProcedure.execute(entity);
+		if (entity.getPersistentData().getDouble("IA") == 65) {
+			entity.getPersistentData().putDouble("IA", 0);
+			entity.getPersistentData().putString("State", "Idle");
 		}
 	}
 }
