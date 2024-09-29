@@ -44,6 +44,7 @@ import net.minecraft.nbt.CompoundTag;
 import net.minecraft.core.registries.BuiltInRegistries;
 
 import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriObnovlieniiTikaSushchnostiProcedure;
+import com.esmods.keepersofthestonestwo.procedures.CursedKeeperPriGibieliSushchnostiProcedure;
 import com.esmods.keepersofthestonestwo.init.PowerModItems;
 
 public class CursedKeeperEntity extends Monster implements GeoEntity {
@@ -146,6 +147,12 @@ public class CursedKeeperEntity extends Monster implements GeoEntity {
 	@Override
 	public boolean fireImmune() {
 		return true;
+	}
+
+	@Override
+	public void die(DamageSource source) {
+		super.die(source);
+		CursedKeeperPriGibieliSushchnostiProcedure.execute(this.level(), this.getX(), this.getY(), this.getZ());
 	}
 
 	@Override
