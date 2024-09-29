@@ -12,8 +12,8 @@
     "mobEffectCategory": "BENEFICIAL",
     "renderStatusInInventory": true,
     "renderStatusInHUD": true,
-    "isCuredByMilk": true,
-    "isProtectedByTotem": true,
+    "isCuredByMilk": false,
+    "isProtectedByTotem": false,
     "isCuredbyHoney": false,
     "onStarted": {
       "name": "BlueFlameMasterStart"
