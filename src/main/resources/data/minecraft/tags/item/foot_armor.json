@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:form_armor_boots",
     "power:spirit_armor_boots",
     "power:smoke_armor_boots",
     "power:gravity_armor_boots",

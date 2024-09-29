@@ -138,6 +138,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.GRAVITY_STONE.get());
 				tabData.accept(PowerModItems.SMOKE_STONE.get());
 				tabData.accept(PowerModItems.SPIRIT_STONE.get());
+				tabData.accept(PowerModItems.FORM_STONE.get());
 			})
 
 					.build());

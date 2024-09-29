@@ -24,6 +24,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpaceStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart3ButtonMessage;
 
@@ -42,6 +43,7 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_vacuum_element;
 	ImageButton imagebutton_blood_element;
 	ImageButton imagebutton_spirit_element;
+	ImageButton imagebutton_form_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -82,6 +84,9 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		if (SpiritStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_spirit"), mouseX, mouseY);
+		if (FormStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_form"), mouseX, mouseY);
 	}
 
 	@Override
@@ -259,5 +264,20 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_spirit_element", imagebutton_spirit_element);
 		this.addRenderableWidget(imagebutton_spirit_element);
+		imagebutton_form_element = new ImageButton(this.leftPos + 71, this.topPos + 69, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/form_element.png"), ResourceLocation.parse("power:textures/screens/form_element_highlighted.png")), e -> {
+					if (FormStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart3ButtonMessage(10, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 10, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (FormStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_form_element", imagebutton_form_element);
+		this.addRenderableWidget(imagebutton_form_element);
 	}
 }

@@ -53,6 +53,7 @@ import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IronSkinEffectEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherMasterEndProcedure;
@@ -111,6 +112,7 @@ import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.FormMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
@@ -189,6 +191,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -309,6 +312,8 @@ public class PowerModMobEffects {
 			SmokeIntangibilityEndProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(SPIRIT_MASTER)) {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(FORM_MASTER)) {
+			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

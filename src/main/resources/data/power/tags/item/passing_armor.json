@@ -177,6 +177,10 @@
     "power:spirit_armor_helmet",
     "power:spirit_armor_chestplate",
     "power:spirit_armor_leggings",
-    "power:spirit_armor_boots"
+    "power:spirit_armor_boots",
+    "power:form_armor_helmet",
+    "power:form_armor_chestplate",
+    "power:form_armor_leggings",
+    "power:form_armor_boots"
   ]
 }
