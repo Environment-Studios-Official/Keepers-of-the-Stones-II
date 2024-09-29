@@ -1,7 +1,5 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.minecraft.world.level.block.state.properties.IntegerProperty;
-import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
@@ -136,12 +134,6 @@ public class CursedKeeperSummonProcedure {
 				}
 			}
 			if (entity.getPersistentData().getDouble("IA") == 2196) {
-				{
-					BlockPos _pos = BlockPos.containing(x, y, z);
-					BlockState _bs = world.getBlockState(_pos);
-					if (_bs.getBlock().getStateDefinition().getProperty("animation") instanceof IntegerProperty _integerProp)
-						world.setBlock(_pos, _bs.setValue(_integerProp, 0), 3);
-				}
 				CursedKeeperStateChangerProcedure.execute(entity);
 			}
 		}
