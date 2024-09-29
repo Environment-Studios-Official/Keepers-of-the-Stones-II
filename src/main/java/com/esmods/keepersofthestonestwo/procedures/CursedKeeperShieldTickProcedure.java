@@ -40,7 +40,7 @@ public class CursedKeeperShieldTickProcedure {
 		double timer = 0;
 		if (entity instanceof CursedKeeperEntity) {
 			if (entity.getPersistentData().getDouble("windShield") > 0) {
-				if (timer > 20) {
+				if (timer > 40) {
 					timer = timer - 1;
 				} else if (timer == 0) {
 					{
@@ -76,7 +76,7 @@ public class CursedKeeperShieldTickProcedure {
 							}
 						}
 					}
-					timer = 20;
+					timer = 40;
 					entity.getPersistentData().putDouble("windShield", (entity.getPersistentData().getDouble("windShield") - 1));
 				}
 			}
