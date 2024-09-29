@@ -73,8 +73,8 @@ public class CursedKeeperFireProcedure {
 							if (!(entityiterator == entity)) {
 								if (!(entityiterator instanceof LivingEntity _livEnt18 && _livEnt18.isBlocking())) {
 									if (!(entityiterator instanceof ItemEntity)) {
-										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 24);
-										entityiterator.igniteForSeconds(5);
+										entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), (float) 13.5);
+										entityiterator.igniteForSeconds(10);
 									}
 								} else {
 									if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.SHIELD) {

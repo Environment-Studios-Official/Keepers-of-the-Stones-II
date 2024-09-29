@@ -19,10 +19,10 @@ public class CursedKeeperAirProcedure {
 				((CursedKeeperEntity) entity).setAnimation("animation.cursed_keeper.wind_shield");
 			}
 		}
-		if (entity.getPersistentData().getDouble("IA") == 31) {
+		if (entity.getPersistentData().getDouble("IA") == 44) {
 			entity.getPersistentData().putDouble("windShield", 300);
 		}
-		if (entity.getPersistentData().getDouble("IA") == 331) {
+		if (entity.getPersistentData().getDouble("IA") == 344) {
 			entity.getPersistentData().putDouble("IA", 0);
 			entity.getPersistentData().putString("State", "Idle");
 		}
