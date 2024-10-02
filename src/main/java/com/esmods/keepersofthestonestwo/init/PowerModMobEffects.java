@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WarpPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
@@ -43,6 +44,7 @@ import com.esmods.keepersofthestonestwo.procedures.MusicMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MiniaturizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
@@ -53,6 +55,8 @@ import com.esmods.keepersofthestonestwo.procedures.LavaMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IronSkinEffectEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.IceMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GravityMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GigantizationPriIstiechieniiEffiektaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherMasterEndProcedure;
@@ -68,6 +72,7 @@ import com.esmods.keepersofthestonestwo.procedures.AmberMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import com.esmods.keepersofthestonestwo.potion.WaterMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.WarpMobEffect;
 import com.esmods.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
@@ -100,6 +105,7 @@ import com.esmods.keepersofthestonestwo.potion.MushroomsMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MiniaturizationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MercuryMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MagnetMasterMobEffect;
@@ -111,6 +117,8 @@ import com.esmods.keepersofthestonestwo.potion.IronSkinMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ImmortalityMobEffect;
 import com.esmods.keepersofthestonestwo.potion.IceMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GravityMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.GigantizationMobEffect;
+import com.esmods.keepersofthestonestwo.potion.FormMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
@@ -189,6 +197,10 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_MASTER = REGISTRY.register("smoke_master", () -> new SmokeMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> WARP = REGISTRY.register("warp", () -> new WarpMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MINIATURIZATION = REGISTRY.register("miniaturization", () -> new MiniaturizationMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> GIGANTIZATION = REGISTRY.register("gigantization", () -> new GigantizationMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -309,6 +321,14 @@ public class PowerModMobEffects {
 			SmokeIntangibilityEndProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(SPIRIT_MASTER)) {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(FORM_MASTER)) {
+			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(WARP)) {
+			WarpPriIstiechieniiEffiektaProcedure.execute(entity);
+		} else if (effectInstance.getEffect().is(MINIATURIZATION)) {
+			MiniaturizationPriIstiechieniiEffiektaProcedure.execute(entity);
+		} else if (effectInstance.getEffect().is(GIGANTIZATION)) {
+			GigantizationPriIstiechieniiEffiektaProcedure.execute(entity);
 		}
 	}
 }

@@ -297,6 +297,38 @@
           "x": 214,
           "y": 128
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_form_element",
+          "image": "form_element.png",
+          "hoveredImage": "form_element_highlighted.png",
+          "onClick": {
+            "name": "FormElementGet"
+          },
+          "displayCondition": {
+            "name": "FormStoneCheck"
+          },
+          "x": 151,
+          "y": 95
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_form",
+          "text": {
+            "fixedValue": "Form"
+          },
+          "displayCondition": {
+            "name": "FormStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 148,
+          "y": 91
+        }
       }
     ],
     "gridSettings": {

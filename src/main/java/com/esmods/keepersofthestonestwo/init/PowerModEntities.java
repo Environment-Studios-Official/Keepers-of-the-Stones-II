@@ -143,7 +143,7 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<PoisonPitEntity>> POISON_PIT = register("poison_pit",
 			EntityType.Builder.<PoisonPitEntity>of(PoisonPitEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3).fireImmune().sized(4f, 0.2f));
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedKeeperEntity>> CURSED_KEEPER = register("cursed_keeper",
-			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(128).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
+			EntityType.Builder.<CursedKeeperEntity>of(CursedKeeperEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(256).setUpdateInterval(3).fireImmune().sized(0.6f, 1.8f));
 	public static final DeferredHolder<EntityType<?>, EntityType<MercuryBallProjectileEntity>> MERCURY_BALL_PROJECTILE = register("mercury_ball_projectile",
 			EntityType.Builder.<MercuryBallProjectileEntity>of(MercuryBallProjectileEntity::new, MobCategory.MISC).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(1).sized(0.5f, 0.5f));
 	public static final DeferredHolder<EntityType<?>, EntityType<NoteBombProjectileEntity>> NOTE_BOMB_PROJECTILE = register("note_bomb_projectile",
@@ -161,7 +161,9 @@ public class PowerModEntities {
 	public static final DeferredHolder<EntityType<?>, EntityType<CursedSquireEntity>> CURSED_SQUIRE = register("cursed_squire",
 			EntityType.Builder.<CursedSquireEntity>of(CursedSquireEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
 	public static final DeferredHolder<EntityType<?>, EntityType<SpiritEntity>> SPIRIT = register("spirit",
-			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3).fireImmune().sized(1f, 1f));
+			EntityType.Builder.<SpiritEntity>of(SpiritEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(32).setUpdateInterval(3)
+
+					.sized(1f, 1f));
 
 	private static <T extends Entity> DeferredHolder<EntityType<?>, EntityType<T>> register(String registryname, EntityType.Builder<T> entityTypeBuilder) {
 		return REGISTRY.register(registryname, () -> (EntityType<T>) entityTypeBuilder.build(registryname));

@@ -28,6 +28,7 @@ import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.FormElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodElementGetProcedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
@@ -107,6 +108,10 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 9) {
 
 			SpiritElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 10) {
+
+			FormElementGetProcedure.execute(world, entity);
 		}
 	}
 

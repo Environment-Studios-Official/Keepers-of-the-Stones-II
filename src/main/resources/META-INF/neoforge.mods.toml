@@ -4,7 +4,7 @@ license="GNU General Public License version 3 (GPLv3)"
 
 [[mods]]
 modId="power"
-version="1.0.0.44"
+version="1.0.0.45"
 displayName="Keepers of the Stones II"
 updateJSONURL="https://raw.githubusercontent.com/Environment-Studios-Official/Environment-Update-Center/main/kots_update_checker_fg.json"
 displayURL="https://modrinth.com/mod/keepers-of-the-stones-2"
@@ -19,7 +19,7 @@ description="Keepers of the Stones II is a mod created as a continuation of the 
 [[dependencies.power]]
     modId="neoforge"
     type="required"
-    versionRange="[21.1.12,)"
+    versionRange="[21.1.65,)"
     ordering="AFTER"
     side="BOTH"
 

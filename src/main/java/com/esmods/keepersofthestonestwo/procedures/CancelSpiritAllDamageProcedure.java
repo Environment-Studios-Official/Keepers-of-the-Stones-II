@@ -1,24 +1,21 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
-import net.neoforged.neoforge.event.entity.living.LivingEntityUseItemEvent;
+import net.neoforged.neoforge.event.entity.living.LivingIncomingDamageEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.ICancellableEvent;
 import net.neoforged.bus.api.Event;
 
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.ItemStack;
-import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
 import javax.annotation.Nullable;
 
-import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 
 @EventBusSubscriber
-public class CancelUseMilkInActiveStoneProcedure {
+public class CancelSpiritAllDamageProcedure {
 	@SubscribeEvent
-	public static void onUseItemStart(LivingEntityUseItemEvent.Start event) {
+	public static void onEntityAttacked(LivingIncomingDamageEvent event) {
 		if (event.getEntity() != null) {
 			execute(event, event.getEntity());
 		}
@@ -31,7 +28,7 @@ public class CancelUseMilkInActiveStoneProcedure {
 	private static void execute(@Nullable Event event, Entity entity) {
 		if (entity == null)
 			return;
-		if ((entity instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == Items.MILK_BUCKET && entity.getData(PowerModVariables.PLAYER_VARIABLES).active_power) {
+		if (entity instanceof SpiritEntity) {
 			if (event instanceof ICancellableEvent _cancellable) {
 				_cancellable.setCanceled(true);
 			}

@@ -159,6 +159,9 @@ import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipItem;
 import com.esmods.keepersofthestonestwo.item.FormStoneItem;
+import com.esmods.keepersofthestonestwo.item.FormSaiItem;
+import com.esmods.keepersofthestonestwo.item.FormBatteryItem;
+import com.esmods.keepersofthestonestwo.item.FormArmorItem;
 import com.esmods.keepersofthestonestwo.item.FireSwordItem;
 import com.esmods.keepersofthestonestwo.item.FireStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireBatteryItem;
@@ -590,6 +593,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> RAW_ENERGIUM_BLOCK = block(PowerModBlocks.RAW_ENERGIUM_BLOCK);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTERY = REGISTRY.register("mercury_battery", MercuryBatteryItem::new);
 	public static final DeferredHolder<Item, Item> MERCURY_BATTLE_AXE = REGISTRY.register("mercury_battle_axe", MercuryBattleAxeItem::new);
+	public static final DeferredHolder<Item, Item> CURSED_KEEPER_SPAWN_EGG = REGISTRY.register("cursed_keeper_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_KEEPER, -9216650, -7256744, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> DEEPSLATE_DEPLETED_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_DEPLETED_ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_ENERGIUM_ORE = block(PowerModBlocks.DEEPSLATE_ENERGIUM_ORE);
 	public static final DeferredHolder<Item, Item> DEEPSLATE_AMPLIFIER_ORE = block(PowerModBlocks.DEEPSLATE_AMPLIFIER_ORE);
@@ -642,6 +646,12 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> CURSED_SQUIRE_SPAWN_EGG = REGISTRY.register("cursed_squire_spawn_egg", () -> new DeferredSpawnEggItem(PowerModEntities.CURSED_SQUIRE, -11447452, -9817013, new Item.Properties()));
 	public static final DeferredHolder<Item, Item> SPIRIT_BATTERY = REGISTRY.register("spirit_battery", SpiritBatteryItem::new);
 	public static final DeferredHolder<Item, Item> SPIRIT_SICKLE = REGISTRY.register("spirit_sickle", SpiritSickleItem::new);
+	public static final DeferredHolder<Item, Item> FORM_ARMOR_HELMET = REGISTRY.register("form_armor_helmet", FormArmorItem.Helmet::new);
+	public static final DeferredHolder<Item, Item> FORM_ARMOR_CHESTPLATE = REGISTRY.register("form_armor_chestplate", FormArmorItem.Chestplate::new);
+	public static final DeferredHolder<Item, Item> FORM_ARMOR_LEGGINGS = REGISTRY.register("form_armor_leggings", FormArmorItem.Leggings::new);
+	public static final DeferredHolder<Item, Item> FORM_ARMOR_BOOTS = REGISTRY.register("form_armor_boots", FormArmorItem.Boots::new);
+	public static final DeferredHolder<Item, Item> FORM_BATTERY = REGISTRY.register("form_battery", FormBatteryItem::new);
+	public static final DeferredHolder<Item, Item> FORM_SAI = REGISTRY.register("form_sai", FormSaiItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

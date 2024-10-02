@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:form_armor_leggings",
     "power:spirit_armor_leggings",
     "power:smoke_armor_leggings",
     "power:gravity_armor_leggings",
