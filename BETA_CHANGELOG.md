@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.45<br/>
+<br />- Added new element - form
 <br />- Added final boss - Cursed Keeper
 <br />- Added a structure - Cursed Castle
 <br />- The cursed forest is now generated in the overworld
