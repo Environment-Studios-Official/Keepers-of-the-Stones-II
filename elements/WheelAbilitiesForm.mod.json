@@ -114,54 +114,6 @@
           "x": 117,
           "y": 24
         }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_warp_wave",
-          "image": "warp_wave.png",
-          "hoveredImage": "warp_wave_highlight.png",
-          "onClick": {
-            "name": "Attack177"
-          },
-          "displayCondition": {
-            "name": "PowerLockCheck"
-          },
-          "x": 190,
-          "y": 36
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_miniaturization",
-          "image": "miniaturization.png",
-          "hoveredImage": "miniaturization_highlight.png",
-          "onClick": {
-            "name": "Attack178"
-          },
-          "displayCondition": {
-            "name": "PowerLockCheck"
-          },
-          "x": 251,
-          "y": 97
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_gigantization",
-          "image": "gigantization.png",
-          "hoveredImage": "gigantization_highlight.png",
-          "onClick": {
-            "name": "Attack179"
-          },
-          "displayCondition": {
-            "name": "PowerLockCheck"
-          },
-          "x": 190,
-          "y": 158
-        }
       }
     ],
     "gridSettings": {
