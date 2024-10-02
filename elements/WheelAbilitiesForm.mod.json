@@ -136,7 +136,7 @@
         "data": {
           "name": "imagebutton_miniaturization",
           "image": "miniaturization.png",
-          "hoveredImage": "miniaturization.png",
+          "hoveredImage": "miniaturization_highlight.png",
           "onClick": {
             "name": "Attack178"
           },

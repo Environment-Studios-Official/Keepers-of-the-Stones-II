@@ -33186,6 +33186,108 @@
         ]
       },
       "path": "~/Elements/Form"
+    },
+    {
+      "name": "Miniaturization",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miniaturization",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/MiniaturizationMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "MiniaturizationPriNalozhieniiEffiekta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miniaturization_pri_nalozhienii_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriNalozhieniiEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "MiniaturizationPriIstiechieniiEffiekta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "miniaturization_pri_istiechienii_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MiniaturizationPriIstiechieniiEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "Gigantization",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigantization",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/GigantizationMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "GigantizationPriNalozhieniiEffiekta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigantization_pri_nalozhienii_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriNalozhieniiEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Form"
+    },
+    {
+      "name": "GigantizationPriIstiechieniiEffiekta",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gigantization_pri_istiechienii_effiekta",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/GigantizationPriIstiechieniiEffiektaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Form"
     }
   ],
   "variable_elements": [
@@ -34789,6 +34891,7 @@
       "item.power.spirit_spawn_egg": "Spirit Spawn Egg",
       "item.power.vacuum_armor_chestplate": "Нагрудник мастера пустоты",
       "item.power.energium_shovel": "Энергиумная лопата",
+      "effect.power.gigantization": "Gigantization",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Кровь",
       "battery.desc.ice": "Лёд",
       "item.power.lava_hammer": "Лавовый молот",
@@ -34908,6 +35011,7 @@
       "item.power.smoke_stone": "Камень дыма",
       "item.power.blue_flame_sword": "Меч синего пламени",
       "effect.power.air_master": "Мастер воздуха",
+      "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Рудный обеднённый энергиум",
       "item.minecraft.potion.effect.power_lock_potion": "Зелье блокировки силы",
       "item.power.destruction_broadsword": "Широкий меч разрушения",
@@ -35598,6 +35702,7 @@
       "gui.power.wheel_abilities_amber.tooltip_copying_power_uses_50": "Copying power, uses 50",
       "item.power.vacuum_armor_chestplate": "Vacuum Chestplate",
       "item.power.energium_shovel": "Energium Shovel",
+      "effect.power.gigantization": "Gigantization",
       "gui.power.keepers_box_gui_part_3.tooltip_blood": "Blood",
       "battery.desc.ice": "Ice",
       "item.power.lava_hammer": "Lava Hammer",
@@ -35717,6 +35822,7 @@
       "item.power.smoke_stone": "Smoke Stone",
       "item.power.blue_flame_sword": "Blue Flame Sword",
       "effect.power.air_master": "Master of the Air",
+      "effect.power.miniaturization": "Miniaturization",
       "item.power.raw_depleted_energium": "Raw Depleted Energium",
       "item.minecraft.potion.effect.power_lock_potion": "Potion of Power Lock",
       "item.power.destruction_broadsword": "Destruction Broadsword",

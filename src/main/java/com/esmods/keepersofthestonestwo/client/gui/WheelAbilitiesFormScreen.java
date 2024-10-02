@@ -192,7 +192,7 @@ public class WheelAbilitiesFormScreen extends AbstractContainerScreen<WheelAbili
 		guistate.put("button:imagebutton_warp_wave", imagebutton_warp_wave);
 		this.addRenderableWidget(imagebutton_warp_wave);
 		imagebutton_miniaturization = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
-				new WidgetSprites(ResourceLocation.parse("power:textures/screens/miniaturization.png"), ResourceLocation.parse("power:textures/screens/miniaturization.png")), e -> {
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/miniaturization.png"), ResourceLocation.parse("power:textures/screens/miniaturization_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesFormButtonMessage(7, x, y, z));
 						WheelAbilitiesFormButtonMessage.handleButtonAction(entity, 7, x, y, z);
