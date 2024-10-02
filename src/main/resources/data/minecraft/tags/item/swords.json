@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:form_sai",
     "power:spirit_sickle",
     "power:gravity_mace",
     "power:blue_flame_sword",

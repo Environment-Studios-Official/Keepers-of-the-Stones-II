@@ -162,6 +162,45 @@
           "x": 190,
           "y": 158
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_warp_wave_uses_15",
+          "text": {
+            "fixedValue": "Warp wave, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 199,
+          "y": 48
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_miniaturization_uses_50",
+          "text": {
+            "fixedValue": "Miniaturization, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 261,
+          "y": 109
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_gigantization_uses_50",
+          "text": {
+            "fixedValue": "Gigantization, uses 50"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 170
+        }
       }
     ],
     "gridSettings": {

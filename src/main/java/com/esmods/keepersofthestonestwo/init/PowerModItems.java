@@ -159,6 +159,7 @@ import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipSoupItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipItem;
 import com.esmods.keepersofthestonestwo.item.FormStoneItem;
+import com.esmods.keepersofthestonestwo.item.FormSaiItem;
 import com.esmods.keepersofthestonestwo.item.FormBatteryItem;
 import com.esmods.keepersofthestonestwo.item.FormArmorItem;
 import com.esmods.keepersofthestonestwo.item.FireSwordItem;
@@ -650,6 +651,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> FORM_ARMOR_LEGGINGS = REGISTRY.register("form_armor_leggings", FormArmorItem.Leggings::new);
 	public static final DeferredHolder<Item, Item> FORM_ARMOR_BOOTS = REGISTRY.register("form_armor_boots", FormArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> FORM_BATTERY = REGISTRY.register("form_battery", FormBatteryItem::new);
+	public static final DeferredHolder<Item, Item> FORM_SAI = REGISTRY.register("form_sai", FormSaiItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
