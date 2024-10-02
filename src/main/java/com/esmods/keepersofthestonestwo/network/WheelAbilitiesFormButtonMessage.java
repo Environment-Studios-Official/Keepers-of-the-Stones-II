@@ -1,47 +1,21 @@
 
 package com.esmods.keepersofthestonestwo.network;
 
-import net.neoforged.neoforge.network.handling.IPayloadContext;
-import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.bus.api.SubscribeEvent;
-
-import net.minecraft.world.level.Level;
-import net.minecraft.world.entity.player.Player;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.network.protocol.common.custom.CustomPacketPayload;
-import net.minecraft.network.protocol.PacketFlow;
-import net.minecraft.network.codec.StreamCodec;
-import net.minecraft.network.chat.Component;
-import net.minecraft.network.RegistryFriendlyByteBuf;
-import net.minecraft.core.BlockPos;
-
-import java.util.HashMap;
-
-import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesFormMenu;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
-import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack179Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack178Procedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack177Procedure;
-import com.esmods.keepersofthestonestwo.PowerMod;
-
-@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
-public record WheelAbilitiesFormButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
+@EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD) public record WheelAbilitiesFormButtonMessage(int buttonID, int x, int y, int z) implements CustomPacketPayload {
 
 	public static final Type<WheelAbilitiesFormButtonMessage> TYPE = new Type<>(ResourceLocation.fromNamespaceAndPath(PowerMod.MODID, "wheel_abilities_form_buttons"));
-	public static final StreamCodec<RegistryFriendlyByteBuf, WheelAbilitiesFormButtonMessage> STREAM_CODEC = StreamCodec.of((RegistryFriendlyByteBuf buffer, WheelAbilitiesFormButtonMessage message) -> {
-		buffer.writeInt(message.buttonID);
-		buffer.writeInt(message.x);
-		buffer.writeInt(message.y);
-		buffer.writeInt(message.z);
-	}, (RegistryFriendlyByteBuf buffer) -> new WheelAbilitiesFormButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt()));
-	@Override
-	public Type<WheelAbilitiesFormButtonMessage> type() {
+
+	public static final StreamCodec<RegistryFriendlyByteBuf, WheelAbilitiesFormButtonMessage> STREAM_CODEC = StreamCodec.of(
+			(RegistryFriendlyByteBuf buffer, WheelAbilitiesFormButtonMessage message) -> {
+				buffer.writeInt(message.buttonID);
+				buffer.writeInt(message.x);
+				buffer.writeInt(message.y);
+				buffer.writeInt(message.z);
+			},
+			(RegistryFriendlyByteBuf buffer) -> new WheelAbilitiesFormButtonMessage(buffer.readInt(), buffer.readInt(), buffer.readInt(), buffer.readInt())
+	);
+
+	@Override public Type<WheelAbilitiesFormButtonMessage> type() {
 		return TYPE;
 	}
 
@@ -53,6 +27,7 @@ public record WheelAbilitiesFormButtonMessage(int buttonID, int x, int y, int z)
 				int x = message.x;
 				int y = message.y;
 				int z = message.z;
+
 				handleButtonAction(entity, buttonID, x, y, z);
 			}).exceptionally(e -> {
 				context.connection().disconnect(Component.literal(e.getMessage()));
@@ -64,49 +39,69 @@ public record WheelAbilitiesFormButtonMessage(int buttonID, int x, int y, int z)
 	public static void handleButtonAction(Player entity, int buttonID, int x, int y, int z) {
 		Level world = entity.level();
 		HashMap guistate = WheelAbilitiesFormMenu.guistate;
+
 		// security measure to prevent arbitrary chunk generation
 		if (!world.hasChunkAt(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
 
-			OpenWheelOneProcedure.execute(entity);
-		}
-		if (buttonID == 1) {
+					if (buttonID == 0) {
+    
 
-			OpenWheelTwoProcedure.execute(entity);
-		}
-		if (buttonID == 2) {
+    OpenWheelOneProcedure.execute(entity)
+;
+					}
+					if (buttonID == 1) {
+    
 
-			OpenWheelThreeProcedure.execute(entity);
-		}
-		if (buttonID == 3) {
+    OpenWheelTwoProcedure.execute(entity)
+;
+					}
+					if (buttonID == 2) {
+    
 
-			OpenFakeWheelOneProcedure.execute(entity);
-		}
-		if (buttonID == 4) {
+    OpenWheelThreeProcedure.execute(entity)
+;
+					}
+					if (buttonID == 3) {
+    
 
-			OpenFakeWheelSecondProcedure.execute(entity);
-		}
-		if (buttonID == 5) {
+    OpenFakeWheelOneProcedure.execute(entity)
+;
+					}
+					if (buttonID == 4) {
+    
 
-			OpenFakeWheelThirdProcedure.execute(entity);
-		}
-		if (buttonID == 6) {
+    OpenFakeWheelSecondProcedure.execute(entity)
+;
+					}
+					if (buttonID == 5) {
+    
 
-			Attack177Procedure.execute(entity);
-		}
-		if (buttonID == 7) {
+    OpenFakeWheelThirdProcedure.execute(entity)
+;
+					}
+					if (buttonID == 6) {
+    
 
-			Attack178Procedure.execute(entity);
-		}
-		if (buttonID == 8) {
+    Attack177Procedure.execute(entity)
+;
+					}
+					if (buttonID == 7) {
+    
 
-			Attack179Procedure.execute(entity);
-		}
+    Attack178Procedure.execute(entity)
+;
+					}
+					if (buttonID == 8) {
+    
+
+    Attack179Procedure.execute(entity)
+;
+					}
 	}
 
-	@SubscribeEvent
-	public static void registerMessage(FMLCommonSetupEvent event) {
+	@SubscribeEvent public static void registerMessage(FMLCommonSetupEvent event) {
 		PowerMod.addNetworkMessage(WheelAbilitiesFormButtonMessage.TYPE, WheelAbilitiesFormButtonMessage.STREAM_CODEC, WheelAbilitiesFormButtonMessage::handleData);
 	}
+
 }

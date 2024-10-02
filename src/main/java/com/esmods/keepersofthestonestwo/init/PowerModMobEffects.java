@@ -16,6 +16,7 @@ import net.minecraft.world.effect.MobEffect;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.WarpPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
@@ -69,6 +70,7 @@ import com.esmods.keepersofthestonestwo.procedures.AmberMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.AirMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.potion.WhirlwindMobEffect;
 import com.esmods.keepersofthestonestwo.potion.WaterMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.WarpMobEffect;
 import com.esmods.keepersofthestonestwo.potion.VacuumMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
@@ -192,6 +194,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> SMOKE_INTANGIBILITY = REGISTRY.register("smoke_intangibility", () -> new SmokeIntangibilityMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> SPIRIT_MASTER = REGISTRY.register("spirit_master", () -> new SpiritMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> FORM_MASTER = REGISTRY.register("form_master", () -> new FormMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> WARP = REGISTRY.register("warp", () -> new WarpMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -314,6 +317,8 @@ public class PowerModMobEffects {
 			SpiritMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(FORM_MASTER)) {
 			FormMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(WARP)) {
+			WarpPriIstiechieniiEffiektaProcedure.execute(entity);
 		}
 	}
 }
