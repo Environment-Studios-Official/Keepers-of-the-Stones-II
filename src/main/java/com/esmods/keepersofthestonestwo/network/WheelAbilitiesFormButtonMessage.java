@@ -25,6 +25,9 @@ import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack179Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack178Procedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack177Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -87,6 +90,18 @@ public record WheelAbilitiesFormButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 5) {
 
 			OpenFakeWheelThirdProcedure.execute(entity);
+		}
+		if (buttonID == 6) {
+
+			Attack177Procedure.execute(entity);
+		}
+		if (buttonID == 7) {
+
+			Attack178Procedure.execute(entity);
+		}
+		if (buttonID == 8) {
+
+			Attack179Procedure.execute(entity);
 		}
 	}
 

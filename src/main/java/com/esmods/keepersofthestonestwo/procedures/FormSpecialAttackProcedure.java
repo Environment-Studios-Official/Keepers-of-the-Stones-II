@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 
@@ -75,6 +76,8 @@ public class FormSpecialAttackProcedure {
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.25);
+								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WARP, 200, 0));
 							}
 						}
 					}
