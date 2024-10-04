@@ -34,7 +34,7 @@ public class CursedKeeperAttackDetectionProcedure {
 								if (!entity.getPersistentData().getBoolean("Phase")) {
 									entity.getPersistentData().putString("State", "Summon");
 								} else {
-									if (Math.random() < (8) / ((float) 10)) {
+									if (Math.random() < (7) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Fire");
 									} else if (Math.random() < (4) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Air");
