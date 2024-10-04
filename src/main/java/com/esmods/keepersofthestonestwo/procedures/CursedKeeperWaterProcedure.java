@@ -30,7 +30,7 @@ public class CursedKeeperWaterProcedure {
 		}
 		if (entity.getPersistentData().getDouble("IA") == 70) {
 			if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 4, false, false));
+				_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 6, false, false));
 		}
 		if (entity.getPersistentData().getDouble("IA") == 90) {
 			entity.getPersistentData().putDouble("IA", 0);

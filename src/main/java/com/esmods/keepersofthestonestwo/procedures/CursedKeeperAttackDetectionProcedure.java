@@ -4,9 +4,8 @@ import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 
 import java.util.List;
 import java.util.Comparator;
@@ -35,17 +34,13 @@ public class CursedKeeperAttackDetectionProcedure {
 								if (!entity.getPersistentData().getBoolean("Phase")) {
 									entity.getPersistentData().putString("State", "Summon");
 								} else {
-									StateSelector = Mth.nextInt(RandomSource.create(), 1, 4);
-									if (StateSelector == 1) {
+									if (Math.random() < (8) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Fire");
-									}
-									if (StateSelector == 2) {
+									} else if (Math.random() < (4) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Air");
-									}
-									if (StateSelector == 3) {
+									} else if (Math.random() < (5) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Earth");
-									}
-									if (StateSelector == 4) {
+									} else if ((entity instanceof LivingEntity _livEnt ? _livEnt.getHealth() : -1) <= 175 ? Math.random() < (3) / ((float) 10) : Math.random() < (6) / ((float) 10)) {
 										entity.getPersistentData().putString("State", "Water");
 									}
 								}
