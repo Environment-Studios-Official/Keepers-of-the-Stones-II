@@ -3,6 +3,10 @@
   "temperature": 2,
   "downfall": 0,
   "effects": {
+    "additions_sound": {
+      "sound": "power:ambient.biome.cursed_forest",
+      "tick_chance": 0.0111
+    },
     "foliage_color": -8951420,
     "grass_color": -8951420,
     "sky_color": -5530695,

@@ -158,5 +158,17 @@
         "stream": false
       }
     ]
+  },
+  "ambient.biome.cursed_forest": {
+    "sounds": [
+      {
+        "name": "power:cursed_forest_ambient_1",
+        "stream": false
+      },
+      {
+        "name": "power:cursed_forest_ambient_2",
+        "stream": false
+      }
+    ]
   }
 }
