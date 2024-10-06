@@ -2,6 +2,7 @@ package com.esmods.keepersofthestonestwo.procedures;
 
 import net.neoforged.neoforge.items.ItemHandlerHelper;
 
+import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.item.component.CustomData;
@@ -21,6 +22,11 @@ public class MindMasterEndProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
 			return;
+		if (world instanceof Level _level) {
+			PlayerTeam _pt = _level.getScoreboard().getPlayerTeam((entity.getDisplayName().getString()));
+			if (_pt != null)
+				_level.getScoreboard().removePlayerTeam(_pt);
+		}
 		if (world instanceof Level _level) {
 			if (!_level.isClientSide()) {
 				_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("power:stone_deactivation")), SoundSource.PLAYERS, 1, 1);
