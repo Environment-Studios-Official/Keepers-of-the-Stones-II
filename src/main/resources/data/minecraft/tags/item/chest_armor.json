@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:mind_armor_chestplate",
     "power:form_armor_chestplate",
     "power:spirit_armor_chestplate",
     "power:smoke_armor_chestplate",
