@@ -37,9 +37,11 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_3;
 	ImageButton imagebutton_psychowaves;
 	ImageButton imagebutton_hypnosis;
+	ImageButton imagebutton_remote_control_show_coords;
+	ImageButton imagebutton_remote_controll_kill;
+	ImageButton imagebutton_remote_controll_release;
 
 	public WheelAbilitiesMindScreen(WheelAbilitiesMindMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -176,25 +178,11 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_3.png"), ResourceLocation.parse("power:textures/screens/ability_3_highlight.png")),
-				e -> {
-					if (true) {
-						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(6, x, y, z));
-						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 6, x, y, z);
-					}
-				}) {
-			@Override
-			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
-			}
-		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
 		imagebutton_psychowaves = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
 				new WidgetSprites(ResourceLocation.parse("power:textures/screens/psychowaves.png"), ResourceLocation.parse("power:textures/screens/psychowaves_highlight.png")), e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(7, x, y, z));
-						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 7, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(6, x, y, z));
+						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
@@ -208,8 +196,8 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 		imagebutton_hypnosis = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/hypnosis.png"), ResourceLocation.parse("power:textures/screens/hypnosis_highlight.png")),
 				e -> {
 					if (PowerLockCheckProcedure.execute(entity)) {
-						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(8, x, y, z));
-						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 8, x, y, z);
+						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(7, x, y, z));
+						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
@@ -220,5 +208,50 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_hypnosis", imagebutton_hypnosis);
 		this.addRenderableWidget(imagebutton_hypnosis);
+		imagebutton_remote_control_show_coords = new ImageButton(this.leftPos + 72, this.topPos + 134, 23, 23,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/remote_control_show_coords.png"), ResourceLocation.parse("power:textures/screens/remote_control_show_coords_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(8, x, y, z));
+						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 8, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_remote_control_show_coords", imagebutton_remote_control_show_coords);
+		this.addRenderableWidget(imagebutton_remote_control_show_coords);
+		imagebutton_remote_controll_kill = new ImageButton(this.leftPos + 95, this.topPos + 134, 23, 23,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/remote_controll_kill.png"), ResourceLocation.parse("power:textures/screens/remote_controll_kill_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(9, x, y, z));
+						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 9, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_remote_controll_kill", imagebutton_remote_controll_kill);
+		this.addRenderableWidget(imagebutton_remote_controll_kill);
+		imagebutton_remote_controll_release = new ImageButton(this.leftPos + 72, this.topPos + 157, 46, 23,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/remote_controll_release.png"), ResourceLocation.parse("power:textures/screens/remote_controll_release_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
+						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(10, x, y, z));
+						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 10, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_remote_controll_release", imagebutton_remote_controll_release);
+		this.addRenderableWidget(imagebutton_remote_controll_release);
 	}
 }

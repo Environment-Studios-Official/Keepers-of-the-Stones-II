@@ -33679,25 +33679,6 @@
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
     },
     {
-      "name": "Attack183",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "attack_183",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack183Procedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
-    },
-    {
       "name": "Attack184",
       "type": "procedure",
       "compiles": true,
@@ -33783,6 +33764,63 @@
         ]
       },
       "path": "~/ItemsAndBlocks/Batteries/MindBattery"
+    },
+    {
+      "name": "RemoteControl1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "RemoteControl2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "RemoteControl3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
     }
   ],
   "variable_elements": [

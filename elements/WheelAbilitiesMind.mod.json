@@ -125,20 +125,6 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
-          "onClick": {
-            "name": "Attack183"
-          },
-          "x": 190,
-          "y": 158,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
           "name": "imagebutton_psychowaves",
           "image": "psychowaves.png",
           "hoveredImage": "psychowaves_highlight.png",
@@ -167,6 +153,57 @@
           },
           "x": 251,
           "y": 97,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_control_show_coords",
+          "image": "remote_control_show_coords.png",
+          "hoveredImage": "remote_control_show_coords_highlight.png",
+          "onClick": {
+            "name": "RemoteControl1"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_controll_kill",
+          "image": "remote_controll_kill.png",
+          "hoveredImage": "remote_controll_kill_highlight.png",
+          "onClick": {
+            "name": "RemoteControl2"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 213,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_remote_controll_release",
+          "image": "remote_controll_release.png",
+          "hoveredImage": "remote_controll_release_highlight.png",
+          "onClick": {
+            "name": "RemoteControl3"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 181,
           "locked": false
         }
       }

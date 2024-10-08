@@ -19,13 +19,15 @@ import net.minecraft.core.BlockPos;
 import java.util.HashMap;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
+import com.esmods.keepersofthestonestwo.procedures.RemoteControl3Procedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoteControl2Procedure;
+import com.esmods.keepersofthestonestwo.procedures.RemoteControl1Procedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelThreeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenWheelOneProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelThirdProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelSecondProcedure;
 import com.esmods.keepersofthestonestwo.procedures.OpenFakeWheelOneProcedure;
-import com.esmods.keepersofthestonestwo.procedures.Attack183Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack182Procedure;
 import com.esmods.keepersofthestonestwo.procedures.Attack181Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
@@ -93,15 +95,23 @@ public record WheelAbilitiesMindButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 6) {
 
-			Attack183Procedure.execute(entity);
+			Attack181Procedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack181Procedure.execute(entity);
+			Attack182Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Attack182Procedure.execute(entity);
+			RemoteControl1Procedure.execute(entity);
+		}
+		if (buttonID == 9) {
+
+			RemoteControl2Procedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			RemoteControl3Procedure.execute(entity);
 		}
 	}
 
