@@ -159,11 +159,6 @@ public class MindSpecialAttackProcedure {
 									? _teamEnt.level().getScoreboard().getPlayersTeam(_teamEnt instanceof Player _pl ? _pl.getGameProfile().getName() : _teamEnt.getStringUUID()).getName()
 									: "").equals("HypnotizedBy" + entity.getDisplayName().getString())) {
 						entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 500);
-						if (world instanceof Level _level) {
-							PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-							if (_pt != null)
-								_level.getScoreboard().removePlayerTeam(_pt);
-						}
 					}
 				}
 				{
