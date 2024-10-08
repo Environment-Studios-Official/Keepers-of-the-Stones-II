@@ -33825,6 +33825,20 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "MindReactionParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_reaction_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/mind_reaction_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MindReactionParticleParticle.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
     }
   ],
   "variable_elements": [
