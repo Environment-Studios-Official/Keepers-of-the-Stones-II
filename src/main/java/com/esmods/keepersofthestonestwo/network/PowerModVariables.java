@@ -110,7 +110,6 @@ public class PowerModVariables {
 				clone.third_fake_wheel_open_var = original.third_fake_wheel_open_var;
 				clone.ability_using = original.ability_using;
 				clone.power_recorded = original.power_recorded;
-				clone.send_client_package = original.send_client_package;
 				clone.detransform_anim_trigger = original.detransform_anim_trigger;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
@@ -456,7 +455,6 @@ public class PowerModVariables {
 		public boolean ability_using = false;
 		public boolean power_recorded = false;
 		public boolean debug = false;
-		public boolean send_client_package = false;
 		public boolean detransform_anim_trigger = false;
 		public ItemStack helmet = ItemStack.EMPTY;
 		public ItemStack chestplate = ItemStack.EMPTY;
@@ -502,7 +500,6 @@ public class PowerModVariables {
 			nbt.putBoolean("ability_using", ability_using);
 			nbt.putBoolean("power_recorded", power_recorded);
 			nbt.putBoolean("debug", debug);
-			nbt.putBoolean("send_client_package", send_client_package);
 			nbt.putBoolean("detransform_anim_trigger", detransform_anim_trigger);
 			nbt.put("helmet", helmet.saveOptional(lookupProvider));
 			nbt.put("chestplate", chestplate.saveOptional(lookupProvider));
@@ -549,7 +546,6 @@ public class PowerModVariables {
 			ability_using = nbt.getBoolean("ability_using");
 			power_recorded = nbt.getBoolean("power_recorded");
 			debug = nbt.getBoolean("debug");
-			send_client_package = nbt.getBoolean("send_client_package");
 			detransform_anim_trigger = nbt.getBoolean("detransform_anim_trigger");
 			helmet = ItemStack.parseOptional(lookupProvider, nbt.getCompound("helmet"));
 			chestplate = ItemStack.parseOptional(lookupProvider, nbt.getCompound("chestplate"));
