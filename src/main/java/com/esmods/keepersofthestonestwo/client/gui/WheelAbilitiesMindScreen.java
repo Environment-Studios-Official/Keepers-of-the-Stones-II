@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesMindMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -36,9 +37,9 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
 	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_psychowaves;
+	ImageButton imagebutton_hypnosis;
 
 	public WheelAbilitiesMindScreen(WheelAbilitiesMindMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -175,7 +176,7 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_1.png"), ResourceLocation.parse("power:textures/screens/ability_1_highlight.png")),
+		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_3.png"), ResourceLocation.parse("power:textures/screens/ability_3_highlight.png")),
 				e -> {
 					if (true) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(6, x, y, z));
@@ -187,35 +188,37 @@ public class WheelAbilitiesMindScreen extends AbstractContainerScreen<WheelAbili
 				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_2.png"), ResourceLocation.parse("power:textures/screens/ability_2_highlight.png")),
-				e -> {
-					if (true) {
+		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
+		this.addRenderableWidget(imagebutton_ability_3);
+		imagebutton_psychowaves = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/psychowaves.png"), ResourceLocation.parse("power:textures/screens/psychowaves_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(7, x, y, z));
 						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_3.png"), ResourceLocation.parse("power:textures/screens/ability_3_highlight.png")),
+		guistate.put("button:imagebutton_psychowaves", imagebutton_psychowaves);
+		this.addRenderableWidget(imagebutton_psychowaves);
+		imagebutton_hypnosis = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/hypnosis.png"), ResourceLocation.parse("power:textures/screens/hypnosis_highlight.png")),
 				e -> {
-					if (true) {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesMindButtonMessage(8, x, y, z));
 						WheelAbilitiesMindButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_hypnosis", imagebutton_hypnosis);
+		this.addRenderableWidget(imagebutton_hypnosis);
 	}
 }

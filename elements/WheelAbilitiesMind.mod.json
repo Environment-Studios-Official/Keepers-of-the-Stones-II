@@ -125,11 +125,28 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_ability_3",
+          "image": "ability_3.png",
+          "hoveredImage": "ability_3_highlight.png",
+          "onClick": {
+            "name": "Attack183"
+          },
+          "x": 190,
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_psychowaves",
+          "image": "psychowaves.png",
+          "hoveredImage": "psychowaves_highlight.png",
           "onClick": {
             "name": "Attack181"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
           },
           "x": 190,
           "y": 36,
@@ -139,28 +156,17 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_hypnosis",
+          "image": "hypnosis.png",
+          "hoveredImage": "hypnosis_highlight.png",
           "onClick": {
             "name": "Attack182"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
           "y": 97,
-          "locked": false
-        }
-      },
-      {
-        "type": "imagebutton",
-        "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
-          "onClick": {
-            "name": "Attack183"
-          },
-          "x": 190,
-          "y": 158,
           "locked": false
         }
       }

@@ -1,5 +1,7 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import org.joml.Vector3f;
+
 import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.phys.Vec3;
 import net.minecraft.world.phys.AABB;
@@ -9,6 +11,7 @@ import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
@@ -21,6 +24,7 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.SimpleParticleType;
 import net.minecraft.core.particles.ParticleTypes;
+import net.minecraft.core.particles.DustParticleOptions;
 import net.minecraft.core.BlockPos;
 
 import java.util.List;
@@ -60,8 +64,8 @@ public class MindSpecialAttackProcedure {
 					} else {
 						break;
 					}
-					if (world instanceof ServerLevel _level)
-						_level.sendParticles(ParticleTypes.WITCH,
+					if (world instanceof ServerLevel)
+						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(207 / 255.0F, 120 / 255.0F, 202 / 255.0F), 1)),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
@@ -77,7 +81,7 @@ public class MindSpecialAttackProcedure {
 							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
 								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.25);
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.WARP, 200, 0));
+									_entity.addEffect(new MobEffectInstance(MobEffects.CONFUSION, 200, 4));
 							}
 						}
 					}
@@ -96,7 +100,7 @@ public class MindSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("mind_ability_2")) {
-			if (!(entity instanceof LivingEntity _livEnt18 && _livEnt18.hasEffect(PowerModMobEffects.GIGANTIZATION))) {
+			if (!(entity instanceof LivingEntity _livEnt19 && _livEnt19.hasEffect(PowerModMobEffects.GIGANTIZATION))) {
 				if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 50) {
 					if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
 						_entity.addEffect(new MobEffectInstance(PowerModMobEffects.MINIATURIZATION, 600, 0, false, false));

@@ -93,15 +93,15 @@ public record WheelAbilitiesMindButtonMessage(int buttonID, int x, int y, int z)
 		}
 		if (buttonID == 6) {
 
-			Attack181Procedure.execute(entity);
+			Attack183Procedure.execute(entity);
 		}
 		if (buttonID == 7) {
 
-			Attack182Procedure.execute(entity);
+			Attack181Procedure.execute(entity);
 		}
 		if (buttonID == 8) {
 
-			Attack183Procedure.execute(entity);
+			Attack182Procedure.execute(entity);
 		}
 	}
 
