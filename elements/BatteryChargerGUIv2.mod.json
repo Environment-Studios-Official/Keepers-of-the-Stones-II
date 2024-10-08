@@ -16,7 +16,8 @@
           "image": "battery_charger_gui.png",
           "use1Xscale": false,
           "x": 126,
-          "y": 37
+          "y": 37,
+          "locked": false
         }
       },
       {
@@ -34,7 +35,8 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 181,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -52,7 +54,8 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 229,
-          "y": 95
+          "y": 95,
+          "locked": false
         }
       },
       {
@@ -64,7 +67,8 @@
           },
           "dropItemsWhenNotBound": false,
           "x": 205,
-          "y": 71
+          "y": 71,
+          "locked": false
         }
       },
       {
@@ -77,7 +81,8 @@
             "name": "BatteryChargerProgressv2"
           },
           "x": 164,
-          "y": 52
+          "y": 52,
+          "locked": false
         }
       }
     ],

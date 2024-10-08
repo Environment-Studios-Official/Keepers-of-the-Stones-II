@@ -32,6 +32,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMusicScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMushroomsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMistScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMindScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMercuryScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMagnetScreen;
@@ -116,5 +117,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_SPIRIT.get(), WheelAbilitiesSpiritScreen::new);
 		event.register(PowerModMenus.BATTERY_CHARGER_GU_IV_2.get(), BatteryChargerGUIv2Screen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_FORM.get(), WheelAbilitiesFormScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_MIND.get(), WheelAbilitiesMindScreen::new);
 	}
 }

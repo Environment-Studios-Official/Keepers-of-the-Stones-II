@@ -23,6 +23,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpiritStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MindStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
@@ -44,6 +45,7 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_blood_element;
 	ImageButton imagebutton_spirit_element;
 	ImageButton imagebutton_form_element;
+	ImageButton imagebutton_mind_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -79,14 +81,18 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		if (VacuumStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 182 && mouseX < leftPos + 206 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_vacuum"), mouseX, mouseY);
-		if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
-			guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_blood"), mouseX, mouseY);
+		if (BloodStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 65 && mouseY < topPos + 89)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_blood"), mouseX, mouseY);
 		if (SpiritStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 134 && mouseX < leftPos + 158 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_spirit"), mouseX, mouseY);
 		if (FormStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 68 && mouseX < leftPos + 92 && mouseY > topPos + 65 && mouseY < topPos + 89)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_form"), mouseX, mouseY);
+		if (MindStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_mind"), mouseX, mouseY);
 	}
 
 	@Override
@@ -279,5 +285,20 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_form_element", imagebutton_form_element);
 		this.addRenderableWidget(imagebutton_form_element);
+		imagebutton_mind_element = new ImageButton(this.leftPos + 49, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/mind_element.png"), ResourceLocation.parse("power:textures/screens/mind_element_highlighted.png")), e -> {
+					if (MindStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart3ButtonMessage(11, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 11, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (MindStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_mind_element", imagebutton_mind_element);
+		this.addRenderableWidget(imagebutton_mind_element);
 	}
 }

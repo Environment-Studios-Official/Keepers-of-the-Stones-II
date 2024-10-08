@@ -118,6 +118,8 @@ import com.esmods.keepersofthestonestwo.item.MistStoneItem;
 import com.esmods.keepersofthestonestwo.item.MistBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MistArmorItem;
 import com.esmods.keepersofthestonestwo.item.MindStoneItem;
+import com.esmods.keepersofthestonestwo.item.MindBatteryItem;
+import com.esmods.keepersofthestonestwo.item.MindArmorItem;
 import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
 import com.esmods.keepersofthestonestwo.item.MetalBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MetalArmorItem;
@@ -652,6 +654,11 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> FORM_ARMOR_BOOTS = REGISTRY.register("form_armor_boots", FormArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> FORM_BATTERY = REGISTRY.register("form_battery", FormBatteryItem::new);
 	public static final DeferredHolder<Item, Item> FORM_SAI = REGISTRY.register("form_sai", FormSaiItem::new);
+	public static final DeferredHolder<Item, Item> MIND_ARMOR_HELMET = REGISTRY.register("mind_armor_helmet", MindArmorItem.Helmet::new);
+	public static final DeferredHolder<Item, Item> MIND_ARMOR_CHESTPLATE = REGISTRY.register("mind_armor_chestplate", MindArmorItem.Chestplate::new);
+	public static final DeferredHolder<Item, Item> MIND_ARMOR_LEGGINGS = REGISTRY.register("mind_armor_leggings", MindArmorItem.Leggings::new);
+	public static final DeferredHolder<Item, Item> MIND_ARMOR_BOOTS = REGISTRY.register("mind_armor_boots", MindArmorItem.Boots::new);
+	public static final DeferredHolder<Item, Item> MIND_BATTERY = REGISTRY.register("mind_battery", MindBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
