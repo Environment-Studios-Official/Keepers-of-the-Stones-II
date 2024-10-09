@@ -118,6 +118,7 @@ import com.esmods.keepersofthestonestwo.item.MistStoneItem;
 import com.esmods.keepersofthestonestwo.item.MistBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MistArmorItem;
 import com.esmods.keepersofthestonestwo.item.MindStoneItem;
+import com.esmods.keepersofthestonestwo.item.MindEpeeItem;
 import com.esmods.keepersofthestonestwo.item.MindBatteryItem;
 import com.esmods.keepersofthestonestwo.item.MindArmorItem;
 import com.esmods.keepersofthestonestwo.item.MetalStoneItem;
@@ -659,6 +660,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> MIND_ARMOR_LEGGINGS = REGISTRY.register("mind_armor_leggings", MindArmorItem.Leggings::new);
 	public static final DeferredHolder<Item, Item> MIND_ARMOR_BOOTS = REGISTRY.register("mind_armor_boots", MindArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> MIND_BATTERY = REGISTRY.register("mind_battery", MindBatteryItem::new);
+	public static final DeferredHolder<Item, Item> MIND_EPEE = REGISTRY.register("mind_epee", MindEpeeItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
