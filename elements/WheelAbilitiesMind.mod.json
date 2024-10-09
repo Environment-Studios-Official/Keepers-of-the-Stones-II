@@ -206,6 +206,48 @@
           "y": 181,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_psychowaves_uses_15",
+          "text": {
+            "fixedValue": "Psychowaves, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 198,
+          "y": 46,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_hypnosis_uses_80",
+          "text": {
+            "fixedValue": "Hypnosis, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_remote_control_uses_25",
+          "text": {
+            "fixedValue": "Remote control, uses 25"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 167,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
