@@ -33,4 +33,6 @@ public class PowerModSounds {
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_HURT = REGISTRY.register("cursed_squire.hurt", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.hurt")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_ATTACK = REGISTRY.register("cursed_squire.attack", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.attack")));
 	public static final DeferredHolder<SoundEvent, SoundEvent> CURSED_SQUIRE_WALK = REGISTRY.register("cursed_squire.walk", () -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "cursed_squire.walk")));
+	public static final DeferredHolder<SoundEvent, SoundEvent> AMBIENT_BIOME_CURSED_FOREST = REGISTRY.register("ambient.biome.cursed_forest",
+			() -> SoundEvent.createVariableRangeEvent(ResourceLocation.fromNamespaceAndPath("power", "ambient.biome.cursed_forest")));
 }

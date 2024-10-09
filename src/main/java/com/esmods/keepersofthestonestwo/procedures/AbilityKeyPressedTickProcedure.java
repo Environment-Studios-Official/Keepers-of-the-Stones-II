@@ -271,6 +271,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("form") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("form")) {
 					FormSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mind")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("mind")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("mind") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("mind")) {
+					MindSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

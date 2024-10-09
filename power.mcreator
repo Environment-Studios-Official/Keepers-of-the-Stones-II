@@ -14,6 +14,10 @@
           {
             "name": "entity",
             "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
           }
         ]
       },
@@ -7644,11 +7648,11 @@
       "locked_code": false,
       "registry_name": "empty_battery_desc",
       "metadata": {
-        "return_type": "string",
         "files": [
           "src/main/java/com/esmods/keepersofthestonestwo/procedures/EmptyBatteryDescProcedure.java"
         ],
-        "dependencies": []
+        "dependencies": [],
+        "return_type": "string"
       },
       "path": "~/ItemsAndBlocks/Batteries/EmptyBattery"
     },
@@ -27307,11 +27311,8 @@
         "files": [
           "src/main/resources/assets/power/blockstates/raw_energium_block.json",
           "src/main/resources/assets/power/models/block/raw_energium_block.json",
-          "src/main/resources/data/power/neoforge/biome_modifier/raw_energium_block_biome_modifier.json",
           "src/main/java/com/esmods/keepersofthestonestwo/block/RawEnergiumBlockBlock.java",
           "src/main/resources/assets/power/models/item/raw_energium_block.json",
-          "src/main/resources/data/power/worldgen/configured_feature/raw_energium_block.json",
-          "src/main/resources/data/power/worldgen/placed_feature/raw_energium_block.json",
           "src/main/resources/data/power/loot_table/blocks/raw_energium_block.json"
         ]
       },
@@ -33321,6 +33322,556 @@
         ]
       },
       "path": "~/Elements/Form"
+    },
+    {
+      "name": "RawEnergiumCraft",
+      "type": "recipe",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "raw_energium_craft",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/power/recipe/raw_energium_craft.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Energium"
+    },
+    {
+      "name": "MindMaster",
+      "type": "potioneffect",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/potion/MindMasterMobEffect.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindArmor",
+      "type": "armor",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_armor",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindArmorItem.java",
+          "src/main/resources/assets/power/models/item/mind_armor_boots.json",
+          "src/main/resources/assets/power/models/item/mind_armor_chestplate.json",
+          "src/main/resources/assets/power/models/item/mind_armor_leggings.json",
+          "src/main/resources/assets/power/models/item/mind_armor_helmet.json"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindArmorKazhdyiTikDliaShliema",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_armor_kazhdyi_tik_dlia_shliema",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaShliemaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindArmorKazhdyiTikDliaNaghrudnika",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_armor_kazhdyi_tik_dlia_naghrudnika",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaNaghrudnikaProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindArmorKazhdyiTikDliaPonozhiei",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_armor_kazhdyi_tik_dlia_ponozhiei",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaPonozhieiProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindArmorKazhdyiTikDliaBotinok",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_armor_kazhdyi_tik_dlia_botinok",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindArmorKazhdyiTikDliaBotinokProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindStoneUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindStoneUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindMasterStart",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master_start",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindMasterStartProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindMasterEnd",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_master_end",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindMasterEndProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindElementGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_element_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindElementGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindStoneCheck",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_stone_check",
+      "metadata": {
+        "return_type": "logic",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindStoneCheckProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/KeepersBox/GUI"
+    },
+    {
+      "name": "MindSpecialAttack",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_special_attack",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindSpecialAttackProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/AbilityUsingKey/ElementsSA"
+    },
+    {
+      "name": "WheelAbilitiesMind",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "wheel_abilities_mind",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/WheelAbilitiesMindMenu.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/WheelAbilitiesMindScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/network/WheelAbilitiesMindButtonMessage.java"
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "Attack181",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_181",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack181Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "Attack182",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_182",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack182Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "Attack184",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "attack_184",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/Attack184Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "MindBattery",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_battery",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindBatteryItem.java",
+          "src/main/resources/assets/power/models/item/mind_battery.json"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MindBattery"
+    },
+    {
+      "name": "MindBatteryDesc",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_battery_desc",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindBatteryDescProcedure.java"
+        ],
+        "dependencies": []
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MindBattery"
+    },
+    {
+      "name": "MindBatteryUse",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_battery_use",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindBatteryUseProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "itemstack",
+            "type": "itemstack"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/ItemsAndBlocks/Batteries/MindBattery"
+    },
+    {
+      "name": "RemoteControl1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "RemoteControl2",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_2",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl2Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "RemoteControl3",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "remote_control_3",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RemoteControl3Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Mind"
+    },
+    {
+      "name": "MindReactionParticle",
+      "type": "particle",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_reaction_particle",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/particles/mind_reaction_particle.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/client/particle/MindReactionParticleParticle.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindEpee",
+      "type": "tool",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_epee",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/power/models/item/mind_epee.json",
+          "src/main/java/com/esmods/keepersofthestonestwo/item/MindEpeeItem.java"
+        ]
+      },
+      "path": "~/Elements/Mind"
+    },
+    {
+      "name": "MindEpeeKazhdyiTikVInvientarie",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "mind_epee_kazhdyi_tik_v_invientarie",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/MindEpeeKazhdyiTikVInvientarieProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/Mind"
     }
   ],
   "variable_elements": [
@@ -33889,12 +34440,6 @@
       "value": "false"
     },
     {
-      "name": "send_client_package",
-      "type": "logic",
-      "scope": "player_lifetime",
-      "value": "false"
-    },
-    {
       "name": "detransform_anim_trigger",
       "type": "logic",
       "scope": "player_lifetime",
@@ -34077,6 +34622,15 @@
       ],
       "category": "hostile",
       "subtitle": ""
+    },
+    {
+      "name": "ambient.biome.cursed_forest",
+      "files": [
+        "cursed_forest_ambient_1",
+        "cursed_forest_ambient_2"
+      ],
+      "category": "ambient",
+      "subtitle": ""
     }
   ],
   "tag_elements": {
@@ -34176,6 +34730,7 @@
       "~CUSTOM:EnergiumPickaxe"
     ],
     "ITEMS:minecraft:swords": [
+      "~CUSTOM:MindEpee",
       "~CUSTOM:FormSai",
       "~CUSTOM:SpiritSickle",
       "~CUSTOM:GravityMace",
@@ -34314,7 +34869,9 @@
       "CUSTOM:BlueFlameBattery",
       "CUSTOM:GravityBattery",
       "CUSTOM:SmokeBattery",
-      "CUSTOM:SpiritBattery"
+      "CUSTOM:SpiritBattery",
+      "CUSTOM:FormBattery",
+      "CUSTOM:MindBattery"
     ],
     "ITEMS:minecraft:shovels": [
       "~CUSTOM:CreationShovel",
@@ -34344,6 +34901,7 @@
       "~CUSTOM:Shadow"
     ],
     "ITEMS:minecraft:chest_armor": [
+      "~CUSTOM:MindArmor.body",
       "~CUSTOM:FormArmor.body",
       "~CUSTOM:SpiritArmor.body",
       "~CUSTOM:SmokeArmor.body",
@@ -34398,6 +34956,7 @@
       "~CUSTOM:CursedStoneWall"
     ],
     "ITEMS:minecraft:leg_armor": [
+      "~CUSTOM:MindArmor.legs",
       "~CUSTOM:FormArmor.legs",
       "~CUSTOM:SpiritArmor.legs",
       "~CUSTOM:SmokeArmor.legs",
@@ -34626,9 +35185,14 @@
       "CUSTOM:FormArmor.helmet",
       "CUSTOM:FormArmor.body",
       "CUSTOM:FormArmor.legs",
-      "CUSTOM:FormArmor.boots"
+      "CUSTOM:FormArmor.boots",
+      "CUSTOM:MindArmor.helmet",
+      "CUSTOM:MindArmor.body",
+      "CUSTOM:MindArmor.legs",
+      "CUSTOM:MindArmor.boots"
     ],
     "ITEMS:minecraft:head_armor": [
+      "~CUSTOM:MindArmor.helmet",
       "~CUSTOM:FormArmor.helmet",
       "~CUSTOM:SpiritArmor.helmet",
       "~CUSTOM:SmokeArmor.helmet",
@@ -34680,6 +35244,7 @@
       "CUSTOM:EnergiumGolem"
     ],
     "ITEMS:minecraft:foot_armor": [
+      "~CUSTOM:MindArmor.boots",
       "~CUSTOM:FormArmor.boots",
       "~CUSTOM:SpiritArmor.boots",
       "~CUSTOM:SmokeArmor.boots",
@@ -34912,7 +35477,8 @@
       "GravityStone",
       "SmokeStone",
       "SpiritStone",
-      "FormStone"
+      "FormStone",
+      "MindStone"
     ]
   },
   "language_map": {
@@ -34965,9 +35531,11 @@
       "gui.power.wheel_abilities_plague.tooltip_plague_bomb_uses_40": "Чумная бомба, расходует 40",
       "item.power.energium_armor_leggings": "Энергиумные поножи",
       "item.power.music_armor_helmet": "Шлем мастера музыки",
+      "gui.power.keepers_box_gui_part_3.tooltip_mind": "Разум",
       "item.power.explosion_stone": "Камень взрыва",
       "item.power.crystal_armor_helmet": "Шлем мастера кристалла",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Металлическая кожа, расходует 80",
+      "gui.power.wheel_abilities_mind.tooltip_remote_control_uses_25": "Удаленный контроль, расходует 25",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Металлические ножи, расходует 30",
       "item.power.animals_stone": "Камень животных",
       "item.power.light_battery": "Батарея",
@@ -34988,6 +35556,7 @@
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Замедление, расходует 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Лунный свет, расходует 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Ступенки из проклятых потрескавшихся каменных кирпичей",
+      "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Гипноз, расходует 80",
       "item.power.plants_armor_boots": "Ботинки мастера зелени",
       "item.power.sand_battery": "Батарея",
       "item.power.space_armor_leggings": "Поножи мастера космоса",
@@ -35178,6 +35747,7 @@
       "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.blood_battery": "Батарея",
       "effect.power.sun_master": "Мастер солнца",
+      "item.power.mind_armor_chestplate": "Нагрудник мастера разума",
       "battery.desc.energy": "Энергия",
       "effect.power.lightning_master": "Мастер молнии",
       "block.power.deepslate_depleted_energium_ore": "Обеднённый энергиумоносный глубинный сланец",
@@ -35236,8 +35806,8 @@
       "item.power.blood_armor_leggings": "Поножи мастера крови",
       "item.power.explosion_armor_leggings": "Поножи мастера взрыва",
       "item.power.mercury_armor_boots": "Ботинки мастера ртути",
-      "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "advancements.full_power_of_energium.title": "Полная мощь энергиума",
+      "key.power.ability_wheel_openingkey": "Клавиша открытия колеса способностей",
       "item.power.darkness_stone": "Камень тьмы",
       "item.power.destruction_stone": "Камень разрушения",
       "block.power.cursed_stone_bricks_wall": "Ограда из проклятых каменных кирпичей",
@@ -35272,6 +35842,8 @@
       "item.power.shadow_armor_leggings": "Поножи мастера тени",
       "item.power.technology_armor_boots": "Ботинки мастера технологий",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Эфирный залп, расходует 30",
+      "item.power.mind_armor_boots": "Ботинки мастера разума",
+      "item.power.mind_battery": "Battery",
       "item.power.blood_armor_helmet": "Шлем мастера крови",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Лёд",
       "gui.power.keepers_box_gui_part_3.tooltip_spirit": "Дух",
@@ -35308,6 +35880,7 @@
       "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Жидкая ртуть, расходует 15",
       "item.power.light_armor_leggings": "Поножи мастера света",
       "item.power.form_armor_boots": "Ботинки мастера формы",
+      "subtitles.ambient.biome.cursed_forest": "",
       "item.power.amplifier_drop": "Капля амплифера",
       "item.power.energium_upgrade_smithing_template": "Кузнечный шаблон",
       "gui.power.keepers_box_gui_part_3.tooltip_moon": "Луна",
@@ -35320,8 +35893,10 @@
       "item.power.sun_battery": "Батарея",
       "item.minecraft.potion.effect.star_regeneration_potion": "Зелье звёздной регенерации",
       "item.power.ice_armor_chestplate": "Нагрудник мастера льда",
+      "item.power.mind_armor_leggings": "Поножи мастера разума",
       "gui.power.debug_info.label_max_star_points_0": "max_star_points: 0",
       "item.power.highspeed_dagger": "Высокоскоростной кинжал",
+      "battery.desc.mind": "Разум",
       "effect.power.plague": "Чума",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Землетрясение, расходует 70",
       "item.power.lightning_battery": "Батарея",
@@ -35452,6 +36027,7 @@
       "item.minecraft.tipped_arrow.effect.power_lock_potion": "Стрела блокировки силы",
       "advancements.super_charge.title": "Супер Заряд!",
       "item.power.mushrooms_hammer": "Грибной молот",
+      "effect.power.mind_master": "Мастер разума",
       "item.power.vacuum_armor_helmet": "Шлем мастера пустоты",
       "item.power.blue_magic_fireball": "Волшебный синий файрбол",
       "trim_material.power.energium_material": "Энергиум",
@@ -35477,6 +36053,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ледяная ловушка, расходует 80",
       "item.power.explosion_mace": "Взрывная булава",
       "entity.power.poison_pit": "Ядовитая яма",
+      "item.power.mind_epee": "Шпага разума",
       "item.power.magnet_armor_chestplate": "Нагрудник мастера магнита",
       "battery.desc.creation": "Творение",
       "gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75": "Расплавление поверхности, uses 75",
@@ -35662,6 +36239,7 @@
       "item.power.form_armor_leggings": "Поножи мастера формы",
       "block.power.orange_portal": "Оранжевый портал",
       "item.power.ocean_armor_leggings": "Поножи мастера океана",
+      "item.power.mind_armor_helmet": "Шлем мастера разума",
       "item.power.lightning_armor_leggings": "Поножи мастера молнии",
       "enchantment.power.isolation": "Изоляция",
       "item.power.fire_sword": "Меч огня",
@@ -35719,6 +36297,7 @@
       "advancements.energized_gold.descr": "Используйте энергиумное улучшение, чтобы получить заряженный слиток энергиума",
       "death.attack.energium_golem_ds.player": "%1$s был убит Энергиумный голем",
       "effect.power.metal_master": "Мастер металла",
+      "gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15": "Психоволны, расходует 15",
       "item.power.basic_box.tooltip": "Базовая",
       "block.power.raw_amplifier_block": "Блок рудного амплифера",
       "item.power.constellation_sword": "Меч созвездий",
@@ -35780,9 +36359,11 @@
       "gui.power.wheel_abilities_plague.tooltip_plague_bomb_uses_40": "Plague bomb, uses 40",
       "item.power.energium_armor_leggings": "Energium Leggings",
       "item.power.music_armor_helmet": "Music Helmet",
+      "gui.power.keepers_box_gui_part_3.tooltip_mind": "Mind",
       "item.power.explosion_stone": "Explosion Stone",
       "item.power.crystal_armor_helmet": "Crystal Helmet",
       "gui.power.wheel_abilities_metal.tooltip_metal_skin_uses_80": "Metal skin, uses 80",
+      "gui.power.wheel_abilities_mind.tooltip_remote_control_uses_25": "Remote control, uses 25",
       "gui.power.wheel_abilities_metal.tooltip_metal_knives_uses_30": "Metal knives, uses 30",
       "item.power.animals_stone": "Animals Stone",
       "item.power.light_battery": "Battery",
@@ -35803,6 +36384,7 @@
       "gui.power.wheel_abilities_speed.tooltip_deceleration_uses_70": "Deceleration, uses 70",
       "gui.power.wheel_abilities_moon.tooltip_moon_light_uses_15": "Moon light, uses 15",
       "block.power.cursed_stone_cracked_bricks_stairs": "Cursed Stone Cracked Bricks",
+      "gui.power.wheel_abilities_mind.tooltip_hypnosis_uses_80": "Hypnosis, uses 80",
       "item.power.plants_armor_boots": "Plants Boots",
       "item.power.sand_battery": "Battery",
       "item.power.space_armor_leggings": "Space Leggings",
@@ -35993,6 +36575,7 @@
       "block.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
       "item.power.blood_battery": "Battery",
       "effect.power.sun_master": "Master of the Sun",
+      "item.power.mind_armor_chestplate": "Mind Chestplate",
       "battery.desc.energy": "Energy",
       "effect.power.lightning_master": "Master of Lightning",
       "block.power.deepslate_depleted_energium_ore": "Deepslate Depleted Energium Ore",
@@ -36051,8 +36634,8 @@
       "item.power.blood_armor_leggings": "Blood Leggings",
       "item.power.explosion_armor_leggings": "Explosion Leggings",
       "item.power.mercury_armor_boots": "Mercury Boots",
-      "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "advancements.full_power_of_energium.title": "Full power of energium",
+      "key.power.ability_wheel_openingkey": "Ability wheel opening key",
       "item.power.darkness_stone": "Darkness Stone",
       "item.power.destruction_stone": "Destruction Stone",
       "block.power.cursed_stone_bricks_wall": "Cursed Stone Bricks Wall",
@@ -36087,6 +36670,8 @@
       "item.power.shadow_armor_leggings": "Shadow Leggings",
       "item.power.technology_armor_boots": "Technology Boots",
       "gui.power.wheel_abilities_ether.tooltip_ethereal_volley_uses_30_power_p": "Ethereal volley, uses 30",
+      "item.power.mind_armor_boots": "Mind Boots",
+      "item.power.mind_battery": "Battery",
       "item.power.blood_armor_helmet": "Blood Helmet",
       "gui.power.keepers_box_gui_part_1.tooltip_ice": "Ice",
       "gui.power.keepers_box_gui_part_3.tooltip_spirit": "Spirit",
@@ -36123,6 +36708,7 @@
       "gui.power.wheel_abilities_mercury.tooltip_liquid_mercury_uses_15": "Liquid mercury, uses 15",
       "item.power.light_armor_leggings": "Light Leggings",
       "item.power.form_armor_boots": "Form Boots",
+      "subtitles.ambient.biome.cursed_forest": "",
       "item.power.amplifier_drop": "Amplifier Drop",
       "item.power.energium_upgrade_smithing_template": "Smithing Template",
       "gui.power.keepers_box_gui_part_3.tooltip_moon": "Moon",
@@ -36135,8 +36721,10 @@
       "item.power.sun_battery": "Battery",
       "item.minecraft.potion.effect.star_regeneration_potion": "Potion of Star Regeneration",
       "item.power.ice_armor_chestplate": "Ice Chestplate",
+      "item.power.mind_armor_leggings": "Mind Leggings",
       "gui.power.debug_info.label_max_star_points_0": "max_star_points: 0",
       "item.power.highspeed_dagger": "High-speed Dagger",
+      "battery.desc.mind": "Mind",
       "effect.power.plague": "Plague",
       "gui.power.wheel_abilities_earth.tooltip_earthquakeuses_70": "Earthquake, uses 70",
       "item.power.lightning_battery": "Battery",
@@ -36267,6 +36855,7 @@
       "item.minecraft.tipped_arrow.effect.power_lock_potion": "Arrow of Power Lock",
       "advancements.super_charge.title": "Super Charge!",
       "item.power.mushrooms_hammer": "Mushrooms Hammer",
+      "effect.power.mind_master": "Master of the Mind",
       "item.power.vacuum_armor_helmet": "Vacuum Helmet",
       "item.power.blue_magic_fireball": "Blue Magic Fireball",
       "trim_material.power.energium_material": "Energium",
@@ -36292,6 +36881,7 @@
       "gui.power.wheel_abilities_ice.tooltip_ice_trap_uses_60": "Ice trap, uses 80",
       "item.power.explosion_mace": "Explosion Mace",
       "entity.power.poison_pit": "Poison Pit",
+      "item.power.mind_epee": "Mind Epee",
       "item.power.magnet_armor_chestplate": "Magnet Chestplate",
       "battery.desc.creation": "Creation",
       "gui.power.wheel_abilities_lava.tooltip_surface_melting_uses_75": "Surface melting, uses 75",
@@ -36478,6 +37068,7 @@
       "item.power.form_armor_leggings": "Form Leggings",
       "block.power.orange_portal": "Orange Portal",
       "item.power.ocean_armor_leggings": "Ocean Leggings",
+      "item.power.mind_armor_helmet": "Mind Helmet",
       "item.power.lightning_armor_leggings": "Lightning Leggings",
       "enchantment.power.isolation": "Isolation",
       "item.power.fire_sword": "Fire Sword",
@@ -36534,6 +37125,7 @@
       "advancements.energized_gold.descr": "Use energium upgrade to get a full energium ingot",
       "death.attack.energium_golem_ds.player": "%1$s was killed by an Energium Golem",
       "effect.power.metal_master": "Master of the Metal",
+      "gui.power.wheel_abilities_mind.tooltip_psychowaves_uses_15": "Psychowaves, uses 15",
       "item.power.basic_box.tooltip": "Basic",
       "block.power.raw_amplifier_block": "Block of Raw Amplifier",
       "item.power.constellation_sword": "Constellation Sword",
@@ -36757,6 +37349,10 @@
                       },
                       {
                         "name": "Form",
+                        "children": []
+                      },
+                      {
+                        "name": "Mind",
                         "children": []
                       }
                     ]
@@ -37236,6 +37832,10 @@
               {
                 "name": "FormBattery",
                 "children": []
+              },
+              {
+                "name": "MindBattery",
+                "children": []
               }
             ]
           },
@@ -37326,7 +37926,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.0.0.45",
+    "version": "1.0.0.46",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds 48 new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Di and many others",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",
@@ -37354,5 +37954,5 @@
     "credits": "Created by Environment Studios",
     "modElementsPackage": "com.esmods.keepersofthestonestwo"
   },
-  "mcreatorVersion": 202400340320
+  "mcreatorVersion": 202400341323
 }

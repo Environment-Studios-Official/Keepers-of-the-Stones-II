@@ -12,9 +12,7 @@
     "showPopup": true,
     "announceToChat": true,
     "hideIfNotCompleted": false,
-    "rewardLoot": [
-      "EnergiumKeyReward"
-    ],
+    "rewardLoot": [],
     "rewardRecipes": [],
     "rewardFunction": "No function",
     "rewardXP": 0,

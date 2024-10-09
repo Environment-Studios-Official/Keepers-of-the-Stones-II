@@ -73,7 +73,7 @@ public class CursedKeeperEarthProcedure {
 								if (world instanceof Level _level)
 									_level.updateNeighborsAt(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ()),
 											_level.getBlockState(BlockPos.containing(entityiterator.getX(), entityiterator.getY() + 1, entityiterator.getZ())).getBlock());
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 32);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers")))), 24);
 							}
 						}
 					}

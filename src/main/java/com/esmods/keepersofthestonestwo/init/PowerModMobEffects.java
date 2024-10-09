@@ -45,6 +45,7 @@ import com.esmods.keepersofthestonestwo.procedures.MushroomsMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MistMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MiniaturizationPriIstiechieniiEffiektaProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MindMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MetalMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MercuryMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MagnetMasterEndProcedure;
@@ -106,6 +107,7 @@ import com.esmods.keepersofthestonestwo.potion.MoonMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MistMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MiniaturizationMobEffect;
+import com.esmods.keepersofthestonestwo.potion.MindMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MetalMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MercuryMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.MagnetMasterMobEffect;
@@ -201,6 +203,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> WARP = REGISTRY.register("warp", () -> new WarpMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> MINIATURIZATION = REGISTRY.register("miniaturization", () -> new MiniaturizationMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> GIGANTIZATION = REGISTRY.register("gigantization", () -> new GigantizationMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -329,6 +332,8 @@ public class PowerModMobEffects {
 			MiniaturizationPriIstiechieniiEffiektaProcedure.execute(entity);
 		} else if (effectInstance.getEffect().is(GIGANTIZATION)) {
 			GigantizationPriIstiechieniiEffiektaProcedure.execute(entity);
+		} else if (effectInstance.getEffect().is(MIND_MASTER)) {
+			MindMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

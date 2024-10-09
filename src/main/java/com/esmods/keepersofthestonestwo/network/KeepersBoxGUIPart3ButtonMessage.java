@@ -25,6 +25,7 @@ import com.esmods.keepersofthestonestwo.procedures.SpiritElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SpaceElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ShadowElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonElementGetProcedure;
+import com.esmods.keepersofthestonestwo.procedures.MindElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightElementGetProcedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart4Procedure;
 import com.esmods.keepersofthestonestwo.procedures.KBtoPart2Procedure;
@@ -112,6 +113,10 @@ public record KeepersBoxGUIPart3ButtonMessage(int buttonID, int x, int y, int z)
 		if (buttonID == 10) {
 
 			FormElementGetProcedure.execute(world, entity);
+		}
+		if (buttonID == 11) {
+
+			MindElementGetProcedure.execute(world, entity);
 		}
 	}
 

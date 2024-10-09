@@ -104,6 +104,8 @@ public class DetransformationKeyUseProcedure {
 					_entity.removeEffect(PowerModMobEffects.SPIRIT_MASTER);
 				if (entity instanceof LivingEntity _entity)
 					_entity.removeEffect(PowerModMobEffects.FORM_MASTER);
+				if (entity instanceof LivingEntity _entity)
+					_entity.removeEffect(PowerModMobEffects.MIND_MASTER);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 					_vars.active_power = false;

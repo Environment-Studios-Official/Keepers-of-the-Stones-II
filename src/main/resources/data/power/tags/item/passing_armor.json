@@ -181,6 +181,10 @@
     "power:form_armor_helmet",
     "power:form_armor_chestplate",
     "power:form_armor_leggings",
-    "power:form_armor_boots"
+    "power:form_armor_boots",
+    "power:mind_armor_helmet",
+    "power:mind_armor_chestplate",
+    "power:mind_armor_leggings",
+    "power:mind_armor_boots"
   ]
 }
