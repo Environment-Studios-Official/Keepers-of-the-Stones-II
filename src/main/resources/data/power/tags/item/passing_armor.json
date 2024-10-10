@@ -185,6 +185,10 @@
     "power:mind_armor_helmet",
     "power:mind_armor_chestplate",
     "power:mind_armor_leggings",
-    "power:mind_armor_boots"
+    "power:mind_armor_boots",
+    "power:golden_dust_armor_helmet",
+    "power:golden_dust_armor_chestplate",
+    "power:golden_dust_armor_leggings",
+    "power:golden_dust_armor_boots"
   ]
 }

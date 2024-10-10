@@ -387,6 +387,40 @@
           "y": 128,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_golden_dust_element",
+          "image": "golden_dust_element.png",
+          "hoveredImage": "golden_dust_element_highlighted.png",
+          "onClick": {
+            "name": "GoldenDustElementGet"
+          },
+          "displayCondition": {
+            "name": "GoldenDustStoneCheck"
+          },
+          "x": 151,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust",
+          "text": {
+            "fixedValue": "Golden Dust"
+          },
+          "displayCondition": {
+            "name": "GoldenDustStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 149,
+          "y": 128,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

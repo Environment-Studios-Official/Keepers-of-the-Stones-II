@@ -140,6 +140,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SPIRIT_STONE.get());
 				tabData.accept(PowerModItems.FORM_STONE.get());
 				tabData.accept(PowerModItems.MIND_STONE.get());
+				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
 			})
 
 					.build());
@@ -201,6 +202,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.SPIRIT_BATTERY.get());
 				tabData.accept(PowerModItems.FORM_BATTERY.get());
 				tabData.accept(PowerModItems.MIND_BATTERY.get());
+				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
 			})
 
 					.build());
