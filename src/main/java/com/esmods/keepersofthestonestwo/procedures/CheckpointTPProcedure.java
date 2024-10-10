@@ -5,13 +5,13 @@ import net.minecraft.world.entity.Entity;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-public class Attack114Procedure {
+public class CheckpointTPProcedure {
 	public static void execute(Entity entity) {
 		if (entity == null)
 			return;
 		{
 			PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-			_vars.ability = "teleportation_ability_2";
+			_vars.ability = "checkpoint_tp";
 			_vars.syncPlayerVariables(entity);
 		}
 		if (entity instanceof Player _player)
