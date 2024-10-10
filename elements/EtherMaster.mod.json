@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "EtherMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "EtherMasterEnd"
     }

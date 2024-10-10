@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "LavaMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "LavaMasterEnd"
     }

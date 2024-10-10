@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "CrystalMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "CrystalMasterEnd"
     }

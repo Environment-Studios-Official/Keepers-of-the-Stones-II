@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "RainMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "RainMasterEnd"
     }

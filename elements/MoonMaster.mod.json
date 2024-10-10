@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "MoonMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "MoonMasterEnd"
     }

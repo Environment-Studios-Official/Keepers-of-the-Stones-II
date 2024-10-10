@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "PlagueMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "PlagueMasterEnd"
     }

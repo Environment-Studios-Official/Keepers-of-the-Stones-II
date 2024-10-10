@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "ShadowMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "ShadowMasterEnd"
     }

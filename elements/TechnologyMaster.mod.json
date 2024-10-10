@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "TechnologyMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "TechnologyMasterEnd"
     }

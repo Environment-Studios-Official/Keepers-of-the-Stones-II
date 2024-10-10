@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SpiritMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SpiritMasterEnd"
     }

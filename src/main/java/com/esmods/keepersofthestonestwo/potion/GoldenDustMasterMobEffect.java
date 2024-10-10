@@ -11,7 +11,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.Set;
 
 import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnhancedAbilitiesProcedure;
 
 public class GoldenDustMasterMobEffect extends MobEffect {
 	public GoldenDustMasterMobEffect() {
@@ -25,16 +24,5 @@ public class GoldenDustMasterMobEffect extends MobEffect {
 	@Override
 	public void onEffectStarted(LivingEntity entity, int amplifier) {
 		GoldenDustMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
-	}
-
-	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		EnhancedAbilitiesProcedure.execute(entity);
-		return super.applyEffectTick(entity, amplifier);
 	}
 }

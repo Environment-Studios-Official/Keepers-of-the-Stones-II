@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SoundMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SoundMasterEnd"
     }

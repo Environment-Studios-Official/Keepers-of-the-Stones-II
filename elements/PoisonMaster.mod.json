@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "PoisonMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "PoisonMasterEnd"
     }

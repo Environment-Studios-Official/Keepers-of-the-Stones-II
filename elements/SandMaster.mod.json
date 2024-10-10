@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SandMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SandMasterEnd"
     }

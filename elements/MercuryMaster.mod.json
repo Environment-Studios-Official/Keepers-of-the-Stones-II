@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "MercuryMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "MercuryMasterEnd"
     }

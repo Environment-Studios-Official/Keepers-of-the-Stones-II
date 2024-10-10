@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "GoldenDustMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "GoldenDustMasterEnd"
     }
