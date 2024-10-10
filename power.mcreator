@@ -33698,6 +33698,53 @@
         ]
       },
       "path": "~/ItemsAndBlocks/BatteryCharger"
+    },
+    {
+      "name": "ChoiceStoneWhenEnterTheWorld",
+      "type": "gamerule",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "choice_stone_when_enter_the_world",
+      "metadata": {
+        "files": [],
+        "type": "logic"
+      },
+      "path": "~/Gamerules"
+    },
+    {
+      "name": "OpenChoiceKeeperBoxStoneScreen",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "open_choice_keeper_box_stone_screen",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/OpenChoiceKeeperBoxStoneScreenProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "number"
+          },
+          {
+            "name": "y",
+            "type": "number"
+          },
+          {
+            "name": "z",
+            "type": "number"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      },
+      "path": "~/Modules/BasicModule"
     }
   ],
   "variable_elements": [
@@ -35569,6 +35616,7 @@
       "effect.power.ether_master": "Мастер эфира",
       "item.power.time_armor_chestplate": "Нагрудник мастера времени",
       "item.power.time_battery": "Батарея",
+      "gamerule.choiceStoneWhenEnterTheWorld.description": "Allows players to select a stone when entering the world",
       "effect.power.gravity_master": "Мастер гравитации",
       "block.power.cursed_stone_cracked_bricks_slab": "Плита из проклятых потрескавшихся каменных кирпичей",
       "item.power.blood_battery": "Батарея",
@@ -35777,6 +35825,7 @@
       "item.power.energium_dust": "Энергиумная пыль",
       "item.power.moon_armor_boots": "Ботинки мастера луны",
       "block.power.polished_cursed_stone": "Полированный проклятый камень",
+      "gamerule.choiceStoneWhenEnterTheWorld": "Choosing a stone when entering the world",
       "item.power.rain_armor_chestplate": "Нагрудник мастера дождя",
       "item.power.mercury_stone": "Камень ртути",
       "gui.power.wheel_abilities_amber.tooltip_liquid_amber_flow_uses_15": "Поток жидкого янтаря, расходует 15",
@@ -36397,6 +36446,7 @@
       "effect.power.ether_master": "Master of the Ether",
       "item.power.time_armor_chestplate": "Time Chestplate",
       "item.power.time_battery": "Battery",
+      "gamerule.choiceStoneWhenEnterTheWorld.description": "Allows players to select a stone when entering the world",
       "effect.power.gravity_master": "Master of Gravity",
       "block.power.cursed_stone_cracked_bricks_slab": "Cursed Stone Cracked Bricks Slab",
       "item.power.blood_battery": "Battery",
@@ -36605,6 +36655,7 @@
       "item.power.energium_dust": "Energium Dust",
       "item.power.moon_armor_boots": "Moon Boots",
       "block.power.polished_cursed_stone": "Polished Cursed Stone",
+      "gamerule.choiceStoneWhenEnterTheWorld": "Choosing a stone when entering the world",
       "item.power.rain_armor_chestplate": "Rain Chestplate",
       "item.power.mercury_stone": "Mercury Stone",
       "gui.power.wheel_abilities_amber.tooltip_liquid_amber_flow_uses_15": "Liquid amber flow, uses 15",
