@@ -72,67 +72,16 @@
         }
       },
       {
-        "type": "image",
+        "type": "sprite",
         "data": {
-          "image": "battery_charger_progress_1.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BatteryChargerProgress1"
+          "sprite": "battery_charger_progress.png",
+          "spritesCount": 100,
+          "spriteIndex": {
+            "fixedValue": 2.0,
+            "name": "BatteryChargerProgressv2"
           },
-          "x": 163,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "battery_charger_progress_2.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BatteryChargerProgress2"
-          },
-          "x": 163,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "battery_charger_progress_3.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BatteryChargerProgress3"
-          },
-          "x": 163,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "battery_charger_progress_4.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BatteryChargerProgress4"
-          },
-          "x": 163,
-          "y": 51,
-          "locked": false
-        }
-      },
-      {
-        "type": "image",
-        "data": {
-          "image": "battery_charger_progress_5.png",
-          "use1Xscale": false,
-          "displayCondition": {
-            "name": "BatteryChargerProgress5"
-          },
-          "x": 163,
-          "y": 51,
+          "x": 164,
+          "y": 52,
           "locked": false
         }
       }

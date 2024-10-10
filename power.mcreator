@@ -10379,20 +10379,6 @@
       "path": "~/ItemsAndBlocks/BatteryCharger"
     },
     {
-      "name": "BatteryChargerGUI",
-      "type": "gui",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "battery_charger_gui",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/BatteryChargerGUIScreen.java",
-          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/BatteryChargerGUIMenu.java"
-        ]
-      },
-      "path": "~/ItemsAndBlocks/BatteryCharger"
-    },
-    {
       "name": "EmptyBatteryRecipe",
       "type": "recipe",
       "compiles": true,
@@ -33872,6 +33858,20 @@
         ]
       },
       "path": "~/Elements/Mind"
+    },
+    {
+      "name": "BatteryChargerGUI",
+      "type": "gui",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "battery_charger_gui",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/client/gui/BatteryChargerGUIScreen.java",
+          "src/main/java/com/esmods/keepersofthestonestwo/world/inventory/BatteryChargerGUIMenu.java"
+        ]
+      },
+      "path": "~/ItemsAndBlocks/BatteryCharger"
     }
   ],
   "variable_elements": [
