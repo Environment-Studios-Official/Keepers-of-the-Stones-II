@@ -1,6 +1,8 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.minecraft.world.scores.PlayerTeam;
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 
@@ -163,6 +165,11 @@ public class DetransformationKeyUseProcedure {
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 				_vars.ability = "0";
 				_vars.syncPlayerVariables(entity);
+			}
+			if (world instanceof Level _level) {
+				PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
+				if (_pt != null)
+					_level.getScoreboard().removePlayerTeam(_pt);
 			}
 		});
 	}

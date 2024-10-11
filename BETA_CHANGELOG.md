@@ -1,4 +1,5 @@
 What's new in Keepers of the Stones II version 1.0.0.47?<br/>
+<br />- Added new element - Golden Dust
 <br />- Added new gamerule - choiceStoneWhenEnterTheWorld
 <br />- Teleportation stone abilities have been reworked
 <br />- The power lock effect now blocks the buff effects of stones

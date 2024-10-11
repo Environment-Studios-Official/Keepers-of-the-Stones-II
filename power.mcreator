@@ -34254,6 +34254,25 @@
         ]
       },
       "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Teleportation"
+    },
+    {
+      "name": "RandomPowerGet",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "random_power_get",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/RandomPowerGetProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Elements/GoldenDust"
     }
   ],
   "variable_elements": [
@@ -38306,27 +38325,6 @@
         ]
       },
       {
-        "name": "DarkElements",
-        "children": [
-          {
-            "name": "Thirst",
-            "children": []
-          },
-          {
-            "name": "Chaos",
-            "children": []
-          },
-          {
-            "name": "Filth",
-            "children": []
-          },
-          {
-            "name": "Horror",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Mobs",
         "children": [
           {
@@ -38336,6 +38334,27 @@
           {
             "name": "CursedSquire",
             "children": []
+          },
+          {
+            "name": "DarkElements",
+            "children": [
+              {
+                "name": "Thirst",
+                "children": []
+              },
+              {
+                "name": "Chaos",
+                "children": []
+              },
+              {
+                "name": "Filth",
+                "children": []
+              },
+              {
+                "name": "Horror",
+                "children": []
+              }
+            ]
           }
         ]
       }

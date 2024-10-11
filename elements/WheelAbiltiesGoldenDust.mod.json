@@ -125,9 +125,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_golden_dust_attack",
+          "image": "golden_dust_attack.png",
+          "hoveredImage": "golden_dust_attack_highlight.png",
           "onClick": {
             "name": "Attack185"
           },
@@ -142,9 +142,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_random_power",
+          "image": "random_power.png",
+          "hoveredImage": "random_power_highlight.png",
           "onClick": {
             "name": "Attack186"
           },
@@ -159,9 +159,9 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_golden_dust_regeneration",
+          "image": "golden_dust_regeneration.png",
+          "hoveredImage": "golden_dust_regeneration_highlight.png",
           "onClick": {
             "name": "Attack187"
           },
