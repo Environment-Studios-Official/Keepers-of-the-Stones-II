@@ -172,6 +172,48 @@
           "y": 158,
           "locked": false
         }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust_attack_uses_15",
+          "text": {
+            "fixedValue": "Golden dust attack, uses 15"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 48,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_random_power_uses_80",
+          "text": {
+            "fixedValue": "Random power, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 108,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_golden_dust_regeneration_uses",
+          "text": {
+            "fixedValue": "Golden dust regeneration, uses 80"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 170,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
