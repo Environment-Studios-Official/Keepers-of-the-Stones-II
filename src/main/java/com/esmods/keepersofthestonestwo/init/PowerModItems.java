@@ -159,6 +159,7 @@ import com.esmods.keepersofthestonestwo.item.GravityMaceItem;
 import com.esmods.keepersofthestonestwo.item.GravityBatteryItem;
 import com.esmods.keepersofthestonestwo.item.GravityArmorItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustStoneItem;
+import com.esmods.keepersofthestonestwo.item.GoldenDustStaffItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustBatteryItem;
 import com.esmods.keepersofthestonestwo.item.GoldenDustArmorItem;
 import com.esmods.keepersofthestonestwo.item.FreakingParsnipSoupItem;
@@ -668,6 +669,7 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_ARMOR_LEGGINGS = REGISTRY.register("golden_dust_armor_leggings", GoldenDustArmorItem.Leggings::new);
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_ARMOR_BOOTS = REGISTRY.register("golden_dust_armor_boots", GoldenDustArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_BATTERY = REGISTRY.register("golden_dust_battery", GoldenDustBatteryItem::new);
+	public static final DeferredHolder<Item, Item> GOLDEN_DUST_STAFF = REGISTRY.register("golden_dust_staff", GoldenDustStaffItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
