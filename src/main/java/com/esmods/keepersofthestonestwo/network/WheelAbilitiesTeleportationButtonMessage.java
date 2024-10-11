@@ -29,6 +29,7 @@ import com.esmods.keepersofthestonestwo.procedures.CreatePortalOrangeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CreatePortalBlueProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CheckpointTPProcedure;
 import com.esmods.keepersofthestonestwo.procedures.CheckpointCreateProcedure;
+import com.esmods.keepersofthestonestwo.procedures.Attack113Procedure;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
@@ -107,6 +108,10 @@ public record WheelAbilitiesTeleportationButtonMessage(int buttonID, int x, int 
 		if (buttonID == 9) {
 
 			CheckpointTPProcedure.execute(entity);
+		}
+		if (buttonID == 10) {
+
+			Attack113Procedure.execute(entity);
 		}
 	}
 

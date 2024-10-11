@@ -217,6 +217,23 @@
           "y": 109,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_ability_1",
+          "image": "ability_1.png",
+          "hoveredImage": "ability_1_highlight.png",
+          "onClick": {
+            "name": "Attack113"
+          },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
+          "x": 190,
+          "y": 36,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {
