@@ -184,6 +184,7 @@ import com.esmods.keepersofthestonestwo.item.EnergyStoneItem;
 import com.esmods.keepersofthestonestwo.item.EnergyStaffItem;
 import com.esmods.keepersofthestonestwo.item.EnergyBatteryItem;
 import com.esmods.keepersofthestonestwo.item.EnergyArmorItem;
+import com.esmods.keepersofthestonestwo.item.EnergiumUpgradeSmithingTemplateItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumSwordItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumShovelItem;
 import com.esmods.keepersofthestonestwo.item.EnergiumPickaxeItem;
