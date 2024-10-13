@@ -421,6 +421,40 @@
           "y": 128,
           "locked": false
         }
+      },
+      {
+        "type": "imagebutton",
+        "data": {
+          "name": "imagebutton_darkness_element",
+          "image": "darkness_element.png",
+          "hoveredImage": "darkness_element_highlighted.png",
+          "onClick": {
+            "name": "DarknessElementGet"
+          },
+          "displayCondition": {
+            "name": "DarknessStoneCheck"
+          },
+          "x": 175,
+          "y": 132,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_darkness",
+          "text": {
+            "fixedValue": "Darkness"
+          },
+          "displayCondition": {
+            "name": "DarknessStoneCheck"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 172,
+          "y": 128,
+          "locked": false
+        }
       }
     ],
     "gridSettings": {

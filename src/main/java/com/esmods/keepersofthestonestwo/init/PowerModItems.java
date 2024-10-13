@@ -206,6 +206,7 @@ import com.esmods.keepersofthestonestwo.item.DestructionBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DestructionArmorItem;
 import com.esmods.keepersofthestonestwo.item.DepletedEnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.DarknessStoneItem;
+import com.esmods.keepersofthestonestwo.item.DarknessArmorItem;
 import com.esmods.keepersofthestonestwo.item.CursedKeyItem;
 import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
 import com.esmods.keepersofthestonestwo.item.CrystalKnifeItem;
@@ -670,6 +671,10 @@ public class PowerModItems {
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_ARMOR_BOOTS = REGISTRY.register("golden_dust_armor_boots", GoldenDustArmorItem.Boots::new);
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_BATTERY = REGISTRY.register("golden_dust_battery", GoldenDustBatteryItem::new);
 	public static final DeferredHolder<Item, Item> GOLDEN_DUST_STAFF = REGISTRY.register("golden_dust_staff", GoldenDustStaffItem::new);
+	public static final DeferredHolder<Item, Item> DARKNESS_ARMOR_HELMET = REGISTRY.register("darkness_armor_helmet", DarknessArmorItem.Helmet::new);
+	public static final DeferredHolder<Item, Item> DARKNESS_ARMOR_CHESTPLATE = REGISTRY.register("darkness_armor_chestplate", DarknessArmorItem.Chestplate::new);
+	public static final DeferredHolder<Item, Item> DARKNESS_ARMOR_LEGGINGS = REGISTRY.register("darkness_armor_leggings", DarknessArmorItem.Leggings::new);
+	public static final DeferredHolder<Item, Item> DARKNESS_ARMOR_BOOTS = REGISTRY.register("darkness_armor_boots", DarknessArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

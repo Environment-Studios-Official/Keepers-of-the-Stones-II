@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:darkness_armor_helmet",
     "power:golden_dust_armor_helmet",
     "power:mind_armor_helmet",
     "power:form_armor_helmet",

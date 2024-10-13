@@ -141,6 +141,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.FORM_STONE.get());
 				tabData.accept(PowerModItems.MIND_STONE.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
+				tabData.accept(PowerModItems.DARKNESS_STONE.get());
 			})
 
 					.build());
