@@ -81,6 +81,7 @@
   "battery.desc.shadow": "Shadow",
   "gui.power.keepers_box_gui_part_1.tooltip_gravity": "Gravity",
   "gui.power.wheel_abilities_earth.tooltip_stalagmite_piercinguses_35_powe": "Stalagmite piercing, uses 40",
+  "gui.power.wheel_abilities_teleportation.tooltip_teleportation_grabs_uses_25": "Teleportation grabs, uses 25",
   "subtitles.stone_activation": "The stone has been activated",
   "entity.power.spirit": "Spirit",
   "gui.power.wheel_abilities_mushrooms.tooltip_mushroom_saturation_uses_50": "Mushroom saturation, uses 50",

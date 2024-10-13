@@ -41,7 +41,7 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 	ImageButton imagebutton_creating_portals_orange;
 	ImageButton imagebutton_checkpoint_create;
 	ImageButton imagebutton_checkpoint_tp;
-	ImageButton imagebutton_ability_1;
+	ImageButton imagebutton_teleportation_grabs;
 
 	public WheelAbilitiesTeleportationScreen(WheelAbilitiesTeleportationMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -63,6 +63,8 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_teleportation.tooltip_creatingdestructing_portals_us"), mouseX, mouseY);
 		if (mouseX > leftPos + 143 && mouseX < leftPos + 167 && mouseY > topPos + 85 && mouseY < topPos + 109)
 			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_teleportation.tooltip_checkpoint_uses_20"), mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 23 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_teleportation.tooltip_teleportation_grabs_uses_25"), mouseX, mouseY);
 	}
 
 	@Override
@@ -242,20 +244,19 @@ public class WheelAbilitiesTeleportationScreen extends AbstractContainerScreen<W
 		};
 		guistate.put("button:imagebutton_checkpoint_tp", imagebutton_checkpoint_tp);
 		this.addRenderableWidget(imagebutton_checkpoint_tp);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_1.png"), ResourceLocation.parse("power:textures/screens/ability_1_highlight.png")),
-				e -> {
-					if (PowerLockCheckProcedure.execute(entity)) {
+		imagebutton_teleportation_grabs = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/teleportation_grabs.png"), ResourceLocation.parse("power:textures/screens/teleportation_grabs_teleportation.png")), e -> {
+					if (true) {
 						PacketDistributor.sendToServer(new WheelAbilitiesTeleportationButtonMessage(10, x, y, z));
 						WheelAbilitiesTeleportationButtonMessage.handleButtonAction(entity, 10, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				if (PowerLockCheckProcedure.execute(entity))
-					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
+		guistate.put("button:imagebutton_teleportation_grabs", imagebutton_teleportation_grabs);
+		this.addRenderableWidget(imagebutton_teleportation_grabs);
 	}
 }

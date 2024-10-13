@@ -221,17 +221,28 @@
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_teleportation_grabs",
+          "image": "teleportation_grabs.png",
+          "hoveredImage": "teleportation_grabs_teleportation.png",
           "onClick": {
             "name": "Attack113"
           },
-          "displayCondition": {
-            "name": "PowerLockCheck"
-          },
           "x": 190,
           "y": 36,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_teleportation_grabs_uses_25",
+          "text": {
+            "fixedValue": "Teleportation grabs, uses 25"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 47,
           "locked": false
         }
       }
