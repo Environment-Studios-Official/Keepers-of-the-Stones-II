@@ -38373,10 +38373,6 @@
             "children": []
           },
           {
-            "name": "CopyPowersModule",
-            "children": []
-          },
-          {
             "name": "ColorfulPowersModule",
             "children": [
               {
@@ -38391,6 +38387,10 @@
           },
           {
             "name": "PowerScaleModule ",
+            "children": []
+          },
+          {
+            "name": "CopyPowersModule",
             "children": []
           }
         ]
