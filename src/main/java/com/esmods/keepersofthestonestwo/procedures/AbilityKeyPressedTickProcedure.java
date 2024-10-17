@@ -281,6 +281,11 @@ public class AbilityKeyPressedTickProcedure {
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("golden_dust") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("golden_dust")) {
 					GoldenDustSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("darkness")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("darkness")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("darkness") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("darkness")) {
+					DarknessSpecialAttackProcedure.execute(world, x, y, z, entity);
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

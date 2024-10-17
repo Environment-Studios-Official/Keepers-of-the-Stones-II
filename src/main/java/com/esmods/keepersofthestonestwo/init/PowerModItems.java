@@ -206,6 +206,7 @@ import com.esmods.keepersofthestonestwo.item.DestructionBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DestructionArmorItem;
 import com.esmods.keepersofthestonestwo.item.DepletedEnergiumIngotItem;
 import com.esmods.keepersofthestonestwo.item.DarknessStoneItem;
+import com.esmods.keepersofthestonestwo.item.DarknessBatteryItem;
 import com.esmods.keepersofthestonestwo.item.DarknessArmorItem;
 import com.esmods.keepersofthestonestwo.item.CursedKeyItem;
 import com.esmods.keepersofthestonestwo.item.CrystalStoneItem;
@@ -675,6 +676,7 @@ public class PowerModItems {
 	public static final DeferredItem<Item> DARKNESS_ARMOR_CHESTPLATE = REGISTRY.register("darkness_armor_chestplate", DarknessArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> DARKNESS_ARMOR_LEGGINGS = REGISTRY.register("darkness_armor_leggings", DarknessArmorItem.Leggings::new);
 	public static final DeferredItem<Item> DARKNESS_ARMOR_BOOTS = REGISTRY.register("darkness_armor_boots", DarknessArmorItem.Boots::new);
+	public static final DeferredItem<Item> DARKNESS_BATTERY = REGISTRY.register("darkness_battery", DarknessBatteryItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

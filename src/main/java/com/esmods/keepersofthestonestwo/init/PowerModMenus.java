@@ -12,6 +12,7 @@ import net.minecraft.world.inventory.MenuType;
 import net.minecraft.core.registries.Registries;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbiltiesGoldenDustMenu;
+import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilityDarknessMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesWaterMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesVacuumMenu;
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesTornadoMenu;
@@ -119,4 +120,5 @@ public class PowerModMenus {
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilitiesMindMenu>> WHEEL_ABILITIES_MIND = REGISTRY.register("wheel_abilities_mind", () -> IMenuTypeExtension.create(WheelAbilitiesMindMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<BatteryChargerGUIMenu>> BATTERY_CHARGER_GUI = REGISTRY.register("battery_charger_gui", () -> IMenuTypeExtension.create(BatteryChargerGUIMenu::new));
 	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbiltiesGoldenDustMenu>> WHEEL_ABILTIES_GOLDEN_DUST = REGISTRY.register("wheel_abilties_golden_dust", () -> IMenuTypeExtension.create(WheelAbiltiesGoldenDustMenu::new));
+	public static final DeferredHolder<MenuType<?>, MenuType<WheelAbilityDarknessMenu>> WHEEL_ABILITY_DARKNESS = REGISTRY.register("wheel_ability_darkness", () -> IMenuTypeExtension.create(WheelAbilityDarknessMenu::new));
 }

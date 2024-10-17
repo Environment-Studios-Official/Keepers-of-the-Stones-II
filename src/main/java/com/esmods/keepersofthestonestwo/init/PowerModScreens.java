@@ -10,6 +10,7 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbiltiesGoldenDustScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilityDarknessScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesVacuumScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
@@ -118,5 +119,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_MIND.get(), WheelAbilitiesMindScreen::new);
 		event.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
 	}
 }

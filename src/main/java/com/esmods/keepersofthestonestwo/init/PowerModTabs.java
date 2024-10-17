@@ -204,6 +204,7 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.FORM_BATTERY.get());
 				tabData.accept(PowerModItems.MIND_BATTERY.get());
 				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
+				tabData.accept(PowerModItems.DARKNESS_BATTERY.get());
 			})
 
 					.build());
