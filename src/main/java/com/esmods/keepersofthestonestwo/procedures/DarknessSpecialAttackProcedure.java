@@ -60,7 +60,7 @@ public class DarknessSpecialAttackProcedure {
 						break;
 					}
 					if (world instanceof ServerLevel)
-						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)),
+						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(18 / 255.0F, 25 / 255.0F, 45 / 255.0F), 1)),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getX()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getY()),
 								(entity.level().clip(new ClipContext(entity.getEyePosition(1f), entity.getEyePosition(1f).add(entity.getViewVector(1f).scale(Scaling)), ClipContext.Block.OUTLINE, ClipContext.Fluid.NONE, entity)).getBlockPos().getZ()),
@@ -74,7 +74,9 @@ public class DarknessSpecialAttackProcedure {
 						List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 						for (Entity entityiterator : _entfound) {
 							if (!(entityiterator == entity) && !(entityiterator instanceof Player _plr ? _plr.getAbilities().instabuild : false)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 13.5);
+								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), (float) 10.25);
+								if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 200, 1));
 							}
 						}
 					}
