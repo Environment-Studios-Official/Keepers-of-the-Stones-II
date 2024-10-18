@@ -9,3 +9,4 @@ What's new in Keepers of the Stones II version 1.0.0.47?<br/>
 <br />- [Bugfix] Fixed a bug that could cause bosses and knights to get into boats and minecarts
 <br />- [Bugfix] Fixed a bug that caused the abilities of the time stone to be mixed up
 <br />- [Bugfix] Fixed a bug that could cause a atomic bomb to be used for grifering, even if a defense was installed
+<br />- [Bugfix] Fixed bugs related to the air stone
