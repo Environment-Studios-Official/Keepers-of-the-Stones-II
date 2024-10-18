@@ -226,6 +226,7 @@ import com.esmods.keepersofthestonestwo.item.CreationAxeItem;
 import com.esmods.keepersofthestonestwo.item.CreationArmorItem;
 import com.esmods.keepersofthestonestwo.item.CopyriumIngotItem;
 import com.esmods.keepersofthestonestwo.item.ConstellationSwordItem;
+import com.esmods.keepersofthestonestwo.item.ChaosArmorItem;
 import com.esmods.keepersofthestonestwo.item.BlueMagicFireballItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameSwordItem;
 import com.esmods.keepersofthestonestwo.item.BlueFlameStoneItem;
@@ -684,6 +685,10 @@ public class PowerModItems {
 	public static final DeferredItem<Item> THIRST_ARMOR_CHESTPLATE = REGISTRY.register("thirst_armor_chestplate", ThirstArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> THIRST_ARMOR_LEGGINGS = REGISTRY.register("thirst_armor_leggings", ThirstArmorItem.Leggings::new);
 	public static final DeferredItem<Item> THIRST_ARMOR_BOOTS = REGISTRY.register("thirst_armor_boots", ThirstArmorItem.Boots::new);
+	public static final DeferredItem<Item> CHAOS_ARMOR_HELMET = REGISTRY.register("chaos_armor_helmet", ChaosArmorItem.Helmet::new);
+	public static final DeferredItem<Item> CHAOS_ARMOR_CHESTPLATE = REGISTRY.register("chaos_armor_chestplate", ChaosArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> CHAOS_ARMOR_LEGGINGS = REGISTRY.register("chaos_armor_leggings", ChaosArmorItem.Leggings::new);
+	public static final DeferredItem<Item> CHAOS_ARMOR_BOOTS = REGISTRY.register("chaos_armor_boots", ChaosArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

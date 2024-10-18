@@ -56,7 +56,10 @@ public class AbilityKeyPressedTickProcedure {
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("air")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("air")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("chaos")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("chaos")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("chaos") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("chaos")) {
 					AirSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("earth")

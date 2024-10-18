@@ -105,7 +105,7 @@ public class FakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("chaos")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {

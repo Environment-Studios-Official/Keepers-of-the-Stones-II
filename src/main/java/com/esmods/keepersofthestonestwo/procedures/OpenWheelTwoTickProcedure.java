@@ -105,7 +105,7 @@ public class OpenWheelTwoTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("chaos")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {
