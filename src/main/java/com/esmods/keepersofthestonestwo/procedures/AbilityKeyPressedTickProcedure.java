@@ -48,7 +48,10 @@ public class AbilityKeyPressedTickProcedure {
 					_entity.swing(InteractionHand.MAIN_HAND, true);
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("fire")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("fire")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("thirst")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("thirst")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("thirst") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("thirst")) {
 					FireSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("air") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("air")

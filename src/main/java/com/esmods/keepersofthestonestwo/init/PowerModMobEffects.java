@@ -21,6 +21,7 @@ import com.esmods.keepersofthestonestwo.procedures.VacuumMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TornadoMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeStoppedPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TimeMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.ThirstDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TeleportationMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.TechnologyMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.SunMasterEndProcedure;
@@ -81,6 +82,7 @@ import com.esmods.keepersofthestonestwo.potion.TornadoMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeStoppedMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeSlowingMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TimeMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.ThirstDarkMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TeleportationMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TechnologyMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.TechnobarrierMobEffect;
@@ -210,6 +212,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> MIND_MASTER = REGISTRY.register("mind_master", () -> new MindMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> GOLDEN_DUST_MASTER = REGISTRY.register("golden_dust_master", () -> new GoldenDustMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> DARKNESS_MASTER = REGISTRY.register("darkness_master", () -> new DarknessMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> THIRST_DARK_MASTER = REGISTRY.register("thirst_dark_master", () -> new ThirstDarkMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -344,6 +347,8 @@ public class PowerModMobEffects {
 			GoldenDustMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(DARKNESS_MASTER)) {
 			DarknessMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(THIRST_DARK_MASTER)) {
+			ThirstDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

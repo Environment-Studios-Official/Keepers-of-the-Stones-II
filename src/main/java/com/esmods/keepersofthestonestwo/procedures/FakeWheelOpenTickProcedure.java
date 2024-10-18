@@ -85,7 +85,7 @@ public class FakeWheelOpenTickProcedure {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).first_fake_wheel_open_var) {
-			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire")) {
+			if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("fire") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("thirst")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {

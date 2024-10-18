@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:thirst_armor_boots",
     "power:darkness_armor_boots",
     "power:golden_dust_armor_boots",
     "power:mind_armor_boots",

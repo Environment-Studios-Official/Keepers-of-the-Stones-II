@@ -37,6 +37,7 @@ import com.esmods.keepersofthestonestwo.item.TimeStoneItem;
 import com.esmods.keepersofthestonestwo.item.TimeKhopeshItem;
 import com.esmods.keepersofthestonestwo.item.TimeBatteryItem;
 import com.esmods.keepersofthestonestwo.item.TimeArmorItem;
+import com.esmods.keepersofthestonestwo.item.ThirstArmorItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationStoneItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationBladeItem;
 import com.esmods.keepersofthestonestwo.item.TeleportationBatteryItem;
@@ -679,6 +680,10 @@ public class PowerModItems {
 	public static final DeferredItem<Item> DARKNESS_ARMOR_BOOTS = REGISTRY.register("darkness_armor_boots", DarknessArmorItem.Boots::new);
 	public static final DeferredItem<Item> DARKNESS_BATTERY = REGISTRY.register("darkness_battery", DarknessBatteryItem::new);
 	public static final DeferredItem<Item> DARK_SWORD = REGISTRY.register("dark_sword", DarkSwordItem::new);
+	public static final DeferredItem<Item> THIRST_ARMOR_HELMET = REGISTRY.register("thirst_armor_helmet", ThirstArmorItem.Helmet::new);
+	public static final DeferredItem<Item> THIRST_ARMOR_CHESTPLATE = REGISTRY.register("thirst_armor_chestplate", ThirstArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> THIRST_ARMOR_LEGGINGS = REGISTRY.register("thirst_armor_leggings", ThirstArmorItem.Leggings::new);
+	public static final DeferredItem<Item> THIRST_ARMOR_BOOTS = REGISTRY.register("thirst_armor_boots", ThirstArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
