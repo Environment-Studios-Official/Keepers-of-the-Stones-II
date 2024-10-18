@@ -96,27 +96,35 @@ public class DarknessSpecialAttackProcedure {
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("darkness_ability_2")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
+				particleAmount = 30;
+				particleRadius = 5;
+				for (int index1 = 0; index1 < (int) particleAmount; index1++) {
+					if (world instanceof ServerLevel)
+						((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(18 / 255.0F, 25 / 255.0F, 45 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
+								(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
+								(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 0.25);
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
+						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.sculk.spread")), SoundSource.PLAYERS, 1, 1);
 					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
+						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.sculk.spread")), SoundSource.PLAYERS, 1, 1, false);
 					}
 				}
-				particleAmount = 8;
-				particleRadius = 2;
-				for (int index1 = 0; index1 < 60; index1++) {
-					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
-						if (world instanceof ServerLevel)
-							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(12 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (!(entityiterator == entity)) {
+							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 18);
+							if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+								_entity.addEffect(new MobEffectInstance(MobEffects.DARKNESS, 200, 4));
+						}
 					}
 				}
-				RandomPowerGetProcedure.execute(entity);
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;
 					_vars.syncPlayerVariables(entity);
 				}
 			}
@@ -133,8 +141,8 @@ public class DarknessSpecialAttackProcedure {
 				}
 				particleAmount = 8;
 				particleRadius = 2;
-				for (int index3 = 0; index3 < 60; index3++) {
-					for (int index4 = 0; index4 < (int) particleAmount; index4++) {
+				for (int index2 = 0; index2 < 60; index2++) {
+					for (int index3 = 0; index3 < (int) particleAmount; index3++) {
 						if (world instanceof ServerLevel)
 							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
 									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
