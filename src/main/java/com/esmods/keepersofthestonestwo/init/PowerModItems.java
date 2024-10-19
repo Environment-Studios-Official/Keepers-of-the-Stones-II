@@ -153,6 +153,7 @@ import com.esmods.keepersofthestonestwo.item.IceStoneItem;
 import com.esmods.keepersofthestonestwo.item.IceSpearItem;
 import com.esmods.keepersofthestonestwo.item.IceBatteryItem;
 import com.esmods.keepersofthestonestwo.item.IceArmorItem;
+import com.esmods.keepersofthestonestwo.item.HorrorArmorItem;
 import com.esmods.keepersofthestonestwo.item.HighspeedDaggerItem;
 import com.esmods.keepersofthestonestwo.item.GreenStaffItem;
 import com.esmods.keepersofthestonestwo.item.GravityStoneItem;
@@ -689,6 +690,10 @@ public class PowerModItems {
 	public static final DeferredItem<Item> CHAOS_ARMOR_CHESTPLATE = REGISTRY.register("chaos_armor_chestplate", ChaosArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> CHAOS_ARMOR_LEGGINGS = REGISTRY.register("chaos_armor_leggings", ChaosArmorItem.Leggings::new);
 	public static final DeferredItem<Item> CHAOS_ARMOR_BOOTS = REGISTRY.register("chaos_armor_boots", ChaosArmorItem.Boots::new);
+	public static final DeferredItem<Item> HORROR_ARMOR_HELMET = REGISTRY.register("horror_armor_helmet", HorrorArmorItem.Helmet::new);
+	public static final DeferredItem<Item> HORROR_ARMOR_CHESTPLATE = REGISTRY.register("horror_armor_chestplate", HorrorArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> HORROR_ARMOR_LEGGINGS = REGISTRY.register("horror_armor_leggings", HorrorArmorItem.Leggings::new);
+	public static final DeferredItem<Item> HORROR_ARMOR_BOOTS = REGISTRY.register("horror_armor_boots", HorrorArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items

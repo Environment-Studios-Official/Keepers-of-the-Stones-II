@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:horror_armor_helmet",
     "power:chaos_armor_helmet",
     "power:thirst_armor_helmet",
     "power:darkness_armor_helmet",

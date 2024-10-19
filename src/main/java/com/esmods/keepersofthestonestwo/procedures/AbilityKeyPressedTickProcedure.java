@@ -64,7 +64,10 @@ public class AbilityKeyPressedTickProcedure {
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("earth")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("earth")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("earth")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("earth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("earth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("horror")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("horror")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("horror") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("horror")) {
 					EarthSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")

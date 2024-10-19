@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:horror_armor_boots",
     "power:chaos_armor_boots",
     "power:thirst_armor_boots",
     "power:darkness_armor_boots",
