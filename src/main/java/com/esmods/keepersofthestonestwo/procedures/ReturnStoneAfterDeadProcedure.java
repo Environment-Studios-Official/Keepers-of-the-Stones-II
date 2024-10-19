@@ -48,6 +48,11 @@ public class ReturnStoneAfterDeadProcedure {
 				_vars.fake_element_name_third = "0";
 				_vars.syncPlayerVariables(entity);
 			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.transfered_power = false;
+				_vars.syncPlayerVariables(entity);
+			}
 			if (world instanceof Level _level) {
 				PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
 				if (_pt != null)

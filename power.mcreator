@@ -36116,6 +36116,12 @@
       "type": "logic",
       "scope": "map",
       "value": "true"
+    },
+    {
+      "name": "transfered_power",
+      "type": "logic",
+      "scope": "player_lifetime",
+      "value": "false"
     }
   ],
   "sound_elements": [

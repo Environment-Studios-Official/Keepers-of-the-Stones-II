@@ -135,6 +135,11 @@ public class DetransformationKeyUseProcedure {
 					_vars.detransform_anim_trigger = true;
 					_vars.syncPlayerVariables(entity);
 				}
+				{
+					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+					_vars.transfered_power = false;
+					_vars.syncPlayerVariables(entity);
+				}
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);

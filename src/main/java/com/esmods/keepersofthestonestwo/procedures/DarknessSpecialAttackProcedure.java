@@ -28,6 +28,7 @@ import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 
 public class DarknessSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -47,6 +48,7 @@ public class DarknessSpecialAttackProcedure {
 		double playerPosY = 0;
 		double playerPosZ = 0;
 		double playerPosX = 0;
+		double RandomPower = 0;
 		if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("darkness_ability_1")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 15) {
 				for (int index0 = 0; index0 < 30; index0++) {
@@ -130,23 +132,52 @@ public class DarknessSpecialAttackProcedure {
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("darkness_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.REGENERATION, 100, 5, false, false));
+				{
+					final Vec3 _center = new Vec3(x, y, z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power) {
+							if (RandomPower == 1) {
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.THIRST_DARK_MASTER, 1200, 1, false, false));
+								{
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.transfered_power = true;
+									_vars.syncPlayerVariables(entityiterator);
+								}
+							} else if (RandomPower == 2) {
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CHAOS_DARK_MASTER, 1200, 1, false, false));
+								{
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.transfered_power = true;
+									_vars.syncPlayerVariables(entityiterator);
+								}
+							} else if (RandomPower == 3) {
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.HORROR_DARK_MASTER, 1200, 1, false, false));
+								{
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.transfered_power = true;
+									_vars.syncPlayerVariables(entityiterator);
+								}
+							} else if (RandomPower == 4) {
+								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FILTH_DARK_MASTER, 1200, 1, false, false));
+								{
+									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.transfered_power = true;
+									_vars.syncPlayerVariables(entityiterator);
+								}
+							}
+						}
+					}
+				}
 				if (world instanceof Level _level) {
 					if (!_level.isClientSide()) {
 						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1);
 					} else {
 						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("entity.illusioner.cast_spell")), SoundSource.PLAYERS, 1, 1, false);
-					}
-				}
-				particleAmount = 8;
-				particleRadius = 2;
-				for (int index2 = 0; index2 < 60; index2++) {
-					for (int index3 = 0; index3 < (int) particleAmount; index3++) {
-						if (world instanceof ServerLevel)
-							((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(215 / 255.0F, 178 / 255.0F, 105 / 255.0F), 1)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-									(y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
 					}
 				}
 				{
