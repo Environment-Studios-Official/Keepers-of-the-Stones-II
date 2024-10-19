@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "MagnetMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "MagnetMasterEnd"
     }

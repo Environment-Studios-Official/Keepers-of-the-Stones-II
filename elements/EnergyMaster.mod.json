@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "EnergyMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "EnergyMasterEnd"
     }

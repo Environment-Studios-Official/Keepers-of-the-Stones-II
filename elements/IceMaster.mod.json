@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "IceMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "IceMasterEnd"
     }

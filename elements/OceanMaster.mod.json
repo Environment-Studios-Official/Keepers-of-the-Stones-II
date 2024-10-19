@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "OceanMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "OceanMasterEnd"
     }

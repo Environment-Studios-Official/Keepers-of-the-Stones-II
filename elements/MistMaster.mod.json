@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "MistMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "MistMasterEnd"
     }

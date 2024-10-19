@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "DestructionMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "DestructionMasterEnd"
     }

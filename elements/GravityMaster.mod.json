@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "GravityMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "GravityMasterEnd"
     }

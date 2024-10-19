@@ -138,7 +138,7 @@ public class SandSpecialAttackProcedure {
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("sand_ability_3")) {
 			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
 				new Object() {
-					void timedLoop(int current, int total, int ticks) {
+					void timedLoop(int timedloopiterator, int timedlooptotal, int ticks) {
 						for (int index1 = 0; index1 < 50; index1++) {
 							if (world instanceof ServerLevel)
 								((ServerLevel) world).sendParticles((new DustParticleOptions(new Vector3f(191 / 255.0F, 187 / 255.0F, 154 / 255.0F), 5)), (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * 8),
@@ -167,8 +167,8 @@ public class SandSpecialAttackProcedure {
 						}
 						final int tick2 = ticks;
 						PowerMod.queueServerWork(tick2, () -> {
-							if (total > current + 1) {
-								timedLoop(current + 1, total, tick2);
+							if (timedlooptotal > timedloopiterator + 1) {
+								timedLoop(timedloopiterator + 1, timedlooptotal, tick2);
 							}
 						});
 					}

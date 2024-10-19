@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "FormMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "FormMasterEnd"
     }

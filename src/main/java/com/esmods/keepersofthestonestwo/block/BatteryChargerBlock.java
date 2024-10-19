@@ -36,7 +36,7 @@ import net.minecraft.client.Minecraft;
 
 import io.netty.buffer.Unpooled;
 
-import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIv2Menu;
+import com.esmods.keepersofthestonestwo.world.inventory.BatteryChargerGUIMenu;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerTickProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BatteryChargerClientTickProcedure;
 import com.esmods.keepersofthestonestwo.block.entity.BatteryChargerBlockEntity;
@@ -56,12 +56,13 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 
 	@Override
 	protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+		super.createBlockStateDefinition(builder);
 		builder.add(FACING);
 	}
 
 	@Override
 	public BlockState getStateForPlacement(BlockPlaceContext context) {
-		return this.defaultBlockState().setValue(FACING, context.getHorizontalDirection().getOpposite());
+		return super.getStateForPlacement(context).setValue(FACING, context.getHorizontalDirection().getOpposite());
 	}
 
 	public BlockState rotate(BlockState state, Rotation rot) {
@@ -108,7 +109,7 @@ public class BatteryChargerBlock extends Block implements EntityBlock {
 
 				@Override
 				public AbstractContainerMenu createMenu(int id, Inventory inventory, Player player) {
-					return new BatteryChargerGUIv2Menu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
+					return new BatteryChargerGUIMenu(id, inventory, new FriendlyByteBuf(Unpooled.buffer()).writeBlockPos(pos));
 				}
 			}, pos);
 		}

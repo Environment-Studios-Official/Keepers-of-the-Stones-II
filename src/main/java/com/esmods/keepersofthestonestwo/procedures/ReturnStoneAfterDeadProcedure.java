@@ -48,6 +48,16 @@ public class ReturnStoneAfterDeadProcedure {
 				_vars.fake_element_name_third = "0";
 				_vars.syncPlayerVariables(entity);
 			}
+			{
+				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+				_vars.transfered_power = false;
+				_vars.syncPlayerVariables(entity);
+			}
+			if (world instanceof Level _level) {
+				PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
+				if (_pt != null)
+					_level.getScoreboard().removePlayerTeam(_pt);
+			}
 			if (!entity.getData(PowerModVariables.PLAYER_VARIABLES).active_battery) {
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("fire")) {
 					{
@@ -1590,11 +1600,6 @@ public class ReturnStoneAfterDeadProcedure {
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (world instanceof Level _level) {
-						PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-						if (_pt != null)
-							_level.getScoreboard().removePlayerTeam(_pt);
-					}
 				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("mind")) {
 					{
 						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
@@ -1605,11 +1610,6 @@ public class ReturnStoneAfterDeadProcedure {
 						ItemStack _setstack = new ItemStack(PowerModItems.MIND_STONE.get()).copy();
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
-					}
-					if (world instanceof Level _level) {
-						PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-						if (_pt != null)
-							_level.getScoreboard().removePlayerTeam(_pt);
 					}
 				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("mind")) {
 					{
@@ -1622,10 +1622,73 @@ public class ReturnStoneAfterDeadProcedure {
 						_setstack.setCount(1);
 						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
-					if (world instanceof Level _level) {
-						PlayerTeam _pt = _level.getScoreboard().getPlayerTeam(("HypnotizedBy" + entity.getDisplayName().getString()));
-						if (_pt != null)
-							_level.getScoreboard().removePlayerTeam(_pt);
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("golden_dust")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("golden_dust")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("golden_dust")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.GOLDEN_DUST_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				}
+				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("darkness")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_first = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("darkness")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_second = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
+					}
+				} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("darkness")) {
+					{
+						PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+						_vars.element_name_third = "0";
+						_vars.syncPlayerVariables(entity);
+					}
+					if (entity instanceof Player _player) {
+						ItemStack _setstack = new ItemStack(PowerModItems.DARKNESS_STONE.get()).copy();
+						_setstack.setCount(1);
+						ItemHandlerHelper.giveItemToPlayer(_player, _setstack);
 					}
 				}
 			}

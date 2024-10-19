@@ -25,7 +25,9 @@ import com.esmods.keepersofthestonestwo.procedures.ShadowStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MoonStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.MindStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.LightStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.GoldenDustStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormStoneCheckProcedure;
+import com.esmods.keepersofthestonestwo.procedures.DarknessStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.BloodStoneCheckProcedure;
 import com.esmods.keepersofthestonestwo.network.KeepersBoxGUIPart3ButtonMessage;
 
@@ -46,6 +48,8 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 	ImageButton imagebutton_spirit_element;
 	ImageButton imagebutton_form_element;
 	ImageButton imagebutton_mind_element;
+	ImageButton imagebutton_golden_dust_element;
+	ImageButton imagebutton_darkness_element;
 
 	public KeepersBoxGUIPart3Screen(KeepersBoxGUIPart3Menu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -93,6 +97,12 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		if (MindStoneCheckProcedure.execute(world))
 			if (mouseX > leftPos + 45 && mouseX < leftPos + 69 && mouseY > topPos + 102 && mouseY < topPos + 126)
 				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_mind"), mouseX, mouseY);
+		if (GoldenDustStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 69 && mouseX < leftPos + 93 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_golden_dust"), mouseX, mouseY);
+		if (DarknessStoneCheckProcedure.execute(world))
+			if (mouseX > leftPos + 92 && mouseX < leftPos + 116 && mouseY > topPos + 102 && mouseY < topPos + 126)
+				guiGraphics.renderTooltip(font, Component.translatable("gui.power.keepers_box_gui_part_3.tooltip_darkness"), mouseX, mouseY);
 	}
 
 	@Override
@@ -300,5 +310,35 @@ public class KeepersBoxGUIPart3Screen extends AbstractContainerScreen<KeepersBox
 		};
 		guistate.put("button:imagebutton_mind_element", imagebutton_mind_element);
 		this.addRenderableWidget(imagebutton_mind_element);
+		imagebutton_golden_dust_element = new ImageButton(this.leftPos + 71, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/golden_dust_element.png"), ResourceLocation.parse("power:textures/screens/golden_dust_element_highlighted.png")), e -> {
+					if (GoldenDustStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart3ButtonMessage(12, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 12, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (GoldenDustStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_golden_dust_element", imagebutton_golden_dust_element);
+		this.addRenderableWidget(imagebutton_golden_dust_element);
+		imagebutton_darkness_element = new ImageButton(this.leftPos + 95, this.topPos + 106, 16, 16,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/darkness_element.png"), ResourceLocation.parse("power:textures/screens/darkness_element_highlighted.png")), e -> {
+					if (DarknessStoneCheckProcedure.execute(world)) {
+						PacketDistributor.sendToServer(new KeepersBoxGUIPart3ButtonMessage(13, x, y, z));
+						KeepersBoxGUIPart3ButtonMessage.handleButtonAction(entity, 13, x, y, z);
+					}
+				}) {
+			@Override
+			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
+				if (DarknessStoneCheckProcedure.execute(world))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+			}
+		};
+		guistate.put("button:imagebutton_darkness_element", imagebutton_darkness_element);
+		this.addRenderableWidget(imagebutton_darkness_element);
 	}
 }

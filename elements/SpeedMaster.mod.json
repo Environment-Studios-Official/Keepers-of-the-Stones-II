@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SpeedMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SpeedMasterEnd"
     }
