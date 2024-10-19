@@ -144,7 +144,7 @@ public class ThirdFakeWheelOpenTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("filth")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {

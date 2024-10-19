@@ -72,7 +72,10 @@ public class AbilityKeyPressedTickProcedure {
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("water")
 						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("water")
-						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")) {
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("water")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("filth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_third).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_first).equals("filth")
+						|| (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_second).equals("filth") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).fake_element_name_third).equals("filth")) {
 					WaterSpecialAttackProcedure.execute(world, x, y, z, entity);
 				}
 				if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("ether") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_second).equals("ether")

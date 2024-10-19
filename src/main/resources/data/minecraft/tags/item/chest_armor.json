@@ -1,6 +1,7 @@
 {
   "replace": false,
   "values": [
+    "power:filth_armor_chestplate",
     "power:horror_armor_chestplate",
     "power:chaos_armor_chestplate",
     "power:thirst_armor_chestplate",

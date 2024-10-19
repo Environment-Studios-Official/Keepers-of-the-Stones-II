@@ -145,7 +145,7 @@ public class WheelOpenKeyPressedTickProcedure {
 						}
 					}, _bpos);
 				}
-			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water")) {
+			} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("water") || (entity.getData(PowerModVariables.PLAYER_VARIABLES).element_name_first).equals("filth")) {
 				if (entity instanceof ServerPlayer _ent) {
 					BlockPos _bpos = BlockPos.containing(x, y, z);
 					_ent.openMenu(new MenuProvider() {

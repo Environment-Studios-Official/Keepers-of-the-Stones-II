@@ -62,6 +62,7 @@ import com.esmods.keepersofthestonestwo.procedures.GoldenDustMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GigantizationPriIstiechieniiEffiektaProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FormMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.FireMasterEndProcedure;
+import com.esmods.keepersofthestonestwo.procedures.FilthDarkMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.ExplosionMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EtherMasterEndProcedure;
 import com.esmods.keepersofthestonestwo.procedures.EnergyMasterEndProcedure;
@@ -130,6 +131,7 @@ import com.esmods.keepersofthestonestwo.potion.GoldenDustMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.GigantizationMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FormMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.FireMasterMobEffect;
+import com.esmods.keepersofthestonestwo.potion.FilthDarkMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.ExplosionMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EtherMasterMobEffect;
 import com.esmods.keepersofthestonestwo.potion.EnergyMasterMobEffect;
@@ -219,6 +221,7 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> THIRST_DARK_MASTER = REGISTRY.register("thirst_dark_master", () -> new ThirstDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> CHAOS_DARK_MASTER = REGISTRY.register("chaos_dark_master", () -> new ChaosDarkMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> HORROR_DARK_MASTER = REGISTRY.register("horror_dark_master", () -> new HorrorDarkMasterMobEffect());
+	public static final DeferredHolder<MobEffect, MobEffect> FILTH_DARK_MASTER = REGISTRY.register("filth_dark_master", () -> new FilthDarkMasterMobEffect());
 
 	@SubscribeEvent
 	public static void onEffectRemoved(MobEffectEvent.Remove event) {
@@ -359,6 +362,8 @@ public class PowerModMobEffects {
 			ChaosDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		} else if (effectInstance.getEffect().is(HORROR_DARK_MASTER)) {
 			HorrorDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
+		} else if (effectInstance.getEffect().is(FILTH_DARK_MASTER)) {
+			FilthDarkMasterEndProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
 		}
 	}
 }

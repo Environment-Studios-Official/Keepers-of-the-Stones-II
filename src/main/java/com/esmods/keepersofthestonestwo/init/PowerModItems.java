@@ -174,6 +174,7 @@ import com.esmods.keepersofthestonestwo.item.FireSwordItem;
 import com.esmods.keepersofthestonestwo.item.FireStoneItem;
 import com.esmods.keepersofthestonestwo.item.FireBatteryItem;
 import com.esmods.keepersofthestonestwo.item.FireArmorItem;
+import com.esmods.keepersofthestonestwo.item.FilthArmorItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionStoneItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionMaceItem;
 import com.esmods.keepersofthestonestwo.item.ExplosionBatteryItem;
@@ -694,6 +695,10 @@ public class PowerModItems {
 	public static final DeferredItem<Item> HORROR_ARMOR_CHESTPLATE = REGISTRY.register("horror_armor_chestplate", HorrorArmorItem.Chestplate::new);
 	public static final DeferredItem<Item> HORROR_ARMOR_LEGGINGS = REGISTRY.register("horror_armor_leggings", HorrorArmorItem.Leggings::new);
 	public static final DeferredItem<Item> HORROR_ARMOR_BOOTS = REGISTRY.register("horror_armor_boots", HorrorArmorItem.Boots::new);
+	public static final DeferredItem<Item> FILTH_ARMOR_HELMET = REGISTRY.register("filth_armor_helmet", FilthArmorItem.Helmet::new);
+	public static final DeferredItem<Item> FILTH_ARMOR_CHESTPLATE = REGISTRY.register("filth_armor_chestplate", FilthArmorItem.Chestplate::new);
+	public static final DeferredItem<Item> FILTH_ARMOR_LEGGINGS = REGISTRY.register("filth_armor_leggings", FilthArmorItem.Leggings::new);
+	public static final DeferredItem<Item> FILTH_ARMOR_BOOTS = REGISTRY.register("filth_armor_boots", FilthArmorItem.Boots::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
