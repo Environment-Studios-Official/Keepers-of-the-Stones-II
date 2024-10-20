@@ -7,6 +7,7 @@ import net.minecraft.world.phys.AABB;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
@@ -137,57 +138,60 @@ public class DarknessSpecialAttackProcedure {
 					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.25 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power) {
-							if (RandomPower == 1) {
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-									_vars.syncPlayerVariables(entity);
-								}
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.THIRST_DARK_MASTER, 1200, 1, false, false));
-								{
-									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.transfered_power = true;
-									_vars.syncPlayerVariables(entityiterator);
-								}
-							} else if (RandomPower == 2) {
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-									_vars.syncPlayerVariables(entity);
-								}
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CHAOS_DARK_MASTER, 1200, 1, false, false));
-								{
-									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.transfered_power = true;
-									_vars.syncPlayerVariables(entityiterator);
-								}
-							} else if (RandomPower == 3) {
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-									_vars.syncPlayerVariables(entity);
-								}
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.HORROR_DARK_MASTER, 1200, 1, false, false));
-								{
-									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.transfered_power = true;
-									_vars.syncPlayerVariables(entityiterator);
-								}
-							} else if (RandomPower == 4) {
-								{
-									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
-									_vars.syncPlayerVariables(entity);
-								}
-								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
-									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FILTH_DARK_MASTER, 1200, 1, false, false));
-								{
-									PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
-									_vars.transfered_power = true;
-									_vars.syncPlayerVariables(entityiterator);
+							RandomPower = Mth.nextInt(RandomSource.create(), 1, 4);
+							if ((entityiterator instanceof LivingEntity _livEnt ? _livEnt.getMainHandItem() : ItemStack.EMPTY).getItem() == ItemStack.EMPTY.getItem()) {
+								if (RandomPower == 1) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.THIRST_DARK_MASTER, 12000, 1, false, false));
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.transfered_power = true;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+								} else if (RandomPower == 2) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CHAOS_DARK_MASTER, 12000, 1, false, false));
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.transfered_power = true;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+								} else if (RandomPower == 3) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.HORROR_DARK_MASTER, 12000, 1, false, false));
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.transfered_power = true;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+								} else if (RandomPower == 4) {
+									if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
+										_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FILTH_DARK_MASTER, 12000, 1, false, false));
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.mergers = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+										_vars.syncPlayerVariables(entityiterator);
+									}
+									{
+										PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+										_vars.transfered_power = true;
+										_vars.syncPlayerVariables(entityiterator);
+									}
 								}
 							}
 						}
