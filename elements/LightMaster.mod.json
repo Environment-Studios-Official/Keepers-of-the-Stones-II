@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "LightMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "LightMasterEnd"
     }

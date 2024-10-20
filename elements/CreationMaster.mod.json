@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "CreationMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "CreationMasterEnd"
     }

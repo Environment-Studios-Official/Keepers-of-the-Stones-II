@@ -11,7 +11,6 @@ import net.minecraft.world.effect.MobEffect;
 import java.util.Set;
 
 import com.esmods.keepersofthestonestwo.procedures.WaterMasterStartProcedure;
-import com.esmods.keepersofthestonestwo.procedures.EnhancedAbilitiesProcedure;
 
 public class WaterMasterMobEffect extends MobEffect {
 	public WaterMasterMobEffect() {
@@ -25,16 +24,5 @@ public class WaterMasterMobEffect extends MobEffect {
 	@Override
 	public void onEffectStarted(LivingEntity entity, int amplifier) {
 		WaterMasterStartProcedure.execute(entity.level(), entity.getX(), entity.getY(), entity.getZ(), entity);
-	}
-
-	@Override
-	public boolean shouldApplyEffectTickThisTick(int duration, int amplifier) {
-		return true;
-	}
-
-	@Override
-	public boolean applyEffectTick(LivingEntity entity, int amplifier) {
-		EnhancedAbilitiesProcedure.execute(entity);
-		return super.applyEffectTick(entity, amplifier);
 	}
 }

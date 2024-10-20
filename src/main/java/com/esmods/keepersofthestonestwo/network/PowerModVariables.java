@@ -88,6 +88,7 @@ public class PowerModVariables {
 			clone.leggings = original.leggings;
 			clone.boots = original.boots;
 			clone.unlock_keepers_box = original.unlock_keepers_box;
+			clone.hypnotized = original.hypnotized;
 			if (!event.isWasDeath()) {
 				clone.teleporting_effect = original.teleporting_effect;
 				clone.abilities_timer = original.abilities_timer;
@@ -111,6 +112,7 @@ public class PowerModVariables {
 				clone.ability_using = original.ability_using;
 				clone.power_recorded = original.power_recorded;
 				clone.detransform_anim_trigger = original.detransform_anim_trigger;
+				clone.transfered_power = original.transfered_power;
 			}
 			event.getEntity().setData(PLAYER_VARIABLES, clone);
 		}
@@ -461,6 +463,8 @@ public class PowerModVariables {
 		public ItemStack leggings = ItemStack.EMPTY;
 		public ItemStack boots = ItemStack.EMPTY;
 		public boolean unlock_keepers_box = false;
+		public boolean transfered_power = false;
+		public boolean hypnotized = false;
 
 		@Override
 		public CompoundTag serializeNBT(HolderLookup.Provider lookupProvider) {
@@ -506,6 +510,8 @@ public class PowerModVariables {
 			nbt.put("leggings", leggings.saveOptional(lookupProvider));
 			nbt.put("boots", boots.saveOptional(lookupProvider));
 			nbt.putBoolean("unlock_keepers_box", unlock_keepers_box);
+			nbt.putBoolean("transfered_power", transfered_power);
+			nbt.putBoolean("hypnotized", hypnotized);
 			return nbt;
 		}
 
@@ -552,6 +558,8 @@ public class PowerModVariables {
 			leggings = ItemStack.parseOptional(lookupProvider, nbt.getCompound("leggings"));
 			boots = ItemStack.parseOptional(lookupProvider, nbt.getCompound("boots"));
 			unlock_keepers_box = nbt.getBoolean("unlock_keepers_box");
+			transfered_power = nbt.getBoolean("transfered_power");
+			hypnotized = nbt.getBoolean("hypnotized");
 		}
 
 		public void syncPlayerVariables(Entity entity) {

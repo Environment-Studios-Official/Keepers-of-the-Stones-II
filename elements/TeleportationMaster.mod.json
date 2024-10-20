@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "TeleportationMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "TeleportationMasterEnd"
     }

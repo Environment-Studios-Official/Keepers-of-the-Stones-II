@@ -129,7 +129,7 @@
           "image": "time_stopping.png",
           "hoveredImage": "time_stopping_highlight.png",
           "onClick": {
-            "name": "Attack93"
+            "name": "Attack95"
           },
           "displayCondition": {
             "name": "PowerLockCheck"
@@ -160,7 +160,7 @@
           "image": "time_dilation.png",
           "hoveredImage": "time_dilation_highlight.png",
           "onClick": {
-            "name": "Attack94"
+            "name": "Attack93"
           },
           "displayCondition": {
             "name": "PowerLockCheck"
@@ -191,7 +191,7 @@
           "image": "acceleration_time.png",
           "hoveredImage": "acceleration_time_highlight.png",
           "onClick": {
-            "name": "Attack95"
+            "name": "Attack94"
           },
           "displayCondition": {
             "name": "PowerLockCheck"

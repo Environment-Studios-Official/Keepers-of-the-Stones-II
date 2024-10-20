@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "EarthMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "EarthMasterEnd"
     }

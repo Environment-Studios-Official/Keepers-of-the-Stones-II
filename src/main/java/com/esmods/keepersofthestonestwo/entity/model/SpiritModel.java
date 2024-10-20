@@ -9,17 +9,17 @@ import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 public class SpiritModel extends GeoModel<SpiritEntity> {
 	@Override
 	public ResourceLocation getAnimationResource(SpiritEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "animations/spirit.animation.json");
+		return ResourceLocation.parse("power:animations/spirit.animation.json");
 	}
 
 	@Override
 	public ResourceLocation getModelResource(SpiritEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "geo/spirit.geo.json");
+		return ResourceLocation.parse("power:geo/spirit.geo.json");
 	}
 
 	@Override
 	public ResourceLocation getTextureResource(SpiritEntity entity) {
-		return ResourceLocation.fromNamespaceAndPath("power", "textures/entities/" + entity.getTexture() + ".png");
+		return ResourceLocation.parse("power:textures/entities/" + entity.getTexture() + ".png");
 	}
 
 }

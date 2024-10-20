@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SpaceMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SpaceMasterEnd"
     }

@@ -47,6 +47,7 @@
     "power:smoke_battery",
     "power:spirit_battery",
     "power:form_battery",
-    "power:mind_battery"
+    "power:mind_battery",
+    "power:golden_dust_battery"
   ]
 }

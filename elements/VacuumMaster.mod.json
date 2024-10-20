@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "VacuumMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "VacuumMasterEnd"
     }

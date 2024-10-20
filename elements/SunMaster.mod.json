@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "SunMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "SunMasterEnd"
     }

@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "AirMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "AirMasterEnd"
     }

@@ -18,9 +18,6 @@
     "onStarted": {
       "name": "MetalMasterStart"
     },
-    "onActiveTick": {
-      "name": "EnhancedAbilities"
-    },
     "onExpired": {
       "name": "MetalMasterEnd"
     }
