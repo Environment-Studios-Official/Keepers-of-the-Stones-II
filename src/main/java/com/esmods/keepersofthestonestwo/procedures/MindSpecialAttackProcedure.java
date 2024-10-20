@@ -123,6 +123,11 @@ public class MindSpecialAttackProcedure {
 										_entityTeam.level().getScoreboard().addPlayerToTeam(_entityTeam.getStringUUID(), _pt);
 								}
 							}
+							{
+								PowerModVariables.PlayerVariables _vars = entityiterator.getData(PowerModVariables.PLAYER_VARIABLES);
+								_vars.hypnotized = true;
+								_vars.syncPlayerVariables(entityiterator);
+							}
 						}
 					}
 				}

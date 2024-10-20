@@ -138,6 +138,11 @@ public class DarknessSpecialAttackProcedure {
 					for (Entity entityiterator : _entfound) {
 						if (!(entityiterator == entity) && entityiterator instanceof Player && !entityiterator.getData(PowerModVariables.PLAYER_VARIABLES).transfered_power) {
 							if (RandomPower == 1) {
+								{
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+									_vars.syncPlayerVariables(entity);
+								}
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.THIRST_DARK_MASTER, 1200, 1, false, false));
 								{
@@ -146,6 +151,11 @@ public class DarknessSpecialAttackProcedure {
 									_vars.syncPlayerVariables(entityiterator);
 								}
 							} else if (RandomPower == 2) {
+								{
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+									_vars.syncPlayerVariables(entity);
+								}
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.CHAOS_DARK_MASTER, 1200, 1, false, false));
 								{
@@ -154,6 +164,11 @@ public class DarknessSpecialAttackProcedure {
 									_vars.syncPlayerVariables(entityiterator);
 								}
 							} else if (RandomPower == 3) {
+								{
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+									_vars.syncPlayerVariables(entity);
+								}
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.HORROR_DARK_MASTER, 1200, 1, false, false));
 								{
@@ -162,6 +177,11 @@ public class DarknessSpecialAttackProcedure {
 									_vars.syncPlayerVariables(entityiterator);
 								}
 							} else if (RandomPower == 4) {
+								{
+									PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
+									_vars.mergers = entity.getData(PowerModVariables.PLAYER_VARIABLES).mergers + 1;
+									_vars.syncPlayerVariables(entity);
+								}
 								if (entityiterator instanceof LivingEntity _entity && !_entity.level().isClientSide())
 									_entity.addEffect(new MobEffectInstance(PowerModMobEffects.FILTH_DARK_MASTER, 1200, 1, false, false));
 								{
