@@ -1,7 +1,10 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.network.PacketDistributor;
+
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.resources.ResourceLocation;
@@ -34,6 +37,10 @@ public class SendClientPackageActivationStoneVFXProcedure {
 					animation.setAnimation(new KeyframeAnimationPlayer((KeyframeAnimation) PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", "animation.player.transformation"))));
 				}
 			}
+		}
+		if (!world.isClientSide()) {
+			if (entity instanceof Player)
+				PacketDistributor.sendToAllPlayers(new AnimationsModuleSetupProcedure.PowerModAnimationMessage("animation.player.transformation", entity.getId(), true));
 		}
 	}
 }

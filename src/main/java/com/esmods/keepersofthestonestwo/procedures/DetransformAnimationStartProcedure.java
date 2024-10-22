@@ -1,11 +1,13 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.client.player.AbstractClientPlayer;
@@ -43,6 +45,10 @@ public class DetransformAnimationStartProcedure {
 						animation.setAnimation(new KeyframeAnimationPlayer((KeyframeAnimation) PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", "animation.player.detransformation"))));
 					}
 				}
+			}
+			if (!world.isClientSide()) {
+				if (entity instanceof Player)
+					PacketDistributor.sendToAllPlayers(new AnimationsModuleSetupProcedure.PowerModAnimationMessage("animation.player.detransformation", entity.getId(), true));
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
