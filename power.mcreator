@@ -16563,7 +16563,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/client/renderer/EnergiumGolemRenderer.java"
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "EnergiumGolemAttackDetection",
@@ -16598,7 +16598,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "EnergiumGolemPriObnovlieniiTikaSushchnosti",
@@ -16633,7 +16633,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "EnergiumGolemHandsAttack",
@@ -16668,7 +16668,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "EnergiumGolemCoreAttack",
@@ -16703,7 +16703,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "EnergiumGolemAttackCancel",
@@ -16722,7 +16722,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "BloodMaster",
@@ -19523,7 +19523,7 @@
           "src/main/resources/assets/power/particles/energium_golem_core_attack_particle.json"
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "ExplosionMaster",
@@ -20148,7 +20148,7 @@
           }
         ]
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "SuperChargeGet",
@@ -21403,7 +21403,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "EnergiumFullSetPowerLockAround",
@@ -26574,7 +26574,7 @@
         ],
         "dependencies": []
       },
-      "path": "~/Bosses/EnergiumGolem"
+      "path": "~/Mobs/EnergiumGolem"
     },
     {
       "name": "BasicCursedTrees",
@@ -27432,7 +27432,7 @@
           "src/main/java/com/esmods/keepersofthestonestwo/entity/model/CursedKeeperModel.java"
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "DeepslateDepletedEnergiumOre",
@@ -32123,7 +32123,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperPriObnovlieniiTikaSushchnosti",
@@ -32158,7 +32158,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperSummon",
@@ -32193,7 +32193,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeepersFirstPhaseImmune",
@@ -32216,7 +32216,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperFire",
@@ -32251,7 +32251,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperAir",
@@ -32270,7 +32270,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperShieldTick",
@@ -32305,7 +32305,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperEarth",
@@ -32340,7 +32340,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperWater",
@@ -32359,7 +32359,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "CursedKeeperPriGibieliSushchnosti",
@@ -32390,7 +32390,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "LuckCoinInInventory",
@@ -32444,7 +32444,7 @@
           }
         ]
       },
-      "path": "~/Bosses/CursedKeeper"
+      "path": "~/Mobs/CursedKeeper"
     },
     {
       "name": "FormMaster",
@@ -39258,19 +39258,6 @@
         "children": []
       },
       {
-        "name": "Bosses",
-        "children": [
-          {
-            "name": "EnergiumGolem",
-            "children": []
-          },
-          {
-            "name": "CursedKeeper",
-            "children": []
-          }
-        ]
-      },
-      {
         "name": "Elements",
         "children": [
           {
@@ -39740,6 +39727,14 @@
           },
           {
             "name": "CursedSquire",
+            "children": []
+          },
+          {
+            "name": "EnergiumGolem",
+            "children": []
+          },
+          {
+            "name": "CursedKeeper",
             "children": []
           }
         ]
