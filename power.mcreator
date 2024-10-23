@@ -35527,6 +35527,65 @@
         ]
       },
       "path": "~/Commands"
+    },
+    {
+      "name": "LevelDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule/Debug"
+    },
+    {
+      "name": "LevelXPDebug",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "level_xp_debug",
+      "metadata": {
+        "return_type": "string",
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/LevelXPDebugProcedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule/Debug"
+    },
+    {
+      "name": "VariablesConvertsV1",
+      "type": "procedure",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "variables_converts_v_1",
+      "metadata": {
+        "files": [
+          "src/main/java/com/esmods/keepersofthestonestwo/procedures/VariablesConvertsV1Procedure.java"
+        ],
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      },
+      "path": "~/Modules/ColorfulPowersModule"
     }
   ],
   "variable_elements": [
@@ -36146,10 +36205,10 @@
       "name": "level",
       "type": "number",
       "scope": "player_persistent",
-      "value": "0"
+      "value": "1.0"
     },
     {
-      "name": "level_exp",
+      "name": "level_xp",
       "type": "number",
       "scope": "player_persistent",
       "value": "0"
