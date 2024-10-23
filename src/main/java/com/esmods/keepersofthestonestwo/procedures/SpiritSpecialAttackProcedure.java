@@ -6,13 +6,13 @@ import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ClipContext;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.entity.TamableAnimal;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.util.RandomSource;
-import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
@@ -26,7 +26,8 @@ import java.util.List;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
-import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
+import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import com.esmods.keepersofthestonestwo.entity.SpiritEntity;
 
 public class SpiritSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -113,31 +114,26 @@ public class SpiritSpecialAttackProcedure {
 				}
 			}
 		} else if ((entity.getData(PowerModVariables.PLAYER_VARIABLES).ability).equals("spirit_ability_3")) {
-			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 80) {
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(PowerModMobEffects.SMOKE_INTANGIBILITY, 200, 0, false, false));
-				if (entity instanceof LivingEntity _entity && !_entity.level().isClientSide())
-					_entity.addEffect(new MobEffectInstance(MobEffects.INVISIBILITY, 200, 0, false, false));
-				if (world instanceof Level _level) {
-					if (!_level.isClientSide()) {
-						_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.campfire.crackle")), SoundSource.PLAYERS, 1, 1);
-					} else {
-						_level.playLocalSound(x, y, z, BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.campfire.crackle")), SoundSource.PLAYERS, 1, 1, false);
+			if (entity.getData(PowerModVariables.PLAYER_VARIABLES).power >= 75) {
+				if (world instanceof ServerLevel _level) {
+					Entity entityToSpawn = PowerModEntities.SPIRIT.get().spawn(_level, BlockPos.containing(x, y + 1, z), MobSpawnType.MOB_SUMMONED);
+					if (entityToSpawn != null) {
+						entityToSpawn.setDeltaMovement(0, 0, 0);
 					}
 				}
-				particleAmount = 8;
-				particleRadius = 2;
-				for (int index1 = 0; index1 < 60; index1++) {
-					for (int index2 = 0; index2 < (int) particleAmount; index2++) {
-						if (world instanceof ServerLevel _level)
-							_level.sendParticles(ParticleTypes.CAMPFIRE_COSY_SMOKE, (x + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), (y + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius),
-									(z + 0 + Mth.nextDouble(RandomSource.create(), -1, 1) * particleRadius), 1, (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), (Mth.nextDouble(RandomSource.create(), -0.001, 0.001)),
-									(Mth.nextDouble(RandomSource.create(), -0.001, 0.001)), 1);
+				{
+					final Vec3 _center = new Vec3(x, (y + 1), z);
+					List<Entity> _entfound = world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList();
+					for (Entity entityiterator : _entfound) {
+						if (entityiterator instanceof SpiritEntity) {
+							if (entityiterator instanceof TamableAnimal _toTame && entity instanceof Player _owner)
+								_toTame.tame(_owner);
+						}
 					}
 				}
 				{
 					PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
-					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 80;
+					_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 75;
 					_vars.syncPlayerVariables(entity);
 				}
 			}

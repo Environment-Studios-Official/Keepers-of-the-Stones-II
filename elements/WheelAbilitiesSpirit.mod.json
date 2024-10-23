@@ -23,7 +23,8 @@
             "name": "GetWheelTwoOrFirstFake"
           },
           "x": 258,
-          "y": 178
+          "y": 178,
+          "locked": false
         }
       },
       {
@@ -39,7 +40,8 @@
             "name": "GetWheelTwo"
           },
           "x": 270,
-          "y": 178
+          "y": 178,
+          "locked": false
         }
       },
       {
@@ -55,7 +57,8 @@
             "name": "GetWheelThree"
           },
           "x": 282,
-          "y": 178
+          "y": 178,
+          "locked": false
         }
       },
       {
@@ -71,7 +74,8 @@
             "name": "GetFakeWheelOne"
           },
           "x": 258,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       },
       {
@@ -87,7 +91,8 @@
             "name": "GetFakeWheelTwo"
           },
           "x": 270,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       },
       {
@@ -103,7 +108,8 @@
             "name": "GetFakeWheelThird"
           },
           "x": 282,
-          "y": 188
+          "y": 188,
+          "locked": false
         }
       },
       {
@@ -112,46 +118,101 @@
           "image": "wheel_of_abilities.png",
           "use1Xscale": false,
           "x": 117,
-          "y": 24
+          "y": 24,
+          "locked": false
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_1",
-          "image": "ability_1.png",
-          "hoveredImage": "ability_1_highlight.png",
+          "name": "imagebutton_flow_astral_energy",
+          "image": "flow_astral_energy.png",
+          "hoveredImage": "flow_astral_energy_highlight.png",
           "onClick": {
             "name": "Attack173"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
-          "y": 36
+          "y": 36,
+          "locked": false
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_2",
-          "image": "ability_2.png",
-          "hoveredImage": "ability_2_highlight.png",
+          "name": "imagebutton_spiritual_flight",
+          "image": "spiritual_flight.png",
+          "hoveredImage": "spiritual_flight_highlight.png",
           "onClick": {
             "name": "Attack174"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 251,
-          "y": 97
+          "y": 97,
+          "locked": false
         }
       },
       {
         "type": "imagebutton",
         "data": {
-          "name": "imagebutton_ability_3",
-          "image": "ability_3.png",
-          "hoveredImage": "ability_3_highlight.png",
+          "name": "imagebutton_summon_spirit",
+          "image": "summon_spirit.png",
+          "hoveredImage": "summon_spirit_highlight.png",
           "onClick": {
             "name": "Attack175"
           },
+          "displayCondition": {
+            "name": "PowerLockCheck"
+          },
           "x": 190,
-          "y": 158
+          "y": 158,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_flow_astral_energy_uses_10",
+          "text": {
+            "fixedValue": "Flow astral energy, uses 10"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 200,
+          "y": 47,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_spiritual_flight_uses_5",
+          "text": {
+            "fixedValue": "Spiritual flight, uses 5"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 262,
+          "y": 109,
+          "locked": false
+        }
+      },
+      {
+        "type": "tooltip",
+        "data": {
+          "name": "tooltip_summon_spirit_uses_75",
+          "text": {
+            "fixedValue": "Summon spirit, uses 75"
+          },
+          "width": 24,
+          "height": 24,
+          "x": 201,
+          "y": 169,
+          "locked": false
         }
       }
     ],

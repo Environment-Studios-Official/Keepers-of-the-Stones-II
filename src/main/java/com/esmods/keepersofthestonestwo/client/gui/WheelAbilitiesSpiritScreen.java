@@ -17,6 +17,7 @@ import java.util.HashMap;
 import com.mojang.blaze3d.systems.RenderSystem;
 
 import com.esmods.keepersofthestonestwo.world.inventory.WheelAbilitiesSpiritMenu;
+import com.esmods.keepersofthestonestwo.procedures.PowerLockCheckProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelTwoOrFirstFakeProcedure;
 import com.esmods.keepersofthestonestwo.procedures.GetWheelThreeProcedure;
@@ -36,9 +37,9 @@ public class WheelAbilitiesSpiritScreen extends AbstractContainerScreen<WheelAbi
 	ImageButton imagebutton_fake_wheel_button_1;
 	ImageButton imagebutton_fake_wheel_button_2;
 	ImageButton imagebutton_fake_wheel_button_3;
-	ImageButton imagebutton_ability_1;
-	ImageButton imagebutton_ability_2;
-	ImageButton imagebutton_ability_3;
+	ImageButton imagebutton_flow_astral_energy;
+	ImageButton imagebutton_spiritual_flight;
+	ImageButton imagebutton_summon_spirit;
 
 	public WheelAbilitiesSpiritScreen(WheelAbilitiesSpiritMenu container, Inventory inventory, Component text) {
 		super(container, inventory, text);
@@ -56,6 +57,12 @@ public class WheelAbilitiesSpiritScreen extends AbstractContainerScreen<WheelAbi
 		this.renderBackground(guiGraphics, mouseX, mouseY, partialTicks);
 		super.render(guiGraphics, mouseX, mouseY, partialTicks);
 		this.renderTooltip(guiGraphics, mouseX, mouseY);
+		if (mouseX > leftPos + 82 && mouseX < leftPos + 106 && mouseY > topPos + 23 && mouseY < topPos + 47)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_spirit.tooltip_flow_astral_energy_uses_10"), mouseX, mouseY);
+		if (mouseX > leftPos + 144 && mouseX < leftPos + 168 && mouseY > topPos + 85 && mouseY < topPos + 109)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_spirit.tooltip_spiritual_flight_uses_5"), mouseX, mouseY);
+		if (mouseX > leftPos + 83 && mouseX < leftPos + 107 && mouseY > topPos + 145 && mouseY < topPos + 169)
+			guiGraphics.renderTooltip(font, Component.translatable("gui.power.wheel_abilities_spirit.tooltip_summon_spirit_uses_75"), mouseX, mouseY);
 	}
 
 	@Override
@@ -175,47 +182,50 @@ public class WheelAbilitiesSpiritScreen extends AbstractContainerScreen<WheelAbi
 		};
 		guistate.put("button:imagebutton_fake_wheel_button_3", imagebutton_fake_wheel_button_3);
 		this.addRenderableWidget(imagebutton_fake_wheel_button_3);
-		imagebutton_ability_1 = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_1.png"), ResourceLocation.parse("power:textures/screens/ability_1_highlight.png")),
-				e -> {
-					if (true) {
+		imagebutton_flow_astral_energy = new ImageButton(this.leftPos + 72, this.topPos + 12, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/flow_astral_energy.png"), ResourceLocation.parse("power:textures/screens/flow_astral_energy_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesSpiritButtonMessage(6, x, y, z));
 						WheelAbilitiesSpiritButtonMessage.handleButtonAction(entity, 6, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_1", imagebutton_ability_1);
-		this.addRenderableWidget(imagebutton_ability_1);
-		imagebutton_ability_2 = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_2.png"), ResourceLocation.parse("power:textures/screens/ability_2_highlight.png")),
-				e -> {
-					if (true) {
+		guistate.put("button:imagebutton_flow_astral_energy", imagebutton_flow_astral_energy);
+		this.addRenderableWidget(imagebutton_flow_astral_energy);
+		imagebutton_spiritual_flight = new ImageButton(this.leftPos + 133, this.topPos + 73, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/spiritual_flight.png"), ResourceLocation.parse("power:textures/screens/spiritual_flight_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesSpiritButtonMessage(7, x, y, z));
 						WheelAbilitiesSpiritButtonMessage.handleButtonAction(entity, 7, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_2", imagebutton_ability_2);
-		this.addRenderableWidget(imagebutton_ability_2);
-		imagebutton_ability_3 = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46, new WidgetSprites(ResourceLocation.parse("power:textures/screens/ability_3.png"), ResourceLocation.parse("power:textures/screens/ability_3_highlight.png")),
-				e -> {
-					if (true) {
+		guistate.put("button:imagebutton_spiritual_flight", imagebutton_spiritual_flight);
+		this.addRenderableWidget(imagebutton_spiritual_flight);
+		imagebutton_summon_spirit = new ImageButton(this.leftPos + 72, this.topPos + 134, 46, 46,
+				new WidgetSprites(ResourceLocation.parse("power:textures/screens/summon_spirit.png"), ResourceLocation.parse("power:textures/screens/summon_spirit_highlight.png")), e -> {
+					if (PowerLockCheckProcedure.execute(entity)) {
 						PacketDistributor.sendToServer(new WheelAbilitiesSpiritButtonMessage(8, x, y, z));
 						WheelAbilitiesSpiritButtonMessage.handleButtonAction(entity, 8, x, y, z);
 					}
 				}) {
 			@Override
 			public void renderWidget(GuiGraphics guiGraphics, int x, int y, float partialTicks) {
-				guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
+				if (PowerLockCheckProcedure.execute(entity))
+					guiGraphics.blit(sprites.get(isActive(), isHoveredOrFocused()), getX(), getY(), 0, 0, width, height, width, height);
 			}
 		};
-		guistate.put("button:imagebutton_ability_3", imagebutton_ability_3);
-		this.addRenderableWidget(imagebutton_ability_3);
+		guistate.put("button:imagebutton_summon_spirit", imagebutton_summon_spirit);
+		this.addRenderableWidget(imagebutton_summon_spirit);
 	}
 }

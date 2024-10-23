@@ -138,12 +138,17 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.GRAVITY_STONE.get());
 				tabData.accept(PowerModItems.SMOKE_STONE.get());
 				tabData.accept(PowerModItems.SPIRIT_STONE.get());
+				tabData.accept(PowerModItems.FORM_STONE.get());
+				tabData.accept(PowerModItems.MIND_STONE.get());
+				tabData.accept(PowerModItems.GOLDEN_DUST_STONE.get());
+				tabData.accept(PowerModItems.DARKNESS_STONE.get());
 			})
 
 					.build());
 	public static final DeferredHolder<CreativeModeTab, CreativeModeTab> MOBS = REGISTRY.register("mobs",
 			() -> CreativeModeTab.builder().title(Component.translatable("item_group.power.mobs")).icon(() -> new ItemStack(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get())).displayItems((parameters, tabData) -> {
 				tabData.accept(PowerModItems.ENERGIUM_GOLEM_SPAWN_EGG.get());
+				tabData.accept(PowerModItems.CURSED_KEEPER_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_KNIGHT_SPAWN_EGG.get());
 				tabData.accept(PowerModItems.CURSED_SQUIRE_SPAWN_EGG.get());
 			})
@@ -196,6 +201,10 @@ public class PowerModTabs {
 				tabData.accept(PowerModItems.GRAVITY_BATTERY.get());
 				tabData.accept(PowerModItems.SMOKE_BATTERY.get());
 				tabData.accept(PowerModItems.SPIRIT_BATTERY.get());
+				tabData.accept(PowerModItems.FORM_BATTERY.get());
+				tabData.accept(PowerModItems.MIND_BATTERY.get());
+				tabData.accept(PowerModItems.GOLDEN_DUST_BATTERY.get());
+				tabData.accept(PowerModItems.DARKNESS_BATTERY.get());
 			})
 
 					.build());

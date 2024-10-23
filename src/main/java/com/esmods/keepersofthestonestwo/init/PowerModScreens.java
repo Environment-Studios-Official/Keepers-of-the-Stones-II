@@ -9,6 +9,8 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbiltiesGoldenDustScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilityDarknessScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesWaterScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesVacuumScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesTornadoScreen;
@@ -32,6 +34,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMusicScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMushroomsScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMoonScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMistScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMindScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMetalScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMercuryScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesMagnetScreen;
@@ -40,6 +43,7 @@ import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLightScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesLavaScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesIceScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesGravityScreen;
+import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFormScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesFireScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesExplosionScreen;
 import com.esmods.keepersofthestonestwo.client.gui.WheelAbilitiesEtherScreen;
@@ -57,7 +61,6 @@ import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart4Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart3Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart2Screen;
 import com.esmods.keepersofthestonestwo.client.gui.KeepersBoxGUIPart1Screen;
-import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIv2Screen;
 import com.esmods.keepersofthestonestwo.client.gui.BatteryChargerGUIScreen;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
@@ -83,7 +86,6 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_LIGHT.get(), WheelAbilitiesLightScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SHADOW.get(), WheelAbilitiesShadowScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_VACUUM.get(), WheelAbilitiesVacuumScreen::new);
-		event.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_ENERGY.get(), WheelAbilitiesEnergyScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SUN.get(), WheelAbilitiesSunScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_MOON.get(), WheelAbilitiesMoonScreen::new);
@@ -113,6 +115,10 @@ public class PowerModScreens {
 		event.register(PowerModMenus.WHEEL_ABILITIES_GRAVITY.get(), WheelAbilitiesGravityScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SMOKE.get(), WheelAbilitiesSmokeScreen::new);
 		event.register(PowerModMenus.WHEEL_ABILITIES_SPIRIT.get(), WheelAbilitiesSpiritScreen::new);
-		event.register(PowerModMenus.BATTERY_CHARGER_GU_IV_2.get(), BatteryChargerGUIv2Screen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_FORM.get(), WheelAbilitiesFormScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITIES_MIND.get(), WheelAbilitiesMindScreen::new);
+		event.register(PowerModMenus.BATTERY_CHARGER_GUI.get(), BatteryChargerGUIScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILTIES_GOLDEN_DUST.get(), WheelAbiltiesGoldenDustScreen::new);
+		event.register(PowerModMenus.WHEEL_ABILITY_DARKNESS.get(), WheelAbilityDarknessScreen::new);
 	}
 }

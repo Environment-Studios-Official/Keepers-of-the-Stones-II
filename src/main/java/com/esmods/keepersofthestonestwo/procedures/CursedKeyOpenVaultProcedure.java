@@ -74,7 +74,7 @@ public class CursedKeyOpenVaultProcedure {
 					itemstack.shrink(1);
 				}
 				new Object() {
-					void timedLoop(int current, int total, int ticks) {
+					void timedLoop(int timedloopiterator, int timedlooptotal, int ticks) {
 						if (!world.isClientSide() && world.getServer() != null) {
 							BlockPos _bpLootTblWorld = BlockPos.containing(x, y, z);
 							for (ItemStack itemstackiterator : world.getServer().reloadableRegistries().getLootTable(ResourceKey.create(Registries.LOOT_TABLE, ResourceLocation.parse("power:chests/cursed_castle_vaults"))).getRandomItems(
@@ -97,8 +97,8 @@ public class CursedKeyOpenVaultProcedure {
 						}
 						final int tick2 = ticks;
 						PowerMod.queueServerWork(tick2, () -> {
-							if (total > current + 1) {
-								timedLoop(current + 1, total, tick2);
+							if (timedlooptotal > timedloopiterator + 1) {
+								timedLoop(timedloopiterator + 1, timedlooptotal, tick2);
 							}
 						});
 					}

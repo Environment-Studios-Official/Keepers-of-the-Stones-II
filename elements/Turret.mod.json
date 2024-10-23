@@ -140,6 +140,7 @@
     "rangedAttackInterval": 40,
     "rangedAttackRadius": 32.0,
     "height": 1.0,
+    "attackRate": 7.0,
     "raidSpawnsCount": [
       4,
       3,

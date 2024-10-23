@@ -7,6 +7,9 @@ import net.neoforged.bus.api.Event;
 
 import javax.annotation.Nullable;
 
+import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+import com.esmods.keepersofthestonestwo.configuration.PowerConfigConfiguration;
+
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class ConfigVariablesToMapVariablesProcedure {
 	@SubscribeEvent
@@ -19,5 +22,7 @@ public class ConfigVariablesToMapVariablesProcedure {
 	}
 
 	private static void execute(@Nullable Event event) {
+		PowerModVariables.master_effect_duration = (double) PowerConfigConfiguration.MASTER_EFFECT_DURATION.get();
+		PowerModVariables.recharge_timer = (double) PowerConfigConfiguration.RECHARGE_TIMER.get();
 	}
 }
