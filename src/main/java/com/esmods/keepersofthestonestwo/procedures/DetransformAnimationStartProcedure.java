@@ -1,17 +1,28 @@
 package com.esmods.keepersofthestonestwo.procedures;
 
+import net.neoforged.neoforge.network.PacketDistributor;
 import net.neoforged.neoforge.event.tick.PlayerTickEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.bus.api.Event;
 
 import net.minecraft.world.level.LevelAccessor;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.commands.CommandSourceStack;
-import net.minecraft.commands.CommandSource;
+import net.minecraft.resources.ResourceLocation;
+import net.minecraft.client.player.AbstractClientPlayer;
+import net.minecraft.client.Minecraft;
 
 import javax.annotation.Nullable;
+
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationRegistry;
+import dev.kosmx.playerAnim.minecraftApi.PlayerAnimationAccess;
+import dev.kosmx.playerAnim.api.layered.modifier.AbstractFadeModifier;
+import dev.kosmx.playerAnim.api.layered.ModifierLayer;
+import dev.kosmx.playerAnim.api.layered.IAnimation;
+import dev.kosmx.playerAnim.api.firstPerson.FirstPersonMode;
+import dev.kosmx.playerAnim.api.firstPerson.FirstPersonConfiguration;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
@@ -30,12 +41,19 @@ public class DetransformAnimationStartProcedure {
 		if (entity == null)
 			return;
 		if (entity.getData(PowerModVariables.PLAYER_VARIABLES).detransform_anim_trigger) {
-			{
-				Entity _ent = entity;
-				if (!_ent.level().isClientSide() && _ent.getServer() != null) {
-					_ent.getServer().getCommands().performPrefixedCommand(new CommandSourceStack(CommandSource.NULL, _ent.position(), _ent.getRotationVector(), _ent.level() instanceof ServerLevel ? (ServerLevel) _ent.level() : null, 4,
-							_ent.getName().getString(), _ent.getDisplayName(), _ent.level().getServer(), _ent), "playPlayerAnimation @s " + "power:" + "animation.player.detransformation");
+			if (world.isClientSide()) {
+				if (entity instanceof AbstractClientPlayer player) {
+					var animation = (ModifierLayer<IAnimation>) PlayerAnimationAccess.getPlayerAssociatedData(Minecraft.getInstance().player).get(ResourceLocation.fromNamespaceAndPath("power", "player_animation"));
+					if (animation != null) {
+						animation.replaceAnimationWithFade(AbstractFadeModifier.functionalFadeIn(20, (modelName, type, value) -> value),
+								PlayerAnimationRegistry.getAnimation(ResourceLocation.fromNamespaceAndPath("power", "animation.player.detransformation")).playAnimation().setFirstPersonMode(FirstPersonMode.THIRD_PERSON_MODEL)
+										.setFirstPersonConfiguration(new FirstPersonConfiguration().setShowRightArm(true).setShowLeftItem(false)));
+					}
 				}
+			}
+			if (!world.isClientSide()) {
+				if (entity instanceof Player)
+					PacketDistributor.sendToPlayersInDimension((ServerLevel) entity.level(), new AnimationsModuleSetupProcedure.PowerModAnimationMessage("animation.player.detransformation", entity.getId(), true));
 			}
 			{
 				PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
