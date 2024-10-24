@@ -37,12 +37,6 @@ versionRange="[0,)"
 ordering="NONE"
 side="BOTH"
 [[dependencies.power]]
-modId="playeranimatorapi"
-type="required"
-versionRange="[0,)"
-ordering="NONE"
-side="BOTH"
-[[dependencies.power]]
 modId="geckolib"
 type="required"
 versionRange="[0,)"
