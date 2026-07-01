@@ -5,7 +5,7 @@ repositories {
 }
 
  dependencies {
-    implementation 'maven.modrinth:abloom-api:uKIRWf09'
+    implementation 'maven.modrinth:abloom-api:y7kgHPBb'
  }
 
 

@@ -65,7 +65,6 @@ public class PowerMod {
 		PowerModVillagerProfessions.PROFESSIONS.register(modEventBus);
 		// Start of user code block mod init
 		modEventBus.addListener(PowerModElementalProjectiles::onCommonSetup);
-		modEventBus.addListener(PowerModElementalWeapons::onCommonSetup);
 		// End of user code block mod init
 	}
 
