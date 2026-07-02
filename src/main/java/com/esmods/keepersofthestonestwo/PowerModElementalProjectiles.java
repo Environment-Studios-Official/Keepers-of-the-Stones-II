@@ -29,8 +29,12 @@ public class PowerModElementalProjectiles {
 
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), ElementType.ICE, 25f);
 
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.LIGHTBALL_PROJECTILE.get(), ElementType.ELECTRIC, 75f);
 
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), ElementType.WIND, 25f);
 
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.AMETHYST_ATTACK_PROJECTILE.get(), ElementType.EARTH, 30f);
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), ElementType.EARTH, 15f);
 
         registerCustomProjectiles();
 
