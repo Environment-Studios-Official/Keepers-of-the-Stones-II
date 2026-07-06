@@ -4241,7 +4241,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_blok",
       "metadata": {
@@ -4272,7 +4272,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_sushchnost",
       "metadata": {
@@ -23177,7 +23177,7 @@
     {
       "name": "MusicSpecialAttack",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "music_special_attack",
       "metadata": {
@@ -23465,7 +23465,7 @@
     {
       "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "note_bomb_projectile_koghda_snariad_popadaiet_v_blok",
       "metadata": {
@@ -32560,7 +32560,7 @@
     {
       "name": "SoundPassiveSkills",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "sound_passive_skills",
       "metadata": {
@@ -32573,7 +32573,7 @@
     {
       "name": "CrystalPassiveSkills",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "crystal_passive_skills",
       "metadata": {
@@ -32846,7 +32846,7 @@
     {
       "name": "TechnologyPassiveSkills",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "technology_passive_skills",
       "metadata": {
@@ -32911,7 +32911,7 @@
     {
       "name": "SandPassiveSkills",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "sand_passive_skills",
       "metadata": {
@@ -33106,7 +33106,7 @@
     {
       "name": "DarknessPassiveSkills",
       "type": "code",
-      "compiles": false,
+      "compiles": true,
       "locked_code": true,
       "registry_name": "darkness_passive_skills",
       "metadata": {
@@ -40917,7 +40917,7 @@
   "workspaceSettings": {
     "modid": "power",
     "modName": "Keepers of the Stones II",
-    "version": "1.3.1",
+    "version": "1.3.2",
     "description": "Keepers of the Stones II is a mod created as a continuation of the original version of the Keepers of the Stones mod. It adds more new elemental stones that can be used to improve the character skills and powers.",
     "author": "MagicalAlexey, Spinoraptor, Linnett, Cucuber, Samuelchik, Max_Sleep, Rezolv and many others.",
     "websiteURL": "https://modrinth.com/mod/keepers-of-the-stones-2",

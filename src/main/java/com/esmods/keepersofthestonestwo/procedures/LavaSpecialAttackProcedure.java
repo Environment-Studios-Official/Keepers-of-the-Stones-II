@@ -13,12 +13,10 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.entity.projectile.Projectile;
 import net.minecraft.world.entity.projectile.AbstractArrow;
 import net.minecraft.world.entity.Entity;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
@@ -29,6 +27,8 @@ import java.util.Comparator;
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
+
+import com.auranite.abloom.ElementDamageHandler;
 
 public class LavaSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -62,13 +62,7 @@ public class LavaSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								if (entity.isInWater()) {
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
-											(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
-								} else {
-									entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity), 0);
-									entityiterator.igniteForSeconds(7);
-								}
+								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.FIRE, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
 							}
 						}
 					}
@@ -156,8 +150,7 @@ public class LavaSpecialAttackProcedure {
 											world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)))));
 											if (!(entityiterator == entity)) {
-												entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
-														(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3));
+												ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3), (int) 80);
 											}
 										}
 									}

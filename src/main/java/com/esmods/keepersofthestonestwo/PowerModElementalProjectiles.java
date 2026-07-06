@@ -36,6 +36,12 @@ public class PowerModElementalProjectiles {
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.AMETHYST_ATTACK_PROJECTILE.get(), ElementType.EARTH, 30f);
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.AMETHYST_CLUSTER_ATTACK_PROJECTILE.get(), ElementType.EARTH, 15f);
 
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), ElementType.FIRE, 25f);
+
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), ElementType.FIRE, 25f);
+
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), ElementType.WIND, 40f);
+
         registerCustomProjectiles();
 
         AbloomMod.LOGGER.info("Registered {} elemental projectile types",

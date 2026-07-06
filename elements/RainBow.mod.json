@@ -5,6 +5,7 @@
     "renderType": 1,
     "texture": "rain_bow",
     "customModelName": "rain_bow:default",
+    "guiTexture": "",
     "customProperties": {},
     "states": [],
     "animations": [],

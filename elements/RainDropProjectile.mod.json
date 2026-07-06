@@ -13,7 +13,7 @@
     "disableGravity": false,
     "disableDiscarding": false,
     "power": 1.0,
-    "damage": 12.0,
+    "damage": 7.5,
     "knockback": 1,
     "entityModel": "Modelrain_drop",
     "customModelTexture": "rain_drop.png",

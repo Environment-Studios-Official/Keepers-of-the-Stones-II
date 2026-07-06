@@ -1,17 +1,18 @@
 **New features**
 
-* Added a flower of tears
+* Added support for elemental damage
+* Elemental damage accumulates elemental resonance (max. 100 points)
+* When 100 resonance points accumulate, a resonance effect is triggered that has a negative effect on the target
 
 **Improvemnts**
 
-* The fill rate of the Eternal Curse meter now depends on the effect level
-* Starting now, each effect level increases the fill speed by 25% per level
-* The Eternal Curse effect no longer slows the player down
-* Increased protection for bosses and mobs in the cursed world
+* Reduced rain bow damage
+* Some passive skills have been changed
+* The Abloom API mod is now required to run this mod
 
 **API changes**
 
-* Added the 'tp' argument for the 'pw' command, for teleportation to mod dimensions
+* *N/A*
 
 **Bugfixes**
 
@@ -19,5 +20,5 @@
 
 **Known issues**
 
-*N/A*
+* *N/A*
 
