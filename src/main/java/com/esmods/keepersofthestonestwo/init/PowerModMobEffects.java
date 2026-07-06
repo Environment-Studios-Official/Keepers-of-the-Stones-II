@@ -37,7 +37,6 @@ public class PowerModMobEffects {
 	public static final DeferredHolder<MobEffect, MobEffect> PLANTS_MASTER = REGISTRY.register("plants_master", () -> new PlantsMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> ANIMALS_MASTER = REGISTRY.register("animals_master", () -> new AnimalsMasterMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> METAL_MASTER = REGISTRY.register("metal_master", () -> new MetalMasterMobEffect());
-	public static final DeferredHolder<MobEffect, MobEffect> STUN = REGISTRY.register("stun", () -> new StunMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> WHIRLWIND = REGISTRY.register("whirlwind", () -> new WhirlwindMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> IRON_SKIN = REGISTRY.register("iron_skin", () -> new IronSkinMobEffect());
 	public static final DeferredHolder<MobEffect, MobEffect> LIGHT_MASTER = REGISTRY.register("light_master", () -> new LightMasterMobEffect());

@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo;
 
+import com.auranite.abloom.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.tags.BiomeTags;
@@ -38,7 +39,7 @@ public class SandPassiveSkills {
             Holder<MobEffect>[] effects = (Holder<MobEffect>[]) new Holder<?>[]{
                     MobEffects.BLINDNESS,
                     MobEffects.MOVEMENT_SLOWDOWN,
-                    PowerModMobEffects.STUN
+                    AbloomModEffects.STUN
             };
             Holder<MobEffect> chosen = effects[attacker.getRandom().nextInt(effects.length)];
 

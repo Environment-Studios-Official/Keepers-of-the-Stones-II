@@ -1,5 +1,6 @@
 package your.modid.common.event;
 
+import com.auranite.abloom.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
@@ -57,7 +58,7 @@ public class CrystalPassiveSkills {
 
 		LivingEntity attacker = (LivingEntity) event.getSource().getEntity();
 		if (attacker instanceof LivingEntity livingAttacker && level.random.nextFloat() < 0.125f) {
-			livingAttacker.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 100));
+			livingAttacker.addEffect(new MobEffectInstance(AbloomModEffects.STUN, 100));
 		}
 	}
 

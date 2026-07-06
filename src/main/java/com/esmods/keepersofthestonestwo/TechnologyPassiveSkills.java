@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo;
 
+import com.auranite.abloom.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.tags.BlockTags;
@@ -16,7 +17,7 @@ import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 public class TechnologyPassiveSkills {
 
 	private static final int SEARCH_RADIUS = 16;
-	private static final int STUN_DURATION = 5 * 20; // 5 секунд в тиках
+	private static final int BREAK_DURATION = 7 * 20; // 5 секунд в тиках
 
 	// Проверка: активен ли TechnologyMaster
 	private static boolean hasTechnologyMaster(Player player) {
@@ -72,12 +73,11 @@ public class TechnologyPassiveSkills {
 		}
 		else if (event.getSource().getEntity() instanceof Player attacker) {
 			if (hasTechnologyMaster(attacker) && isNearRedstoneOrMechanism(attacker)) {
-				// Техношок: 10% шанс на оглушение
+
 				if (attacker.getRandom().nextFloat() < 0.1f) {
-					// Наложить кастомный эффект "Оглушение"
 					target.addEffect(new MobEffectInstance(
-							PowerModMobEffects.STUN, // ← ваш кастомный эффект
-							STUN_DURATION,
+							AbloomModEffects.BREAK,
+							BREAK_DURATION,
 							0,
 							false,
 							true

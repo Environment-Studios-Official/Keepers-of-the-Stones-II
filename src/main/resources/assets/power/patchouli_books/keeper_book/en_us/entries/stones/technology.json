@@ -26,7 +26,7 @@
                 "$(li)",
                 "Exoskeleton: –20% incoming damage.",
                 "$(li)",
-                "Tech Shock: 10% chance to stun target for 5 sec on attack."
+                "Tech Shock: 10% chance to applies break effect on target for 7 sec on attack."
             ]
         }
     ]

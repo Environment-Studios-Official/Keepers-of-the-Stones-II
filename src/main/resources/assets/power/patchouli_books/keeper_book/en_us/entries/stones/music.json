@@ -9,7 +9,7 @@
             "text": [
                 "$(l)Abilities$()",
                 "$(li)",
-                "Musical attack - attacks entities with a beam attack, dealing a stun effect to them.",
+                "Musical attack - attacks entities with a beam attack.",
                 "$(li)",
                 "Explosion of notes - shoots note bombs in different directions.",
                 "$(li)",

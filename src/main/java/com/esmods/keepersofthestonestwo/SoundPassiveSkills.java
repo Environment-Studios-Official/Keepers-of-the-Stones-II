@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo;
 
+import com.auranite.abloom.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerPlayer;
@@ -20,7 +21,7 @@ import java.util.Random;
 @EventBusSubscriber
 public class SoundPassiveSkills {
 
-    private static final Map<Player, Long> lastStunTime = new HashMap<>();
+    private static final Map<Player, Long> lastRuptureTime = new HashMap<>();
     private static final Random RANDOM = new Random();
 
     // Проверка наличия эффекта SoundMaster
@@ -76,10 +77,10 @@ public class SoundPassiveSkills {
         if (!isInEnclosedSpace(player)) return;
 
         long currentTime = System.currentTimeMillis();
-        Long lastTime = lastStunTime.getOrDefault(player, 0L);
+        Long lastTime = lastRuptureTime.getOrDefault(player, 0L);
         if (currentTime - lastTime >= 20_000 && RANDOM.nextFloat() < 0.15f) {
-            target.addEffect(new MobEffectInstance(PowerModMobEffects.STUN, 100));
-            lastStunTime.put(player, currentTime);
+            target.addEffect(new MobEffectInstance(AbloomModEffects.RUPTURE, 200));
+            lastRuptureTime.put(player, currentTime);
         }
     }
 

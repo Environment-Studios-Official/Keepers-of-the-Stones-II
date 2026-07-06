@@ -26,7 +26,7 @@
                 "$(li)",
                 "Cloak of Darkness: +35% damage, –45% incoming damage.",
                 "$(li)",
-                "Dark Mantle: 30% chance to apply one of: \"Weakness II\", \"Slowness II\", \"Stun\", or \"Blindness\"."
+                "Dark Mantle: 30% chance to apply one of: \"Weakness II\", \"Slowness II\", \"Taunt\", or \"Blindness\"."
             ]
         }
     ]

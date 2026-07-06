@@ -4225,38 +4225,6 @@
       "path": "~/Elements/Lava"
     },
     {
-      "name": "StunPriNalozhieniiEffiekta",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_pri_nalozhienii_effiekta",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunPriNalozhieniiEffiektaProcedure.java"
-        ],
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      },
-      "path": "~/Modules/KeyBindsModule/WheelOpenKey/Wheels/Sound"
-    },
-    {
-      "name": "Stun",
-      "type": "potioneffect",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun",
-      "metadata": {
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/potion/StunMobEffect.java"
-        ]
-      },
-      "path": "~/Modules/ElementalPassiveSkills/PassiveEffects"
-    },
-    {
       "name": "SoundBombProjectile",
       "type": "projectile",
       "compiles": true,
@@ -4273,7 +4241,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_blok",
       "metadata": {
@@ -4304,7 +4272,7 @@
     {
       "name": "SoundBombProjectileKoghdaSnariadPopadaietVSushchnost",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "sound_bomb_projectile_koghda_snariad_popadaiet_v_sushchnost",
       "metadata": {
@@ -23209,7 +23177,7 @@
     {
       "name": "MusicSpecialAttack",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "music_special_attack",
       "metadata": {
@@ -23497,7 +23465,7 @@
     {
       "name": "NoteBombProjectileKoghdaSnariadPopadaietVBlok",
       "type": "procedure",
-      "compiles": true,
+      "compiles": false,
       "locked_code": false,
       "registry_name": "note_bomb_projectile_koghda_snariad_popadaiet_v_blok",
       "metadata": {
@@ -32358,25 +32326,6 @@
       "path": "~/Modules/KeyBindsModule/AbilityUsingKey"
     },
     {
-      "name": "StunSoundStart",
-      "type": "procedure",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "stun_sound_start",
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ],
-        "files": [
-          "src/main/java/com/esmods/keepersofthestonestwo/procedures/StunSoundStartProcedure.java"
-        ]
-      },
-      "path": "~/Elements/Sound"
-    },
-    {
       "name": "BlueMagnetSetTimer",
       "type": "procedure",
       "compiles": true,
@@ -32611,7 +32560,7 @@
     {
       "name": "SoundPassiveSkills",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "sound_passive_skills",
       "metadata": {
@@ -32624,7 +32573,7 @@
     {
       "name": "CrystalPassiveSkills",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "crystal_passive_skills",
       "metadata": {
@@ -32897,7 +32846,7 @@
     {
       "name": "TechnologyPassiveSkills",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "technology_passive_skills",
       "metadata": {
@@ -32962,7 +32911,7 @@
     {
       "name": "SandPassiveSkills",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "sand_passive_skills",
       "metadata": {
@@ -33157,7 +33106,7 @@
     {
       "name": "DarknessPassiveSkills",
       "type": "code",
-      "compiles": true,
+      "compiles": false,
       "locked_code": true,
       "registry_name": "darkness_passive_skills",
       "metadata": {
@@ -36967,7 +36916,6 @@
       "advancements.lets_bail_this_place_isdead.descr": "Войдите в проклятый мир",
       "block.power.cursed_stone_stairs": "Ступеньки из проклятого камня",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "Перегрев, расходует 35",
-      "effect.power.stun": "Оглушение",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Звуковой удар, расходует 80",
       "item.power.chaos_armor_chestplate": "Нагрудник тёмного мастера хаоса",
       "item.power.explosion_battery": "Батарея",
@@ -38085,7 +38033,6 @@
       "block.power.cursed_stone_stairs": " Cursed Stone Stairs",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "Overheating, uses 35",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "Sound boom, uses 80",
-      "effect.power.stun": "Stun",
       "item.power.explosion_battery": "Battery",
       "item.power.chaos_armor_chestplate": "Chaos Chestplate",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "Smoke",
@@ -39200,7 +39147,6 @@
       "block.power.cursed_stone_stairs": "诅咒石阶",
       "gui.power.wheel_abilities_heat.tooltip_overheating_uses_35": "过热，使用35",
       "gui.power.wheel_abilities_sound.tooltip_sound_boom_uses_80": "声音轰鸣，使用80",
-      "effect.power.stun": "眩晕",
       "item.power.explosion_battery": "电池",
       "item.power.chaos_armor_chestplate": "混沌胸甲",
       "gui.power.keepers_box_gui_part_2.tooltip_smoke": "抽烟",
@@ -40106,10 +40052,6 @@
           },
           {
             "name": "JavaAnimationsSyncModule",
-            "children": []
-          },
-          {
-            "name": "PartyModule",
             "children": []
           },
           {

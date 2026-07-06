@@ -1,5 +1,6 @@
 package com.esmods.keepersofthestonestwo;
 
+import com.auranite.abloom.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;
@@ -65,7 +66,7 @@ public class DarknessPassiveSkills {
                     Holder<MobEffect>[] effects = (Holder<MobEffect>[]) new Holder<?>[]{
                             MobEffects.WEAKNESS,
                             MobEffects.MOVEMENT_SLOWDOWN,
-                            PowerModMobEffects.STUN,
+                            AbloomModEffects.TAUNT,
                             MobEffects.BLINDNESS
                     };
                     Holder<MobEffect> chosen = effects[attacker.getRandom().nextInt(effects.length)];
@@ -73,7 +74,7 @@ public class DarknessPassiveSkills {
                     int amplifier = 1; // II уровень для первых двух
 
                     // Для Слепоты и Оглушения — уровень I (amplifier = 0)
-                    if (chosen == MobEffects.BLINDNESS || chosen == PowerModMobEffects.STUN.get()) {
+                    if (chosen == MobEffects.BLINDNESS || chosen == AbloomModEffects.TAUNT.get()) {
                         amplifier = 0;
                     }
 
