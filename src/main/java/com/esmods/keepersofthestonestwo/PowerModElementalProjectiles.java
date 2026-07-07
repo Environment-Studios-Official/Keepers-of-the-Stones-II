@@ -3,6 +3,7 @@ package com.esmods.keepersofthestonestwo;
 import com.auranite.abloom.AbloomMod;
 import com.auranite.abloom.ElementType;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
+import net.minecraft.world.entity.animal.Wolf;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import com.auranite.abloom.ElementalProjectileRegistry;
 
@@ -41,6 +42,8 @@ public class PowerModElementalProjectiles {
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.LAVA_ATTACK_PROJECTILE.get(), ElementType.FIRE, 25f);
 
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), ElementType.WIND, 40f);
+
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.POISONOUS_THORN.get(), ElementType.NATURAL, 25f);
 
         registerCustomProjectiles();
 

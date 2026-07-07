@@ -9,14 +9,11 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.effect.MobEffectInstance;
-import net.minecraft.world.damagesource.DamageSource;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.Mth;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.BlockPos;
@@ -24,6 +21,8 @@ import net.minecraft.core.BlockPos;
 import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
+
+import com.auranite.abloom.ElementDamageHandler;
 
 public class OceanSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
@@ -58,8 +57,7 @@ public class OceanSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
-										(float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl);
+								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
 							}
 						}
 					}
@@ -91,8 +89,7 @@ public class OceanSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (!(entityiterator == entity)) {
-							entityiterator.hurt(new DamageSource(world.holderOrThrow(ResourceKey.create(Registries.DAMAGE_TYPE, ResourceLocation.parse("power:elemental_powers"))), entity),
-									(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.7));
+							ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.WATER, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.7), (int) 40);
 						}
 					}
 				}
