@@ -1,5 +1,24 @@
 {
   "item": "power:animals_halberd",
-  "element": "NATURAL",
-  "accumulation_multiplier": 5.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 3.0
+    },
+    "3": {
+      "element": "NATURAL",
+      "accumulation_multiplier": 4.0
+    },
+    "4": {
+      "element": "NATURAL",
+      "accumulation_multiplier": 6.0
+    },
+    "base_element": "NATURAL",
+    "crit_chance": 0.14,
+    "crit_damage": 2.0
+  }
 }

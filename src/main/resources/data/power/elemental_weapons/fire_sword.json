@@ -1,5 +1,24 @@
 {
   "item": "power:fire_sword",
-  "element": "FIRE",
-  "accumulation_multiplier": 5.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 3.0
+    },
+    "3": {
+      "element": "FIRE",
+      "accumulation_multiplier": 4.0
+    },
+    "4": {
+      "element": "FIRE",
+      "accumulation_multiplier": 6.0
+    },
+    "base_element": "FIRE",
+    "crit_chance": 0.24,
+    "crit_damage": 1.5
+  }
 }

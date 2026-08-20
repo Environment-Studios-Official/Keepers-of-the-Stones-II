@@ -1,5 +1,24 @@
 {
   "item": "power:air_rapier",
-  "element": "WIND",
-  "accumulation_multiplier": 10.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 4.0
+    },
+    "3": {
+      "element": "WIND",
+      "accumulation_multiplier": 6.0
+    },
+    "4": {
+      "element": "WIND",
+      "accumulation_multiplier": 8.0
+    },
+    "base_element": "WIND",
+    "crit_chance": 0.33,
+    "crit_damage": 1.0
+  }
 }

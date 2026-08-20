@@ -12,7 +12,7 @@ import net.minecraft.core.particles.ParticleTypes;
 
 import java.util.Comparator;
 
-import com.auranite.abloom.AbloomModEffects;
+import com.auranite.abloom.init.AbloomModEffects;
 
 public class NoteBombProjectileKoghdaSnariadPopadaietVBlokProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

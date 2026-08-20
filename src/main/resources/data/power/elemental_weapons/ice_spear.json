@@ -1,5 +1,24 @@
 {
-  "item": "power:ice_spear",
-  "element": "ICE",
-  "accumulation_multiplier": 5.0
+  "item": "power:ice_spear"",
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "ICE",
+      "accumulation_multiplier": 2.0
+    },
+    "3": {
+      "element": "ICE",
+      "accumulation_multiplier": 4.0
+    },
+    "4": {
+      "element": "ICE",
+      "accumulation_multiplier": 6.0
+    },
+    "base_element": "ICE",
+    "crit_chance": 0.24,
+    "crit_damage": 1.5
+  }
 }

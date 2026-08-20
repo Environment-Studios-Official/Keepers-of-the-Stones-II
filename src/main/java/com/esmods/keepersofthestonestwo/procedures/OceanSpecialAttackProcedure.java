@@ -22,8 +22,6 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class OceanSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -57,7 +55,7 @@ public class OceanSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
 							}
 						}
 					}
@@ -89,7 +87,8 @@ public class OceanSpecialAttackProcedure {
 					final Vec3 _center = new Vec3(x, y, z);
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(5 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (!(entityiterator == entity)) {
-							ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.WATER, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.7), (int) 40);
+							com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.WATER, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.7),
+									(int) 40);
 						}
 					}
 				}

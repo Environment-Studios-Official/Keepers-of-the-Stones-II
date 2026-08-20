@@ -28,8 +28,6 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.LavaAttackProjectileEntity;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class LavaSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -62,7 +60,7 @@ public class LavaSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.FIRE, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.FIRE, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
 							}
 						}
 					}
@@ -150,7 +148,8 @@ public class LavaSpecialAttackProcedure {
 											world.setBlock(BlockPos.containing(x + xi, y + i - 1, z + zi), Blocks.MAGMA_BLOCK.defaultBlockState(), 3);
 											world.levelEvent(2001, BlockPos.containing(x + xi, y + i - 1, z + zi), Block.getId((world.getBlockState(BlockPos.containing(x + xi, y + i - 1, z + zi)))));
 											if (!(entityiterator == entity)) {
-												ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3), (int) 80);
+												com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.EARTH,
+														(float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3), (int) 80);
 											}
 										}
 									}

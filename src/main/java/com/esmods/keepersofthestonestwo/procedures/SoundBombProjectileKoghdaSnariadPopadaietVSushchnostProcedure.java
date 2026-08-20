@@ -4,7 +4,7 @@ import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.effect.MobEffectInstance;
 
-import com.auranite.abloom.AbloomModEffects;
+import com.auranite.abloom.init.AbloomModEffects;
 
 public class SoundBombProjectileKoghdaSnariadPopadaietVSushchnostProcedure {
 	public static void execute(Entity entity) {

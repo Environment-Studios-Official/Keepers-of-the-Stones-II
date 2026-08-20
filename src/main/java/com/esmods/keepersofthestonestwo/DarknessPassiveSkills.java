@@ -1,6 +1,6 @@
 package com.esmods.keepersofthestonestwo;
 
-import com.auranite.abloom.AbloomModEffects;
+import com.auranite.abloom.init.AbloomModEffects;
 import com.esmods.keepersofthestonestwo.init.PowerModMobEffects;
 import net.minecraft.core.Holder;
 import net.minecraft.world.effect.MobEffect;

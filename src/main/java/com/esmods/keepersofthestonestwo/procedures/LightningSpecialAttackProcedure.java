@@ -24,8 +24,6 @@ import com.esmods.keepersofthestonestwo.init.PowerModParticleTypes;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.BallLightningProjectileEntity;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class LightningSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -58,7 +56,7 @@ public class LightningSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.ELECTRIC, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 7);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.ELECTRIC, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 7);
 							}
 						}
 					}
@@ -96,7 +94,8 @@ public class LightningSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.ELECTRIC, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.65), (int) 14);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.ELECTRIC, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.65),
+										(int) 14);
 								success = true;
 							}
 						}

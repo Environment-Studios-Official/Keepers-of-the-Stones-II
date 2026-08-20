@@ -1,5 +1,20 @@
 {
   "item": "power:lava_hammer",
-  "element": "EARTH",
-  "accumulation_multiplier": 10
+  "stages": {
+    "1": {
+      "element": "FIRE",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "FIRE",
+      "accumulation_multiplier": 8.0
+    },
+    "3": {
+      "element": "EARTH",
+      "accumulation_multiplier": 10.0
+    },
+    "base_element": "EARTH",
+    "crit_chance": 0.33,
+    "crit_damage": 2.0
+  }
 }

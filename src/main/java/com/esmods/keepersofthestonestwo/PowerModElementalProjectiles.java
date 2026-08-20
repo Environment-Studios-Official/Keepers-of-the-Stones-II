@@ -1,11 +1,11 @@
 package com.esmods.keepersofthestonestwo;
 
 import com.auranite.abloom.AbloomMod;
-import com.auranite.abloom.ElementType;
+import com.auranite.abloom.registries.ElementalProjectileRegistry;
+import com.auranite.abloom.util.ElementType;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import net.minecraft.world.entity.animal.Wolf;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
-import com.auranite.abloom.ElementalProjectileRegistry;
 
 
 public class PowerModElementalProjectiles {

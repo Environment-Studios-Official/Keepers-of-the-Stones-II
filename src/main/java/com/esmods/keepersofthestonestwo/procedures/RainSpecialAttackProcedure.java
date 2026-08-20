@@ -22,8 +22,6 @@ import java.util.Comparator;
 
 import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class RainSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -57,7 +55,7 @@ public class RainSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entity, com.auranite.abloom.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entity, com.auranite.abloom.util.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 4);
 							}
 						}
 					}
@@ -88,7 +86,7 @@ public class RainSpecialAttackProcedure {
 									_level.sendParticles(ParticleTypes.RAIN, (entityiterator.getX() + Mth.nextDouble(RandomSource.create(), -0.1, 0.1) * particleRadius),
 											(entityiterator.getY() + 0 + Mth.nextDouble(RandomSource.create(), 0, 5) * particleRadius), (entityiterator.getZ() + 0 + Mth.nextDouble(RandomSource.create(), -0.1, 0.1) * particleRadius), 10, 1, 1, 1, 1);
 							}
-							ElementDamageHandler.dealElementDamage(entity, com.auranite.abloom.ElementType.WATER, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.34), (int) 30);
+							com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entity, com.auranite.abloom.util.ElementType.WATER, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.34), (int) 30);
 							{
 								PowerModVariables.PlayerVariables _vars = entity.getData(PowerModVariables.PLAYER_VARIABLES);
 								_vars.power = entity.getData(PowerModVariables.PLAYER_VARIABLES).power - 45;

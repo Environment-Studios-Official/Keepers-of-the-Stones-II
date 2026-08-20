@@ -28,8 +28,6 @@ import com.esmods.keepersofthestonestwo.network.PowerModVariables;
 import com.esmods.keepersofthestonestwo.init.PowerModEntities;
 import com.esmods.keepersofthestonestwo.entity.WaterAttackProjectileEntity;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class WaterSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -64,7 +62,7 @@ public class WaterSpecialAttackProcedure {
 										.getZ()));
 						for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(1.3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 							if (!(entityiterator == entity)) {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 5);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.WATER, (float) entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl, (int) 5);
 							}
 						}
 					}

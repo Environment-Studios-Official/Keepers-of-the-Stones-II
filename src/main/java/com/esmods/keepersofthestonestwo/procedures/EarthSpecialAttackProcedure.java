@@ -32,8 +32,6 @@ import com.esmods.keepersofthestonestwo.entity.CobblestoneAttackProjectileEntity
 import com.esmods.keepersofthestonestwo.entity.CobbledDeepslateAttackProjectileEntity;
 import com.esmods.keepersofthestonestwo.PowerMod;
 
-import com.auranite.abloom.ElementDamageHandler;
-
 public class EarthSpecialAttackProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z, Entity entity) {
 		if (entity == null)
@@ -196,7 +194,8 @@ public class EarthSpecialAttackProcedure {
 								if (world.getBlockState(BlockPos.containing(x, y - 1, z)).canOcclude()) {
 									world.setBlock(BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Blocks.POINTED_DRIPSTONE.defaultBlockState(), 3);
 									world.levelEvent(2001, BlockPos.containing(entityiterator.getX(), entityiterator.getY(), entityiterator.getZ()), Block.getId(Blocks.POINTED_DRIPSTONE.defaultBlockState()));
-									ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3), (int) 40);
+									com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2.3),
+											(int) 40);
 									if (world instanceof Level _level) {
 										if (!_level.isClientSide()) {
 											_level.playSound(null, BlockPos.containing(x, y, z), BuiltInRegistries.SOUND_EVENT.get(ResourceLocation.parse("block.dripstone_block.fall")), SoundSource.PLAYERS, 1, 1);
@@ -226,9 +225,10 @@ public class EarthSpecialAttackProcedure {
 					for (Entity entityiterator : world.getEntitiesOfClass(Entity.class, new AABB(_center, _center).inflate(3 / 2d), e -> true).stream().sorted(Comparator.comparingDouble(_entcnd -> _entcnd.distanceToSqr(_center))).toList()) {
 						if (!(entityiterator == entity) && !(entityiterator instanceof ItemEntity)) {
 							QuakeVFXProcedure.execute(world, x, y, z);
-							ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2), (int) 80);
+							com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.EARTH, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 2), (int) 80);
 							PowerMod.queueServerWork(5, () -> {
-								ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.ElementType.PHYSICAL, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.3), (int) 40);
+								com.auranite.abloom.handler.ElementDamageHandler.dealElementDamage(entityiterator, com.auranite.abloom.util.ElementType.PHYSICAL, (float) (entity.getData(PowerModVariables.PLAYER_VARIABLES).base_damage_by_lvl * 1.3),
+										(int) 40);
 							});
 						}
 					}

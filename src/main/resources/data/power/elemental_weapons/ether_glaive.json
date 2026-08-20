@@ -1,5 +1,24 @@
 {
   "item": "power:ether_glaive",
-  "element": "ETHER",
-  "accumulation_multiplier": 10.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "3": {
+      "element": "ETHER",
+      "accumulation_multiplier": 8.0
+    },
+    "4": {
+      "element": "ETHER",
+      "accumulation_multiplier": 12.0
+    },
+    "base_element": "ETHER",
+    "crit_chance": 0.14,
+    "crit_damage": 2.1
+  }
 }

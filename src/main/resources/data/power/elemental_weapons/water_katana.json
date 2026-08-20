@@ -1,5 +1,24 @@
 {
   "item": "power:water_katana",
-  "element": "WATER",
-  "accumulation_multiplier": 5.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 1.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 1.0
+    },
+    "3": {
+      "element": "WATER",
+      "accumulation_multiplier": 4.0
+    },
+    "4": {
+      "element": "WATER",
+      "accumulation_multiplier": 4.0
+    },
+    "base_element": "WATER",
+    "crit_chance": 0.19,
+    "crit_damage": 2.0
+  }
 }

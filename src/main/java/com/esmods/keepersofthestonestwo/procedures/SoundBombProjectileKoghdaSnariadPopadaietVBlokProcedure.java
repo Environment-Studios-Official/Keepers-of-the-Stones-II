@@ -10,7 +10,7 @@ import net.minecraft.world.effect.MobEffectInstance;
 
 import java.util.Comparator;
 
-import com.auranite.abloom.AbloomModEffects;
+import com.auranite.abloom.init.AbloomModEffects;
 
 public class SoundBombProjectileKoghdaSnariadPopadaietVBlokProcedure {
 	public static void execute(LevelAccessor world, double x, double y, double z) {

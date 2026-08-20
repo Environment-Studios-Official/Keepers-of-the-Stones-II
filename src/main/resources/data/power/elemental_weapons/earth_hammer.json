@@ -1,5 +1,20 @@
 {
   "item": "power:earth_hammer",
-  "element": "EARTH",
-  "accumulation_multiplier": 15.0
+  "stages": {
+    "1": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 2.0
+    },
+    "2": {
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 3.0
+    },
+    "3": {
+      "element": "EARTH",
+      "accumulation_multiplier": 10.0
+    },
+    "base_element": "EARTH",
+    "crit_chance": 0.33,
+    "crit_damage": 2.0
+  }
 }
