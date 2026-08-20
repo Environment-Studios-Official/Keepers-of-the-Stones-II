@@ -11,6 +11,7 @@ import net.minecraft.world.entity.LightningBolt;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.level.Level;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -29,7 +30,7 @@ public class LightningPassiveSkills {
 
         if (attacker instanceof Player sourcePlayer
                 && sourcePlayer.hasEffect(PowerModMobEffects.LIGHTNING_MASTER)
-                && target.level() instanceof ServerLevel serverLevel) {
+                && target.level() instanceof ServerLevel serverLevel && serverLevel.getLevelData().isThundering()) {
 
             if (RANDOM.nextFloat() < 0.1f) {
                 LightningBolt lightning = EntityType.LIGHTNING_BOLT.create(serverLevel);
@@ -43,7 +44,7 @@ public class LightningPassiveSkills {
 
         if (target instanceof ServerPlayer player
                 && player.hasEffect(PowerModMobEffects.LIGHTNING_MASTER)
-                && event.getSource().is(DamageTypes.LIGHTNING_BOLT)) {
+                && event.getSource().is(DamageTypes.LIGHTNING_BOLT) && target.level() instanceof ServerLevel serverLevel && serverLevel.getLevelData().isThundering()) {
 
             if (player.level().isThundering() && player.level().canSeeSky(player.blockPosition().above())) {
                 int duration = 200;
