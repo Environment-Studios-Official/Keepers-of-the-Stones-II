@@ -30,7 +30,7 @@ public class PowerModElementalProjectiles {
 
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.ICE_ATTACK_PROJECTILE.get(), ElementType.ICE, 25f);
 
-        ElementalProjectileRegistry.registerProjectile(PowerModEntities.LIGHTBALL_PROJECTILE.get(), ElementType.ELECTRIC, 75f);
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.BALL_LIGHTNING_PROJECTILE.get(), ElementType.ELECTRIC, 75f);
 
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.SOUND_BOMB_PROJECTILE.get(), ElementType.WIND, 25f);
 
@@ -44,6 +44,14 @@ public class PowerModElementalProjectiles {
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.MINI_TORNADO_PROJECTILE.get(), ElementType.WIND, 40f);
 
         ElementalProjectileRegistry.registerProjectile(PowerModEntities.POISONOUS_THORN.get(), ElementType.NATURAL, 25f);
+
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.IRON_ATTACK_PROJECTILE.get(), ElementType.EARTH, 25f);
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.GOLD_ATTACK_PROJECTILE.get(), ElementType.EARTH, 25f);
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.COPPER_ATTACK_PROJECTILE.get(), ElementType.EARTH, 25f);
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.KNIFE_ATTACK_PROJECTILE.get(), ElementType.EARTH, 40f);
+
+        ElementalProjectileRegistry.registerProjectile(PowerModEntities.LIGHTBALL_PROJECTILE.get(), ElementType.LIGHT, 25f);
+
 
         registerCustomProjectiles();
 
