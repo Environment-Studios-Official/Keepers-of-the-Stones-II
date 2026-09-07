@@ -1,23 +1,23 @@
 {
-  "item": "power:ice_spear",
+  "item": "power:light_sword",
   "stages": {
     "1": {
       "element": "PHYSICAL",
       "accumulation_multiplier": 2.0
     },
     "2": {
-      "element": "ICE",
-      "accumulation_multiplier": 2.0
+      "element": "PHYSICAL",
+      "accumulation_multiplier": 3.0
     },
     "3": {
-      "element": "ICE",
+      "element": "LIGHT",
       "accumulation_multiplier": 4.0
     },
     "4": {
-      "element": "ICE",
+      "element": "LIGHT",
       "accumulation_multiplier": 6.0
     },
-    "base_element": "ICE",
+    "base_element": "LIGHT",
     "crit_chance": 0.24,
     "crit_damage": 1.5
   }

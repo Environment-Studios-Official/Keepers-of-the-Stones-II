@@ -1,7 +1,7 @@
 {
   "item": "power:lightning_falchion",
   "base_element": "ELECTRIC",
-  "crit_chance": 0.24,
+  "crit_chance": 1.24,
   "crit_damage": 0.75,
   "accumulation_multiplier": 10.0
 }

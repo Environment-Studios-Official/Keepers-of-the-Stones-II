@@ -1,0 +1,7 @@
+{
+  "item": "power:right_metal_gauntlet",
+  "base_element": "EARTH",
+  "crit_chance": 0.33,
+  "crit_damage": 2.0,
+  "accumulation_multiplier": 15.0
+}
